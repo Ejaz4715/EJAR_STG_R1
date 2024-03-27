@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>sa.nhc</groupId>
+    <artifactId>nhc-test-suite</artifactId>
+    <version>1.0.0</version>
+    <name>nhc-test-suite</name>
+    <url>https://nhc.sa/</url>
+
+    <properties>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <crew-centric-framework>2024.1.0</crew-centric-framework>
+        <maven-jar-plugin>3.2.0</maven-jar-plugin>
+        <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
+        <maven-surefire-plugin>3.1.2</maven-surefire-plugin>
+
+        <skip-tests>false</skip-tests>
+        <suite-file>testng.xml</suite-file>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.testcrew</groupId>
+            <artifactId>test-crew-core-framework</artifactId>
+            <version>${crew-centric-framework}</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Maven -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin}</version>
+                <configuration>
+                    <source>19</source>
+                    <target>19</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin}</version>
+                <configuration>
+                    <skipTests>${skip-tests}</skipTests>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite-file}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

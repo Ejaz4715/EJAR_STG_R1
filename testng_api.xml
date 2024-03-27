@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="1" parallel="methods" thread-count="1">
+    <listeners>
+        <listener class-name="com.testcrew.listener.ReportListener"/>
+        <listener class-name="com.testcrew.listener.AnnotationTransformer"/>
+    </listeners>
+    <test name="All API Tests">
+        <packages>
+            <package name="sa.ejar.api.*"/>
+        </packages>
+    </test>
+</suite>
