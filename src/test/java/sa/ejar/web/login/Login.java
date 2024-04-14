@@ -1,8 +1,10 @@
 package sa.ejar.web.login;
 
+import com.testcrew.web.Browser;
 import sa.ejar.web.base.NHCWebTest;
 import org.testng.annotations.Test;
 
+import java.sql.Driver;
 import java.util.Map;
 
 public class Login extends NHCWebTest {
@@ -10,6 +12,7 @@ public class Login extends NHCWebTest {
     //----------------------------------------Login-------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void userLogin(Map<String, String> data) throws Exception {
+//        Browser.driver.close();
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
 //        app.loginPage.changeUILanguage("ar");

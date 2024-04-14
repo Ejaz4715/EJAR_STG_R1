@@ -1,4 +1,4 @@
-package sa.ejar.web.objects;
+package sa.ejar.web.objects.precondition;
 
 import org.openqa.selenium.By;
 import java.util.HashMap;

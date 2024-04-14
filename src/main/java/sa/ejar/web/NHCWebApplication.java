@@ -1,9 +1,9 @@
 package sa.ejar.web;
 import com.testcrew.utility.TCRobot;
-import sa.ejar.web.objects.LoginPageObjects;
+import sa.ejar.web.objects.precondition.LoginPageObjects;
 import sa.ejar.web.pages.*;
-import sa.ejar.web.pages.AddResidentialContractPage;
-import sa.ejar.web.pages.LoginPage;
+import sa.ejar.web.pages.precondition.AddResidentialContractPage;
+import sa.ejar.web.pages.precondition.LoginPage;
 import com.testcrew.manager.TestConfigManager;
 import com.testcrew.web.Browser;
 
@@ -11,6 +11,7 @@ import java.awt.event.KeyEvent;
 import java.util.Map;
 
 public class NHCWebApplication {
+
 
     public final LoginPage loginPage;
     public final AddResidentialContractPage addResidentialContractPage;
@@ -32,6 +33,11 @@ public class NHCWebApplication {
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--headless");
+//        chromeOptions.addArguments("--disable-gpu"); // Disable GPU usage to avoid certain issues
+//        chromeOptions.addArguments("--no-sandbox");
+//        Browser.driver = new ChromeDriver(chromeOptions);
         if (data.get("URL") != null) {
             Browser.openUrl(data.get("URL"));
         } else {

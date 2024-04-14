@@ -1,4 +1,4 @@
-package sa.ejar.web.pages;
+package sa.ejar.web.pages.precondition;
 
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
@@ -6,6 +6,9 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import sa.ejar.web.objects.*;
 import org.openqa.selenium.WebElement;
+import sa.ejar.web.objects.precondition.AddPropertyPageObjects;
+import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.precondition.LoginPageObjects;
 
 import java.util.List;
 

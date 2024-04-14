@@ -1,4 +1,4 @@
-package sa.ejar.web.objects;
+package sa.ejar.web.objects.precondition;
 
 import com.testcrew.manager.TestConfigManager;
 import org.openqa.selenium.By;

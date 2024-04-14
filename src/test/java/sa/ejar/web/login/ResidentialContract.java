@@ -13,7 +13,7 @@ import java.util.Map;
 public class ResidentialContract extends NHCWebTest{
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_13_addNewResidentialContractWithDurationMoreThanThreeMonthsAndSinglePayment(Map<String, String> data, ITestContext context) throws Exception {
+    public void addNewResidentialContractWithDurationMoreThanThreeMonths(Map<String, String> data, ITestContext context) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
 //        app.loginPage.changeUILanguage("ar");
