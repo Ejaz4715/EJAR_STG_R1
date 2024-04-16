@@ -35,6 +35,8 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectNewResidualContract();
         logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
+        String month = data.get("Month");
+        String year = data.get("Year");
         String currentDate = java.time.LocalDate.now().toString();
         String [] arrDate = currentDate.split("-");
         app.addResidentialContractPage.selectStartDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
