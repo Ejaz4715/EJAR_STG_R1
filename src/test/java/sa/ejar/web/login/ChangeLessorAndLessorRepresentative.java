@@ -19,7 +19,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to OwnerShip Document Page");
         app.changeLessorAndLessorRepresentativePage.neviagteToOwnerShipDocumentPage();
@@ -37,7 +37,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to OwnerShip Document Page");
         app.changeLessorAndLessorRepresentativePage.neviagteToOwnerShipDocumentPage();
@@ -59,7 +59,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to OwnerShip Document Page");
         app.changeLessorAndLessorRepresentativePage.neviagteToOwnerShipDocumentPage();
@@ -80,7 +80,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to OwnerShip Document Page");
         app.changeLessorAndLessorRepresentativePage.neviagteToOwnerShipDocumentPage();

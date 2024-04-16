@@ -21,7 +21,7 @@ public class Login extends NHCWebTest {
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
     }
 
@@ -35,7 +35,7 @@ public class Login extends NHCWebTest {
         app.loginPage.enterAdminUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        Browser.waitForSeconds(6);
     }
 
@@ -62,7 +62,7 @@ public class Login extends NHCWebTest {
         app.loginPage.enterAdminUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
     }
 
@@ -77,7 +77,7 @@ public class Login extends NHCWebTest {
 //        app.loginPage.enterAdminUsername(data.get("BO_username"));
 //        app.loginPage.enterPassword(data.get("Password"));
 //        app.loginPage.clickLogin();
-//        app.loginPage.enterVerificationCode();
+//        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        logger.info("Step 02: Fill Account Activation Details");
 //        app.registrationPage.clickToAccountActivation();
 //        app.registrationPage.selectBOCity("الرياض");
@@ -102,7 +102,7 @@ public class Login extends NHCWebTest {
         app.loginPage.enterAdminUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
     }
 }

@@ -22,7 +22,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -146,7 +146,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -177,7 +177,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -208,7 +208,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
@@ -228,7 +228,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -346,7 +346,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -377,7 +377,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -407,7 +407,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
@@ -428,7 +428,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -546,7 +546,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -577,7 +577,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -609,7 +609,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -727,7 +727,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -758,7 +758,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -790,7 +790,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -908,7 +908,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -939,7 +939,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -971,7 +971,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -1089,7 +1089,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1120,7 +1120,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1152,7 +1152,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -1273,7 +1273,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1304,7 +1304,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1335,7 +1335,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
@@ -1355,7 +1355,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -1473,7 +1473,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1504,7 +1504,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1535,7 +1535,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
@@ -1555,7 +1555,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -1673,7 +1673,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1704,7 +1704,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1735,7 +1735,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
@@ -1853,7 +1853,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1884,7 +1884,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
@@ -1916,7 +1916,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to EJAR Dashboard");
         app.addResidentialContractPage.clickContractsBtn();

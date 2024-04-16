@@ -15,6 +15,8 @@ public class NHCWebApplication {
 
     public final LoginPage loginPage;
     public final AddResidentialContractPage addResidentialContractPage;
+    public final RevokeContractPage revokeContractPage;
+    public final CommonMethodsPage commonMethodsPage;
 //    public final RechargeWalletPage rechargeWalletPage;
 //    public final AddPropertyPage addPropertyPage;
 //    public final RegistrationPage registrationPage;
@@ -25,6 +27,8 @@ public class NHCWebApplication {
     public NHCWebApplication() {
         loginPage = new LoginPage();
         addResidentialContractPage = new AddResidentialContractPage();
+        revokeContractPage = new RevokeContractPage();
+        commonMethodsPage = new CommonMethodsPage();
 //        rechargeWalletPage = new RechargeWalletPage();
 //        addPropertyPage = new AddPropertyPage();
 //        registrationPage = new RegistrationPage();
@@ -33,11 +37,7 @@ public class NHCWebApplication {
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--headless");
-//        chromeOptions.addArguments("--disable-gpu"); // Disable GPU usage to avoid certain issues
-//        chromeOptions.addArguments("--no-sandbox");
-//        Browser.driver = new ChromeDriver(chromeOptions);
+
         if (data.get("URL") != null) {
             Browser.openUrl(data.get("URL"));
         } else {

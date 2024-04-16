@@ -108,13 +108,13 @@ public class LoginPage extends WebBasePage {
         logger.addScreenshot("Login Page displayed.");
     }
 
-    public void enterVerificationCode() throws Exception {
+    public void enterVerificationCode(String OTP) throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
 //        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
-        Browser.setText(LoginPageObjects.getVerificationCode(), "1234");
+        Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
         Browser.waitForSeconds(1);
-        logger.addScreenshot("Enter OTP");
+//        logger.addScreenshot("Enter OTP");
 //        Browser.waitForSeconds(2);
         Browser.click(LoginPageObjects.confirmButton());
 //        Browser.waitForSeconds(4);
