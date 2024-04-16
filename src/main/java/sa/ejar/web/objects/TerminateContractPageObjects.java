@@ -22,6 +22,9 @@ public class TerminateContractPageObjects {
     public static String get(String locator) throws Exception {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
     }
+    public static By terminationStepsPage() throws Exception{
+        return By.xpath(get(" //h5[text()='خطوات طلب إنهاء العقد']"));
+    }
 
     public static By requestTerminationText() throws Exception{
         return By.xpath(get("//h1[text()='طلب الإنهاء']"));
@@ -32,5 +35,30 @@ public class TerminateContractPageObjects {
     public static By requestingPartyDDL() throws Exception{
         return By.xpath(get("//select[@data-name=\"requesting_party\"]"));
     }
+    public static By calendarIconOFDateRequiredToTerminateTheContract() throws Exception{
+        return By.xpath(get("//div[@class='date-picker-button']"));
+    }
+    public static By terminationReasonDDL() throws Exception{
+        return By.xpath(get("//select[@data-name=\"termination_reason\"]"));
+    }
+    public static By terminationReasonTXT() throws Exception{
+        return By.xpath(get("//textarea[@data-name=\"note\"]"));
+    }
+    public static By confirmationMsg() throws Exception{
+        return By.xpath(get("//h5[text()='رسالة تأكيد']"));
+    }
+    public static By financialSettlementSection() throws Exception{
+        return By.xpath(get("//h2[text()=' تسوية مالية ']"));
+    }
+    public static By allPaymentsSettledRadioBTN() throws Exception{
+        return By.xpath(get("//app-form-radio[@value=\"all_payments_settled\"]/label"));
+    }
+    public static By tenantFinalPaymentRadioBTN() throws Exception{
+        return By.xpath(get("//app-form-radio[@value=\"tenant_final_payment\"]/label"));
+    }
+    public static By paymentAmountTXT() throws Exception{
+        return By.xpath(get("//input[@data-name=\"payment\"]"));
+    }
+
 
 }
