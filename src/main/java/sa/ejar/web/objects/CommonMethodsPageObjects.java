@@ -29,6 +29,12 @@ public class CommonMethodsPageObjects {
     public static By cancelBTN() throws Exception{
         return By.xpath(get("//button[contains(text(),' إلغاء')]"));
     }
+    public static By backBTN() throws Exception{
+        return By.xpath(get("//button[contains(text(),' السابق')]"));
+    }
+    public static By confirmBTN() throws Exception{
+        return By.xpath(get("//button[contains(text(),' تأكيد ')]"));
+    }
 
 
     public static By ContractsList(){
@@ -43,5 +49,12 @@ public class CommonMethodsPageObjects {
     public static By KebabMenuOptions() {
         return By.xpath("//a[contains (@class, \"nav-item p-3\")]");
     }
+    public static By TerminateOptions() {
+        return By.xpath("//a[contains (@class,\"nav-item p-3 text-center text-danger\")]");
+    }
+    public static By PopUpAlertAfterCancel() {
+        return By.xpath("//app-card-body/p");
+    }
+
 
 }
