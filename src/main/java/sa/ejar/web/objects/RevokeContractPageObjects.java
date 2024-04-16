@@ -17,4 +17,8 @@ public class RevokeContractPageObjects {
     public static By RevokeContractPageHeading() {
         return By.xpath("//h2[text()='طلب فسخ العقد']");
     }
+
+    public static By RevokeContractRequestPageHeading() {
+        return By.xpath("//h1[text()='طلب فسخ العقد من طرف واحد']");
+    }
 }

@@ -14,4 +14,10 @@ public class RevokeContractPage {
         Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.RevokeContractPageHeading()));
         logger.addScreenshot("");
     }
+
+    public void checkRevokeContractRequestPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RevokeContractRequestPageHeading(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.RevokeContractRequestPageHeading()));
+        logger.addScreenshot("");
+    }
 }

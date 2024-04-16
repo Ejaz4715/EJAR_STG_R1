@@ -1,10 +1,12 @@
 package sa.ejar.web.pages;
 
+import com.testcrew.manager.PDFReportManager;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
+import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 
@@ -70,7 +72,11 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(),20);
         Browser.click(CommonMethodsPageObjects.cancelBTN());
     }
-
+    public void checkTheContractsPage() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(),20);
+        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.theContractPage()));
+        PDFReportManager.logger.addScreenshot("User Navigate Back To 'العقود' Page");
+    }
     public static void selectFromList(String list, By element) throws Exception {
         Browser.waitUntilVisibilityOfElement(element, 30);
         List<WebElement> selectList = driver.findElements(element);

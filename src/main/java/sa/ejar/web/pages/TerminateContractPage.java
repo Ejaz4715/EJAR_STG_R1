@@ -14,11 +14,7 @@ public class TerminateContractPage {
         Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.requestTerminationText()));
         logger.addScreenshot("User Navigate To ' طلب الإنهاء' Page");
     }
-    public void checkTheContractsPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(),20);
-        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.theContractPage()));
-        logger.addScreenshot("User Navigate Back To 'العقود' Page");
-    }
+
     public void selectRequestingParty() throws Exception {
         Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.requestingPartyDDL(),20);
         selectFromList("المؤجر",TerminateContractPageObjects.requestingPartyDDL());

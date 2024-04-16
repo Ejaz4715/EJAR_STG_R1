@@ -127,7 +127,7 @@ public class TerminateContract extends NHCWebTest {
 
 
         app.commonMethodsPage.clickOnCancelButton();
-        app.terminateContractPage.checkTheContractsPage();
+        app.commonMethodsPage.checkTheContractsPage();
 
     }
 
