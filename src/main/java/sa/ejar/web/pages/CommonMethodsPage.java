@@ -1,9 +1,15 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 
+import java.util.List;
+
+import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.logger;
 
 public class CommonMethodsPage {
@@ -54,5 +60,26 @@ public class CommonMethodsPage {
         Browser.setText(AddResidentialContractPageObjects.searchContractNumberInputField(), contractNumber);
         Browser.waitForSeconds(1);
         logger.addScreenshot("Entered Contract Number in search input field");
+    }
+
+    public void clickOnNextButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(),20);
+        Browser.click(CommonMethodsPageObjects.nextBTN());
+    }
+    public void clickOnCancelButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(),20);
+        Browser.click(CommonMethodsPageObjects.cancelBTN());
+    }
+
+    public static void selectFromList(String list, By element) throws Exception {
+        Browser.waitUntilVisibilityOfElement(element, 30);
+        List<WebElement> selectList = driver.findElements(element);
+        for (WebElement listName : selectList) {
+            String getListName = listName.getText();
+            if (getListName.contains(list)) {
+                listName.click();
+                break;
+            }
+        }
     }
 }

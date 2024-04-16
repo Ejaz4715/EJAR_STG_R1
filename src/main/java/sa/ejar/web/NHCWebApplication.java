@@ -17,6 +17,8 @@ public class NHCWebApplication {
     public final AddResidentialContractPage addResidentialContractPage;
     public final RevokeContractPage revokeContractPage;
     public final CommonMethodsPage commonMethodsPage;
+
+    public final TerminateContractPage terminateContractPage;
 //    public final RechargeWalletPage rechargeWalletPage;
 //    public final AddPropertyPage addPropertyPage;
 //    public final RegistrationPage registrationPage;
@@ -29,6 +31,7 @@ public class NHCWebApplication {
         addResidentialContractPage = new AddResidentialContractPage();
         revokeContractPage = new RevokeContractPage();
         commonMethodsPage = new CommonMethodsPage();
+        terminateContractPage = new TerminateContractPage();
 //        rechargeWalletPage = new RechargeWalletPage();
 //        addPropertyPage = new AddPropertyPage();
 //        registrationPage = new RegistrationPage();
