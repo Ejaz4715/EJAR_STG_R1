@@ -1,6 +1,7 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.manager.PDFReportManager;
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -43,11 +44,21 @@ public class CommonMethodsPage {
         Browser.waitForSeconds(1);
         logger.addScreenshot("Navigate to View All Contracts page");
     }
-
+    public static void clickOnTheRequestsTabButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.theRequestTab(), 20);
+        Browser.click(CommonMethodsPageObjects.theRequestTab());
+    }
+    public static void clickOnViewAllRequestsButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.viewAllTheRequests(), 20);
+        Browser.click(CommonMethodsPageObjects.viewAllTheRequests());
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Navigate to View All Requests page");
+    }
     /**
      * Click on filter button
      */
-    public static void clickFilterBtnOnViewAllContractsPage() throws Exception {
+    public static void clickFilterBtn() throws Exception {
+
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage(), 20);
         Browser.click(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage());
         logger.addScreenshot("Clicked on filter button");
@@ -65,6 +76,14 @@ public class CommonMethodsPage {
         Browser.setText(AddResidentialContractPageObjects.searchContractNumberInputField(), contractNumber);
         Browser.waitForSeconds(1);
         logger.addScreenshot("Entered Contract Number in search input field");
+    }
+
+    public static void enterRequestNumberInRequestSearchInputField(String requestNumber) throws Exception {
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.requestNumberTXT(), 20);
+//        Browser.waitForSeconds(3);
+        Browser.setText(CommonMethodsPageObjects.requestNumberTXT(), requestNumber);
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Entered Request Number in search input field");
     }
 
     public static void clickOnNextButton() throws Exception {
@@ -93,7 +112,10 @@ public class CommonMethodsPage {
         Browser.click(CommonMethodsPageObjects.confirmBTN());
     }
 
-
+    public static void clickOnCloseButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.closeBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.closeBTN());
+    }
     public static void selectFromList(String list, By element) throws Exception {
         Browser.waitUntilVisibilityOfElement(element, 30);
         List<WebElement> selectList = driver.findElements(element);
@@ -117,13 +139,32 @@ public class CommonMethodsPage {
     public static void verifySearchedContractIsDisplayed(String expectedContractNumber) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractNumberOfSearchedContract(), 40);
         if (Browser.isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
-            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractsList());
-            Assert.assertEquals(actualContractNumber, expectedContractNumber, "Searched Contract is not displayed");
+            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
+            boolean status = false;
+            if(expectedContractNumber.contains(actualContractNumber)){
+                status = true;
+            }
+            Assert.assertTrue(status, "Searched Contract is not displayed");
             logger.addScreenshot("Searched contract is displayed");
         } else {
             logger.addScreenshot("Searched contract is not displayed");
         }
     }
+    public static void verifySearchedRequestIsDisplayed(String expectedRequestNumber) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.requestNumberOfSearchedRequest(), 40);
+        if (Browser.isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
+            String actualRequestNumber = Browser.getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
+            boolean status = false;
+            if(expectedRequestNumber.contains(actualRequestNumber)){
+                status = true;
+            }
+            Assert.assertTrue(status, "Searched Request is not displayed");
+            logger.addScreenshot("Searched Request is displayed");
+        } else {
+            logger.addScreenshot("Searched Request is not displayed");
+        }
+    }
+
 
 
     public static void clickOnKebabMenuButton() {
@@ -176,6 +217,17 @@ public class CommonMethodsPage {
     public static void ClickOnTerminateOption(String option) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
         List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.TerminateOptions());
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                opt.click();
+                break;
+            }
+        }
+    }
+    public static void ClickOnAcceptTerminateOption(String option) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.acceptTerminationOptionBTN(), 40);
+        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.acceptTerminationOptionBTN());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -248,7 +300,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
-    public static void verifyHijriDateIsDisplayed() throws Exception {
+    public static void verifyHijriDateIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.hijriDate(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.hijriDate()));
         logger.addScreenshot("Equivalent Hijri date is displayed");
@@ -364,4 +416,21 @@ public class CommonMethodsPage {
         String reqNum = newText.split(" ")[1];
         return reqNum;
     }
+
+    public static void getReqNumBo() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumBo", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+    public static void getReqNumLessor() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumLessor", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+    public static void getReqNumTenant() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumTenant", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+
 }

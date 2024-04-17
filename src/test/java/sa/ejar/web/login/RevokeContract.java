@@ -1,7 +1,5 @@
 package sa.ejar.web.login;
 
-import com.beust.jcommander.JCommander;
-import com.testcrew.manager.TestDataManager;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.pages.CommonMethodsPage;
@@ -53,7 +51,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Verify searched contract is appearing");
@@ -75,7 +73,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -99,7 +97,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -124,7 +122,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -151,7 +149,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -178,7 +176,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -206,7 +204,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -234,7 +232,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -263,7 +261,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -291,7 +289,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -320,7 +318,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -349,7 +347,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -378,7 +376,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -407,7 +405,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -435,7 +433,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -465,7 +463,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -495,7 +493,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -530,7 +528,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -558,7 +556,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -589,7 +587,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -621,7 +619,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -649,7 +647,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -685,7 +683,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -723,7 +721,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -760,7 +758,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -798,7 +796,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -838,7 +836,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -878,7 +876,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -916,7 +914,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -956,7 +954,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -998,7 +996,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1040,7 +1038,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1082,7 +1080,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1126,7 +1124,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1171,7 +1169,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1213,7 +1211,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1255,7 +1253,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -1303,7 +1301,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
 
         logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
