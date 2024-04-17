@@ -13,7 +13,7 @@ public class TC01_LoginValid extends NHCAPITest {
     @Test(dataProvider = "testDataProvider")
     public void loginValid(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         HttpResponse<JsonNode> response = api.loginApi.login(data);
         api.loginApi.assertLoginResponse(response);
         logger.info("Step 02: Validate Response");

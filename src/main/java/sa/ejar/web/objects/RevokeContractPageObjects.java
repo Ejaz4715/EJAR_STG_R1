@@ -29,4 +29,52 @@ public class RevokeContractPageObjects {
     public static By ExecutionOrderDateInput() {
         return By.xpath("//input[@data-name=\"execution_order_date\"]");
     }
+
+    public static By ExecutionOrderDateErrorMessage() {
+        return By.xpath("//li[@data-error=\"errors.max_value\"]");
+    }
+
+    public static By CalenderIcon() {
+        return By.xpath("//div[@class=\"date-picker-button\"]");
+    }
+
+    public static By CalenderPopUp() {
+        return By.xpath("//div[@class=\"calendar-option\"]");
+    }
+
+    public static By NoteInputField() {
+        return By.xpath("//textarea[@data-name=\"note\"]");
+    }
+
+    public static By HijriDateUnderExecutionOrderDate() {
+        return By.xpath("//span[@class='input-hints']");
+    }
+
+    public static By UploadDocumentsInput() {
+        return By.xpath("//input[@data-name=\"execution_order_documents\"]");
+    }
+
+    public static By AttachmentIcon() {
+        return By.xpath("//div[@class=\"attachment-icon\"]");
+    }
+
+    public static By ErrorMessageForLargeFile() {
+        return By.xpath("//p[contains (text(), 'حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت')]");
+    }
+
+    public static By NextButton() {
+        return By.xpath("//button[contains (text(), \" التالي \")]");
+    }
+
+    public static By RequestDetailsSection() {
+        return By.xpath("//h5[text()='طلب الفسخ']");
+    }
+
+    public static By ConfirmRevokeContratButton() {
+        return By.xpath("//button[contains (text() , ' تأكيد طلب الفسخ  ')]");
+    }
+
+    public static By RequestNumberText() {
+        return By.xpath("//button[contains (text() , ' تأكيد طلب الفسخ  ')]");
+    }
 }
