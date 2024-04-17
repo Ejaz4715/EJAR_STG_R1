@@ -189,4 +189,32 @@ public class CommonMethodsPage {
         Assert.assertEquals(actual, expected);
         logger.addScreenshot("The message is displayed");
     }
+
+    public static void verifyValueIsEntered(String value, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String val = Browser.getWebElement(element).getAttribute("value");
+        Assert.assertTrue(val.contains(value), "Value has been entered");
+    }
+
+
+    /**
+     * Method to get current date and to change the date to future and past
+     * @param reqYear - required year (Negative value to get to any previous years and positive for future)
+     * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
+     * @param reqDay - required day (Negative value to get to any previous days and positive for future)
+     * */
+    public static String getCurrentDate(int reqYear, int reqMonth, int reqDay){
+        String currentDate = java.time.LocalDate.now().toString();
+        String [] arrDate = currentDate.split("-");
+        String year = String.valueOf(Integer.parseInt(arrDate[0])+reqYear);
+        String month = String.valueOf(Integer.parseInt(arrDate[1])+reqMonth);
+        String day = String.valueOf(Integer.parseInt(arrDate[2])+reqDay);
+        if (!(month.length()== 2)){
+            month = 0 + month;
+        }
+        if (!(day.length()== 2)){
+            day = 0 + day;
+        }
+        return year+month+day;
+    }
 }

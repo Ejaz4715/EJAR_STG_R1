@@ -152,11 +152,8 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         app.commonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         app.commonMethodsPage.clickOnCancelButton();
-<<<<<<< HEAD
         app.commonMethodsPage.checkTheContractsPage();
-=======
         app.terminateContractPage.verifyTheContractsPageIsDisplayed();
->>>>>>> ibrahim
 
     }
 
