@@ -1,6 +1,7 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
+import org.checkerframework.common.value.qual.ArrayLenRange;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -78,6 +79,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.backBTN(), 20);
         Browser.click(CommonMethodsPageObjects.backBTN());
     }
+
     public void clickOnConfirmButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
         Browser.click(CommonMethodsPageObjects.confirmBTN());
@@ -179,5 +181,34 @@ public class CommonMethodsPage {
         String actual = Browser.getText(CommonMethodsPageObjects.PopUpAlertAfterCancel());
         Assert.assertEquals(actual, expected);
         logger.addScreenshot("The message is displayed");
+    }
+
+    public void errorMessage(String errorMsg, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = Browser.getText(element);
+        String[] textSplit = text.split(" ");
+        text = textSplit[0] + textSplit[1] + textSplit[2];
+        boolean status = false;
+
+        if (text.contains(errorMsg)) {
+            status = true;
+
+        }
+        Assert.assertTrue(status, errorMsg + "error message is not the same");
+        logger.addScreenshot("");
+    }
+    public void totalAmount(String errorMsg, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = Browser.getText(element);
+        String[] textSplit = text.split(" ");
+        text = textSplit[0] + textSplit[1] + textSplit[2];
+        boolean status = false;
+
+        if (text.contains(errorMsg)) {
+            status = true;
+
+        }
+        Assert.assertTrue(status, errorMsg + "total amount is not the same");
+        logger.addScreenshot("");
     }
 }

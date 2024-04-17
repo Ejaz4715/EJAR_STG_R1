@@ -56,5 +56,12 @@ public class CommonMethodsPageObjects {
         return By.xpath("//app-card-body/p");
     }
 
+    public static By maxValueError() throws Exception{
+        return By.xpath(get("//li[@data-error=\"errors.max_value\"]"));
+    }
+    public static By totalAmount() throws Exception{
+        return By.xpath(get("//span[text()='الإجمالي']/following-sibling::span"));
+    }
+
 
 }
