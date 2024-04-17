@@ -59,6 +59,17 @@ public class TerminateContractPageObjects {
     public static By paymentAmountTXT() throws Exception{
         return By.xpath(get("//input[@data-name=\"payment\"]"));
     }
-
+    public static By paymentDueDateTXT() throws Exception{
+        return By.xpath(get("//input[@data-name=\"payment_due_date\"]"));
+    }
+    public static By validationFailedTXT() throws Exception{
+        return By.xpath(get("//div[@class=\"message\"]"));
+    }
+    public static By confirmRequestTheTerminationBTN() throws Exception{
+        return By.xpath(get("//button[text()=' تأكيد طلب الإنهاء ']"));
+    }
+    public static By terminationSummarySection() throws Exception{
+        return By.xpath(get("//h2[text()='ملخص الإنهاء']"));
+    }
 
 }

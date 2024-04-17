@@ -46,14 +46,14 @@ public class TerminateContractPage {
     }
 
     public void selectTerminationReason() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.requestingPartyDDL(), 20);
-        selectFromList("عدم الرغبة في متابعة العقد", TerminateContractPageObjects.requestingPartyDDL());
-        selectFromList("أخرى", TerminateContractPageObjects.requestingPartyDDL());
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.terminationReasonDDL(), 20);
+        selectFromList("عدم الرغبة في متابعة العقد", TerminateContractPageObjects.terminationReasonDDL());
+        selectFromList("أخرى", TerminateContractPageObjects.terminationReasonDDL());
         logger.addScreenshot("The Termination Reason Is Selected");
     }
     public void selectOneTerminationReason(String reason) throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.requestingPartyDDL(), 20);
-        selectFromList(reason, TerminateContractPageObjects.requestingPartyDDL());
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.terminationReasonDDL(), 20);
+        selectFromList(reason, TerminateContractPageObjects.terminationReasonDDL());
         logger.addScreenshot("The Termination Reason Is Selected");
     }
 
@@ -71,7 +71,7 @@ public class TerminateContractPage {
     public void verifyTheFinancialSettlementSectionIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.financialSettlementSection(), 20);
         Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.financialSettlementSection()));
-        logger.addScreenshot("The (تسوية مالية) window is displayed");
+        logger.addScreenshot("The (تسوية مالية) section is displayed");
     }
     public void selectAllPaymentsSettledRadioButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.allPaymentsSettledRadioBTN(), 20);
@@ -79,8 +79,8 @@ public class TerminateContractPage {
         logger.addScreenshot("The (تسوية جميع المدفوعات) Is Selected ");
     }
     public void selectTenantFinalPaymentRadioButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.allPaymentsSettledRadioBTN(), 20);
-        Browser.click(TerminateContractPageObjects.allPaymentsSettledRadioBTN());
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.tenantFinalPaymentRadioBTN(), 20);
+        Browser.click(TerminateContractPageObjects.tenantFinalPaymentRadioBTN());
         logger.addScreenshot("The (الدفعة النهائية للمستأجر) Is Selected ");
     }
     public void enterPaymentAmount(String amount) throws Exception {
@@ -88,5 +88,27 @@ public class TerminateContractPage {
         Browser.setText(TerminateContractPageObjects.paymentAmountTXT(),amount);
         logger.addScreenshot("The amount has been entered");
     }
+    public void enterPaymentDueDate(String date) throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.paymentDueDateTXT(), 20);
+        Browser.setText(TerminateContractPageObjects.paymentDueDateTXT(),date);
+        logger.addScreenshot("The date has been entered");
+    }
+    public void verifyThePaymentDateErrorMessageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.validationFailedTXT(), 20);
+        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.validationFailedTXT()));
+        logger.addScreenshot("The (يجب أن يكون تاريخ الاستحقاق الدفع قبل تاريخ السريان) error message is displayed");
+    }
+
+    public void clickOnConfirmRequestTheTerminationButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.confirmRequestTheTerminationBTN(), 20);
+        Browser.click(TerminateContractPageObjects.confirmRequestTheTerminationBTN());
+
+    }
+    public void verifyTheTerminationSummarySectionIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.terminationSummarySection(), 20);
+        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.terminationSummarySection()));
+        logger.addScreenshot("The (ملخص الإنهاء) section is displayed");
+    }
+
 }
 
