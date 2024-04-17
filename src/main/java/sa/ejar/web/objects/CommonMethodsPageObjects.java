@@ -24,16 +24,16 @@ public class CommonMethodsPageObjects {
 
 
     public static By nextBTN() throws Exception{
-        return By.xpath(get("//button[contains(text(),'التالي')]"));
+        return By.xpath("//button[contains(text(),'التالي')]");
     }
     public static By cancelBTN() throws Exception{
-        return By.xpath(get("//button[contains(text(),' إلغاء')]"));
+        return By.xpath("//button[contains(text(),' إلغاء')]");
     }
     public static By backBTN() throws Exception{
-        return By.xpath(get("//button[contains(text(),' السابق')]"));
+        return By.xpath("//button[contains(text(),' السابق')]");
     }
     public static By confirmBTN() throws Exception{
-        return By.xpath(get("//button[contains(text(),' تأكيد ')]"));
+        return By.xpath("//button[contains(text(),' تأكيد ')]");
     }
 
 
@@ -60,14 +60,40 @@ public class CommonMethodsPageObjects {
         return By.xpath(get("//li[@data-error=\"errors.max_value\"]"));
     }
     public static By minValueError() throws Exception{
-        return By.xpath(get("//li[@data-error=\"errors.min_value\"]"));
+        return By.xpath("//li[@data-error=\"errors.min_value\"]");
     }
 
     public static By totalAmount() throws Exception{
-        return By.xpath(get("//span[text()='الإجمالي']/following-sibling::span"));
+        return By.xpath("//span[text()='الإجمالي']/following-sibling::span");
     }
     public static By hijriDate() throws Exception{
-        return By.xpath(get("//span[@class=\"input-hints\"]"));
+        return By.xpath("//span[@class=\"input-hints\"]");
+    }
+    public static By closeBTN() throws Exception{
+        return By.xpath("//button[contains(text(),' إغلاق ')]");
+    }
+    public static By requestNumber() throws Exception{
+        return By.xpath("//h5[@class=\"message mb-2\"]");
     }
 
+
+    public static By theRequestTab() throws Exception{
+        return By.xpath("//a[text()=' الطلبات ']");
+    }
+    public static By viewAllTheRequests() throws Exception{
+        return By.xpath("//span[text()='عرض الطلبات']");
+    }
+    public static By requestNumberOfSearchedRequest() throws Exception{
+        return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5[@class=\"item-value\"]");
+    }
+    public static By requestList() throws Exception{
+        return By.xpath("//app-single-contract-termination-request");
+    }
+    public static By requestNumberTXT() throws Exception{
+        return By.xpath("//input[@data-name=\"reference\"]");
+    }
+
+    public static By acceptTerminationOptionBTN() throws Exception{
+        return By.xpath("//a[text()=' الموافقة على الإنهاء ']");
+    }
 }

@@ -46,7 +46,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Verify searched contract is appearing");
@@ -68,7 +68,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -91,7 +91,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -116,7 +116,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -143,7 +143,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -170,7 +170,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -198,7 +198,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -226,7 +226,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
@@ -255,7 +255,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         app.commonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
-        app.commonMethodsPage.clickFilterBtnOnViewAllContractsPage();
+        app.commonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.commonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");

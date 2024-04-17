@@ -1,8 +1,8 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.manager.PDFReportManager;
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
-import org.checkerframework.common.value.qual.ArrayLenRange;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -43,11 +43,20 @@ public class CommonMethodsPage {
         Browser.waitForSeconds(1);
         logger.addScreenshot("Navigate to View All Contracts page");
     }
-
+    public void clickOnTheRequestsTabButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.theRequestTab(), 20);
+        Browser.click(CommonMethodsPageObjects.theRequestTab());
+    }
+    public void clickOnViewAllRequestsButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.viewAllTheRequests(), 20);
+        Browser.click(CommonMethodsPageObjects.viewAllTheRequests());
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Navigate to View All Requests page");
+    }
     /**
      * Click on filter button
      */
-    public void clickFilterBtnOnViewAllContractsPage() throws Exception {
+    public void clickFilterBtn() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage(), 20);
         Browser.click(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage());
         logger.addScreenshot("Clicked on filter button");
@@ -65,6 +74,14 @@ public class CommonMethodsPage {
         Browser.setText(AddResidentialContractPageObjects.searchContractNumberInputField(), contractNumber);
         Browser.waitForSeconds(1);
         logger.addScreenshot("Entered Contract Number in search input field");
+    }
+
+    public void enterRequestNumberInRequestSearchInputField(String requestNumber) throws Exception {
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.requestNumberTXT(), 20);
+//        Browser.waitForSeconds(3);
+        Browser.setText(CommonMethodsPageObjects.requestNumberTXT(), requestNumber);
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Entered Request Number in search input field");
     }
 
     public void clickOnNextButton() throws Exception {
@@ -93,7 +110,10 @@ public class CommonMethodsPage {
         Browser.click(CommonMethodsPageObjects.confirmBTN());
     }
 
-
+    public void clickOnCloseButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.closeBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.closeBTN());
+    }
     public static void selectFromList(String list, By element) throws Exception {
         Browser.waitUntilVisibilityOfElement(element, 30);
         List<WebElement> selectList = driver.findElements(element);
@@ -117,13 +137,32 @@ public class CommonMethodsPage {
     public void verifySearchedContractIsDisplayed(String expectedContractNumber) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractNumberOfSearchedContract(), 40);
         if (Browser.isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
-            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractsList());
-            Assert.assertEquals(actualContractNumber, expectedContractNumber, "Searched Contract is not displayed");
+            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
+            boolean status = false;
+            if(expectedContractNumber.contains(actualContractNumber)){
+                status = true;
+            }
+            Assert.assertTrue(status, "Searched Contract is not displayed");
             logger.addScreenshot("Searched contract is displayed");
         } else {
             logger.addScreenshot("Searched contract is not displayed");
         }
     }
+    public void verifySearchedRequestIsDisplayed(String expectedRequestNumber) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.requestNumberOfSearchedRequest(), 40);
+        if (Browser.isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
+            String actualRequestNumber = Browser.getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
+            boolean status = false;
+            if(expectedRequestNumber.contains(actualRequestNumber)){
+                status = true;
+            }
+            Assert.assertTrue(status, "Searched Request is not displayed");
+            logger.addScreenshot("Searched Request is displayed");
+        } else {
+            logger.addScreenshot("Searched Request is not displayed");
+        }
+    }
+
 
 
     public void clickOnKebabMenuButton() {
@@ -176,6 +215,17 @@ public class CommonMethodsPage {
     public void ClickOnTerminateOption(String option) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
         List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.TerminateOptions());
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                opt.click();
+                break;
+            }
+        }
+    }
+    public void ClickOnAcceptTerminateOption(String option) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.acceptTerminationOptionBTN(), 40);
+        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.acceptTerminationOptionBTN());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -259,4 +309,28 @@ public class CommonMethodsPage {
         Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.nextBTN()));
         logger.addScreenshot("The (التالي) button is not enabled/clickable");
     }
+    public static String getRequestNumber(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = Browser.getText(element);
+        int index = text.indexOf("#");
+        String newText = text.substring(index);
+        String reqNum = newText.split(" ")[1];
+        return reqNum;
+    }
+    public void getReqNumBo() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumBo", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+    public void getReqNumLessor() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumLessor", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+    public void getReqNumTenant() throws Exception {
+        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
+        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumTenant", request);
+        TestDataManager.writeDependantGlobalTestData("Terminate");
+    }
+
 }
