@@ -2,6 +2,7 @@ package sa.ejar.web.pages;
 
 import com.testcrew.manager.PDFReportManager;
 import com.testcrew.web.Browser;
+import org.checkerframework.common.value.qual.ArrayLenRange;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -86,6 +87,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.backBTN(), 20);
         Browser.click(CommonMethodsPageObjects.backBTN());
     }
+
     public void clickOnConfirmButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
         Browser.click(CommonMethodsPageObjects.confirmBTN());
@@ -203,18 +205,58 @@ public class CommonMethodsPage {
      * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
      * @param reqDay - required day (Negative value to get to any previous days and positive for future)
      * */
-    public static String getCurrentDate(int reqYear, int reqMonth, int reqDay){
+    public static String getCurrentDate(int reqYear, int reqMonth, int reqDay) {
         String currentDate = java.time.LocalDate.now().toString();
-        String [] arrDate = currentDate.split("-");
-        String year = String.valueOf(Integer.parseInt(arrDate[0])+reqYear);
-        String month = String.valueOf(Integer.parseInt(arrDate[1])+reqMonth);
-        String day = String.valueOf(Integer.parseInt(arrDate[2])+reqDay);
-        if (!(month.length()== 2)){
+        String[] arrDate = currentDate.split("-");
+        String year = String.valueOf(Integer.parseInt(arrDate[0]) + reqYear);
+        String month = String.valueOf(Integer.parseInt(arrDate[1]) + reqMonth);
+        String day = String.valueOf(Integer.parseInt(arrDate[2]) + reqDay);
+        if (!(month.length() == 2)) {
             month = 0 + month;
         }
-        if (!(day.length()== 2)){
+        if (!(day.length() == 2)) {
             day = 0 + day;
         }
-        return year+month+day;
+        return year + month + day;
+    }
+    public void errorMessage(String errorMsg, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = Browser.getText(element);
+        String[] textSplit = text.split(" ");
+        text = textSplit[0] + textSplit[1] + textSplit[2];
+        boolean status = false;
+
+        if (text.contains(errorMsg)) {
+            status = true;
+
+        }
+        Assert.assertTrue(status, errorMsg + "error message is not the same");
+        logger.addScreenshot("");
+    }
+    public void totalAmount(String errorMsg, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = Browser.getText(element);
+        String[] textSplit = text.split(" ");
+        text = textSplit[1];
+        boolean status = false;
+
+        if (text.contains(errorMsg)) {
+            status = true;
+
+        }
+        Assert.assertTrue(status, errorMsg + "total amount is not the same");
+        logger.addScreenshot("");
+    }
+
+    public void verifyHijriDateIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.hijriDate(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.hijriDate()));
+        logger.addScreenshot("Equivalent Hijri date is displayed");
+    }
+
+    public void verifyTheNextButtonIsDisabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.nextBTN()));
+        logger.addScreenshot("The (التالي) button is not enabled/clickable");
     }
 }
