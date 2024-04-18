@@ -86,6 +86,23 @@ public class TerminateContractPageObjects {
     public static By theRequestsList() throws Exception{
         return By.xpath("//app-single-contract-termination-request");
     }
+    public static By terminationApprovalSteps() throws Exception{
+        return By.xpath("//h5[text()='خطوات الموافقة على إنهاء العقد']");
+    }
+    public static By approveDisclaimer() throws Exception{
+        return By.xpath("//h2[text()='الموافقة على إخلاء المسؤولية']");
+    }
+    public static By submitTerminationApprovalBTN() throws Exception{
+        return By.xpath("//button[text()=' إرسال الموافقة على الإنهاء ']");
+    }
+    public static By approvalSubmittedMessage() throws Exception{
+        return By.xpath("//h2[text()='تم إرسال الموافقة']");
+    }
+    public static By rejectTerminationBTN() throws Exception{
+        return By.xpath("//button[text()=' رفض الإنهاء ']");
+    }
+
+
 
 
 }
