@@ -120,7 +120,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
         String contractNum = app.addResidentialContractPage.getContractNumber();
         TestDataManager.addDependantGlobalTestData("ResidentialContract", "ContractNumber(<3 Months)", contractNum);
@@ -152,7 +152,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -183,7 +183,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -213,7 +213,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         app.addResidentialContractPage.verifyContractStatusIsActivated();
     }
@@ -322,7 +322,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser1", "ContractNumber(>3 months)",
@@ -352,7 +352,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -383,7 +383,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -412,7 +412,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         app.addResidentialContractPage.verifyContractStatusIsRegistered();
     }
@@ -522,7 +522,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser1", "ContractNumber(>3 months)",
@@ -552,7 +552,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -583,7 +583,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -703,7 +703,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser1", "ContractNumber(>3 months)",
@@ -733,7 +733,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -764,7 +764,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -884,7 +884,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser1", "ContractNumber(>3 months)",
@@ -914,7 +914,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -945,7 +945,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1065,7 +1065,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser1", "ContractNumber(>3 months)",
@@ -1095,7 +1095,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1126,7 +1126,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(>3 months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1248,7 +1248,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //
 //        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
@@ -1279,7 +1279,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1310,7 +1310,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1340,7 +1340,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         app.addResidentialContractPage.verifyContractStatusIsRegistered();
     }
@@ -1449,7 +1449,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser2", "ContractNumber(<3 Months)",
@@ -1479,7 +1479,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1510,7 +1510,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1540,7 +1540,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         app.addResidentialContractPage.verifyContractStatusIsRegistered();
     }
@@ -1649,7 +1649,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser2", "ContractNumber(<3 Months)",
@@ -1679,7 +1679,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1710,7 +1710,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1829,7 +1829,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.setContractNumberToContext(context);
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
 //        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
 //                "ApproveContractLesser2", "ContractNumber(<3 Months)",
@@ -1859,7 +1859,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();
@@ -1890,7 +1890,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectViewAllContractsButton();
-        app.addResidentialContractPage.clickFilterBtnOnViewAllContractsPage();
+        CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber(<3 Months)"));
         logger.info("Step 03: Approve the contract");
         app.addResidentialContractPage.clickContractNumberOnContractViewPage();

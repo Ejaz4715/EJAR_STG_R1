@@ -74,10 +74,10 @@ public class CommonMethodsPageObjects {
     public static By hijriDate() {
         return By.xpath("//span[@class=\"input-hints\"]");
     }
-    public static By closeBTN() throws Exception{
+    public static By closeBTN() {
         return By.xpath("//button[contains(text(),' إغلاق ')]");
     }
-    public static By requestNumber() throws Exception{
+    public static By requestNumber() {
         return By.xpath("//h5[@class=\"message mb-2\"]");
     }
 
@@ -141,4 +141,46 @@ public class CommonMethodsPageObjects {
     public static By NewInvoiceStatus() {
         return By.xpath("//tbody//tr//td[5]");
     }
+    public static By reviewTheContractPage() throws Exception{
+        return By.xpath("//p[text()='مراجعة العقد']");
+    }
+    public static By rejectBTN() throws Exception{
+        return By.xpath("//button[text()=' رفض ']");
+    }
+    public static By rejectReasonText() throws Exception{
+        return By.xpath("//h2[text()='لماذا تريد الرفض؟']");
+    }
+    public static By rejectReasonRadioBTNs() throws Exception{
+        return By.xpath("//app-form-radio[@formcontrolname=\"rejection_reason\"]");
+    }
+    public static By rejectionReasonNote() throws Exception{
+        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\"]");
+    }
+    public static By rejectionSubmittedMessage() throws Exception{
+        return By.xpath("//h2[text()='تم تقديم الرفض']");
+    }
+
+    public static By financialTab() throws Exception{
+        return By.xpath("//a[text()=' المالية ']");
+    }
+    public static By allInvoicesBTN() throws Exception{
+        return By.xpath("//span[text()='عرض الفواتير']");
+    }
+    public static By contractsInvoices() throws Exception{
+        return By.xpath("//h3[text()='فواتير العقود']");
+    }
+    public static By contractsNumber() throws Exception{
+        return By.xpath("//input[@data-name=\"contract_number\"]");
+    }
+    public static By allContractInvoices() throws Exception{
+        return By.xpath("//a[@class=\"list-item active\"]/div/h5");
+    }
+
+    public static By newContractInvoice() throws Exception{
+        return By.xpath("(//app-contract-invoice-row)[last()]");
+    }
+    public static By newAmountForContractInvoice() throws Exception{
+        return By.xpath("//td[contains(text(),'ر.س')]");
+    }
+
 }

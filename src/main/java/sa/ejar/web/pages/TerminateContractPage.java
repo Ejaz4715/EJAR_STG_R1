@@ -145,5 +145,50 @@ public class TerminateContractPage {
         Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.requestingPartyDDL()));
         logger.addScreenshot("The User not able to select (الطرف الطالب للإنهاء)");
     }
+
+    public void verifyTerminationApprovalStepsPageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.terminationApprovalSteps(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(TerminateContractPageObjects.terminationApprovalSteps()));
+        logger.addScreenshot("User Navigate To ' خطوات الموافقة على الإنهاء' Page");
+    }
+
+    public void verifyApproveDisclaimerPageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.approveDisclaimer(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(TerminateContractPageObjects.approveDisclaimer()));
+        logger.addScreenshot("User Navigate To 'الموافقة على إخلاء المسؤولية' Page");
+    }
+
+    public void clickOnSubmitTerminationApprovalButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.submitTerminationApprovalBTN(), 20);
+        Browser.click(TerminateContractPageObjects.submitTerminationApprovalBTN());
+
+    }
+
+    public void verifyApprovalSubmittedMessageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.approvalSubmittedMessage(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(TerminateContractPageObjects.approvalSubmittedMessage()));
+        logger.addScreenshot("The (تم إرسال الموافقة) message is displayed");
+    }
+
+    public void clickOnRejectTerminationButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.rejectTerminationBTN(), 20);
+        Browser.click(TerminateContractPageObjects.rejectTerminationBTN());
+
+    }
+
+    public void verifyRejectTerminationButtonIsEnabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.rejectTerminationBTN(), 20);
+        Assert.assertTrue(Browser.isElementEnabled(TerminateContractPageObjects.rejectTerminationBTN()));
+        logger.addScreenshot("The (رفض الإنهاء) button is enabled");
+
+    }
+
+    public void verifyRejectTerminationButtonIsDisabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.rejectTerminationBTN(), 20);
+        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.rejectTerminationBTN()));
+        logger.addScreenshot("The (رفض الإنهاء) button is disabled");
+    }
+
+
 }
 
