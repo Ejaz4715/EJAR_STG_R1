@@ -22,7 +22,6 @@ public class CommonMethodsPageObjects {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
     }
 
-
     public static By nextBTN() throws Exception{
         return By.xpath("//button[contains(text(),'التالي')]");
     }
@@ -35,7 +34,6 @@ public class CommonMethodsPageObjects {
     public static By confirmBTN() throws Exception{
         return By.xpath("//button[contains(text(),' تأكيد ')]");
     }
-
 
     public static By ContractsList(){
         return By.xpath("//app-single-contract");
@@ -55,31 +53,31 @@ public class CommonMethodsPageObjects {
     public static By PopUpAlertAfterCancel() {
         return By.xpath("//app-card-body/p");
     }
-
-    public static By maxValueError() throws Exception{
-        return By.xpath(get("//li[@data-error=\"errors.max_value\"]"));
-    }
-<<<<<<< HEAD
-    public static By totalAmount() throws Exception{
-        return By.xpath(get("//span[text()='الإجمالي']/following-sibling::span"));
+    public static By maxValueError() {
+        return By.xpath("//li[@data-error=\"errors.max_value\"]");
     }
 
-=======
-    public static By minValueError() throws Exception{
+    public static By ViewOrDownloadAttachmentButtons() {
+        return By.xpath("//app-card/descendant::button");
+    }
+
+    public static By SuccessPopUPTitle() {
+        return By.xpath("//h5[contains (text() , 'رسالة نجاح')]");
+    }
+    public static By minValueError(){
         return By.xpath("//li[@data-error=\"errors.min_value\"]");
     }
->>>>>>> 7aa0cbb277c2120ec620fc6b5177ae933f8e21d2
 
-    public static By totalAmount() throws Exception{
+    public static By totalAmount(){
         return By.xpath("//span[text()='الإجمالي']/following-sibling::span");
     }
-    public static By hijriDate() throws Exception{
+    public static By hijriDate() {
         return By.xpath("//span[@class=\"input-hints\"]");
     }
-    public static By closeBTN() throws Exception{
+    public static By closeBTN() {
         return By.xpath("//button[contains(text(),' إغلاق ')]");
     }
-    public static By requestNumber() throws Exception{
+    public static By requestNumber() {
         return By.xpath("//h5[@class=\"message mb-2\"]");
     }
 

@@ -15,7 +15,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
@@ -33,7 +33,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
@@ -55,7 +55,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
@@ -76,7 +76,7 @@ public class ChangeLessorAndLessorRepresentative extends NHCWebTest {
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
-        logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("UserName"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
