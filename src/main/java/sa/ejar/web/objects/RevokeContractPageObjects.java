@@ -19,7 +19,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By RevokeContractRequestPageHeading() {
-        return By.xpath("//h1[text()='طلب فسخ العقد من طرف واحد']");
+        return By.xpath("//h1[contains (text() , 'طلب فسخ العقد من طرف واحد')]");
     }
 
     public static By ExecutionOrderNumberInput() {
@@ -76,5 +76,21 @@ public class RevokeContractPageObjects {
 
     public static By RequestNumberText() {
         return By.xpath("//button[contains (text() , ' تأكيد طلب الفسخ  ')]");
+    }
+
+    public static By ViewButtonOnRequest() {
+        return By.xpath("//button[contains (text(), ' عرض ')]");
+    }
+
+    public static By UnAssignButton() {
+        return By.xpath("//button[contains (text() , ' إلغاء التعيين ')]");
+    }
+
+    public static By RejectReasonTextarea() {
+        return By.xpath("//textarea[@data-name=\"reject_reason\"]");
+    }
+
+    public static By RejectBTNOnPopUp() {
+        return By.xpath("//h2[text()='سبب الرفض ']/ancestor::app-card/descendant::button[contains (text() , ' رفض ')]");
     }
 }

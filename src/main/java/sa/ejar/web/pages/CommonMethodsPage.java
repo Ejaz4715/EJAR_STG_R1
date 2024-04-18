@@ -3,6 +3,7 @@ package sa.ejar.web.pages;
 import com.testcrew.manager.PDFReportManager;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import io.restassured.internal.common.assertion.AssertionSupport;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -54,6 +55,15 @@ public class CommonMethodsPage {
         Browser.waitForSeconds(1);
         logger.addScreenshot("Navigate to View All Requests page");
     }
+
+    public static void clickOnRevokeContractRequestButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RevokeContractRequestOption(), 20);
+        Browser.click(CommonMethodsPageObjects.RevokeContractRequestOption());
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Navigate to Revoke Contract Request page");
+    }
+
+
     /**
      * Click on filter button
      */
@@ -408,6 +418,20 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void verifyConfirmPopUpIsDisplayedAfterApproveRequest() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ConfirmationPopUpTitle(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.ConfirmationPopUpTitle()), "Confirmation Pop up is not displayed");
+        logger.addScreenshot("");
+    }
+
+    public static void verifyConfirmPopUpIsDisplayedAfterRejectRequest() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle()), "Reason of rejection Pop up is not displayed");
+        logger.addScreenshot("");
+    }
+
+
+
     public static String getRequestNumber(By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String text = Browser.getText(element);
@@ -433,4 +457,46 @@ public class CommonMethodsPage {
         TestDataManager.writeDependantGlobalTestData("Terminate");
     }
 
+    public static void checkRequestsPageIsDisplayed(String requestType) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestPageTitle(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.RequestPageTitle()), requestType + "request page is not displayed");
+        logger.addScreenshot(requestType + "request page is displayed");
+    }
+
+    public static void checkRequestStatus(String expectedStatus) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestStatus(), 40);
+        String actualStatus = Browser.getText(CommonMethodsPageObjects.RequestStatus());
+        Assert.assertEquals(actualStatus, expectedStatus, "Status does not match");
+        logger.addScreenshot("Request status is: " + actualStatus);
+    }
+
+    public static void clickOnApproveBTN() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ApproveBTN(), 40);
+        Browser.click(CommonMethodsPageObjects.ApproveBTN());
+    }
+
+    public static void clickOnRejectBTN() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40 );
+        Browser.click(CommonMethodsPageObjects.RejectBTN());
+    }
+
+    public static void verifyNewInvoiceDateIsSameAsEnteredInRequest(String expectedDate) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PaymentDueDateOnInvoice(), 40);
+        String actualDate = Browser.getText(CommonMethodsPageObjects.PaymentDueDateOnInvoice());
+        String [] splitDate = actualDate.split("-");
+        actualDate = splitDate[0] +  splitDate[1] + splitDate[2];
+        Assert.assertEquals(actualDate, expectedDate, "Dates are not same ");
+        logger.addScreenshot("");
+    }
+
+    public static void verifyInvoiceStatus(String invoice, String expectedStatus, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String actualStatus = Browser.getText(element);
+        boolean status = false;
+        if (expectedStatus.contains(actualStatus)){
+            status = true;
+        }
+        Assert.assertTrue(status, invoice + " has different status");
+        logger.addScreenshot(invoice + " has status " + actualStatus);
+    }
 }

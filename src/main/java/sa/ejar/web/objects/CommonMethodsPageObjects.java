@@ -101,4 +101,44 @@ public class CommonMethodsPageObjects {
     public static By acceptTerminationOptionBTN() throws Exception{
         return By.xpath("//a[text()=' الموافقة على الإنهاء ']");
     }
+
+    public static By RevokeContractRequestOption() {
+        return By.xpath("//span[contains (text() , 'عرض طلبات فسخ العقد')]");
+    }
+
+    public static By RequestPageTitle() {
+        return By.xpath("//h1[contains (text() , 'طلبات')]");
+    }
+
+    public static By RequestStatus() {
+        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
+    }
+
+    public static By ApproveBTN() {
+        return By.xpath("//button[contains (text(), ' قبول ')]");
+    }
+
+    public static By ConfirmationPopUpTitle() {
+        return By.xpath("//h2[contains (text(), 'تأكيد ')]");
+    }
+
+    public static By RejectBTN() {
+        return By.xpath("//button[contains (text() , ' رفض ')]");
+    }
+
+    public static By ReasonOfRejectPopUpTitle() {
+        return By.xpath("//h2[text()='سبب الرفض ']");
+    }
+
+    public static By PaymentDueDateOnInvoice() {
+        return By.xpath("(//tbody//tr//td[3]//span)[3]");
+    }
+
+    public static By OldInvoiceStatus() {
+        return By.xpath("//span[text()='الحالة']/following-sibling::h5");
+    }
+
+    public static By NewInvoiceStatus() {
+        return By.xpath("//tbody//tr//td[5]");
+    }
 }

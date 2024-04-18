@@ -1,8 +1,11 @@
 package sa.ejar.web.pages;
 
+import com.testcrew.base.WebBasePage;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 
@@ -107,6 +110,12 @@ public class RevokeContractPage {
         Assert.assertTrue(Browser.isElementSelected(TerminateContractPageObjects.allPaymentsSettledRadioBTN()), "All Payment Settled button is not selected");
         logger.addScreenshot("");
     }
+    public void checkTenantFinalPaymentRadioButtonIsSelected() throws Exception {
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.tenantFinalPaymentRadioBTN(), 40);
+        Assert.assertTrue(Browser.isElementSelected(TerminateContractPageObjects.tenantFinalPaymentRadioBTN()), "All Payment Settled button is not selected");
+        logger.addScreenshot("");
+    }
+
 
     public void checkRequestDetailsPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RequestDetailsSection(), 40);
@@ -121,9 +130,57 @@ public class RevokeContractPage {
 
     }
 
-    public void getReqNum() {
+    public void getReqNumApprove() {
         String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
-        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum", request);
+        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval", request);
         TestDataManager.writeDependantGlobalTestData("Revoke");
+    }
+
+    public void getReqNumReject() {
+        String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
+        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Rejection", request);
+        TestDataManager.writeDependantGlobalTestData("Revoke");
+    }
+
+    public void getReqNumApproveWithPayment() {
+        String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
+        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval_With_Payment", request);
+        TestDataManager.writeDependantGlobalTestData("Revoke");
+    }
+
+
+    public void clickOnViewButtonOnRequest() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.ViewButtonOnRequest(), 40);
+        Browser.click(RevokeContractPageObjects.ViewButtonOnRequest());
+        logger.addScreenshot("");
+    }
+
+    public void clickOnUnAssignButton() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.UnAssignButton(), 40);
+        Browser.click(RevokeContractPageObjects.UnAssignButton());
+    }
+
+
+    public void enterRejectionReason(String rejectReason) {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RejectReasonTextarea(), 40);
+        Browser.setText(RevokeContractPageObjects.RejectReasonTextarea(), rejectReason);
+    }
+
+    public void verifyRejectionReasonHasBeenEntered(String rejectReason) {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RejectReasonTextarea(), 40);
+        WebElement ele = Browser.getWebElement(RevokeContractPageObjects.RejectReasonTextarea());
+        String text = ele.getAttribute("value");
+        Assert.assertEquals(text, rejectReason, "Text is not entered");
+        logger.addScreenshot("");
+    }
+
+    public void verifyRejectButtonIsDisabledOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RejectBTNOnPopUp(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(RevokeContractPageObjects.RejectBTNOnPopUp()), "Button is not disabled");
+    }
+
+    public void clickOnRejectButtonOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RejectBTNOnPopUp(), 40);
+        Browser.click(RevokeContractPageObjects.RejectBTNOnPopUp());
     }
 }
