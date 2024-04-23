@@ -183,4 +183,10 @@ public class CommonMethodsPageObjects {
         return By.xpath("//td[contains(text(),'ر.س')]");
     }
 
+    public static By UserIdentityList(){
+        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+    }
+    public static By RoleName(){
+        return By.xpath("//div//p[@class='role-name']");
+    }
 }

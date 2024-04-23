@@ -453,7 +453,6 @@ public class CommonMethodsPage {
     }
 
 
-
     public static String getRequestNumber(By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String text = Browser.getText(element);
@@ -499,15 +498,15 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnRejectBTN() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40 );
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40);
         Browser.click(CommonMethodsPageObjects.RejectBTN());
     }
 
     public static void verifyNewInvoiceDateIsSameAsEnteredInRequest(String expectedDate) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PaymentDueDateOnInvoice(), 40);
         String actualDate = Browser.getText(CommonMethodsPageObjects.PaymentDueDateOnInvoice());
-        String [] splitDate = actualDate.split("-");
-        actualDate = splitDate[0] +  splitDate[1] + splitDate[2];
+        String[] splitDate = actualDate.split("-");
+        actualDate = splitDate[0] + splitDate[1] + splitDate[2];
         Assert.assertEquals(actualDate, expectedDate, "Dates are not same ");
         logger.addScreenshot("");
     }
@@ -516,7 +515,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String actualStatus = Browser.getText(element);
         boolean status = false;
-        if (expectedStatus.contains(actualStatus)){
+        if (expectedStatus.contains(actualStatus)) {
             status = true;
         }
         Assert.assertTrue(status, invoice + " has different status");
@@ -626,4 +625,27 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void changeUserRole(String User) {
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
+        String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
+        if (RoleName.contains(User)) {
+           logger.info("Current User Role :" + User);
+        }
+        else
+        {
+            Browser.click(CommonMethodsPageObjects.RoleName());
+            List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
+            boolean status = false;
+            for (WebElement opt : UserRoleList) {
+                String optText = opt.getText();
+                if (optText.contains(User)) {
+                    opt.click();
+                    status = true;
+                    break;
+                }
+            }
+            Assert.assertTrue(status, UserRoleList + "User Role is not available");
+            logger.addScreenshot("");
+        }
+    }
 }
