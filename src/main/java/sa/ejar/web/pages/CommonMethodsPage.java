@@ -684,6 +684,29 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void changeUserRole(String User) {
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
+        String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
+        if (RoleName.contains(User)) {
+           logger.info("Current User Role :" + User);
+        }
+        else
+        {
+            Browser.click(CommonMethodsPageObjects.RoleName());
+            List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
+            boolean status = false;
+            for (WebElement opt : UserRoleList) {
+                String optText = opt.getText();
+                if (optText.contains(User)) {
+                    opt.click();
+                    status = true;
+                    break;
+                }
+            }
+            Assert.assertTrue(status, UserRoleList + "User Role is not available");
+            logger.addScreenshot("");
+        }
+
     public static void clickOnRemoveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
         Browser.click(CommonMethodsPageObjects.removeBTN());
@@ -827,5 +850,6 @@ public class CommonMethodsPage {
         }
         Assert.assertTrue(status, errorMsg + "error message is not the same");
         logger.addScreenshot("");
+
     }
 }
