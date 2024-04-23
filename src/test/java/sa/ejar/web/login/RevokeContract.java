@@ -82,7 +82,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 06: Verify ( فسخ العقد من طرف واحد ) option is displayed");
+        logger.info("Step 07: Verify ( فسخ العقد من طرف واحد ) option is displayed");
         CommonMethodsPage.KebabMenuOptions("فسخ العقد من طرف واحد");
     }
 
@@ -106,7 +106,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 06: Click on  ( فسخ العقد من طرف واحد ) option");
+        logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         app.revokeContractPage.verifyRevokeContractPageIsDisplayed();
     }
