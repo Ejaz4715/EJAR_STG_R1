@@ -20,6 +20,8 @@ public class NHCWebApplication {
     public final CommonMethodsPage commonMethodsPage;
 
     public final TerminateContractPage terminateContractPage;
+    public final MoveInMoveOutUnitsPage moveInMoveOutUnitsPage;
+
 //    public final RechargeWalletPage rechargeWalletPage;
 //    public final AddPropertyPage addPropertyPage;
 //    public final RegistrationPage registrationPage;
@@ -38,6 +40,8 @@ public class NHCWebApplication {
 //        registrationPage = new RegistrationPage();
 //        createNewCommercialContract = new CreateNewCommercialContract();
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
+        moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
+
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
