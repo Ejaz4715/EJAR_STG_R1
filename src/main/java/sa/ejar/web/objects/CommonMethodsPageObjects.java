@@ -35,6 +35,10 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains(text(),' تأكيد ')]");
     }
 
+    public static By editBTN() throws Exception{
+        return By.xpath("//button[contains(text(),'تعديل')]");
+    }
+
     public static By ContractsList(){
         return By.xpath("//app-single-contract");
     }
@@ -181,6 +185,46 @@ public class CommonMethodsPageObjects {
     }
     public static By newAmountForContractInvoice() throws Exception{
         return By.xpath("//td[contains(text(),'ر.س')]");
+    }
+    public static By viewContractOptionBTN() throws Exception{
+        return By.xpath("//a[text()=' عرض العقد ']");
+    }
+
+    public static By submitForApprovalBTN() throws Exception{
+        return By.xpath("//button[text()=' الإرسال للتوثيق ']");
+    }
+    public static By removeBTN() {
+        return By.xpath("//button[text()=' إزالة ']");
+    }
+
+    public static By confirmAndSubmitBTN() {
+        return By.xpath("//button[text()=' تأكيد وإرسال ']");
+    }
+    public static By disclaimerCheckbox() {
+        return By.xpath("//app-form-checkbox[@formcontrolname=\"approve_unified_disclaimer\"]/label");
+    }
+
+    public static By ratingBTN() {
+        return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");
+    }
+    public static By submitBTN() {
+        return By.xpath("//button[text()=' إرسال ']");
+    }
+    public static By successfulSurveySubmittedMsg() {
+        return By.xpath("//h2[text()='تم تقديم الرد']");
+    }
+
+    public static By yesRadioBTN() {
+        return By.xpath("//label[text()=' نعم ']");
+    }
+    public static By deleteIconBTN() {
+        return By.xpath("//i[@class=\"delete-icon\"]/parent::button");
+    }
+    public static By CRNumberInput() {
+        return By.xpath("//input[@formcontrolname=\"registration_number\"]");
+    }
+    public static By errorCRNumberMsg() {
+        return By.xpath("//ul[@class=\"errors\"]/li");
     }
 
 }
