@@ -19,8 +19,11 @@ public class NHCWebApplication {
     public final RevokeContractPage revokeContractPage;
     public final CommonMethodsPage commonMethodsPage;
     public final TerminateContractPage terminateContractPage;
+
     public final ContractWaiverPage contractWaiverPage;
     public final SendContractForApprovalPage sendContractForApprovalPage;
+
+    public final MoveInMoveOutUnitsPage moveInMoveOutUnitsPage;
 
     public final RentalIncidentsPage rentalIncidentsPage;
     public final ChangeLessorAndLessorRepresentativePage changeLessorAndLessorRepresentativePage;
@@ -35,6 +38,8 @@ public class NHCWebApplication {
         sendContractForApprovalPage = new SendContractForApprovalPage();
         rentalIncidentsPage = new RentalIncidentsPage();
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
+        moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
+
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
