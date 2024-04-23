@@ -9,6 +9,8 @@ import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 
+import java.security.UnrecoverableKeyException;
+
 import static com.testcrew.base.WebBaseTest.logger;
 import static sa.ejar.web.pages.CommonMethodsPage.verifyValueIsEntered;
 
@@ -53,12 +55,14 @@ public class RevokeContractPage {
 
     public void clickOnCalenderIcon() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderIcon(), 40);
+        Assert.assertTrue(Browser.isElementEnabled(RevokeContractPageObjects.CalenderIcon()), "Calender icon is not clickable");
         Browser.click(RevokeContractPageObjects.CalenderIcon());
     }
 
     public void verifyCalenderIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderPopUp(), 40);
         Browser.click(RevokeContractPageObjects.CalenderPopUp());
+        logger.addScreenshot("");
 
     }
 

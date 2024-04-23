@@ -9,8 +9,6 @@ import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
 
-import static com.testcrew.base.WebBaseTest.logger;
-
 public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
@@ -920,7 +918,7 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 14: Equivalent Hijri date is displayed");
-        CommonMethodsPage.verifyHijriDateIsDisplayed();
+        CommonMethodsPage.verifyEquivalentDateIsDisplayed("hijri");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2508,7 +2506,7 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 13: Equivalent Hijri date is displayed");
-        CommonMethodsPage.verifyHijriDateIsDisplayed();
+        CommonMethodsPage.verifyEquivalentDateIsDisplayed("hijri");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4063,7 +4061,7 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 13: Equivalent Hijri date is displayed");
-        CommonMethodsPage.verifyHijriDateIsDisplayed();
+        CommonMethodsPage.verifyEquivalentDateIsDisplayed("hijri");
     }
 
     @Test(dataProvider = "testDataProvider")
