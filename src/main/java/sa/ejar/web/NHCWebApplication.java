@@ -18,21 +18,11 @@ public class NHCWebApplication {
     public final AddResidentialContractPage addResidentialContractPage;
     public final RevokeContractPage revokeContractPage;
     public final CommonMethodsPage commonMethodsPage;
-
     public final TerminateContractPage terminateContractPage;
-<<<<<<< HEAD
-
     public final ContractWaiverPage contractWaiverPage;
-=======
     public final SendContractForApprovalPage sendContractForApprovalPage;
 
     public final RentalIncidentsPage rentalIncidentsPage;
->>>>>>> ibrahim
-//    public final RechargeWalletPage rechargeWalletPage;
-//    public final AddPropertyPage addPropertyPage;
-//    public final RegistrationPage registrationPage;
-//    public final CreateNewCommercialContract createNewCommercialContract;
-
     public final ChangeLessorAndLessorRepresentativePage changeLessorAndLessorRepresentativePage;
 
     public NHCWebApplication() {
@@ -41,16 +31,9 @@ public class NHCWebApplication {
         revokeContractPage = new RevokeContractPage();
         commonMethodsPage = new CommonMethodsPage();
         terminateContractPage = new TerminateContractPage();
-<<<<<<< HEAD
         contractWaiverPage = new ContractWaiverPage();
-=======
         sendContractForApprovalPage = new SendContractForApprovalPage();
         rentalIncidentsPage = new RentalIncidentsPage();
->>>>>>> ibrahim
-//        rechargeWalletPage = new RechargeWalletPage();
-//        addPropertyPage = new AddPropertyPage();
-//        registrationPage = new RegistrationPage();
-//        createNewCommercialContract = new CreateNewCommercialContract();
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
     }
 
