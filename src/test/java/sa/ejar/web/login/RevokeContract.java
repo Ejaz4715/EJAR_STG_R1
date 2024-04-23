@@ -1327,7 +1327,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNum_Approval_Payment_Settled"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNum_Approval"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1350,7 +1350,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
         logger.info("Step 06:  Check request status ");
-        CommonMethodsPage.checkRequestStatus(data.get("RequestStatus"));
+        CommonMethodsPage.checkRequestStatus(" تم الإرسال ");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1515,7 +1515,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 08:  Click on إلغاء button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.clickFilterBtn();
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval_Payment_Settled"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
         logger.info("Step 09:  Click on \" إلغاء التعيين \" button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم إلغاء تعيينك لهذا الطلب. يرجى التأكيد لتنفيذ هذا الإجراء");
@@ -2748,7 +2748,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify a new invoice having same amount");
-        CommonMethodsPage.newAmountForContractInvoice(data.get("Valid_Payment_Amount"));
+        CommonMethodsPage.newAmountForContractInvoice(data.get("TenantFinalPaymentAmount"));
 
     }
     @Test(dataProvider = "testDataProvider")

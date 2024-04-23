@@ -71,7 +71,7 @@ public class CommonMethodsPageObjects {
     public static By totalAmount(){
         return By.xpath("//span[text()='الإجمالي']/following-sibling::span");
     }
-    public static By hijriDate() {
+    public static By equivalentDateHint() {
         return By.xpath("//span[@class=\"input-hints\"]");
     }
     public static By closeBTN() {
@@ -183,4 +183,74 @@ public class CommonMethodsPageObjects {
         return By.xpath("//td[contains(text(),'ر.س')]");
     }
 
+    public static By PhoneNumberInputField() {
+        return By.xpath("//input[@data-name=\"nationalNumber\"]");
+    }
+
+    public static By PhoneNumberInputFieldErrorMessage() {
+        return By.xpath("//label[contains (text() , 'الهاتف')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By EmailInputField() {
+        return By.xpath("//input[@data-name=\"email\"]");
+    }
+
+    public static By EmailErrorMessage() {
+        return By.xpath("//label[contains (text() , 'البريد ')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By RegionDropdown() {
+        return By.xpath("//select[@data-name=\"region\"]");
+    }
+
+    public static By RegionDropdownOptions() {
+        return By.xpath("//select[@data-name=\"region\"]/child::option");
+    }
+
+    public static By CityDropdown() {
+        return By.xpath("//input[@data-name=\"city\"]/parent::div/child::div/child::div");
+    }
+
+    public static By CitySearchBar() {
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::input[@placeholder=\"البحث\"]");
+    }
+
+    public static By CityName() {
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::div[@class=\"option-text\"]");
+    }
+
+    public static By PostalCodeInput() {
+        return By.xpath("//input[@data-name=\"postal_code\"]");
+    }
+
+    public static By PostalCodeError() {
+        return By.xpath("//label[contains (text() , 'الرمز البريدي')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By StreetNameInput() {
+        return By.xpath("//input[@data-name=\"street_name\"]");
+        
+    }
+
+    public static By StreetNameError() {
+        return By.xpath("//label[contains (text() , 'اسم الشارع')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By BuildingNumberError() {
+        return By.xpath("//label[contains (text() , 'رقم المبنى' )]/parent::app-form-field/descendant::li");
+
+    }
+
+    public static By BuildingNumberInput() {
+        return By.xpath("//input[@data-name=\"building_number\"]");
+
+    }
+
+    public static By AdditionalNumberInput() {
+        return By.xpath("//input[@data-name=\"additional_number\"]");
+    }
+
+    public static By AdditionalNumberError() {
+        return By.xpath("//label[contains (text() , 'الرقم الإضافي' )]/parent::app-form-field/descendant::li");
+    }
 }

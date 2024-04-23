@@ -20,6 +20,8 @@ public class NHCWebApplication {
     public final CommonMethodsPage commonMethodsPage;
 
     public final TerminateContractPage terminateContractPage;
+
+    public final ContractWaiverPage contractWaiverPage;
 //    public final RechargeWalletPage rechargeWalletPage;
 //    public final AddPropertyPage addPropertyPage;
 //    public final RegistrationPage registrationPage;
@@ -33,6 +35,7 @@ public class NHCWebApplication {
         revokeContractPage = new RevokeContractPage();
         commonMethodsPage = new CommonMethodsPage();
         terminateContractPage = new TerminateContractPage();
+        contractWaiverPage = new ContractWaiverPage();
 //        rechargeWalletPage = new RechargeWalletPage();
 //        addPropertyPage = new AddPropertyPage();
 //        registrationPage = new RegistrationPage();

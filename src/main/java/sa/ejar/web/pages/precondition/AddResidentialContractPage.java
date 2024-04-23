@@ -301,6 +301,19 @@ public class AddResidentialContractPage {
 //        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.tenantRadioBTN());
     }
+    public void verifyTenantRadioBTNIsClickable() throws Exception {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 5);
+//        Browser.waitForSeconds(2);
+        Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantRadioBTN()), "Button is not clickable");
+    }
+    public void verifyTenantRepresentativeRadioBTNIsClickable() throws Exception {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN(), 5);
+//        Browser.waitForSeconds(2);
+        Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN()), "Button is not clickable");
+        logger.addScreenshot("");
+    }
+
+
 
     public void inputTenantNationalId(String nationalId) throws Exception {
 //        Browser.waitForSeconds(2);

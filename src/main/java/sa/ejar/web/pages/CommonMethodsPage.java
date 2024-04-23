@@ -107,6 +107,11 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
         Browser.click(CommonMethodsPageObjects.nextBTN());
     }
+    public static void verifyNextButtonIsEnabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Assert.assertTrue(Browser.isElementEnabled(CommonMethodsPageObjects.nextBTN()), "Button is not enabled");
+        logger.addScreenshot("");
+    }
 
     public static void clickOnCancelButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(), 20);
@@ -277,6 +282,12 @@ public class CommonMethodsPage {
         String val = Browser.getWebElement(element).getAttribute("value");
         Assert.assertTrue(val.contains(value), "Value has been entered");
     }
+    public static void verifyValueIsNotEntered(String value, By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String val = Browser.getWebElement(element).getAttribute("value");
+        Assert.assertFalse(val.contains(value), "Value is not entered");
+    }
+
 
 
     /**
@@ -311,7 +322,7 @@ public class CommonMethodsPage {
             status = true;
 
         }
-        Assert.assertTrue(status, errorMsg + "error message is not the same");
+        Assert.assertTrue(status, errorMsg + "error message is not same/displayed");
         logger.addScreenshot("");
     }
 
@@ -330,10 +341,10 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
-    public static void verifyHijriDateIsDisplayed() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.hijriDate(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.hijriDate()));
-        logger.addScreenshot("Equivalent Hijri date is displayed");
+    public static void verifyEquivalentDateIsDisplayed(String dateType) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.equivalentDateHint(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.equivalentDateHint()));
+        logger.addScreenshot("Equivalent " +dateType+ " date is displayed");
     }
 
     public static void verifyTheNextButtonIsDisabled() throws Exception {
@@ -626,4 +637,69 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void enterPhoneNumber(String phoneNumber) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PhoneNumberInputField(), 40);
+        Browser.clearText(CommonMethodsPageObjects.PhoneNumberInputField());
+        Browser.setText(CommonMethodsPageObjects.PhoneNumberInputField(), phoneNumber);
+    }
+
+    public static void enterEmail(String email) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.EmailInputField(), 40);
+        Browser.clearText(CommonMethodsPageObjects.EmailInputField());
+        Browser.setText(CommonMethodsPageObjects.EmailInputField(), email);
+    }
+
+    public static void clickOnRegionDropdownMenu() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdown(), 40);
+        Browser.click(CommonMethodsPageObjects.RegionDropdown());
+    }
+
+    public static void selectRegion(String tenantRegion) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdownOptions(), 40);
+        Browser.selectDropdownByValue(CommonMethodsPageObjects.RegionDropdownOptions(), tenantRegion);
+        logger.addScreenshot("Province is selected");
+
+    }
+
+    public static void clickOnCityDropdown() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityDropdown(), 40);
+        Browser.click(CommonMethodsPageObjects.CityDropdown());
+    }
+
+    public static void SelectCity(String tenantCity) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CitySearchBar(), 40);
+        Browser.setText(CommonMethodsPageObjects.CitySearchBar(), tenantCity);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityName(), 40);
+        Browser.click(CommonMethodsPageObjects.CityName());
+        logger. addScreenshot(tenantCity + " city is selected");
+    }
+
+    public static void enterPostalCode(String postalCode) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PostalCodeInput(), 40);
+        Browser.clearText(CommonMethodsPageObjects.PostalCodeInput());
+        Browser.setText(CommonMethodsPageObjects.PostalCodeInput(), postalCode);
+        logger. addScreenshot(postalCode + " postal code is entered");
+    }
+
+    public static void enterStreetName(String street) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.StreetNameInput(), 40);
+        Browser.clearText(CommonMethodsPageObjects.StreetNameInput());
+        Browser.setText(CommonMethodsPageObjects.StreetNameInput(), street);
+        logger. addScreenshot(street + " street name is entered");
+    }
+
+    public static void enterBuildingNumber(String buildingNum) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.BuildingNumberInput(), 40);
+        Browser.clearText(CommonMethodsPageObjects.BuildingNumberInput());
+        Browser.setText(CommonMethodsPageObjects.BuildingNumberInput(), buildingNum);
+        logger. addScreenshot(buildingNum + " street name is entered");
+
+    }
+
+    public static void enterAdditionalNumber(String additionalNum) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.AdditionalNumberInput(), 40);
+        Browser.clearText(CommonMethodsPageObjects.AdditionalNumberInput());
+        Browser.setText(CommonMethodsPageObjects.AdditionalNumberInput(), additionalNum);
+        logger. addScreenshot(additionalNum + " street name is entered");
+    }
 }
