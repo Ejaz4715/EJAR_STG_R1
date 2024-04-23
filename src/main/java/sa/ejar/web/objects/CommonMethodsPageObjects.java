@@ -207,8 +207,9 @@ public class CommonMethodsPageObjects {
     public static By UserIdentityList(){
         return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
     }
-    public static By RoleName(){
+    public static By RoleName() {
         return By.xpath("//div//p[@class='role-name']");
+    }
 
     public static By ratingBTN() {
         return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");

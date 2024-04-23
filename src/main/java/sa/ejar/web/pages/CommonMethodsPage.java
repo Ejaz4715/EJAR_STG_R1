@@ -706,6 +706,7 @@ public class CommonMethodsPage {
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
             logger.addScreenshot("");
         }
+        }
 
     public static void clickOnRemoveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
