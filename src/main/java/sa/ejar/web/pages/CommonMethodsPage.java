@@ -1,18 +1,20 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.manager.PDFReportManager;
 import com.testcrew.manager.TestDataManager;
+
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
-import sa.ejar.web.objects.RentalIncidentsPageObjects;
+
+import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
@@ -26,13 +28,10 @@ public class CommonMethodsPage {
     public static void clickContractsBtn() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 60);
         if (Browser.isElementPresent(LoginPageObjects.assessementUnitpopup())) {
-//            Browser.waitForSeconds(3);
             Browser.click(LoginPageObjects.assessementUnitpopup());
         }
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.contractButton(), 60);
-//        Browser.waitForSeconds(5);
         Browser.click(LoginPageObjects.contractButton());
-//        Browser.waitForSeconds(2);
         logger.addScreenshot("Clicked on Contracts button");
     }
 
@@ -49,13 +48,10 @@ public class CommonMethodsPage {
     public static void clickOnTheRequestsTabButton() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 60);
         if (Browser.isElementPresent(LoginPageObjects.assessementUnitpopup())) {
-//            Browser.waitForSeconds(3);
             Browser.click(LoginPageObjects.assessementUnitpopup());
         }
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.theRequestTab(), 60);
-//        Browser.waitForSeconds(5);
         Browser.click(CommonMethodsPageObjects.theRequestTab());
-//        Browser.waitForSeconds(2);
         logger.addScreenshot("Clicked on Requests button");
     }
 
@@ -83,90 +79,85 @@ public class CommonMethodsPage {
         logger.addScreenshot("Clicked on filter button");
     }
 
-
-    /**
-     * Click on filter button
-     *
-     * @param contractNumber - Contract number
-     */
     public static void enterContractNumberInContractSearchInputField(String contractNumber) throws Exception {
         Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.searchContractNumberInputField(), 20);
-//        Browser.waitForSeconds(3);
         Browser.setText(AddResidentialContractPageObjects.searchContractNumberInputField(), contractNumber);
         Browser.waitForSeconds(1);
         logger.addScreenshot("Entered Contract Number in search input field");
     }
 
     public static void enterRequestNumberInRequestSearchInputField(String requestNumber) throws Exception {
-        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.requestNumberTXT(), 20);
-//        Browser.waitForSeconds(3);
-        Browser.setText(CommonMethodsPageObjects.requestNumberTXT(), requestNumber);
-        Browser.waitForSeconds(1);
+        waitUntilPresenceOfElement(CommonMethodsPageObjects.requestNumberTXT(), 20);
+        setText(CommonMethodsPageObjects.requestNumberTXT(), requestNumber);
+        waitForSeconds(1);
         logger.addScreenshot("Entered Request Number in search input field");
     }
 
     public static void clickOnNextButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.nextBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        click(CommonMethodsPageObjects.nextBTN());
     }
 
     public static void verifyNextButtonIsEnabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
-        Assert.assertTrue(Browser.isElementEnabled(CommonMethodsPageObjects.nextBTN()), "Button is not enabled");
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Assert.assertTrue(isElementEnabled(CommonMethodsPageObjects.nextBTN()), "Button is not enabled");
         logger.addScreenshot("");
     }
 
     public static void clickOnCancelButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.cancelBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(), 20);
+        click(CommonMethodsPageObjects.cancelBTN());
     }
 
     public static void checkTheContractsPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.theContractPage()));
-        PDFReportManager.logger.addScreenshot("User Navigate Back To 'العقود' Page");
+        waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(), 20);
+        Assert.assertTrue(isElementDisabled(TerminateContractPageObjects.theContractPage()));
+        logger.addScreenshot("User Navigate Back To 'العقود' Page");
     }
 
     public static void clickOnBackButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.backBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.backBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.backBTN(), 20);
+        click(CommonMethodsPageObjects.backBTN());
     }
 
     public static void clickOnConfirmButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.confirmBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
+        click(CommonMethodsPageObjects.confirmBTN());
     }
 
     public static void clickOnCloseButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.closeBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.closeBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.closeBTN(), 20);
+        click(CommonMethodsPageObjects.closeBTN());
     }
 
     public static void clickOnEditButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.editBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.editBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.editBTN(), 20);
+        click(CommonMethodsPageObjects.editBTN());
     }
 
     public static void clickOnDeleteIconButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.deleteIconBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.deleteIconBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.deleteIconBTN(), 20);
+        click(CommonMethodsPageObjects.deleteIconBTN());
     }
 
+    /**
+     * Select an option from the list
+     * @param list - option to be selected
+     * @param element - list object
+     * */
     public static void selectFromList(String list, By element) throws Exception {
-        Browser.waitUntilVisibilityOfElement(element, 30);
+        waitUntilVisibilityOfElement(element, 30);
         List<WebElement> selectList = driver.findElements(element);
         for (WebElement listName : selectList) {
             String getListName = listName.getText();
             if (getListName.contains(list)) {
                 listName.click();
-
-
             }
         }
     }
 
     public static void clickRejectReasonRadioButtons() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectReasonRadioBTNs(), 30);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectReasonRadioBTNs(), 30);
         List<WebElement> selectList = driver.findElements(CommonMethodsPageObjects.rejectReasonRadioBTNs());
         for (WebElement listName : selectList) {
             listName.click();
@@ -175,18 +166,22 @@ public class CommonMethodsPage {
     }
 
     public static void assertContractsAreAppearing() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractsList(), 40);
-        boolean status = Browser.isElementDisplayed(CommonMethodsPageObjects.ContractsList());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractsList(), 40);
+        boolean status = isElementDisplayed(CommonMethodsPageObjects.ContractsList());
         Assert.assertTrue(status, "Contracts are not displayed");
         logger.addScreenshot("All available contracts are displayed");
     }
 
-    public static void verifySearchedContractIsDisplayed(String expectedContractNumber) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractNumberOfSearchedContract(), 40);
-        if (Browser.isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
-            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
+    /**
+     * Verify the searched contract is displayed on Contracts page
+     * @param contractNumber - Contract to be searched
+     * */
+    public static void verifySearchedContractIsDisplayed(String contractNumber) {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractNumberOfSearchedContract(), 40);
+        if (isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
+            String actualContractNumber = getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
             boolean status = false;
-            if (expectedContractNumber.contains(actualContractNumber)) {
+            if (contractNumber.contains(actualContractNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Contract is not displayed");
@@ -196,12 +191,16 @@ public class CommonMethodsPage {
         }
     }
 
-    public static void verifySearchedRequestIsDisplayed(String expectedRequestNumber) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.requestNumberOfSearchedRequest(), 40);
-        if (Browser.isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
-            String actualRequestNumber = Browser.getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
+    /**
+     * Verify the searched request is displayed on Requests page
+     * @param requestNumber - Request to be searched
+     * */
+    public static void verifySearchedRequestIsDisplayed(String requestNumber) throws Exception {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.requestNumberOfSearchedRequest(), 40);
+        if (isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
+            String actualRequestNumber = getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
             boolean status = false;
-            if (expectedRequestNumber.contains(actualRequestNumber)) {
+            if (requestNumber.contains(actualRequestNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Request is not displayed");
@@ -213,13 +212,16 @@ public class CommonMethodsPage {
 
 
     public static void clickOnKebabMenuButton() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuButton(), 40);
-        Browser.click(CommonMethodsPageObjects.KebabMenuButton());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuButton(), 40);
+        click(CommonMethodsPageObjects.KebabMenuButton());
     }
-
+    /**
+     * Select an option from Kebab menu
+     * @param option - Option to be selected
+     * */
     public static void KebabMenuOptions(String option) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
@@ -233,8 +235,8 @@ public class CommonMethodsPage {
     }
 
     public static void ClickOnKebabMenuOption(String option) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -245,8 +247,8 @@ public class CommonMethodsPage {
     }
 
     public static void TerminateOptions(String option) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.TerminateOptions());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.TerminateOptions());
         boolean status = false;
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
@@ -260,8 +262,8 @@ public class CommonMethodsPage {
     }
 
     public static void ClickOnTerminateOption(String option) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.TerminateOptions());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.TerminateOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.TerminateOptions());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -272,8 +274,8 @@ public class CommonMethodsPage {
     }
 
     public static void ClickOnViewContractOption(String option) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.viewContractOptionBTN(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.viewContractOptionBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.viewContractOptionBTN(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.viewContractOptionBTN());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -284,8 +286,8 @@ public class CommonMethodsPage {
     }
 
     public static void ClickOnAcceptTerminateOption(String option) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.acceptTerminationOptionBTN(), 40);
-        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.acceptTerminationOptionBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.acceptTerminationOptionBTN(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.acceptTerminationOptionBTN());
         for (WebElement opt : kebabOptions) {
             String optText = opt.getText();
             if (optText.contains(option)) {
@@ -296,34 +298,34 @@ public class CommonMethodsPage {
     }
 
     public static void verifyPopUpAlertAfterCancelIsDisplayed(String expected) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PopUpAlertAfterCancel(), 40);
-        String actual = Browser.getText(CommonMethodsPageObjects.PopUpAlertAfterCancel());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.PopUpAlertAfterCancel(), 40);
+        String actual = getText(CommonMethodsPageObjects.PopUpAlertAfterCancel());
         Assert.assertEquals(actual, expected);
         logger.addScreenshot("The message is displayed");
     }
 
     public static void verifyValueIsEntered(String value, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String val = Browser.getWebElement(element).getAttribute("value");
+        waitUntilVisibilityOfElement(element, 40);
+        String val = getWebElement(element).getAttribute("value");
         Assert.assertTrue(val.contains(value), "Value has been entered");
     }
 
     public static void verifyValueIsNotEntered(String value, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String val = Browser.getWebElement(element).getAttribute("value");
+        waitUntilVisibilityOfElement(element, 40);
+        String val = getWebElement(element).getAttribute("value");
         Assert.assertFalse(val.contains(value), "Value is not entered");
     }
 
 
     /**
-     * Method to get current date and to change the date to future and past
+     * Method to get current date and to change the date to future or past
      *
      * @param reqYear  - required year (Negative value to get to any previous years and positive for future)
      * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
      * @param reqDay   - required day (Negative value to get to any previous days and positive for future)
      */
     public static String getCurrentDate(int reqYear, int reqMonth, int reqDay) {
-        String currentDate = java.time.LocalDate.now().toString();
+        String currentDate = LocalDate.now().toString();
         String[] arrDate = currentDate.split("-");
         String year = String.valueOf(Integer.parseInt(arrDate[0]) + reqYear);
         String month = String.valueOf(Integer.parseInt(arrDate[1]) + reqMonth);
@@ -337,15 +339,18 @@ public class CommonMethodsPage {
         return year + month + day;
     }
 
+    /** validate any error message under input/text fields
+     * @param errorMsg - Message to be validated
+     * @param element - Message object
+     * */
     public static void errorMessage(String errorMsg, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String text = Browser.getText(element);
+        waitUntilVisibilityOfElement(element, 40);
+        String text = getText(element);
         String[] textSplit = text.split(" ");
         text = textSplit[0] + textSplit[1] + textSplit[2];
         boolean status = false;
         if (text.contains(errorMsg)) {
             status = true;
-
         }
         Assert.assertTrue(status, errorMsg + "error message is not same/displayed");
         logger.addScreenshot("");
@@ -353,8 +358,8 @@ public class CommonMethodsPage {
 
 
     public static void totalAmount(String amount, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String text = Browser.getText(element);
+        waitUntilVisibilityOfElement(element, 40);
+        String text = getText(element);
         String[] textSplit = text.split(" ");
         text = textSplit[0];
         boolean status = false;
@@ -367,44 +372,48 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    /**
+     * Validate equivalent date is displayed in Hijri/Gregorian format under date input field
+     * @param dateType - Format of date (Hijri or Gregorian)
+     * */
     public static void verifyEquivalentDateIsDisplayed(String dateType) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.equivalentDateHint(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.equivalentDateHint()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.equivalentDateHint(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.equivalentDateHint()));
         logger.addScreenshot("Equivalent " + dateType + " date is displayed");
     }
 
     public static void verifyTheNextButtonIsDisabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.nextBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.nextBTN()));
         logger.addScreenshot("The (التالي) button is not enabled/clickable");
     }
 
     public static void verifyTheConfirmAndSubmitButtonIsDisabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.confirmAndSubmitBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
+        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.confirmAndSubmitBTN()));
         logger.addScreenshot("The (تأكيد وإرسال) button is not enabled/clickable");
     }
 
     public static void verifyTheConfirmAndSubmitButtonIsEnabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
-        Assert.assertTrue(Browser.isElementEnabled(CommonMethodsPageObjects.confirmAndSubmitBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
+        Assert.assertTrue(isElementEnabled(CommonMethodsPageObjects.confirmAndSubmitBTN()));
         logger.addScreenshot("The (تأكيد وإرسال) button is enabled/clickable");
     }
 
     public static void UploadAttachment(String filePath, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
+        waitUntilVisibilityOfElement(element, 40);
         String path = System.getProperty("user.dir") + filePath;
-        Browser.setText(element, path);
+        setText(element, path);
     }
 
     public static void checkOneAttachmentIsAdded(By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        Assert.assertTrue(Browser.isElementDisplayed(element), "Attachment is not uploaded");
+        waitUntilVisibilityOfElement(element, 40);
+        Assert.assertTrue(isElementDisplayed(element), "Attachment is not uploaded");
     }
 
     public static void checkMultipleAttachmentsAreAdded(By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        List<WebElement> elements = Browser.getWebElements(element);
+        waitUntilVisibilityOfElement(element, 40);
+        List<WebElement> elements = getWebElements(element);
         int index = 1;
         for (WebElement ele : elements) {
             Assert.assertTrue(ele.isDisplayed(), "Attachment " + index + " is displayed");
@@ -453,12 +462,12 @@ public class CommonMethodsPage {
 
     public static void ClickOnAttachment(String action) {
         emptyDownloadsFolder(System.getProperty("user.dir") + "\\src\\main\\downloads");
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons(), 40);
-        List<WebElement> buttons = Browser.getWebElements(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons(), 40);
+        List<WebElement> buttons = getWebElements(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons());
         if (action.equalsIgnoreCase("view")) {
             buttons.get(1).click();
         } else if (action.equalsIgnoreCase("download")) {
-            buttons.get(1).click();
+            buttons.get(2).click();
         }
     }
 
@@ -484,27 +493,27 @@ public class CommonMethodsPage {
     }
 
     public static void verifySuccessPopUpIsDisplayed() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SuccessPopUPTitle(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.SuccessPopUPTitle()), "Success Pop up is not displayed");
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.SuccessPopUPTitle(), 40);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.SuccessPopUPTitle()), "Success Pop up is not displayed");
         logger.addScreenshot("");
     }
 
     public static void verifyConfirmPopUpIsDisplayedAfterApproveRequest() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ConfirmationPopUpTitle(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.ConfirmationPopUpTitle()), "Confirmation Pop up is not displayed");
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ConfirmationPopUpTitle(), 40);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.ConfirmationPopUpTitle()), "Confirmation Pop up is not displayed");
         logger.addScreenshot("");
     }
 
     public static void verifyConfirmPopUpIsDisplayedAfterRejectRequest() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle()), "Reason of rejection Pop up is not displayed");
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle(), 40);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.ReasonOfRejectPopUpTitle()), "Reason of rejection Pop up is not displayed");
         logger.addScreenshot("");
     }
 
 
     public static String getRequestNumber(By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String text = Browser.getText(element);
+        waitUntilVisibilityOfElement(element, 40);
+        String text = getText(element);
         int index = text.indexOf("#");
         String newText = text.substring(index);
         String reqNum = newText.split(" ")[1];
@@ -530,36 +539,36 @@ public class CommonMethodsPage {
     }
 
     public static void checkRequestsPageIsDisplayed(String requestType) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestPageTitle(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.RequestPageTitle()), requestType + "request page is not displayed");
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestPageTitle(), 40);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.RequestPageTitle()), requestType + "request page is not displayed");
         logger.addScreenshot(requestType + "request page is displayed");
     }
 
     public static void checkRequestStatus(String expectedStatus) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestStatus(), 40);
-        String actualStatus = Browser.getText(CommonMethodsPageObjects.RequestStatus());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.RequestStatus(), 40);
+        String actualStatus = getText(CommonMethodsPageObjects.RequestStatus());
         Assert.assertEquals(actualStatus, expectedStatus, "Status does not match");
         logger.addScreenshot("Request status is: " + actualStatus);
     }
 
     public static void clickOnApproveBTN() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ApproveBTN(), 40);
-        Browser.click(CommonMethodsPageObjects.ApproveBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ApproveBTN(), 40);
+        click(CommonMethodsPageObjects.ApproveBTN());
     }
 
     public static void clickOnSubmitForApprovalBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitForApprovalBTN(), 40);
-        Browser.click(CommonMethodsPageObjects.submitForApprovalBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitForApprovalBTN(), 40);
+        click(CommonMethodsPageObjects.submitForApprovalBTN());
     }
 
     public static void clickOnRejectBTN() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40);
-        Browser.click(CommonMethodsPageObjects.RejectBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40);
+        click(CommonMethodsPageObjects.RejectBTN());
     }
 
     public static void verifyNewInvoiceDateIsSameAsEnteredInRequest(String expectedDate) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PaymentDueDateOnInvoice(), 40);
-        String actualDate = Browser.getText(CommonMethodsPageObjects.PaymentDueDateOnInvoice());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.PaymentDueDateOnInvoice(), 40);
+        String actualDate = getText(CommonMethodsPageObjects.PaymentDueDateOnInvoice());
         String[] splitDate = actualDate.split("-");
         actualDate = splitDate[0] + splitDate[1] + splitDate[2];
         Assert.assertEquals(actualDate, expectedDate, "Dates are not same ");
@@ -567,8 +576,8 @@ public class CommonMethodsPage {
     }
 
     public static void verifyInvoiceStatus(String invoice, String expectedStatus, By element) {
-        Browser.waitUntilVisibilityOfElement(element, 40);
-        String actualStatus = Browser.getText(element);
+        waitUntilVisibilityOfElement(element, 40);
+        String actualStatus = getText(element);
         boolean status = false;
         if (expectedStatus.contains(actualStatus)) {
             status = true;
@@ -578,26 +587,26 @@ public class CommonMethodsPage {
     }
 
     public static void verifyReviewTheContractPageIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.reviewTheContractPage(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.reviewTheContractPage()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.reviewTheContractPage(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.reviewTheContractPage()));
         logger.addScreenshot("User Navigate To 'مراجعة العقد' Page");
     }
 
     public static void clickOnRejectButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.rejectBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectBTN(), 20);
+        click(CommonMethodsPageObjects.rejectBTN());
 
     }
 
     public static void verifyRejectReasonPageIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectReasonText(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.rejectReasonText()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectReasonText(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.rejectReasonText()));
         logger.addScreenshot("User Navigate To 'لماذا تريد الرفض؟' Page");
     }
 
     public static void enterRejectionReasonNote(String rejectReason) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectionReasonNote(), 20);
-        Browser.setText(CommonMethodsPageObjects.rejectionReasonNote(), rejectReason);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectionReasonNote(), 20);
+        setText(CommonMethodsPageObjects.rejectionReasonNote(), rejectReason);
 
     }
 
@@ -610,49 +619,50 @@ public class CommonMethodsPage {
     }
 
     public static void verifyRejectionSubmittedPageIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectionSubmittedMessage(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.rejectionSubmittedMessage()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.rejectionSubmittedMessage(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.rejectionSubmittedMessage()));
         logger.addScreenshot("User Navigate To 'تم تقديم الرفض' Page");
     }
 
     public static void clickOnTheFinancialTabButton() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 60);
-        if (Browser.isElementPresent(LoginPageObjects.assessementUnitpopup())) {
-//            Browser.waitForSeconds(3);
-            Browser.click(LoginPageObjects.assessementUnitpopup());
+        waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 60);
+        if (isElementPresent(LoginPageObjects.assessementUnitpopup())) {
+            click(LoginPageObjects.assessementUnitpopup());
         }
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.financialTab(), 60);
-//        Browser.waitForSeconds(5);
-        Browser.click(CommonMethodsPageObjects.financialTab());
-//        Browser.waitForSeconds(2);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.financialTab(), 60);
+        click(CommonMethodsPageObjects.financialTab());
         logger.addScreenshot("Clicked on Financial button");
     }
 
     public static void clickOnViewAllInvoicesButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.allInvoicesBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.allInvoicesBTN());
-        Browser.waitForSeconds(1);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.allInvoicesBTN(), 20);
+        click(CommonMethodsPageObjects.allInvoicesBTN());
+        waitForSeconds(1);
         logger.addScreenshot("Navigate to View All Invoices page");
     }
 
     public static void verifyContractsInvoicesIsPageIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.contractsInvoices(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.contractsInvoices()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.contractsInvoices(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.contractsInvoices()));
         logger.addScreenshot("User Navigate To 'فواتير العقود' Page");
     }
 
     public static void enterContractNumber(String contractNum) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.contractsNumber(), 20);
-        Browser.setText(CommonMethodsPageObjects.contractsNumber(), contractNum);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.contractsNumber(), 20);
+        setText(CommonMethodsPageObjects.contractsNumber(), contractNum);
 
     }
 
-    public static void verifySearchedContractIsDisplayedForInvoices(String expectedContractNumber) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.allContractInvoices(), 40);
-        if (Browser.isElementDisplayed(CommonMethodsPageObjects.allContractInvoices())) {
-            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.allContractInvoices());
+    /**
+     * Verify searched contract number is displayed in invoices page
+     * @param contractNumber - searched contract
+     * */
+    public static void verifySearchedContractIsDisplayedForInvoices(String contractNumber) throws Exception {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.allContractInvoices(), 40);
+        if (isElementDisplayed(CommonMethodsPageObjects.allContractInvoices())) {
+            String actualContractNumber = getText(CommonMethodsPageObjects.allContractInvoices());
             boolean status = false;
-            if (expectedContractNumber.contains(actualContractNumber)) {
+            if (contractNumber.contains(actualContractNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Contract is not displayed");
@@ -663,16 +673,16 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnNewInvoice() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newContractInvoice(), 20);
-        Browser.click(CommonMethodsPageObjects.newContractInvoice());
-        Browser.waitForSeconds(1);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.newContractInvoice(), 20);
+        click(CommonMethodsPageObjects.newContractInvoice());
+        waitForSeconds(1);
         logger.addScreenshot("New invoice details is displayed");
     }
 
 
     public static void newAmountForContractInvoice(String amount) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newAmountForContractInvoice(), 40);
-        String text = Browser.getText(CommonMethodsPageObjects.newAmountForContractInvoice());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.newAmountForContractInvoice(), 40);
+        String text = getText(CommonMethodsPageObjects.newAmountForContractInvoice());
         String newAmount = text.split(" ")[2];
         boolean status = false;
 
@@ -685,99 +695,99 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnRemoveButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.removeBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
+        click(CommonMethodsPageObjects.removeBTN());
     }
 
     public static void clickOnConfirmAndSubmitButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.confirmAndSubmitBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
+        click(CommonMethodsPageObjects.confirmAndSubmitBTN());
     }
 
     public static void clickOnDisclaimerCheckbox() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.disclaimerCheckbox(), 20);
-        Browser.click(CommonMethodsPageObjects.disclaimerCheckbox());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.disclaimerCheckbox(), 20);
+        click(CommonMethodsPageObjects.disclaimerCheckbox());
     }
 
     public static void enterPhoneNumber(String phoneNumber) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PhoneNumberInputField(), 40);
-        Browser.clearText(CommonMethodsPageObjects.PhoneNumberInputField());
-        Browser.setText(CommonMethodsPageObjects.PhoneNumberInputField(), phoneNumber);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.PhoneNumberInputField(), 40);
+        clearText(CommonMethodsPageObjects.PhoneNumberInputField());
+        setText(CommonMethodsPageObjects.PhoneNumberInputField(), phoneNumber);
     }
 
     public static void enterEmail(String email) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.EmailInputField(), 40);
-        Browser.clearText(CommonMethodsPageObjects.EmailInputField());
-        Browser.setText(CommonMethodsPageObjects.EmailInputField(), email);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.EmailInputField(), 40);
+        clearText(CommonMethodsPageObjects.EmailInputField());
+        setText(CommonMethodsPageObjects.EmailInputField(), email);
     }
 
     public static void clickOnRegionDropdownMenu() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdown(), 40);
-        Browser.click(CommonMethodsPageObjects.RegionDropdown());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdown(), 40);
+        click(CommonMethodsPageObjects.RegionDropdown());
     }
 
     public static void selectRegion(String tenantRegion) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdownOptions(), 40);
-        Browser.selectDropdownByValue(CommonMethodsPageObjects.RegionDropdownOptions(), tenantRegion);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.RegionDropdownOptions(), 40);
+        selectDropdownByValue(CommonMethodsPageObjects.RegionDropdownOptions(), tenantRegion);
         logger.addScreenshot("Province is selected");
 
     }
 
     public static void clickOnCityDropdown() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityDropdown(), 40);
-        Browser.click(CommonMethodsPageObjects.CityDropdown());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityDropdown(), 40);
+        click(CommonMethodsPageObjects.CityDropdown());
     }
 
     public static void SelectCity(String tenantCity) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CitySearchBar(), 40);
-        Browser.setText(CommonMethodsPageObjects.CitySearchBar(), tenantCity);
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityName(), 40);
-        Browser.click(CommonMethodsPageObjects.CityName());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.CitySearchBar(), 40);
+        setText(CommonMethodsPageObjects.CitySearchBar(), tenantCity);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.CityName(), 40);
+        click(CommonMethodsPageObjects.CityName());
         logger.addScreenshot(tenantCity + " city is selected");
     }
 
     public static void enterPostalCode(String postalCode) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.PostalCodeInput(), 40);
-        Browser.clearText(CommonMethodsPageObjects.PostalCodeInput());
-        Browser.setText(CommonMethodsPageObjects.PostalCodeInput(), postalCode);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.PostalCodeInput(), 40);
+        clearText(CommonMethodsPageObjects.PostalCodeInput());
+        setText(CommonMethodsPageObjects.PostalCodeInput(), postalCode);
         logger.addScreenshot(postalCode + " postal code is entered");
     }
 
     public static void enterStreetName(String street) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.StreetNameInput(), 40);
-        Browser.clearText(CommonMethodsPageObjects.StreetNameInput());
-        Browser.setText(CommonMethodsPageObjects.StreetNameInput(), street);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.StreetNameInput(), 40);
+        clearText(CommonMethodsPageObjects.StreetNameInput());
+        setText(CommonMethodsPageObjects.StreetNameInput(), street);
         logger.addScreenshot(street + " street name is entered");
     }
 
     public static void enterBuildingNumber(String buildingNum) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.BuildingNumberInput(), 40);
-        Browser.clearText(CommonMethodsPageObjects.BuildingNumberInput());
-        Browser.setText(CommonMethodsPageObjects.BuildingNumberInput(), buildingNum);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.BuildingNumberInput(), 40);
+        clearText(CommonMethodsPageObjects.BuildingNumberInput());
+        setText(CommonMethodsPageObjects.BuildingNumberInput(), buildingNum);
         logger.addScreenshot(buildingNum + " street name is entered");
 
     }
 
     public static void enterAdditionalNumber(String additionalNum) throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.AdditionalNumberInput(), 40);
-        Browser.clearText(CommonMethodsPageObjects.AdditionalNumberInput());
-        Browser.setText(CommonMethodsPageObjects.AdditionalNumberInput(), additionalNum);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.AdditionalNumberInput(), 40);
+        clearText(CommonMethodsPageObjects.AdditionalNumberInput());
+        setText(CommonMethodsPageObjects.AdditionalNumberInput(), additionalNum);
         logger.addScreenshot(additionalNum + " street name is entered");
     }
 
     public static void clickOnSubmitButton() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.submitBTN());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 20);
+        click(CommonMethodsPageObjects.submitBTN());
     }
 
     public static void verifyTheSurveyIsDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.ratingBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.ratingBTN()));
         logger.addScreenshot("The 'التقييم والاستبيان' is displayed");
     }
 
     public static void clickRatingButtons() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
         List<WebElement> rateList = driver.findElements(CommonMethodsPageObjects.ratingBTN());
         for (WebElement rate : rateList) {
             rate.click();
@@ -786,13 +796,13 @@ public class CommonMethodsPage {
     }
 
     public static void verifyTheSurveyIsSuccessfullySubmittedDisplayed() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.successfulSurveySubmittedMsg(), 20);
-        Assert.assertTrue(Browser.isElementDisplayed(CommonMethodsPageObjects.successfulSurveySubmittedMsg()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.successfulSurveySubmittedMsg(), 20);
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.successfulSurveySubmittedMsg()));
         logger.addScreenshot("The 'تم تقديم الرد' is displayed");
     }
 
     public static void clickOnYesRadioButtons() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.yesRadioBTN(), 30);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.yesRadioBTN(), 30);
         List<WebElement> selectList = driver.findElements(CommonMethodsPageObjects.yesRadioBTN());
         for (WebElement listName : selectList) {
             listName.click();
@@ -800,26 +810,30 @@ public class CommonMethodsPage {
     }
 
     public static void verifyConfirmButtonIsDisabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.confirmBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
+        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.confirmBTN()));
         logger.addScreenshot("The (تأكيد) button is disabled");
     }
 
     public static void verifyNextButtonIsDisabled() throws Exception {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.nextBTN()));
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.nextBTN()));
         logger.addScreenshot("The (التالي) button is disabled");
     }
 
     public static void enterCRNumberInputField(String crNumber) {
-        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.CRNumberInput(), 20);
-        Browser.setText(CommonMethodsPageObjects.CRNumberInput(), crNumber);
+        waitUntilPresenceOfElement(CommonMethodsPageObjects.CRNumberInput(), 20);
+        setText(CommonMethodsPageObjects.CRNumberInput(), crNumber);
         logger.addScreenshot("Enter CR number input field");
     }
 
+    /**
+     * Validate error message
+     * @param errorMsg - message needs to be validated
+     * */
     public static void errorCRMessage(String errorMsg) {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.errorCRNumberMsg(), 40);
-        String text = Browser.getText(CommonMethodsPageObjects.errorCRNumberMsg());
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.errorCRNumberMsg(), 40);
+        String text = getText(CommonMethodsPageObjects.errorCRNumberMsg());
         boolean status = false;
         if (text.contains(errorMsg)) {
             status = true;
@@ -827,5 +841,40 @@ public class CommonMethodsPage {
         }
         Assert.assertTrue(status, errorMsg + "error message is not the same");
         logger.addScreenshot("");
+    }
+
+    public static void verifyOTPPopIsDisplayed() throws Exception {
+        waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
+        Assert.assertTrue(isElementDisplayed(LoginPageObjects.getVerificationCode()));
+        logger.addScreenshot("OTP pop up is displayed");
+    }
+
+    public static void checkVerifyIdentityButtonIsDisabled() {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 40 );
+        Assert.assertTrue(isElementDisabled(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not disabled");
+        logger.addScreenshot("");
+    }
+
+    /**
+    * Verify the contract status of different versions
+    * @param contractStatus - Expected status
+    * */
+    public static void verifyStatusOfContract(String contractStatus) throws Exception {
+        executeJSScroll(450);
+        waitForSeconds(1);
+        boolean status = false;
+        String actualStatus = "";
+        waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
+        List <WebElement> list = getWebElements(AddResidentialContractPageObjects.contractStatus());
+        for (WebElement w : list){
+            actualStatus = w.getText();
+            if (actualStatus.contains(contractStatus)){
+                status = true;
+                break;
+            }
+        }
+        Assert.assertTrue(status, "Contract status is not same");
+        waitForSeconds(1);
+        logger.addScreenshot("Contract Status : " + actualStatus);
     }
 }

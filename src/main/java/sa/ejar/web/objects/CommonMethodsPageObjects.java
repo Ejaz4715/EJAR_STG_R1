@@ -32,7 +32,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains(text(),' السابق')]");
     }
     public static By confirmBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' تأكيد ')]");
+        return By.xpath("//button[contains(text(),'تأكيد')]");
     }
 
     public static By editBTN() throws Exception{
@@ -66,7 +66,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By SuccessPopUPTitle() {
-        return By.xpath("//h5[contains (text() , 'رسالة نجاح')]");
+        return By.xpath("//*[contains (text() , 'رسالة نجاح')]");
     }
     public static By minValueError(){
         return By.xpath("//li[@data-error=\"errors.min_value\"]");
@@ -115,7 +115,8 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RequestStatus() {
-        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
+//        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
+        return By.xpath("//span[contains (text() , 'الحالة')]/parent::div/descendant::h5/child::span");
     }
 
     public static By ApproveBTN() {
@@ -127,11 +128,11 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RejectBTN() {
-        return By.xpath("//button[contains (text() , ' رفض ')]");
+        return By.xpath("//button[contains (text() , 'رفض')]");
     }
 
     public static By ReasonOfRejectPopUpTitle() {
-        return By.xpath("//h2[text()='سبب الرفض ']");
+        return By.xpath("//*[contains (text(), 'سبب')]");
     }
 
     public static By PaymentDueDateOnInvoice() {
@@ -158,7 +159,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//app-form-radio[@formcontrolname=\"rejection_reason\"]");
     }
     public static By rejectionReasonNote() throws Exception{
-        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\"]");
+        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\" or  @data-name=\"rejection_reason\"]");
     }
     public static By rejectionSubmittedMessage() throws Exception{
         return By.xpath("//h2[text()='تم تقديم الرفض']");

@@ -290,8 +290,8 @@ public class AddResidentialContractPageObjects {
             put ("ar", "//button[text()=' تأكيد وإرسال ']");
         }});
         put("contract-status-text", new HashMap<>(){{
-            put ("en", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
-            put ("ar", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
+            put ("en", "(//span[@class=\"pin mt-1 max-width-110 success\"])");
+            put ("ar", "(//span[@class=\"pin mt-1 max-width-110 success\"])");
         }});
         put("close-survey-pop-up-btn", new HashMap<>(){{
             put ("en", "//button[@class=\"close-button\"]");
@@ -659,5 +659,9 @@ public class AddResidentialContractPageObjects {
 
     public static By tenantRepresentativeRadioBTN() {
         return  By.xpath("//input[@data-value=\"tenant_representative\"]/following-sibling::label");
+    }
+
+    public static By tenantName() {
+        return By.xpath("//span[text()='اسم المستأجر']/parent::div/descendant::h5/child::span");
     }
 }
