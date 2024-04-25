@@ -20,6 +20,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -47,6 +48,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -73,6 +75,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -102,6 +106,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -133,6 +138,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -168,6 +174,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -205,6 +212,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -244,6 +252,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -275,6 +284,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -308,6 +318,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");

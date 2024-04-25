@@ -26,8 +26,15 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains(text(),'التالي')]");
     }
     public static By cancelBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' إلغاء')]");
+        return By.xpath("//button[contains(text(),'إلغاء')]");
     }
+    public static By cancelPopUpBTN() throws Exception{
+        return By.xpath("//div/button[contains(text(),' إلغاء')]");
+    }
+    public static By confirmPopUpBTN() throws Exception{
+        return By.xpath("//div/button[text()=' تأكيد ']");
+    }
+
     public static By backBTN() throws Exception{
         return By.xpath("//button[contains(text(),' السابق')]");
     }
@@ -178,7 +185,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//input[@data-name=\"contract_number\"]");
     }
     public static By allContractInvoices() throws Exception{
-        return By.xpath("//a[@class=\"list-item active\"]/div/h5");
+        return By.xpath("//span[text() = ' رقم العقد']/following-sibling::h5");
     }
 
     public static By newContractInvoice() throws Exception{
@@ -205,6 +212,13 @@ public class CommonMethodsPageObjects {
         return By.xpath("//app-form-checkbox[@formcontrolname=\"approve_unified_disclaimer\"]/label");
     }
 
+    public static By UserIdentityList(){
+        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+    }
+    public static By RoleName() {
+        return By.xpath("//div//p[@class='role-name']");
+    }
+
     public static By ratingBTN() {
         return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");
     }
@@ -218,6 +232,10 @@ public class CommonMethodsPageObjects {
     public static By yesRadioBTN() {
         return By.xpath("//label[text()=' نعم ']");
     }
+    public static By newRadioBTN() {
+        return By.xpath("//label[text()=' جديدة ']");
+    }
+
     public static By deleteIconBTN() {
         return By.xpath("//i[@class=\"delete-icon\"]/parent::button");
     }

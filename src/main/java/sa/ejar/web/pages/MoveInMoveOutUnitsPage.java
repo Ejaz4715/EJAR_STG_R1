@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 
 import java.nio.file.Paths;
 
@@ -14,10 +13,8 @@ import static com.testcrew.base.WebBaseTest.logger;
 
 public class MoveInMoveOutUnitsPage {
     public void closeMoveInOutPopup(){
-        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),50);
-        if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp())) {
-            Browser.click(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp());
-        }
+        Browser.waitForSeconds(6);
+        Browser.click(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp());
     }
 
     public void selectYesRadioBTN() {

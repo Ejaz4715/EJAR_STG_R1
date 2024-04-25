@@ -12,6 +12,7 @@ import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.pages.precondition.LoginPage;
 
 import java.io.File;
 import java.time.LocalDate;
@@ -109,9 +110,21 @@ public class CommonMethodsPage {
         click(CommonMethodsPageObjects.cancelBTN());
     }
 
+    public static void clickOnCancelPopUpButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelPopUpBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.cancelPopUpBTN());
+    }
+    public static void clickOnConfirmPopUpButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmPopUpBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.confirmPopUpBTN());
+    }
+
     public static void checkTheContractsPage() throws Exception {
         waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(), 20);
         Assert.assertTrue(isElementDisabled(TerminateContractPageObjects.theContractPage()));
+        logger.addScreenshot("User Navigate Back To 'العقود' Page");
+        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(TerminateContractPageObjects.theContractPage()));
         logger.addScreenshot("User Navigate Back To 'العقود' Page");
     }
 
@@ -174,14 +187,14 @@ public class CommonMethodsPage {
 
     /**
      * Verify the searched contract is displayed on Contracts page
-     * @param contractNumber - Contract to be searched
+     * @param expectedContractNumber - Contract number to be validated
      * */
-    public static void verifySearchedContractIsDisplayed(String contractNumber) {
+    public static void verifySearchedContractIsDisplayed(String expectedContractNumber) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.ContractNumberOfSearchedContract(), 40);
         if (isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
             String actualContractNumber = getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
             boolean status = false;
-            if (contractNumber.contains(actualContractNumber)) {
+            if (actualContractNumber.contains(expectedContractNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Contract is not displayed");
@@ -193,14 +206,14 @@ public class CommonMethodsPage {
 
     /**
      * Verify the searched request is displayed on Requests page
-     * @param requestNumber - Request to be searched
+     * @param expectedRequestNumber - Request number to be validated
      * */
-    public static void verifySearchedRequestIsDisplayed(String requestNumber) throws Exception {
+    public static void verifySearchedRequestIsDisplayed(String expectedRequestNumber) throws Exception {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.requestNumberOfSearchedRequest(), 40);
         if (isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
             String actualRequestNumber = getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
             boolean status = false;
-            if (requestNumber.contains(actualRequestNumber)) {
+            if (actualRequestNumber.contains(expectedRequestNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Request is not displayed");
@@ -361,13 +374,14 @@ public class CommonMethodsPage {
         waitUntilVisibilityOfElement(element, 40);
         String text = getText(element);
         String[] textSplit = text.split(" ");
-        text = textSplit[0];
+        text = textSplit[1];
         boolean status = false;
 
         if (text.contains(amount)) {
             status = true;
 
         }
+
         Assert.assertTrue(status, amount + "total amount is not the same");
         logger.addScreenshot("");
     }
@@ -579,7 +593,7 @@ public class CommonMethodsPage {
         waitUntilVisibilityOfElement(element, 40);
         String actualStatus = getText(element);
         boolean status = false;
-        if (expectedStatus.contains(actualStatus)) {
+        if (actualStatus.contains(expectedStatus)) {
             status = true;
         }
         Assert.assertTrue(status, invoice + " has different status");
@@ -653,18 +667,23 @@ public class CommonMethodsPage {
 
     }
 
+
     /**
      * Verify searched contract number is displayed in invoices page
-     * @param contractNumber - searched contract
+     * @param expectedContractNumber - searched contract to be validated
      * */
-    public static void verifySearchedContractIsDisplayedForInvoices(String contractNumber) throws Exception {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.allContractInvoices(), 40);
-        if (isElementDisplayed(CommonMethodsPageObjects.allContractInvoices())) {
-            String actualContractNumber = getText(CommonMethodsPageObjects.allContractInvoices());
+    public static void verifySearchedContractIsDisplayedForInvoices(String expectedContractNumber) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.allContractInvoices(), 40);
+        Browser.waitForSeconds(3);
+        if (Browser.isElementDisplayed(CommonMethodsPageObjects.allContractInvoices())) {
+            String actualContractNumber = Browser.getText(CommonMethodsPageObjects.allContractInvoices());
             boolean status = false;
-            if (contractNumber.contains(actualContractNumber)) {
+            if (actualContractNumber.contains(expectedContractNumber)) {
+
                 status = true;
             }
+
+
             Assert.assertTrue(status, "Searched Contract is not displayed");
             logger.addScreenshot("Searched contract is displayed");
         } else {
@@ -673,15 +692,16 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnNewInvoice() throws Exception {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.newContractInvoice(), 20);
-        click(CommonMethodsPageObjects.newContractInvoice());
-        waitForSeconds(1);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newContractInvoice(), 20);
+        Browser.waitForSeconds(3);
+        Browser.click(CommonMethodsPageObjects.newContractInvoice());
+        Browser.waitForSeconds(1);
         logger.addScreenshot("New invoice details is displayed");
     }
 
 
     public static void newAmountForContractInvoice(String amount) throws Exception {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.newAmountForContractInvoice(), 40);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newAmountForContractInvoice(), 40);
         String text = getText(CommonMethodsPageObjects.newAmountForContractInvoice());
         String newAmount = text.split(" ")[2];
         boolean status = false;
@@ -693,6 +713,35 @@ public class CommonMethodsPage {
         Assert.assertTrue(status, amount + "the amount is not the same");
         logger.addScreenshot("");
     }
+
+    /**
+     * Check the user role and change if it is not same as required
+     * @param User - required user role
+     * */
+    public static void changeUserRole(String User) throws Exception {
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
+        String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
+        if (RoleName.contains(User)) {
+           logger.addScreenshot("The current user is " + RoleName);
+        }
+        else
+        {
+            Browser.click(CommonMethodsPageObjects.RoleName());
+            List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
+            boolean status = false;
+            for (WebElement opt : UserRoleList) {
+                String optText = opt.getText();
+                if (optText.contains(User)) {
+                    opt.click();
+                    status = true;
+                    break;
+                }
+            }
+            Assert.assertTrue(status, UserRoleList + "User Role is not available");
+            logger.addScreenshot("The role has been changed to " + User);
+        }
+        new LoginPage().closeExploreEjarPopUp();
+        }
 
     public static void clickOnRemoveButton() throws Exception {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
@@ -786,8 +835,12 @@ public class CommonMethodsPage {
         logger.addScreenshot("The 'التقييم والاستبيان' is displayed");
     }
 
-    public static void clickRatingButtons() throws Exception {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
+    public static void clickRatingButtons(){
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newRadioBTN(), 30);
+        if(Browser.isElementPresent(CommonMethodsPageObjects.newRadioBTN())){
+            Browser.click(CommonMethodsPageObjects.newRadioBTN());
+        }
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
         List<WebElement> rateList = driver.findElements(CommonMethodsPageObjects.ratingBTN());
         for (WebElement rate : rateList) {
             rate.click();
@@ -795,13 +848,13 @@ public class CommonMethodsPage {
         }
     }
 
-    public static void verifyTheSurveyIsSuccessfullySubmittedDisplayed() throws Exception {
+    public static void verifyTheSurveyIsSuccessfullySubmittedDisplayed() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.successfulSurveySubmittedMsg(), 20);
         Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.successfulSurveySubmittedMsg()));
         logger.addScreenshot("The 'تم تقديم الرد' is displayed");
     }
 
-    public static void clickOnYesRadioButtons() throws Exception {
+    public static void clickOnYesRadioButtons() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.yesRadioBTN(), 30);
         List<WebElement> selectList = driver.findElements(CommonMethodsPageObjects.yesRadioBTN());
         for (WebElement listName : selectList) {
@@ -841,6 +894,7 @@ public class CommonMethodsPage {
         }
         Assert.assertTrue(status, errorMsg + "error message is not the same");
         logger.addScreenshot("");
+
     }
 
     public static void verifyOTPPopIsDisplayed() throws Exception {
