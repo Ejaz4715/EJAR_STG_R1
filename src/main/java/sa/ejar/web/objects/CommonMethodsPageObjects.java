@@ -189,4 +189,8 @@ public class CommonMethodsPageObjects {
     public static By RoleName(){
         return By.xpath("//div//p[@class='role-name']");
     }
+
+    public static By SendBTN(){
+        return By.xpath("//app-button-bar//button[text()=' إرسال ']");
+    }
 }

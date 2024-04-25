@@ -93,4 +93,7 @@ public class RevokeContractPageObjects {
     public static By RejectBTNOnPopUp() {
         return By.xpath("//h2[text()='سبب الرفض ']/ancestor::app-card/descendant::button[contains (text() , ' رفض ')]");
     }
+    public static By ErrorMsg() {
+        return By.xpath("//app-file-upload//p[@class='error']");
+    }
 }

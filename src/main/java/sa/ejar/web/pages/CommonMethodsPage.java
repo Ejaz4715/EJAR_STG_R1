@@ -200,6 +200,7 @@ public class CommonMethodsPage {
     }
 
     public static void KebabMenuOptions(String option) {
+        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
         List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
@@ -353,6 +354,10 @@ public class CommonMethodsPage {
         Assert.assertTrue(Browser.isElementDisplayed(element), "Attachment is not uploaded");
     }
 
+    public static void checkOneAttachmentNotAdded(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        Assert.assertTrue(Browser.isElementDisplayed(element), "Attachment is uploaded");
+    }
     public static void checkMultipleAttachmentsAreAdded(By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
         List<WebElement> elements = Browser.getWebElements(element);
@@ -647,5 +652,10 @@ public class CommonMethodsPage {
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
             logger.addScreenshot("");
         }
+    }
+    public static void clickOnSendBTN(){
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.SendBTN());
+        Browser.waitForSeconds(1);
     }
 }
