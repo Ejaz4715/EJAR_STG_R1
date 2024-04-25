@@ -693,10 +693,8 @@ public class CommonMethodsPage {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
         String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
         if (RoleName.contains(User)) {
-           logger.info("Current User Role :" + User);
-        }
-        else
-        {
+            logger.info("Current User Role :" + User);
+        } else {
             Browser.click(CommonMethodsPageObjects.RoleName());
             List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
             boolean status = false;
@@ -711,6 +709,7 @@ public class CommonMethodsPage {
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
             logger.addScreenshot("");
         }
+    }
 
     public static void clickOnRemoveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
