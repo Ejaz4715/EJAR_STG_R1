@@ -230,7 +230,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By yesRadioBTN() {
-        return By.xpath("//label[text()=' نعم ']");
+            return By.xpath("//label[text()=' نعم ']");
     }
     public static By newRadioBTN() {
         return By.xpath("//label[text()=' جديدة ']");
@@ -315,5 +315,9 @@ public class CommonMethodsPageObjects {
 
     public static By AdditionalNumberError() {
         return By.xpath("//label[contains (text() , 'الرقم الإضافي' )]/parent::app-form-field/descendant::li");
+    }
+
+    public static By SendBTN(){
+        return By.xpath("//app-button-bar//button[text()=' إرسال ']");
     }
 }

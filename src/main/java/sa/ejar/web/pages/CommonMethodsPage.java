@@ -233,6 +233,7 @@ public class CommonMethodsPage {
      * @param option - Option to be selected
      * */
     public static void KebabMenuOptions(String option) {
+        Browser.waitForSeconds(2);
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
         List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
@@ -425,6 +426,10 @@ public class CommonMethodsPage {
         Assert.assertTrue(isElementDisplayed(element), "Attachment is not uploaded");
     }
 
+    public static void checkOneAttachmentNotAdded(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        Assert.assertTrue(Browser.isElementDisplayed(element), "Attachment is uploaded");
+    }
     public static void checkMultipleAttachmentsAreAdded(By element) {
         waitUntilVisibilityOfElement(element, 40);
         List<WebElement> elements = getWebElements(element);
@@ -722,10 +727,9 @@ public class CommonMethodsPage {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
         String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
         if (RoleName.contains(User)) {
-           logger.addScreenshot("The current user is " + RoleName);
+            logger.addScreenshot("The current user is " + RoleName);
         }
-        else
-        {
+        else {
             Browser.click(CommonMethodsPageObjects.RoleName());
             List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
             boolean status = false;
@@ -741,7 +745,7 @@ public class CommonMethodsPage {
             logger.addScreenshot("The role has been changed to " + User);
         }
         new LoginPage().closeExploreEjarPopUp();
-        }
+    }
 
     public static void clickOnRemoveButton() throws Exception {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
@@ -910,19 +914,19 @@ public class CommonMethodsPage {
     }
 
     /**
-    * Verify the contract status of different versions
-    * @param contractStatus - Expected status
-    * */
+     * Verify the contract status of different versions
+     * @param contractStatus - Expected status
+     * */
     public static void verifyStatusOfContract(String contractStatus) throws Exception {
         executeJSScroll(450);
         waitForSeconds(1);
         boolean status = false;
         String actualStatus = "";
         waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
-        List <WebElement> list = getWebElements(AddResidentialContractPageObjects.contractStatus());
-        for (WebElement w : list){
+        List<WebElement> list = getWebElements(AddResidentialContractPageObjects.contractStatus());
+        for (WebElement w : list) {
             actualStatus = w.getText();
-            if (actualStatus.contains(contractStatus)){
+            if (actualStatus.contains(contractStatus)) {
                 status = true;
                 break;
             }
@@ -930,5 +934,11 @@ public class CommonMethodsPage {
         Assert.assertTrue(status, "Contract status is not same");
         waitForSeconds(1);
         logger.addScreenshot("Contract Status : " + actualStatus);
+    }
+
+    public static void clickOnSendBTN(){
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.SendBTN());
+        Browser.waitForSeconds(1);
     }
 }
