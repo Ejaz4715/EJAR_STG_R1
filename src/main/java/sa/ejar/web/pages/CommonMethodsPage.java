@@ -11,6 +11,7 @@ import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.pages.precondition.LoginPage;
 
 import java.io.File;
 import java.util.List;
@@ -121,9 +122,18 @@ public class CommonMethodsPage {
         Browser.click(CommonMethodsPageObjects.cancelBTN());
     }
 
+    public static void clickOnCancelPopUpButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelPopUpBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.cancelPopUpBTN());
+    }
+    public static void clickOnConfirmPopUpButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmPopUpBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.confirmPopUpBTN());
+    }
+
     public static void checkTheContractsPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.theContractPage(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(TerminateContractPageObjects.theContractPage()));
+        Assert.assertTrue(Browser.isElementDisplayed(TerminateContractPageObjects.theContractPage()));
         PDFReportManager.logger.addScreenshot("User Navigate Back To 'العقود' Page");
     }
 
@@ -186,7 +196,7 @@ public class CommonMethodsPage {
         if (Browser.isElementDisplayed(CommonMethodsPageObjects.ContractNumberOfSearchedContract())) {
             String actualContractNumber = Browser.getText(CommonMethodsPageObjects.ContractNumberOfSearchedContract());
             boolean status = false;
-            if (expectedContractNumber.contains(actualContractNumber)) {
+            if (actualContractNumber.contains(expectedContractNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Contract is not displayed");
@@ -201,7 +211,7 @@ public class CommonMethodsPage {
         if (Browser.isElementDisplayed(CommonMethodsPageObjects.requestNumberOfSearchedRequest())) {
             String actualRequestNumber = Browser.getText(CommonMethodsPageObjects.requestNumberOfSearchedRequest());
             boolean status = false;
-            if (expectedRequestNumber.contains(actualRequestNumber)) {
+            if (actualRequestNumber.contains(expectedRequestNumber)) {
                 status = true;
             }
             Assert.assertTrue(status, "Searched Request is not displayed");
@@ -356,13 +366,14 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String text = Browser.getText(element);
         String[] textSplit = text.split(" ");
-        text = textSplit[0];
+        text = textSplit[1];
         boolean status = false;
 
         if (text.contains(amount)) {
             status = true;
 
         }
+
         Assert.assertTrue(status, amount + "total amount is not the same");
         logger.addScreenshot("");
     }
@@ -570,7 +581,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String actualStatus = Browser.getText(element);
         boolean status = false;
-        if (expectedStatus.contains(actualStatus)) {
+        if (actualStatus.contains(expectedStatus)) {
             status = true;
         }
         Assert.assertTrue(status, invoice + " has different status");
@@ -649,12 +660,15 @@ public class CommonMethodsPage {
 
     public static void verifySearchedContractIsDisplayedForInvoices(String expectedContractNumber) throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.allContractInvoices(), 40);
+        Browser.waitForSeconds(3);
         if (Browser.isElementDisplayed(CommonMethodsPageObjects.allContractInvoices())) {
             String actualContractNumber = Browser.getText(CommonMethodsPageObjects.allContractInvoices());
             boolean status = false;
-            if (expectedContractNumber.contains(actualContractNumber)) {
+            if (actualContractNumber.contains(expectedContractNumber)) {
                 status = true;
             }
+
+
             Assert.assertTrue(status, "Searched Contract is not displayed");
             logger.addScreenshot("Searched contract is displayed");
         } else {
@@ -664,6 +678,7 @@ public class CommonMethodsPage {
 
     public static void clickOnNewInvoice() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newContractInvoice(), 20);
+        Browser.waitForSeconds(3);
         Browser.click(CommonMethodsPageObjects.newContractInvoice());
         Browser.waitForSeconds(1);
         logger.addScreenshot("New invoice details is displayed");
@@ -684,11 +699,11 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
-    public static void changeUserRole(String User) {
+    public static void changeUserRole(String User) throws Exception {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
         String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
         if (RoleName.contains(User)) {
-           logger.info("Current User Role :" + User);
+           logger.addScreenshot("The current user is " + RoleName);
         }
         else
         {
@@ -704,8 +719,9 @@ public class CommonMethodsPage {
                 }
             }
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
-            logger.addScreenshot("");
+            logger.addScreenshot("The role has been changed to " + User);
         }
+        new LoginPage().closeExploreEjarPopUp();
         }
 
     public static void clickOnRemoveButton() throws Exception {
@@ -801,6 +817,10 @@ public class CommonMethodsPage {
     }
 
     public static void clickRatingButtons() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.newRadioBTN(), 30);
+        if(Browser.isElementPresent(CommonMethodsPageObjects.newRadioBTN())){
+            Browser.click(CommonMethodsPageObjects.newRadioBTN());
+        }
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
         List<WebElement> rateList = driver.findElements(CommonMethodsPageObjects.ratingBTN());
         for (WebElement rate : rateList) {

@@ -135,25 +135,19 @@ public class LoginPage extends WebBasePage {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 30);
         if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
             Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),20);
-//            Browser.waitForSeconds(5);
-//            logger.addScreenshot("");
-//            Browser.waitForSeconds(1);
             Browser.click(LoginPageObjects.closeButton1());
-//            Browser.waitForSeconds(1);
-//            logger.addScreenshot("Close Explore Ejar PopUp");
         }
-
         Browser.waitForSeconds(1);
         if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
-//            logger.addScreenshot("");
-//            Browser.waitForSeconds(2);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),20);
             Browser.click(LoginPageObjects.closeButton2());
-//            Browser.waitForSeconds(2);
         }
-       /* if (Browser.isElementPresent(LoginPageObjects.popUpButton())){
-            Browser.waitForSeconds(5);
-            Browser.click(LoginPageObjects.popUpButton());
-        }*/
+        Browser.waitForSeconds(1);
+        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),20);
+            Browser.click(LoginPageObjects.closeButton1());
+
+        }
     }
 
     public void acceptTerms() throws Exception {

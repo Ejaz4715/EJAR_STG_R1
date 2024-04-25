@@ -106,7 +106,7 @@ public class RentalIncidentsPage {
     }
     public void verifyRequesterInfoIsRemoved() throws Exception {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requesterInfo(), 20);
-        Assert.assertTrue(Browser.isElementNotDisplayed(RentalIncidentsPageObjects.requesterInfo()));
+        Assert.assertTrue(Browser.isElementNotPresent(RentalIncidentsPageObjects.requesterInfo()));
         logger.addScreenshot("The (بيانات مقدم الطلب) is removed");
     }
 

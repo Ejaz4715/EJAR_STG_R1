@@ -18,6 +18,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -36,6 +37,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -58,6 +60,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -82,6 +85,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -108,6 +112,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -136,6 +141,7 @@ public class SendContractForApproval extends NHCWebTest {
 //        app.loginPage.clickLogin();
 //        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        app.loginPage.closeExploreEjarPopUp();
+//    CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
 //        logger.info("Step 02: Click on العقود tab");
 //        CommonMethodsPage.clickContractsBtn();
 //        logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -167,6 +173,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -184,7 +191,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 09: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -198,6 +205,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -231,6 +239,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -263,6 +272,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -293,6 +303,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -325,6 +336,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -344,7 +356,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 11: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -358,6 +370,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -394,6 +407,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -429,6 +443,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -462,6 +477,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -495,6 +511,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -516,7 +533,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 11: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -529,6 +546,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -566,6 +584,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -603,6 +622,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -638,6 +658,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -671,6 +692,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -692,7 +714,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 11: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -705,6 +727,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -741,6 +764,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -777,6 +801,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -810,6 +835,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -846,6 +872,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -885,6 +912,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -923,6 +951,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -964,6 +993,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1003,6 +1033,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1045,6 +1076,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1089,6 +1121,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1131,6 +1164,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1163,6 +1197,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1197,6 +1232,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1218,7 +1254,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 11: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1231,6 +1267,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1267,6 +1304,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1303,6 +1341,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1335,6 +1374,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1369,6 +1409,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1406,6 +1447,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1413,7 +1455,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Survey"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on (عرض العقد)  option");
@@ -1446,6 +1488,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1464,6 +1507,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1471,9 +1515,9 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Rejection"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1486,6 +1530,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1493,7 +1538,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
@@ -1510,6 +1555,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1517,7 +1563,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1536,6 +1582,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1543,7 +1590,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1564,6 +1611,7 @@ public class SendContractForApproval extends NHCWebTest {
 //        app.loginPage.clickLogin();
 //        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        app.loginPage.closeExploreEjarPopUp();
+//    CommonMethodsPage.changeUserRole("مؤجر");
 //        logger.info("Step 02: Click on العقود tab");
 //        CommonMethodsPage.clickContractsBtn();
 //        logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1571,7 +1619,7 @@ public class SendContractForApproval extends NHCWebTest {
 //        logger.info("Step 04: Click on filter icon");
 //        CommonMethodsPage.clickFilterBtn();
 //        logger.info("Step 05: Enter contract number in the contract search");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
 //        logger.info("Step 06: Click on three dots");
 //        CommonMethodsPage.clickOnKebabMenuButton();
 //        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1593,6 +1641,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1600,7 +1649,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1623,6 +1672,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1630,7 +1680,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1653,6 +1703,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1660,7 +1711,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1687,6 +1738,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1694,7 +1746,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1719,6 +1771,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1726,7 +1779,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1751,6 +1804,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1758,7 +1812,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1782,6 +1836,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1789,7 +1844,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1801,7 +1856,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 11: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1814,6 +1869,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1821,7 +1877,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1848,6 +1904,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1855,7 +1912,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1882,6 +1939,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1889,7 +1947,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1918,6 +1976,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1925,7 +1984,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1954,6 +2013,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1961,7 +2021,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1992,6 +2052,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1999,7 +2060,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2028,6 +2089,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2035,7 +2097,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2068,6 +2130,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2075,7 +2138,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2108,6 +2171,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2138,6 +2202,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2170,6 +2235,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2202,6 +2268,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2238,6 +2305,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2272,6 +2340,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2305,6 +2374,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2338,6 +2408,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2359,7 +2430,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 11: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2372,6 +2443,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2408,6 +2480,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2444,6 +2517,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2476,6 +2550,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2508,6 +2583,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2541,6 +2617,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2575,6 +2652,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2611,6 +2689,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2649,6 +2728,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2689,6 +2769,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2696,7 +2777,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Survey"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2733,6 +2814,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2751,6 +2833,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2758,9 +2841,9 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Rejection"));
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_84_SendContractForApproval(Map<String, String> data) throws Exception {
@@ -2772,6 +2855,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2779,7 +2863,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
@@ -2795,6 +2879,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2802,7 +2887,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2820,6 +2905,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2827,7 +2913,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2847,6 +2933,7 @@ public class SendContractForApproval extends NHCWebTest {
 //        app.loginPage.clickLogin();
 //        app.loginPage.enterVerificationCode(data.get("OTP"));
 //        app.loginPage.closeExploreEjarPopUp();
+//    CommonMethodsPage.changeUserRole("مستأجر");
 //        logger.info("Step 02: Click on العقود tab");
 //        CommonMethodsPage.clickContractsBtn();
 //        logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2854,7 +2941,7 @@ public class SendContractForApproval extends NHCWebTest {
 //        logger.info("Step 04: Click on filter icon");
 //        CommonMethodsPage.clickFilterBtn();
 //        logger.info("Step 05: Enter contract number in the contract search");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
 //        logger.info("Step 06: Click on three dots");
 //        CommonMethodsPage.clickOnKebabMenuButton();
 //        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2876,6 +2963,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2883,7 +2971,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2906,6 +2994,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2913,7 +3002,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2935,6 +3024,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2942,7 +3032,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2969,6 +3059,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2976,7 +3067,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3001,6 +3092,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3008,7 +3100,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3033,6 +3125,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3040,7 +3133,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3064,6 +3157,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3071,7 +3165,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3083,7 +3177,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 11: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3096,6 +3190,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3103,7 +3198,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3129,6 +3224,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3136,7 +3232,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3163,6 +3259,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3170,7 +3267,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3199,6 +3296,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3206,7 +3304,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3234,6 +3332,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3241,7 +3340,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3272,6 +3371,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3279,7 +3379,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3308,6 +3408,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3315,7 +3416,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3348,6 +3449,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3355,7 +3457,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3387,6 +3489,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3417,6 +3520,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3446,6 +3550,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3478,6 +3583,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3510,6 +3616,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3543,6 +3650,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3579,6 +3687,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3617,6 +3726,7 @@ public class SendContractForApproval extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3624,7 +3734,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Survey"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");

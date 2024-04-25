@@ -543,7 +543,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"إلغاء\" button");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -571,7 +571,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"إلغاء\" button");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
         logger.info("Step 08: Click on \"إلغاء\" button on pop up");
         CommonMethodsPage.clickOnCancelButton();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
@@ -602,7 +602,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"إلغاء\" button");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
         logger.info("Step 08: Click on \"إلغاء\" button on pop up");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.clickOnConfirmButton();
@@ -783,7 +783,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 13: Click on\"إلغاء\" button");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1067,7 +1067,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on إلغاء button");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1518,7 +1518,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
         logger.info("Step 09:  Click on \" إلغاء التعيين \" button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم إلغاء تعيينك لهذا الطلب. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم إلغاء تعيينك لهذا الطلب. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
 
     @Test(dataProvider = "testDataProvider")

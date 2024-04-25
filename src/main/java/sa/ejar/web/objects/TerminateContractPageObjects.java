@@ -33,13 +33,13 @@ public class TerminateContractPageObjects {
         return By.xpath("//h1[text()='العقود']");
     }
     public static By requestingPartyDDL() throws Exception{
-        return By.xpath("//select[@data-name=\"requesting_party\"]");
+        return By.xpath("//select[@data-name=\"requesting_party\"]/option");
     }
     public static By calendarIconOFDateRequiredToTerminateTheContract() throws Exception{
         return By.xpath("//div[@class='date-picker-button']");
     }
     public static By terminationReasonDDL() throws Exception{
-        return By.xpath("//select[@data-name=\"termination_reason\"]");
+        return By.xpath("//select[@data-name=\"termination_reason\"]/option");
     }
     public static By terminationReasonTXT() throws Exception{
         return By.xpath("//textarea[@data-name=\"note\"]");
@@ -75,7 +75,7 @@ public class TerminateContractPageObjects {
         return By.xpath("//a[text()=' تفاصيل الإنهاء ']");
     }
     public static By terminationRequestDoneMessage() throws Exception{
-        return By.xpath("//h5[text(0='تم تقديم طلب الإنهاء']");
+        return By.xpath("//h5[text()='تم تقديم طلب الإنهاء']");
     }
     public static By partyApprovalMessage() throws Exception{
         return By.xpath("//p[contains(text(),'سننتظر موافقة أطراف الإيجار')]");

@@ -358,7 +358,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
         CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:يرجى التأكد من التنسيق");
-        CommonMethodsPage.errorCRMessage(" يرجى التأكد من التنسيق ");
+        CommonMethodsPage.errorCRMessage("يرجى التأكد من التنسيق");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -388,7 +388,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
         CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:الحد الأدنى لعدد الأحرف هو 10");
-        CommonMethodsPage.errorCRMessage(" الحد الأدنى لعدد الأحرف هو 10 ");
+        CommonMethodsPage.errorCRMessage("الحد الأدنى لعدد الأحرف هو 10");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -418,6 +418,6 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
         CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:يجب أن يبدأ رقم المؤسسة بـ 7 ");
-        CommonMethodsPage.errorCRMessage(" يجب أن يبدأ رقم المؤسسة بـ 7 ");
+        CommonMethodsPage.errorCRMessage("يجب أن يبدأ رقم المؤسسة بـ 7");
     }
 }
