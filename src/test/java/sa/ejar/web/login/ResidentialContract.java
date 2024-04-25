@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
 

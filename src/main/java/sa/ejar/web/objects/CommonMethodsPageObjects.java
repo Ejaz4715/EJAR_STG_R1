@@ -35,6 +35,10 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains(text(),' تأكيد ')]");
     }
 
+    public static By editBTN() throws Exception{
+        return By.xpath("//button[contains(text(),'تعديل')]");
+    }
+
     public static By ContractsList(){
         return By.xpath("//app-single-contract");
     }
@@ -71,7 +75,7 @@ public class CommonMethodsPageObjects {
     public static By totalAmount(){
         return By.xpath("//span[text()='الإجمالي']/following-sibling::span");
     }
-    public static By hijriDate() {
+    public static By equivalentDateHint() {
         return By.xpath("//span[@class=\"input-hints\"]");
     }
     public static By closeBTN() {
@@ -182,12 +186,122 @@ public class CommonMethodsPageObjects {
     public static By newAmountForContractInvoice() throws Exception{
         return By.xpath("//td[contains(text(),'ر.س')]");
     }
+    public static By viewContractOptionBTN() throws Exception{
+        return By.xpath("//a[text()=' عرض العقد ']");
+    }
+
+    public static By submitForApprovalBTN() throws Exception{
+        return By.xpath("//button[text()=' الإرسال للتوثيق ']");
+    }
+    public static By removeBTN() {
+        return By.xpath("//button[text()=' إزالة ']");
+    }
+
+    public static By confirmAndSubmitBTN() {
+        return By.xpath("//button[text()=' تأكيد وإرسال ']");
+    }
+    public static By disclaimerCheckbox() {
+        return By.xpath("//app-form-checkbox[@formcontrolname=\"approve_unified_disclaimer\"]/label");
+    }
 
     public static By UserIdentityList(){
         return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
     }
     public static By RoleName(){
         return By.xpath("//div//p[@class='role-name']");
+
+    public static By ratingBTN() {
+        return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");
+    }
+    public static By submitBTN() {
+        return By.xpath("//button[text()=' إرسال ']");
+    }
+    public static By successfulSurveySubmittedMsg() {
+        return By.xpath("//h2[text()='تم تقديم الرد']");
+    }
+
+    public static By yesRadioBTN() {
+        return By.xpath("//label[text()=' نعم ']");
+    }
+    public static By deleteIconBTN() {
+        return By.xpath("//i[@class=\"delete-icon\"]/parent::button");
+    }
+    public static By CRNumberInput() {
+        return By.xpath("//input[@formcontrolname=\"registration_number\"]");
+    }
+    public static By errorCRNumberMsg() {
+        return By.xpath("//ul[@class=\"errors\"]/li");
+    }
+
+    public static By PhoneNumberInputField() {
+        return By.xpath("//input[@data-name=\"nationalNumber\"]");
+    }
+
+    public static By PhoneNumberInputFieldErrorMessage() {
+        return By.xpath("//label[contains (text() , 'الهاتف')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By EmailInputField() {
+        return By.xpath("//input[@data-name=\"email\"]");
+    }
+
+    public static By EmailErrorMessage() {
+        return By.xpath("//label[contains (text() , 'البريد ')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By RegionDropdown() {
+        return By.xpath("//select[@data-name=\"region\"]");
+    }
+
+    public static By RegionDropdownOptions() {
+        return By.xpath("//select[@data-name=\"region\"]/child::option");
+    }
+
+    public static By CityDropdown() {
+        return By.xpath("//input[@data-name=\"city\"]/parent::div/child::div/child::div");
+    }
+
+    public static By CitySearchBar() {
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::input[@placeholder=\"البحث\"]");
+    }
+
+    public static By CityName() {
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::div[@class=\"option-text\"]");
+    }
+
+    public static By PostalCodeInput() {
+        return By.xpath("//input[@data-name=\"postal_code\"]");
+    }
+
+    public static By PostalCodeError() {
+        return By.xpath("//label[contains (text() , 'الرمز البريدي')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By StreetNameInput() {
+        return By.xpath("//input[@data-name=\"street_name\"]");
+        
+    }
+
+    public static By StreetNameError() {
+        return By.xpath("//label[contains (text() , 'اسم الشارع')]/parent::app-form-field/descendant::li");
+    }
+
+    public static By BuildingNumberError() {
+        return By.xpath("//label[contains (text() , 'رقم المبنى' )]/parent::app-form-field/descendant::li");
+
+    }
+
+    public static By BuildingNumberInput() {
+        return By.xpath("//input[@data-name=\"building_number\"]");
+
+    }
+
+    public static By AdditionalNumberInput() {
+        return By.xpath("//input[@data-name=\"additional_number\"]");
+    }
+
+    public static By AdditionalNumberError() {
+        return By.xpath("//label[contains (text() , 'الرقم الإضافي' )]/parent::app-form-field/descendant::li");
     }
 
     public static By SendBTN(){

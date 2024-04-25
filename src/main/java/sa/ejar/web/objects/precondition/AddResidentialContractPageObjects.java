@@ -656,4 +656,8 @@ public class AddResidentialContractPageObjects {
     public static By LoadingIcon() throws Exception {
         return By.xpath(get("Loading-Icon"));
     }
+
+    public static By tenantRepresentativeRadioBTN() {
+        return  By.xpath("//input[@data-value=\"tenant_representative\"]/following-sibling::label");
+    }
 }
