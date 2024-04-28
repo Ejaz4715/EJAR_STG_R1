@@ -79,4 +79,27 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField("WGAV74YEF");
         app.changeTenantActivityPage.assertInvalidRequest();
     }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_23_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
+        app.changeTenantActivityPage.assertRequestDetails();
+        logger.info("Step 06: Check request status");
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
+    }
 }
