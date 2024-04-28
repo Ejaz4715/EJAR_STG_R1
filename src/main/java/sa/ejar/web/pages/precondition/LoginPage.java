@@ -125,6 +125,11 @@ public class LoginPage extends WebBasePage {
             Browser.click(LoginPageObjects.closeButton1());
 
         }
+        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),20);
+            Browser.click(LoginPageObjects.closeButton1());
+
+        }
     }
 
     public void acceptTerms() throws Exception {
