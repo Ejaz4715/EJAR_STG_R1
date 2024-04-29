@@ -60,4 +60,11 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//h5[@class='item-value dash-if-empty']");
     }
 
+    public static By newTenantActivityTextBox() {
+        return By.xpath("//h2[text()=' نشاط المستأجر الجديد']/parent::div/parent::div/parent::app-card-header/following-sibling::app-card-body//input");
+    }
+
+    public static By submitButton() {
+        return By.xpath("//button[@class='btn btn-primary me-2']");
+    }
 }

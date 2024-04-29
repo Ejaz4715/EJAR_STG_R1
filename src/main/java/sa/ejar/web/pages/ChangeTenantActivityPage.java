@@ -1,7 +1,6 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
@@ -47,6 +46,37 @@ public class ChangeTenantActivityPage {
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.createdDate());
         String issued = Browser.getText(ChangeTenantActivityPageObjects.issuedBy());
         Assert.assertEquals(issued, issuedBy, "issued by is not displayed");
+        logger.addScreenshot(" ");
+    }
+
+    public void enterTextInNewTenantActivityTextBox(String text) {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), 40);
+        Browser.setText(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), text);
+        logger.addScreenshot(" ");
+    }
+
+    public void removeTextInNewTenantActivityTextBox() {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), 40);
+        Browser.clearText(ChangeTenantActivityPageObjects.newTenantActivityTextBox());
+        logger.addScreenshot(" ");
+    }
+
+    public void assertSubmitButtonIsEnabled() {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitButton());
+        logger.addScreenshot(" ");
+    }
+
+    public void assertSubmitButtonIsDisabled() {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
+        Browser.isElementDisabled(ChangeTenantActivityPageObjects.submitButton());
+        logger.addScreenshot(" ");
+    }
+
+    public void clickOnSubmitButton() {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
+        Browser.click(ChangeTenantActivityPageObjects.submitButton());
+        logger.addScreenshot(" ");
     }
 
 

@@ -941,4 +941,10 @@ public class CommonMethodsPage {
         Browser.click(CommonMethodsPageObjects.SendBTN());
         Browser.waitForSeconds(1);
     }
+
+    public static void assertFilterPopupIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.filterPopup(), 20);
+        Browser.isElementDisplayed(CommonMethodsPageObjects.filterPopup());
+        logger.addScreenshot(" ");
+    }
 }
