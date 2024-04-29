@@ -31,10 +31,6 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//a[text()=' نشاط المستأجر الجديد ']");
     }
 
-    public static By newTenantActivityDescription(){
-        return By.xpath("//app-card[@id='new-tenant-activity']//span/span");
-    }
-
     public static By backButton(){
         return By.xpath("//button[text()=' السابق ']");
     }
