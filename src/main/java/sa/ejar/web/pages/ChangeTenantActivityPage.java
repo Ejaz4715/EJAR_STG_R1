@@ -84,13 +84,62 @@ public class ChangeTenantActivityPage {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.ViewRequestButton(), 20);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.ViewRequestButton());
         Browser.click(ChangeTenantActivityPageObjects.ViewRequestButton());
-        Browser.waitForSeconds(1);
     }
 
     public void clickOnLetsStartButton() {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.letsStartButton(), 20);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.letsStartButton());
         Browser.click(ChangeTenantActivityPageObjects.letsStartButton());
-        Browser.waitForSeconds(1);
+
+    }
+
+    public void clickOnOldTenantActivity() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.oldTenantActivity(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.oldTenantActivity());
+        Browser.click(ChangeTenantActivityPageObjects.oldTenantActivity());
+    }
+
+    public void assertOldTenantDescriptionDetails(String description) {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.oldTenantActivityDescription(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.oldTenantActivityDescription());
+        Assert.assertEquals(Browser.getText(ChangeTenantActivityPageObjects.oldTenantActivityDescription()), description, "Old Tenant description is not matched");
+    }
+
+    public void clickOnNewTenantActivity() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivity(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.newTenantActivity());
+        Browser.click(ChangeTenantActivityPageObjects.newTenantActivity());
+    }
+
+    public void assertNewTenantDescriptionDetails(String description) {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityDescription(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.newTenantActivityDescription());
+        Assert.assertEquals(Browser.getText(ChangeTenantActivityPageObjects.newTenantActivityDescription()), description, "Old Tenant description is not matched");
+    }
+
+    public void clickBackButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.backButton(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.backButton());
+        Browser.click(ChangeTenantActivityPageObjects.backButton());
+    }
+
+    public void scrollToNewTenantActivity(){
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.bottomNewTenantActivity(), 20);
+        Browser.executeJSScrollIntoView(ChangeTenantActivityPageObjects.bottomNewTenantActivity());
+    }
+
+    public void assertApproveTenantActivity() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.approveTenantActivity(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.approveTenantActivity()));
+    }
+
+    public void assertReviewChangedTenantActivity() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.reviewChangeTenantActivity(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.reviewChangeTenantActivity()));
+    }
+
+    public void verifySubmitApprovalButtonDisabled(boolean idDisabled) {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitApprovalButton(), 20);
+        Assert.assertEquals(Browser.isElementDisabled(ChangeTenantActivityPageObjects.submitApprovalButton()), idDisabled);
     }
 }
