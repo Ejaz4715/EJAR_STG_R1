@@ -3,7 +3,6 @@ package sa.ejar.web.pages;
 import com.testcrew.web.Browser;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 
 import static com.testcrew.web.Browser.*;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
@@ -155,5 +154,16 @@ public class ChangeTenantActivityPage {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity(), 10);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
         click(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
+    }
+    public void verifyChangeTenantActivityPageHeaderIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader()),"Change Tenant Activity page header is not displayed");
+        logger.addScreenshot(" ");
+    }
+    public void assertContractNumberInPageHeader(String contractNumber) {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.contractNumberHeader(),20);
+        String contractNumberNew = Browser.getText(ChangeTenantActivityPageObjects.contractNumberHeader()).replace("#","");
+        Assert.assertEquals(contractNumberNew, contractNumber, "contract number is not matching");
+        logger.addScreenshot(" ");
     }
 }
