@@ -29,13 +29,44 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
-        CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        app.addResidentialContractPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Verify all the available contracts are displayed");
-        CommonMethodsPage.assertContractsAreAppearing();
+        logger.info("Step 03: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is displayed");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_02_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        app.addResidentialContractPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is displayed");
+        CommonMethodsPage.KebabMenuOptionNotDisplayed("تغيير نشاط المستأجر");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -98,7 +129,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
-        app.changeTenantActivityPage.assertRequestDetails("6HTM38FF", "تغيير النشاط التجاري", "20254965397");
+        app.changeTenantActivityPage.assertRequestDetails("6HTM38FF","تغيير النشاط التجاري","20254965397");
         logger.info("Step 06: Check request status");
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
@@ -149,7 +180,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField("U6CCHZ8F");
         logger.info("Step 06: Check request status");
-        app.changeTenantActivityPage.assertRequestDetails("U6CCHZ8F", "تغيير النشاط التجاري", "20026193644");
+        app.changeTenantActivityPage.assertRequestDetails("U6CCHZ8F","تغيير النشاط التجاري","20026193644");
         CommonMethodsPage.checkRequestStatus("موافق عليه");
     }
 
