@@ -8,10 +8,6 @@ public class ChangeTenantActivityPageObjects {
     //Example
     public static By PopUpAlertAfterCancel() { return By.xpath("//app-card-body"); }
 
-    public static By referenceNumber() {
-        return By.xpath("//input[@data-name='reference']");
-    }
-
     public static By requestID() {
         return By.xpath("(//h5[@class='item-value'])[1]");
     }
@@ -52,4 +48,11 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//h5[@class='item-value dash-if-empty']");
     }
 
+    public static By newTenantActivityTextBox() {
+        return By.xpath("//h2[text()=' نشاط المستأجر الجديد']/parent::div/parent::div/parent::app-card-header/following-sibling::app-card-body//input");
+    }
+
+    public static By submitButton() {
+        return By.xpath("//button[@class='btn btn-primary me-2']");
+    }
 }
