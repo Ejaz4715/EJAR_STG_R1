@@ -48,6 +48,14 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("(//span[@class='item-label'])[2]");
     }
 
+    public static By newTenantActivityDescription(){
+        return  By.xpath("//app-tenant-organization-activity-form[@id='new-tenant-activity']//input[@formcontrolname='activity_description']");
+    }
+
+    public static By submitRequestInChangeTenantCommercialActivity(){
+        return By.xpath("//button[text()=' تقديم الطلب ']");
+    }
+
     public static By issuedBy(){
         return By.xpath("//h5[@class='item-value dash-if-empty']");
     }
