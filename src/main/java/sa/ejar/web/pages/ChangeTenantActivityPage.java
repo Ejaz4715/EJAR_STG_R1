@@ -4,6 +4,7 @@ import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 
 import static com.testcrew.web.Browser.*;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
@@ -46,5 +47,20 @@ public class ChangeTenantActivityPage {
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.createdDate());
         String issued = Browser.getText(ChangeTenantActivityPageObjects.issuedBy());
         Assert.assertEquals(issued, issuedBy, "issued by is not displayed");
+    }
+
+
+    public static void clickOnViewRequestButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.ViewRequestButton(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.ViewRequestButton());
+        Browser.click(ChangeTenantActivityPageObjects.ViewRequestButton());
+        Browser.waitForSeconds(1);
+    }
+
+    public void clickOnLetsStartButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.letsStartButton(), 20);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.letsStartButton());
+        Browser.click(ChangeTenantActivityPageObjects.letsStartButton());
+        Browser.waitForSeconds(1);
     }
 }
