@@ -142,4 +142,18 @@ public class ChangeTenantActivityPage {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitApprovalButton(), 20);
         Assert.assertEquals(Browser.isElementDisabled(ChangeTenantActivityPageObjects.submitApprovalButton()), idDisabled);
     }
+
+    public static void newTenantActivityDescription(String newTenantActivityDescription)
+    {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityDescription(), 10);
+        Browser.isElementDisplayed(ChangeTenantActivityPageObjects.newTenantActivityDescription());
+        setText(ChangeTenantActivityPageObjects.newTenantActivityDescription(), newTenantActivityDescription);
+    }
+
+    public static void clickOnSubmitRequest()
+    {
+        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity(), 10);
+        Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
+        click(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
+    }
 }

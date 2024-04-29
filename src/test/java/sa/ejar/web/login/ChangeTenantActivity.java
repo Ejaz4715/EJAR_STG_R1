@@ -2,6 +2,7 @@ package sa.ejar.web.login;
 
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.pages.ChangeTenantActivityPage;
 import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
@@ -67,6 +68,36 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is displayed");
         CommonMethodsPage.KebabMenuOptionNotDisplayed("تغيير نشاط المستأجر");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_11_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number\n");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
+        ChangeTenantActivityPage.newTenantActivityDescription("نشاط المستأجر الجديد");
+        logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
+        ChangeTenantActivityPage.clickOnSubmitRequest();
+        logger.info("Step 09: Click on Cancel (إلغاء ) button from OTP Request popup");
+        CommonMethodsPage.clickOnCancelButton();
     }
 
     @Test(dataProvider = "testDataProvider")
