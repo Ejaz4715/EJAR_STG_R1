@@ -947,4 +947,24 @@ public class CommonMethodsPage {
         Browser.isElementDisplayed(CommonMethodsPageObjects.filterPopup());
         logger.addScreenshot(" ");
     }
+
+    /**
+     * Select an option from Kebab menu
+     * @param option - Option to be selected
+     * */
+    public static void KebabMenuOptionNotDisplayed(String option) {
+        Browser.waitForSeconds(2);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        boolean status = false;
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                status = true;
+                break;
+            }
+        }
+        Assert.assertFalse(status, option + "option is available");
+        logger.addScreenshot("");
+    }
 }
