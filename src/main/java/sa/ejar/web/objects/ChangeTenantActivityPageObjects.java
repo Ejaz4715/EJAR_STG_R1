@@ -8,6 +8,18 @@ public class ChangeTenantActivityPageObjects {
     //Example
     public static By PopUpAlertAfterCancel() { return By.xpath("//app-card-body"); }
 
+    public static By referenceNumber() {
+        return By.xpath("//input[@data-name='reference']");
+    }
+
+    public static By ViewRequestButton(){
+        return  By.xpath("//a[text()=' عرض الطلب ']");
+    }
+
+    public static By letsStartButton(){
+        return  By.xpath("//button[text()=' لنبدأ ']");
+    }
+
     public static By requestID() {
         return By.xpath("(//h5[@class='item-value'])[1]");
     }

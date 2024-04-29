@@ -267,4 +267,103 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails("سعود حمد بن حمد الراشد");
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_31_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField("WGAV74YEF");
+        app.changeTenantActivityPage.assertInvalidRequest();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_32_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
+        app.changeTenantActivityPage.assertRequestDetails("6HTM38FF","تغيير النشاط التجاري","20254965397");
+        logger.info("Step 06: Check request status");
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_33_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
+        app.changeTenantActivityPage.assertRequestDetails("6HTM38FF","تغيير النشاط التجاري","20254965397");
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("step 07: Click on view request (عرض الطلب ) option");
+        app.changeTenantActivityPage.clickOnViewRequestButton();
+
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_34_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
+        app.changeTenantActivityPage.assertRequestDetails("6HTM38FF","تغيير النشاط التجاري","20254965397");
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("step 07: Click on view request (عرض الطلب ) option");
+        app.changeTenantActivityPage.clickOnViewRequestButton();
+        logger.info("Step 08: Click on Start (لنبدأ) button");
+        app.changeTenantActivityPage.clickOnLetsStartButton();
+    }
+
+
 }
