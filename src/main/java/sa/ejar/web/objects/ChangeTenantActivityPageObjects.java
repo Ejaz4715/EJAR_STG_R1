@@ -24,4 +24,32 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//h5[@class='card-title']");
     }
 
+    public static By statusDropdown() {
+        return By.xpath("//select[@data-name='status']");
+    }
+
+    public static By statusOptions() {
+        return By.xpath("//select[@data-name='status']/option");
+    }
+
+    public static By requestTypeDropdown() {
+        return By.xpath("//select[@data-name='request_type']");
+    }
+
+    public static By requestTypeOptions() {
+        return By.xpath("//select[@data-name='request_type']/option");
+    }
+
+    public static By contractNumber() {
+        return By.xpath("//span[text()='رقم العقد']/parent::div/h5/a");
+    }
+
+    public static By createdDate(){
+        return By.xpath("(//span[@class='item-label'])[2]");
+    }
+
+    public static By issuedBy(){
+        return By.xpath("//h5[@class='item-value dash-if-empty']");
+    }
+
 }
