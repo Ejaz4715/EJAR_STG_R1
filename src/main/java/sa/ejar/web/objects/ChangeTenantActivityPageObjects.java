@@ -108,4 +108,11 @@ public class ChangeTenantActivityPageObjects {
     public static By submitButton() {
         return By.xpath("//button[@class='btn btn-primary me-2']");
     }
+
+    public static By changeTenantActivityPageHeader(){
+        return By.xpath("//h1[text()=' تغيير نشاط المستأجر التجاري ']");
+    }
+    public static By contractNumberHeader(){
+        return By.xpath("//h4");
+    }
 }
