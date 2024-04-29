@@ -12,6 +12,14 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//input[@data-name='reference']");
     }
 
+    public static By ViewRequestButton(){
+        return  By.xpath("//a[text()=' عرض الطلب ']");
+    }
+
+    public static By letsStartButton(){
+        return  By.xpath("//button[text()=' لنبدأ ']");
+    }
+
     public static By requestID() {
         return By.xpath("(//h5[@class='item-value'])[1]");
     }
