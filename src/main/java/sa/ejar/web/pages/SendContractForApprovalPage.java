@@ -1,5 +1,6 @@
 package sa.ejar.web.pages;
 
+import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,10 +9,14 @@ import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.getWebElement;
+import static org.apache.commons.io.file.PathUtils.deleteFile;
+import static sa.ejar.web.pages.CommonMethodsPage.setDownloadPath;
 
 public class SendContractForApprovalPage {
 
@@ -26,9 +31,18 @@ public class SendContractForApprovalPage {
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.previewContractSection()));
         logger.addScreenshot("User Navigate To ' معاينة العقد' Section");
     }
-    public  void clickOnDownloadDraftCopyButton() {
+
+
+    public void clickOnDownloadDraftCopyButton() throws Exception {
+//        deleteFile();
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
+        TCRobot robot = new TCRobot();
+        Browser.waitForSeconds(2);
+        robot.setText(setDownloadPath());
+        Browser.waitForSeconds(1);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        Browser.waitForSeconds(3);
     }
     public void verifyPreviewBrokerageAgreementSectionIsDisplayed()  {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.previewBrokerageAgreementSection(), 20);
@@ -58,14 +72,14 @@ public class SendContractForApprovalPage {
         logger.addScreenshot("User Navigate To 'بنود وشروط إضافية' Page");
     }
 
-    public void verifyAdditionalTermsSwitchButtonIsDisabled()  {
+    public void verifyAdditionalTermsSwitchButtonIsEnabled()  {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.additionalTermsSwitchBTN(), 20);
-        Assert.assertTrue(Browser.isElementDisabled(SendContractForApprovalPageObjects.additionalTermsSwitchBTN()));
+        Assert.assertTrue(Browser.isElementEnabled(SendContractForApprovalPageObjects.additionalTermsSwitchBTN()));
         logger.addScreenshot("The 'بنود وشروط إضافية' Switch Button is Disabled");
     }
     public void clickAdditionalTermsSwitchButton() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.additionalTermsSwitchBTN(), 40 );
-        Browser.click(SendContractForApprovalPageObjects.additionalTermsSwitchBTN());
+            Browser.click(SendContractForApprovalPageObjects.additionalTermsSwitchBTN());
     }
 
     public void verifyAddAnotherAdditionalTermsPopupWindowIsDisplayed()  {
@@ -91,7 +105,7 @@ public class SendContractForApprovalPage {
     }
     public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) throws Exception {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.theEnteredAdditionalTerms());
-        String text = additionalTerms.getAttribute("value");
+        String text = additionalTerms.getText();
         Assert.assertEquals(text, enteredAdditionalTerms);
         Browser.logger.addScreenshot("The additional terms has been entered");
 
@@ -100,13 +114,14 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.addAnotherAdditionalTermsErrorMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.addAnotherAdditionalTermsErrorMsg()));
         WebElement error = getWebElement(SendContractForApprovalPageObjects.addAnotherAdditionalTermsErrorMsgContent());
-        String text = error.getAttribute("value");
+        String text = error.getText();
         Assert.assertEquals(text, errorMsgContent);
         logger.addScreenshot("The 'فشل التحقق من الصحة' error message is Disabled");
     }
 
     public void verifyEnteredAdditionalTermsIsRemoved()  {
-        Assert.assertTrue(Browser.isElementNotDisplayed(SendContractForApprovalPageObjects.theEnteredAdditionalTerms()));
+        Browser.waitUntilInvisibilityOfElement(SendContractForApprovalPageObjects.theEnteredAdditionalTermsRemoved(),20);
+        Assert.assertTrue(Browser.isElementNotPresent(SendContractForApprovalPageObjects.theEnteredAdditionalTermsRemoved()));
         logger.addScreenshot("The Entered additional terms is Removed");
     }
 
@@ -192,6 +207,9 @@ public class SendContractForApprovalPage {
         Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
         logger.addScreenshot("The OTP code has been entered");
 
+    }
+    public void verifyVerificationCodeIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
     }
 
     public void verifyOTPErrorMessageIsDisplayed() throws Exception {

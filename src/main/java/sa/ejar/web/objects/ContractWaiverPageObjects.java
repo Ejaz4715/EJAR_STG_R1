@@ -74,4 +74,5 @@ public class ContractWaiverPageObjects {
     public static By CancelButtonOnPopUp() {
         return By.xpath("//footer/descendant::button[contains(text(),'إلغاء')] | //app-card-footer/descendant::button[contains(text(),'إلغاء')]");
     }
+
 }

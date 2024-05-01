@@ -5937,7 +5937,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 05: Enter contract number");
         CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Verify user is able to view all the invoices of selected contract");
-        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber"));
+        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber_Close"));
 
     }
 

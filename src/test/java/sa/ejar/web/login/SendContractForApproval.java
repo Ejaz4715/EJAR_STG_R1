@@ -131,37 +131,37 @@ public class SendContractForApproval extends NHCWebTest {
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
     }
 
-//    @Test(dataProvider = "testDataProvider")
-//    public void TC_06_SendContractForApproval(Map<String, String> data) throws Exception {
-//        logger.info("Step 00: Test Data : " + data.toString());
-//        app.openApplication(data);
-//        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-//        app.loginPage.enterUsername(data.get("Username"));
-//        app.loginPage.enterPassword(data.get("Password"));
-//        app.loginPage.clickLogin();
-//        app.loginPage.enterVerificationCode(data.get("OTP"));
-//        app.loginPage.closeExploreEjarPopUp();
-//    CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
-//        logger.info("Step 02: Click on العقود tab");
-//        CommonMethodsPage.clickContractsBtn();
-//        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-//        CommonMethodsPage.selectViewAllContractsButton();
-//        logger.info("Step 04: Click on filter icon");
-//        CommonMethodsPage.clickFilterBtn();
-//        logger.info("Step 05: Enter contract number in the contract search");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-//        logger.info("Step 06: Click on three dots");
-//        CommonMethodsPage.clickOnKebabMenuButton();
-//        logger.info("Step 07: Click on  (عرض العقد)  option");
-//        CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
-//        logger.info("Step 08: Click on  (الإرسال للتوثيق)  button");
-//        CommonMethodsPage.clickOnSubmitForApprovalBTN();
-//        logger.info("Step 09: Click on (تحميل مسودة العقد)");
-//        app.sendContractForApprovalPage.clickOnDownloadDraftCopyButton();
+    @Test(dataProvider = "testDataProvider")
+    public void TC_06_SendContractForApproval(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter contract number in the contract search");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Click on  (عرض العقد)  option");
+        CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
+        logger.info("Step 08: Click on  (الإرسال للتوثيق)  button");
+        CommonMethodsPage.clickOnSubmitForApprovalBTN();
+        logger.info("Step 09: Click on (تحميل مسودة العقد)");
+        app.sendContractForApprovalPage.clickOnDownloadDraftCopyButton();
 //        logger.info("Step 09: "); //====not complete
 //        app.sendContractForApprovalPage.clickOnDownloadDraftCopyButton();
-//
-//    }
+
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_07_SendContractForApproval(Map<String, String> data) throws Exception {
@@ -821,8 +821,8 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
         logger.info("Step 11: Verify the user able to click (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.verifyAdditionalTermsSwitchButtonIsDisabled();
         app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
+        app.sendContractForApprovalPage.verifyAdditionalTermsSwitchButtonIsEnabled();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -854,11 +854,9 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11:  Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12:  Click on (إضافة بند آخر) button");
+        logger.info("Step 11:  Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13:  Pop up window is displayed with title (إضافة بند آخر)");
+        logger.info("Step 12:  Pop up window is displayed with title (إضافة بند آخر)");
         app.sendContractForApprovalPage.verifyAddAnotherAdditionalTermsPopupWindowIsDisplayed();
     }
 
@@ -891,13 +889,11 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11:  Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12:  Click on (إضافة بند آخر) button");
+        logger.info("Step 11:  Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13:  Enter (بنود وشروط إضافية)  textarea");
+        logger.info("Step 12:  Enter (بنود وشروط إضافية)  textarea");
         app.sendContractForApprovalPage.enterAdditionalTerms(data.get("Additional_Terms"));
-        logger.info("Step 14:  Verify (بنود وشروط إضافية)  has been entered");
+        logger.info("Step 13:  Verify (بنود وشروط إضافية)  has been entered");
         app.sendContractForApprovalPage.verifyAdditionalTermsHasBeenEntered(data.get("Additional_Terms"));
 
     }
@@ -931,13 +927,11 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11:  Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12:  Click on (إضافة بند آخر) button");
+        logger.info("Step 11:  Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13:  Click on (إغلاق)  button");
+        logger.info("Step 12:  Click on (إغلاق)  button");
         CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 14: Verify the user remains in the same (بنود وشروط إضافية) page");
+        logger.info("Step 13: Verify the user remains in the same (بنود وشروط إضافية) page");
         app.sendContractForApprovalPage.verifyAdditionalTermsPageIsDisplayed();
     }
 
@@ -970,15 +964,13 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11:  Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12:  Click on (إضافة بند آخر) button");
+        logger.info("Step 11:  Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13:  Enter (بنود وشروط إضافية)  textarea");
+        logger.info("Step 12:  Enter (بنود وشروط إضافية)  textarea");
         app.sendContractForApprovalPage.enterAdditionalTerms(data.get("Additional_Terms"));
-        logger.info("Step 14: Click on  (تأكيد)  button");
+        logger.info("Step 13: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 15: Verify the user remains in the same page with entered (بنود وشروط إضافية)");
+        logger.info("Step 14: Verify the user remains in the same page with entered (بنود وشروط إضافية)");
         app.sendContractForApprovalPage.verifyAdditionalTermsPageIsDisplayed();
         app.sendContractForApprovalPage.verifyEnteredAdditionalTerms(data.get("Additional_Terms"));
     }
@@ -1012,13 +1004,11 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11:  Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12:  Click on (إضافة بند آخر) button");
+        logger.info("Step 11:  Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13: Click on  (تأكيد)  button");
+        logger.info("Step 12: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 14: Verify an error message (فشل التحقق من الصحة) is displayed ");
+        logger.info("Step 13: Verify an error message (فشل التحقق من الصحة) is displayed ");
         app.sendContractForApprovalPage.verifyAddAnotherAdditionalErrorMessageIsDisplayed("translation missing: ar.translation missing: ar.activerecord.errors.models.domain/brokerage_agreement/model/brokerage_agreement_custom_term.attributes.content.blank");
     }
 
@@ -1052,17 +1042,9 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11: Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12: Click on (إضافة بند آخر) button");
-        app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13: Enter (بنود وشروط إضافية)  textarea");
-        app.sendContractForApprovalPage.enterAdditionalTerms(data.get("Additional_Terms"));
-        logger.info("Step 14: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 15: Click on  (تعديل)  button");
+        logger.info("Step 11: Click on  (تعديل)  button");
         app.sendContractForApprovalPage.clickOnEditButton();
-        logger.info("Step 16: Pop up window is displayed with title (إضافة بند آخر)");
+        logger.info("Step 12: Pop up window is displayed with title (إضافة بند آخر)");
         app.sendContractForApprovalPage.verifyAddAnotherAdditionalTermsPopupWindowIsDisplayed();
     }
 
@@ -1095,19 +1077,11 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11: Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12: Click on (إضافة بند آخر) button");
-        app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13: Enter (بنود وشروط إضافية)  textarea");
-        app.sendContractForApprovalPage.enterAdditionalTerms(data.get("Additional_Terms"));
-        logger.info("Step 14: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 15: Click on  (تعديل)  button");
+        logger.info("Step 11: Click on  (تعديل)  button");
         app.sendContractForApprovalPage.clickOnEditButton();
-        logger.info("Step 16: Click on  (إزالة)  button");
+        logger.info("Step 12: Click on  (إزالة)  button");
         CommonMethodsPage.clickOnRemoveButton();
-        logger.info("Step 17: Verify the user remains in the same page and entered additional terms is removed");
+        logger.info("Step 13: Verify the user remains in the same page and entered additional terms is removed");
         app.sendContractForApprovalPage.verifyEnteredAdditionalTermsIsRemoved();
     }
 
@@ -1140,17 +1114,15 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إضافة شروطا إضافية)  button");
         app.sendContractForApprovalPage.clickAddAnAdditionalTermsButton();
-        logger.info("Step 11: Click on (بنود وشروط إضافية) switch button");
-        app.sendContractForApprovalPage.clickAdditionalTermsSwitchButton();
-        logger.info("Step 12: Click on (إضافة بند آخر) button");
+        logger.info("Step 11: Click on (إضافة بند آخر) button");
         app.sendContractForApprovalPage.clickOnAddAnotherAdditionalTermsButton();
-        logger.info("Step 13: Enter (بنود وشروط إضافية)  textarea");
+        logger.info("Step 12: Enter (بنود وشروط إضافية)  textarea");
         app.sendContractForApprovalPage.enterAdditionalTerms(data.get("Additional_Terms"));
-        logger.info("Step 14: Click on (تأكيد) button");
+        logger.info("Step 13: Click on (تأكيد) button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 15: Click on (تأكيد الشروط والأحكام) button");
+        logger.info("Step 14: Click on (تأكيد الشروط والأحكام) button");
         app.sendContractForApprovalPage.clickOnConfirmTermsAndConditionsButton();
-        logger.info("Step 16: Verify the user navigate back to (معاينة اتفاقية الوساطة) section");
+        logger.info("Step 15: Verify the user navigate back to (معاينة اتفاقية الوساطة) section");
         app.sendContractForApprovalPage.verifyPreviewBrokerageAgreementSectionIsDisplayed();
     }
 
@@ -1542,7 +1514,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
-        CommonMethodsPage.KebabMenuOptions(" الموافقة على العقد ");
+        CommonMethodsPage.KebabMenuOptions("الموافقة على العقد");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1601,35 +1573,35 @@ public class SendContractForApproval extends NHCWebTest {
         app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
 
-//    @Test(dataProvider = "testDataProvider")
-//    public void TC_48_SendContractForApproval(Map<String, String> data) throws Exception {
-//        logger.info("Step 00: Test Data : " + data.toString());
-//        app.openApplication(data);
-//        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-//        app.loginPage.enterUsername(data.get("Username"));
-//        app.loginPage.enterPassword(data.get("Password"));
-//        app.loginPage.clickLogin();
-//        app.loginPage.enterVerificationCode(data.get("OTP"));
-//        app.loginPage.closeExploreEjarPopUp();
-//    CommonMethodsPage.changeUserRole("مؤجر");
-//        logger.info("Step 02: Click on العقود tab");
-//        CommonMethodsPage.clickContractsBtn();
-//        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-//        CommonMethodsPage.selectViewAllContractsButton();
-//        logger.info("Step 04: Click on filter icon");
-//        CommonMethodsPage.clickFilterBtn();
-//        logger.info("Step 05: Enter contract number in the contract search");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
-//        logger.info("Step 06: Click on three dots");
-//        CommonMethodsPage.clickOnKebabMenuButton();
-//        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
-//        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-//        logger.info("Step 08: Click on  (لنبدأ)  button");
-//        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-//        logger.info("Step 09:  Click on  (عرض)  button");
-//        app.revokeContractPage.clickOnViewButtonOnRequest();
-//        //fail should be view
-//    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_48_SendContractForApproval(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter contract number in the contract search");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
+        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+        logger.info("Step 08: Click on  (لنبدأ)  button");
+        app.sendContractForApprovalPage.clickOnLetUsStartButton();
+        logger.info("Step 09:  Click on  (عرض)  button");
+        app.revokeContractPage.clickOnViewButtonOnRequest();
+        //fail should be view
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_49_SendContractForApproval(Map<String, String> data) throws Exception {
@@ -2037,6 +2009,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Click on  (رفض العقد) button");
         app.sendContractForApprovalPage.clickOnRejectTheContractButton();
         logger.info("Step 13: Click on  (إلغاء) button");
+        app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Verify the user navigate back to (لماذا ترغب بالرفض) page");
         app.sendContractForApprovalPage.verifyRejectTheContractPageIsDisplayed();
@@ -2187,6 +2160,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Verify the user navigate to (مراجعة اتفاقية الوساطة) page");
         app.sendContractForApprovalPage.verifyReviewAgreementPageIsDisplayed();
@@ -2218,6 +2192,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (السابق)  button");
         CommonMethodsPage.clickOnBackButton();
@@ -2251,6 +2226,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2284,6 +2260,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2321,6 +2298,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2356,6 +2334,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2364,6 +2343,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Verify the (رفض العقد) is Disabled");
         app.sendContractForApprovalPage.verifyRejectTheContractButtonIsDisabled();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_70_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2390,6 +2370,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2424,6 +2405,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2459,6 +2441,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2496,6 +2479,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (رفض)  button");
         CommonMethodsPage.clickOnRejectButton();
@@ -2533,6 +2517,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2566,6 +2551,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2599,6 +2585,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2607,6 +2594,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsEnabled();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_77_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2633,11 +2621,12 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 11: Click on  (إلغاء)  button");
-        CommonMethodsPage.clickOnCloseButton();
+        CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Verify the user navigate back to (مراجعة اتفاقية الوساطة) page");
         app.sendContractForApprovalPage.verifyReviewAgreementPageIsDisplayed();
     }
@@ -2668,6 +2657,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2705,15 +2695,18 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
+        app.sendContractForApprovalPage.verifyReviewAgreementPageIsDisplayed();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         logger.info("Step 13: Click on  (إلغاء)  button");
-        CommonMethodsPage.clickOnCloseButton();
+        app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
+        CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Verify the user navigate back to the (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
     }
@@ -2744,6 +2737,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2785,6 +2779,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (تأكيد)  button");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2845,6 +2840,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 06: Verify searched contract is appearing");
         CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Rejection"));
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_84_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2867,8 +2863,9 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
-        CommonMethodsPage.KebabMenuOptions(" الموافقة على العقد ");
+        CommonMethodsPage.KebabMenuOptions("الموافقة على العقد");
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_85_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2895,6 +2892,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Verify the user navigate to (خطوات الموافقة على العقد)");
         app.sendContractForApprovalPage.verifyContractApprovalStepsPageIsDisplayed();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_86_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2923,35 +2921,36 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 09: Verify the user navigate to (مراجعة معلومات العقد)");
         app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
-    //    @Test(dataProvider = "testDataProvider")
-//    public void TC_87_SendContractForApproval(Map<String, String> data) throws Exception {
-//        logger.info("Step 00: Test Data : " + data.toString());
-//        app.openApplication(data);
-//        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-//        app.loginPage.enterUsername(data.get("Username"));
-//        app.loginPage.enterPassword(data.get("Password"));
-//        app.loginPage.clickLogin();
-//        app.loginPage.enterVerificationCode(data.get("OTP"));
-//        app.loginPage.closeExploreEjarPopUp();
-//    CommonMethodsPage.changeUserRole("مستأجر");
-//        logger.info("Step 02: Click on العقود tab");
-//        CommonMethodsPage.clickContractsBtn();
-//        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-//        CommonMethodsPage.selectViewAllContractsButton();
-//        logger.info("Step 04: Click on filter icon");
-//        CommonMethodsPage.clickFilterBtn();
-//        logger.info("Step 05: Enter contract number in the contract search");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
-//        logger.info("Step 06: Click on three dots");
-//        CommonMethodsPage.clickOnKebabMenuButton();
-//        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
-//        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-//        logger.info("Step 08: Click on  (لنبدأ)  button");
-//        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-//        logger.info("Step 09:  Click on  (عرض)  button");
-//        app.revokeContractPage.clickOnViewButtonOnRequest();
-//        //fail should be view
-//    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_87_SendContractForApproval(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter contract number in the contract search");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
+        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+        logger.info("Step 08: Click on  (لنبدأ)  button");
+        app.sendContractForApprovalPage.clickOnLetUsStartButton();
+        logger.info("Step 09:  Click on  (عرض)  button");
+        app.revokeContractPage.clickOnViewButtonOnRequest();
+        //fail should be view
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_88_SendContractForApproval(Map<String, String> data) throws Exception {
@@ -3014,6 +3013,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 10: Verify the user navigate to the (لماذا ترغب بالرفض) page");
         app.sendContractForApprovalPage.verifyRejectTheContractPageIsDisplayed();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_90_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3214,6 +3214,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Verify the user remains in the same (لماذا ترغب بالرفض) page");
         app.sendContractForApprovalPage.verifyRejectTheContractPageIsDisplayed();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_96_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3322,6 +3323,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 13: The OTP code has been input successfully");
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_99_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3356,6 +3358,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Click on  (رفض العقد) button");
         app.sendContractForApprovalPage.clickOnRejectTheContractButton();
         logger.info("Step 13: Click on  (إلغاء) button");
+        app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Verify the user navigate back to (لماذا ترغب بالرفض) page");
         app.sendContractForApprovalPage.verifyRejectTheContractPageIsDisplayed();
@@ -3479,6 +3482,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 15: Verify the user navigate to (تم إرسال الرفض) page");
         app.sendContractForApprovalPage.verifyRejectionSubmittedMessageIsDisplayed();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_103_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3505,6 +3509,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Verify the user navigate to the (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
@@ -3536,10 +3541,12 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Verify the (إرسال الموافقة على العقد) button is disabled/not clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsDisabled();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_105_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3566,6 +3573,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
@@ -3599,9 +3607,10 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (إلغاء)  button");
-        CommonMethodsPage.clickOnCloseButton();
+        CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 11: Verify the user navigate back to (مراجعة معلومات العقد)");
         app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
@@ -3632,6 +3641,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
@@ -3640,6 +3650,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 12: Verify The user navigate to (التحقق من الهوية) page");
         app.sendContractForApprovalPage.verifyIdentityVerificationPageIsDisplayed();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_108_SendContractForApproval(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -3666,13 +3677,15 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         logger.info("Step 12: Click on  (إلغاء)  button");
-        CommonMethodsPage.clickOnCloseButton();
+        app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
+        CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 13: Verify the user navigate back to the (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
     }
@@ -3703,6 +3716,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
@@ -3742,6 +3756,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Click on  (تأكيد)  button");
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
