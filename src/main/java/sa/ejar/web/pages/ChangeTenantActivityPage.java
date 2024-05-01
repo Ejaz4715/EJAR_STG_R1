@@ -3,7 +3,6 @@ package sa.ejar.web.pages;
 import com.testcrew.web.Browser;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -195,4 +194,33 @@ public class ChangeTenantActivityPage {
         }
     }
 
+    public void verifyChangeTenantActivityPageHeaderIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader()),"Change Tenant Activity page header is not displayed");
+        logger.addScreenshot(" ");
+    }
+    public void assertContractNumberInPageHeader(String contractNumber) {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.contractNumberHeader(),20);
+        String contractNumberNew = Browser.getText(ChangeTenantActivityPageObjects.contractNumberHeader()).replace("#","");
+        Assert.assertEquals(contractNumberNew, contractNumber, "contract number is not matching");
+        logger.addScreenshot(" ");
+    }
+
+    public void assertContractParties() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.contractParties(),40);
+        Browser.isElementDisplayed(ChangeTenantActivityPageObjects.contractParties());
+        logger.addScreenshot(" ");
+    }
+
+    public void assertOldTenantActivityHeadingOnChangeTenantActivityPage() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.OldTenantActivityHeadingOnChangeTenantActivityPage(),40);
+        Browser.isElementDisplayed(ChangeTenantActivityPageObjects.OldTenantActivityHeadingOnChangeTenantActivityPage());
+        logger.addScreenshot(" ");
+    }
+
+    public void assertOldTenantActivityDescriptionOnChangeTenantActivityPage() {
+        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.OldTenantActivityDescriptionOnChangeTenantActivityPage(),40);
+        Browser.isElementDisplayed(ChangeTenantActivityPageObjects.OldTenantActivityDescriptionOnChangeTenantActivityPage());
+        logger.addScreenshot(" ");
+    }
 }

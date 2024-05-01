@@ -45,6 +45,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is displayed");
         CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_02_ChangeTenantActivity(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -66,8 +67,63 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 05: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is displayed");
+        logger.info("Step 06: Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is Not displayed");
         CommonMethodsPage.KebabMenuOptionNotDisplayed("تغيير نشاط المستأجر");
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_03_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        app.addResidentialContractPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_04_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        app.addResidentialContractPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+        logger.info("Step 07: Check contract number is displayed ");
+        app.changeTenantActivityPage.assertContractNumberInPageHeader(data.get("ContractNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -851,5 +907,132 @@ public class ChangeTenantActivity extends NHCWebTest {
        app.changeTenantActivityPage.verifySubmitApprovalButtonDisabled(true);
     }
 
+    @Test(dataProvider = "testDataProvider")
+    public void TC_51_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("20189038060");
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06:Check Change Tenant Activity  ( تغيير نشاط المستأجر ) option is not visible");
+        CommonMethodsPage.KebabMenuOptionNotDisplayed("تغيير نشاط المستأجر");
+    }
 
+    @Test(dataProvider = "testDataProvider")
+    public void TC_52_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("20612086537");
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06:Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_53_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("20612086537");
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+        logger.info("Step 07: Check contract number is displayed ");
+        app.changeTenantActivityPage.assertContractNumberInPageHeader("20612086537");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_54_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("20019276950");
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+        logger.info("Step 07: Check contract parties are displayed");
+        app.changeTenantActivityPage.assertContractParties();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_55_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("20019276950");
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+        logger.info("Step 07: Check old tenant Activity description ( نشاط المستأجر القديم ) is displayed");
+        app.changeTenantActivityPage.assertOldTenantActivityHeadingOnChangeTenantActivityPage();
+        app.changeTenantActivityPage.assertOldTenantActivityDescriptionOnChangeTenantActivityPage();
+    }
 }

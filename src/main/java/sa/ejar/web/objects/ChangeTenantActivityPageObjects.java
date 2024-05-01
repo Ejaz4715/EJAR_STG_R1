@@ -117,4 +117,23 @@ public class ChangeTenantActivityPageObjects {
     public static By requestWaitingForSevenDaysMessage() {
         return By.xpath("//p[text()='الطلب بانتظار موافقة الطرف الآخر لمدة 7 ، وسيتم إشعاركم في حالة قبول أو رفض الطلب']");
     }
+
+    public static By changeTenantActivityPageHeader(){
+        return By.xpath("//h1[text()=' تغيير نشاط المستأجر التجاري ']");
+    }
+    public static By contractNumberHeader(){
+        return By.xpath("//h4");
+    }
+
+    public static By contractParties() {
+        return By.xpath("//app-party-info");
+    }
+
+    public static By OldTenantActivityHeadingOnChangeTenantActivityPage(){
+        return By.xpath("//h2[text()=' نشاط المستأجر القديم']");
+    }
+
+    public static By OldTenantActivityDescriptionOnChangeTenantActivityPage(){
+        return By.xpath("//h2[text()=' نشاط المستأجر القديم']/parent::div/parent::div/parent::app-card-header/following-sibling::app-card-body");
+    }
 }
