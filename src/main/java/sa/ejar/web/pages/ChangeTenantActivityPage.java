@@ -90,7 +90,7 @@ public class ChangeTenantActivityPage {
     }
 
 
-    public static void clickOnViewRequestButton() {
+    public void clickOnViewRequestButton() {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.ViewRequestButton(), 20);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.ViewRequestButton());
         Browser.click(ChangeTenantActivityPageObjects.ViewRequestButton());
