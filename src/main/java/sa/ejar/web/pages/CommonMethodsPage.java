@@ -913,6 +913,19 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void checkVerifyIdentityButtonIsPresent() {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 10 );
+        Assert.assertTrue(isElementDisplayed(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not present");
+        logger.addScreenshot("VerifyIdentityButtonFromOTPPopupIsNotPresent");
+    }
+
+    public static void clickOnVerifyIdentityButton() {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 10 );
+        Assert.assertTrue(isElementDisplayed(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not present");
+        click(SendContractForApprovalPageObjects.identityVerificationBTN());
+        logger.addScreenshot("VerifyIdentityButtonFromOTPPopupIsNotPresent");
+    }
+
     /**
      * Verify the contract status of different versions
      * @param contractStatus - Expected status
@@ -966,5 +979,14 @@ public class CommonMethodsPage {
         }
         Assert.assertFalse(status, option + "option is available");
         logger.addScreenshot("");
+    }
+
+    /**
+     * Give true if expect the invalid otp error message to be present
+     * @param isPresent - give true if you expect the invalid OTP message to be present
+     */
+    public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
+        Assert.assertEquals(Browser.isElementDisplayed(CommonMethodsPageObjects.invalidOTPErrorMsg()),
+                isPresent, "Invalid OTP Error Message Status is not expected.");
     }
 }

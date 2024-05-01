@@ -4,10 +4,23 @@ import com.testcrew.web.Browser;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import static com.testcrew.web.Browser.*;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class ChangeTenantActivityPage {
+
+    public static void verifySubmitRequestPopupForNewTenantActivity() {
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.submitRequestPopupMsgInChangeTenantCommercialActivity()),
+                "Submit request popup is Incorrect!");
+    }
+
+    public static void checkRequestWaitingForSevenDaysMessage() {
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.requestWaitingForSevenDaysMessage()));
+    }
+
 
     public void assertRequestDetails(String requestId, String requestType, String contractNumber) {
         String requestID = Browser.getText(ChangeTenantActivityPageObjects.requestID());
@@ -155,6 +168,32 @@ public class ChangeTenantActivityPage {
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
         click(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
     }
+
+    public static void checkRequestNumberHasAlphaNumeric() {
+        String requestPopupTitle = Browser.getText(ChangeTenantActivityPageObjects.requestTitle());
+        Pattern pattern = Pattern.compile("#([A-Za-z0-9]+)");
+        Matcher matcher = pattern.matcher(requestPopupTitle);
+
+        if ( matcher.find() )
+        {
+            String extractedString = matcher.group(1);
+            System.out.println("Extracted substring: " + extractedString);
+
+            if ( extractedString.matches("[A-Za-z0-9]+") )
+            {
+                System.out.println("The extracted substring is alphanumeric!");
+            }
+            else
+            {
+                Assert.fail("The extracted substring is not alphanumeric!");
+            }
+        }
+        else
+        {
+            Assert.fail("The request title doesn't have alpha numeric!");
+        }
+    }
+
     public void verifyChangeTenantActivityPageHeaderIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader()),"Change Tenant Activity page header is not displayed");
