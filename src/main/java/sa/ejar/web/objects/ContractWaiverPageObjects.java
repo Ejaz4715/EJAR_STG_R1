@@ -30,4 +30,5 @@ public class ContractWaiverPageObjects {
     public static By TenantPartyInfoPageTitle() {
         return By.xpath("//h2[contains (text() , 'معلومات طرف العق')]");
     }
+
 }

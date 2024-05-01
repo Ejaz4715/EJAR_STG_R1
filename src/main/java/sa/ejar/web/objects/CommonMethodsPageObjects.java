@@ -36,7 +36,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By backBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' السابق')]");
+        return By.xpath("//button[contains(text(),'السابق')]");
     }
     public static By confirmBTN() throws Exception{
         return By.xpath("//button[contains(text(),' تأكيد ')]");
@@ -232,7 +232,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//label[text()=' نعم ']");
     }
     public static By newRadioBTN() {
-        return By.xpath("//label[text()=' جديدة ']");
+        return By.xpath("//label[text()=' جديدة ']/parent::app-form-radio");
     }
 
     public static By deleteIconBTN() {

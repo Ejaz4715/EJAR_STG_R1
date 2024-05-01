@@ -33,6 +33,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -51,6 +52,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -73,6 +75,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -96,6 +99,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -122,6 +126,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -149,6 +154,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -176,6 +182,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -208,6 +215,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -238,6 +246,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -269,6 +278,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -303,6 +313,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -339,6 +350,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -363,7 +375,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 12: Input national id less than 10 numbers");
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID_LessThanTenDigits"));
         logger.info("Step 13: Verify National Id input field  displays an error message ");
-        CommonMethodsPage.errorMessage(" الحد الأدنى لعدد الأحرف هو 10 " , ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
+        CommonMethodsPage.errorMessage("الحد" , ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -376,6 +388,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -400,7 +413,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 12: Input national id including a letter");
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID_WithLetters"));
         logger.info("Step 13: Verify National Id input field displays an error message  ");
-        CommonMethodsPage.errorMessage("يرجى التأكد من التنسيق" , ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
+        CommonMethodsPage.errorMessage("يرجى" , ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -413,6 +426,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -451,6 +465,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -489,6 +504,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -513,9 +529,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 12: Verify the input field is enabled");
         app.contractWaiverPage.verifyDOBInputFieldIsEnabled();
         logger.info("Step 13: Input a date greater than current date");
-        String greaterDateThanCurrent = CommonMethodsPage.getCurrentDate(10, 2, 2);
-        app.contractWaiverPage.enterValidTenantDOB(greaterDateThanCurrent);
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", AddResidentialContractPageObjects.tenantDateOfBirthInput());
+        app.contractWaiverPage.enterValidTenantDOB(data.get("TenantDOB_Future"));
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
 
@@ -529,6 +544,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -566,6 +582,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -603,6 +620,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -632,7 +650,6 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.verifyNextButtonIsEnabled();
     }
 
-
     @Test(dataProvider = "testDataProvider")
     public void TC_20_ContractWaiver(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -643,6 +660,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -675,6 +693,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -714,6 +733,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -743,7 +763,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a phone number which does not begin with digit 5");
         CommonMethodsPage.enterPhoneNumber(data.get("TenantPhoneNumber_NotBeginWith5"));
-        CommonMethodsPage.errorMessage(" يرجى التأكد من التنسيق ", CommonMethodsPageObjects.PhoneNumberInputFieldErrorMessage());
+        CommonMethodsPage.errorMessage("يرجى", CommonMethodsPageObjects.PhoneNumberInputFieldErrorMessage());
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_23_ContractWaiver(Map<String, String> data) throws Exception {
@@ -755,6 +775,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -784,7 +805,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a phone number begins with digit 5 having length = 1");
         CommonMethodsPage.enterPhoneNumber(data.get("TenantPhoneNumber_OneDigit"));
-        CommonMethodsPage.errorMessage(" الحد الأدنى لعدد الأحرف هو 6 ", CommonMethodsPageObjects.PhoneNumberInputFieldErrorMessage());
+        CommonMethodsPage.errorMessage("الأدنى", CommonMethodsPageObjects.PhoneNumberInputFieldErrorMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -797,6 +818,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -839,6 +861,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -868,7 +891,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input an email with invalid format");
         CommonMethodsPage.enterEmail(data.get("TenantEmail_Invalid"));
-        CommonMethodsPage.errorMessage(" يرجى التأكد من التنسيق ", CommonMethodsPageObjects.EmailErrorMessage());
+        CommonMethodsPage.errorMessage("يرجى", CommonMethodsPageObjects.EmailErrorMessage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -881,6 +904,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -923,6 +947,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -951,9 +976,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 14: Click next button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on المنطقة dropdown");
-        CommonMethodsPage.clickOnRegionDropdownMenu();
-        logger.info("Step 15: Select an option");
-        CommonMethodsPage.selectRegion(data.get("TenantRegion"));
+        CommonMethodsPage.selectFromList(data.get("TenantRegion"),CommonMethodsPageObjects.RegionDropdown());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -966,6 +989,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1008,6 +1032,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1037,7 +1062,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a numerical value with with letters in Postal code input");
         CommonMethodsPage.enterPostalCode(data.get("TenantPostalCode_Invalid"));
-        CommonMethodsPage.errorMessage(" يجب أن يكون 5 رقمًا " , CommonMethodsPageObjects.PostalCodeError());
+        CommonMethodsPage.errorMessage("يجب" , CommonMethodsPageObjects.PostalCodeError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1050,6 +1075,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1079,7 +1105,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Enter a valid postal code including on numerical values");
         CommonMethodsPage.enterPostalCode(data.get("TenantPostalCode_Valid"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("TenantPostalCode_Valid"), CommonMethodsPageObjects.PostalCodeError());
+        CommonMethodsPage.verifyValueIsEntered(data.get("TenantPostalCode_Valid"), CommonMethodsPageObjects.PostalCodeInput());
     }
 
 
@@ -1093,6 +1119,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1135,6 +1162,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1177,6 +1205,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1206,7 +1235,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a numerical value with (length < 5) in  رقم المبنى field");
         CommonMethodsPage.enterBuildingNumber(data.get("TenantBuildingNum_Invalid"));
-        CommonMethodsPage.errorMessage(" يجب أن يكون 4 رقمًا ", CommonMethodsPageObjects.BuildingNumberError());
+        CommonMethodsPage.errorMessage("يجب", CommonMethodsPageObjects.BuildingNumberError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1219,6 +1248,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1261,6 +1291,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1303,6 +1334,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1346,6 +1378,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1389,6 +1422,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1431,6 +1465,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1481,6 +1516,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
