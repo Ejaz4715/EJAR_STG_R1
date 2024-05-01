@@ -320,4 +320,13 @@ public class CommonMethodsPageObjects {
     public static By SendBTN(){
         return By.xpath("//app-button-bar//button[text()=' إرسال ']");
     }
+
+    public static By filterPopup(){
+        return By.xpath("//app-card-body[@class='card-body']");
+    }
+
+    public static By invalidOTPErrorMsg()
+    {
+        return By.xpath("//li[contains(text(),'رمز OTP غير صالح')]");
+    }
 }

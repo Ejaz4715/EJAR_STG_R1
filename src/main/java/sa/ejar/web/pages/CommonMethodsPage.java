@@ -957,6 +957,19 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
     }
 
+    public static void checkVerifyIdentityButtonIsPresent() {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 10 );
+        Assert.assertTrue(isElementDisplayed(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not present");
+        logger.addScreenshot("VerifyIdentityButtonFromOTPPopupIsNotPresent");
+    }
+
+    public static void clickOnVerifyIdentityButton() {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 10 );
+        Assert.assertTrue(isElementDisplayed(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not present");
+        click(SendContractForApprovalPageObjects.identityVerificationBTN());
+        logger.addScreenshot("VerifyIdentityButtonFromOTPPopupIsNotPresent");
+    }
+
     /**
      * Verify the contract status of different versions
      * @param contractStatus - Expected status
@@ -985,6 +998,7 @@ public class CommonMethodsPage {
         Browser.click(CommonMethodsPageObjects.SendBTN());
         Browser.waitForSeconds(1);
     }
+
     /**
      * Method to get request number from requests page
      * @param element - Object of request number text
@@ -1002,9 +1016,44 @@ public class CommonMethodsPage {
 
     public void deleteFile() {
         File file = new File(setDownloadPath());
-        if(file.exists())
-            if(file.delete()){
+        if (file.exists())
+            if (file.delete()) {
                 logger.info("Existing file is deleted");
             }
+    }
+
+    public static void assertFilterPopupIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.filterPopup(), 20);
+        Browser.isElementDisplayed(CommonMethodsPageObjects.filterPopup());
+        logger.addScreenshot(" ");
+    }
+
+    /**
+     * Select an option from Kebab menu
+     * @param option - Option to be selected
+     * */
+    public static void KebabMenuOptionNotDisplayed(String option) {
+        Browser.waitForSeconds(2);
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        boolean status = false;
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                status = true;
+                break;
+            }
+        }
+        Assert.assertFalse(status, option + "option is available");
+        logger.addScreenshot("");
+    }
+
+    /**
+     * Give true if expect the invalid otp error message to be present
+     * @param isPresent - give true if you expect the invalid OTP message to be present
+     */
+    public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
+        Assert.assertEquals(Browser.isElementDisplayed(CommonMethodsPageObjects.invalidOTPErrorMsg()),
+                isPresent, "Invalid OTP Error Message Status is not expected.");
     }
 }
