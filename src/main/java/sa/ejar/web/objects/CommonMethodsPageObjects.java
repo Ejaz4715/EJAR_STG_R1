@@ -100,7 +100,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//span[text()='عرض الطلبات']");
     }
     public static By requestNumberOfSearchedRequest() throws Exception{
-        return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5[@class=\"item-value\"]");
+        return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5");
     }
     public static By requestList() throws Exception{
         return By.xpath("//app-single-contract-termination-request");

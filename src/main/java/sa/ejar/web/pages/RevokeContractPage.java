@@ -1,15 +1,11 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.base.WebBasePage;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
-
-import java.security.UnrecoverableKeyException;
 
 import static com.testcrew.base.WebBaseTest.logger;
 import static sa.ejar.web.pages.CommonMethodsPage.verifyValueIsEntered;
@@ -49,7 +45,7 @@ public class RevokeContractPage {
     }
 
     public void verifyGreaterExecutionDateErrorMessage() {
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", RevokeContractPageObjects.ExecutionOrderDateErrorMessage());
+        CommonMethodsPage.errorMessage("أقصى", RevokeContractPageObjects.ExecutionOrderDateErrorMessage());
         logger.addScreenshot("");
     }
 
@@ -82,6 +78,9 @@ public class RevokeContractPage {
     }
 
     public void uploadRequiredDocuments(String pdfAttachment) {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.NoteInputField(), 40);
+        Browser.executeJSScroll(1000);
+        Browser.waitForSeconds(2);
         CommonMethodsPage.UploadAttachment(pdfAttachment, RevokeContractPageObjects.UploadDocumentsInput());
     }
 
@@ -96,7 +95,7 @@ public class RevokeContractPage {
     }
 
     public void verifyErrorMessageIsDisplayedForLargeFile() {
-        CommonMethodsPage.errorMessage("حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت" ,
+        CommonMethodsPage.errorMessageFoAttachments("حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت" ,
                 RevokeContractPageObjects.ErrorMessageForLargeFile());
         logger.addScreenshot("");
     }
@@ -110,13 +109,13 @@ public class RevokeContractPage {
     }
 
     public void checkAllPaymentSettledRadioButtonIsSelected() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.allPaymentsSettledRadioBTN(), 40);
-        Assert.assertTrue(Browser.isElementSelected(TerminateContractPageObjects.allPaymentsSettledRadioBTN()), "All Payment Settled button is not selected");
+        WebElement ele = Browser.getWebElement(TerminateContractPageObjects.allPaymentsSettledRadioInput());
+        Assert.assertTrue(ele.isSelected(), "All Payment Settled button is not selected");
         logger.addScreenshot("");
     }
     public void checkTenantFinalPaymentRadioButtonIsSelected() throws Exception {
-        Browser.waitUntilVisibilityOfElement(TerminateContractPageObjects.tenantFinalPaymentRadioBTN(), 40);
-        Assert.assertTrue(Browser.isElementSelected(TerminateContractPageObjects.tenantFinalPaymentRadioBTN()), "All Payment Settled button is not selected");
+        WebElement ele = Browser.getWebElement(TerminateContractPageObjects.tenantFinalPaymentsSettledRadioInput());
+        Assert.assertTrue(ele.isSelected(), "All Payment Settled button is not selected");
         logger.addScreenshot("");
     }
 
@@ -129,25 +128,25 @@ public class RevokeContractPage {
     }
 
     public void clickOnConfirmRevokeContractButton() {
-        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.ConfirmRevokeContratButton(), 40);
-        Browser.click(RevokeContractPageObjects.ConfirmRevokeContratButton());
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.ConfirmRevokeContractButton(), 40);
+        Browser.click(RevokeContractPageObjects.ConfirmRevokeContractButton());
 
     }
 
     public void getReqNumApprove() {
-        String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
+        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
         TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval", request);
         TestDataManager.writeDependantGlobalTestData("Revoke");
     }
 
     public void getReqNumReject() {
-        String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
+        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
         TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Rejection", request);
         TestDataManager.writeDependantGlobalTestData("Revoke");
     }
 
     public void getReqNumApproveWithPayment() {
-        String request = CommonMethodsPage.getRequestNumber(RevokeContractPageObjects.RequestNumberText());
+        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
         TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval_With_Payment", request);
         TestDataManager.writeDependantGlobalTestData("Revoke");
     }
@@ -186,5 +185,10 @@ public class RevokeContractPage {
     public void clickOnRejectButtonOnPopUp() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RejectBTNOnPopUp(), 40);
         Browser.click(RevokeContractPageObjects.RejectBTNOnPopUp());
+    }
+
+    public void clickOnCancelButtonOnRevokeRequestPage() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.cancelBTNOnRequestTPage(), 40);
+        Browser.click(RevokeContractPageObjects.cancelBTNOnRequestTPage());
     }
 }

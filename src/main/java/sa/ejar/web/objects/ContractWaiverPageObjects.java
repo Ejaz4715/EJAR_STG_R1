@@ -70,4 +70,8 @@ public class ContractWaiverPageObjects {
     public static By ErrorMessageOnPopUp() {
         return By.xpath("//h2[contains (text() ,'رسالة خطأ')]/ancestor::app-card/descendant::app-card-body/descendant::h2");
     }
+
+    public static By CancelButtonOnPopUp() {
+        return By.xpath("//footer/descendant::button[contains(text(),'إلغاء')] | //app-card-footer/descendant::button[contains(text(),'إلغاء')]");
+    }
 }

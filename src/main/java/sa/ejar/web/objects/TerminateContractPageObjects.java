@@ -103,6 +103,12 @@ public class TerminateContractPageObjects {
     }
 
 
+    public static By allPaymentsSettledRadioInput() {
+        return By.xpath("//app-form-radio[@value='all_payments_settled']/child::input[@data-name='financial_settlement_type']");
+    }
 
+    public static By tenantFinalPaymentsSettledRadioInput() {
+        return By.xpath("//app-form-radio[@value='tenant_final_payment']/child::input[@data-name='financial_settlement_type']");
 
+    }
 }

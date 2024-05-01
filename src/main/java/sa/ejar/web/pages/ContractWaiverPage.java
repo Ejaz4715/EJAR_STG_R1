@@ -193,4 +193,8 @@ public class ContractWaiverPage {
         logger.addScreenshot("The message is " + actualMessage);
     }
 
+    public void clickOnCancelButtonOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.CancelButtonOnPopUp(), 40);
+        Browser.click(ContractWaiverPageObjects.CancelButtonOnPopUp());
+    }
 }
