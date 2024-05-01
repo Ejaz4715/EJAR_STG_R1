@@ -1060,7 +1060,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        //TODO
+        app.changeTenantActivityPage.enterTextInNewTenantActivityTextBox("TestOne");
     }
 
     @Test(dataProvider = "testDataProvider")
