@@ -97,6 +97,14 @@ public class LoginPage extends WebBasePage {
         logger.addScreenshot("OTP entered");
     }
 
+    public void enterVerificationCodeForOTP(String OTP) throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
+        Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
+        Browser.waitForSeconds(1);
+    }
+
+
     public void clickLogout() throws Exception {
         Browser.waitForSeconds(3);
         Browser.click(LoginPageObjects.adminDropdownMenu());

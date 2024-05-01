@@ -81,6 +81,11 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//span[text()='رقم العقد']/parent::div/h5/a");
     }
 
+    public static By submitRequestPopupMsgInChangeTenantCommercialActivity()
+    {
+        return  By.xpath("//p[text()='الطلب بانتظار موافقة الطرف الآخر لمدة 7 ، وسيتم إشعاركم في حالة قبول أو رفض الطلب']");
+    }
+
     public static By createdDate(){
         return By.xpath("(//span[@class='item-label'])[2]");
     }
@@ -103,5 +108,13 @@ public class ChangeTenantActivityPageObjects {
 
     public static By submitButton() {
         return By.xpath("//button[@class='btn btn-primary me-2']");
+    }
+
+    public static By requestTitle(){
+        return By.xpath("//app-card[@class='submitted-feedback m-0 card']//h5");
+    }
+
+    public static By requestWaitingForSevenDaysMessage() {
+        return By.xpath("//p[text()='الطلب بانتظار موافقة الطرف الآخر لمدة 7 ، وسيتم إشعاركم في حالة قبول أو رفض الطلب']");
     }
 }
