@@ -2840,7 +2840,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 05: Enter contract number");
         CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Verify old invoice has a status مغلقة");
-        CommonMethodsPage.verifyInvoiceStatus("old", " مغلقة ", CommonMethodsPageObjects.OldInvoiceStatus());
+        CommonMethodsPage.verifyInvoiceStatus("old", "مغلقة", CommonMethodsPageObjects.OldInvoiceStatus());
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_87_Revoke(Map<String, String> data) throws Exception {
@@ -2864,7 +2864,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has a status  لم يتم الدفع  ");
-        CommonMethodsPage.verifyInvoiceStatus("new", " لم يتم الدفع ", CommonMethodsPageObjects.NewInvoiceStatus());
+        CommonMethodsPage.verifyInvoiceStatus("new", "لم يتم الدفع", CommonMethodsPageObjects.NewInvoiceStatus());
     }
 }
 
