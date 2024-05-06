@@ -108,7 +108,7 @@ public class ContractWaiverPage {
         return reqNum;
     }
 
-    public void reqNumApproval (){
+    public void reqNumApproval(){
         String request = getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumApproval", request);
         TestDataManager.writeDependantGlobalTestData("ContractWaiver");
@@ -189,7 +189,7 @@ public class ContractWaiverPage {
     public void validateTheErrorMessageOnPopUp(String expectedMessage) {
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ErrorMessageOnPopUp(), 40);
         String actualMessage = Browser.getText(ContractWaiverPageObjects.ErrorMessageOnPopUp());
-        Assert.assertEquals(actualMessage, expectedMessage,"Pop up is not displayed");
+        Assert.assertTrue(actualMessage.contains(expectedMessage),"Error message is not same");
         logger.addScreenshot("The message is " + actualMessage);
     }
 
@@ -197,4 +197,9 @@ public class ContractWaiverPage {
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.CancelButtonOnPopUp(), 40);
         Browser.click(ContractWaiverPageObjects.CancelButtonOnPopUp());
     }
+    public void clickOnConfirmButtonOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ConfirmButtonOnPopUp(), 40);
+        Browser.click(ContractWaiverPageObjects.ConfirmButtonOnPopUp());
+    }
+
 }

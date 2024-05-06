@@ -773,10 +773,11 @@ public class CommonMethodsPage {
     public static void changeUserRole(String User) throws Exception {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 40);
         String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
+        boolean status = false;
         if (!(RoleName.contains(User))) {
             Browser.click(CommonMethodsPageObjects.RoleName());
+            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.UserIdentityList(), 30);
             List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
-            boolean status = false;
             for (WebElement opt : UserRoleList) {
                 String optText = opt.getText();
                 if (optText.contains(User)) {
@@ -784,11 +785,11 @@ public class CommonMethodsPage {
                     status = true;
                     break;
                 }
-                new LoginPage().closeExploreEjarPopUp();
             }
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
-            logger.addScreenshot("The role has been changed to " + User);
+            new LoginPage().closeExploreEjarPopUp();
         }
+        //logger.addScreenshot("The role has been changed to " + User);
     }
 
     public static void clickOnRemoveButton() throws Exception {

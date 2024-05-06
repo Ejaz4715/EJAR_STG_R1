@@ -213,7 +213,8 @@ public class CommonMethodsPageObjects {
     }
 
     public static By UserIdentityList(){
-        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+//        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+        return By.xpath("//div[@data-dropdown-role=\"options\"]/descendant::span");
     }
     public static By RoleName() {
         return By.xpath("//div//p[@class='role-name']");

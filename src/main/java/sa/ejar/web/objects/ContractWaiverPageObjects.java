@@ -33,7 +33,7 @@ public class ContractWaiverPageObjects {
 
     public static By ContractDetailsSectionTitle() {
 //        return By.xpath("//h2[contains (text() , 'تفاصيل العقد')]");
-        return By.xpath("//a[@class=\"step active\" and text() = ' تفاصيل العقد ']");
+        return By.xpath("//a[contains (@class,\"active\") and contains (text() , 'تفاصيل الإيجار')]");
     }
 
     public static By NewTenantPartySectionTitle() {
@@ -75,4 +75,11 @@ public class ContractWaiverPageObjects {
         return By.xpath("//footer/descendant::button[contains(text(),'إلغاء')] | //app-card-footer/descendant::button[contains(text(),'إلغاء')]");
     }
 
+    public static By ConfirmButtonOnPopUp() {
+        return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')] | //app-card-footer/descendant::button[contains(text(),'تأكيد')]");
+    }
+
+    public static By TenantIdNumberSection() {
+        return By.xpath("//app-card-header/following-sibling::app-card-body/descendant::span[@class=\"round-icon large menu\"]");
+    }
 }
