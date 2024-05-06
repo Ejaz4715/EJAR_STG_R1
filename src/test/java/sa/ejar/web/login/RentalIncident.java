@@ -497,6 +497,5 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: Verify the user navigate back to (تسجيل واقعة ايجارية جديدة) page");
         app.rentalIncidentsPage.verifyNewRentalIncidentPageIsDisplayed();
-
     }
 }
