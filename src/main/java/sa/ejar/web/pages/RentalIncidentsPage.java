@@ -1,20 +1,15 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
-import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
-import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.TerminateContractPageObjects;
 
 import java.awt.event.KeyEvent;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
-import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.getWebElement;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
@@ -84,8 +79,6 @@ public class RentalIncidentsPage {
         logger.addScreenshot("The (إختر صفة مقدم الطلب) radio button is selected");
     }
 
-
-
     public void clickOnAddRequesterInfoButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addRequesterInfoBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.addRequesterInfoBTN());
@@ -135,5 +128,30 @@ public class RentalIncidentsPage {
         Assert.assertTrue(Browser.isElementNotPresent(RentalIncidentsPageObjects.requesterInfo()));
         logger.addScreenshot("The (بيانات مقدم الطلب) is removed");
     }
+
+    public void clickOnAddAbstainingPartyInfoButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton());
+    }
+
+    public void verifyAddAbstainingPartyButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton()), "Abstaining party info button is enabled");
+        logger.addScreenshot("");
+    }
+
+    public void verifyAddAbstainingPartyButtonIsEnabled() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton(), 40);
+        Assert.assertTrue(Browser.isElementEnabled(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyAbstainerRole(String abstainerRole) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AbstainerRole(), 40);
+        String actualRole = Browser.getText(RentalIncidentsPageObjects.AbstainerRole());
+        Assert.assertTrue(actualRole.contains(abstainerRole), "Abstainer role is not " + abstainerRole);
+        logger.addScreenshot("");
+    }
+
 
 }

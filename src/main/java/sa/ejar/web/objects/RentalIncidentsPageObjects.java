@@ -64,4 +64,15 @@ public class RentalIncidentsPageObjects {
     }
 
 
+    public static By AddAbstainingPartyInfoButton() {
+        return By.xpath("//button[contains (text() ,'إضافة بيانات الطرف الممتنع')]");
+    }
+
+    public static By AbstainerRole() {
+        return By.xpath("//app-form-radio[@formcontrolname=\"role\"]/child::label");
+    }
+
+    public static By NationalIdInputError() {
+        return By.xpath("//li[contains (@data-error, \"min\")]");
+    }
 }
