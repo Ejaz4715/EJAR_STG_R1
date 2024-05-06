@@ -4399,7 +4399,6 @@ public class ContractWaiver extends NHCWebTest {
     public void TC_120_ContractWaiver(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
         logger.info("Step 00: Test Data : " + data.toString());
-        logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));

@@ -74,9 +74,6 @@ public class ContractWaiverPageObjects {
     public static By CancelButtonOnPopUp() {
         return By.xpath("//footer/descendant::button[contains(text(),'إلغاء')] | //app-card-footer/descendant::button[contains(text(),'إلغاء')]");
     }
-    public static By ConfirmButtonOnPopUp() {
-        return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')] | //app-card-footer/descendant::button[contains(text(),'تأكيد')]");
-    }
 
     public static By ConfirmButtonOnPopUp() {
         return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')] | //app-card-footer/descendant::button[contains(text(),'تأكيد')]");
