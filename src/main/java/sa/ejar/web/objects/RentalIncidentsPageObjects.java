@@ -33,9 +33,15 @@ public class RentalIncidentsPageObjects {
     public static By requesterTypeDDL(){
         return By.xpath("//select[@data-name=\"requester_type\"]");
     }
+    public static By requesterTypeDDLOption(){
+        return By.xpath("//select[@data-name=\"requester_type\"]/option");
+    }
 
     public static By requesterCategoryDDL(){
         return By.xpath("//select[@data-name=\"requester_category\"]");
+    }
+    public static By requesterCategoryDDLOption(){
+        return By.xpath("//select[@data-name=\"requester_category\"]/option");
     }
 
     public static By requesterRoleRadioBTNs(){

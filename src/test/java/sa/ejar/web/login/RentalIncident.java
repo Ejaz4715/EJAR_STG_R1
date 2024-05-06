@@ -2,12 +2,9 @@ package sa.ejar.web.login;
 
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
-import sa.ejar.web.pages.RentalIncidentsPage;
-
 import java.util.Map;
 
 public class RentalIncident extends NHCWebTest {
@@ -22,6 +19,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -43,6 +41,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -67,6 +66,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -91,6 +91,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -120,6 +121,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -150,6 +152,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -169,6 +172,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -193,6 +197,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -222,6 +227,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -252,6 +258,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -284,6 +291,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -317,6 +325,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -345,6 +354,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -360,7 +370,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 08: Click on (بيانات مقدم الطلب) button");
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
-        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
+        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number_Letters"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:يرجى التأكد من التنسيق");
         CommonMethodsPage.errorCRMessage("يرجى التأكد من التنسيق");
     }
@@ -375,6 +385,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -390,7 +401,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 08: Click on (بيانات مقدم الطلب) button");
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
-        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
+        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number_LessThanTen"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:الحد الأدنى لعدد الأحرف هو 10");
         CommonMethodsPage.errorCRMessage("الحد الأدنى لعدد الأحرف هو 10");
     }
@@ -405,6 +416,7 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
         app.rentalIncidentsPage.clickOnRentalIncidentTab();
         logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
@@ -420,9 +432,71 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 08: Click on (بيانات مقدم الطلب) button");
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
-        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number"));
+        CommonMethodsPage.enterCRNumberInputField(data.get("CR_Number_NotStartWithSeven"));
         logger.info("Step 10: Verify the (الرقم الوطني الموحد للمنشأة) input field displays an error message:يجب أن يبدأ رقم المؤسسة بـ 7 ");
         CommonMethodsPage.errorCRMessage("يجب أن يبدأ رقم المؤسسة بـ 7");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_16_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Select (صفة مقدم الطلب) dropdown list");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        logger.info("Step 06: Select (فئة مقدم الطلب) dropdown list");
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        logger.info("Step 07: Select (إختر صفة مقدم الطلب) radio button");
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        logger.info("Step 08: Click on (بيانات مقدم الطلب) button");
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        logger.info("Step 09: Enter (الرقم الوطني الموحد للمنشأة) input filed");
+        CommonMethodsPage.enterCRNumberInputField(data.get("Valid_CR_Number"));
+        logger.info("Step 10: Verify the (التالي) button is disable/not clickable");
+        CommonMethodsPage.verifyNextButtonIsDisabled();
+
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_17_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Select (صفة مقدم الطلب) dropdown list");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        logger.info("Step 06: Select (فئة مقدم الطلب) dropdown list");
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        logger.info("Step 07: Select (إختر صفة مقدم الطلب) radio button");
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        logger.info("Step 08: Click on (بيانات مقدم الطلب) button");
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        logger.info("Step 09: Click on (إلغاء) button");
+        CommonMethodsPage.clickOnCancelButton();
+        logger.info("Step 10: Verify the user navigate back to (تسجيل واقعة ايجارية جديدة) page");
+        app.rentalIncidentsPage.verifyNewRentalIncidentPageIsDisplayed();
     }
 
     /**
