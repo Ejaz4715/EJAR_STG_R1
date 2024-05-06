@@ -52,7 +52,7 @@ public class ContractWaiverPageObjects {
         return By.xpath("//a[@class=\"step active\" and text() = ' تفاصيل الإيجار ']");
     }
     public static By DeclareAndConfirmSectionTitle() {
-        return By.xpath("//a[@class=\"step active\" and text() = ' تفاصيل الإيجار ']");
+        return By.xpath("//a[@class=\"step active\" and text() = ' إقرار وتأكيد ']");
     }
 
     public static By ConfirmationPopUpMessage() {
@@ -73,6 +73,9 @@ public class ContractWaiverPageObjects {
 
     public static By CancelButtonOnPopUp() {
         return By.xpath("//footer/descendant::button[contains(text(),'إلغاء')] | //app-card-footer/descendant::button[contains(text(),'إلغاء')]");
+    }
+    public static By ConfirmButtonOnPopUp() {
+        return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')] | //app-card-footer/descendant::button[contains(text(),'تأكيد')]");
     }
 
 }

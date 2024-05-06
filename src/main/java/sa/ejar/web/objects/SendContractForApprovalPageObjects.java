@@ -114,7 +114,7 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//h2[text()='التحقق من الهوية.']");
     }
     public static By identityVerificationBTN() {
-        return By.xpath("//button[text()= ' التحقق من الهوية ']");
+        return By.xpath("//button[contains(text(), 'التحقق من الهوية')]");
     }
 
     public static By wrongOTPMsg() {

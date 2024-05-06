@@ -146,25 +146,36 @@ public class ContractWaiverPage {
     public void verifyTenantNameIsChanged(String newTenantName, String oldTenantName) throws Exception {
         Browser.executeJSScroll(450);
         Browser.waitForSeconds(1);
-        boolean status = false;
+        boolean status1 = false;
+        boolean status2 = false;
         String contractStatus= "";
         String tenantName = "";
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
         List<WebElement> listStatus = Browser.getWebElements(AddResidentialContractPageObjects.contractStatus());
         List<WebElement> listTenantNames = Browser.getWebElements(AddResidentialContractPageObjects.tenantName());
         for (WebElement s : listStatus){
+            contractStatus = s.getText();
             for (WebElement n : listTenantNames) {
-                contractStatus = s.getText();
                 tenantName = n.getText();
                 if (contractStatus.contains("نشط") && tenantName.contains(newTenantName)) {
-                    if (contractStatus.contains("مؤرشف") && tenantName.contains(oldTenantName)) {
-                        status = true;
-                        break;
-                    }
+                    status1 = true;
+                    break;
                 }
             }
         }
-        Assert.assertTrue(status, "Tenant name is not changed in new contract");
+        for (WebElement s : listStatus){
+            contractStatus = s.getText();
+            for (WebElement n : listTenantNames) {
+                tenantName = n.getText();
+                if (contractStatus.contains("مؤرشف") && tenantName.contains(oldTenantName)) {
+                    status2 = true;
+                    break;
+                }
+            }
+
+        }
+        Assert.assertTrue(status1, "Contract status is not active/wrong tenant name");
+        Assert.assertTrue(status2, "Contract status is not archive/wrong tenant name");
         Browser.waitForSeconds(1);
         logger.addScreenshot("");
     }
@@ -196,5 +207,9 @@ public class ContractWaiverPage {
     public void clickOnCancelButtonOnPopUp() {
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.CancelButtonOnPopUp(), 40);
         Browser.click(ContractWaiverPageObjects.CancelButtonOnPopUp());
+    }
+    public void clickOnConfirmButtonOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ConfirmButtonOnPopUp(), 40);
+        Browser.click(ContractWaiverPageObjects.ConfirmButtonOnPopUp());
     }
 }
