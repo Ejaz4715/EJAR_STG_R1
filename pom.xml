@@ -30,6 +30,12 @@
             <artifactId>test-crew-core-framework</artifactId>
             <version>${crew-centric-framework}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.24</version>
+        </dependency>
     </dependencies>
 
     <!-- Build Maven -->

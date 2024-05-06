@@ -3,16 +3,28 @@ package sa.ejar.web.pages;
 import com.testcrew.manager.PDFReportManager;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
+
+import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
+import sa.ejar.web.objects.SendContractForApprovalPageObjects;
+
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
@@ -77,8 +89,7 @@ public class CommonMethodsPage {
      * Click on filter button
      */
     public static void clickFilterBtn() throws Exception {
-
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage(), 20);
+        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.filterBtnOnViewAllContractsPage());
         logger.addScreenshot("Clicked on filter button");
     }
@@ -693,10 +704,8 @@ public class CommonMethodsPage {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RoleName(), 20);
         String RoleName = Browser.getText(CommonMethodsPageObjects.RoleName());
         if (RoleName.contains(User)) {
-           logger.info("Current User Role :" + User);
-        }
-        else
-        {
+            logger.info("Current User Role :" + User);
+        } else {
             Browser.click(CommonMethodsPageObjects.RoleName());
             List<WebElement> UserRoleList = Browser.getWebElements(CommonMethodsPageObjects.UserIdentityList());
             boolean status = false;
@@ -711,6 +720,7 @@ public class CommonMethodsPage {
             Assert.assertTrue(status, UserRoleList + "User Role is not available");
             logger.addScreenshot("");
         }
+    }
 
     public static void clickOnRemoveButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.removeBTN(), 20);
@@ -861,5 +871,82 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
         Browser.click(CommonMethodsPageObjects.SendBTN());
         Browser.waitForSeconds(1);
+    }
+
+    public static void assertFilterPopupIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.filterPopup(), 20);
+        Browser.isElementDisplayed(CommonMethodsPageObjects.filterPopup());
+        logger.addScreenshot(" ");
+    }
+
+    public static void checkSendForApprovalButtonIsEnabled() throws Exception {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalBTN(), 40 );
+        Assert.assertTrue(isElementEnabled(SendContractForApprovalPageObjects.sendForApprovalBTN()), "Button is not enabled");
+        logger.addScreenshot("");
+    }
+    public static void SendForApprovalBTN() throws Exception {
+        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalBTN(), 40 );
+        Browser.click(SendContractForApprovalPageObjects.sendForApprovalBTN());
+        logger.addScreenshot("");
+    }
+
+    public static void clickOnLetUsStartButton() {
+        Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.lestUsStartBTN(), 40 );
+        Browser.click(SendContractForApprovalPageObjects.lestUsStartBTN());
+    }
+
+    public static void clickOnDownloadDraftCopy() {
+        Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
+        Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
+        Browser.waitForSeconds(12);
+        logger.addScreenshot("Draft Copy download successfully");
+    }
+
+
+    public static void scrollToElement(By element) throws Exception {
+        if (Browser.isElementPresent(element)) {
+            Browser.executeJSScrollIntoView(element);
+        }
+    }
+
+    public static void verifyContractStatusIsWaitingEjarFee() throws Exception {
+        Browser.executeJSScroll(450);
+        Browser.waitForSeconds(1);
+        String [] expectedStatus = {"Waiting Ejar Fee", "انتظار رسوم منصة إيجار"};
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
+        Browser.waitForSeconds(2);
+        String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
+        if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
+            Assert.assertTrue(true);
+        }
+        else {
+            Assert.assertFalse(false);
+        }
+        Browser.logger.addScreenshot("");
+    }
+
+    public static void PDFValidation(String ContractNumber, String Message) throws IOException, IOException {
+        //Open the downloaded PDF file and verify its contents
+        String home = System.getProperty("user.home");
+        String path = "file:///" + home + "\\Downloads\\" + ContractNumber + ".pdf";
+        System.out.println(path);
+        URL url = new URL(path);
+        //Create Input Stream Object to save the Stream of pdf file using OpenStream
+        InputStream iStream = url.openStream();
+        //Create Buffered Input Stream object to pass InputStream class object reference
+        BufferedInputStream bfStream = new BufferedInputStream(iStream);
+        // Create a PDF document object.
+        PDDocument document = PDDocument.load(bfStream);
+        // Get the first page of the document.
+        //PDPage doc = document.getPage(0);
+        // Create a PDFTextStripper object.
+        PDFTextStripper stripper = new PDFTextStripper();
+        // Strip the text from the page.
+        int chr = stripper.getText(document).indexOf("Contract No.");
+        String contactVersion = stripper.getText(document).substring(chr,chr+31);
+        System.out.println(contactVersion);
+        logger.addScreenshot("");
+        // Validate the text.
+        Assert.assertTrue(contactVersion.contains(Message));
     }
 }

@@ -124,6 +124,7 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.payingEjarFeesSection(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.payingEjarFeesSection()));
         logger.addScreenshot("The (دفع رسوم إيجار) section is Displayed");
+        Browser.waitForSeconds(1);
     }
 
     public void verifyContractSentMessageIsDisplayed()  {

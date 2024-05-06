@@ -22,6 +22,9 @@ public class SendContractForApprovalPageObjects {
     public static String get(String locator) throws Exception {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
     }
+    public static By sendForApprovalBTN() throws Exception{
+        return By.xpath("(//app-button//button[text()=' الإرسال للتوثيق '])[1]");
+    }
     public static By contractStepsPage() throws Exception{
         return By.xpath("//h5[text()='خطوات العقد']");
     }

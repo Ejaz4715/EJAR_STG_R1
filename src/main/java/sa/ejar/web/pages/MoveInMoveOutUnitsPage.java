@@ -9,6 +9,7 @@ import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 
 import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.nio.file.Paths;
 
@@ -16,7 +17,7 @@ import static com.testcrew.base.WebBaseTest.logger;
 
 public class MoveInMoveOutUnitsPage {
     public void closeMoveInOutPopup() {
-        Browser.waitForSeconds(3);
+        //Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),5);
         if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp())) {
             Browser.click(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp());
         }
@@ -29,7 +30,7 @@ public class MoveInMoveOutUnitsPage {
     }
 
     public void selectNoRadioBTN() {
-        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN(), 15);
+       // Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN(), 15);
         Browser.click(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN());
         Browser.waitForSeconds(2);
     }
@@ -52,7 +53,7 @@ public class MoveInMoveOutUnitsPage {
         String filepath = Paths.get(CURRENT_DIR, "src", "main", "resources") + "\\" + File;
         WebElement UploadFile = Browser.getWebElement(By.xpath("(//input[@type='file'])"));
         UploadFile.sendKeys(filepath);
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(2);
     }
 
 
@@ -170,5 +171,26 @@ public class MoveInMoveOutUnitsPage {
             Browser.waitForSeconds(4);
 
         }
+    }
+
+    public void uploadAttachment(String File) throws Exception {
+        Browser.waitForSeconds(3);
+        Browser.click(By.xpath("//p[contains(text(),'صور حالة')]"));
+        Browser.waitForSeconds(2);
+        robotFiles(File);
+    }
+
+    public void robotFiles(String File) throws Exception {
+        Robot robot = new Robot();
+        robot.delay(1000);
+        String CURRENT_DIR = System.getProperty("user.dir");
+        String filepath1 = Paths.get(CURRENT_DIR, "src", "main", "resources") + "\\" + File;
+        StringSelection select1 = new StringSelection(filepath1);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(select1, null);
+        //robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        //robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
     }
 }

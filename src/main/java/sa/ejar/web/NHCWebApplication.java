@@ -28,6 +28,10 @@ public class NHCWebApplication {
     public final RentalIncidentsPage rentalIncidentsPage;
     public final ChangeLessorAndLessorRepresentativePage changeLessorAndLessorRepresentativePage;
 
+    public ChangeTenantActivityPage changeTenantActivityPage;
+
+    public ManualRenewalPage manualRenewalPage;
+
     public NHCWebApplication() {
         loginPage = new LoginPage();
         addResidentialContractPage = new AddResidentialContractPage();
@@ -39,7 +43,8 @@ public class NHCWebApplication {
         rentalIncidentsPage = new RentalIncidentsPage();
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
         moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
-
+        changeTenantActivityPage = new ChangeTenantActivityPage();
+        manualRenewalPage = new ManualRenewalPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
