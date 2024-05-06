@@ -28,10 +28,5 @@ public class NHCWebTest extends TestCrewWebBaseTest {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         Browser.setUserDesiredCapabilities(desiredCapabilities);
-        //Set download path
-        String downloadDir = System.getProperty("user.dir") + "\\src\\main\\downloads";
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("download.default_directory=" + downloadDir);
-        options.merge(desiredCapabilities);
     }
 }

@@ -21,11 +21,11 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب وساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -38,6 +38,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -61,6 +62,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -72,7 +74,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (إنهاء العقد) option is displayed");
-        CommonMethodsPage.TerminateOptions(" إنهاء العقد  ");
+        CommonMethodsPage.TerminateOptions("إنهاء العقد");
 
     }
 
@@ -86,6 +88,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -113,6 +116,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -140,6 +144,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -168,6 +173,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -195,6 +201,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -223,6 +230,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -250,6 +258,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -277,6 +286,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -306,6 +316,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -319,9 +330,10 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -335,6 +347,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -348,6 +361,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (إلغاء)  of pup up alert window");
         CommonMethodsPage.clickOnCancelButton();
@@ -366,6 +380,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -379,6 +394,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (تأكيد)  of pup up alert window");
         CommonMethodsPage.clickOnConfirmButton();
@@ -397,6 +413,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -431,6 +448,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -467,6 +485,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -503,6 +522,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -539,6 +559,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -575,6 +596,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -613,6 +635,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -639,7 +662,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 13: The (قيمة الدفع) input field generates and error messages: أقصى قيمة هي ");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_Payment_Amount"));
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -652,6 +675,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -691,6 +715,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -718,7 +743,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 13: The تاريخ الاستحقاق input field generates and error messages:  أدنى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(-2, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أدنى قيمة هي", CommonMethodsPageObjects.minValueError());
+        CommonMethodsPage.errorMessage("أدنى", CommonMethodsPageObjects.minValueError());
 
     }
 
@@ -732,6 +757,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -759,7 +785,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 13: The تاريخ الاستحقاق input field generates and error messages:  أقصى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(2, 1, 1);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -772,6 +798,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -811,6 +838,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -837,7 +865,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 13: The (قيمة الدفع) input field generates and error messages: أقصى قيمة هي ");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_Payment_Amount"));
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
 
@@ -851,6 +879,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -890,6 +919,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -931,6 +961,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -969,6 +1000,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1012,6 +1044,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1041,6 +1074,8 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 14:Verify the (التالي) button is enabled/clickable and the (ملخص الإنهاء) section is displayed");
+        CommonMethodsPage.verifyNextButtonIsEnabled();
+        CommonMethodsPage.clickOnNextButton();
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
 
@@ -1054,6 +1089,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1090,6 +1126,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1129,6 +1166,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1154,7 +1192,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 12: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 13: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1167,6 +1205,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1207,6 +1246,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1247,6 +1287,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1287,6 +1328,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1329,6 +1371,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1357,7 +1400,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 13: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -1371,6 +1414,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1414,6 +1458,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1457,6 +1502,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1498,6 +1544,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1526,7 +1573,8 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 14: Click on (إلغاء) button");
-        CommonMethodsPage.clickOnCancelButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnCancelPopUpButton();
         logger.info("Step 15: The User remains in the same section (ملخص الإنهاء)");
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
@@ -1541,6 +1589,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1569,7 +1618,8 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 14: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 15:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
@@ -1585,6 +1635,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1592,7 +1643,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
@@ -1607,13 +1658,17 @@ public class TerminateContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on  (تأكيد) button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 12: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
+        logger.info("Step 12: Select The (الدفعة النهائية للمستأجر) radio button");
+        app.terminateContractPage.selectTenantFinalPaymentRadioButton();
+        app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
+        String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
+        app.terminateContractPage.enterPaymentDueDate(date);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 14: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 15: Click on (إغلاق) button");
         CommonMethodsPage.getReqNumBo();
         CommonMethodsPage.clickOnCloseButton();
@@ -1632,6 +1687,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1649,6 +1705,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1672,6 +1729,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1683,7 +1741,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (إنهاء العقد) option is displayed");
-        CommonMethodsPage.TerminateOptions(" إنهاء العقد  ");
+        CommonMethodsPage.TerminateOptions("إنهاء العقد");
 
     }
 
@@ -1697,6 +1755,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1724,6 +1783,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1751,6 +1811,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1779,6 +1840,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1806,6 +1868,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1834,6 +1897,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1861,6 +1925,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1888,6 +1953,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1917,6 +1983,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1930,9 +1997,10 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -1946,6 +2014,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1959,6 +2028,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (إلغاء)  of pup up alert window");
         CommonMethodsPage.clickOnCancelButton();
@@ -1977,6 +2047,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -1990,6 +2061,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (تأكيد)  of pup up alert window");
         CommonMethodsPage.clickOnConfirmButton();
@@ -2008,6 +2080,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2040,6 +2113,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2059,9 +2133,10 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إلغاء) button");
-        CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 11: The User remains in the same page (طلب الإنهاء)");
         app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnCancelPopUpButton();
+        logger.info("Step 11: The User remains in the same page (طلب الإنهاء)");
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2074,6 +2149,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2093,7 +2169,8 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: User moves to next section of (تسوية مالية)");
         app.terminateContractPage.verifyTheFinancialSettlementSectionIsDisplayed();
     }
@@ -2108,6 +2185,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2127,7 +2205,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: The (تسوية جميع المدفوعات) radio button is clicked and selected");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
     }
@@ -2142,6 +2220,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2161,7 +2240,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: The (الدفعة النهائية للمستأجر) radio button is clicked and selected");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
     }
@@ -2176,6 +2255,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2195,7 +2275,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Valid amount has been entered successfully in  ( الدفعة النهائية للمستأجر) input field");
@@ -2212,6 +2292,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2231,12 +2312,12 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (قيمة الدفع) input field generates and error messages: أقصى قيمة هي ");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_Payment_Amount"));
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2249,6 +2330,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2268,7 +2350,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (الإجمالي) amount is same as entered by the bo manager");
@@ -2286,6 +2368,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2305,13 +2388,13 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The تاريخ الاستحقاق input field generates and error messages:  أدنى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(-2, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أدنى قيمة هي", CommonMethodsPageObjects.minValueError());
+        CommonMethodsPage.errorMessage("أدنى", CommonMethodsPageObjects.minValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2324,6 +2407,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2343,13 +2427,13 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The تاريخ الاستحقاق input field generates and error messages:  أقصى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(2, 1, 1);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2362,6 +2446,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2381,7 +2466,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: User able to enter valid date same as current date");
@@ -2399,6 +2484,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2418,17 +2504,18 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (لدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter a Gregorian date in (تاريخ الاستحقاق) more than (التاريخ المطلوب لإنهاء العقد) within limit 1 month");
+        app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
         String date = CommonMethodsPage.getCurrentDate(0, 1, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 14: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 15: Verify the error message (يجب أن يكون تاريخ الاستحقاق الدفع قبل تاريخ السريان)");
         app.terminateContractPage.verifyThePaymentDateErrorMessageIsDisplayed();
     }
@@ -2443,6 +2530,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2462,7 +2550,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Verify Calender icon is clickable & displays the Calender pop up after getting clicked");
@@ -2480,6 +2568,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2499,7 +2588,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: User able to enter valid date same as current date");
@@ -2519,6 +2608,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2538,7 +2628,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (التالي) button is not enabled/clickable");
@@ -2555,6 +2645,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2574,7 +2665,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter Invalid The (قيمة الدفع) and (تاريخ الاستحقاق)");
@@ -2595,6 +2686,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2614,7 +2706,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter Invalid The (قيمة الدفع) and (تاريخ الاستحقاق)");
@@ -2622,6 +2714,8 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 13:Verify the (التالي) button is enabled/clickable and the (ملخص الإنهاء) section is displayed");
+        CommonMethodsPage.verifyNextButtonIsEnabled();
+        CommonMethodsPage.clickOnNextButton();
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
 
@@ -2635,6 +2729,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2654,7 +2749,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Verify the (التالي) button is not enabled/clickable. User should not be able to continue to next page");
         CommonMethodsPage.verifyTheNextButtonIsDisabled();
     }
@@ -2669,6 +2764,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2688,7 +2784,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (السابق) button");
         CommonMethodsPage.clickOnBackButton();
         logger.info("Step 12: Verify the user moves to previous section (تفاصيل الإنهاء)");
@@ -2706,6 +2802,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2725,11 +2822,11 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2742,6 +2839,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2761,7 +2859,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Click on  (إلغاء)  of pup up alert window");
@@ -2780,6 +2878,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2799,7 +2898,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Click on  (تأكيد)  of pup up alert window");
@@ -2818,6 +2917,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2837,7 +2937,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -2856,6 +2956,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2875,7 +2976,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -2896,6 +2997,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2915,14 +3017,14 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 13: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -2936,6 +3038,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2957,7 +3060,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 12: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -2979,6 +3082,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -2998,7 +3102,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -3020,6 +3124,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3039,7 +3144,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -3059,6 +3164,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3078,14 +3184,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (إلغاء) button");
-        CommonMethodsPage.clickOnCancelButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnCancelPopUpButton();
         logger.info("Step 14: The User remains in the same section (ملخص الإنهاء)");
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
@@ -3100,6 +3207,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3119,14 +3227,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
@@ -3142,6 +3251,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3149,7 +3259,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
@@ -3161,14 +3271,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 14: Click on (إغلاق) button");
         CommonMethodsPage.getReqNumLessor();
         CommonMethodsPage.clickOnCloseButton();
@@ -3187,6 +3298,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3204,6 +3316,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3227,6 +3340,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3238,7 +3352,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (إنهاء العقد) option is displayed");
-        CommonMethodsPage.TerminateOptions(" إنهاء العقد  ");
+        CommonMethodsPage.TerminateOptions("إنهاء العقد");
 
     }
 
@@ -3252,6 +3366,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3279,6 +3394,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3306,6 +3422,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3334,6 +3451,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3361,6 +3479,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3389,6 +3508,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3416,6 +3536,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3443,6 +3564,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3456,6 +3578,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnBackButton();
         logger.info("Step 08: User moves to previous page (خطوات طلب إنهاء العقد)");
         app.terminateContractPage.verifyTerminationStepsPageIsDisplayed();
@@ -3472,6 +3595,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3485,9 +3609,10 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -3501,6 +3626,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3514,6 +3640,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (إلغاء)  of pup up alert window");
         CommonMethodsPage.clickOnCancelButton();
@@ -3532,6 +3659,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3545,6 +3673,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 08: Click on  (تأكيد)  of pup up alert window");
         CommonMethodsPage.clickOnConfirmButton();
@@ -3563,6 +3692,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3595,6 +3725,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3614,9 +3745,9 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (إلغاء) button");
-        CommonMethodsPage.clickOnCancelButton();
+        CommonMethodsPage.clickOnCancelPopUpButton();
         logger.info("Step 11: The User remains in the same page (طلب الإنهاء)");
-        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        app.terminateContractPage.verifyTheRequestTerminationPageIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3629,6 +3760,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3648,7 +3780,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: User moves to next section of (تسوية مالية)");
         app.terminateContractPage.verifyTheFinancialSettlementSectionIsDisplayed();
     }
@@ -3663,6 +3795,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3682,7 +3815,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: The (تسوية جميع المدفوعات) radio button is clicked and selected");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
     }
@@ -3697,6 +3830,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3716,7 +3850,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: The (الدفعة النهائية للمستأجر) radio button is clicked and selected");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
     }
@@ -3731,6 +3865,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3750,7 +3885,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Valid amount has been entered successfully in  ( الدفعة النهائية للمستأجر) input field");
@@ -3767,6 +3902,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3786,12 +3922,12 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (قيمة الدفع) input field generates and error messages: أقصى قيمة هي ");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_Payment_Amount"));
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3804,6 +3940,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3823,7 +3960,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (الإجمالي) amount is same as entered by the bo manager");
@@ -3841,6 +3978,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3860,13 +3998,13 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The تاريخ الاستحقاق input field generates and error messages:  أدنى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(-2, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أدنى قيمة هي", CommonMethodsPageObjects.minValueError());
+        CommonMethodsPage.errorMessage("أدنى", CommonMethodsPageObjects.minValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3879,6 +4017,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3898,13 +4037,13 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The تاريخ الاستحقاق input field generates and error messages:  أقصى قيمة هي ");
         String date = CommonMethodsPage.getCurrentDate(2, 1, 1);
         app.terminateContractPage.enterPaymentDueDate(date);
-        CommonMethodsPage.errorMessage("أقصى قيمة هي", CommonMethodsPageObjects.maxValueError());
+        CommonMethodsPage.errorMessage("أقصى", CommonMethodsPageObjects.maxValueError());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3917,6 +4056,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3936,7 +4076,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: User able to enter valid date same as current date");
@@ -3954,6 +4094,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -3973,17 +4114,18 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (لدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter a Gregorian date in (تاريخ الاستحقاق) more than (التاريخ المطلوب لإنهاء العقد) within limit 1 month");
+        app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
         String date = CommonMethodsPage.getCurrentDate(0, 1, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 14: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 15: Verify the error message (يجب أن يكون تاريخ الاستحقاق الدفع قبل تاريخ السريان)");
         app.terminateContractPage.verifyThePaymentDateErrorMessageIsDisplayed();
     }
@@ -3998,6 +4140,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4017,7 +4160,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Verify Calender icon is clickable & displays the Calender pop up after getting clicked");
@@ -4035,6 +4178,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4054,7 +4198,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: User able to enter valid date same as current date");
@@ -4074,6 +4218,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4093,7 +4238,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: The (التالي) button is not enabled/clickable");
@@ -4110,6 +4255,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4129,7 +4275,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter Invalid The (قيمة الدفع) and (تاريخ الاستحقاق)");
@@ -4150,6 +4296,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4169,7 +4316,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 12: Enter Invalid The (قيمة الدفع) and (تاريخ الاستحقاق)");
@@ -4177,6 +4324,8 @@ public class TerminateContract extends NHCWebTest {
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 13:Verify the (التالي) button is enabled/clickable and the (ملخص الإنهاء) section is displayed");
+        CommonMethodsPage.verifyNextButtonIsEnabled();
+        CommonMethodsPage.clickOnNextButton();
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
 
@@ -4190,6 +4339,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4209,7 +4359,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Verify the (التالي) button is not enabled/clickable. User should not be able to continue to next page");
         CommonMethodsPage.verifyTheNextButtonIsDisabled();
     }
@@ -4224,6 +4374,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4243,7 +4394,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (السابق) button");
         CommonMethodsPage.clickOnBackButton();
         logger.info("Step 12: Verify the user moves to previous section (تفاصيل الإنهاء)");
@@ -4261,6 +4412,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4280,11 +4432,11 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4297,6 +4449,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4316,7 +4469,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Click on  (إلغاء)  of pup up alert window");
@@ -4335,6 +4488,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4354,7 +4508,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 12: Click on  (تأكيد)  of pup up alert window");
@@ -4373,6 +4527,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4392,7 +4547,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -4411,6 +4566,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4430,7 +4586,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -4451,6 +4607,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4470,14 +4627,14 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on  (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 13: Pop Up Alert ( سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.) is displayed");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
 
     }
 
@@ -4491,6 +4648,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4512,7 +4670,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 12: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -4534,6 +4692,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4553,7 +4712,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -4575,6 +4734,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4594,7 +4754,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
@@ -4614,6 +4774,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4633,14 +4794,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (إلغاء) button");
-        CommonMethodsPage.clickOnCancelButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnCancelPopUpButton();
         logger.info("Step 14: The User remains in the same section (ملخص الإنهاء)");
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
@@ -4655,6 +4817,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4674,14 +4837,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
@@ -4697,6 +4861,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -4704,7 +4869,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
@@ -4716,14 +4881,15 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
         logger.info("Step 13: Click on (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
+        CommonMethodsPage.clickOnConfirmPopUpButton();
         logger.info("Step 14: Click on (إغلاق) button");
         CommonMethodsPage.getReqNumTenant();
         CommonMethodsPage.clickOnCloseButton();
@@ -4743,6 +4909,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4763,6 +4930,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4786,6 +4954,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4813,6 +4982,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4842,6 +5012,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4871,6 +5042,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4902,6 +5074,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4933,6 +5106,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4966,6 +5140,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -4997,6 +5172,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5004,7 +5180,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5028,6 +5204,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5035,7 +5212,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5059,6 +5236,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5066,7 +5244,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5091,6 +5269,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5098,7 +5277,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5109,7 +5288,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 09: Click on (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: Verify pop up window is displayed with message \"سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.\"");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5123,6 +5302,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5130,7 +5310,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5157,6 +5337,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5164,7 +5345,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5191,6 +5372,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5198,7 +5380,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5226,6 +5408,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5246,6 +5429,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5269,6 +5453,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5296,6 +5481,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5325,6 +5511,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5354,6 +5541,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5385,6 +5573,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5416,6 +5605,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5449,6 +5639,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5456,7 +5647,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5480,6 +5671,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5487,7 +5679,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5511,6 +5703,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5518,7 +5711,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5542,6 +5735,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5549,7 +5743,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5574,6 +5768,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5581,7 +5776,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5592,7 +5787,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 09: Click on (إلغاء) button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: Verify pop up window is displayed with message \"سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.\"");
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5606,6 +5801,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5613,7 +5809,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5640,6 +5836,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5647,7 +5844,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5674,6 +5871,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on الطلبات tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on (عرض جميع الطلبات)");
@@ -5681,7 +5879,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5710,6 +5908,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5728,6 +5927,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5735,9 +5935,9 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Verify user is able to view all the invoices of selected contract");
-        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber"));
+        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber_Close"));
 
     }
 
@@ -5751,6 +5951,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5758,7 +5959,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify a new invoice having same amount");
@@ -5775,6 +5976,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5782,7 +5984,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has same date as entered by lessor");
@@ -5799,6 +6001,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5806,9 +6009,9 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Verify old invoice has a status مغلقة");
-        CommonMethodsPage.verifyInvoiceStatus("old", " مغلقة ", CommonMethodsPageObjects.OldInvoiceStatus());
+        CommonMethodsPage.verifyInvoiceStatus("old", "مغلقة", CommonMethodsPageObjects.OldInvoiceStatus());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5821,6 +6024,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -5828,9 +6032,9 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has a status  لم يتم الدفع  ");
-        CommonMethodsPage.verifyInvoiceStatus("new", " لم يتم الدفع ", CommonMethodsPageObjects.NewInvoiceStatus());    }
+        CommonMethodsPage.verifyInvoiceStatus("new", "لم يتم الدفع", CommonMethodsPageObjects.NewInvoiceStatus());    }
 }

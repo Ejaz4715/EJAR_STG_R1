@@ -55,7 +55,7 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//h2[text()='بنود وشروط إضافية']");
     }
     public static By additionalTermsSwitchBTN() {
-        return By.xpath("//app-switch-input[@formcontrolname=\"custom_terms_accepted\"]/label");
+        return By.xpath("//app-switch-input[@formcontrolname=\"custom_terms_accepted\"]/label/span");
     }
     public static By addAnotherAdditionalTermsBTN() {
         return By.xpath("//a[text()=' إضافة بند آخر ']");
@@ -68,6 +68,9 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//textarea[@data-name=\"content\"]");
     }
     public static By theEnteredAdditionalTerms() {
+        return By.xpath("//app-card-body[@data-test=\"persisted-custom-terms\"]/p");
+    }
+    public static By theEnteredAdditionalTermsRemoved() {
         return By.xpath("//app-card-body[@data-test=\"persisted-custom-terms\"]");
     }
 
@@ -114,7 +117,7 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//h2[text()='التحقق من الهوية.']");
     }
     public static By identityVerificationBTN() {
-        return By.xpath("//button[text()= ' التحقق من الهوية ']");
+        return By.xpath("//button[contains(text(), 'التحقق من الهوية')]");
     }
 
     public static By wrongOTPMsg() {
@@ -141,6 +144,8 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//h2[text()='تمت الموافقة']");
     }
 
-
+    public static By sendForApprovalCheckboxes() {
+        return By.xpath("//input[@type=\"checkbox\"]/following-sibling::label");
+    }
 
 }

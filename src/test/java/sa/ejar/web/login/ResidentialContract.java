@@ -17,7 +17,6 @@ public class ResidentialContract extends NHCWebTest{
     public void addNewResidentialContractWithDurationMoreThanThreeMonths(Map<String, String> data, ITestContext context) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-//        app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
         logger.info("Step 01: Login to Application As Bo Officer/Manager Enter Email, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));

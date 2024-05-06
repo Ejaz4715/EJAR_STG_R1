@@ -51,7 +51,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By UploadDocumentsInput() {
-        return By.xpath("//input[@data-name=\"execution_order_documents\"]");
+        return By.xpath("(//input[@type='file'])");
     }
 
     public static By AttachmentIcon() {
@@ -70,12 +70,12 @@ public class RevokeContractPageObjects {
         return By.xpath("//h5[text()='طلب الفسخ']");
     }
 
-    public static By ConfirmRevokeContratButton() {
+    public static By ConfirmRevokeContractButton() {
         return By.xpath("//button[contains (text() , ' تأكيد طلب الفسخ  ')]");
     }
 
     public static By RequestNumberText() {
-        return By.xpath("//button[contains (text() , ' تأكيد طلب الفسخ  ')]");
+        return By.xpath("//h5[text()='فسخ العقد من طرف واحد']/ancestor::div[contains (@class , 'card')]/descendant::h5[contains (text(), '#')]");
     }
 
     public static By ViewButtonOnRequest() {
@@ -95,5 +95,9 @@ public class RevokeContractPageObjects {
     }
     public static By ErrorMsg() {
         return By.xpath("//app-file-upload//p[@class='error']");
+    }
+
+    public static By cancelBTNOnRequestTPage() {
+        return By.xpath("//button[@routerlink=\"..\"]");
     }
 }

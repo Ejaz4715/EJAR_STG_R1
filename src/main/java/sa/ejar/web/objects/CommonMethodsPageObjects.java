@@ -26,13 +26,20 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains(text(),'التالي')]");
     }
     public static By cancelBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' إلغاء')]");
+        return By.xpath("//button[contains(text(),'إلغاء')]");
     }
+    public static By cancelPopUpBTN() throws Exception{
+        return By.xpath("//div/button[contains(text(),' إلغاء')]");
+    }
+    public static By confirmPopUpBTN() throws Exception{
+        return By.xpath("//div/button[text()=' تأكيد ']");
+    }
+
     public static By backBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' السابق')]");
+        return By.xpath("//button[contains(text(),'السابق')]");
     }
     public static By confirmBTN() throws Exception{
-        return By.xpath("//button[contains(text(),' تأكيد ')]");
+        return By.xpath("//button[contains(text(),'تأكيد')]");
     }
 
     public static By editBTN() throws Exception{
@@ -66,7 +73,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By SuccessPopUPTitle() {
-        return By.xpath("//h5[contains (text() , 'رسالة نجاح')]");
+        return By.xpath("//*[contains (text() , 'رسالة نجاح')]");
     }
     public static By minValueError(){
         return By.xpath("//li[@data-error=\"errors.min_value\"]");
@@ -93,7 +100,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//span[text()='عرض الطلبات']");
     }
     public static By requestNumberOfSearchedRequest() throws Exception{
-        return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5[@class=\"item-value\"]");
+        return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5");
     }
     public static By requestList() throws Exception{
         return By.xpath("//app-single-contract-termination-request");
@@ -115,7 +122,8 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RequestStatus() {
-        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
+//        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
+        return By.xpath("//span[contains (text() , 'الحالة')]/parent::div/descendant::h5/child::span");
     }
 
     public static By ApproveBTN() {
@@ -127,11 +135,11 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RejectBTN() {
-        return By.xpath("//button[contains (text() , ' رفض ')]");
+        return By.xpath("//button[contains (text() , 'رفض')]");
     }
 
     public static By ReasonOfRejectPopUpTitle() {
-        return By.xpath("//h2[text()='سبب الرفض ']");
+        return By.xpath("//*[contains (text(), 'سبب')]");
     }
 
     public static By PaymentDueDateOnInvoice() {
@@ -158,7 +166,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//app-form-radio[@formcontrolname=\"rejection_reason\"]");
     }
     public static By rejectionReasonNote() throws Exception{
-        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\"]");
+        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\" or  @data-name=\"rejection_reason\"]");
     }
     public static By rejectionSubmittedMessage() throws Exception{
         return By.xpath("//h2[text()='تم تقديم الرفض']");
@@ -177,7 +185,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//input[@data-name=\"contract_number\"]");
     }
     public static By allContractInvoices() throws Exception{
-        return By.xpath("//a[@class=\"list-item active\"]/div/h5");
+        return By.xpath("//span[text() = ' رقم العقد']/following-sibling::h5");
     }
 
     public static By newContractInvoice() throws Exception{
@@ -205,11 +213,13 @@ public class CommonMethodsPageObjects {
     }
 
     public static By UserIdentityList(){
-        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+//        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
+        return By.xpath("//div[@data-dropdown-role=\"options\"]/descendant::span");
     }
     public static By RoleName() {
         return By.xpath("//div//p[@class='role-name']");
     }
+
     public static By ratingBTN() {
         return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");
     }
@@ -221,8 +231,12 @@ public class CommonMethodsPageObjects {
     }
 
     public static By yesRadioBTN() {
-        return By.xpath("//label[text()=' نعم ']");
+            return By.xpath("//label[text()=' نعم ']");
     }
+    public static By newRadioBTN() {
+        return By.xpath("//label[text()=' جديدة ']/parent::app-form-radio");
+    }
+
     public static By deleteIconBTN() {
         return By.xpath("//i[@class=\"delete-icon\"]/parent::button");
     }
@@ -306,5 +320,14 @@ public class CommonMethodsPageObjects {
 
     public static By SendBTN(){
         return By.xpath("//app-button-bar//button[text()=' إرسال ']");
+    }
+
+    public static By filterPopup(){
+        return By.xpath("//app-card-body[@class='card-body']");
+    }
+
+    public static By invalidOTPErrorMsg()
+    {
+        return By.xpath("//li[contains(text(),'رمز OTP غير صالح')]");
     }
 }

@@ -1,6 +1,6 @@
 package sa.ejar.web;
+
 import com.testcrew.utility.TCRobot;
-import org.openqa.selenium.chrome.ChromeDriver;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 import sa.ejar.web.pages.*;
 import sa.ejar.web.pages.precondition.AddResidentialContractPage;
@@ -30,7 +30,9 @@ public class NHCWebApplication {
 
     public ChangeTenantActivityPage changeTenantActivityPage;
 
+
     public ManualRenewalPage manualRenewalPage;
+
 
     public NHCWebApplication() {
         loginPage = new LoginPage();
@@ -44,7 +46,9 @@ public class NHCWebApplication {
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
         moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
         changeTenantActivityPage = new ChangeTenantActivityPage();
+
         manualRenewalPage = new ManualRenewalPage();
+
     }
 
     public void openApplication(Map<String, String> data) throws Exception {

@@ -35,16 +35,7 @@ public class LoginPage extends WebBasePage {
     }
 
     public void clickLogin() throws Exception {
-//        Browser.doubleClick(LoginPageObjects.getButtonLogin());
-//        while(!(Browser.isElementPresent(LoginPageObjects.getVerificationCode()))){
             Browser.click(LoginPageObjects.getButtonLogin());
-//            Browser.waitForSeconds(2);
-//        }
-//        if (){
-//            Browser.doubleClick(LoginPageObjects.getButtonLogin());
-//        }
-////        Browser.click(LoginPageObjects.getButtonLogin());
-//        Browser.waitForSeconds(2);
     }
 
     public void closePopUp() throws Exception {
@@ -56,10 +47,6 @@ public class LoginPage extends WebBasePage {
         logger.info("Enter User Name : " + User);
         Browser.setText(LoginPageObjects.setUserName(), User);
     }
-  /*  public void changeUILanguage(String language) throws Exception {
-        logger.info("Change Language");
-        Browser.waitUntilVisibilityOfElement(getDashboardHeading(), 20);
-    }*/
 
     public void clickConfirmButton() throws Exception {
         logger.info("Click Confirm");
@@ -91,13 +78,6 @@ public class LoginPage extends WebBasePage {
         logger.addScreenshot("Switch to arabic");
     }
 
-//    public void login(Map<String, String> data) throws Exception {
-//        logger.info("Login to application.");
-//        enterUsername(data.get("Email"));
-//        enterPassword(data.get("Password"));
-//        clickLogin();
-//    }
-
 
     // Assert functions
     public void assertLoginPageDisplayed() throws Exception {
@@ -110,15 +90,20 @@ public class LoginPage extends WebBasePage {
 
     public void enterVerificationCode(String OTP) throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
-//        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
         Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
         Browser.waitForSeconds(1);
-//        logger.addScreenshot("Enter OTP");
-//        Browser.waitForSeconds(2);
         Browser.click(LoginPageObjects.confirmButton());
-//        Browser.waitForSeconds(4);
+        logger.addScreenshot("OTP entered");
     }
+
+    public void enterVerificationCodeForOTP(String OTP) throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
+        Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
+        Browser.waitForSeconds(1);
+    }
+
 
     public void clickLogout() throws Exception {
         Browser.waitForSeconds(3);
@@ -132,28 +117,33 @@ public class LoginPage extends WebBasePage {
     }
 
     public void closeExploreEjarPopUp() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 30);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),20);
-//            Browser.waitForSeconds(5);
-//            logger.addScreenshot("");
-//            Browser.waitForSeconds(1);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),5);
             Browser.click(LoginPageObjects.closeButton1());
-//            Browser.waitForSeconds(1);
-//            logger.addScreenshot("Close Explore Ejar PopUp");
         }
-
         Browser.waitForSeconds(1);
         if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
-//            logger.addScreenshot("");
-//            Browser.waitForSeconds(2);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),5);
             Browser.click(LoginPageObjects.closeButton2());
-//            Browser.waitForSeconds(2);
         }
-       /* if (Browser.isElementPresent(LoginPageObjects.popUpButton())){
-            Browser.waitForSeconds(5);
-            Browser.click(LoginPageObjects.popUpButton());
-        }*/
+        Browser.waitForSeconds(1);
+        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),5);
+            Browser.click(LoginPageObjects.closeButton1());
+
+        }
+        Browser.waitForSeconds(1);
+        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),5);
+            Browser.click(LoginPageObjects.closeButton1());
+
+        }
+        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),20);
+            Browser.click(LoginPageObjects.closeButton1());
+
+        }
     }
 
     public void acceptTerms() throws Exception {
