@@ -472,6 +472,43 @@ public class CommonMethodsPage {
     }
 
 
+    public static void ClickOnAttachment(String action) throws AWTException {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons(), 40);
+        List<WebElement> buttons = getWebElements(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons());
+        if (buttons.size() > 1) {
+            if (action.equalsIgnoreCase("view")) {
+                Browser.waitForSeconds(1);
+                buttons.get(1).click();
+            } else if (action.equalsIgnoreCase("download")) {
+                buttons.get(0).click();
+                enterDownloadPath();
+            }
+        }
+        else {
+            Browser.waitForSeconds(1);
+            buttons.get(0).click();
+        }
+    }
+
+    public static void enterDownloadPath() throws AWTException {
+        emptyDownloadsFolder(System.getProperty("user.dir") + "\\src\\main\\resources\\downloads");
+        TCRobot robot = new TCRobot();
+        Browser.waitForSeconds(2);
+        robot.setText(setDownloadPath());
+        Browser.waitForSeconds(1);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        Browser.waitForSeconds(2);
+    }
+
+    public static void verifyAttachmentHasBeenDownloaded() {
+        ArrayList <String> filenames = getFilesNames(System.getProperty("user.dir") + "\\src\\main\\resources\\downloads");
+        boolean status = false;
+        if (!(filenames.isEmpty())){
+            status = true;
+        }
+        Assert.assertTrue(status, "File is not downloaded");
+    }
+
     public static void emptyDownloadsFolder(String folderPath) {
         File folder = new File(folderPath);
         // Check if the provided path is a directory
@@ -513,26 +550,6 @@ public class CommonMethodsPage {
         return filenames;
     }
 
-    public static void ClickOnAttachment(String action) throws AWTException {
-        String setDownloadPath = System.getProperty("user.dir") + "\\src\\main\\resources\\downloads\\test_attachment";
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons(), 40);
-        List<WebElement> buttons = getWebElements(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons());
-        if (action.equalsIgnoreCase("view")) {
-            Browser.waitForSeconds(1);
-            buttons.get(1).click();
-        } else if (action.equalsIgnoreCase("download")) {
-            emptyDownloadsFolder(System.getProperty("user.dir") + "\\src\\main\\resources\\downloads");
-            buttons.get(0).click();
-            TCRobot robot = new TCRobot();
-            Browser.waitForSeconds(2);
-            robot.setText(setDownloadPath);
-            Browser.waitForSeconds(1);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            Browser.waitForSeconds(2);
-        }
-    }
-
-
     public static void verifyNewTabIsOpened() {
         Set<String> tabs = driver.getWindowHandles();
         String[] arrayTabs = tabs.toArray(new String[0]);
@@ -546,16 +563,6 @@ public class CommonMethodsPage {
         }
         Assert.assertTrue(status, "New tab is not opened");
         logger.addScreenshot("Attachment is displayed in new browser tab");
-    }
-
-
-    public static void verifyAttachmentHasBeenDownloaded() {
-       ArrayList <String> filenames = getFilesNames(System.getProperty("user.dir") + "\\src\\main\\resources\\downloads");
-       boolean status = false;
-       if (!(filenames.isEmpty())){
-           status = true;
-       }
-       Assert.assertTrue(status, "File is not downloaded");
     }
 
     public static void verifySuccessPopUpIsDisplayed() {
@@ -1010,18 +1017,11 @@ public class CommonMethodsPage {
     }
 
     public static String setDownloadPath() {
-        String fileName = "draft_contract.pdf";
-        String downloadPath = System.getProperty("user.dir") + "\\src\\test\\resources\\downloads\\" + fileName;
+        String fileName = "test_attachment";
+        String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources\\downloads\\" + fileName;
         return downloadPath;
     }
 
-    public void deleteFile() {
-        File file = new File(setDownloadPath());
-        if (file.exists())
-            if (file.delete()) {
-                logger.info("Existing file is deleted");
-            }
-    }
 
     public static void assertFilterPopupIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.filterPopup(), 20);

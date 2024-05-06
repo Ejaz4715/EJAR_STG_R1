@@ -34,15 +34,8 @@ public class SendContractForApprovalPage {
 
 
     public void clickOnDownloadDraftCopyButton() throws Exception {
-//        deleteFile();
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
-        TCRobot robot = new TCRobot();
-        Browser.waitForSeconds(2);
-        robot.setText(setDownloadPath());
-        Browser.waitForSeconds(1);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        Browser.waitForSeconds(3);
     }
     public void verifyPreviewBrokerageAgreementSectionIsDisplayed()  {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.previewBrokerageAgreementSection(), 20);
