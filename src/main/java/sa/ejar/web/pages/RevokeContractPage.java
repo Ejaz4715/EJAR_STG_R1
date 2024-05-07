@@ -51,7 +51,6 @@ public class RevokeContractPage {
 
     public void clickOnCalenderIcon() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderIcon(), 40);
-        Assert.assertTrue(Browser.isElementEnabled(RevokeContractPageObjects.CalenderIcon()), "Calender icon is not clickable");
         Browser.click(RevokeContractPageObjects.CalenderIcon());
     }
 

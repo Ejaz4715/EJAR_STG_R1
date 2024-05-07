@@ -2,9 +2,7 @@ package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
-
 import static com.testcrew.manager.PDFReportManager.logger;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 

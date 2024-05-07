@@ -142,4 +142,44 @@ public class RentalIncidentsPageObjects {
     public static By PopUpErrorMessage() {
         return By.xpath("//div[@class='message']");
     }
+    public static By organizationRadioBTN() {
+        return By.xpath("//app-form-radio[@formcontrolname=\"selectedOrganizationId\"]");
+    }
+
+    public static By organizationInfoSection() {
+        return By.xpath("//a[text()=' بيانات المنشأة ']");
+    }
+    public static By continueToRepresentativeInfoBTN() {
+        return By.xpath("//button[text()=' الاستمرار في معلومات المفوض ']");
+    }
+
+    public static By organizationIdentificationSection() {
+        return By.xpath("//a[text()=' بيانات ممثل المنشأة ']");
+    }
+    public static By addOwnershipDocumentLinkBTN() {
+        return By.xpath("//a[text()=' إضافة وثيقة ملكية ']");
+    }
+
+    public static By ownershipDocumentIdentificationSection() {
+        return By.xpath("//a[text()=' تحديد وثيقة ملكية ']");
+    }
+    public static By assertOwnershipDocument() {
+        return By.xpath("//p[text()=' وثيقة ملكية']");
+    }
+    public static By overSizeErrorMsg() {
+        return By.xpath("//p[@class=\"error\"]");
+    }
+    public static By differentFormatAttachment() {
+        return By.xpath("//p[@class=\"browse-file-text\"]");
+    }
+    public static By approveOfDeclarationCheckbox() {
+        return By.xpath("//app-form-checkbox[@formcontrolname=\"approval_declaration\"]");
+    }
+    public static By approveOfDeclarationCheckboxSelected() {
+        return By.xpath("//input[@data-name=\"approval_declaration\"]");
+    }
+    public static By reasonRefusalRadioBTN() {
+        return By.xpath("//app-form-radio[@formcontrolname=\"refusalReason\"][1]");
+    }
+
 }

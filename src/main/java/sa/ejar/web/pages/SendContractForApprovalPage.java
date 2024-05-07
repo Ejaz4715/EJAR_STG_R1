@@ -1,22 +1,12 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.getWebElement;
-import static org.apache.commons.io.file.PathUtils.deleteFile;
-import static sa.ejar.web.pages.CommonMethodsPage.setDownloadPath;
 
 public class SendContractForApprovalPage {
 
@@ -26,14 +16,14 @@ public class SendContractForApprovalPage {
         logger.addScreenshot("User Navigate To ' خطوات العقد' Page");
     }
 
-    public void verifyPreviewContractSectionIsDisplayed() throws Exception {
+    public void verifyPreviewContractSectionIsDisplayed(){
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.previewContractSection(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.previewContractSection()));
         logger.addScreenshot("User Navigate To ' معاينة العقد' Section");
     }
 
 
-    public void clickOnDownloadDraftCopyButton() throws Exception {
+    public void clickOnDownloadDraftCopyButton(){
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
     }
@@ -84,19 +74,19 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN());
     }
-    public void enterAdditionalTerms(String additionalTerms) throws Exception {
+    public void enterAdditionalTerms(String additionalTerms) {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.additionalTermsTextarea(), 20);
         Browser.setText(SendContractForApprovalPageObjects.additionalTermsTextarea(), additionalTerms);
 
     }
-    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms) throws Exception {
+    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms){
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.additionalTermsTextarea());
         String text = additionalTerms.getAttribute("value");
         Assert.assertEquals(text, enteredAdditionalTerms);
         Browser.logger.addScreenshot("The additional terms has been entered");
 
     }
-    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) throws Exception {
+    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.theEnteredAdditionalTerms());
         String text = additionalTerms.getText();
         Assert.assertEquals(text, enteredAdditionalTerms);
@@ -140,7 +130,7 @@ public class SendContractForApprovalPage {
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.contractSentMsg()));
         logger.addScreenshot("The (تم إرسال العقد للطرفين) message is Displayed");
     }
-    public void verifyContractApprovalStepsPageIsDisplayed() throws Exception {
+    public void verifyContractApprovalStepsPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.contractApprovalStepsPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.contractApprovalStepsPage()));
         logger.addScreenshot("User Navigate To 'خطوات الموافقة على العقد' page");
@@ -156,13 +146,13 @@ public class SendContractForApprovalPage {
         logger.addScreenshot("User Navigate To ' مراجعة معلومات العقد ' page");
     }
 
-    public void verifyRejectTheContractPageIsDisplayed() throws Exception {
+    public void verifyRejectTheContractPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectTheContractPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.rejectTheContractPage()));
         logger.addScreenshot("User Navigate To ' لماذا ترغب بالرفض' page");
     }
 
-    public void enterRejectionReason(String rejectReason) throws Exception {
+    public void enterRejectionReason(String rejectReason) {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectionReasonTextarea(), 20);
         Browser.setText(SendContractForApprovalPageObjects.rejectionReasonTextarea(), rejectReason);
 
@@ -183,7 +173,7 @@ public class SendContractForApprovalPage {
         logger.addScreenshot("The (رفض العقد) is Disabled");
     }
 
-    public void verifyRejectionContractReasonHasBeenEntered(String enteredRejectReason) throws Exception {
+    public void verifyRejectionContractReasonHasBeenEntered(String enteredRejectReason) {
         WebElement reason = getWebElement(SendContractForApprovalPageObjects.rejectionReasonTextarea());
         String text = reason.getAttribute("value");
         Assert.assertEquals(text, enteredRejectReason);
@@ -191,7 +181,7 @@ public class SendContractForApprovalPage {
 
     }
 
-    public void verifyIdentityVerificationPageIsDisplayed() throws Exception {
+    public void verifyIdentityVerificationPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerification(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.identityVerification()));
         logger.addScreenshot("The user navigate to (التحقق من الهوية) page");
@@ -229,19 +219,19 @@ public class SendContractForApprovalPage {
         logger.addScreenshot("The (التحقق من الهوية) is Disabled");
     }
 
-    public void verifyRejectionSubmittedMessageIsDisplayed() throws Exception {
+    public void verifyRejectionSubmittedMessageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectionSubmittedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.rejectionSubmittedMsg()));
         logger.addScreenshot("The (تم إرسال الرفض) page is displayed");
     }
 
-    public void verifyReviewAgreementPageIsDisplayed() throws Exception {
+    public void verifyReviewAgreementPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewAgreementPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.reviewAgreementPage()));
         logger.addScreenshot("User Navigate To ' مراجعة اتفاقية الوساطة ' page");
     }
 
-    public void verifyApprovalDisclaimerPageIsDisplayed() throws Exception {
+    public void verifyApprovalDisclaimerPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.approvalDisclaimerPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.approvalDisclaimerPage()));
         logger.addScreenshot("User Navigate To ' إخلاء مسؤولية' page");
