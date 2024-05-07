@@ -334,4 +334,54 @@ public class CommonMethodsPageObjects {
     public static By SearchButton() {
         return By.xpath("//button[contains (text() ,'بحث')]");
     }
+
+    public static By ownershipDocumentDDL() {
+        return By.xpath("//select[@data-name=\"ownership_document_type\"]");
+    }
+    public static By ownershipDocumentDDLOption() {
+        return By.xpath("//select[@data-name=\"ownership_document_type\"]/option");
+    }
+    public static By ownershipDocumentNumberTXT() {
+        return By.xpath("//input[@formcontrolname=\"document_number\"]");
+    }
+    public static By releaseDateTXT() {
+        return By.xpath("//input[@data-name=\"issued_date\"]");
+    }
+
+    public static By ownerIdTXT() {
+        return By.xpath("//input[@formcontrolname=\"owner_id\"]");
+    }
+    public static By legalDocumentTypeNameTXT() {
+        return By.xpath("//input[@formcontrolname=\"legal_document_type_name\"]");
+    }
+    public static By selectedOwnershipDocumentInfo() {
+        return By.xpath("//app-form-radio[@formcontrolname=\"selectedOwnershipDoc\"]");
+    }
+
+    public static By selectedOwnershipDocumentInfoRadioBTN() {
+        return By.xpath("//input[@data-name=\"selectedOwnershipDoc\"]");
+    }
+
+    public static By addNewOwnershipDocumentAlertMsg() {
+        return By.xpath("//h5[text()='.عذرًا، لم نتمكن من العثور على بيانات رقم الوثيقة الملكية المحدد']");
+    }
+
+    public static By addPropertyBTN() {
+        return By.xpath("//a[text()=' إضافة عقار جديد ']");
+    }
+    public static By selectUnitPage() {
+        return By.xpath("//h2[text()=' اختر وحدة (وحدات) ']");
+    }
+    public static By deleteIconForAttachment() {
+        return By.xpath("//h2[text() = 'المستندات المطلوبة']/ancestor::app-card/descendant::button/child::i");
+    }
+
+    public static By removedAttachment() {
+        return By.xpath("//div[contains(@class, 'attachment-card')]");
+    }
+
+    public static By sendRequestBTN() {
+        return By.xpath("//button[contains (text(), ' إرسال الطلب ')]");
+    }
+
 }

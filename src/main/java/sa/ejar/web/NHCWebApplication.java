@@ -21,7 +21,6 @@ public class NHCWebApplication {
     public final LoginPage loginPage;
     public final AddResidentialContractPage addResidentialContractPage;
     public final RevokeContractPage revokeContractPage;
-    public final CommonMethodsPage commonMethodsPage;
     public final TerminateContractPage terminateContractPage;
     public final ContractWaiverPage contractWaiverPage;
     public final SendContractForApprovalPage sendContractForApprovalPage;
@@ -36,7 +35,6 @@ public class NHCWebApplication {
         loginPage = new LoginPage();
         addResidentialContractPage = new AddResidentialContractPage();
         revokeContractPage = new RevokeContractPage();
-        commonMethodsPage = new CommonMethodsPage();
         terminateContractPage = new TerminateContractPage();
         contractWaiverPage = new ContractWaiverPage();
         sendContractForApprovalPage = new SendContractForApprovalPage();
