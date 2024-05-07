@@ -1988,7 +1988,7 @@ public class RentalIncident extends NHCWebTest {
 
 
 
-        
+
         logger.info("Step 07: Add Units and property details");
         app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
         CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
