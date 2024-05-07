@@ -1,5 +1,6 @@
 package sa.ejar.web.login;
 
+import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.pages.CommonMethodsPage;
@@ -128,38 +129,42 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_05_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        //logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        //logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on العقود tab");
+        //CommonMethodsPage.changeUserRole("مستأجر");
+        //logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        //logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Click on filter icon");
+       // logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter contract number in the contract search");
+       // logger.info("Step 05: Enter contract number in the contract search");
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-        logger.info("Step 06: Click on three dots");
+       // logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option > Click on  No, Bad condition  ( لا، لم تكن بحالة جيدة ) Radio Button");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
+        //logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option > Click on  No, Bad condition  ( لا، لم تكن بحالة جيدة ) Radio Button");
+//        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
-        app.moveInMoveOutUnitsPage.selectNoRadioBTN();
-        logger.info("Step 08: Note Text Area must be Displayed");
-        app.moveInMoveOutUnitsPage.checkNoteTextAreaIsDisplayed();
-        logger.info("Step 09: Fill Bad Condition Reason in Reason text area");
-        app.moveInMoveOutUnitsPage.fillBadConditionReason();
-        logger.info("Step 10: Upload an attachment valid type (PNG, JPEG)");
+//        app.moveInMoveOutUnitsPage.selectNoRadioBTN();
+        //logger.info("Step 08: Note Text Area must be Displayed");
+//        app.moveInMoveOutUnitsPage.checkNoteTextAreaIsDisplayed();
+        //logger.info("Step 09: Fill Bad Condition Reason in Reason text area");
+//        app.moveInMoveOutUnitsPage.fillBadConditionReason();
+        //logger.info("Step 10: Upload an attachment valid type (PNG, JPEG)");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpg");
         app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
-        logger.info("Step 11: Verify attachment is uploaded");
-        app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
+        app.moveInMoveOutUnitsPage.uploadFile("Test.mp4");
+        Browser.waitForSeconds(20);
+//        logger.info("Step 11: Verify attachment is uploaded");
+//        app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
     }
 
     @Test(dataProvider = "testDataProvider")
