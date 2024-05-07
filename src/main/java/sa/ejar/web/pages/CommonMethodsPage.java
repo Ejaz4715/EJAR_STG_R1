@@ -551,6 +551,7 @@ public class CommonMethodsPage {
     }
 
     public static void verifyNewTabIsOpened() {
+        Browser.waitForSeconds(2);
         Set<String> tabs = driver.getWindowHandles();
         String[] arrayTabs = tabs.toArray(new String[0]);
         driver.switchTo().window(arrayTabs[0]);
@@ -1056,5 +1057,122 @@ public class CommonMethodsPage {
     public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
         Assert.assertEquals(Browser.isElementDisplayed(CommonMethodsPageObjects.invalidOTPErrorMsg()),
                 isPresent, "Invalid OTP Error Message Status is not expected.");
+    }
+
+    public static void selectOwnershipDocumentDropdownList(String ownership ,By element) throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentDDL(), 40);
+        Browser.click(CommonMethodsPageObjects.ownershipDocumentDDL());
+        selectFromList(ownership,element);
+        logger.addScreenshot("Ownership document is selected");
+    }
+
+    public static void verifyOwnershipDocumentIsSelected(String selectedOwnershipDocument) throws Exception {
+        WebElement requesterCategory = getWebElement(CommonMethodsPageObjects.ownershipDocumentDDL());
+        String t = requesterCategory.getAttribute("value");
+        String text = t.toLowerCase();
+        if (text.contains("electronic_title_deed")) {
+            text = "صك ملكية إلكتروني";
+        } else if (text.contains("paper_title_deed")) {
+            text = "صك ملكية ورقي";
+        }
+        else if (text.contains("hojjat")) {
+            text = "حجة استحكام";
+        }
+        else if (text.contains("real_estate_registry_title_deed")) {
+            text = "صك السجل العقاري";
+        }
+        else if (text.contains("other")) {
+            text = "أخرى";
+        }
+        Assert.assertEquals(text, selectedOwnershipDocument);
+        logger.addScreenshot("The (وثيقة ملكية) Is Selected");
+    }
+
+    public static void enterOwnershipDocumentNumberInputField(String ownershipDocumentNumber) {
+        waitUntilPresenceOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 20);
+        setText(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), ownershipDocumentNumber);
+    }
+
+
+
+    public static void enterReleaseDateInputField(String releaseDate) {
+        waitUntilPresenceOfElement(CommonMethodsPageObjects.releaseDateTXT(), 20);
+        setText(CommonMethodsPageObjects.releaseDateTXT(), releaseDate);
+    }
+
+//    public static void verifyReleaseDateInputFieldIsDisabled() {
+//        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.releaseDateTXT(), 40 );
+//        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.releaseDateTXT()), "Input filed is not disabled");
+//        logger.addScreenshot("");
+//    }
+//    public static void verifyOwnershipDocumentInputFieldIsDisabled() {
+//        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40 );
+//        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.ownershipDocumentNumberTXT()), "Input filed is not disabled");
+//        logger.addScreenshot("");
+//    }
+    public static void verifyOwnerIdInputFieldIsNotDisplayed() {
+        Assert.assertTrue(isElementNotPresent(CommonMethodsPageObjects.ownerIdTXT()), "Input filed is not displayed");
+        logger.addScreenshot("");
+    }
+
+    public static void verifyLegalDocumentTypeNameInputFieldIsNotDisplayed() {
+        Assert.assertTrue(isElementNotPresent(CommonMethodsPageObjects.legalDocumentTypeNameTXT()), "Input filed is not displayed");
+        logger.addScreenshot("");
+    }
+
+
+    public static void verifyTheSelectedOwnershipDocumentInfoIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.selectedOwnershipDocumentInfo(), 40 );
+        Assert.assertTrue(isElementPresent(CommonMethodsPageObjects.selectedOwnershipDocumentInfo()), "ownership document info is displayed");
+        logger.addScreenshot("");
+    }
+
+    public static void verifyAddNewOwnershipDocumentAlertMessageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.addNewOwnershipDocumentAlertMsg(), 40 );
+        Assert.assertTrue(isElementPresent(CommonMethodsPageObjects.addNewOwnershipDocumentAlertMsg()));
+        logger.addScreenshot("");
+    }
+
+    public static void selectExistingOwnershipDocument() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.selectedOwnershipDocumentInfo(), 20);
+        Browser.click(CommonMethodsPageObjects.selectedOwnershipDocumentInfo());
+    }
+
+    public static void verifyTheExistingOwnershipDocumentIsSelected() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.selectedOwnershipDocumentInfo(), 20);
+        Assert.assertTrue(isElementSelected(CommonMethodsPageObjects.selectedOwnershipDocumentInfoRadioBTN()));
+        logger.addScreenshot("");
+    }
+    public static void verifyAddPropertyButtonIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.addPropertyBTN(), 40 );
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.addPropertyBTN()));
+        logger.addScreenshot("");
+    }
+
+    public static void verifySelectUnitPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.selectUnitPage(), 40 );
+        Assert.assertTrue(isElementDisplayed(CommonMethodsPageObjects.selectUnitPage()));
+        logger.addScreenshot("");
+    }
+
+    public static void clickOnDeleteIconButtonForAttachment() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.deleteIconForAttachment(), 20);
+        Browser.click(CommonMethodsPageObjects.deleteIconForAttachment());
+    }
+    public static void verifyTheAttachmentIsRemoved() {
+        Browser.waitUntilInvisibilityOfElement(CommonMethodsPageObjects.removedAttachment(), 40 );
+        Assert.assertTrue(isElementNotPresent(CommonMethodsPageObjects.removedAttachment()));
+        logger.addScreenshot("");
+    }
+
+    public static void clickOnSendRequestButton() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.sendRequestBTN(), 20);
+        Browser.click(CommonMethodsPageObjects.sendRequestBTN());
+    }
+
+    public static void verifySendRequestButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.sendRequestBTN(), 40 );
+        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.sendRequestBTN()));
+        logger.addScreenshot("");
     }
 }

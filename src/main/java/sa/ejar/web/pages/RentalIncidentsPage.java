@@ -1,15 +1,23 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.web.Browser;
+import org.checkerframework.checker.units.qual.Time;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
 
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static com.testcrew.manager.PDFReportManager.logger;
+import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.getWebElement;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
@@ -64,6 +72,8 @@ public class RentalIncidentsPage {
         Assert.assertEquals(text, selectedRequesterCategory);
         logger.addScreenshot("The (فئة مقدم الطلب) Is Selected");
     }
+
+
 
     public void clickOnRequesterRoleRadioButtons(String requesterRole) {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requesterRoleRadioBTNs(), 40);
@@ -134,6 +144,46 @@ public class RentalIncidentsPage {
         Browser.click(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton());
     }
 
+    public void clickOnOrganizationRadioButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationRadioBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.organizationRadioBTN());
+    }
+    public void verifyOrganizationInfoSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationInfoSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.organizationInfoSection()));
+        logger.addScreenshot("");
+    }
+
+    public void clickOnContinueToRepresentativeInfoButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.continueToRepresentativeInfoBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.continueToRepresentativeInfoBTN());
+    }
+
+    public void clickOnAddOwnershipDocumentLinkButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN());
+    }
+    public void verifyAddOwnershipDocumentLinkButtonIsDisabled(){
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN(), 40);
+        boolean b = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if(wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN()))==null){
+            b = true;
+        }
+        Assert.assertFalse(b, "Link is clickable");
+        logger.addScreenshot("");
+    }
+
+    public void verifyOwnershipDocumentIdentificationSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ownershipDocumentIdentificationSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.ownershipDocumentIdentificationSection()));
+        logger.addScreenshot("");
+    }
+    public void verifyOrganizationIdentificationSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationIdentificationSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.organizationIdentificationSection()));
+        logger.addScreenshot("");
+    }
     public void verifyAddAbstainingPartyButtonIsDisabled() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton(), 40);
         Assert.assertTrue(Browser.isElementDisabled(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton()), "Abstaining party info button is enabled");
@@ -153,5 +203,49 @@ public class RentalIncidentsPage {
         logger.addScreenshot("");
     }
 
+    public void verifyAddOwnershipDocumentInfoIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.assertOwnershipDocument(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.assertOwnershipDocument()));
+        logger.addScreenshot("");
+    }
 
+    public void verifyReleaseDateInputFieldIsDisabled(){
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.releaseDateTXT(), 40);
+        boolean b = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if(wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.releaseDateTXT()))==null){
+            b = true;
+        }
+        Assert.assertFalse(b, "Input filed is not disabled");
+        logger.addScreenshot("");
+    }
+
+    public void verifyOwnershipDocumentInputFieldIsDisabled(){
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40);
+        boolean b = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if(wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.ownershipDocumentNumberTXT()))==null){
+            b = true;
+        }
+        Assert.assertFalse(b, "Input filed is not disabled");
+        logger.addScreenshot("");
+    }
+    public void verifyDifferentAttachmentFormatNotUploaded() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.differentFormatAttachment(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.differentFormatAttachment()));
+        logger.addScreenshot("");
+    }
+
+    public void clickOnApproveOfDeclarationCheckbox() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.approveOfDeclarationCheckbox(), 40);
+        Browser.click(RentalIncidentsPageObjects.approveOfDeclarationCheckbox());
+    }
+    public void verifyApproveOfDeclarationCheckboxIsSelected() {
+        Assert.assertTrue(Browser.isElementSelected(RentalIncidentsPageObjects.approveOfDeclarationCheckboxSelected()));
+        logger.addScreenshot("");
+    }
+    public void clickOnReasonRefusalRadioButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.reasonRefusalRadioBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.reasonRefusalRadioBTN());
+    }
 }

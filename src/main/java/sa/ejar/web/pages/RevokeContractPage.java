@@ -51,13 +51,12 @@ public class RevokeContractPage {
 
     public void clickOnCalenderIcon() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderIcon(), 40);
-        Assert.assertTrue(Browser.isElementEnabled(RevokeContractPageObjects.CalenderIcon()), "Calender icon is not clickable");
         Browser.click(RevokeContractPageObjects.CalenderIcon());
     }
 
     public void verifyCalenderIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderPopUp(), 40);
-        Browser.click(RevokeContractPageObjects.CalenderPopUp());
+        Assert.assertTrue(Browser.isElementEnabled(RevokeContractPageObjects.CalenderIcon()), "Calender icon is not clickable");
         logger.addScreenshot("");
 
     }
