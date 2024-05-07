@@ -1125,6 +1125,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("");
         // Validate the text.
         Assert.assertTrue(contactVersion.contains(Message));
+        }
 
     /**
      * Method to get request number from requests page
@@ -1141,12 +1142,6 @@ public class CommonMethodsPage {
         return downloadPath;
     }
 
-
-    public static void assertFilterPopupIsDisplayed() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.filterPopup(), 20);
-        Browser.isElementDisplayed(CommonMethodsPageObjects.filterPopup());
-        logger.addScreenshot(" ");
-    }
 
     /**
      * Select an option from Kebab menu
