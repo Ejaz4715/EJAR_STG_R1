@@ -333,16 +333,37 @@ public class CommonMethodsPage {
         logger.addScreenshot("The message is displayed");
     }
 
+    /**
+     * Method to check if the value has been entered in Input Field
+     * @param value - Value to be validated
+     * @param element - Locator of Input Field
+     * */
     public static void verifyValueIsEntered(String value, By element) {
         waitUntilVisibilityOfElement(element, 40);
         String val = getWebElement(element).getAttribute("value");
         Assert.assertTrue(val.contains(value), "Value is not entered");
     }
 
+    /**
+     * Method to check if the value is NOT entered in Input Field
+     * @param value - Value to be validated
+     * @param element - Locator of Input Field
+     * */
     public static void verifyValueIsNotEntered(String value, By element) {
         waitUntilVisibilityOfElement(element, 40);
         String val = getWebElement(element).getAttribute("value");
         Assert.assertFalse(val.contains(value), "Value is entered");
+    }
+
+    /**
+     * Method to validate the displayed value
+     * @param value - Value to be validated
+     * @param element - Locator of Input Field
+     * */
+    public static void verifyValueIsDisplayed(String value, By element) {
+        waitUntilVisibilityOfElement(element, 40);
+        String val = getWebElement(element).getText();
+        Assert.assertTrue(val.contains(value), "Value is not entered");
     }
 
 
@@ -415,7 +436,7 @@ public class CommonMethodsPage {
 
         }
 
-        Assert.assertTrue(status, text + " total amount is not the same");
+        Assert.assertTrue(status, "Expected (" + text + ") value is not the same as actual ("+ amount + ") value");
         logger.addScreenshot("");
     }
 
@@ -1057,4 +1078,10 @@ public class CommonMethodsPage {
         Assert.assertEquals(Browser.isElementDisplayed(CommonMethodsPageObjects.invalidOTPErrorMsg()),
                 isPresent, "Invalid OTP Error Message Status is not expected.");
     }
+
+    public static void clickOnSearchButton() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SearchButton(), 40);
+        Browser.click(CommonMethodsPageObjects.SearchButton());
+    }
+
 }

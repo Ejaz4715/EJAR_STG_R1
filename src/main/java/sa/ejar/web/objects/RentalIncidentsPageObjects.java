@@ -73,6 +73,73 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By NationalIdInputError() {
-        return By.xpath("//li[contains (@data-error, \"min\")]");
+        return By.xpath("//label[text()='رقم الهوية الوطنية']/parent::app-form-field/descendant::li");
+    }
+
+    public static By DOBInputError() {
+        return By.xpath("//label[text()='تاريخ الميلاد']/parent::app-form-field/descendant::li");
+    }
+
+    public static By AbstainingPartyInfoSection() {
+        return  By.xpath("//a[contains (@class , 'active') and text() = ' معلومات عن الطرف الممتنع ']");
+    }
+
+    public static By IdentificationAbstainingPartyIdSection() {
+        return  By.xpath("//a[contains (@class , 'active') and text() = ' تحديد هوية الطرف الممتنع ']");
+    }
+
+    public static By AbstainingPartyInformation() {
+        return By.xpath("//p[contains (text() , 'اسم المؤجر')]");
+    }
+
+    public static By EditButtonOnAbstainingPartyInfoSection() {
+        return By.xpath("//h2[text() = 'بيانات الطرف الممتنع']/ancestor::app-card/descendant::button[contains(text(),'تعديل')]");
+    }
+
+    public static By DeleteButtonOnAbstainingPartyInfoSection() {
+        return By.xpath("//h2[text() = 'بيانات الطرف الممتنع']/ancestor::app-card/descendant::button[@data-test-id=\"requester.delete_requester\"]");
+    }
+
+    public static By ContractPeriodSectionTitle(){
+        return By.xpath("//h2[contains (text(), 'مدة العقد')]");
+    }
+
+    public static By ContractPeriodDateInputField() {
+        return By.xpath("//input[@data-name=\"contract_start_date\"]");
+    }
+
+    public static By ContractTypeDropDown() {
+        return By.xpath("//select[@data-name=\"contract_type\"]");
+    }
+    public static By ContractTypeDropDownOptionsList() {
+        return By.xpath("//select[@data-name=\"contract_type\"]/child::option");
+    }
+
+    public static By DurationYearInputFieldOnCalenderPopUp() {
+        return By.xpath("//input[@data-name=\"years\"]");
+    }
+
+    public static By TotalRequestAmount() {
+        return By.xpath("//span[text()=' اجمالي قيمة رسوم الطلب ']/parent::div/following-sibling::div[1]/child::p");
+    }
+
+    public static By TotalNumberOfYears() {
+        return By.xpath("//span[text()=' عدد سنوات العقد ']/parent::div/following-sibling::div[1]/child::p");
+    }
+
+    public static By AnnualRentInputField() {
+        return By.xpath("//input[@data-name=\"contract_annual_rent_value\"]");
+    }
+
+    public static By DaysInputField() {
+        return By.xpath("//input[@data-name=\"days\"]");
+    }
+
+    public static By BORegistrationInputField() {
+        return By.xpath("//input[@data-name=\"bo_register_number\"]");
+    }
+
+    public static By PopUpErrorMessage() {
+        return By.xpath("//div[@class='message']");
     }
 }

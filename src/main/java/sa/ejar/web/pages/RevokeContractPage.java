@@ -57,9 +57,8 @@ public class RevokeContractPage {
 
     public void verifyCalenderIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.CalenderPopUp(), 40);
-        Browser.click(RevokeContractPageObjects.CalenderPopUp());
+        Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.CalenderPopUp()), "Calender icon is not displayed");
         logger.addScreenshot("");
-
     }
 
     public void enterNotesText(String note) {

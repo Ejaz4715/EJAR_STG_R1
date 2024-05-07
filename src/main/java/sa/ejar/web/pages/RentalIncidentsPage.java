@@ -1,15 +1,20 @@
 package sa.ejar.web.pages;
 
+import com.testcrew.base.WebBaseTest;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
+import sa.ejar.web.objects.RevokeContractPageObjects;
 
-import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
+import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.getWebElement;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
@@ -153,5 +158,115 @@ public class RentalIncidentsPage {
         logger.addScreenshot("");
     }
 
+    public void verifyAbstainingPartyInfoSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AbstainingPartyInfoSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.AbstainingPartyInfoSection()),
+                "Abstaining party information section is not displayed");
+        logger.addScreenshot("");
+    }
 
+    public void verifyIdentificationAbstainingPartyIdSectionSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.IdentificationAbstainingPartyIdSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.IdentificationAbstainingPartyIdSection()),
+                "Identification Abstaining party ID information section is not displayed");
+        logger.addScreenshot("");
+    }
+
+    public void verifyAbstainingPartyInformationIsAdded() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AbstainingPartyInformation(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.AbstainingPartyInformation()),
+                "Abstaining information is not added");
+        logger.addScreenshot("");
+    }
+
+    public void verifyAbstainingPartyInformationIsDeleted() {
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.AbstainingPartyInformation()),
+                "Abstaining party information has been deleted");
+        logger.addScreenshot("");
+    }
+
+    public void clickOnEditButtonOnAbstainingPartyInfoSection() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.EditButtonOnAbstainingPartyInfoSection(), 40 );
+        Browser.click(RentalIncidentsPageObjects.EditButtonOnAbstainingPartyInfoSection());
+    }
+    public void clickOnDeleteButtonOnAbstainingPartyInfoSection() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.DeleteButtonOnAbstainingPartyInfoSection(), 40 );
+        Browser.click(RentalIncidentsPageObjects.DeleteButtonOnAbstainingPartyInfoSection());
+    }
+
+    public void verifyContractPeriodSectionIsNotDisplayed() {
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.ContractPeriodSectionTitle()));
+        logger.addScreenshot("Contract Period section is not displayed");
+    }
+
+    public void verifyContractPeriodDateInputFieldIsNotClickable() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ContractPeriodDateInputField(), 40 );
+        boolean status = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if(wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.ContractPeriodDateInputField()))==null){
+            status = true;
+        }
+        Assert.assertFalse(status, "Contract period date input field is Enabled/Clickable");
+        logger.addScreenshot("Contract period date input field is disabled");
+    }
+
+    public void clickOnContractTypeDropDown() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ContractTypeDropDown(), 40);
+        Browser.click(RentalIncidentsPageObjects.ContractTypeDropDown());
+    }
+
+    public void verifyContractTypeIsSelected(String selectedContractType){
+        WebElement contractType = Browser.getWebElement(RentalIncidentsPageObjects.ContractTypeDropDown());
+        String t = contractType.getAttribute("value");
+        String text = t.toLowerCase();
+        if (text.contains("residential")) {
+            text = "سكني";
+        } else if (text.contains("commercial")) {
+            text = "تجاري";
+        } else if (text.contains("agricultural")) {
+            text = "زراعي";
+        } else if (text.contains("industrial")) {
+            text = "صناعي";
+        }
+        Assert.assertEquals(text, selectedContractType, "Selected contract type is not same");
+        logger.addScreenshot("The " + text +" contract type is selected");
+    }
+
+    public void clickOnContractPeriodDateInput() {
+        Browser.waitUntilElementToBeClickable(RentalIncidentsPageObjects.ContractPeriodDateInputField(), 40);
+        Browser.click(RentalIncidentsPageObjects.ContractPeriodDateInputField());
+    }
+
+    public void verifyCalenderIsNotDisplayed() {
+        Assert.assertFalse(Browser.isElementPresent(RevokeContractPageObjects.CalenderIcon()), "Calender icon displayed");
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void enterAnnualRent(String rent) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AnnualRentInputField(), 40);
+        Browser.clearText(RentalIncidentsPageObjects.AnnualRentInputField());
+        Browser.setText(RentalIncidentsPageObjects.AnnualRentInputField(), rent);
+    }
+
+    public void enterDays(String day) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.DaysInputField(), 40);
+        WebElement ele = Browser.getWebElement(RentalIncidentsPageObjects.DaysInputField());
+        ele.click();
+        ele.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
+        ele.sendKeys(day);
+    }
+
+    public void enterBORegistrationNumber(String crNumber) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.BORegistrationInputField(), 40);
+        Browser.setText(RentalIncidentsPageObjects.BORegistrationInputField(), crNumber);
+    }
+
+    public void verifyPopUpErrorMessages(String expectedMessage) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
+        WebElement error = Browser.getWebElement(RentalIncidentsPageObjects.PopUpErrorMessage());
+        String errorMessage = error.getText();
+        Assert.assertTrue(errorMessage.contains(expectedMessage),
+                "Actual Error message (" + errorMessage + ") does not match with expected (" +expectedMessage + ") messages");
+        logger.addScreenshot("");
+    }
 }

@@ -330,4 +330,8 @@ public class CommonMethodsPageObjects {
     {
         return By.xpath("//li[contains(text(),'رمز OTP غير صالح')]");
     }
+
+    public static By SearchButton() {
+        return By.xpath("//button[contains (text() ,'بحث')]");
+    }
 }

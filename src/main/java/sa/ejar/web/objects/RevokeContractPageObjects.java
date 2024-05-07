@@ -39,7 +39,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By CalenderPopUp() {
-        return By.xpath("//div[@class=\"calendar-option\"]");
+        return By.xpath("//div[@class='calendar-option']");
     }
 
     public static By NoteInputField() {
@@ -100,4 +100,5 @@ public class RevokeContractPageObjects {
     public static By cancelBTNOnRequestTPage() {
         return By.xpath("//button[@routerlink=\"..\"]");
     }
+
 }

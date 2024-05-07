@@ -1,6 +1,8 @@
 package sa.ejar.web;
 
 import com.testcrew.utility.TCRobot;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 import sa.ejar.web.pages.*;
 import sa.ejar.web.pages.precondition.AddResidentialContractPage;
@@ -10,6 +12,8 @@ import com.testcrew.web.Browser;
 
 import java.awt.event.KeyEvent;
 import java.util.Map;
+
+import static com.testcrew.web.Browser.driver;
 
 public class NHCWebApplication {
 
@@ -45,24 +49,19 @@ public class NHCWebApplication {
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
-
         if (data.get("URL") != null) {
             Browser.openUrl(data.get("URL"));
         } else {
             Browser.openUrl(TestConfigManager.getTestSettingsWebAppURL());
         }
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), 40);
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(1);
         TCRobot robot = new TCRobot();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
+            robot.keyPress(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
+            robot.keyRelease(KeyEvent.VK_MINUS);
         }
     }
 }
