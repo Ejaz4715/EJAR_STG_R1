@@ -450,4 +450,17 @@ public class RentalIncidentsPage {
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rejectConfirmationMsg()));
         logger.addScreenshot("");
     }
+    public void checkRentalIncidentRequestPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RentalIncidentRequestPageHeading(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.RentalIncidentRequestPageHeading()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+    public void enterRequestNumber(String requestNumber) {
+        waitUntilPresenceOfElement(CommonMethodsPageObjects.RequestNumberInputField(), 20);
+        setText(CommonMethodsPageObjects.RequestNumberInputField(), requestNumber);
+        waitForSeconds(1);
+        logger.addScreenshot("Entered Request Number in search input field");
+    }
+
+
 }

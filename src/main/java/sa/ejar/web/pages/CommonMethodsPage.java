@@ -74,6 +74,13 @@ public class CommonMethodsPage {
         logger.addScreenshot("Navigate to Revoke Contract Request page");
     }
 
+    public static void clickOnRentalIncidentRequestButton() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RentalIncidentRequestOption(), 20);
+        Browser.click(CommonMethodsPageObjects.RentalIncidentRequestOption());
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("Navigate to Rental Incident Request page");
+    }
+
     /**
      * Click on filter button
      */
@@ -272,7 +279,6 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
-     *
      * @param option - Option to be selected
      */
     public static void ClickOnKebabMenuOption(String option) {

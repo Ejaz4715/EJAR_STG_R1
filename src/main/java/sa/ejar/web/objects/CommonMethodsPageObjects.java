@@ -22,27 +22,27 @@ public class CommonMethodsPageObjects {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
     }
 
-    public static By nextBTN() throws Exception{
+    public static By nextBTN() {
         return By.xpath("//button[contains(text(),'التالي')]");
     }
-    public static By cancelBTN() throws Exception{
+    public static By cancelBTN() {
         return By.xpath("//button[contains(text(),'إلغاء')]");
     }
-    public static By cancelPopUpBTN() throws Exception{
+    public static By cancelPopUpBTN() {
         return By.xpath("//div/button[contains(text(),' إلغاء')]");
     }
-    public static By confirmPopUpBTN() throws Exception{
+    public static By confirmPopUpBTN() {
         return By.xpath("//div/button[text()=' تأكيد ']");
     }
 
-    public static By backBTN() throws Exception{
+    public static By backBTN(){
         return By.xpath("//button[contains(text(),'السابق')]");
     }
-    public static By confirmBTN() throws Exception{
+    public static By confirmBTN(){
         return By.xpath("//button[contains(text(),'تأكيد')]");
     }
 
-    public static By editBTN() throws Exception{
+    public static By editBTN() {
         return By.xpath("//button[contains(text(),'تعديل')]");
     }
 
@@ -93,23 +93,23 @@ public class CommonMethodsPageObjects {
     }
 
 
-    public static By theRequestTab() throws Exception{
+    public static By theRequestTab() {
         return By.xpath("//a[text()=' الطلبات ']");
     }
-    public static By viewAllTheRequests() throws Exception{
+    public static By viewAllTheRequests(){
         return By.xpath("//span[text()='عرض الطلبات']");
     }
-    public static By requestNumberOfSearchedRequest() throws Exception{
+    public static By requestNumberOfSearchedRequest(){
         return By.xpath("//span[text()=' رقم الطلب ']/following-sibling::h5");
     }
-    public static By requestList() throws Exception{
+    public static By requestList(){
         return By.xpath("//app-single-contract-termination-request");
     }
-    public static By requestNumberTXT() throws Exception{
+    public static By requestNumberTXT() {
         return By.xpath("//input[@data-name=\"reference\"]");
     }
 
-    public static By acceptTerminationOptionBTN() throws Exception{
+    public static By acceptTerminationOptionBTN() {
         return By.xpath("//a[text()=' الموافقة على الإنهاء ']");
     }
 
@@ -118,11 +118,10 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RequestPageTitle() {
-        return By.xpath("//h1[contains (text() , 'طلبات')]");
+        return By.xpath("//h1[contains (text() , 'طلبات')] | //h2[contains (text(),'طلبات')]");
     }
 
     public static By RequestStatus() {
-//        return By.xpath("//span[contains (text() , ' تم الإرسال. ')]");
         return By.xpath("//span[contains (text() , 'الحالة')]/parent::div/descendant::h5/child::span");
     }
 
@@ -153,52 +152,52 @@ public class CommonMethodsPageObjects {
     public static By NewInvoiceStatus() {
         return By.xpath("//tbody//tr//td[5]");
     }
-    public static By reviewTheContractPage() throws Exception{
+    public static By reviewTheContractPage() {
         return By.xpath("//p[text()='مراجعة العقد']");
     }
-    public static By rejectBTN() throws Exception{
+    public static By rejectBTN() {
         return By.xpath("//button[text()=' رفض ']");
     }
-    public static By rejectReasonText() throws Exception{
+    public static By rejectReasonText() {
         return By.xpath("//h2[text()='لماذا تريد الرفض؟']");
     }
-    public static By rejectReasonRadioBTNs() throws Exception{
+    public static By rejectReasonRadioBTNs() {
         return By.xpath("//app-form-radio[@formcontrolname=\"rejection_reason\"]");
     }
-    public static By rejectionReasonNote() throws Exception{
+    public static By rejectionReasonNote() {
         return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\" or  @data-name=\"rejection_reason\"]");
     }
-    public static By rejectionSubmittedMessage() throws Exception{
+    public static By rejectionSubmittedMessage(){
         return By.xpath("//h2[text()='تم تقديم الرفض']");
     }
 
-    public static By financialTab() throws Exception{
+    public static By financialTab() {
         return By.xpath("//a[text()=' المالية ']");
     }
-    public static By allInvoicesBTN() throws Exception{
+    public static By allInvoicesBTN() {
         return By.xpath("//span[text()='عرض الفواتير']");
     }
-    public static By contractsInvoices() throws Exception{
+    public static By contractsInvoices() {
         return By.xpath("//h3[text()='فواتير العقود']");
     }
-    public static By contractsNumber() throws Exception{
+    public static By contractsNumber() {
         return By.xpath("//input[@data-name=\"contract_number\"]");
     }
-    public static By allContractInvoices() throws Exception{
+    public static By allContractInvoices()  {
         return By.xpath("//span[text() = ' رقم العقد']/following-sibling::h5");
     }
 
-    public static By newContractInvoice() throws Exception{
+    public static By newContractInvoice() {
         return By.xpath("(//app-contract-invoice-row)[last()]");
     }
     public static By newAmountForContractInvoice() throws Exception{
         return By.xpath("//td[contains(text(),'ر.س')]");
     }
-    public static By viewContractOptionBTN() throws Exception{
+    public static By viewContractOptionBTN() {
         return By.xpath("//a[text()=' عرض العقد ']");
     }
 
-    public static By submitForApprovalBTN() throws Exception{
+    public static By submitForApprovalBTN() {
         return By.xpath("//button[text()=' الإرسال للتوثيق ']");
     }
     public static By removeBTN() {
@@ -384,4 +383,11 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[contains (text(), ' إرسال الطلب ')]");
     }
 
+    public static By RentalIncidentRequestOption() {
+        return By.xpath("//span[text()='عرض طلبات الوقائع الإيجارية']");
+    }
+
+    public static By RequestNumberInputField() {
+        return By.xpath("//input[@data-name=\"rental_incident_number\"]");
+    }
 }

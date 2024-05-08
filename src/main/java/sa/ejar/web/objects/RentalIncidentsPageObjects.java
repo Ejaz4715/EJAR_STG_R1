@@ -218,11 +218,9 @@ public class RentalIncidentsPageObjects {
     public static By IDNumberOfPersonWriteTheContractInput() {
         return By.xpath("//input[@data-name=\"person_id_number\"]");
     }
-
     public static By PhoneNumberOfPersonWriteTheContractInput() {
         return By.xpath("//input[@data-name=\"nationalNumber\"]");
     }
-
     public static By InputFieldErrorMessage() {
         return By.xpath("//ul/child::li[contains (@data-error, \"error\")]");
     }
