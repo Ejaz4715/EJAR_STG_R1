@@ -1,5 +1,6 @@
 package sa.ejar.web.login;
 
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
@@ -3087,7 +3088,6 @@ public class RentalIncident extends NHCWebTest {
                 String.valueOf(Integer.parseInt(arrDate[0]) + 1));
         app.rentalIncidentsPage.enterDays("0");
         app.addResidentialContractPage.clickConfirmPeriodBTN();
-        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
         logger.info("Step 08: Add Units and property details");
         app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
         CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
@@ -3107,6 +3107,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 11: Approval of Declaration");
         app.rentalIncidentsPage.clickOnApproveOfDeclarationCheckbox();
         logger.info("Step 12: Click on the (إرسال الطلب) button");
+        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
         CommonMethodsPage.clickOnSendRequestButton();
         logger.info("Step 13: Verify A (رسالة نجاح) pop up appears with the message and request number");
         app.rentalIncidentsPage.getRequestNumberRentalIncidentForApproval();
@@ -3160,7 +3161,6 @@ public class RentalIncident extends NHCWebTest {
                 String.valueOf(Integer.parseInt(arrDate[0]) + 1));
         app.rentalIncidentsPage.enterDays("0");
         app.addResidentialContractPage.clickConfirmPeriodBTN();
-        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
         logger.info("Step 08: Add Units and property details");
         app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
         CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
@@ -3180,10 +3180,38 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 11: Approval of Declaration");
         app.rentalIncidentsPage.clickOnApproveOfDeclarationCheckbox();
         logger.info("Step 12: Click on the (إرسال الطلب) button");
+        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
         CommonMethodsPage.clickOnSendRequestButton();
         logger.info("Step 13: Verify pop is dismissed and user is navigated to (Rental incidents) page ");
         app.rentalIncidentsPage.getRequestNumberRentalIncidentForReject();
         CommonMethodsPage.clickOnCloseButton();
         CommonMethodsPage.verifyValueIsDisplayed("الوقائع الإيجارية", RentalIncidentsPageObjects.RentalIncidentPage());
     }
+
+
+    /**
+     * Admin Reject the Request Sections
+     * From TC_108 To TC_114
+     */
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_108_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("ReqNum_Reject"));
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02: Click on الطلبات tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on (عرض جميع الطلبات)");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Verify the (الطلبات) page is displayed");
+        app.terminateContractPage.verifyTheRequestsIsDisplayed();
+    }
+
 }

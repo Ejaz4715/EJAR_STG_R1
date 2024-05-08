@@ -1281,6 +1281,7 @@ public class CommonMethodsPage {
 
     public static void clickOnSendRequestButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.sendRequestBTN(), 20);
+        Browser.waitForSeconds(1);
         Browser.click(CommonMethodsPageObjects.sendRequestBTN());
     }
 
