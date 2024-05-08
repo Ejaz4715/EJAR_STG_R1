@@ -209,6 +209,7 @@ public class RentalIncidentsPageObjects {
 
     public static By RentalIncidentPage() {
         return By.xpath("//h1[contains (text(), 'الوقائع الإيجارية')]");
+    }
       
     public static By CRInformation() {
         return By.xpath("//p[contains (text() , 'رقم السجل التجاري')]");

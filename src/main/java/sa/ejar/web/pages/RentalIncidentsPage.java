@@ -388,9 +388,9 @@ public class RentalIncidentsPage {
 
 
     public void selectAvailableUnit() throws Exception {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(),40);
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(), 40);
         WebElement btn = Browser.getWebElement(CommonMethodsPageObjects.nextBTN());
-        while (!(btn.isEnabled())){
+        while (!(btn.isEnabled())) {
             List<WebElement> ListOfUnitStatus = Browser.driver.findElements(RentalIncidentsPageObjects.availableUnit());
             for (WebElement y : ListOfUnitStatus) {
                 String getUnitStatus = y.getText();
@@ -399,13 +399,13 @@ public class RentalIncidentsPage {
                     break;
                 }
             }
-            if (btn.isEnabled()){
+            if (btn.isEnabled()) {
                 break;
-            }
-            else {
+            } else {
                 Browser.click(By.xpath("(//button[@class='btn btn-sm btn-outline-primary icon-container'])[2]"));
             }
         }
+    }
 
     public void verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed() {
         Browser.executeJSScroll(200);
