@@ -2,8 +2,6 @@ package sa.ejar.web.pages;
 
 import com.testcrew.base.WebBaseTest;
 import com.testcrew.web.Browser;
-import org.checkerframework.checker.units.qual.Time;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,10 +12,7 @@ import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 
 import java.time.Duration;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.driver;
@@ -359,5 +354,26 @@ public class RentalIncidentsPage {
     public void clickOnReasonRefusalRadioButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.reasonRefusalRadioBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.reasonRefusalRadioBTN());
+    }
+
+    public void verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed() {
+        Browser.executeJSScroll(200);
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput()));
+        logger.addScreenshot("");
+    }
+    public void verifyPhoneNumberOfPersonWriteTheContractInputIsNotDisplayed() {
+        Browser.executeJSScroll(200);
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput()));
+        logger.addScreenshot("");
+    }
+
+    public void enterIdNumberOfPersonWriteTheContract(String personId) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput(), 40);
+        Browser.setText(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput(), personId);
+    }
+
+    public void enterPhoneNumberOfPersonWriteTheContract(String personPhoneNumber) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), 40);
+        Browser.setText(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), personPhoneNumber);
     }
 }

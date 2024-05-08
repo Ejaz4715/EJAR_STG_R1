@@ -9,33 +9,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
-
-import sa.ejar.web.objects.RentalIncidentsPageObjects;
-
-import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
-
 import java.io.BufferedInputStream;
 import java.io.File;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-
-import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.TerminateContractPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
 import sa.ejar.web.pages.precondition.LoginPage;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
