@@ -1700,6 +1700,10 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.verifyValueIsEntered(data.get("Annual_Rent"), RentalIncidentsPageObjects.AnnualRentInputField());
     }
 
+    /**
+     * Add Unit and Property Details Section
+     * From TC_52 To TC_73
+     */
     @Test(dataProvider = "testDataProvider")
     public void TC_52_RentalIncident(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2449,7 +2453,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 13: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Select unit");
-        app.addResidentialContractPage.selectFirstAvailableUnit();
+        app.rentalIncidentsPage.selectAvailableUnit();
         logger.info("Step 15: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 16: Verify the user is navigated to (Register new rental incident) and unit and property details information is displayed");
@@ -2527,6 +2531,11 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.clickOnSearchButton();
         app.rentalIncidentsPage.verifyPopUpErrorMessages("عذرًا، الخدمة غير متوفرة");
     }
+
+    /**
+     * Required Documents Sections
+     * From TC_86 To TC_90
+     */
 
     @Test(dataProvider = "testDataProvider")
     public void TC_86_RentalIncident(Map<String, String> data) throws Exception {
@@ -2671,6 +2680,11 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.verifySendRequestButtonIsDisabled();
     }
 
+    /**
+     * Approval of Declaration Sections
+     * From TC_91 To TC_92
+     */
+
     @Test(dataProvider = "testDataProvider")
     public void TC_91_RentalIncident(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -2718,7 +2732,31 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 07: Add Units and property details");
+        logger.info("Step 06: Add Abstaining party Information");
+        app.rentalIncidentsPage.clickOnAddAbstainingPartyInfoButton();
+        app.contractWaiverPage.clickOnNationalIdRadioButton();
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Abstainer_id"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("Abstainer_DOB"));
+        CommonMethodsPage.clickOnNextButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 07: Add Contract period");
+        app.rentalIncidentsPage.clickOnContractTypeDropDown();
+        CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
+        app.rentalIncidentsPage.clickOnContractPeriodDateInput();
+        String currentDate = java.time.LocalDate.now().toString();
+        String[] arrDate = currentDate.split("-");
+        app.addResidentialContractPage.selectStartDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                arrDate[0]);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                String.valueOf(Integer.parseInt(arrDate[0]) + 1));
+        app.rentalIncidentsPage.enterDays("0");
+        app.addResidentialContractPage.clickConfirmPeriodBTN();
+        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
+        logger.info("Step 08: Add Units and property details");
         app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
         CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
         CommonMethodsPage.enterReleaseDateInputField(data.get("Release_Date_Existing_Data"));
@@ -2727,15 +2765,164 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         app.addResidentialContractPage.selectProperty("Automation Test");
         CommonMethodsPage.clickOnNextButton();
-        app.addResidentialContractPage.selectFirstAvailableUnit();
+        app.rentalIncidentsPage.selectAvailableUnit();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Reason for contract refusal");
+        logger.info("Step 09: Reason for contract refusal");
         app.rentalIncidentsPage.clickOnReasonRefusalRadioButton();
-        logger.info("Step 09: Upload Files");
+        logger.info("Step 10: Upload Files");
         app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
         app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
-        logger.info("Step 10: Verify The (إرسال الطلب) is disabled/not clickable");
+        logger.info("Step 11: Verify The (إرسال الطلب) is disabled/not clickable");
         CommonMethodsPage.verifySendRequestButtonIsDisabled();
+    }
 
+    /**
+     * Submit the Request Sections
+     * From TC_93 To TC_94
+     */
+    @Test(dataProvider = "testDataProvider")
+    public void TC_93_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Add Abstaining party Information");
+        app.rentalIncidentsPage.clickOnAddAbstainingPartyInfoButton();
+        app.contractWaiverPage.clickOnNationalIdRadioButton();
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Abstainer_id"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("Abstainer_DOB"));
+        CommonMethodsPage.clickOnNextButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 07: Add Contract period");
+        app.rentalIncidentsPage.clickOnContractTypeDropDown();
+        CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
+        app.rentalIncidentsPage.clickOnContractPeriodDateInput();
+        String currentDate = java.time.LocalDate.now().toString();
+        String[] arrDate = currentDate.split("-");
+        app.addResidentialContractPage.selectStartDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                arrDate[0]);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                String.valueOf(Integer.parseInt(arrDate[0]) + 1));
+        app.rentalIncidentsPage.enterDays("0");
+        app.addResidentialContractPage.clickConfirmPeriodBTN();
+        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
+        logger.info("Step 08: Add Units and property details");
+        app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+        CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
+        CommonMethodsPage.enterReleaseDateInputField(data.get("Release_Date_Existing_Data"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
+        CommonMethodsPage.selectExistingOwnershipDocument();
+        CommonMethodsPage.clickOnNextButton();
+        app.addResidentialContractPage.selectProperty("Automation Test");
+        CommonMethodsPage.clickOnNextButton();
+        app.rentalIncidentsPage.selectAvailableUnit();
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 09: Reason for contract refusal");
+        app.rentalIncidentsPage.clickOnReasonRefusalRadioButton();
+        logger.info("Step 10: Upload Files");
+        app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
+        app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
+        logger.info("Step 11: Approval of Declaration");
+        app.rentalIncidentsPage.clickOnApproveOfDeclarationCheckbox();
+        logger.info("Step 12: Click on the (إرسال الطلب) button");
+        CommonMethodsPage.clickOnSendRequestButton();
+        logger.info("Step 13: Verify A (رسالة نجاح) pop up appears with the message and request number");
+        app.rentalIncidentsPage.getRequestNumberRentalIncidentForApproval();
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+    }
+
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_94_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Add Abstaining party Information");
+        app.rentalIncidentsPage.clickOnAddAbstainingPartyInfoButton();
+        app.contractWaiverPage.clickOnNationalIdRadioButton();
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Abstainer_id"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("Abstainer_DOB"));
+        CommonMethodsPage.clickOnNextButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 07: Add Contract period");
+        app.rentalIncidentsPage.clickOnContractTypeDropDown();
+        CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
+        app.rentalIncidentsPage.clickOnContractPeriodDateInput();
+        String currentDate = java.time.LocalDate.now().toString();
+        String[] arrDate = currentDate.split("-");
+        app.addResidentialContractPage.selectStartDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                arrDate[0]);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(
+                String.valueOf(Integer.valueOf(arrDate[2])),
+                app.addResidentialContractPage.getCurrentMonth(arrDate[1]),
+                String.valueOf(Integer.parseInt(arrDate[0]) + 1));
+        app.rentalIncidentsPage.enterDays("0");
+        app.addResidentialContractPage.clickConfirmPeriodBTN();
+        app.rentalIncidentsPage.enterAnnualRent(data.get("Annual_Rent"));
+        logger.info("Step 08: Add Units and property details");
+        app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+        CommonMethodsPage.selectOwnershipDocumentDropdownList(data.get("Ownership_Document_Existing_Data"), CommonMethodsPageObjects.ownershipDocumentDDLOption());
+        CommonMethodsPage.enterReleaseDateInputField(data.get("Release_Date_Existing_Data"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
+        CommonMethodsPage.selectExistingOwnershipDocument();
+        CommonMethodsPage.clickOnNextButton();
+        app.addResidentialContractPage.selectProperty("Automation Test");
+        CommonMethodsPage.clickOnNextButton();
+        app.rentalIncidentsPage.selectAvailableUnit();
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 09: Reason for contract refusal");
+        app.rentalIncidentsPage.clickOnReasonRefusalRadioButton();
+        logger.info("Step 10: Upload Files");
+        app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
+        app.moveInMoveOutUnitsPage.uploadFile("ejartest.pdf");
+        logger.info("Step 11: Approval of Declaration");
+        app.rentalIncidentsPage.clickOnApproveOfDeclarationCheckbox();
+        logger.info("Step 12: Click on the (إرسال الطلب) button");
+        CommonMethodsPage.clickOnSendRequestButton();
+        logger.info("Step 13: Verify pop is dismissed and user is navigated to (Rental incidents) page ");
+        app.rentalIncidentsPage.getRequestNumberRentalIncidentForReject();
+        CommonMethodsPage.clickOnCloseButton();
+        CommonMethodsPage.verifyValueIsDisplayed("الوقائع الإيجارية", RentalIncidentsPageObjects.RentalIncidentPage());
     }
 }

@@ -182,4 +182,14 @@ public class RentalIncidentsPageObjects {
         return By.xpath("//app-form-radio[@formcontrolname=\"refusalReason\"][1]");
     }
 
+    public static By rentalIncidentRequestNumber() {
+        return By.xpath("//span[text()='نفيدك باستلام طلب تسجيل واقعة إيجارية رقم ']/strong[1]");
+    }
+    public static By availableUnit() {
+        return By.xpath("//h5//span[contains(@class,'ms')]");
+    }
+
+    public static By RentalIncidentPage() {
+        return By.xpath("//h1[contains (text(), 'الوقائع الإيجارية')]");
+    }
 }
