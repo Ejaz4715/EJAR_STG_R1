@@ -2538,6 +2538,268 @@ public class RentalIncident extends NHCWebTest {
      */
 
     @Test(dataProvider = "testDataProvider")
+    public void TC_77_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Enter invalid CR number");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("CR_Number_NotStartWithSeven"));
+        logger.info("Step 06: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        app.rentalIncidentsPage.verifyPopUpErrorMessages("عذرًا، الخدمة غير متوفرة");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_78_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        CommonMethodsPage.verifyValueIsDisplayed("رقم السجل التجاري", RentalIncidentsPageObjects.CRInformation());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_79_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 04: Verify  \"ID Num. of the person who wrote the paper contract\" field is not displayed");
+        app.rentalIncidentsPage.verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_80_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 04: Verify  \"Phone number\" field is not displayed");
+        app.rentalIncidentsPage.verifyPhoneNumberOfPersonWriteTheContractInputIsNotDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_81_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Id"), RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_82_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        logger.info("Step 08: Enter an id having less than 10 digits in \"ID Num. of the person who wrote the paper contract\" field");
+        app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id_Not_10_Digits"));
+        CommonMethodsPage.errorMessage("الحد", RentalIncidentsPageObjects.InputFieldErrorMessage());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_83_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        logger.info("Step 08: Enter an id having less than 10 digits in \"ID Num. of the person who wrote the paper contract\" field");
+        app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id_With_Letters"));
+        CommonMethodsPage.errorMessage("يرجى", RentalIncidentsPageObjects.InputFieldErrorMessage());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_84_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Phone_number"), RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_85_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on (الوقائع الإيجارية) tab");
+        app.rentalIncidentsPage.clickOnRentalIncidentTab();
+        logger.info("Step 03: Click on (تسجيل واقعة ايجارية جديد) button");
+        app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
+        logger.info("Step 04: Click on (التالي) button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 05: Add Requester Information");
+        app.rentalIncidentsPage.selectRequesterType(data.get("Requester_Type"));
+        app.rentalIncidentsPage.selectRequesterCategory(data.get("Requester_Category"));
+        app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
+        app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 06: Enter valid CR number ");
+        app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
+        logger.info("Step 07: Click on Search button");
+        CommonMethodsPage.clickOnSearchButton();
+        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        app.rentalIncidentsPage.enterPhoneNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number_Invalid"));
+        CommonMethodsPage.errorMessage("يرجى", RentalIncidentsPageObjects.InputFieldErrorMessage());
+    }
+
+
+    /**
+     * Required Documents Sections
+     * From TC_86 to TC_90
+     * */
+
+    @Test(dataProvider = "testDataProvider")
     public void TC_86_RentalIncident(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
@@ -2706,7 +2968,6 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnApproveOfDeclarationCheckbox();
         logger.info("Step 06: Verify the (الموافقة على الإقرار) checkbox is selected");
         app.rentalIncidentsPage.verifyApproveOfDeclarationCheckboxIsSelected();
-
     }
 
     @Test(dataProvider = "testDataProvider")

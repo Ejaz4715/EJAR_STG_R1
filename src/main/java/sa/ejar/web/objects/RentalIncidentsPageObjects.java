@@ -11,55 +11,62 @@ public class RentalIncidentsPageObjects {
 
     static Map<String, Map<String, String>> objects = new HashMap<>() {
         {
-
             put("A", new HashMap<>() {{
                 put("ar", "");
                 put("en", "");
             }});
-
-
-        }};
+        }
+    };
 
     public static String get(String locator) throws Exception {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
     }
-    public static By rentalIncidentTab(){
+
+    public static By rentalIncidentTab() {
         return By.xpath("//a[text()=' الوقائع الإيجارية ']");
     }
 
-    public static By newRentalIncidentBTN(){
+    public static By newRentalIncidentBTN() {
         return By.xpath("//button[text()='تسجيل واقعة ايجارية جديد']");
     }
-    public static By requesterTypeDDL(){
+
+    public static By requesterTypeDDL() {
         return By.xpath("//select[@data-name=\"requester_type\"]");
     }
-    public static By requesterTypeDDLOption(){
+
+    public static By requesterTypeDDLOption() {
         return By.xpath("//select[@data-name=\"requester_type\"]/option");
     }
 
-    public static By requesterCategoryDDL(){
+    public static By requesterCategoryDDL() {
         return By.xpath("//select[@data-name=\"requester_category\"]");
     }
-    public static By requesterCategoryDDLOption(){
+
+    public static By requesterCategoryDDLOption() {
         return By.xpath("//select[@data-name=\"requester_category\"]/option");
     }
 
-    public static By requesterRoleRadioBTNs(){
+    public static By requesterRoleRadioBTNs() {
         return By.xpath("//app-form-radio/label");
     }
-    public static By addRequesterInfoBTN(){
+
+    public static By addRequesterInfoBTN() {
         return By.xpath("//button[text()=' بيانات مقدم الطلب  ']");
     }
-    public static By addRequesterInfoPage(){
+
+    public static By addRequesterInfoPage() {
         return By.xpath("//h1[text()='إضافة بيانات مقدم الطلب ']");
     }
-    public static By newRentalIncidentPage(){
+
+    public static By newRentalIncidentPage() {
         return By.xpath("//h1[contains(text(),'تسجيل واقعة ايجارية جديدة')]");
     }
-    public static By phoneNumberInput(){
+
+    public static By phoneNumberInput() {
         return By.xpath("//input[@formcontrolname=\"nationalNumber\"]");
     }
-    public static By requesterInfo(){
+
+    public static By requesterInfo() {
         return By.xpath("//app-rental-incident-requester-parties");
     }
 
@@ -81,11 +88,11 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By AbstainingPartyInfoSection() {
-        return  By.xpath("//a[contains (@class , 'active') and text() = ' معلومات عن الطرف الممتنع ']");
+        return By.xpath("//a[contains (@class , 'active') and text() = ' معلومات عن الطرف الممتنع ']");
     }
 
     public static By IdentificationAbstainingPartyIdSection() {
-        return  By.xpath("//a[contains (@class , 'active') and text() = ' تحديد هوية الطرف الممتنع ']");
+        return By.xpath("//a[contains (@class , 'active') and text() = ' تحديد هوية الطرف الممتنع ']");
     }
 
     public static By AbstainingPartyInformation() {
@@ -100,7 +107,7 @@ public class RentalIncidentsPageObjects {
         return By.xpath("//h2[text() = 'بيانات الطرف الممتنع']/ancestor::app-card/descendant::button[@data-test-id=\"requester.delete_requester\"]");
     }
 
-    public static By ContractPeriodSectionTitle(){
+    public static By ContractPeriodSectionTitle() {
         return By.xpath("//h2[contains (text(), 'مدة العقد')]");
     }
 
@@ -111,6 +118,7 @@ public class RentalIncidentsPageObjects {
     public static By ContractTypeDropDown() {
         return By.xpath("//select[@data-name=\"contract_type\"]");
     }
+
     public static By ContractTypeDropDownOptionsList() {
         return By.xpath("//select[@data-name=\"contract_type\"]/child::option");
     }
@@ -142,6 +150,7 @@ public class RentalIncidentsPageObjects {
     public static By PopUpErrorMessage() {
         return By.xpath("//div[@class='message']");
     }
+
     public static By organizationRadioBTN() {
         return By.xpath("//app-form-radio[@formcontrolname=\"selectedOrganizationId\"]");
     }
@@ -149,6 +158,7 @@ public class RentalIncidentsPageObjects {
     public static By organizationInfoSection() {
         return By.xpath("//a[text()=' بيانات المنشأة ']");
     }
+
     public static By continueToRepresentativeInfoBTN() {
         return By.xpath("//button[text()=' الاستمرار في معلومات المفوض ']");
     }
@@ -156,6 +166,7 @@ public class RentalIncidentsPageObjects {
     public static By organizationIdentificationSection() {
         return By.xpath("//a[text()=' بيانات ممثل المنشأة ']");
     }
+
     public static By addOwnershipDocumentLinkBTN() {
         return By.xpath("//a[text()=' إضافة وثيقة ملكية ']");
     }
@@ -163,21 +174,27 @@ public class RentalIncidentsPageObjects {
     public static By ownershipDocumentIdentificationSection() {
         return By.xpath("//a[text()=' تحديد وثيقة ملكية ']");
     }
+
     public static By assertOwnershipDocument() {
         return By.xpath("//p[text()=' وثيقة ملكية']");
     }
+
     public static By overSizeErrorMsg() {
         return By.xpath("//p[@class=\"error\"]");
     }
+
     public static By differentFormatAttachment() {
         return By.xpath("//p[@class=\"browse-file-text\"]");
     }
+
     public static By approveOfDeclarationCheckbox() {
         return By.xpath("//app-form-checkbox[@formcontrolname=\"approval_declaration\"]");
     }
+
     public static By approveOfDeclarationCheckboxSelected() {
         return By.xpath("//input[@data-name=\"approval_declaration\"]");
     }
+
     public static By reasonRefusalRadioBTN() {
         return By.xpath("//app-form-radio[@formcontrolname=\"refusalReason\"][1]");
     }
@@ -185,11 +202,27 @@ public class RentalIncidentsPageObjects {
     public static By rentalIncidentRequestNumber() {
         return By.xpath("//span[text()='نفيدك باستلام طلب تسجيل واقعة إيجارية رقم ']/strong[1]");
     }
+  
     public static By availableUnit() {
         return By.xpath("//h5//span[contains(@class,'ms')]");
     }
 
     public static By RentalIncidentPage() {
         return By.xpath("//h1[contains (text(), 'الوقائع الإيجارية')]");
+      
+    public static By CRInformation() {
+        return By.xpath("//p[contains (text() , 'رقم السجل التجاري')]");
+    }
+
+    public static By IDNumberOfPersonWriteTheContractInput() {
+        return By.xpath("//input[@data-name=\"person_id_number\"]");
+    }
+
+    public static By PhoneNumberOfPersonWriteTheContractInput() {
+        return By.xpath("//input[@data-name=\"nationalNumber\"]");
+    }
+
+    public static By InputFieldErrorMessage() {
+        return By.xpath("//ul/child::li[contains (@data-error, \"error\")]");
     }
 }

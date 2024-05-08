@@ -9,21 +9,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
-
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
-
 import java.io.BufferedInputStream;
 import java.io.File;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-
 import sa.ejar.web.pages.precondition.LoginPage;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -1227,16 +1222,6 @@ public class CommonMethodsPage {
         setText(CommonMethodsPageObjects.releaseDateTXT(), releaseDate);
     }
 
-    //    public static void verifyReleaseDateInputFieldIsDisabled() {
-//        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.releaseDateTXT(), 40 );
-//        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.releaseDateTXT()), "Input filed is not disabled");
-//        logger.addScreenshot("");
-//    }
-//    public static void verifyOwnershipDocumentInputFieldIsDisabled() {
-//        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40 );
-//        Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.ownershipDocumentNumberTXT()), "Input filed is not disabled");
-//        logger.addScreenshot("");
-//    }
     public static void verifyOwnerIdInputFieldIsNotDisplayed() {
         Assert.assertTrue(isElementNotPresent(CommonMethodsPageObjects.ownerIdTXT()), "Input filed is not displayed");
         logger.addScreenshot("");

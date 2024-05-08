@@ -12,10 +12,8 @@ import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
-
 import java.time.Duration;
 import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
 import static com.testcrew.web.Browser.getText;
@@ -41,7 +39,6 @@ public class RentalIncidentsPage {
 
     public void verifyRequesterTypeIsSelected(String selectedRequesterType) throws Exception {
         WebElement requesterType = getWebElement(RentalIncidentsPageObjects.requesterTypeDDL());
-//        Browser.getDropdownFirstSelectedOption()
         String t = requesterType.getAttribute("value");
         String text = t.toLowerCase();
         if (text.contains("lessor")) {
@@ -121,8 +118,6 @@ public class RentalIncidentsPage {
         WebElement ele = Browser.getWebElement(RentalIncidentsPageObjects.phoneNumberInput());
         ele.click();
         ele.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
-//        Browser.clearText(RentalIncidentsPageObjects.phoneNumberInput());
-
     }
 
     public void verifyRequesterInfoIsDisplayed() throws Exception {
@@ -411,5 +406,25 @@ public class RentalIncidentsPage {
                 Browser.click(By.xpath("(//button[@class='btn btn-sm btn-outline-primary icon-container'])[2]"));
             }
         }
+
+    public void verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed() {
+        Browser.executeJSScroll(200);
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput()));
+        logger.addScreenshot("");
+    }
+    public void verifyPhoneNumberOfPersonWriteTheContractInputIsNotDisplayed() {
+        Browser.executeJSScroll(200);
+        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput()));
+        logger.addScreenshot("");
+    }
+
+    public void enterIdNumberOfPersonWriteTheContract(String personId) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput(), 40);
+        Browser.setText(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput(), personId);
+    }
+
+    public void enterPhoneNumberOfPersonWriteTheContract(String personPhoneNumber) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), 40);
+        Browser.setText(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), personPhoneNumber);
     }
 }
