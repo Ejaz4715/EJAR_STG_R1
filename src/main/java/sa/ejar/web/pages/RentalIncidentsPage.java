@@ -1,7 +1,9 @@
 package sa.ejar.web.pages;
 
 import com.testcrew.base.WebBaseTest;
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,13 +12,11 @@ import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
-
 import java.time.Duration;
 import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
-import static com.testcrew.web.Browser.driver;
-import static com.testcrew.web.Browser.getWebElement;
+import static com.testcrew.web.Browser.*;
+import static com.testcrew.web.Browser.getText;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class RentalIncidentsPage {
@@ -39,7 +39,6 @@ public class RentalIncidentsPage {
 
     public void verifyRequesterTypeIsSelected(String selectedRequesterType) throws Exception {
         WebElement requesterType = getWebElement(RentalIncidentsPageObjects.requesterTypeDDL());
-//        Browser.getDropdownFirstSelectedOption()
         String t = requesterType.getAttribute("value");
         String text = t.toLowerCase();
         if (text.contains("lessor")) {
@@ -74,8 +73,8 @@ public class RentalIncidentsPage {
     public void clickOnRequesterRoleRadioButtons(String requesterRole) {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requesterRoleRadioBTNs(), 40);
         List<WebElement> requester = Browser.getWebElements(RentalIncidentsPageObjects.requesterRoleRadioBTNs());
-        int i ;
-        for (i = 0 ; i <= requester.size(); i++) {
+        int i;
+        for (i = 0; i <= requester.size(); i++) {
             String optText = requester.get(i).getText();
             if (optText.contains(requesterRole)) {
                 requester.get(i).click();
@@ -119,8 +118,6 @@ public class RentalIncidentsPage {
         WebElement ele = Browser.getWebElement(RentalIncidentsPageObjects.phoneNumberInput());
         ele.click();
         ele.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
-//        Browser.clearText(RentalIncidentsPageObjects.phoneNumberInput());
-
     }
 
     public void verifyRequesterInfoIsDisplayed() throws Exception {
@@ -144,6 +141,7 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationRadioBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.organizationRadioBTN());
     }
+
     public void verifyOrganizationInfoSectionIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationInfoSection(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.organizationInfoSection()));
@@ -159,11 +157,12 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN());
     }
-    public void verifyAddOwnershipDocumentLinkButtonIsDisabled(){
+
+    public void verifyAddOwnershipDocumentLinkButtonIsDisabled() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN(), 40);
         boolean b = false;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        if(wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN()))==null){
+        if (wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) == null) {
             b = true;
         }
         Assert.assertFalse(b, "Link is clickable");
@@ -175,11 +174,13 @@ public class RentalIncidentsPage {
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.ownershipDocumentIdentificationSection()));
         logger.addScreenshot("");
     }
+
     public void verifyOrganizationIdentificationSectionIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.organizationIdentificationSection(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.organizationIdentificationSection()));
         logger.addScreenshot("");
     }
+
     public void verifyAddAbstainingPartyButtonIsDisabled() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton(), 40);
         Assert.assertTrue(Browser.isElementDisabled(RentalIncidentsPageObjects.AddAbstainingPartyInfoButton()), "Abstaining party info button is enabled");
@@ -227,11 +228,12 @@ public class RentalIncidentsPage {
     }
 
     public void clickOnEditButtonOnAbstainingPartyInfoSection() {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.EditButtonOnAbstainingPartyInfoSection(), 40 );
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.EditButtonOnAbstainingPartyInfoSection(), 40);
         Browser.click(RentalIncidentsPageObjects.EditButtonOnAbstainingPartyInfoSection());
     }
+
     public void clickOnDeleteButtonOnAbstainingPartyInfoSection() {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.DeleteButtonOnAbstainingPartyInfoSection(), 40 );
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.DeleteButtonOnAbstainingPartyInfoSection(), 40);
         Browser.click(RentalIncidentsPageObjects.DeleteButtonOnAbstainingPartyInfoSection());
     }
 
@@ -241,10 +243,10 @@ public class RentalIncidentsPage {
     }
 
     public void verifyContractPeriodDateInputFieldIsNotClickable() {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ContractPeriodDateInputField(), 40 );
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ContractPeriodDateInputField(), 40);
         boolean status = false;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        if(wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.ContractPeriodDateInputField()))==null){
+        if (wait.until(ExpectedConditions.elementToBeClickable(RentalIncidentsPageObjects.ContractPeriodDateInputField())) == null) {
             status = true;
         }
         Assert.assertFalse(status, "Contract period date input field is Enabled/Clickable");
@@ -256,7 +258,7 @@ public class RentalIncidentsPage {
         Browser.click(RentalIncidentsPageObjects.ContractTypeDropDown());
     }
 
-    public void verifyContractTypeIsSelected(String selectedContractType){
+    public void verifyContractTypeIsSelected(String selectedContractType) {
         WebElement contractType = Browser.getWebElement(RentalIncidentsPageObjects.ContractTypeDropDown());
         String t = contractType.getAttribute("value");
         String text = t.toLowerCase();
@@ -270,7 +272,7 @@ public class RentalIncidentsPage {
             text = "صناعي";
         }
         Assert.assertEquals(text, selectedContractType, "Selected contract type is not same");
-        logger.addScreenshot("The " + text +" contract type is selected");
+        logger.addScreenshot("The " + text + " contract type is selected");
     }
 
     public void clickOnContractPeriodDateInput() {
@@ -307,36 +309,38 @@ public class RentalIncidentsPage {
         WebElement error = Browser.getWebElement(RentalIncidentsPageObjects.PopUpErrorMessage());
         String errorMessage = error.getText();
         Assert.assertTrue(errorMessage.contains(expectedMessage),
-                "Actual Error message (" + errorMessage + ") does not match with expected (" +expectedMessage + ") messages");
+                "Actual Error message (" + errorMessage + ") does not match with expected (" + expectedMessage + ") messages");
         logger.addScreenshot("");
     }
+
     public void verifyAddOwnershipDocumentInfoIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.assertOwnershipDocument(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.assertOwnershipDocument()));
         logger.addScreenshot("");
     }
 
-    public void verifyReleaseDateInputFieldIsDisabled(){
+    public void verifyReleaseDateInputFieldIsDisabled() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.releaseDateTXT(), 40);
         boolean b = false;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        if(wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.releaseDateTXT()))==null){
+        if (wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.releaseDateTXT())) == null) {
             b = true;
         }
         Assert.assertFalse(b, "Input filed is not disabled");
         logger.addScreenshot("");
     }
 
-    public void verifyOwnershipDocumentInputFieldIsDisabled(){
+    public void verifyOwnershipDocumentInputFieldIsDisabled() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40);
         boolean b = false;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        if(wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.ownershipDocumentNumberTXT()))==null){
+        if (wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.ownershipDocumentNumberTXT())) == null) {
             b = true;
         }
         Assert.assertFalse(b, "Input filed is not disabled");
         logger.addScreenshot("");
     }
+
     public void verifyDifferentAttachmentFormatNotUploaded() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.differentFormatAttachment(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.differentFormatAttachment()));
@@ -347,14 +351,61 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.approveOfDeclarationCheckbox(), 40);
         Browser.click(RentalIncidentsPageObjects.approveOfDeclarationCheckbox());
     }
+
     public void verifyApproveOfDeclarationCheckboxIsSelected() {
         Assert.assertTrue(Browser.isElementSelected(RentalIncidentsPageObjects.approveOfDeclarationCheckboxSelected()));
         logger.addScreenshot("");
     }
+
     public void clickOnReasonRefusalRadioButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.reasonRefusalRadioBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.reasonRefusalRadioBTN());
     }
+
+    public void getRequestNumberRentalIncidentForApproval() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
+        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Approve", request);
+        TestDataManager.writeDependantGlobalTestData("RentalIncident");
+        logger.addScreenshot("");
+    }
+
+    public void getRequestNumberRentalIncidentForReject() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
+        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Reject", request);
+        TestDataManager.writeDependantGlobalTestData("RentalIncident");
+        logger.addScreenshot("");
+    }
+
+    public void getRequestNumberRentalIncidentForUpdate() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
+        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Update", request);
+        TestDataManager.writeDependantGlobalTestData("RentalIncident");
+        logger.addScreenshot("");
+    }
+
+
+    public void selectAvailableUnit() throws Exception {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(),40);
+        WebElement btn = Browser.getWebElement(CommonMethodsPageObjects.nextBTN());
+        while (!(btn.isEnabled())){
+            List<WebElement> ListOfUnitStatus = Browser.driver.findElements(RentalIncidentsPageObjects.availableUnit());
+            for (WebElement y : ListOfUnitStatus) {
+                String getUnitStatus = y.getText();
+                if (getUnitStatus.contains("متاحة")) {
+                    y.click();
+                    break;
+                }
+            }
+            if (btn.isEnabled()){
+                break;
+            }
+            else {
+                Browser.click(By.xpath("(//button[@class='btn btn-sm btn-outline-primary icon-container'])[2]"));
+            }
+        }
 
     public void verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed() {
         Browser.executeJSScroll(200);
