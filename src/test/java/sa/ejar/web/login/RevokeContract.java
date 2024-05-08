@@ -1647,7 +1647,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");
-//        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 08: Click on \" عرض \" button beside attachment");
         CommonMethodsPage.ClickOnAttachment("view");
         CommonMethodsPage.verifyNewTabIsOpened();

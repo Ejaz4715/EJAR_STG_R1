@@ -101,4 +101,7 @@ public class RevokeContractPageObjects {
         return By.xpath("//button[@routerlink=\"..\"]");
     }
 
+    public static By RentalIncidentRequestPageHeading() {
+        return By.xpath("//h1[contains (text() , 'تفاصيل الطلب')]");
+    }
 }

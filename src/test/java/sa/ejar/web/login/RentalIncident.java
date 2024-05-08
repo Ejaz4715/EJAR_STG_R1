@@ -1,5 +1,6 @@
 package sa.ejar.web.login;
 
+import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
@@ -3185,5 +3186,54 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.getRequestNumberRentalIncidentForReject();
         CommonMethodsPage.clickOnCloseButton();
         CommonMethodsPage.verifyValueIsDisplayed("الوقائع الإيجارية", RentalIncidentsPageObjects.RentalIncidentPage());
+    }
+
+    /**
+     * Submit the Request Sections
+     * From TC_95 To TC_107
+     */
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_95_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        CommonMethodsPage.checkRequestsPageIsDisplayed("Rental Incident");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_96_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        CommonMethodsPage.clickOnCloseButton();
+        app.rentalIncidentsPage.checkRentalIncidentRequestPageIsDisplayed();
     }
 }
