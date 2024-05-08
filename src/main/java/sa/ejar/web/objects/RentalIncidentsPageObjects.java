@@ -224,4 +224,15 @@ public class RentalIncidentsPageObjects {
     public static By InputFieldErrorMessage() {
         return By.xpath("//ul/child::li[contains (@data-error, \"error\")]");
     }
+
+    public static By rejectTheRequestPopUp() {
+        return By.xpath("//h2[text()=' رفض الطلب ']");
+    }
+    public static By rejectReasonTextarea() {
+        return By.xpath("//textarea[@formcontrolname=\"rejectReason\"]");
+    }
+    public static By rejectConfirmationMsg() {
+        return By.xpath("//p[contains(text(),'تأكيد رفض طلب واقعة إيجاريه')]");
+    }
+
 }

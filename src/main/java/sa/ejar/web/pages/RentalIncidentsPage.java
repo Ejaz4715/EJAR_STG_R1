@@ -427,6 +427,29 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), 40);
         Browser.setText(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput(), personPhoneNumber);
     }
+
+    public void verifyRejectTheRequestPopUpIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rejectTheRequestPopUp(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rejectTheRequestPopUp()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyConfirmButtonIsDisabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.confirmBTN()));
+        logger.addScreenshot("");
+    }
+
+    public void enterRejectReason(String rejectReason) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rejectReasonTextarea(), 40);
+        Browser.setText(RentalIncidentsPageObjects.rejectReasonTextarea(), rejectReason);
+    }
+
+    public void verifyRejectConfirmationMessageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rejectConfirmationMsg(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rejectConfirmationMsg()));
+        logger.addScreenshot("");
+    }
     public void checkRentalIncidentRequestPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RentalIncidentRequestPageHeading(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.RentalIncidentRequestPageHeading()));
