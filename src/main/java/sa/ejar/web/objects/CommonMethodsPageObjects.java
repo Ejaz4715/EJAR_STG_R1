@@ -390,4 +390,8 @@ public class CommonMethodsPageObjects {
     public static By RequestNumberInputField() {
         return By.xpath("//input[@data-name=\"rental_incident_number\"]");
     }
+    public static By verifyBTN() {
+        return By.xpath("//button[text()=' تحقق ']");
+    }
+
 }

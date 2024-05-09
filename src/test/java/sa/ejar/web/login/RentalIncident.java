@@ -3206,7 +3206,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مشرف إيجار");
         logger.info("Step 02:  Click on Requests ");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
         CommonMethodsPage.clickOnRentalIncidentRequestButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Rental Incident");
     }
@@ -3225,7 +3225,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مشرف إيجار");
         logger.info("Step 02:  Click on Requests ");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
         CommonMethodsPage.clickOnRentalIncidentRequestButton();
         logger.info("Step 04:  Click on Filter button and search for the request");
         CommonMethodsPage.clickFilterBtn();
@@ -3555,7 +3555,6 @@ public class RentalIncident extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_108_RentalIncident(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ReqNum_Reject"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3565,12 +3564,182 @@ public class RentalIncident extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on الطلبات tab");
+        logger.info("Step 02:  Click on Requests ");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on (عرض جميع الطلبات)");
-        CommonMethodsPage.clickOnViewAllRequestsButton();
-        logger.info("Step 04: Verify the (الطلبات) page is displayed");
-        app.terminateContractPage.verifyTheRequestsIsDisplayed();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        CommonMethodsPage.checkRequestsPageIsDisplayed("Rental Incident");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_109_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        CommonMethodsPage.clickOnCloseButton();
+        app.rentalIncidentsPage.checkRentalIncidentRequestPageIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_110_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: Click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on Reject the request");
+        CommonMethodsPage.clickOnRejectBTN();
+        logger.info("Step 07: Verify a (Request Reject) pop up is displayed ");
+        app.rentalIncidentsPage.verifyRejectTheRequestPopUpIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_111_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: Click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on Reject the request");
+        CommonMethodsPage.clickOnRejectBTN();
+        logger.info("Step 07: Verify the (Confirm) button is not clickable");
+        app.rentalIncidentsPage.verifyConfirmButtonIsDisabled();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_112_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: Click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on Reject the request");
+        CommonMethodsPage.clickOnRejectBTN();
+        logger.info("Step 07: Enter rejection reason");
+        app.rentalIncidentsPage.enterRejectReason(data.get("Reject_Reason"));
+        logger.info("Step 08: Click on (تأكيد) button");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 09: Verify a (رسالة تنبيه) pop up appears with the message: تأكيد رفض طلب واقعة إيجاريه سوف يقوم النظام بإشعار المستفيد واسترجاع الرسوم وإتاحة الوحدة لتأجيرها.");
+        app.rentalIncidentsPage.verifyRejectConfirmationMessageIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_113_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: Click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on Reject the request");
+        CommonMethodsPage.clickOnRejectBTN();
+        logger.info("Step 07: Enter rejection reason");
+        app.rentalIncidentsPage.enterRejectReason(data.get("Reject_Reason"));
+        logger.info("Step 08: Click on (تأكيد) button");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 09: Click on (تأكيد الرفض) button");
+        app.rentalIncidentsPage.clickOnConfirmTheRejectionButton();
+        logger.info("Step 10: Verify a (رسالة نجاح) pop up appears with the message:تم رفض الطلب بنجاح");
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_114_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات الوقائع الإيجارية ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Reject"));
+        logger.info("Step 05: Verify the request status is changed to (Rejected)");
+        app.rentalIncidentsPage.checkRentalIncidentRequestStatus("مرفوض");
     }
 
     /**
@@ -3660,5 +3829,123 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnCheckboxes();
         logger.info("Step 08: Verify the Send ( إرسال ) button disabled/not clickable");
         app.rentalIncidentsPage.verifySendRequestButtonIsDisabled();
+    }
+
+    /**
+     * Rental incident inquiry Sections
+     * From TC_124 To TC_130
+     */
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_124_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية) button");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Verify the user navigate to (الاستعلام عن واقعة ايجارية) page");
+        app.rentalIncidentsPage.checkRentalIncidentInquiryPageIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_125_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية) button");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Verify the (تحقق) button is disabled/not clickable");
+        app.rentalIncidentsPage.checkVerifyButtonIsDisabled();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_126_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية) button");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Enter Invalid  (رقم الهوية)");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("CR_Number_Letters"));
+        logger.info("Step 04: Verify an error is displayed under(يرجى إدخال رقم الهوية) input field with Message:يرجى التأكد من التنسيق");
+        CommonMethodsPage.errorCRMessage("يرجى التأكد من التنسيق");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_127_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Enter Valid (رقم الهوية)");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Username"));
+        logger.info("Step 04: Click on (تحقق) button");
+        CommonMethodsPage.clickOnVerifyBTN();
+        logger.info("Step 05: Verify the user navigate to (رمز التحقق) popup");
+        CommonMethodsPage.verifyOTPPopIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_128_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Enter Valid (رقم الهوية)");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("User_With_No_Rental_Incident"));
+        logger.info("Step 04: Click on (تحقق) button");
+        CommonMethodsPage.clickOnVerifyBTN();
+        logger.info("Step 05: Verify a popup message :لا يوجد أي طلبات مسجلة مسبقا برقم الهوية المدخل displayed");
+        app.rentalIncidentsPage.checkWarningPopupIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_129_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Enter Valid (رقم الهوية)");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Username"));
+        logger.info("Step 04: Click on (تحقق) button");
+        CommonMethodsPage.clickOnVerifyBTN();
+        logger.info("Step 05: Enter Invalid OTP");
+        app.loginPage.enterVerificationCodeForOTP(data.get("Wrong_OTP"));
+        logger.info("Step 06: Click on (التحقق من الهوية) button");
+        app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
+        logger.info("Step 06: Verify an error is displayed under OTP input field Message: E1389 رمز OTP غير صالح");
+        CommonMethodsPage.verifyInvalidOTPErrorMessagePresentStatus(true);
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_130_RentalIncident(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Click on (طلب تسجيل واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRegisterUnilateralContract();
+        logger.info("Step 02: Click on (الاستعلام عن واقعة ايجارية)");
+        app.rentalIncidentsPage.clickOnRentalIncidentInquiryButton();
+        logger.info("Step 03: Enter Valid (رقم الهوية)");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("Username"));
+        logger.info("Step 04: Click on (تحقق) button");
+        CommonMethodsPage.clickOnVerifyBTN();
+        logger.info("Step 05: Enter Valid OTP");
+        app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
+        logger.info("Step 06: Click on (التحقق من الهوية) button");
+        app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
+        logger.info("Step 07: click View Details option");
+        app.rentalIncidentsPage.clickOnKebabButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 08: Verify the user navigate to  (تفاصيل طلب رقم) page of selected request");
+        app.rentalIncidentsPage.checkRequestDetailsPageDisplayed();
     }
 }

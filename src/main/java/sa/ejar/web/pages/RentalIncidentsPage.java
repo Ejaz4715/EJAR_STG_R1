@@ -521,7 +521,49 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
         Assert.assertTrue(Browser.isElementEnabled(RentalIncidentsPageObjects.UpdateAndResubmitButton()));
     }
+    public void clickOnConfirmTheRejectionButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.confirmTheRejectionBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.confirmTheRejectionBTN());
+    }
 
+    public void clickOnRegisterUnilateralContract() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.registerUnilateralContract(), 40);
+        Browser.click(RentalIncidentsPageObjects.registerUnilateralContract());
+    }
+
+    public void clickOnRentalIncidentInquiryButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentInquiryBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.rentalIncidentInquiryBTN());
+    }
+
+    public void checkRentalIncidentInquiryPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentInquiryTitle(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rentalIncidentInquiryTitle()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkVerifyButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.verifyBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.verifyBTN()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkWarningPopupIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.warningPopup(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.warningPopup()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkRequestDetailsPageDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requestDetailsPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.requestDetailsPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void clickOnKebabButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.kebabBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.kebabBTN());
+    }
     public void clickOnUpdateAndResubmitButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
         Browser.click(RentalIncidentsPageObjects.UpdateAndResubmitButton());

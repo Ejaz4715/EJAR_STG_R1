@@ -693,6 +693,11 @@ public class CommonMethodsPage {
         click(CommonMethodsPageObjects.RejectBTN());
     }
 
+    public static void clickOnVerifyBTN() {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.verifyBTN(), 40);
+        click(CommonMethodsPageObjects.verifyBTN());
+    }
+
     public static void verifyNewInvoiceDateIsSameAsEnteredInRequest(String expectedDate) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.PaymentDueDateOnInvoice(), 40);
         String actualDate = getText(CommonMethodsPageObjects.PaymentDueDateOnInvoice());
