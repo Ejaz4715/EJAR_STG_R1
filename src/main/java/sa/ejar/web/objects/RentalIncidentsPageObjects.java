@@ -202,7 +202,7 @@ public class RentalIncidentsPageObjects {
     public static By rentalIncidentRequestNumber() {
         return By.xpath("//span[text()='نفيدك باستلام طلب تسجيل واقعة إيجارية رقم ']/strong[1]");
     }
-  
+
     public static By availableUnit() {
         return By.xpath("//h5//span[contains(@class,'ms')]");
     }
@@ -210,7 +210,7 @@ public class RentalIncidentsPageObjects {
     public static By RentalIncidentPage() {
         return By.xpath("//h1[contains (text(), 'الوقائع الإيجارية')]");
     }
-      
+
     public static By CRInformation() {
         return By.xpath("//p[contains (text() , 'رقم السجل التجاري')]");
     }
@@ -218,9 +218,11 @@ public class RentalIncidentsPageObjects {
     public static By IDNumberOfPersonWriteTheContractInput() {
         return By.xpath("//input[@data-name=\"person_id_number\"]");
     }
+
     public static By PhoneNumberOfPersonWriteTheContractInput() {
         return By.xpath("//input[@data-name=\"nationalNumber\"]");
     }
+
     public static By InputFieldErrorMessage() {
         return By.xpath("//ul/child::li[contains (@data-error, \"error\")]");
     }
@@ -228,11 +230,60 @@ public class RentalIncidentsPageObjects {
     public static By rejectTheRequestPopUp() {
         return By.xpath("//h2[text()=' رفض الطلب ']");
     }
+
     public static By rejectReasonTextarea() {
         return By.xpath("//textarea[@formcontrolname=\"rejectReason\"]");
     }
+
     public static By rejectConfirmationMsg() {
         return By.xpath("//p[contains(text(),'تأكيد رفض طلب واقعة إيجاريه')]");
     }
 
+    public static By RentalIncidentRequestStatus() {
+        return By.xpath("//p[contains (text() , 'حالة ')]/parent::app-info/descendant::p/child::span");
+    }
+
+    public static By SendToLegalAuthoritiesBTN() {
+        return By.xpath("//button[contains (text(), 'ارسال للجهات القانونية')]");
+    }
+
+    public static By SendToLegalAuthoritiesPopUp() {
+        return By.xpath("//h2[text()=' ارسال للجهات القانونية ']");
+    }
+
+    public static By ViewAttachmentButton() {
+        return By.xpath("(//app-card/descendant::button[contains(text(),'عرض')])[1]");
+    }
+
+    public static By CommentForLegalAuthorities() {
+        return By.xpath("//label[contains (text() , 'تعليقك')]/parent::app-form-field/descendant::textarea");
+    }
+
+    public static By SendRequestButton() {
+        return By.xpath("//button[contains (text(), 'رسال الطلب')] | //button[contains (text(), ' إرسال ')] ");
+    }
+
+    public static By ReviewedByLegalAuthorityButton() {
+        return By.xpath("//button[text()=' تمت مراجعة الإدارة القانونية ']");
+    }
+
+    public static By ApproveRequestButton() {
+        return By.xpath("//button[text()=' الموافقة علي الطلب ']");
+    }
+
+    public static By WarningPopUpTitle() {
+        return By.xpath("//h2[text()=' رسالة تنبيه ']");
+    }
+
+    public static By ApproveButtonOnPopup() {
+        return By.xpath("//button[text()=' الموافقة ']");
+    }
+
+    public static By UpdateAndResubmitButton() {
+        return By.xpath("//button[text()=' تحديث واعادة ارسال ']");
+    }
+
+    public static By CheckBoxesForUpdateAndResubmitPopup() {
+        return By.xpath("//label[@class=\"form-check-label\"]");
+    }
 }

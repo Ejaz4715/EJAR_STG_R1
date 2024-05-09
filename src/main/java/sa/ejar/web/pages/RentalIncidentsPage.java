@@ -462,5 +462,89 @@ public class RentalIncidentsPage {
         logger.addScreenshot("Entered Request Number in search input field");
     }
 
+    public void checkRentalIncidentRequestStatus(String expectedStatus) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.RentalIncidentRequestStatus(), 40);
+        String status = Browser.getText(RentalIncidentsPageObjects.RentalIncidentRequestStatus());
+        Assert.assertTrue(status.contains(expectedStatus),
+                "Actual request status (" +status+ ") does not match with expected (" +expectedStatus+ ") status");
+        logger.addScreenshot("Request status is ("+status+ ")");
+    }
 
+    public void clickOnSendToLegalAuthoritiesButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.SendToLegalAuthoritiesBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.SendToLegalAuthoritiesBTN());
+    }
+
+    public void verifySendToLegalAuthoritiesPopUpIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.SendToLegalAuthoritiesPopUp(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.SendToLegalAuthoritiesPopUp()));
+        logger.addScreenshot("");
+    }
+
+    public void clickOnViewAttachment() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ViewAttachmentButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.ViewAttachmentButton());
+    }
+
+    public void enterCommentInSendToLegalAuthoritiesPopUp(String comment) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CommentForLegalAuthorities(), 40);
+        Browser.setText(RentalIncidentsPageObjects.CommentForLegalAuthorities(), comment);
+    }
+
+    public void verifySendRequestButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.SendRequestButton(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(RentalIncidentsPageObjects.SendRequestButton()), "Button is not disabled");
+        logger.addScreenshot("");
+    }
+
+    public void clickOnSendRequestButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.SendRequestButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.SendRequestButton());
+    }
+
+    public void clickOnReviewedByLegalAuthorityButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ReviewedByLegalAuthorityButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.ReviewedByLegalAuthorityButton());
+    }
+
+    public void clickOnApproveRequestButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ApproveRequestButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.ApproveRequestButton());
+    }
+
+    public void clickOnApproveButtonOnPopUp() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.ApproveButtonOnPopup(), 40);
+        Browser.click(RentalIncidentsPageObjects.ApproveButtonOnPopup());
+    }
+
+    public void verifyUpdateAndResubmitButtonIsEnabled() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
+        Assert.assertTrue(Browser.isElementEnabled(RentalIncidentsPageObjects.UpdateAndResubmitButton()));
+    }
+
+    public void clickOnUpdateAndResubmitButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
+        Browser.click(RentalIncidentsPageObjects.UpdateAndResubmitButton());
+    }
+
+    public void verifyCheckBoxesAreClickAble() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup(), 40);
+        List <WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
+        boolean status = true;
+        for (WebElement checkbox : chckBoxList){
+            if (!(checkbox.isEnabled())){
+                status = false;
+                break;
+            }
+        }
+        Assert.assertTrue(status, "All the checkboxes are not clickable");
+    }
+
+    public void clickOnCheckboxes() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup(), 40);
+        List <WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
+        for (WebElement checkbox : chckBoxList){
+            checkbox.click();
+        }
+    }
 }
