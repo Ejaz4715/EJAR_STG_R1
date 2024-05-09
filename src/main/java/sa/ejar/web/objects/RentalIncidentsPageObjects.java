@@ -255,7 +255,7 @@ public class RentalIncidentsPageObjects {
         return By.xpath("(//app-card/descendant::button[contains(text(),'عرض')])[1]");
     }
 
-    public static By CommentForLegalAuthorities() {
+    public static By CommentTextareaOnPopup() {
         return By.xpath("//label[contains (text() , 'تعليقك')]/parent::app-form-field/descendant::textarea");
     }
 
@@ -312,4 +312,11 @@ public class RentalIncidentsPageObjects {
         return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
     }
 
+    public static By RequestUpdateCount() {
+        return By.xpath("//p[text()=' عدد مرات إرجاع الطلب لتعديل ']/following-sibling::p");
+    }
+
+    public static By AdminComment() {
+        return By.xpath("//blockquote/div[@class='note']");
+    }
 }

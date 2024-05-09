@@ -486,9 +486,9 @@ public class RentalIncidentsPage {
         Browser.click(RentalIncidentsPageObjects.ViewAttachmentButton());
     }
 
-    public void enterCommentInSendToLegalAuthoritiesPopUp(String comment) {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CommentForLegalAuthorities(), 40);
-        Browser.setText(RentalIncidentsPageObjects.CommentForLegalAuthorities(), comment);
+    public void enterCommentInPopup(String comment) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CommentTextareaOnPopup(), 40);
+        Browser.setText(RentalIncidentsPageObjects.CommentTextareaOnPopup(), comment);
     }
 
     public void verifySendRequestButtonIsDisabled() {
@@ -588,5 +588,19 @@ public class RentalIncidentsPage {
         for (WebElement checkbox : chckBoxList){
             checkbox.click();
         }
+    }
+
+    public void checkRequestUpdateCountIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.RequestUpdateCount(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.RequestUpdateCount()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyAdminCommentIsVisibleForUpdateRequest(String expectedComment) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AdminComment(), 40 );
+        String actualComment = Browser.getText(RentalIncidentsPageObjects.AdminComment());
+        Assert.assertTrue(actualComment.contains(expectedComment),
+                "Actual comment (" +actualComment+ ") does not match with expected comment (" +expectedComment+ ")");
+        logger.addScreenshot("");
     }
 }
