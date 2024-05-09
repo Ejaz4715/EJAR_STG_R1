@@ -388,7 +388,7 @@ public class RentalIncidentsPage {
         logger.addScreenshot("");
     }
 
-    public void selectAvailableUnit() throws Exception {
+    public void selectAvailableUnit() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(), 40);
         WebElement btn = Browser.getWebElement(CommonMethodsPageObjects.nextBTN());
         while (!(btn.isEnabled())) {
