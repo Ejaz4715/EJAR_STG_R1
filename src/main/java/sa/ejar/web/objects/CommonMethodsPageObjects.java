@@ -441,4 +441,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//button[text()=' تحقق ']");
     }
 
+    public static By ownershipReferenceSearchField() {
+        return By.xpath("//input[@data-name=\"ownership_reference_no\"]");
+    }
 }

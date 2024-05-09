@@ -281,7 +281,6 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
-     *
      * @param option - Option to be selected
      */
     public static void ClickOnKebabMenuOption(String option) {
@@ -833,7 +832,6 @@ public class CommonMethodsPage {
 
     /**
      * Check the user role and change if it is not same as required
-     *
      * @param User - required user role ('مؤجر', 'مستأجر', 'مدير مكتب الوساطة')
      */
     public static void changeUserRole(String User) throws Exception {
@@ -996,7 +994,6 @@ public class CommonMethodsPage {
 
     /**
      * Validate error message
-     *
      * @param errorMsg - message needs to be validated
      */
     public static void errorCRMessage(String errorMsg) {
@@ -1144,7 +1141,6 @@ public class CommonMethodsPage {
 
     /**
      * Method to get request number from requests page
-     *
      * @param element - Object of request number text
      */
     public static String getRequestNumberFromRequestPage(By element) {
@@ -1161,7 +1157,6 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
-     *
      * @param option - Option to be selected
      */
     public static void KebabMenuOptionNotDisplayed(String option) {
@@ -1182,7 +1177,6 @@ public class CommonMethodsPage {
 
     /**
      * Give true if expect the invalid otp error message to be present
-     *
      * @param isPresent - give true if you expect the invalid OTP message to be present
      */
     public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
@@ -1302,4 +1296,8 @@ public class CommonMethodsPage {
     }
 
 
+    public static void enterOwnershipReferenceInSearchField(String ownershipNumber) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40 );
+        Browser.setText(CommonMethodsPageObjects.ownershipReferenceSearchField(), ownershipNumber);
+    }
 }
