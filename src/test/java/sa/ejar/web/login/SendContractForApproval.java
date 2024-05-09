@@ -158,10 +158,9 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnSubmitForApprovalBTN();
         logger.info("Step 09: Click on (تحميل مسودة العقد)");
         app.sendContractForApprovalPage.clickOnDownloadDraftCopyButton();
-        CommonMethodsPage.enterDownloadPath();
-        CommonMethodsPage.verifyAttachmentHasBeenDownloaded();
-//        logger.info("Step 09: "); //====not complete
-//        app.sendContractForApprovalPage.clickOnDownloadDraftCopyButton();
+        logger.info("Step 10: Verify the user able to download the (مسودة العقد) ");
+        CommonMethodsPage.verifyNewTabIsOpened();
+
 
     }
 

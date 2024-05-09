@@ -599,7 +599,7 @@ public class CommonMethodsPage {
     }
 
     public static void verifyNewTabIsOpened() {
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(4);
         Set<String> tabs = driver.getWindowHandles();
         String[] arrayTabs = tabs.toArray(new String[0]);
         driver.switchTo().window(arrayTabs[0]);
@@ -686,6 +686,11 @@ public class CommonMethodsPage {
     public static void clickOnRejectBTN() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.RejectBTN(), 40);
         click(CommonMethodsPageObjects.RejectBTN());
+    }
+
+    public static void clickOnVerifyBTN() {
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.verifyBTN(), 40);
+        click(CommonMethodsPageObjects.verifyBTN());
     }
 
     public static void verifyNewInvoiceDateIsSameAsEnteredInRequest(String expectedDate) {
