@@ -235,4 +235,33 @@ public class RentalIncidentsPageObjects {
         return By.xpath("//p[contains(text(),'تأكيد رفض طلب واقعة إيجاريه')]");
     }
 
+    public static By confirmTheRejectionBTN() {
+        return By.xpath("//button[text()=' تأكيد الرفض ']");
+    }
+
+    public static By RentalIncidentRequestStatus() {
+        return By.xpath("//p[contains (text() , 'حالة ')]/parent::app-info/descendant::p/child::span");
+    }
+    public static By registerUnilateralContract() {
+        return By.xpath("//a/span[text()='طلب تسجيل واقعة ايجارية']");
+    }
+    public static By rentalIncidentInquiryBTN() {
+        return By.xpath("//button[text()='الاستعلام عن واقعة ايجارية']");
+    }
+    public static By rentalIncidentInquiryTitle() {
+        return By.xpath("//h1[text()='الاستعلام عن واقعة ايجارية']");
+    }
+
+    public static By warningPopup() {
+        return By.xpath("//h2[text()='تحذير']");
+    }
+
+    public static By requestDetailsPage() {
+        return By.xpath("//h1[contains(text(), 'تفاصيل طلب رقم ')]");
+    }
+
+    public static By kebabBTN() {
+        return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
+    }
+
 }

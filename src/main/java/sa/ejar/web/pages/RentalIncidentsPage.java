@@ -462,5 +462,54 @@ public class RentalIncidentsPage {
         logger.addScreenshot("Entered Request Number in search input field");
     }
 
+    public void clickOnConfirmTheRejectionButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.confirmTheRejectionBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.confirmTheRejectionBTN());
+    }
 
+    public void checkRentalIncidentRequestStatus(String expectedStatus) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.RentalIncidentRequestStatus(), 40);
+        String status = Browser.getText(RentalIncidentsPageObjects.RentalIncidentRequestStatus());
+        Assert.assertTrue(status.contains(expectedStatus),
+                "Actual request status (" +status+ ") does not match with expected (" +expectedStatus+ ") status");
+        logger.addScreenshot("Request status is ("+status+ ")");
+    }
+    public void clickOnRegisterUnilateralContract() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.registerUnilateralContract(), 40);
+        Browser.click(RentalIncidentsPageObjects.registerUnilateralContract());
+    }
+
+    public void clickOnRentalIncidentInquiryButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentInquiryBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.rentalIncidentInquiryBTN());
+    }
+
+    public void checkRentalIncidentInquiryPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentInquiryTitle(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rentalIncidentInquiryTitle()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkVerifyButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.verifyBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(CommonMethodsPageObjects.verifyBTN()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkWarningPopupIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.warningPopup(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.warningPopup()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkRequestDetailsPageDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requestDetailsPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.requestDetailsPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void clickOnKebabButton() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.kebabBTN(), 40);
+        Browser.click(RentalIncidentsPageObjects.kebabBTN());
+    }
 }
