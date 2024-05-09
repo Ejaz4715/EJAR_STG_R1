@@ -70,7 +70,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("Navigate to View All Requests page");
     }
 
-    public static void clickOnRevokeContractRequestButton() throws Exception {
+    public static void clickOnRevokeContractRequestButton() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.RevokeContractRequestOption(), 20);
         Browser.click(CommonMethodsPageObjects.RevokeContractRequestOption());
         Browser.waitForSeconds(1);
@@ -125,12 +125,12 @@ public class CommonMethodsPage {
         click(CommonMethodsPageObjects.cancelBTN());
     }
 
-    public static void clickOnCancelPopUpButton() throws Exception {
+    public static void clickOnCancelPopUpButton() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelPopUpBTN(), 20);
         Browser.click(CommonMethodsPageObjects.cancelPopUpBTN());
     }
 
-    public static void clickOnConfirmPopUpButton() throws Exception {
+    public static void clickOnConfirmPopUpButton() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmPopUpBTN(), 20);
         Browser.click(CommonMethodsPageObjects.confirmPopUpBTN());
     }
@@ -162,14 +162,13 @@ public class CommonMethodsPage {
         click(CommonMethodsPageObjects.editBTN());
     }
 
-    public static void clickOnDeleteIconButton() throws Exception {
+    public static void clickOnDeleteIconButton() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.deleteIconBTN(), 20);
         click(CommonMethodsPageObjects.deleteIconBTN());
     }
 
     /**
      * Select an option from the list
-     *
      * @param option  - option to be selected
      * @param element - list object
      */
@@ -324,7 +323,7 @@ public class CommonMethodsPage {
         }
     }
 
-    public static void ClickOnViewContractOption(String option) throws Exception {
+    public static void ClickOnViewContractOption(String option) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.viewContractOptionBTN(), 40);
         List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.viewContractOptionBTN());
         for (WebElement opt : kebabOptions) {
@@ -336,7 +335,7 @@ public class CommonMethodsPage {
         }
     }
 
-    public static void ClickOnAcceptTerminateOption(String option) throws Exception {
+    public static void ClickOnAcceptTerminateOption(String option) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.acceptTerminationOptionBTN(), 40);
         List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.acceptTerminationOptionBTN());
         for (WebElement opt : kebabOptions) {
@@ -983,7 +982,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("The (تأكيد) button is disabled");
     }
 
-    public static void verifyNextButtonIsDisabled( {
+    public static void verifyNextButtonIsDisabled() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
         Assert.assertTrue(isElementDisabled(CommonMethodsPageObjects.nextBTN()));
         logger.addScreenshot("The (التالي) button is disabled");

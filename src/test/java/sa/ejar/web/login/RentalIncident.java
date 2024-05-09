@@ -4043,7 +4043,7 @@ public class RentalIncident extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_123_RentalIncident(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
