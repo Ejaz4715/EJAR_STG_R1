@@ -12,8 +12,10 @@ import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
+
 import java.time.Duration;
 import java.util.List;
+
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
 import static com.testcrew.web.Browser.getText;
@@ -37,7 +39,7 @@ public class RentalIncidentsPage {
 
     }
 
-    public void verifyRequesterTypeIsSelected(String selectedRequesterType) throws Exception {
+    public void verifyRequesterTypeIsSelected(String selectedRequesterType) {
         WebElement requesterType = getWebElement(RentalIncidentsPageObjects.requesterTypeDDL());
         String t = requesterType.getAttribute("value");
         String text = t.toLowerCase();
@@ -57,7 +59,7 @@ public class RentalIncidentsPage {
 
     }
 
-    public void verifyRequesterCategoryIsSelected(String selectedRequesterCategory) throws Exception {
+    public void verifyRequesterCategoryIsSelected(String selectedRequesterCategory) {
         WebElement requesterCategory = getWebElement(RentalIncidentsPageObjects.requesterCategoryDDL());
         String t = requesterCategory.getAttribute("value");
         String text = t.toLowerCase();
@@ -89,44 +91,44 @@ public class RentalIncidentsPage {
         Browser.click(RentalIncidentsPageObjects.addRequesterInfoBTN());
     }
 
-    public void verifyTheAddRequesterInfoPageIsDisplayed() throws Exception {
+    public void verifyTheAddRequesterInfoPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.addRequesterInfoPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.addRequesterInfoPage()));
         logger.addScreenshot("The (إضافة بيانات مقدم الطلب) page is displayed");
     }
 
-    public void verifyNewRentalIncidentPageIsDisplayed() throws Exception {
+    public void verifyNewRentalIncidentPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.newRentalIncidentPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.newRentalIncidentPage()));
         logger.addScreenshot("The (تسجيل واقعة ايجارية جديدة) page is displayed");
     }
 
-    public void verifyRequesterCategoryDropdownListIsDisabled() throws Exception {
+    public void verifyRequesterCategoryDropdownListIsDisabled() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requesterCategoryDDL(), 20);
         Assert.assertTrue(Browser.isElementDisabled(RentalIncidentsPageObjects.requesterCategoryDDL()));
         logger.addScreenshot("The (فئة مقدم الطلب) dropdown list is disabled");
     }
 
 
-    public void verifyAddRequesterInfoButtonIsNotDisplayed() throws Exception {
+    public void verifyAddRequesterInfoButtonIsNotDisplayed() {
         Assert.assertTrue(Browser.isElementNotPresent(RentalIncidentsPageObjects.addRequesterInfoBTN()));
         logger.addScreenshot("The (بيانات مقدم الطلب) button is not displayed");
     }
 
-    public void clearPhoneNumber() throws Exception {
+    public void clearPhoneNumber() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.phoneNumberInput(), 20);
         WebElement ele = Browser.getWebElement(RentalIncidentsPageObjects.phoneNumberInput());
         ele.click();
         ele.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
     }
 
-    public void verifyRequesterInfoIsDisplayed() throws Exception {
+    public void verifyRequesterInfoIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.requesterInfo(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.requesterInfo()));
         logger.addScreenshot("The (بيانات مقدم الطلب) is displayed");
     }
 
-    public void verifyRequesterInfoIsRemoved() throws Exception {
+    public void verifyRequesterInfoIsRemoved() {
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.requesterInfo(), 20);
         Assert.assertTrue(Browser.isElementNotPresent(RentalIncidentsPageObjects.requesterInfo()));
         logger.addScreenshot("The (بيانات مقدم الطلب) is removed");
@@ -386,8 +388,7 @@ public class RentalIncidentsPage {
         logger.addScreenshot("");
     }
 
-
-    public void selectAvailableUnit() throws Exception {
+    public void selectAvailableUnit() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(), 40);
         WebElement btn = Browser.getWebElement(CommonMethodsPageObjects.nextBTN());
         while (!(btn.isEnabled())) {
@@ -412,6 +413,7 @@ public class RentalIncidentsPage {
         Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput()));
         logger.addScreenshot("");
     }
+
     public void verifyPhoneNumberOfPersonWriteTheContractInputIsNotDisplayed() {
         Browser.executeJSScroll(200);
         Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput()));
@@ -450,11 +452,13 @@ public class RentalIncidentsPage {
         Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.rejectConfirmationMsg()));
         logger.addScreenshot("");
     }
+
     public void checkRentalIncidentRequestPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.RentalIncidentRequestPageHeading(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(RevokeContractPageObjects.RentalIncidentRequestPageHeading()));
         WebBaseTest.logger.addScreenshot("");
     }
+
     public void enterRequestNumber(String requestNumber) {
         waitUntilPresenceOfElement(CommonMethodsPageObjects.RequestNumberInputField(), 20);
         setText(CommonMethodsPageObjects.RequestNumberInputField(), requestNumber);
@@ -466,8 +470,8 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.RentalIncidentRequestStatus(), 40);
         String status = Browser.getText(RentalIncidentsPageObjects.RentalIncidentRequestStatus());
         Assert.assertTrue(status.contains(expectedStatus),
-                "Actual request status (" +status+ ") does not match with expected (" +expectedStatus+ ") status");
-        logger.addScreenshot("Request status is ("+status+ ")");
+                "Actual request status (" + status + ") does not match with expected (" + expectedStatus + ") status");
+        logger.addScreenshot("Request status is (" + status + ")");
     }
 
     public void clickOnSendToLegalAuthoritiesButton() {
@@ -486,9 +490,9 @@ public class RentalIncidentsPage {
         Browser.click(RentalIncidentsPageObjects.ViewAttachmentButton());
     }
 
-    public void enterCommentInSendToLegalAuthoritiesPopUp(String comment) {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CommentForLegalAuthorities(), 40);
-        Browser.setText(RentalIncidentsPageObjects.CommentForLegalAuthorities(), comment);
+    public void enterCommentInPopup(String comment) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CommentTextareaOnPopup(), 40);
+        Browser.setText(RentalIncidentsPageObjects.CommentTextareaOnPopup(), comment);
     }
 
     public void verifySendRequestButtonIsDisabled() {
@@ -521,6 +525,7 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
         Assert.assertTrue(Browser.isElementEnabled(RentalIncidentsPageObjects.UpdateAndResubmitButton()));
     }
+
     public void clickOnConfirmTheRejectionButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.confirmTheRejectionBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.confirmTheRejectionBTN());
@@ -564,6 +569,7 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.kebabBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.kebabBTN());
     }
+
     public void clickOnUpdateAndResubmitButton() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.UpdateAndResubmitButton(), 40);
         Browser.click(RentalIncidentsPageObjects.UpdateAndResubmitButton());
@@ -571,10 +577,10 @@ public class RentalIncidentsPage {
 
     public void verifyCheckBoxesAreClickAble() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup(), 40);
-        List <WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
+        List<WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
         boolean status = true;
-        for (WebElement checkbox : chckBoxList){
-            if (!(checkbox.isEnabled())){
+        for (WebElement checkbox : chckBoxList) {
+            if (!(checkbox.isEnabled())) {
                 status = false;
                 break;
             }
@@ -584,9 +590,23 @@ public class RentalIncidentsPage {
 
     public void clickOnCheckboxes() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup(), 40);
-        List <WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
-        for (WebElement checkbox : chckBoxList){
+        List<WebElement> chckBoxList = Browser.getWebElements(RentalIncidentsPageObjects.CheckBoxesForUpdateAndResubmitPopup());
+        for (WebElement checkbox : chckBoxList) {
             checkbox.click();
         }
+    }
+
+    public void checkRequestUpdateCountIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.RequestUpdateCount(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(RentalIncidentsPageObjects.RequestUpdateCount()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyAdminCommentIsVisibleForUpdateRequest(String expectedComment) {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.AdminComment(), 40);
+        String actualComment = Browser.getText(RentalIncidentsPageObjects.AdminComment());
+        Assert.assertTrue(actualComment.contains(expectedComment),
+                "Actual comment (" + actualComment + ") does not match with expected comment (" + expectedComment + ")");
+        logger.addScreenshot("");
     }
 }

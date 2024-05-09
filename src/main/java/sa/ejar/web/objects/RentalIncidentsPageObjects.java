@@ -255,7 +255,7 @@ public class RentalIncidentsPageObjects {
         return By.xpath("(//app-card/descendant::button[contains(text(),'عرض')])[1]");
     }
 
-    public static By CommentForLegalAuthorities() {
+    public static By CommentTextareaOnPopup() {
         return By.xpath("//label[contains (text() , 'تعليقك')]/parent::app-form-field/descendant::textarea");
     }
 
@@ -286,6 +286,7 @@ public class RentalIncidentsPageObjects {
     public static By CheckBoxesForUpdateAndResubmitPopup() {
         return By.xpath("//label[@class=\"form-check-label\"]");
     }
+
     public static By confirmTheRejectionBTN() {
         return By.xpath("//button[text()=' تأكيد الرفض ']");
     }
@@ -293,9 +294,11 @@ public class RentalIncidentsPageObjects {
     public static By registerUnilateralContract() {
         return By.xpath("//a/span[text()='طلب تسجيل واقعة ايجارية']");
     }
+
     public static By rentalIncidentInquiryBTN() {
         return By.xpath("//button[text()='الاستعلام عن واقعة ايجارية']");
     }
+
     public static By rentalIncidentInquiryTitle() {
         return By.xpath("//h1[text()='الاستعلام عن واقعة ايجارية']");
     }
@@ -312,4 +315,11 @@ public class RentalIncidentsPageObjects {
         return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
     }
 
+    public static By RequestUpdateCount() {
+        return By.xpath("//p[text()=' عدد مرات إرجاع الطلب لتعديل ']/following-sibling::p");
+    }
+
+    public static By AdminComment() {
+        return By.xpath("//blockquote/div[@class='note']");
+    }
 }
