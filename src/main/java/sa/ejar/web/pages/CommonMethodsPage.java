@@ -13,13 +13,16 @@ import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
+
 import sa.ejar.web.pages.precondition.LoginPage;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -279,6 +282,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
+     *
      * @param option - Option to be selected
      */
     public static void ClickOnKebabMenuOption(String option) {
@@ -384,7 +388,7 @@ public class CommonMethodsPage {
     public static void verifyValueIsDisplayed(String value, By element) {
         waitUntilVisibilityOfElement(element, 40);
         String val = getWebElement(element).getText();
-        Assert.assertTrue(val.contains(value), "Actual value (" + val +") does not match with expected value (" +value+ ")" );
+        Assert.assertTrue(val.contains(value), "Actual value (" + val + ") does not match with expected value (" + value + ")");
         logger.addScreenshot("");
     }
 
@@ -602,7 +606,7 @@ public class CommonMethodsPage {
         int size = 0;
         Set<String> tabs = driver.getWindowHandles();
         String[] arrayTabs = tabs.toArray(new String[0]);
-        while (size<2){
+        while (size < 2) {
             tabs = driver.getWindowHandles();
             arrayTabs = tabs.toArray(new String[0]);
             size = arrayTabs.length;

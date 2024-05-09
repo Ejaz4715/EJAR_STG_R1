@@ -286,6 +286,7 @@ public class RentalIncidentsPageObjects {
     public static By CheckBoxesForUpdateAndResubmitPopup() {
         return By.xpath("//label[@class=\"form-check-label\"]");
     }
+
     public static By confirmTheRejectionBTN() {
         return By.xpath("//button[text()=' تأكيد الرفض ']");
     }
@@ -293,9 +294,11 @@ public class RentalIncidentsPageObjects {
     public static By registerUnilateralContract() {
         return By.xpath("//a/span[text()='طلب تسجيل واقعة ايجارية']");
     }
+
     public static By rentalIncidentInquiryBTN() {
         return By.xpath("//button[text()='الاستعلام عن واقعة ايجارية']");
     }
+
     public static By rentalIncidentInquiryTitle() {
         return By.xpath("//h1[text()='الاستعلام عن واقعة ايجارية']");
     }
