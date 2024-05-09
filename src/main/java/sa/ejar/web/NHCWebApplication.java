@@ -29,6 +29,7 @@ public class NHCWebApplication {
     public final ChangeLessorAndLessorRepresentativePage changeLessorAndLessorRepresentativePage;
     public ChangeTenantActivityPage changeTenantActivityPage;
     public ManualRenewalPage manualRenewalPage;
+    public final ChangeLessor_LessorRepPage changeLessor_lessorRepPage;
 
 
     public NHCWebApplication() {
@@ -43,6 +44,7 @@ public class NHCWebApplication {
         moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
         changeTenantActivityPage = new ChangeTenantActivityPage();
         manualRenewalPage = new ManualRenewalPage();
+        changeLessor_lessorRepPage = new ChangeLessor_LessorRepPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
