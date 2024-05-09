@@ -599,9 +599,14 @@ public class CommonMethodsPage {
     }
 
     public static void verifyNewTabIsOpened() {
-        Browser.waitForSeconds(4);
+        int size = 0;
         Set<String> tabs = driver.getWindowHandles();
         String[] arrayTabs = tabs.toArray(new String[0]);
+        while (size<2){
+            tabs = driver.getWindowHandles();
+            arrayTabs = tabs.toArray(new String[0]);
+            size = arrayTabs.length;
+        }
         driver.switchTo().window(arrayTabs[0]);
         String oldURL = driver.getCurrentUrl();
         driver.switchTo().window(arrayTabs[1]);

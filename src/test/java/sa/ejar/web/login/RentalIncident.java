@@ -2798,7 +2798,7 @@ public class RentalIncident extends NHCWebTest {
     /**
      * Required Documents Sections
      * From TC_86 to TC_90
-     */
+     * */
 
     @Test(dataProvider = "testDataProvider")
     public void TC_86_RentalIncident(Map<String, String> data) throws Exception {
@@ -3189,7 +3189,7 @@ public class RentalIncident extends NHCWebTest {
     }
 
     /**
-     * Submit the Request Sections
+     * Admin Approve the Request Section
      * From TC_95 To TC_107
      */
 
@@ -3237,6 +3237,316 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.checkRentalIncidentRequestPageIsDisplayed();
     }
 
+    @Test(dataProvider = "testDataProvider")
+    public void TC_97_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click UnAssign button from Kebab menu options");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("إلغاء التعيين");
+        app.rentalIncidentsPage.checkRentalIncidentRequestStatus("استلام طلب جديد");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_98_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        CommonMethodsPage.clickOnCloseButton();
+        logger.info("Step 06: click on UnAssign button");
+        app.revokeContractPage.clickOnUnAssignButton();
+        logger.info("Step 07: Click on filter button and search for the request with the request number");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 08: Verify the status of request is changed to \"Received new request\"");
+        app.rentalIncidentsPage.checkRentalIncidentRequestStatus("استلام طلب جديد");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_99_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        CommonMethodsPage.clickOnCloseButton();
+        logger.info("Step 06: click on View button");
+        app.rentalIncidentsPage.clickOnViewAttachment();
+        CommonMethodsPage.verifyNewTabIsOpened();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_100_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
+        app.rentalIncidentsPage.verifySendToLegalAuthoritiesPopUpIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_101_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
+        logger.info("Step 07: Enter text in \"Your comment \"");
+        app.rentalIncidentsPage.enterCommentInSendToLegalAuthoritiesPopUp(data.get("Comment_For_Legal_Authorities"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("Comment_For_Legal_Authorities"), RentalIncidentsPageObjects.CommentForLegalAuthorities());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_102_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
+        logger.info("Step 07: Verify the \"Send Request\" button is disabled");
+        app.rentalIncidentsPage.verifySendRequestButtonIsDisabled();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_103_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
+        logger.info("Step 07: Enter text in \"Your comment \"");
+        app.rentalIncidentsPage.enterCommentInSendToLegalAuthoritiesPopUp(data.get("Comment_For_Legal_Authorities"));
+        logger.info("Step 08: Click on \"Send Request\" button");
+        app.rentalIncidentsPage.clickOnSendRequestButton();
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        CommonMethodsPage.verifyValueIsDisplayed("تم ارسال الطلب للجهات القانونية بنجاح", CommonMethodsPageObjects.PopUpAlertAfterCancel());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_104_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \" Reviewed by legal authorities \"  Button");
+        app.rentalIncidentsPage.clickOnReviewedByLegalAuthorityButton();
+        logger.info("Step 07: Enter text in \"Your comment \"");
+        app.rentalIncidentsPage.enterCommentInSendToLegalAuthoritiesPopUp(data.get("Comment_For_Legal_Authorities"));
+        logger.info("Step 08: Click on \"Send Request\"");
+        app.rentalIncidentsPage.clickOnSendRequestButton();
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        CommonMethodsPage.verifyValueIsDisplayed("تم ارسال الطلب للجهات القانونية بنجاح", CommonMethodsPageObjects.PopUpAlertAfterCancel());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_105_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \"Approve The Request\"  Button");
+        app.rentalIncidentsPage.clickOnApproveRequestButton();
+        CommonMethodsPage.verifyValueIsDisplayed("رسالة تنبيه" ,RentalIncidentsPageObjects.WarningPopUpTitle());
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_106_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \"Approve The Request\"  Button");
+        app.rentalIncidentsPage.clickOnApproveRequestButton();
+        logger.info("Step 07: Click on \"Approve\" button on the pop up");
+        app.rentalIncidentsPage.clickOnApproveButtonOnPopUp();
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_107_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: Verify the request status is \"Waiting second party response\"");
+        app.rentalIncidentsPage.checkRentalIncidentRequestStatus("بإنتظار تأكيد الطرف الآخر");
+    }
 
     /**
      * Admin Reject the Request Sections
@@ -3432,6 +3742,94 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.checkRentalIncidentRequestStatus("مرفوض");
     }
 
+    /**
+     * Admin requests Update and resubmit
+     * From TC_115 To TC_123
+     */
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_115_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Verify the \"Update and resubmit\" button is clickable");
+        app.rentalIncidentsPage.verifyUpdateAndResubmitButtonIsEnabled();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_116_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
+        logger.info("Step 07: Verify the ( Ownership Document , Contract Duration , Required Document , Beneficiary Info ) checkboxes is clickable");
+        app.rentalIncidentsPage.verifyCheckBoxesAreClickAble();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_117_RentalIncident(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("RentalIncident"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02:  Click on Requests ");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRentalIncidentRequestButton();
+        logger.info("Step 04:  Click on Filter button and search for the request");
+        CommonMethodsPage.clickFilterBtn();
+        app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
+        logger.info("Step 05: click View Details option");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
+        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
+        logger.info("Step 07: Check all the checkboxes on th pop up");
+        app.rentalIncidentsPage.clickOnCheckboxes();
+        logger.info("Step 08: Verify the Send ( إرسال ) button disabled/not clickable");
+        app.rentalIncidentsPage.verifySendRequestButtonIsDisabled();
+    }
 
     /**
      * Rental incident inquiry Sections
