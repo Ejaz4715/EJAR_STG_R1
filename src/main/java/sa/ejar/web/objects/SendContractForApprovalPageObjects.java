@@ -148,4 +148,8 @@ public class SendContractForApprovalPageObjects {
         return By.xpath("//input[@type=\"checkbox\"]/following-sibling::label");
     }
 
+    public static By downloadBTN() {
+        return By.xpath("(//button[text()=' تحميل '])[1]");
+    }
+
 }

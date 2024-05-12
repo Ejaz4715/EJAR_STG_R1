@@ -1,10 +1,12 @@
 package sa.ejar.web.pages;
 
+import com.testcrew.base.WebBaseTest;
 import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
+import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
@@ -149,6 +151,11 @@ public class SendContractForApprovalPage {
     public void clickOnLetUsStartButton() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.lestUsStartBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.lestUsStartBTN());
+    }
+
+    public void clickOnDownloadButton() {
+        Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadBTN(), 40);
+        Browser.click(SendContractForApprovalPageObjects.downloadBTN());
     }
     public void verifyReviewTheContractPageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewTheContractPage(), 20);
