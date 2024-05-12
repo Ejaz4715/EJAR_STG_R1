@@ -1600,8 +1600,8 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09:  Click on  (عرض)  button");
-        app.revokeContractPage.clickOnViewButtonOnRequest();
-        //fail should be view
+        app.sendContractForApprovalPage.clickOnDownloadButton();
+        CommonMethodsPage.verifyNewTabIsOpened();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2949,8 +2949,8 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09:  Click on  (عرض)  button");
-        app.revokeContractPage.clickOnViewButtonOnRequest();
-        //fail should be view
+        app.sendContractForApprovalPage.clickOnDownloadButton();
+        CommonMethodsPage.verifyNewTabIsOpened();
     }
 
     @Test(dataProvider = "testDataProvider")
