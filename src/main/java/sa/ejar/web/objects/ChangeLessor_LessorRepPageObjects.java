@@ -11,4 +11,23 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//select[@data-name=\"state\"]");
     }
 
+    public static By PropertyTab() {
+        return By.xpath("//a[contains(text(),'العقارات')]");
+    }
+
+    public static By ViewOwnerShipDocumentsOption() {
+        return By.xpath("//span[contains(text(),'عرض جميع وثائق الملكية')]");
+    }
+
+    public static By OwnerShipDocumentPageTitle() {
+        return By.xpath("//h1[contains (text(), 'وثائق الملكية')]");
+    }
+
+    public static By OwnershipDocumentSearchField() {
+        return By.xpath("//input[@data-name=\"document_number\"]");
+    }
+
+    public static By ChangeLessorRepPageTitle() {
+        return By.xpath("//h2[contains (text() ,'تغيير ممثل المؤجر')]");
+    }
 }

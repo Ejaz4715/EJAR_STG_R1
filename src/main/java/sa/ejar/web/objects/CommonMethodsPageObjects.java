@@ -444,4 +444,8 @@ public class CommonMethodsPageObjects {
     public static By ownershipReferenceSearchField() {
         return By.xpath("//input[@data-name=\"ownership_reference_no\"]");
     }
+
+    public static By SearchedDeedNumber() {
+        return By.xpath("//span[contains (text() , 'رقم وثيقة الملكية')]/following-sibling::h5");
+    }
 }
