@@ -1,8 +1,6 @@
 package sa.ejar.web;
 
 import com.testcrew.utility.TCRobot;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
 import sa.ejar.web.pages.*;
 import sa.ejar.web.pages.precondition.AddResidentialContractPage;
@@ -13,7 +11,6 @@ import com.testcrew.web.Browser;
 import java.awt.event.KeyEvent;
 import java.util.Map;
 
-import static com.testcrew.web.Browser.driver;
 
 public class NHCWebApplication {
 

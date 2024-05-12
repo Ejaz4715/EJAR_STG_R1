@@ -1,6 +1,5 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.api.UnirestAPI;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -8,6 +7,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import sa.ejar.web.NHCWebApplication;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 
@@ -18,6 +18,9 @@ import java.net.URL;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
+import static com.testcrew.web.Browser.driver;
+import static sa.ejar.web.pages.CommonMethodsPage.KebabMenuOptions;
+import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class ChangeLessor_LessorRepPage {
     public void getContractNumber() {
@@ -93,5 +96,17 @@ public class ChangeLessor_LessorRepPage {
         } else {
             logger.addScreenshot("Searched deed number is not displayed");
         }
+    }
+
+    public static void selectChangeLessorRepRadioButtons(String lessorRep) throws Exception {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.changLessorRepRadioBTNs(), 30);
+        List<WebElement> radioButtonsList = driver.findElements(ChangeLessor_LessorRepPageObjects.changLessorRepRadioBTNs());
+        for (WebElement listRadioButtons : radioButtonsList) {
+            String getListName = listRadioButtons.getText();
+            if (getListName.contains(lessorRep)) {
+                listRadioButtons.click();
+            }
+        }
+
     }
 }
