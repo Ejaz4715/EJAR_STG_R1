@@ -7,7 +7,7 @@ import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
 
-public class ChangeLessor_LessorRep extends NHCWebTest {
+public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
 
     /**
      * Pre Conditions
