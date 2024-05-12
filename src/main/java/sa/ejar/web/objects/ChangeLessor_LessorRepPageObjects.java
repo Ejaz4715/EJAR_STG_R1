@@ -30,4 +30,9 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By ChangeLessorRepPageTitle() {
         return By.xpath("//h2[contains (text() ,'تغيير ممثل المؤجر')]");
     }
+
+    public static By changLessorRepRadioBTNs() {
+        return By.xpath("//app-form-radio/label");
+    }
+
 }
