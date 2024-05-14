@@ -41,7 +41,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         CommonMethodsPage.enterOwnershipReferenceInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Get the contract number of any of the contract that are being displayed as a search result ");
         app.changeLessor_lessorRepPage.selectActiveContractFromStatusDropdown("نشط");
-        app.changeLessor_lessorRepPage.getContractNumber();
+        app.changeLessor_lessorRepPage.getContractNumAddRep();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -70,7 +70,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         logger.info("Step 07: Click on  (تحميل نسخة العقد) button");
         CommonMethodsPage.clickOnDownloadContractCopy();
         CommonMethodsPage.verifyNewTabIsOpened();
-        app.changeLessor_lessorRepPage.getContractVersionFromPDF();
+        app.changeLessor_lessorRepPage.getContractVersionAddRep();
     }
 
     @Test(dataProvider = "testDataProvider")

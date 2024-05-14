@@ -23,12 +23,32 @@ import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.isElementDisplayed;
 
 public class ChangeLessor_LessorRepPage {
-    public void getContractNumber() {
+    public String getContractNumber() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.FirstContractNumber(), 40);
         Browser.waitForSeconds(2);
         String text = Browser.getText(ChangeLessor_LessorRepPageObjects.FirstContractNumber());
         String contractNum = text.substring(1);
-        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number", contractNum);
+        return contractNum;
+    }
+    public void getContractNumAddRep(){
+        String contractNum = getContractNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number_addRep", contractNum);
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+
+    public void getContractNumChangeRep(){
+        String contractNum = getContractNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number_updateRep", contractNum);
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+    public void getContractNumRemoveRep(){
+        String contractNum = getContractNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number_removeRep", contractNum);
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+    public void getContractNumChangeLessor(){
+        String contractNum = getContractNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number_changeLessor", contractNum);
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
     }
 
@@ -45,7 +65,7 @@ public class ChangeLessor_LessorRepPage {
         logger.addScreenshot("");
     }
 
-    public void getContractVersionFromPDF() throws IOException {
+    public String getContractVersionFromPDF() throws IOException {
         String filePath = driver.getCurrentUrl();
         URL url = new URL(filePath);
         InputStream iStream = url.openStream();
@@ -54,8 +74,42 @@ public class ChangeLessor_LessorRepPage {
         PDFTextStripper stripper = new PDFTextStripper();
         int chr = stripper.getText(document).indexOf("Contract No.");
         String contactVersion = stripper.getText(document).substring(chr, chr + 31);
-        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version", contactVersion.strip());
+        return contactVersion;
+    }
+
+    public void getContractVersionAddRep() throws IOException {
+        String contactVersion = getContractVersionFromPDF();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version_addRep", contactVersion.strip());
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+    public void getContractVersionChangeRep() throws IOException {
+        String contactVersion = getContractVersionFromPDF();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version_updateRep", contactVersion.strip());
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+
+    public void getContractVersionRemoveRep() throws IOException {
+        String contactVersion = getContractVersionFromPDF();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version_removeRep", contactVersion.strip());
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+
+    public void getContractVersionChangeLessor() throws IOException {
+        String contactVersion = getContractVersionFromPDF();
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version_changeLessor", contactVersion.strip());
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+    }
+
+    public void compareContractVersionFromPDF(String oldVersion) throws IOException {
+        String filePath = driver.getCurrentUrl();
+        URL url = new URL(filePath);
+        InputStream iStream = url.openStream();
+        BufferedInputStream bfStream = new BufferedInputStream(iStream);
+        PDDocument document = PDDocument.load(bfStream);
+        PDFTextStripper stripper = new PDFTextStripper();
+        int chr = stripper.getText(document).indexOf("Contract No.");
+        String contactVersion = stripper.getText(document).substring(chr, chr + 31);
+        Assert.assertFalse(contactVersion.equalsIgnoreCase(oldVersion), "The old version is (" +oldVersion+ ") and new version is ("+contactVersion+")");
     }
 
     public void clickOnPropertiesTab() {
