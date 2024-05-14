@@ -448,4 +448,8 @@ public class CommonMethodsPageObjects {
     public static By SearchedDeedNumber() {
         return By.xpath("//span[contains (text() , 'رقم وثيقة الملكية')]/following-sibling::h5");
     }
+
+    public static By DownloadContractCopyButton() {
+        return By.xpath("(//button[contains (text(), ' تحميل نسخة العقد ')])[1]");
+    }
 }

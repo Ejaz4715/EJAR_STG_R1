@@ -107,12 +107,12 @@ public class RevokeContractPage {
 
     }
 
-    public void checkAllPaymentSettledRadioButtonIsSelected() throws Exception {
+    public void checkAllPaymentSettledRadioButtonIsSelected() {
         WebElement ele = Browser.getWebElement(TerminateContractPageObjects.allPaymentsSettledRadioInput());
         Assert.assertTrue(ele.isSelected(), "All Payment Settled button is not selected");
         logger.addScreenshot("");
     }
-    public void checkTenantFinalPaymentRadioButtonIsSelected() throws Exception {
+    public void checkTenantFinalPaymentRadioButtonIsSelected() {
         WebElement ele = Browser.getWebElement(TerminateContractPageObjects.tenantFinalPaymentsSettledRadioInput());
         Assert.assertTrue(ele.isSelected(), "All Payment Settled button is not selected");
         logger.addScreenshot("");

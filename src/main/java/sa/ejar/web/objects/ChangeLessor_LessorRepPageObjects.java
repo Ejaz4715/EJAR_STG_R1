@@ -97,5 +97,56 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By nationalIDTXT() {
         return By.xpath("//app-card-value[@data-name=\"رقم الهوية الوطنية\"]/descendant::span/span");
     }
+    public static By ContractStatusDropdownOptions() {
+        return By.xpath("//select[@data-name=\"state\"]/child::option");
+    }
+
+    public static By selectedRadioButton() {
+        return  By.xpath("//app-form-radio/child::input");
+    }
+
+    public static By ChangeLessorSelectedOptionSection() {
+        return By.xpath("//h2[@class = 'card-title mx-4 card-title-variant']");
+    }
+
+    public static By closeBTN() {
+        return  By.xpath("(//button[contains (text(),'إلغاء')])[1]");
+    }
+
+    public static By NextBTN() {
+        return By.xpath("(//button[contains (text(), 'التالي')])[1]");
+    }
+
+    public static By AddNewLessorRepPageTitle() {
+        return By.xpath("//h1[contains (text() , 'إضافة ممثل المؤجر الجديد')]");
+    }
+
+    public static By WarningPopupTitle() {
+        return  By.xpath("//h2[text()='رسالة خطأ']");
+    }
+
+    public static By PopupMessage() {
+        return By.xpath("//app-card-body//p");
+    }
+
+    public static By GotoServiceButton() {
+        return By.xpath("//button[contains (text(), 'الذهاب للخدمة')]");
+    }
+
+    public static By PropertyInformationSectionTitle() {
+        return By.xpath("//h2[text() = 'معلومات العقار']");
+    }
+
+    public static By LessorRepIdSectionTitle() {
+        return By.xpath("//h2[text() = 'تحديد هوية ممثل المؤجر الجديد']");
+    }
+
+    public static By IdTypeRadioButtons() {
+        return By.xpath("//app-form-radio/descendant::input/following-sibling::label");
+    }
+
+    public static By IdTypeRadioInput() {
+        return By.xpath("//app-form-radio/descendant::input");
+    }
 
 }
