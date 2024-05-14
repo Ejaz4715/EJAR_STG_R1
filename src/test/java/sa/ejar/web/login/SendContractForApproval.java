@@ -1599,7 +1599,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        logger.info("Step 09:  Click on  (عرض)  button");
+        logger.info("Step 09:  Click on  (تحميل)  button");
         app.sendContractForApprovalPage.clickOnDownloadButton();
         CommonMethodsPage.verifyNewTabIsOpened();
     }
@@ -2948,7 +2948,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        logger.info("Step 09:  Click on  (عرض)  button");
+        logger.info("Step 09:  Click on  (تحميل)  button");
         app.sendContractForApprovalPage.clickOnDownloadButton();
         CommonMethodsPage.verifyNewTabIsOpened();
     }

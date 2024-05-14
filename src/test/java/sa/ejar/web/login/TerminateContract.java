@@ -5415,7 +5415,6 @@ public class TerminateContract extends NHCWebTest {
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Verify the (الطلبات) page is displayed");
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5467,7 +5466,6 @@ public class TerminateContract extends NHCWebTest {
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
         logger.info("Step 07: Verify ( خطوات الموافقة على إنهاء العقد )  page");
         app.terminateContractPage.verifyTerminationApprovalStepsPageIsDisplayed();
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6036,5 +6034,6 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has a status  لم يتم الدفع  ");
-        CommonMethodsPage.verifyInvoiceStatus("new", "لم يتم الدفع", CommonMethodsPageObjects.NewInvoiceStatus());    }
+        CommonMethodsPage.verifyInvoiceStatus("new", "لم يتم الدفع", CommonMethodsPageObjects.NewInvoiceStatus());
+    }
 }
