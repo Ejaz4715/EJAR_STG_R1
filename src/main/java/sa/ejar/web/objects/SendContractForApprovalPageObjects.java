@@ -33,7 +33,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By downloadDraftCopyBTN() {
-        return By.xpath("//button[text()=' تحميل مسودة العقد ']");
+        return By.xpath("//button[contains (text(), 'تحميل مسودة العقد')]");
     }
 
     public static By previewBrokerageAgreementSection() {
