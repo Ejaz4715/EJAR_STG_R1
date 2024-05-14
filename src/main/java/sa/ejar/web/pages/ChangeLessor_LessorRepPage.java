@@ -4,10 +4,10 @@ import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import sa.ejar.web.NHCWebApplication;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 
@@ -15,24 +15,27 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.driver;
-import static sa.ejar.web.pages.CommonMethodsPage.KebabMenuOptions;
-import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
+import static com.testcrew.web.Browser.isElementDisplayed;
 
 public class ChangeLessor_LessorRepPage {
     public void getContractNumber() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.FirstContractNumber(), 40);
-        String contractNum = Browser.getText(ChangeLessor_LessorRepPageObjects.FirstContractNumber());
+        Browser.waitForSeconds(2);
+        String text = Browser.getText(ChangeLessor_LessorRepPageObjects.FirstContractNumber());
+        String contractNum = text.substring(1);
         TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Number", contractNum);
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
     }
 
     public void selectActiveContractFromStatusDropdown(String reqStatus) {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.ContractStatusDropdown(), 40);
-        List<WebElement> statusList = Browser.getWebElements(ChangeLessor_LessorRepPageObjects.ContractStatusDropdown());
+        Browser.click(ChangeLessor_LessorRepPageObjects.ContractStatusDropdown());
+        List<WebElement> statusList = Browser.getWebElements(ChangeLessor_LessorRepPageObjects.ContractStatusDropdownOptions());
         for (WebElement status : statusList){
             if (status.getText().contains(reqStatus)){
                 status.click();
@@ -42,25 +45,22 @@ public class ChangeLessor_LessorRepPage {
         logger.addScreenshot("");
     }
 
-    public void getContractVersionFromPDF(String ContractNumber) throws IOException {
-        String home = System.getProperty("user.home");
-        String path = "file:///" + home + "\\Downloads\\" + ContractNumber + ".pdf";
-        System.out.println(path);
-        URL url = new URL(path);
+    public void getContractVersionFromPDF() throws IOException {
+        String filePath = driver.getCurrentUrl();
+        URL url = new URL(filePath);
         InputStream iStream = url.openStream();
         BufferedInputStream bfStream = new BufferedInputStream(iStream);
         PDDocument document = PDDocument.load(bfStream);
         PDFTextStripper stripper = new PDFTextStripper();
         int chr = stripper.getText(document).indexOf("Contract No.");
         String contactVersion = stripper.getText(document).substring(chr, chr + 31);
-        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version", contactVersion);
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "Contract_Version", contactVersion.strip());
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
     }
 
     public void clickOnPropertiesTab() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.PropertyTab(), 40);
         Browser.click(ChangeLessor_LessorRepPageObjects.PropertyTab());
-        Browser.click(By.xpath("//span[contains(text(),'عرض جميع وثائق الملكية')]"));
     }
 
     public void clickOnViewOwnerShipDocumentsOption() {
@@ -70,7 +70,7 @@ public class ChangeLessor_LessorRepPage {
 
     public void verifyOwnerShipDocumentPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.OwnerShipDocumentPageTitle(), 40);
-        Assert.assertTrue(Browser.isElementDisabled(ChangeLessor_LessorRepPageObjects.OwnerShipDocumentPageTitle()));
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.OwnerShipDocumentPageTitle()));
         logger.addScreenshot("");
     }
 
@@ -98,15 +98,113 @@ public class ChangeLessor_LessorRepPage {
         }
     }
 
-    public static void selectChangeLessorRepRadioButtons(String lessorRep) throws Exception {
+
+    /**
+     * Method to select radio button for change lessor rep page
+     * @param lessorRep - Radio button to be selected
+     * */
+    public void selectChangeLessorRepRadioButtons(String lessorRep) {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.changLessorRepRadioBTNs(), 30);
-        List<WebElement> radioButtonsList = driver.findElements(ChangeLessor_LessorRepPageObjects.changLessorRepRadioBTNs());
+        List<WebElement> radioButtonsList = Browser.getWebElements(ChangeLessor_LessorRepPageObjects.changLessorRepRadioBTNs());
         for (WebElement listRadioButtons : radioButtonsList) {
             String getListName = listRadioButtons.getText();
             if (getListName.contains(lessorRep)) {
                 listRadioButtons.click();
+                break;
             }
         }
+        logger.addScreenshot("");
+    }
 
+
+    /**
+     * Method to validate the radio button is selected for change lessor rep
+     * @param opt - Expected option text to be selected
+     * */
+    public void verifyTheRadioButtonIsSelected(String opt) {
+        List<WebElement> radioButtonsList = Browser.getWebElements(ChangeLessor_LessorRepPageObjects.selectedRadioButton());
+        String optionText = "";
+        for (WebElement listRadioButtons : radioButtonsList) {
+            if (listRadioButtons.isSelected()) {
+                optionText = listRadioButtons.getAttribute("value");
+                break;
+            }
+        }
+        optionText = switch (optionText) {
+            case "add" -> "إضافة ممثل المؤجر الجديد";
+            case "change" -> "تعديل ممثل المؤجر الحالي";
+            case "remove" -> "إزالة ممثل المؤجر الحالي";
+            default -> optionText;
+        };
+        Assert.assertTrue(optionText.contains(opt), "The selected button is (" + optionText + ") and expected is (" + opt + ")");
+        logger.addScreenshot("");
+    }
+
+    /**
+     * Method to validate the new section is displayed under the radio buttons for the selected option
+     * @param expectedTitle - Expected title of the section
+     * */
+    public void verifyNewSectionIsAppearingWithSameTitleAsSelectedRadioOption(String expectedTitle) {
+        List<WebElement> titleList = Browser.getWebElements(ChangeLessor_LessorRepPageObjects.ChangeLessorSelectedOptionSection());
+        String optionText = "";
+        for (WebElement title : titleList) {
+            optionText = title.getText();
+            if (title.isDisplayed() && optionText.contains(expectedTitle)) {
+                break;
+            }
+        }
+        Assert.assertTrue(optionText.contains(expectedTitle), "The expected title is (" + optionText + ") and expected is (" + expectedTitle + ")");
+        logger.addScreenshot("");
+    }
+
+    public void verifyCloseButtonIsDisplayed() {
+        Assert.assertTrue(isElementDisplayed(ChangeLessor_LessorRepPageObjects.NextBTN()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyPopupMessage(String s) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.PopupMessage(), 40);
+        String text = Browser.getText(ChangeLessor_LessorRepPageObjects.PopupMessage());
+        Assert.assertTrue(text.contains(s), "Actual message is (" +text+ ") and expected message is (" +s+ ")");
+        logger.addScreenshot("");
+    }
+
+    public void clickOnGotoServiceButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.GotoServiceButton(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.GotoServiceButton());
+    }
+
+    public void verifyIdTypeRadioButtonIsSelected(String expectedType) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.IdTypeRadioInput(), 40 );
+        List <WebElement> radioList =  Browser.getWebElements(ChangeLessor_LessorRepPageObjects.IdTypeRadioInput());
+        String actualType = "";
+        for (WebElement btn : radioList){
+            if (btn.isSelected()){
+                actualType = btn.getAttribute("value");
+                break;
+            }
+        }
+        actualType = switch (actualType) {
+            case "national_id" -> "هوية وطنية";
+            case "vip_resident_id" -> "إقامة مميزة";
+            case "resident_id" -> "هوية مقيم";
+            case "gcc_id" -> "هوية مواطني دول مجلس التعاون الخليجي";
+            case "passport" -> "جواز سفر";
+            case "other" -> "أخرى";
+            default -> actualType;
+        };
+        Assert.assertTrue(actualType.contains(expectedType), "Actual selected button is (" +actualType+ ") an expected is (" +expectedType+ ")");
+        logger.addScreenshot("");
+    }
+
+    public void clickOnIdTypeRadioButton(String idType) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.IdTypeRadioButtons(), 40 );
+        List <WebElement> radioList =  Browser.getWebElements(ChangeLessor_LessorRepPageObjects.IdTypeRadioButtons());
+        for (WebElement btn : radioList){
+            if (btn.getText().contains(idType)){
+                btn.click();
+                break;
+            }
+        }
     }
 }

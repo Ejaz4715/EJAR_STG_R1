@@ -8,6 +8,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
@@ -986,6 +987,11 @@ public class CommonMethodsPage {
         logger.addScreenshot("The (التالي) button is disabled");
     }
 
+    public static void verifyCloseButtonIsNotDisplayed() {
+        Assert.assertFalse(isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN()));
+        logger.addScreenshot("");
+    }
+
     public static void enterCRNumberInputField(String crNumber) {
         waitUntilPresenceOfElement(CommonMethodsPageObjects.CRNumberInput(), 20);
         setText(CommonMethodsPageObjects.CRNumberInput(), crNumber);
@@ -1299,5 +1305,10 @@ public class CommonMethodsPage {
     public static void enterOwnershipReferenceInSearchField(String ownershipNumber) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40 );
         Browser.setText(CommonMethodsPageObjects.ownershipReferenceSearchField(), ownershipNumber);
+    }
+
+    public static void clickOnDownloadContractCopy() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.DownloadContractCopyButton(), 40);
+        Browser.click(CommonMethodsPageObjects.DownloadContractCopyButton());
     }
 }
