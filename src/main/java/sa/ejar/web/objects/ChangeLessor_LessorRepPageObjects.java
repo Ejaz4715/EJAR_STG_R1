@@ -35,4 +35,67 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//app-form-radio/label");
     }
 
+    public static By requestNumber() {
+        return By.xpath("//p[contains(text(),'تم ارسال الطلب')]");
+    }
+    public static By requestChangeCurrentLessorRepPage() {
+        return By.xpath("//h2[text()='طلب تعديل ممثل المؤجر الحالي']");
+    }
+    public static By addNewLessorRepPage() {
+        return By.xpath("//h1[text()='طلب إضافة ممثل المؤجر الجديد']");
+    }
+    public static By rejectChangeRequestBTN() {
+        return By.xpath("//button[text()=' رفض طلب التغيير ']");
+    }
+    public static By reviewChangeRequestSection() {
+        return By.xpath("//h2[text()='معلومات وثيقة الملكية']");
+    }
+    public static By rejectMsg() {
+        return By.xpath("//h2[text()='تم تقديم الرفض']");
+    }
+
+    public static By contractsAndAgreementsSection() {
+        return By.xpath("//h2[text()='العقود']");
+    }
+    public static By IBANInfoSection() {
+        return By.xpath("//h2[text()=' أرقام الآيبان']");
+    }
+    public static By editIBANInfoPopupWindow() {
+        return By.xpath("//div[text()=' تعديل الحساب الشخصي آيبان ']");
+    }
+    public static By addNewIbanBTN() {
+        return By.xpath("//button[text()=' إضافة رقم آيبان جديد ']");
+    }
+    public static By addNewIBANPopupWindow() {
+        return By.xpath("//div[text()=' إضافة رقم آيبان جديد ']");
+    }
+
+    public static By declarationAndConfirmationSection() {
+        return By.xpath("//h2[text()='الإقرار وتأكيد الموافقة']");
+    }
+
+    public static By confirmApprovalBTN() {
+        return By.xpath("//button[text()=' تأكيد الموافقة على الطلب ']");
+    }
+    public static By lessorLessorRepChangedSuccessfullyMsg() {
+        return By.xpath("//h2[contains(text(),'تم تغيير المؤجر/ممثل المؤجر بنجاح')]");
+    }
+
+    public static By manageOwnershipDocumentPage() {
+        return By.xpath("//h1/span[contains(text(),'إدارة مستند الملكية')]");
+    }
+
+    public static By lessorRepKebabBTN() {
+        return By.xpath("(//span[@class=\"round-icon large menu\"])[2]");
+    }
+    public static By lessorRepEditBTN() {
+        return By.xpath("//a[contains(text(),'تعديل')]");
+    }
+    public static By addAnIndividualPage() {
+        return By.xpath("//h1[text()='إضافة مالك فرد']");
+    }
+    public static By nationalIDTXT() {
+        return By.xpath("//app-card-value[@data-name=\"رقم الهوية الوطنية\"]/descendant::span/span");
+    }
+
 }
