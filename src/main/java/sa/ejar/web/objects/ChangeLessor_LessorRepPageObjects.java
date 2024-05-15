@@ -46,14 +46,30 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By requestChangeCurrentLessorRepPage() {
         return By.xpath("//h2[text()='طلب تعديل ممثل المؤجر الحالي']");
     }
+    public static By changeLessorPage() {
+        return By.xpath("//h2[text()='تغيير المؤجر']");
+    }
+
     public static By addNewLessorRepPage() {
         return By.xpath("//h1[text()='طلب إضافة ممثل المؤجر الجديد']");
     }
+
+    public static By requestUpdateCurrentLessorRepPage() {
+        return By.xpath("//h1[text()='طلب تعديل ممثل المؤجر الحالي']");
+    }
+    public static By removeCurrentLessorRepPage() {
+        return By.xpath("//h1[text()='إزالة ممثل المؤجر الحالي']");
+    }
+    public static By requestChangeLessorPage() {
+        return By.xpath("//h1[text()='طلب تغيير المؤجر']");
+    }
+
+
     public static By rejectChangeRequestBTN() {
         return By.xpath("//button[text()=' رفض طلب التغيير ']");
     }
     public static By reviewChangeRequestSection() {
-        return By.xpath("//h2[text()='معلومات وثيقة الملكية']");
+        return By.xpath("//h2[contains(text(),'معلومات وثيقة الملكية')]");
     }
     public static By rejectMsg() {
         return By.xpath("//h2[text()='تم تقديم الرفض']");
@@ -93,6 +109,10 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By lessorRepKebabBTN() {
         return By.xpath("(//span[@class=\"round-icon large menu\"])[2]");
     }
+    public static By lessorKebabBTN() {
+        return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
+    }
+
     public static By lessorRepEditBTN() {
         return By.xpath("//a[contains(text(),'تعديل')]");
     }
@@ -152,6 +172,9 @@ public class ChangeLessor_LessorRepPageObjects {
 
     public static By IdTypeRadioInput() {
         return By.xpath("//app-form-radio/descendant::input");
+    }
+    public static By lessorRepIcon() {
+        return By.xpath("//span[@class=\"round-icon group large\"]");
     }
 
     public static By NewLessorRepInfoPageTitle() {
