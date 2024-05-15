@@ -146,6 +146,10 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//h1[contains (text() , 'إضافة ممثل المؤجر الجديد')]");
     }
 
+    public static By removeTheCurrentLessorRepPageTitle() {
+        return By.xpath("//h1[contains (text() , 'إزالة ممثل المؤجر الحالي')]");
+    }
+
     public static By WarningPopupTitle() {
         return  By.xpath("//h2[text()='رسالة خطأ']");
     }
@@ -228,4 +232,12 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By RequestNumber() {
         return By.xpath("//h2[text()='إضافة ممثل المؤجر الجديد']/ancestor::app-card/descendant::p");
     }
+    public static By removeLessorRepBTN() {
+        return By.xpath("//button[text()=' إزالة الممثل ']");
+    }
+
+    public static By currentLessorRepSection() {
+        return By.xpath("//h2[contains (text(), 'معلومات الممثل الحالي')]");
+    }
+
 }

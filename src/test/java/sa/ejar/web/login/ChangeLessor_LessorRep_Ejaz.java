@@ -591,7 +591,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \" التالي \" button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"إلغاء\" button on pop up");
+        logger.info("Step 10: Click on \"الذهاب للخدمة\" button on pop up");
         app.changeLessor_lessorRepPage.clickOnGotoServiceButton();
         CommonMethodsPage.verifyValueIsDisplayed("تغيير ممثل المؤجر", ChangeLessor_LessorRepPageObjects.ChangeLessorRepPageTitle());
     }
@@ -3505,5 +3505,8 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         app.changeLessor_lessorRepPage.selectChangeLessorRepRadioButtons("تعديل ممثل المؤجر الحالي");
         app.changeLessor_lessorRepPage.verifyTheRadioButtonIsSelected("تعديل ممثل المؤجر الحالي");
     }
+
+
+
 
 }
