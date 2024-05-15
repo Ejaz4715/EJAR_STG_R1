@@ -501,4 +501,14 @@ public class ChangeLessor_LessorRepPage {
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
 
     }
+
+    public void clickOnNextButton(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 50);
+        Browser.click(element);
+    }
+
+    public void clickOnCloseButton(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 50);
+        Browser.click(element);
+    }
 }

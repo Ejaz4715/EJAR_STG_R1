@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.*;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.pages.ChangeLessor_LessorRepPage;
 import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
@@ -3698,7 +3697,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         logger.info("Step 08: Click on any radio button");
         app.changeLessor_lessorRepPage.selectChangeLessorRepRadioButtons("تعديل ممثل المؤجر الحالي");
         logger.info("Step 09: Click on \"إلغاء\" button");
-        CommonMethodsPage.clickOnCancelButton();
+        app.changeLessor_lessorRepPage.clickOnCloseButton(ChangeLessor_LessorRepPageObjects.closeBTN2());
         app.changeLessor_lessorRepPage.verifyOwnerShipDocumentPageIsDisplayed();
     }
 
@@ -3728,7 +3727,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         logger.info("Step 08: Click on any radio button");
         app.changeLessor_lessorRepPage.selectChangeLessorRepRadioButtons("تعديل ممثل المؤجر الحالي");
         logger.info("Step 09: Click on \"التالي\" button");
-        CommonMethodsPage.clickOnNextButton();
+        app.changeLessor_lessorRepPage.clickOnNextButton(ChangeLessor_LessorRepPageObjects.NextBTN2());
         CommonMethodsPage.verifyValueIsDisplayed("تعديل ممثل المؤجر الحالي", ChangeLessor_LessorRepPageObjects.UpdateLessorRepPageTitle());
     }
     @Test(dataProvider = "testDataProvider")
