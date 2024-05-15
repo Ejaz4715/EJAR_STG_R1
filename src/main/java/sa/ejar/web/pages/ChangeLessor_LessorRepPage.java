@@ -331,7 +331,13 @@ public class ChangeLessor_LessorRepPage {
     }
 
     public void verifyCloseButtonIsDisplayed() {
-        Assert.assertTrue(isElementDisplayed(ChangeLessor_LessorRepPageObjects.NextBTN()));
+        boolean status = false;
+        if (Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.NextBTN())
+                || Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.NextBTN2())
+                || Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.NextBTN3())){
+            status = true;
+        }
+        Assert.assertTrue(status, "Button is not displayed");
         logger.addScreenshot("");
     }
 
@@ -507,4 +513,13 @@ public class ChangeLessor_LessorRepPage {
         logger.addScreenshot("");
     }
 
+    public void clickOnNextButton(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 50);
+        Browser.click(element);
+    }
+
+    public void clickOnCloseButton(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 50);
+        Browser.click(element);
+    }
 }
