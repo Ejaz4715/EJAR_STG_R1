@@ -591,7 +591,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \" التالي \" button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \"إلغاء\" button on pop up");
+        logger.info("Step 11: Click on \"الذهاب للخدمة\" button on pop up");
         app.changeLessor_lessorRepPage.clickOnGotoServiceButton();
         CommonMethodsPage.verifyValueIsDisplayed("تغيير ممثل المؤجر", ChangeLessor_LessorRepPageObjects.ChangeLessorRepPageTitle());
     }
@@ -3532,7 +3532,6 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         app.changeLessor_lessorRepPage.selectChangeLessorRepRadioButtons("تعديل ممثل المؤجر الحالي");
         app.changeLessor_lessorRepPage.verifyTheRadioButtonIsSelected("تعديل ممثل المؤجر الحالي");
     }
-
     @Test(dataProvider = "testDataProvider")
     public void TC_145_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());

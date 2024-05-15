@@ -502,6 +502,17 @@ public class ChangeLessor_LessorRepPage {
 
     }
 
+    public void clickOnRemoveLessorRepButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.removeLessorRepBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.removeLessorRepBTN());
+    }
+
+    public void checkCurrentLessorRepSectionIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.currentLessorRepSection(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.currentLessorRepSection()));
+        logger.addScreenshot("");
+    }
+
     public void clickOnNextButton(By element) {
         Browser.waitUntilVisibilityOfElement(element, 50);
         Browser.click(element);
