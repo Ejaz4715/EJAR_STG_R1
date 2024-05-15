@@ -5,6 +5,7 @@ import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
@@ -17,8 +18,7 @@ import java.net.URL;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
-import static com.testcrew.web.Browser.driver;
-import static com.testcrew.web.Browser.isElementDisplayed;
+import static com.testcrew.web.Browser.*;
 
 public class ChangeLessor_LessorRepPage {
     public String getContractNumber() {
@@ -348,7 +348,6 @@ public class ChangeLessor_LessorRepPage {
     }
 
     public void verifyIdTypeRadioButtonIsSelected(String expectedType) {
-        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.IdTypeRadioInput(), 40 );
         List <WebElement> radioList =  Browser.getWebElements(ChangeLessor_LessorRepPageObjects.IdTypeRadioInput());
         String actualType = "";
         for (WebElement btn : radioList){
@@ -427,8 +426,73 @@ public class ChangeLessor_LessorRepPage {
         }
     }
 
+
     public void checkLessorRepIsRemoved() {
         Assert.assertTrue(Browser.isElementNotPresent(ChangeLessor_LessorRepPageObjects.lessorRepIcon()));
         WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void clickOnAddNewRepresentationDocumentLink() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.AddNewRepresentationDocumentLink(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.AddNewRepresentationDocumentLink());
+    }
+
+    public void clickOnDocumentTypeDropdown() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.DocumentTypeDropdown(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.DocumentTypeDropdown());
+    }
+
+    public void verifyDocumentTypeIsSelected(String expectedType) {
+        WebElement documentType = getWebElement(ChangeLessor_LessorRepPageObjects.DocumentTypeDropdown());
+        String t = documentType.getAttribute("value");
+        String text = t.toLowerCase();
+        if (text.contains("other")) {
+            text = "أخرى";
+        }
+        Assert.assertEquals(text, expectedType);
+        logger.addScreenshot("Document type Selected");
+    }
+
+    public void enterIssueDate(String issueDate) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.IssueDateInputField(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.IssueDateInputField(), issueDate);
+    }
+
+    public void enterExpiryDate(String expiryDate) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.ExpiryDateInputField(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.ExpiryDateInputField(), expiryDate);
+        new RevokeContractPage().clickOnCalenderIcon();
+    }
+
+
+    public void enterNameInIssueByField(String name) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.IssueByInputField(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.IssueByInputField(), name);
+    }
+
+    public void enterDocumentName(String documentName) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.LegalDocumentNameInput(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.LegalDocumentNameInput(), documentName);
+    }
+
+    public void enterDocumentIssuePlace(String documentIssuePlace) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.DocumentIssuePlaceInput(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.DocumentIssuePlaceInput(), documentIssuePlace);
+    }
+
+    public void clickOnAddButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.AddButton(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.AddButton());
+    }
+
+    public void getRequestNumberFromPopup(By element) {
+        Browser.waitUntilVisibilityOfElement(element, 40);
+        String text = getText(element);
+        int index = text.indexOf("#");
+        String newText = text.substring(index);
+        String reqNum = newText.split(" ")[0];
+        TestDataManager.addDependantGlobalTestData("ChangeLessor","RequestNumber", reqNum);
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
+
     }
 }
