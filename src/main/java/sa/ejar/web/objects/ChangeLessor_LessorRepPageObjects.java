@@ -23,6 +23,11 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//h1[contains (text(), 'وثائق الملكية')]");
     }
 
+    public static By OwnerShipDocumentSectionTitle() {
+        return By.xpath("//h2[contains (text(), 'وثائق الملكية')]");
+    }
+
+
     public static By OwnershipDocumentSearchField() {
         return By.xpath("//input[@data-name=\"document_number\"]");
     }
@@ -149,4 +154,55 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//app-form-radio/descendant::input");
     }
 
+    public static By NewLessorRepInfoPageTitle() {
+        return By.xpath("//h2[text()='ممثل المؤجر الجديد']");
+    }
+
+    public static By AddNewRepresentationDocumentLink() {
+        return By.xpath("//a[contains (text(),  'إضافة وثيقة تمثيل نظامي جديدة')]");
+    }
+
+    public static By AddNewRepresentationDocumentPopupTitle() {
+        return By.xpath("//h2[text()='إضافة وثيقة قانونية جديدة']");
+    }
+
+    public static By DocumentTypeDropdown() {
+        return By.xpath("//select[@data-name=\"document_type\"]");
+    }
+
+    public static By DocumentTypeDropdownList() {
+        return By.xpath("//select[@data-name=\"document_type\"]/child::option");
+    }
+
+    public static By IssueDateInputField() {
+        return By.xpath("//label[text()='تاريخ الإصدار']/parent::app-form-field/descendant::input");
+    }
+
+    public static By ExpiryDateInputField() {
+        return By.xpath("//label[text()=' تاريخ انتهاء الصلاحية']/parent::app-form-field/descendant::input");
+    }
+
+    public static By IssueByInputField() {
+        return By.xpath("//input[@data-name=\"issued_by\"]");
+    }
+
+    public static By LegalDocumentNameInput() {
+        return By.xpath("//input[@data-name=\"legal_document_type_name\"]");
+    }
+
+    public static By DocumentIssuePlaceInput() {
+        return By.xpath("//input[@data-name=\"issue_place\"]");
+    }
+
+    public static By AddButton() {
+        return By.xpath("//button[contains(text() ,'إضافة')]");
+    }
+
+    public static By LessorAddedPopupTitle() {
+        return By.xpath("//h2[contains (text(), 'إضافة ممثل المؤجر الجديد')]");
+    }
+
+    public static By RequestNumber() {
+        return By.xpath("//h2[text()='إضافة ممثل المؤجر الجديد']/ancestor::app-card/descendant::p");
+    }
 }

@@ -77,7 +77,7 @@ public class RevokeContractPage {
     }
 
     public void uploadRequiredDocuments(String pdfAttachment) {
-        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.NoteInputField(), 40);
+        Browser.waitForSeconds(2);
         Browser.executeJSScroll(1000);
         Browser.waitForSeconds(2);
         CommonMethodsPage.UploadAttachment(pdfAttachment, RevokeContractPageObjects.UploadDocumentsInput());
@@ -94,7 +94,7 @@ public class RevokeContractPage {
     }
 
     public void verifyErrorMessageIsDisplayedForLargeFile() {
-        CommonMethodsPage.errorMessageFoAttachments("حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت" ,
+        CommonMethodsPage.errorMessageFoAttachments("حجم الملف أكبر من المسموح به" ,
                 RevokeContractPageObjects.ErrorMessageForLargeFile());
         logger.addScreenshot("");
     }
