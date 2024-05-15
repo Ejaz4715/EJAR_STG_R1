@@ -142,6 +142,22 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("(//button[contains (text(), 'التالي')])[1]");
     }
 
+    public static By closeBTN2() {
+        return  By.xpath("(//button[contains (text(),'إلغاء')])[2]");
+    }
+
+    public static By NextBTN2() {
+        return By.xpath("(//button[contains (text(), 'التالي')])[2]");
+    }
+
+    public static By closeBTN3() {
+        return  By.xpath("(//button[contains (text(),'إلغاء')])[3]");
+    }
+
+    public static By NextBTN3() {
+        return By.xpath("(//button[contains (text(), 'التالي')])[3]");
+    }
+
     public static By AddNewLessorRepPageTitle() {
         return By.xpath("//h1[contains (text() , 'إضافة ممثل المؤجر الجديد')]");
     }
@@ -227,5 +243,9 @@ public class ChangeLessor_LessorRepPageObjects {
 
     public static By RequestNumber() {
         return By.xpath("//h2[text()='إضافة ممثل المؤجر الجديد']/ancestor::app-card/descendant::p");
+    }
+
+    public static By UpdateLessorRepPageTitle() {
+        return By.xpath("//h1[text()='تعديل ممثل المؤجر الحالي']");
     }
 }
