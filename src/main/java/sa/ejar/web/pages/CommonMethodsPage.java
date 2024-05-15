@@ -437,9 +437,8 @@ public class CommonMethodsPage {
 
     /**
      * validate any error message for invalid attachment
-     *
      * @param errorMsg - Message to be validated
-     * @param element  - Message object
+     * @param element  - Message Locator
      */
     public static void errorMessageFoAttachments(String errorMsg, By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
@@ -448,7 +447,6 @@ public class CommonMethodsPage {
         if (text.contains(errorMsg)) {
             status = true;
         }
-        System.out.println(text);
         Assert.assertTrue(status, errorMsg + " error message is not same/displayed");
         logger.addScreenshot("");
     }

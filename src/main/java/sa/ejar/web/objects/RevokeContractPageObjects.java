@@ -35,7 +35,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By CalenderIcon() {
-        return By.xpath("//div[@class=\"date-picker-button\"]");
+        return By.xpath("//div[contains(@class,\"date-picker\")]");
     }
 
     public static By CalenderPopUp() {
@@ -59,7 +59,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By ErrorMessageForLargeFile() {
-        return By.xpath("//p[contains (text(), 'حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت')]");
+        return By.xpath("//p[contains (text(), 'حجم الملف أكبر من المسموح به')]");
     }
 
     public static By NextButton() {

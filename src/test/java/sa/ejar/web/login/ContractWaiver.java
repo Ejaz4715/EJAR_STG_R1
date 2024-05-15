@@ -981,7 +981,8 @@ public class ContractWaiver extends NHCWebTest {
         app.contractWaiverPage.enterValidTenantDOB(data.get("TenantValidDOB"));
         logger.info("Step 14: Click next button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 15: Click on المنطقة dropdown");
+        logger.info("Step 15: Click on المنطقة dropdown > Select region");
+        CommonMethodsPage.clickOnRegionDropdownMenu();
         CommonMethodsPage.selectFromList(data.get("TenantRegion"), CommonMethodsPageObjects.RegionDropdown());
         logger.addScreenshot("Region selected");
     }
@@ -1157,7 +1158,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a value including any special character in اسم الشارع input field");
         CommonMethodsPage.enterStreetName(data.get("TenantStreetName_Invalid"));
-        CommonMethodsPage.errorMessage("", CommonMethodsPageObjects.StreetNameError());
+        CommonMethodsPage.errorMessage("يرجى", CommonMethodsPageObjects.StreetNameError());
     }
 
     @Test(dataProvider = "testDataProvider")
