@@ -179,9 +179,33 @@ public class ChangeLessor_LessorRepPage {
         WebBaseTest.logger.addScreenshot("");
     }
 
+    public void checkChangeLessorPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.changeLessorPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.changeLessorPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkRequestChangeLessorPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.requestChangeLessorPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.requestChangeLessorPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkRequestUpdateCurrentLessorRepPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.requestUpdateCurrentLessorRepPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.requestUpdateCurrentLessorRepPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
     public void checkAddNewLessorRepPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addNewLessorRepPage(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addNewLessorRepPage()));
+        WebBaseTest.logger.addScreenshot("");
+    }
+
+    public void checkRemoveCurrentLessorRepPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.removeCurrentLessorRepPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.removeCurrentLessorRepPage()));
         WebBaseTest.logger.addScreenshot("");
     }
 
@@ -373,6 +397,10 @@ public class ChangeLessor_LessorRepPage {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.lessorRepKebabBTN(), 40);
         Browser.click(ChangeLessor_LessorRepPageObjects.lessorRepKebabBTN());
     }
+    public void clickOnLessorKebabButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.lessorKebabBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.lessorKebabBTN());
+    }
     public void clickOnLessorRepEditButton() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.lessorRepEditBTN(), 40);
         Browser.click(ChangeLessor_LessorRepPageObjects.lessorRepEditBTN());
@@ -397,5 +425,10 @@ public class ChangeLessor_LessorRepPage {
         } else {
             logger.addScreenshot("The national ID number is not the same");
         }
+    }
+
+    public void checkLessorRepIsRemoved() {
+        Assert.assertTrue(Browser.isElementNotPresent(ChangeLessor_LessorRepPageObjects.lessorRepIcon()));
+        WebBaseTest.logger.addScreenshot("");
     }
 }
