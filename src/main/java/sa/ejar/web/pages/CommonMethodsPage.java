@@ -380,7 +380,6 @@ public class CommonMethodsPage {
 
     /**
      * Method to validate the displayed value
-     *
      * @param value   - Value to be validated
      * @param element - Locator of Input Field
      */
