@@ -22,7 +22,6 @@ import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
-import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class ChangeLessor_LessorRepPage {
     public String getContractNumber() {
@@ -498,12 +497,9 @@ public class ChangeLessor_LessorRepPage {
     public void getRequestNumberFromPopup(By element) {
         Browser.waitUntilVisibilityOfElement(element, 40);
         String text = getText(element);
-        int index = text.indexOf("#");
-        String newText = text.substring(index);
-        String reqNum = newText.split(" ")[0];
-        TestDataManager.addDependantGlobalTestData("ChangeLessor","RequestNumber", reqNum.substring(1));
+        String reqNum = text.substring(text.indexOf("#")).split(" ")[0].substring(1);
+        TestDataManager.addDependantGlobalTestData("ChangeLessor","RequestNumber", reqNum);
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
-
     }
 
     public void clickOnRemoveLessorRepButton() {
@@ -594,7 +590,10 @@ public class ChangeLessor_LessorRepPage {
         Assert.assertFalse(b, "Input filed is not disabled");
         logger.addScreenshot("");
     }
-
+    public void clickOnContinueAddNewLessorRepButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.ContinueAddNewLessorRepButton(), 50);
+        Browser.click(ChangeLessor_LessorRepPageObjects.ContinueAddNewLessorRepButton());
+    }
     public void verifyIssuedDateInputFieldIsDisabled() {
         Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled(), 40);
         boolean b = false;
@@ -605,4 +604,5 @@ public class ChangeLessor_LessorRepPage {
         Assert.assertFalse(b, "Input filed is not disabled");
         logger.addScreenshot("");
     }
+
 }

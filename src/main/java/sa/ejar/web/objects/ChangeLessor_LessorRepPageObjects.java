@@ -218,7 +218,7 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By AddNewRepresentationDocumentLink() {
-        return By.xpath("//a[contains (text(),  'إضافة وثيقة تمثيل نظامي جديدة')]");
+        return By.xpath("//a[contains (text(),  'إضافة وثيقة')]");
     }
 
     public static By AddNewRepresentationDocumentPopupTitle() {
@@ -260,9 +260,12 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By LessorAddedPopupTitle() {
         return By.xpath("//h2[contains (text(), 'إضافة ممثل المؤجر الجديد')]");
     }
+    public static By LessorUpdatePopupTitle() {
+        return By.xpath("//h2[contains (text(), 'تعديل ممثل المؤجر الحالي')]");
+    }
 
     public static By RequestNumber() {
-        return By.xpath("//h2[contains(text(),'ممثل المؤجر')]/ancestor::app-card/descendant::p");
+        return By.xpath("//h2[contains (text(),'المؤجر')]/ancestor::app-card/descendant::img/following-sibling::p");
     }
 
     public static By removeLessorRepBTN() {
@@ -276,6 +279,7 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By UpdateLessorRepPageTitle() {
         return By.xpath("//h1[text()='تعديل ممثل المؤجر الحالي']");
     }
+
     public static By lessorRemovedPopupTitle() {
         return By.xpath("//h2[contains (text() , 'إزالة ممثل المؤجر الحالي')]");
     }
@@ -310,6 +314,14 @@ public class ChangeLessor_LessorRepPageObjects {
 
     public static By PopUpAlertAfterCancel() {
         return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')]/parent::footer/preceding-sibling::app-card-body/child::p");
+    }
+
+    public static By OldLessorRepInfoSectionTitle() {
+        return By.xpath("//h2[text()='ممثل المؤجر السابق']");
+    }
+
+    public static By ContinueAddNewLessorRepButton() {
+        return By.xpath("//button[text()=' الاستمرار لإضافة ممثل جديد ']");
     }
 
 }
