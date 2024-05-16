@@ -119,28 +119,29 @@ public class LoginPage extends WebBasePage {
     public void closeExploreEjarPopUp() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),5);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),40);
             Browser.click(LoginPageObjects.closeButton1());
         }
-        Browser.waitForSeconds(1);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),5);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),40);
             Browser.click(LoginPageObjects.closeButton2());
         }
-        Browser.waitForSeconds(1);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),5);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
             Browser.click(LoginPageObjects.closeButton1());
 
         }
-        Browser.waitForSeconds(1);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),5);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
             Browser.click(LoginPageObjects.closeButton1());
 
         }
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),20);
+            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
             Browser.click(LoginPageObjects.closeButton1());
 
         }
