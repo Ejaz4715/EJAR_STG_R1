@@ -226,11 +226,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By DocumentTypeDropdown() {
-        return By.xpath("//select[@data-name=\"document_type\"]");
+        return By.xpath("//select[contains(@data-name, \"document_type\")]");
     }
 
     public static By DocumentTypeDropdownList() {
-        return By.xpath("//select[@data-name=\"document_type\"]/child::option");
+        return By.xpath("//select[contains(@data-name, \"document_type\")]/child::option");
     }
 
     public static By IssueDateInputField() {
@@ -262,7 +262,7 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By RequestNumber() {
-        return By.xpath("//h2[text()='إضافة ممثل المؤجر الجديد']/ancestor::app-card/descendant::p");
+        return By.xpath("//h2[contains(text(),'ممثل المؤجر')]/ancestor::app-card/descendant::p");
     }
 
     public static By removeLessorRepBTN() {
@@ -276,4 +276,40 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By UpdateLessorRepPageTitle() {
         return By.xpath("//h1[text()='تعديل ممثل المؤجر الحالي']");
     }
+    public static By lessorRemovedPopupTitle() {
+        return By.xpath("//h2[contains (text() , 'إزالة ممثل المؤجر الحالي')]");
+    }
+    public static By ownershipChangeRequestOfTitleDeedPage() {
+        return By.xpath("//span[contains(text(),' طلب تغيير ملكية وثيقة الملكية ')]");
+    }
+    public static By changeLessorRequestPage() {
+        return By.xpath("//h1[contains (text(), 'طلب تغيير المالك')]");
+    }
+    public static By issuedDateTextFiled() {
+        return By.xpath("//input[@data-name=\"issued_date\"]");
+    }
+    public static By legalDocumentTypeNameInputField() {
+        return By.xpath("//input[@formcontrolname=\"legal_document_type_name\"]");
+    }
+    public static By createNewBTN() {
+        return By.xpath("//button[contains(text(),' أنشئ جديد ')]");
+    }
+    public static By confirmOwnershipDocumentBTN() {
+        return By.xpath("//button[text()=' تأكيد وثيقة الملكية ']");
+    }
+
+    public static By changeBTN() {
+        return By.xpath("//button[text()=' تغيير ']");
+    }
+    public static By addOrganizationOwnerLinkBTN() {
+        return By.xpath("//a[text()=' إضافة مالك منشأة ']");
+    }
+    public static By addOrganizationOwnerPage() {
+        return By.xpath("//h1[text()='إضافة مالك منشأة']");
+    }
+
+    public static By PopUpAlertAfterCancel() {
+        return By.xpath("//footer/descendant::button[contains(text(),'تأكيد')]/parent::footer/preceding-sibling::app-card-body/child::p");
+    }
+
 }

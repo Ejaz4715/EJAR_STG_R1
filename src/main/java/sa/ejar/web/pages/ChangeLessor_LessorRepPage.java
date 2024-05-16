@@ -7,6 +7,8 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
@@ -15,10 +17,12 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
+import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class ChangeLessor_LessorRepPage {
     public String getContractNumber() {
@@ -497,7 +501,7 @@ public class ChangeLessor_LessorRepPage {
         int index = text.indexOf("#");
         String newText = text.substring(index);
         String reqNum = newText.split(" ")[0];
-        TestDataManager.addDependantGlobalTestData("ChangeLessor","RequestNumber", reqNum);
+        TestDataManager.addDependantGlobalTestData("ChangeLessor","RequestNumber", reqNum.substring(1));
         TestDataManager.writeDependantGlobalTestData("ChangeLessor");
 
     }
@@ -521,5 +525,84 @@ public class ChangeLessor_LessorRepPage {
     public void clickOnCloseButton(By element) {
         Browser.waitUntilVisibilityOfElement(element, 50);
         Browser.click(element);
+    }
+
+    public void checkIssuedDateAndDocumentNumberAreDisabled() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled()));
+        Assert.assertTrue(Browser.isElementDisabled(ChangeLessor_LessorRepPageObjects.OwnershipDocumentSearchField()));
+        logger.addScreenshot("");
+    }
+    public void enterIssueDateInputField(String issueDate) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled(), issueDate);
+    }
+    public void enterLegalDocumentTypeNameInputField(String legalDocument) {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.legalDocumentTypeNameInputField(), 40);
+        Browser.setText(ChangeLessor_LessorRepPageObjects.legalDocumentTypeNameInputField(), legalDocument);
+    }
+
+    public void clickOnCreateNewButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.createNewBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.createNewBTN());
+    }
+
+    public void checkCreateButtonIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.createNewBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.createNewBTN()));
+        logger.addScreenshot("");
+    }
+
+    public void checkConfirmOwnershipDocumentButtonIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisabled(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN()));
+        logger.addScreenshot("");
+    }
+
+    public void clickOnConfirmOwnershipDocumentButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN());
+    }
+    public void clickOnChangeButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.changeBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.changeBTN());
+    }
+    public void checkConfirmOwnershipDocumentButtonIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.confirmOwnershipDocumentBTN()));
+        logger.addScreenshot("");
+    }
+
+    public void clickOnAddOrganizationLinkButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerLinkBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerLinkBTN());
+    }
+
+    public void checkAddOrganizationPageIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage()));
+        logger.addScreenshot("");
+    }
+
+    public void verifyOwnershipDocumentInputFieldIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40);
+        boolean b = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if (wait.until(ExpectedConditions.elementToBeClickable(CommonMethodsPageObjects.ownershipDocumentNumberTXT())) == null) {
+            b = true;
+        }
+        Assert.assertFalse(b, "Input filed is not disabled");
+        logger.addScreenshot("");
+    }
+
+    public void verifyIssuedDateInputFieldIsDisabled() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled(), 40);
+        boolean b = false;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if (wait.until(ExpectedConditions.elementToBeClickable(ChangeLessor_LessorRepPageObjects.issuedDateTextFiled())) == null) {
+            b = true;
+        }
+        Assert.assertFalse(b, "Input filed is not disabled");
+        logger.addScreenshot("");
     }
 }
