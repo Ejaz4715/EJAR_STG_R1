@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
+import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -580,6 +581,17 @@ public class ChangeLessor_LessorRepPage {
         logger.addScreenshot("");
     }
 
+    public void clickOnAddIndividualOwnerLinkButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addIndividualOwnerLinkBTN(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.addIndividualOwnerLinkBTN());
+    }
+
+    public void checkAddIndividualOwnerIsDisplayed() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage()));
+        logger.addScreenshot("");
+    }
+
     public void verifyOwnershipDocumentInputFieldIsDisabled() {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipDocumentNumberTXT(), 40);
         boolean b = false;
@@ -605,4 +617,31 @@ public class ChangeLessor_LessorRepPage {
         logger.addScreenshot("");
     }
 
+    public void clickOnPropertyOwnerRadioButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.PropertyOwnerButton(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.PropertyOwnerButton());
+    }
+
+    public void clickOnRepresentativeOwnerRadioButton() {
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.RepresentativeOwnerRadioButtonButton(), 40);
+        Browser.click(ChangeLessor_LessorRepPageObjects.RepresentativeOwnerRadioButtonButton());
+    }
+
+    public void verifyPropertyOwnerRadioButtonIsClicked() {
+        WebElement ele = Browser.getWebElement(ChangeLessor_LessorRepPageObjects.PropertyOwnerButtonInput());
+        Assert.assertTrue(ele.isSelected(), "");
+        logger.addScreenshot("");
+    }
+
+    public void verifyRepresentativeOwnerRadioButtonIsClicked() {
+        WebElement ele = Browser.getWebElement(ChangeLessor_LessorRepPageObjects.RepresentativeOwnerRadioButtonButtonInput());
+        Assert.assertTrue(ele.isSelected(), "");
+        logger.addScreenshot("");
+    }
+
+    public void verifyNationalIdFieldIsEnabled() throws Exception {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantNationalIdInput(), 40);
+        Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantNationalIdInput()), "National Id field is not enabled");
+        logger.addScreenshot("");
+    }
 }

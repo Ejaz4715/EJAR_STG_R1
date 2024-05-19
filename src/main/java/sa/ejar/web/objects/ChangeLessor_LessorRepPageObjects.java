@@ -308,8 +308,11 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By addOrganizationOwnerLinkBTN() {
         return By.xpath("//a[text()=' إضافة مالك منشأة ']");
     }
+    public static By addIndividualOwnerLinkBTN() {
+        return By.xpath("//a[contains (text(), 'إضافة مالك فرد')]");
+    }
     public static By addOrganizationOwnerPage() {
-        return By.xpath("//h1[text()='إضافة مالك منشأة']");
+        return By.xpath("//h1[text()='إضافة مالك فرد']");
     }
 
     public static By PopUpAlertAfterCancel() {
@@ -324,4 +327,27 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//button[text()=' الاستمرار لإضافة ممثل جديد ']");
     }
 
+    public static By PropertyOwnerButton() {
+        return By.xpath("//label[text()=' مالك العقار ']");
+    }
+
+    public static By RepresentativeOwnerRadioButtonButton() {
+        return By.xpath("//label[contains (text() , 'ممثل المالك')]");
+    }
+
+    public static By PropertyOwnerButtonInput() {
+        return By.xpath("//input[@data-value=\"property_owner\"]");
+    }
+
+    public static By RepresentativeOwnerRadioButtonButtonInput() {
+        return By.xpath("//input[@data-value=\"owner_representative\"]");
+    }
+
+    public static By ContractPartyInfoPage() {
+        return By.xpath("//h2[text()='معلومات طرف العقد']");
+    }
+
+    public static By PartyIdSection() {
+        return By.xpath("//h2[text()='هوية الطرف']");
+    }
 }
