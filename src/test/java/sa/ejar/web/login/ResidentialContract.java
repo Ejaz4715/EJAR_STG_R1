@@ -32,12 +32,10 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectNewResidualContract();
         logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
-        String month = data.get("Month");
-        String year = data.get("Year");
         String currentDate = java.time.LocalDate.now().toString();
         String [] arrDate = currentDate.split("-");
         app.addResidentialContractPage.selectStartDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
-        app.addResidentialContractPage.selectEndDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.valueOf(arrDate[0])+1));
+        app.addResidentialContractPage.selectEndDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.parseInt(arrDate[0])+1));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
         app.addResidentialContractPage.clickAddPropertyBTN();
@@ -124,7 +122,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_14_approveResidentialContractMoreThanThreeMonthsWithSinglePaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_14_approveResidentialContractMoreThanThreeMonthsWithSinglePaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -155,7 +153,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_15_approveResidentialContractMoreThanThreeMonthsWithSinglePaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_15_approveResidentialContractMoreThanThreeMonthsWithSinglePaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -186,7 +184,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_16_verifyResidentialContractStatusIsActiveByBoManager(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_16_verifyResidentialContractStatusIsActiveByBoManager(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -312,7 +310,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_18_approveResidentialContractMoreThanThreeMonthsWithMonthlyFrequencyPaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_18_approveResidentialContractMoreThanThreeMonthsWithMonthlyFrequencyPaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -343,7 +341,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_19_approveResidentialContractMoreThanThreeMonthsWithMonthlyFrequencyPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_19_approveResidentialContractMoreThanThreeMonthsWithMonthlyFrequencyPaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -373,7 +371,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.verifyApprovalIsSubmitted();
     }
     @Test(dataProvider = "testDataProvider")
-    public void TC_20_verifyResidentialContractStatusIsRegisteredAsBoManager(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_20_verifyResidentialContractStatusIsRegisteredAsBoManager(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -500,7 +498,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_22_approveResidentialContractMoreThanThreeMonthsWithQuarterlyFrequencyPaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_22_approveResidentialContractMoreThanThreeMonthsWithQuarterlyFrequencyPaymentByLesser(Map<String, String> data ) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -531,7 +529,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_23_approveResidentialContractMoreThanThreeMonthsWithQuarterlyFrequencyPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_23_approveResidentialContractMoreThanThreeMonthsWithQuarterlyFrequencyPaymentByTenant(Map<String, String> data ) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -669,7 +667,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_25_approveResidentialContractMoreThanThreeMonthsAndSixMonthPaymentByLessor(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_25_approveResidentialContractMoreThanThreeMonthsAndSixMonthPaymentByLessor(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -700,7 +698,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_26_approveResidentialContractMoreThanThreeMonthsAndSixMonthPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_26_approveResidentialContractMoreThanThreeMonthsAndSixMonthPaymentByTenant(Map<String, String> data ) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -838,7 +836,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_28_approveResidentialContractMoreThanThreeMonthsAndYearlyPaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_28_approveResidentialContractMoreThanThreeMonthsAndYearlyPaymentByLesser(Map<String, String> data ) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -869,7 +867,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_29_approveResidentialContractMoreThanThreeMonthsAndYearlyPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_29_approveResidentialContractMoreThanThreeMonthsAndYearlyPaymentByTenant(Map<String, String> data ) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1007,7 +1005,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_31_approveResidentialContractMoreThanThreeMonthsAndFlexiblePaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_31_approveResidentialContractMoreThanThreeMonthsAndFlexiblePaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1038,7 +1036,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_32_approveResidentialContractMoreThanThreeMonthsWithFlexiblePaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_32_approveResidentialContractMoreThanThreeMonthsWithFlexiblePaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1093,8 +1091,8 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickDateInputField();
         String currentDate = java.time.LocalDate.now().toString();
         String [] arrDate = currentDate.split("-");
-        app.addResidentialContractPage.selectStartDateOfResidualContract(arrDate[2],app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.valueOf(arrDate[0])+1));
-        app.addResidentialContractPage.selectEndDateOfResidualContract(arrDate[2],app.addResidentialContractPage.getCurrentMonth(String.valueOf(Integer.valueOf(arrDate[1])+02)), String.valueOf(Integer.valueOf(arrDate[0])+1));
+        app.addResidentialContractPage.selectStartDateOfResidualContract(arrDate[2],app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.parseInt(arrDate[0])+1));
+        app.addResidentialContractPage.selectEndDateOfResidualContract(arrDate[2],app.addResidentialContractPage.getCurrentMonth(String.valueOf(Integer.parseInt(arrDate[1])+02)), String.valueOf(Integer.parseInt(arrDate[0])+1));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
         app.addResidentialContractPage.clickAddPropertyBTN();
@@ -1179,7 +1177,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_34_approveResidentialContractLessThanThreeMonthsWithSinglePaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_34_approveResidentialContractLessThanThreeMonthsWithSinglePaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1210,7 +1208,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_35_approveResidentialContractLessThanThreeMonthsWithSinglePaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_35_approveResidentialContractLessThanThreeMonthsWithSinglePaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1241,7 +1239,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_36_verifyResidentialContractLessThanThreeMonthStatusIsActiveByBoManager(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_36_verifyResidentialContractLessThanThreeMonthStatusIsActiveByBoManager(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1368,7 +1366,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_38_approveResidentialContractLessThanThreeMonthsAndMonthlyFrequencyPaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_38_approveResidentialContractLessThanThreeMonthsAndMonthlyFrequencyPaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1399,7 +1397,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_39_approveResidentialContractLessThanThreeMonthsAndMonthlyFrequencyPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_39_approveResidentialContractLessThanThreeMonthsAndMonthlyFrequencyPaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1430,7 +1428,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_40_verifyResidentialContractLessThanThreeMonthStatusIsRegisteredAsBoManager(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_40_verifyResidentialContractLessThanThreeMonthStatusIsRegisteredAsBoManager(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1558,7 +1556,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_42_approveResidentialContractLessThanThreeMonthsAndQuarterlyFrequencyPaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_42_approveResidentialContractLessThanThreeMonthsAndQuarterlyFrequencyPaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1589,7 +1587,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_43_approveResidentialContractLessThanThreeMonthsAndQuarterlyFrequencyPaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_43_approveResidentialContractLessThanThreeMonthsAndQuarterlyFrequencyPaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1727,7 +1725,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_45_approveResidentialContractLessThanThreeMonthsAndFlexiblePaymentByLesser(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_45_approveResidentialContractLessThanThreeMonthsAndFlexiblePaymentByLesser(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");
@@ -1758,7 +1756,7 @@ public class ResidentialContract extends NHCWebTest{
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_46_approveResidentialContractLessThanThreeMonthsAndFlexiblePaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
+    public void TC_46_approveResidentialContractLessThanThreeMonthsAndFlexiblePaymentByTenant(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         app.loginPage.changeUILanguage("ar");

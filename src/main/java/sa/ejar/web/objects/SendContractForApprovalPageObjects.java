@@ -33,7 +33,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By downloadDraftCopyBTN() {
-        return By.xpath("//button[text()=' تحميل مسودة العقد ']");
+        return By.xpath("//button[contains (text(), 'تحميل مسودة العقد')]");
     }
 
     public static By previewBrokerageAgreementSection() {
@@ -150,6 +150,10 @@ public class SendContractForApprovalPageObjects {
 
     public static By sendForApprovalCheckboxes() {
         return By.xpath("//input[@type=\"checkbox\"]/following-sibling::label");
+    }
+
+    public static By downloadBTN() {
+        return By.xpath("(//button[text()=' تحميل '])[1]");
     }
 
 }

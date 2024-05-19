@@ -1,12 +1,10 @@
 package sa.ejar.web.login;
 
 import com.testcrew.manager.TestDataManager;
-import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
-
 import java.util.Map;
 
 public class RevokeContract extends NHCWebTest {
@@ -1649,7 +1647,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");
-//        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 08: Click on \" عرض \" button beside attachment");
         CommonMethodsPage.ClickOnAttachment("view");
         CommonMethodsPage.verifyNewTabIsOpened();

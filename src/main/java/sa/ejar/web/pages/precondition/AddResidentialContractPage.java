@@ -308,24 +308,16 @@ public class AddResidentialContractPage {
     }
     public void verifyTenantRepresentativeRadioBTNIsClickable() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN(), 5);
-//        Browser.waitForSeconds(2);
         Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN()), "Button is not clickable");
         logger.addScreenshot("");
     }
 
-
-
     public void inputTenantNationalId(String nationalId) throws Exception {
-//        Browser.waitForSeconds(2);
-//        Browser.click(RegistrationPageObjects.nationalIDRegistrationLabel());
-//        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantNationalIdInput(), 5);
-//        Browser.waitForSeconds(2);
         Browser.setText(AddResidentialContractPageObjects.tenantNationalIdInput(), nationalId);
     }
 
     public void inputTenantDOB(String DOB) throws Exception {
-        Browser.executeJSScroll(10);
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantDateOfBirthInput(), 10);
         Browser.waitForSeconds(1);
         Browser.setText(AddResidentialContractPageObjects.tenantDateOfBirthInput(), DOB);
@@ -333,7 +325,6 @@ public class AddResidentialContractPage {
 
     public void clickContinueButtonOnTenantContractPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueBtnOnIndividualContractPage(), 5);
-//        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.continueBtnOnIndividualContractPage());
         logger.addScreenshot("Clicked Confirm after providing required data for new Tenant");
     }
@@ -341,7 +332,6 @@ public class AddResidentialContractPage {
 
     public void inputTenantPhoneNumberAndEmail(String phoneNumber) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantPhoneNumberInput(), 5);
-//        Browser.waitForSeconds(2);
         Browser.setText(AddResidentialContractPageObjects.tenantPhoneNumberInput(), phoneNumber);
         Browser.setText(AddResidentialContractPageObjects.emailInput(),"Test@test.com");
     }

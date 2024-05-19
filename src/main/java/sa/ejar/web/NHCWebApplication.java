@@ -11,34 +11,28 @@ import com.testcrew.web.Browser;
 import java.awt.event.KeyEvent;
 import java.util.Map;
 
+
 public class NHCWebApplication {
 
 
     public final LoginPage loginPage;
     public final AddResidentialContractPage addResidentialContractPage;
     public final RevokeContractPage revokeContractPage;
-    public final CommonMethodsPage commonMethodsPage;
     public final TerminateContractPage terminateContractPage;
-
     public final ContractWaiverPage contractWaiverPage;
     public final SendContractForApprovalPage sendContractForApprovalPage;
-
     public final MoveInMoveOutUnitsPage moveInMoveOutUnitsPage;
-
     public final RentalIncidentsPage rentalIncidentsPage;
     public final ChangeLessorAndLessorRepresentativePage changeLessorAndLessorRepresentativePage;
-
     public ChangeTenantActivityPage changeTenantActivityPage;
-
-
     public ManualRenewalPage manualRenewalPage;
+    public final ChangeLessor_LessorRepPage changeLessor_lessorRepPage;
 
 
     public NHCWebApplication() {
         loginPage = new LoginPage();
         addResidentialContractPage = new AddResidentialContractPage();
         revokeContractPage = new RevokeContractPage();
-        commonMethodsPage = new CommonMethodsPage();
         terminateContractPage = new TerminateContractPage();
         contractWaiverPage = new ContractWaiverPage();
         sendContractForApprovalPage = new SendContractForApprovalPage();
@@ -46,30 +40,24 @@ public class NHCWebApplication {
         changeLessorAndLessorRepresentativePage = new ChangeLessorAndLessorRepresentativePage();
         moveInMoveOutUnitsPage = new MoveInMoveOutUnitsPage();
         changeTenantActivityPage = new ChangeTenantActivityPage();
-
         manualRenewalPage = new ManualRenewalPage();
-
+        changeLessor_lessorRepPage = new ChangeLessor_LessorRepPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
-
         if (data.get("URL") != null) {
             Browser.openUrl(data.get("URL"));
         } else {
             Browser.openUrl(TestConfigManager.getTestSettingsWebAppURL());
         }
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), 40);
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(1);
         TCRobot robot = new TCRobot();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
+            robot.keyPress(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
+            robot.keyRelease(KeyEvent.VK_MINUS);
         }
     }
 }

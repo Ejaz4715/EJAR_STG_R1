@@ -35,11 +35,11 @@ public class RevokeContractPageObjects {
     }
 
     public static By CalenderIcon() {
-        return By.xpath("//div[@class=\"date-picker-button\"]");
+        return By.xpath("//div[contains(@class,\"date-picker\")]");
     }
 
     public static By CalenderPopUp() {
-        return By.xpath("//div[@class=\"calendar-option\"]");
+        return By.xpath("//div[@class='calendar-option']");
     }
 
     public static By NoteInputField() {
@@ -59,7 +59,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By ErrorMessageForLargeFile() {
-        return By.xpath("//p[contains (text(), 'حجم الملف أكبر من المسموح به. أقصى حجم للملف يجب أن لا يتعدى 20 ميغابت')]");
+        return By.xpath("//p[contains (text(), 'حجم الملف أكبر من المسموح به')]");
     }
 
     public static By NextButton() {
@@ -99,5 +99,9 @@ public class RevokeContractPageObjects {
 
     public static By cancelBTNOnRequestTPage() {
         return By.xpath("//button[@routerlink=\"..\"]");
+    }
+
+    public static By RentalIncidentRequestPageHeading() {
+        return By.xpath("//h1[contains (text() , 'تفاصيل الطلب')]");
     }
 }
