@@ -9255,7 +9255,7 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         logger.info("Step 14: Click on \"إضافة مالك منشأة\"");
         app.changeLessor_lessorRepPage.clickOnAddOrganizationLinkButton();
-        logger.info("Step 15: Verify the user is navigate to\"إضافة مالك منشأة\" page");
+        logger.info("Step 15: Verify the user is navigated to\"إضافة مالك منشأة\" page");
         app.changeLessor_lessorRepPage.checkAddOrganizationPageIsDisplayed();
     }
 }
