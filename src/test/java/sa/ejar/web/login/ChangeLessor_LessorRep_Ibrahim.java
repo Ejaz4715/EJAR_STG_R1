@@ -8984,7 +8984,7 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
         CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
-        app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Issued_Date"));
+        app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Select existing ownership document");
         CommonMethodsPage.selectExistingOwnershipDocument();
         CommonMethodsPage.clickOnNextButton();
@@ -9197,22 +9197,9 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
-        logger.info("Step 08: Click on (إضافة وثيقة ملكية) button");
-        app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
-        logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
-        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        logger.info("Step 11: Enter \"تاريخ الاصدار\"");
-        app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Issued_Date"));
-        logger.info("Step 12: Select existing ownership document");
-        CommonMethodsPage.selectExistingOwnershipDocument();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \"تأكيد وثيقة الملكية\"");
-        app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
-        logger.info("Step 14: Click on \"تغيير\"");
+        logger.info("Step 08: Click on \"تغيير\"");
         app.changeLessor_lessorRepPage.clickOnChangeButton();
-        logger.info("Step 15: Verify the user navigate to (معلومات وثيقة الملكية) section");
+        logger.info("Step 09: Verify the user navigate to (معلومات وثيقة الملكية) section");
         app.changeLessor_lessorRepPage.checkConfirmOwnershipDocumentButtonIsDisplayed();
     }
 
@@ -9240,22 +9227,9 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
-        logger.info("Step 08: Click on (إضافة وثيقة ملكية) button");
-        app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
-        logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
-        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        logger.info("Step 11: Enter \"تاريخ الاصدار\"");
-        app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Issued_Date"));
-        logger.info("Step 12: Select existing ownership document");
-        CommonMethodsPage.selectExistingOwnershipDocument();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \"تأكيد وثيقة الملكية\"");
-        app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
-        logger.info("Step 14: Click on \"إضافة مالك منشأة\"");
+        logger.info("Step 08: Click on \"إضافة مالك منشأة\"");
         app.changeLessor_lessorRepPage.clickOnAddOrganizationLinkButton();
-        logger.info("Step 15: Verify the user is navigated to\"إضافة مالك منشأة\" page");
+        logger.info("Step 09: Verify the user is navigate to\"إضافة مالك منشأة\" page");
         app.changeLessor_lessorRepPage.checkAddOrganizationPageIsDisplayed();
     }
 }
