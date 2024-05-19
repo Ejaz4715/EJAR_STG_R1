@@ -206,7 +206,7 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By IdTypeRadioInput() {
-        return By.xpath("//app-form-radio/descendant::input");
+        return By.xpath("//app-form-radio/descendant::input[@data-name=\"id_type\"]");
     }
 
     public static By lessorRepIcon() {
