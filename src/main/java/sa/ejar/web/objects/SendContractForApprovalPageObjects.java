@@ -126,6 +126,10 @@ public class SendContractForApprovalPageObjects {
     public static By rejectionSubmittedMsg() {
         return By.xpath("//h2[text()= 'تم إرسال الرفض']");
     }
+
+    public static By ApprovedSubmittedMsg() {
+        return By.xpath("//h2[text()= 'تمت الموافقة بنجاح']");
+    }
     public static By reviewAgreementPage() {
         return By.xpath("//h1[text()=' مراجعة اتفاقية الوساطة ']");
     }

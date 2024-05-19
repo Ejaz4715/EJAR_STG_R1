@@ -14,8 +14,6 @@ public class MoveInMoveOutUnitsPageObjects {
                 put("ar", "");
                 put("en", "");
             }});
-
-
         }};
 
     public static String get(String locator) throws Exception {
@@ -54,39 +52,24 @@ public class MoveInMoveOutUnitsPageObjects {
         return By.xpath("//label[@class='card-title text-bold']");
     }
 
-    public static By MoveInHeading() {
-        return By.xpath("//div//p[@class='card-title m-0']");
-    }
+    public static By MoveInHeading() {return By.xpath("//div//p[@class='card-title m-0']");}
 
-    public static By ViewDetails() {
-        return By.xpath("//div//button[text()=' عرض التفاصيل ']");
-    }
+    public static By ViewDetails() {return By.xpath("//div//button[text()=' عرض التفاصيل ']");}
 
-    public static By ContractHeading() {
-        return By.xpath("//div//h2[text()='معلومات العقد']");
-    }
+    public static By ContractHeading() {return By.xpath("//div//h2[text()='معلومات العقد']");}
 
-    public static By ConfirmMoveInBTN() {
-        return By.xpath("//section//div//button[text()='تأكيد حالة الوحدة']");
-    }
+    public static By ConfirmMoveInBTN() {return By.xpath("//section//div//button[text()='تأكيد حالة الوحدة']");}
 
-    public static By MoveInStatus() {
-        return By.xpath("(//app-card-value//span[@class='dash-if-empty']//span)[11]");
-    }
+    public static By MoveInStatus() {return By.xpath("(//app-card-value//span[@class='dash-if-empty']//span)[11]");}
 
-    public static By TenantResponse() {
-        return By.xpath("//p[@class='info-value mb-3']");
-    }
+    public static By TenantResponse() {return By.xpath("//p[@class='info-value mb-3'][text()='في انتظار استجابة المستأجر']");}
 
-    public static By LessorResponse() {
-        return By.xpath("//p[@class='info-value mb-3']");
-    }
+    public static By LessorResponse() {return By.xpath("//p[@class='info-value mb-3']");}
 
-    public static By DisplayBTN() {
-        return By.xpath("//div//button[text()=' عرض ']");
-    }
+    public static By DisplayBTN() {return By.xpath("//div//button[text()=' عرض ']");}
 
-    public static By DownloadPDFBTN() {
-        return By.xpath("//a[text()='تحميل نسخه PDF']");
-    }
+    public static By DownloadPDFBTN() {return By.xpath("//a[text()='تحميل نسخه PDF']");}
+
+    public static By clickOnUploadBTN() {return By.xpath("//p[contains(text(),'صور حالة')]");}
+
 }
