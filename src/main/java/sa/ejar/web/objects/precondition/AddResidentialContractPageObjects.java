@@ -664,4 +664,13 @@ public class AddResidentialContractPageObjects {
     public static By tenantName() {
         return By.xpath("//span[text()='اسم المستأجر']/parent::div/descendant::h5/child::span");
     }
+    public static By newAddress() {
+        return By.xpath("//div//h2[text()='عنوان العقار المسجل']");
+    }
+    public static By addNewIbanInContract() {
+        return By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]");
+    }
+//    public static By () {
+//        return By.xpath("//label//input[@data-name='required']");
+//    }
 }

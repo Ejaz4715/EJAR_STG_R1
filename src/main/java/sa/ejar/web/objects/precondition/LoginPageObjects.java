@@ -298,4 +298,15 @@ public class LoginPageObjects {
     public static By assessementUnitpopup() throws Exception {
         return By.xpath(get("assessment-unit-pop-up"));
     }
+    public static By ContractNumberInput() {
+        return By.xpath("//div//input[@data-name='contract_number']");
+    }
+
+    public static By descriptionDropDownList() {
+        return By.xpath("//select[@data-name='transaction_purpose_code']");
+    }
+
+    public static By SecurityAmountReserved(){
+        return By.xpath("//tbody//td[@class='dash-if-empty px-3'][contains(text(),'ر.س')]");
+    }
 }

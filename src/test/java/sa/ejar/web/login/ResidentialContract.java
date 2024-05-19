@@ -1,14 +1,12 @@
 package sa.ejar.web.login;
 
-////import com.testcrew.utility.Constants;
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
-import org.openqa.selenium.By;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
-
 import java.util.Map;
 
 public class ResidentialContract extends NHCWebTest{
@@ -26,7 +24,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -51,7 +48,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
@@ -65,7 +62,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
         logger.info("Step 06: Input Individual/Tenant Information details > Confirm");
-//        app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("509876567");
+        //app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("509876567");
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.addResidentialContractPage.selectTenantRegion(1);
         //app.addResidentialContractPage.clickTenantCityDropdown();
@@ -73,12 +70,12 @@ public class ResidentialContract extends NHCWebTest{
         //app.addResidentialContractPage.AddAdditionalAdders();
         //-----------------------------------------------------------------------------------
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
-//        app.addResidentialContractPage.addLessorFacilities();
-//        app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("564678656");
+        //app.addResidentialContractPage.addLessorFacilities();
+        //app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("564678656");
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.addResidentialContractPage.AddAdditionalAdders();
         //-----------------------------------------------------------------------------------
-//        app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
+        //app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 07: Navigate to Financial > Input annual rent > Select Single Payment > Add and select IBAN > Select account owner > Continue");
         app.addResidentialContractPage.clickFinancialTermsStepBTN();
         app.addResidentialContractPage.clickAddRentalContractTermsBTN();
@@ -88,8 +85,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickSinglePaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -124,15 +120,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
         String contractNum = app.addResidentialContractPage.getContractNumber();
         TestDataManager.addDependantGlobalTestData("ResidentialContract", "ContractNumber(<3 Months)", contractNum);
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ResidentialContract", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ApproveContractLesser", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ApproveContractTenant", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -147,7 +134,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-//        app.loginPage.closeExploreEjarPopUp();
+        app.loginPage.closeExploreEjarPopUp();
         app.addResidentialContractPage.clickCloseBtnOnPopUp();
         logger.info("Step 02: Navigate to View All Contracts > Search for the contract");
         app.addResidentialContractPage.clickContractsBtn();
@@ -171,7 +158,7 @@ public class ResidentialContract extends NHCWebTest{
     public void TC_15_approveResidentialContractMoreThanThreeMonthsWithSinglePaymentByTenant(Map<String, String> data, ITestContext context) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
-//        app.loginPage.changeUILanguage("ar");
+        app.loginPage.changeUILanguage("ar");
         app.loginPage.assertLoginPageDisplayed();
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -232,7 +219,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -253,8 +239,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
-            logger.info("Select and confirm address from the map");
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -290,8 +275,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickMonthlyPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -324,15 +308,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract1", "ContractNumber(>3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -432,7 +407,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -453,8 +427,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
-            logger.info("Select and confirm address from the map");
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -490,8 +463,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickQuarterlyPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -524,15 +496,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract1", "ContractNumber(>3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -613,7 +576,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -634,8 +596,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
-            logger.info("Select and confirm address from the map");
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -671,8 +632,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickSixMonthPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -705,15 +665,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract1", "ContractNumber(>3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -794,7 +745,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -815,8 +765,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
-            logger.info("Select and confirm address from the map");
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {            logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -852,8 +801,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickYearlyPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -886,15 +834,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract1", "ContractNumber(>3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -975,7 +914,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -996,8 +934,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
-            logger.info("Select and confirm address from the map");
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {            logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -1033,8 +970,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickFlexiblePaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -1067,15 +1003,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant1", "ContractNumber(>3 months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract1", "ContractNumber(>3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -1156,7 +1083,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -1179,7 +1105,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
@@ -1201,23 +1127,22 @@ public class ResidentialContract extends NHCWebTest{
         //app.addResidentialContractPage.AddAdditionalAdders();
         //-----------------------------------------------------------------------------------
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
-//        app.addResidentialContractPage.addLessorFacilities();
-//        app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("564678656");
+        //app.addResidentialContractPage.addLessorFacilities();
+        //app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("564678656");
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.addResidentialContractPage.AddAdditionalAdders();
         //-----------------------------------------------------------------------------------
-//        app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
+        //app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 07: Navigate to Financial > Input annual rent > Select Single Payment > Add and select IBAN > Select account owner > Continue");
         app.addResidentialContractPage.clickFinancialTermsStepBTN();
         app.addResidentialContractPage.clickAddRentalContractTermsBTN();
         app.addResidentialContractPage.enterAnnulRent("2000");
-//        app.addResidentialContractPage.increaseRentPrice();
-//        app.addResidentialContractPage.clickAddAdditionalContractTerms();
+        //app.addResidentialContractPage.increaseRentPrice();
+        //app.addResidentialContractPage.clickAddAdditionalContractTerms();
         app.addResidentialContractPage.clickSinglePaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -1226,7 +1151,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectLessorRadioBtnForAccountOwner();
         logger.info("Step 08:  Continue Additional Fees > Continue Financial terms");
         app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
-//        app.addResidentialContractPage.addAdditionalFee();
+        //app.addResidentialContractPage.addAdditionalFee();
         app.addResidentialContractPage.clickContinueFinancialTermsBTN();
         logger.info("Step 09:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
@@ -1250,16 +1175,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ResidentialContract", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ApproveContractLesser", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
-//        com.testcrew.utility.ExcelManager.writeToExcelColumn(Constants.RUN_MANAGER_WORKBOOK.toString(), "AddResidentialContract",
-//                "ApproveContractTenant", "ContractNumber(<3 Months)", context.getAttribute("Contract number").toString());
-//
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -1358,8 +1273,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
-        //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
+//        app.rechargeWalletPage.chooseOfficer("BO_Manager");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -1380,7 +1294,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
@@ -1417,8 +1331,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickMonthlyPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -1451,15 +1364,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -1559,7 +1463,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -1580,7 +1483,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
@@ -1617,7 +1520,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickQuarterlyPaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {
             app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
@@ -1651,15 +1554,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 
@@ -1739,7 +1633,6 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.closeExploreEjarPopUp();
         //---------------If New User Uncomment Below Method-----------------------------------
         //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //logger.info("Step 05: Recharge Wallet");
         //app.rechargeWalletPage.addIban();
         //app.rechargeWalletPage.rechargeWallet();
         //--------------------------------------------------------------------------------------------
@@ -1760,7 +1653,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.addResidentialContractPage.clickConfirmPropertyDetailsBTN();
-        if(Browser.isElementPresent(By.xpath("//div//h2[text()='عنوان العقار المسجل']"))) {
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             logger.info("Select and confirm address from the map");
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
@@ -1797,8 +1690,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickFlexiblePaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]"))) {
-            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -1831,15 +1723,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractLesser2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ApproveContractTenant2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
-//        app.addResidentialContractPage.writeToExcel("AddResidentialContract",
-//                "ResidentialContract2", "ContractNumber(<3 Months)",
-//                context.getAttribute("Contract number").toString());
         app.addResidentialContractPage.verifyContractStatusIsWaitingForApproval();
     }
 

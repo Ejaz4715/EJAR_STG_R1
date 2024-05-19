@@ -165,6 +165,7 @@ public class SendContractForApprovalPage {
     public void enterRejectionReason(String rejectReason) throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectionReasonTextarea(), 20);
         Browser.setText(SendContractForApprovalPageObjects.rejectionReasonTextarea(), rejectReason);
+        logger.addScreenshot("Rejection Reason : " + rejectReason);
 
     }
     public void clickOnRejectTheContractButton() {
@@ -232,8 +233,16 @@ public class SendContractForApprovalPage {
     public void verifyRejectionSubmittedMessageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectionSubmittedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.rejectionSubmittedMsg()));
-        logger.addScreenshot("The (تم إرسال الرفض) page is displayed");
+        logger.addScreenshot("The (تم إرسال الرفض) message is displayed");
     }
+
+
+    public void verifyApprovedSubmittedMessageIsDisplayed() throws Exception {
+        Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.ApprovedSubmittedMsg(), 20);
+        Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.ApprovedSubmittedMsg()));
+        logger.addScreenshot("The (تمت الموافقة بنجاح) message is displayed");
+    }
+
 
     public void verifyReviewAgreementPageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewAgreementPage(), 20);

@@ -330,4 +330,8 @@ public class CommonMethodsPageObjects {
     {
         return By.xpath("//li[contains(text(),'رمز OTP غير صالح')]");
     }
+    public static By ContractResultOfSearchedContract(){ return By.xpath("//div[@class=\"col-12 py-4\"]");}
+    public static By AccountSettingsHeading(){ return By.xpath("//header[@class='main-header d-lg-block d-none']//h1");}
+    public static By UnitForms(){ return By.xpath("//div//a[text()=' نماذج الوحدة ']");}
+    public static By ViewUnitForms(){ return By.xpath("//div//span[text()='عرض نماذج الوحدة']");}
 }

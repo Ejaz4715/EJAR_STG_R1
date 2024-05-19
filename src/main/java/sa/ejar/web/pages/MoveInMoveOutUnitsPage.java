@@ -7,17 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
-
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.nio.file.Paths;
-
 import static com.testcrew.base.WebBaseTest.logger;
 
 public class MoveInMoveOutUnitsPage {
     public void closeMoveInOutPopup() {
-        //Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),5);
+        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),5);
         if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp())) {
             Browser.click(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp());
         }
@@ -26,17 +24,20 @@ public class MoveInMoveOutUnitsPage {
     public void selectYesRadioBTN() {
         Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.selectYesRadioBTN(), 10);
         Browser.click(MoveInMoveOutUnitsPageObjects.selectYesRadioBTN());
+        logger.addScreenshot("radio button ('نعم') is displayed and clickable");
         Browser.waitForSeconds(2);
     }
 
     public void selectNoRadioBTN() {
-       // Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN(), 15);
+        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN(), 15);
         Browser.click(MoveInMoveOutUnitsPageObjects.selectNoRadioBTN());
+        logger.addScreenshot("radio button ('لا') is displayed and clickable");
         Browser.waitForSeconds(2);
     }
 
     public void checkNoteTextAreaIsDisplayed() {
         Assert.assertTrue(Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.NoteTextareaInput()), "Note text area is not visible");
+        logger.addScreenshot(" The 'الملاحظات' text area is displayed");
     }
 
     public void fillBadConditionReason() {
@@ -51,7 +52,7 @@ public class MoveInMoveOutUnitsPage {
     public void uploadFile(String File) {
         String CURRENT_DIR = System.getProperty("user.dir");
         String filepath = Paths.get(CURRENT_DIR, "src", "main", "resources") + "\\" + File;
-        WebElement UploadFile = Browser.getWebElement(By.xpath("(//input[@type='file'])"));
+        WebElement UploadFile = Browser.getWebElement(RevokeContractPageObjects.UploadDocumentsInput());
         UploadFile.sendKeys(filepath);
         Browser.waitForSeconds(2);
     }
@@ -59,17 +60,17 @@ public class MoveInMoveOutUnitsPage {
 
     public void verifyAttachmentIsUploaded() {
         CommonMethodsPage.checkOneAttachmentIsAdded(RevokeContractPageObjects.AttachmentIcon());
-        logger.addScreenshot("");
+        logger.addScreenshot("File is uploaded");
     }
 
     public void verifyAttachmentIsRemoved() {
         Assert.assertTrue(Browser.isElementNotPresent(RevokeContractPageObjects.AttachmentIcon()));
-        logger.addScreenshot("");
+        logger.addScreenshot("Files is removed");
     }
 
     public void verifyAttachmentsAreUploaded() {
         CommonMethodsPage.checkMultipleAttachmentsAreAdded(RevokeContractPageObjects.AttachmentIcon());
-        logger.addScreenshot("");
+        logger.addScreenshot("Multiple files are uploaded");
     }
 
     public void verifyAttachmentErrorMsg(String ErrMsg) {
@@ -103,7 +104,7 @@ public class MoveInMoveOutUnitsPage {
     public void verifyReturnToUnitMoveInForm() {
         Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.MoveInHeading(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(MoveInMoveOutUnitsPageObjects.MoveInHeading()));
-        logger.addScreenshot("");
+        logger.addScreenshot("User return back to 'نموذج تأكيد استلام/تسليم الوحدة'");
     }
 
     public void ViewMoveInDetails() {
@@ -114,13 +115,14 @@ public class MoveInMoveOutUnitsPage {
     public void verifyNavigateToViewUnitMoveInDetails() {
         Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.ContractHeading(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(MoveInMoveOutUnitsPageObjects.ContractHeading()));
-        logger.addScreenshot("");
+        logger.addScreenshot("Unit move in details is displayed");
         Browser.waitForSeconds(2);
     }
 
     public void confirmMoveInUnit() {
         Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.ConfirmMoveInBTN(), 40);
         Browser.click(MoveInMoveOutUnitsPageObjects.ConfirmMoveInBTN());
+        logger.addScreenshot("The 'نموذج تأكيد استلام/تسليم الوحدة' is displayed");
         Browser.waitForSeconds(2);
     }
 
@@ -137,9 +139,9 @@ public class MoveInMoveOutUnitsPage {
         Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.TenantResponse(), 40);
         Browser.executeJSScroll(600);
         Browser.waitForSeconds(1);
-        String MoveInStatus = Browser.getText(MoveInMoveOutUnitsPageObjects.TenantResponse());
-        Assert.assertTrue(MoveInStatus.contains(Response));
-        logger.addScreenshot("Tenant Move In Response is : " + MoveInStatus);
+        String TenantResponse = Browser.getText(MoveInMoveOutUnitsPageObjects.TenantResponse());
+        Assert.assertTrue(TenantResponse.contains(Response));
+        logger.addScreenshot("Tenant Move In Response is : " + Response);
     }
 
     public void VerifyLessorResponse(String Response) {
@@ -169,13 +171,13 @@ public class MoveInMoveOutUnitsPage {
         if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.DownloadPDFBTN())) {
             Browser.click(MoveInMoveOutUnitsPageObjects.DownloadPDFBTN());
             Browser.waitForSeconds(4);
-
+            logger.addScreenshot("Copy of move in model is displayed");
         }
     }
 
     public void uploadAttachment(String File) throws Exception {
         Browser.waitForSeconds(3);
-        Browser.click(By.xpath("//p[contains(text(),'صور حالة')]"));
+        Browser.click(MoveInMoveOutUnitsPageObjects.clickOnUploadBTN());
         Browser.waitForSeconds(2);
         robotFiles(File);
     }
