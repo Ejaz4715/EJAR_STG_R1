@@ -9232,6 +9232,4 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         logger.info("Step 09: Verify the user is navigate to\"إضافة مالك منشأة\" page");
         app.changeLessor_lessorRepPage.checkAddOrganizationPageIsDisplayed();
     }
-
-
 }
