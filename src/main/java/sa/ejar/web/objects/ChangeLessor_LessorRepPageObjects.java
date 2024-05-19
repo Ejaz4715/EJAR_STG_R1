@@ -263,6 +263,9 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By LessorUpdatePopupTitle() {
         return By.xpath("//h2[contains (text(), 'تعديل ممثل المؤجر الحالي')]");
     }
+    public static By LessorChangedPopupTitle() {
+        return By.xpath("//h2[contains (text(), 'تغيير المؤجر')]");
+    }
 
     public static By RequestNumber() {
         return By.xpath("//h2[contains (text(),'المؤجر')]/ancestor::app-card/descendant::img/following-sibling::p");
