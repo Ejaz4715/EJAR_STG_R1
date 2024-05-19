@@ -9232,4 +9232,376 @@ public class ChangeLessor_LessorRep_Ibrahim extends NHCWebTest {
         logger.info("Step 09: Verify the user is navigate to\"إضافة مالك منشأة\" page");
         app.changeLessor_lessorRepPage.checkAddOrganizationPageIsDisplayed();
     }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_426_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Enter a valid postal code including on numerical values");
+        CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Valid"));
+        logger.info("Step 14: Verify the value is input successfully in Postal Code input field");
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorPostalCode_Valid"), CommonMethodsPageObjects.PostalCodeInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_427_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input a value including any special character in اسم الشارع input field");
+        CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Invalid"));
+        logger.info("Step 14: Verify an error message is displayed under Street Name input field with Message:  يرجى التأكد من التنسيق");
+        CommonMethodsPage.errorMessage("يرجى", CommonMethodsPageObjects.StreetNameError());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_428_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input a valid value in (اسم الشارع ) input field");
+        CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Valid"));
+        logger.info("Step 14: Verify the value is input successfully in Street Name input field");
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorStreetName_Valid"), CommonMethodsPageObjects.StreetNameInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_429_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input a numerical value with (length < 5) in  رقم المبنى field");
+        CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Invalid"));
+        CommonMethodsPage.errorMessage("يجب", CommonMethodsPageObjects.BuildingNumberError());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_430_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input numerical value رقم المبنى field of length = 4");
+        CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Valid"));
+        logger.info("Step 14: Verify the value is input successfully in Building Number input field");
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorBuildingNum_Valid"), CommonMethodsPageObjects.BuildingNumberInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_431_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input a numerical value with (length < 4) in  الرقم الإضافي  field");
+        CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Invalid"));
+        CommonMethodsPage.errorMessage("يجب", CommonMethodsPageObjects.AdditionalNumberError());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_432_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Input numerical value الرقم الإضافي  field of length = 4");
+        CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Valid"));
+        logger.info("Step 14: Verify the value is input successfully in Additional Number input field");
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorBuildingNum_Valid"), CommonMethodsPageObjects.AdditionalNumberInput());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_433_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
+        app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+        logger.info("Step 09: Click on (ممثل المالك) radio button ");
+        app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+        logger.info("Step 10: Enter valid national id ");
+        app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+        logger.info("Step 11: Input valid DOB");
+        app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+        logger.info("Step 12: Click on (التالي) button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Click on (تأكيد) button ");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 14: Verify the user is navigate to\"طلب تغيير ملكية وثيقة الملكية\" page");
+        CommonMethodsPage.verifyValueIsDisplayed("طلب تغيير ملكية وثيقة الملكية", ChangeLessor_LessorRepPageObjects.ownershipChangeRequestOfTitleDeedPage());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_434_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        logger.info("Step 00: Test Data : " + data.toString());
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \" العقارات \" tab");
+        app.changeLessor_lessorRepPage.clickOnPropertiesTab();
+        logger.info("Step 03: Click on \"عرض جميع وثائق الملكية\"");
+        app.changeLessor_lessorRepPage.clickOnViewOwnerShipDocumentsOption();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
+        logger.info("Step 06: Click on filter icon");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
+        Browser.waitForSeconds(5);
+        logger.info("Step 08: Click on (إرسال) button ");
+        CommonMethodsPage.clickOnSubmitButton();
+        logger.info("Step 09: Verify a pop up \"تغيير المؤجر\" with message \"الطلب بانتظار موافقة المؤجر/المالك الجديد وسيتم إشعاركم عند الموافقة\"");
+        CommonMethodsPage.verifyValueIsDisplayed("تغيير المؤجر", ChangeLessor_LessorRepPageObjects.LessorChangedPopupTitle());
+        app.changeLessor_lessorRepPage.getRequestNumberFromPopup(ChangeLessor_LessorRepPageObjects.RequestNumber());
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_435_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on \"  الطلبات  \" tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter the request number in request search field ");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
+    }
 }
