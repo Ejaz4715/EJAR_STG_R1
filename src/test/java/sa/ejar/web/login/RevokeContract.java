@@ -1335,7 +1335,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_40_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1358,7 +1358,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_41_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1382,7 +1382,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_42_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1408,7 +1408,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_43_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1435,7 +1435,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_44_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1462,7 +1462,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_45_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1489,7 +1489,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_46_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1513,7 +1513,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_47_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1538,7 +1538,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_48_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1565,7 +1565,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_49_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1593,7 +1593,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_50_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1627,7 +1627,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_51_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1656,7 +1656,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_52_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1683,7 +1683,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_53_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1710,7 +1710,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_54_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1738,7 +1738,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_55_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1767,7 +1767,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_56_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1848,7 +1848,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_58_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1875,7 +1875,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_59_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1901,7 +1901,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_60_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1928,7 +1928,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_61_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1955,7 +1955,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_62_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1984,7 +1984,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_63_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2015,7 +2015,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_64_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2046,7 +2046,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_65_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2077,7 +2077,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_66_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2694,7 +2694,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_81_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));

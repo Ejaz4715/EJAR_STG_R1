@@ -1,4 +1,4 @@
-package sa.ejar.web.login;
+package sa.ejar.web.login.existing;
 
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
