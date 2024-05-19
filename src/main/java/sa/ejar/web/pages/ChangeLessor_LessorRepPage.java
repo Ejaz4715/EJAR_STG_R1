@@ -375,7 +375,7 @@ public class ChangeLessor_LessorRepPage {
             case "other" -> "أخرى";
             default -> actualType;
         };
-        Assert.assertTrue(actualType.contains(expectedType), "Actual selected button is (" +actualType+ ") an expected is (" +expectedType+ ")");
+        Assert.assertTrue(actualType.contains(expectedType), "Actual selected button is (" +actualType+ ") and expected is (" +expectedType+ ")");
         logger.addScreenshot("");
     }
 

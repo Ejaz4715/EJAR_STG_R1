@@ -7460,7 +7460,6 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
-        app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -7707,7 +7706,7 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 13: Click on  (إلغاء) button ");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed(" سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
+        CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -8144,5 +8143,4 @@ public class ChangeLessor_LessorRep_Ejaz extends NHCWebTest {
         CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Invalid"));
         CommonMethodsPage.errorMessage("يجب", CommonMethodsPageObjects.PostalCodeError());
     }
-
 }
