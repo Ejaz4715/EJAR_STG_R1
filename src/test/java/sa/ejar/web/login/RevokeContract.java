@@ -1335,7 +1335,7 @@ public class RevokeContract extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_40_Revoke(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
-        logger.info("Step 00: Test Data : " + data.toString());
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));

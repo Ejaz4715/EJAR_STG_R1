@@ -1,6 +1,6 @@
 package sa.ejar.web.login;
 
-import org.openqa.selenium.By;
+import com.testcrew.web.Browser;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import sa.ejar.api.repo.APICollection;

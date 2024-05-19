@@ -16,21 +16,22 @@ import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.precondition.LoginPageObjects;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.TerminateContractPageObjects;
+
 import sa.ejar.web.pages.precondition.LoginPage;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
+
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
 
@@ -171,6 +172,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from the list
+     *
      * @param option  - option to be selected
      * @param element - list object
      */
@@ -283,6 +285,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
+     *
      * @param option - Option to be selected
      */
     public static void ClickOnKebabMenuOption(String option) {
@@ -381,6 +384,7 @@ public class CommonMethodsPage {
 
     /**
      * Method to validate the displayed value
+     *
      * @param value   - Value to be validated
      * @param element - Locator of Input Field
      */
@@ -437,6 +441,7 @@ public class CommonMethodsPage {
 
     /**
      * validate any error message for invalid attachment
+     *
      * @param errorMsg - Message to be validated
      * @param element  - Message Locator
      */
@@ -831,6 +836,7 @@ public class CommonMethodsPage {
 
     /**
      * Check the user role and change if it is not same as required
+     *
      * @param User - required user role ('مؤجر', 'مستأجر', 'مدير مكتب الوساطة')
      */
     public static void changeUserRole(String User) throws Exception {
@@ -987,9 +993,9 @@ public class CommonMethodsPage {
 
     public static void verifyCloseButtonIsNotDisplayed() {
         boolean status = false;
-        if(isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN()) ||
+        if (isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN()) ||
                 isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN2()) ||
-                isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN3())){
+                isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN3())) {
             status = true;
         }
         Assert.assertFalse(status, "Buttons is displayed");
@@ -1004,6 +1010,7 @@ public class CommonMethodsPage {
 
     /**
      * Validate error message
+     *
      * @param errorMsg - message needs to be validated
      */
     public static void errorCRMessage(String errorMsg) {
@@ -1045,6 +1052,7 @@ public class CommonMethodsPage {
 
     /**
      * Verify the contract status of different versions
+     *
      * @param contractStatus - Expected status
      */
     public static void verifyStatusOfContract(String contractStatus) throws Exception {
@@ -1066,14 +1074,6 @@ public class CommonMethodsPage {
         logger.addScreenshot("Contract Status : " + actualStatus);
     }
 
-    public static void clickOnSendBTN(){
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
-        Browser.click(CommonMethodsPageObjects.SendBTN());
-        logger.addScreenshot("The 'نموذج تأكيد استلام/تسليم الوحدة' is submitted");
-        Browser.waitForSeconds(1);
-    }
-
-  
     public static void clickOnSendBTN() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
         click(CommonMethodsPageObjects.SendBTN());
@@ -1097,6 +1097,7 @@ public class CommonMethodsPage {
         Assert.assertTrue(!(isElementPresent(SendContractForApprovalPageObjects.sendForApprovalBTN())), "Button is not enabled");
         logger.addScreenshot("");
     }
+
     public static void SendForApprovalBTN() throws Exception {
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalBTN(), 40);
         click(SendContractForApprovalPageObjects.sendForApprovalBTN());
@@ -1123,10 +1124,10 @@ public class CommonMethodsPage {
         Browser.waitForSeconds(2);
     }
 
-    public static void verifyContractStatus(String Status1 ,String Status2) throws Exception {
+    public static void verifyContractStatus(String Status1, String Status2) throws Exception {
         Browser.executeJSScroll(450);
         Browser.waitForSeconds(1);
-        String[] expectedStatus = {Status1,Status2};
+        String[] expectedStatus = {Status1, Status2};
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
         Browser.waitForSeconds(2);
         String actualStatus = Browser.getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
@@ -1165,6 +1166,7 @@ public class CommonMethodsPage {
 
     /**
      * Method to get request number from requests page
+     *
      * @param element - Object of request number text
      */
     public static String getRequestNumberFromRequestPage(By element) {
@@ -1181,6 +1183,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
+     *
      * @param option - Option to be selected
      */
     public static void KebabMenuOptionNotDisplayed(String option) {
@@ -1201,6 +1204,7 @@ public class CommonMethodsPage {
 
     /**
      * Give true if expect the invalid otp error message to be present
+     *
      * @param isPresent - give true if you expect the invalid OTP message to be present
      */
     public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
@@ -1321,7 +1325,7 @@ public class CommonMethodsPage {
 
 
     public static void enterOwnershipReferenceInSearchField(String ownershipNumber) {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40 );
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40);
         setText(CommonMethodsPageObjects.ownershipReferenceSearchField(), ownershipNumber);
     }
 
@@ -1329,8 +1333,8 @@ public class CommonMethodsPage {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.DownloadContractCopyButton(), 40);
         click(CommonMethodsPageObjects.DownloadContractCopyButton());
     }
-  
-    public static void verifySearchedContractIsNotDisplayed () {
+
+    public static void verifySearchedContractIsNotDisplayed() {
         Browser.executeJSScroll(300);
         Browser.waitForSeconds(1);
         String actualResult = getText(CommonMethodsPageObjects.ContractResultOfSearchedContract());
@@ -1339,33 +1343,34 @@ public class CommonMethodsPage {
 
     }
 
-    public static void verifyTotalNoOfContractsCardIsVisible(){
+    public static void verifyTotalNoOfContractsCardIsVisible() {
         Assert.assertTrue(Browser.isElementPresent(By.xpath("//app-card-value//p[text()='إجمالي عدد العقود']")));
         WebBaseTest.logger.addScreenshot("Total Number of Contracts Card Is Visible");
         Browser.waitForSeconds(1);
-     }
+    }
 
     public static void verifyTheRejectButtonIsDisabled() throws Exception {
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectTheContractBTN(), 20);
         Assert.assertTrue(isElementDisabled(SendContractForApprovalPageObjects.rejectTheContractBTN()));
         logger.addScreenshot("The (رفض العقد) button is not enabled/clickable");
-      }
+    }
+
     public static void verifyTheVerifyIdentityButtonIsDisabled() throws Exception {
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 20);
         Assert.assertTrue(isElementDisabled(SendContractForApprovalPageObjects.identityVerificationBTN()));
         logger.addScreenshot("The ( رفض العقد ) button is not enabled/clickable");
-      }
+    }
 
-      public static void contractInformationCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' معلومات العقد. ']"),20);
+    public static void contractInformationCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' معلومات العقد. ']"), 20);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']"));
         Browser.waitForSeconds(1);
         Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']"));
         logger.addScreenshot("Contract Information Checkbox is clickable");
-      }
+    }
 
-    public static void lessorCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المؤجرون ']"),20);
+    public static void lessorCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المؤجرون ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' المؤجرون ']"));
         Browser.waitForSeconds(1);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك ']"));
@@ -1375,16 +1380,16 @@ public class CommonMethodsPage {
         logger.addScreenshot("Lessor Checkboxes are clickable");
     }
 
-    public static void tenantsCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المستأجرون ']"),20);
+    public static void tenantsCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المستأجرون ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' المستأجرون ']"));
         Browser.waitForSeconds(1);
         Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على بيانات المستأجرين ']"));
         logger.addScreenshot("Tenant Checkbox is clickable");
     }
 
-    public static void propertyDetailsCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' العقار ']"),20);
+    public static void propertyDetailsCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' العقار ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' العقار ']"));
         Browser.waitForSeconds(1);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي ']"));
@@ -1393,7 +1398,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("Property Details Checkbox is clickable");
     }
 
-    public static void unitDetailsCheckbox() throws  Exception {
+    public static void unitDetailsCheckbox() throws Exception {
         Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوحدات ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' الوحدات ']"));
         Browser.waitForSeconds(1);
@@ -1403,8 +1408,8 @@ public class CommonMethodsPage {
         logger.addScreenshot("Unit Details Checkbox is clickable");
     }
 
-    public static void financialTermsCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' البيانات المالية ']"),20);
+    public static void financialTermsCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' البيانات المالية ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' البيانات المالية ']"));
         Browser.waitForSeconds(1);
         Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على الشروط المالية ']"));
@@ -1412,67 +1417,66 @@ public class CommonMethodsPage {
 
     }
 
-    public static void termsConditionsCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الشروط والأحكام ']"),20);
+    public static void termsConditionsCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الشروط والأحكام ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' الشروط والأحكام ']"));
         Browser.waitForSeconds(1);
         Browser.click(By.xpath("//label//div[text()=' تاكيد الموافقة على الشروط والأحكام ']"));
         logger.addScreenshot("Terms & Conditions Checkbox is clickable");
     }
 
-    public static void capturedDocumentsCheckbox() throws  Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوثائق ']"),20);
+    public static void capturedDocumentsCheckbox() throws Exception {
+        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوثائق ']"), 20);
         Browser.click(By.xpath("//div//a[text()=' الوثائق ']"));
         Browser.waitForSeconds(1);
         Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على الوثائق المرتبطة بالعقد ']"));
         logger.addScreenshot("captured Documents Checkbox is clickable");
-      }
+    }
 
     public static void assertEditButtonNotVisible() throws Exception {
         Assert.assertTrue(!(Browser.isElementPresent(CommonMethodsPageObjects.editBTN())));
     }
 
     public static void neviagteToManageOffice() throws Exception {
-            Browser.click(CommonMethodsPageObjects.RoleName());
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(),20);
-            Browser.click(LoginPageObjects.manageAccountButton());
+        Browser.click(CommonMethodsPageObjects.RoleName());
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(), 20);
+        Browser.click(LoginPageObjects.manageAccountButton());
     }
 
-    public static void verifyAccountSettingsPageIsDisplayed(){
+    public static void verifyAccountSettingsPageIsDisplayed() {
         Assert.assertTrue(Browser.isElementPresent(CommonMethodsPageObjects.AccountSettingsHeading()));
         logger.addScreenshot("'Account Settings' page is displayed");
     }
 
     public static void selectWalletFromAccountSettings() throws Exception {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.wallet(),20);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.wallet(), 20);
         Browser.click(LoginPageObjects.wallet());
         logger.addScreenshot("Wallet details is displayed");
     }
 
-    public static void inputContractNumberInContractSearchField(String Contract){
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(),20);
-        Browser.setText(LoginPageObjects.ContractNumberInput(),Contract);
+    public static void inputContractNumberInContractSearchField(String Contract) {
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(), 20);
+        Browser.setText(LoginPageObjects.ContractNumberInput(), Contract);
         logger.addScreenshot("Input Contract Number");
     }
 
-    public static void selectDescription(){
-          Browser.waitForSeconds(1);
-          Browser.selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(),"مبلغ الضمان المحجوز");
+    public static void selectDescription() {
+        Browser.waitForSeconds(1);
+        Browser.selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(), "مبلغ الضمان المحجوز");
     }
 
     public static void verifySecurityAmountReservedIsDisplayed() throws Exception {
-           Browser.waitForSeconds(1);
-           CommonMethodsPage.scrollToElement(LoginPageObjects.SecurityAmountReserved());
-           Browser.waitForSeconds(1);
-           Assert.assertTrue(isElementPresent(LoginPageObjects.SecurityAmountReserved()));
-           logger.addScreenshot("The 'مبلغ الضمان المحجوز' is displayed");
+        Browser.waitForSeconds(1);
+        CommonMethodsPage.scrollToElement(LoginPageObjects.SecurityAmountReserved());
+        Browser.waitForSeconds(1);
+        Assert.assertTrue(isElementPresent(LoginPageObjects.SecurityAmountReserved()));
+        logger.addScreenshot("The 'مبلغ الضمان المحجوز' is displayed");
     }
 
-    public static void neviagteToViewUnitForms() throws Exception {
+    public static void navigateToViewUnitForms() throws Exception {
         Browser.click(CommonMethodsPageObjects.UnitForms());
         logger.addScreenshot("");
         Browser.click(CommonMethodsPageObjects.ViewUnitForms());
         logger.addScreenshot("Neviagte to 'نماذج الوحدة' page");
-      }
     }
 }
