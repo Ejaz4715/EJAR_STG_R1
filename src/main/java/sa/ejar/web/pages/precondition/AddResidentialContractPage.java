@@ -672,13 +672,11 @@ public class AddResidentialContractPage {
 
     public void clickTermsAndConditionsStepBTN() throws Exception {
         Browser.waitUntilElementToBeClickable(AddResidentialContractPageObjects.termsAndConditionsStepBTN(), 35);
-//        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.termsAndConditionsStepBTN());
     }
 
     public void clickAddTermsAndConditionsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addTermsAndConditionsBTN(), 15);
-//        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.addTermsAndConditionsBTN());
         Browser.waitForSeconds(1);
         logger.addScreenshot("Navigate to Terms And Conditions page");
@@ -686,7 +684,6 @@ public class AddResidentialContractPage {
 
     public void selectBrokerageOfficeAsEjarFeesPayer() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.ejarFeesPayerRadioBTN(), 15);
-//        Browser.waitForSeconds(2);
         Browser.click(AddResidentialContractPageObjects.ejarFeesPayerRadioBTN());
     }
 

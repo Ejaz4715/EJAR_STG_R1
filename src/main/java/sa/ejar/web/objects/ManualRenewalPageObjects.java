@@ -27,7 +27,9 @@ public class ManualRenewalPageObjects {
         return By.xpath("//span[contains(@class,'pin mt-1')]");
     }
 
-    public static String getTotalNoOfContractInReadyForRenewalCard = "(//app-card-value[@data-name='جاهز للتجديد']//span)[2]";
+    public static By getTotalNoOfContractInReadyForRenewalCard() {
+        return By.xpath("(//app-card-value[@data-name='جاهز للتجديد']//span)[2]");
+    }
 
     public static By noContractFound() {
         return By.xpath("//div[text()=' لم يتم العثور على عقود! يرجى إضافة عقود جديدة. ']");
