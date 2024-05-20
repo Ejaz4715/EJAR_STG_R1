@@ -23,16 +23,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-
-import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.pages.precondition.LoginPage;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import static com.testcrew.manager.PDFReportManager.logger;
@@ -1476,7 +1472,7 @@ public class CommonMethodsPage {
         logger.addScreenshot("The 'مبلغ الضمان المحجوز' is displayed");
     }
 
-    public static void neviagteToViewUnitForms() throws Exception {
+    public static void navigateToViewUnitForms() throws Exception {
         Browser.click(CommonMethodsPageObjects.UnitForms());
         logger.addScreenshot("");
         Browser.click(CommonMethodsPageObjects.ViewUnitForms());

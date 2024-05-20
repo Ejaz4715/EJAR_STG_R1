@@ -3,18 +3,13 @@ package sa.ejar.web.pages;
 import com.testcrew.base.WebBaseTest;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ContractsApprovalPageObjects;
 import sa.ejar.web.objects.ManualRenewalPageObjects;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
 
@@ -48,7 +43,6 @@ public class ManualRenewalPage {
             Browser.waitForSeconds(7);
             List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getCurrentTotalOfContracts());
             Count += ContractNumber.size();
-            System.out.println(Count);
             status = true;
             if (status == true) {
                 Browser.click(ManualRenewalPageObjects.contractNextArrow());
@@ -68,7 +62,7 @@ public class ManualRenewalPage {
             Count += ContractNumber.size();
             System.out.println(Count);
             status = true;
-            if (status = true && Count >= 1 && Count <= 5) {
+            if (status == true && Count >= 1 && Count <= 5) {
                 System.out.println(Count);
                 Assert.assertEquals(ManualRenewalCardNumber, Count);
                 break;
@@ -109,7 +103,6 @@ public class ManualRenewalPage {
         String IssueDate = Browser.getText(ManualRenewalPageObjects.issueDate());
         String s = IssueDate.split(" ")[0];
         String T = s.replace("-", "");
-        System.out.println(T);
         Assert.assertTrue(Date.equals(T));
         logger.addScreenshot("");
     }
@@ -126,9 +119,9 @@ public class ManualRenewalPage {
             }
         }
         if (status == true) {
-            System.out.println("Contract Status : " + Status + " is Found.");
+            logger.addScreenshot("Contract Status : " + Status + " is Found.");
         } else {
-            System.out.println("Contract Status : " + Status + " Not Found.");
+            logger.addScreenshot("Contract Status : " + Status + " Not Found.");
         }
     }
 
@@ -147,7 +140,7 @@ public class ManualRenewalPage {
         logger.addScreenshot("Contract Renewal Steps Page Is Displayed");
     }
 
-    public void verifyTheReviewContractSectionIsDisplayed() throws Exception {
+    public void verifyTheReviewContractSectionIsDisplayed() {
         if (Browser.isElementPresent(CommonMethodsPageObjects.reviewTheContractPage())) {
             Browser.executeJSScrollIntoView(CommonMethodsPageObjects.reviewTheContractPage());
         }
@@ -161,19 +154,19 @@ public class ManualRenewalPage {
         logger.addScreenshot("");
     }
 
-    public static void clickOnConfirmPopUpButton() throws Exception {
+    public void clickOnConfirmPopUpButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.confirmBTNPopUp(), 20);
         Browser.click(ManualRenewalPageObjects.confirmBTNPopUp());
     }
 
-    public static void payingFeeThroughLessor() throws Exception {
+    public void payingFeeThroughLessor() {
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.payFeeThroughLessor(), 20);
         String PayingFee = Browser.getText(ManualRenewalPageObjects.payFeeThroughLessor());
         Assert.assertTrue(PayingFee.contains("المؤجر سوف يدفع رسوم شبكة إيجار"));
         logger.addScreenshot("المؤجر سوف يدفع رسوم شبكة إيجار");
     }
 
-    public static void EjarRegistrationFeesIsVisible() throws Exception {
+    public void EjarRegistrationFeesIsVisible() {
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.EjarRegistrationFees(), 20);
         String PayingFee = Browser.getText(ManualRenewalPageObjects.EjarRegistrationFees());
         Assert.assertTrue(PayingFee.contains("رسوم التسجيل في إيجار"));
@@ -190,7 +183,7 @@ public class ManualRenewalPage {
         logger.addScreenshot("");
     }
 
-    public static void verifySelectedContractIsNotVisibleInReadyForRenewalContracts(String SelectedContract) {
+    public void verifySelectedContractIsNotVisibleInReadyForRenewalContracts(String SelectedContract) {
         boolean status = false;
         while (Browser.isElementPresent(By.xpath("//div[text()=' لم يتم العثور على عقود! يرجى إضافة عقود جديدة. ']"))) {
             logger.addScreenshot("Selected Contract Is Not Visible in ready for renewal contracts");
@@ -360,12 +353,12 @@ public class ManualRenewalPage {
             logger.addScreenshot("Added additional terms");
         }
 
-    public static void clickOnEditButton1() throws Exception {
+    public void clickOnEditButton1() throws Exception {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN1(), 20);
         click(ManualRenewalPageObjects.editBTN1());
        }
 
-    public static void clickOnEditButton2() throws Exception {
+    public void clickOnEditButton2() throws Exception {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN2(), 20);
         click(ManualRenewalPageObjects.editBTN2());
     }
