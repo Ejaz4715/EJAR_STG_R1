@@ -22,11 +22,7 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        //---------------If New User Uncomment Below Method-----------------------------------
-        //app.rechargeWalletPage.chooseOfficer("BO_Manager");
-        //app.rechargeWalletPage.addIban();
-        //app.rechargeWalletPage.rechargeWallet();
-        //--------------------------------------------------------------------------------------------
+        CommonMethodsPage.changeUserRole("مدير مكتب وساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Residential Contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectNewResidualContract();
@@ -60,30 +56,16 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
         logger.info("Step 06: Input Individual/Tenant Information details > Confirm");
-        //app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("509876567");
-        //---------------If New User Uncomment Below Method-----------------------------------
-        //app.addResidentialContractPage.selectTenantRegion(1);
-        //app.addResidentialContractPage.clickTenantCityDropdown();
-        //app.addResidentialContractPage.selectTenantCity("الرياض");
-        //app.addResidentialContractPage.AddAdditionalAdders();
-        //-----------------------------------------------------------------------------------
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
-        //app.addResidentialContractPage.addLessorFacilities();
-        //app.addResidentialContractPage.inputTenantPhoneNumberAndEmail("564678656");
-        //---------------If New User Uncomment Below Method-----------------------------------
-        //app.addResidentialContractPage.AddAdditionalAdders();
-        //-----------------------------------------------------------------------------------
-        //app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 07: Navigate to Financial > Input annual rent > Select Single Payment > Add and select IBAN > Select account owner > Continue");
         app.addResidentialContractPage.clickFinancialTermsStepBTN();
         app.addResidentialContractPage.clickAddRentalContractTermsBTN();
         app.addResidentialContractPage.enterAnnulRent("12000");
-        app.addResidentialContractPage.increaseRentPrice();
-        app.addResidentialContractPage.clickAddAdditionalContractTerms();
         app.addResidentialContractPage.clickSinglePaymentFrequency();
         app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
         app.addResidentialContractPage.clickPayOnlineBTN();
-        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {            app.addResidentialContractPage.addNewIbanBTN();
+        if(Browser.isElementPresent(AddResidentialContractPageObjects.addNewIbanInContract())) {
+            app.addResidentialContractPage.addNewIbanBTN();
             app.addResidentialContractPage.enterIbanNumber("SA8720000000000000034567");
             app.addResidentialContractPage.enterAccountOwnerName("Test 3 Bank");
             app.addResidentialContractPage.clickSaveBTNOnAddIban();
@@ -98,7 +80,6 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
         app.addResidentialContractPage.clickAddTermsAndConditionsBTN();
         app.addResidentialContractPage.selectBrokerageOfficeAsEjarFeesPayer();
-        app.addResidentialContractPage.selectOtherTerms();
         app.addResidentialContractPage.selectGoverningLaw();
         app.addResidentialContractPage.addAdditionalTerms();
         app.addResidentialContractPage.clickConfirmTermsAndConditionsBTN();
