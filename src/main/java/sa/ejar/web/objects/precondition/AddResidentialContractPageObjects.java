@@ -670,7 +670,20 @@ public class AddResidentialContractPageObjects {
     public static By addNewIbanInContract() {
         return By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]");
     }
-//    public static By () {
-//        return By.xpath("//label//input[@data-name='required']");
-//    }
+
+    public static By SecurityDepositSwitch() {
+        return By.xpath("//h2[text()='مبلغ الضمان']/ancestor::app-card/descendant::label");
+    }
+
+    public static By SubleaseSwitch() {
+        return By.xpath("//h2[text()='التأجير من الباطن']/ancestor::app-card/descendant::label");
+    }
+
+    public static By SecurityDepositAmountInput() {
+        return By.xpath("//input[@data-name=\"security_deposit\"]");
+    }
+
+    public static By SaveAndContinueLaterButton() {
+        return By.xpath("(//button[contains (text(), ' الحفظ والمتابعة لاحقًا ')])[1]");
+    }
 }
