@@ -1612,52 +1612,6 @@ public class TerminateContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on  (تأكيد) button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 12: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
-        app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
-        logger.info("Step 14: Click on (تأكيد) button");
-        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 15:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
-        app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
-        app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
-    }
-
-    @Test(dataProvider = "testDataProvider")
-    public void TC_45_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
-        app.openApplication(data);
-        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
-        logger.info("Step 02: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Click on filter icon");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
-        logger.info("Step 06: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  (إنهاء العقد)  option");
-        CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Select  (الطرف الطالب للإنهاء) Dropdown List");
-        app.terminateContractPage.selectOneRequestingParty(data.get("Requesting_Party"));
-        logger.info("Step 09: Select  (سبب الإنهاء) Dropdown List");
-        app.terminateContractPage.selectOneTerminationReason(data.get("Termination_Reason"));
-        logger.info("Step 10: Enter  (ملاحظات) textarea");
-        app.terminateContractPage.enterTerminationReason(data.get("Note"));
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 12: Select The (الدفعة النهائية للمستأجر) radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
@@ -1669,12 +1623,37 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 14: Click on (تأكيد) button");
         app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
         CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 15: Click on (إغلاق) button");
+        logger.info("Step 15:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
+        app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
+        app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
+        logger.info("Step 16: Click on (إغلاق) button");
         CommonMethodsPage.getReqNumBo();
         CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 16:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
+        logger.info("Step 17:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
-        app.terminateContractPage.assertRequestsAreAppearing();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_45_Terminate(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Terminate"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02: Click on \"  الطلبات  \" tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter the request number in request search field ");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3239,11 +3218,17 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
+        logger.info("Step 15: Click on (إغلاق) button");
+        CommonMethodsPage.getReqNumLessor();
+        CommonMethodsPage.clickOnCloseButton();
+        logger.info("Step 16:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
+        app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_90_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Terminate"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3252,40 +3237,15 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 02: Click on \"  الطلبات  \" tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
-        logger.info("Step 06: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  (إنهاء العقد)  option");
-        CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Select  (سبب الإنهاء) Dropdown List");
-        app.terminateContractPage.selectOneTerminationReason(data.get("Termination_Reason"));
-        logger.info("Step 09: Enter  (ملاحظات) textarea");
-        app.terminateContractPage.enterTerminationReason(data.get("Note"));
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
-        app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
-        logger.info("Step 13: Click on (تأكيد) button");
-        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 14: Click on (إغلاق) button");
-        CommonMethodsPage.getReqNumLessor();
-        CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 15:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
-        app.terminateContractPage.verifyTheRequestsIsDisplayed();
-        app.terminateContractPage.assertRequestsAreAppearing();
+        logger.info("Step 05: Enter the request number in request search field ");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4849,11 +4809,17 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
+        logger.info("Step 15: Click on (إغلاق) button");
+        CommonMethodsPage.getReqNumTenant();
+        CommonMethodsPage.clickOnCloseButton();
+        logger.info("Step 16:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
+        app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_135_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Terminate"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4862,40 +4828,15 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 02: Click on \"  الطلبات  \" tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Close"));
-        logger.info("Step 06: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  (إنهاء العقد)  option");
-        CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Select  (سبب الإنهاء) Dropdown List");
-        app.terminateContractPage.selectOneTerminationReason(data.get("Termination_Reason"));
-        logger.info("Step 09: Enter  (ملاحظات) textarea");
-        app.terminateContractPage.enterTerminationReason(data.get("Note"));
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
-        app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
-        logger.info("Step 13: Click on (تأكيد) button");
-        app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 14: Click on (إغلاق) button");
-        CommonMethodsPage.getReqNumTenant();
-        CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 15:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
-        app.terminateContractPage.verifyTheRequestsIsDisplayed();
-        app.terminateContractPage.assertRequestsAreAppearing();
+        logger.info("Step 05: Enter the request number in request search field ");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
 
     }
 
@@ -5126,7 +5067,6 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.clickOnSubmitTerminationApprovalButton();
         logger.info("Step 10: Verify the user navigate to the (تم إرسال الموافقة) page");
         app.terminateContractPage.verifyApprovalSubmittedMessageIsDisplayed();
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5148,7 +5088,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5180,7 +5120,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5212,7 +5152,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5244,7 +5184,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5277,7 +5217,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5310,7 +5250,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5345,7 +5285,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5380,7 +5320,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5933,9 +5873,9 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Verify user is able to view all the invoices of selected contract");
-        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber_Close"));
+        CommonMethodsPage.verifySearchedContractIsDisplayedForInvoices(data.get("ContractNumber"));
 
     }
 
@@ -5957,7 +5897,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify a new invoice having same amount");
@@ -5982,7 +5922,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has same date as entered by lessor");
@@ -6007,7 +5947,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Verify old invoice has a status مغلقة");
         CommonMethodsPage.verifyInvoiceStatus("old", "مغلقة", CommonMethodsPageObjects.OldInvoiceStatus());
     }
@@ -6030,7 +5970,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number");
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber_Close"));
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 06: Click on new invoice");
         CommonMethodsPage.clickOnNewInvoice();
         logger.info("Step 07: Verify new invoice has a status  لم يتم الدفع  ");
