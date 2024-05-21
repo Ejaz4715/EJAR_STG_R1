@@ -854,7 +854,7 @@ public class CommonMethodsPage {
                     break;
                 }
             }
-            Assert.assertTrue(status, UserRoleList + "User Role is not available");
+            Assert.assertTrue(status, UserRoleList + " User Role is not available");
             new LoginPage().closeExploreEjarPopUp();
         }
     }

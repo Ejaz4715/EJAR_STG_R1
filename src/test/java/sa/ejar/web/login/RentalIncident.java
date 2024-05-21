@@ -3259,6 +3259,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click UnAssign button from Kebab menu options");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("إلغاء التعيين");
+        Browser.waitForSeconds(3);
         app.rentalIncidentsPage.checkRentalIncidentRequestStatus("استلام طلب جديد");
     }
 
