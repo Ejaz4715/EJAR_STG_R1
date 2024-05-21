@@ -1474,9 +1474,9 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1497,7 +1497,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
@@ -1522,7 +1522,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1549,7 +1549,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1578,7 +1578,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1608,7 +1608,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1639,7 +1639,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1670,7 +1670,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1705,7 +1705,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1738,7 +1738,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1771,7 +1771,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1803,7 +1803,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1836,7 +1836,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1871,7 +1871,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1906,7 +1906,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1943,7 +1943,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -1980,7 +1980,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2020,7 +2020,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2057,7 +2057,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2098,7 +2098,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2804,9 +2804,9 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2827,7 +2827,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify (الموافقة على العقد) option is displayed");
@@ -2852,7 +2852,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2879,7 +2879,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2908,7 +2908,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2938,7 +2938,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -2969,7 +2969,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3000,7 +3000,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3035,7 +3035,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3068,7 +3068,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3101,7 +3101,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3133,7 +3133,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3166,7 +3166,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3201,7 +3201,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3236,7 +3236,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3273,7 +3273,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3310,7 +3310,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3350,7 +3350,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3387,7 +3387,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");
@@ -3428,7 +3428,7 @@ public class SendContractForApproval extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber_Rejection"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (الموافقة على العقد)  option");

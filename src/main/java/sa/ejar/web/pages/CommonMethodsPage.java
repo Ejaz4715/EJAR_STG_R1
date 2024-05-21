@@ -829,7 +829,7 @@ public class CommonMethodsPage {
         if (newAmount.contains(amount)) {
             status = true;
         }
-        Assert.assertTrue(status, amount + "the amount is not the same");
+        Assert.assertTrue(status, amount + " the amount is not the same");
         logger.addScreenshot("");
     }
 
