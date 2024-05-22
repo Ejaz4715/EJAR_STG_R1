@@ -25,7 +25,7 @@ public class SendContractForApprovalPage {
     }
 
 
-    public void clickOnDownloadDraftCopyButton() throws Exception {
+    public void clickOnDownloadDraftCopyButton() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
     }
@@ -76,19 +76,19 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN());
     }
-    public void enterAdditionalTerms(String additionalTerms) throws Exception {
+    public void enterAdditionalTerms(String additionalTerms) {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.additionalTermsTextarea(), 20);
         Browser.setText(SendContractForApprovalPageObjects.additionalTermsTextarea(), additionalTerms);
 
     }
-    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms) throws Exception {
+    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms) {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.additionalTermsTextarea());
         String text = additionalTerms.getAttribute("value");
         Assert.assertEquals(text, enteredAdditionalTerms);
         Browser.logger.addScreenshot("The additional terms has been entered");
 
     }
-    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) throws Exception {
+    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.theEnteredAdditionalTerms());
         String text = additionalTerms.getText();
         Assert.assertEquals(text, enteredAdditionalTerms);
@@ -234,14 +234,14 @@ public class SendContractForApprovalPage {
     }
 
 
-    public void verifyApprovedSubmittedMessageIsDisplayed() throws Exception {
+    public void verifyApprovedSubmittedMessageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.ApprovedSubmittedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.ApprovedSubmittedMsg()));
         logger.addScreenshot("The (تمت الموافقة بنجاح) message is displayed");
     }
 
 
-    public void verifyReviewAgreementPageIsDisplayed() throws Exception {
+    public void verifyReviewAgreementPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewAgreementPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.reviewAgreementPage()));
         logger.addScreenshot("User Navigate To ' مراجعة اتفاقية الوساطة ' page");

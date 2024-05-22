@@ -3,7 +3,6 @@ package sa.ejar.web.pages;
 import com.testcrew.web.Browser;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import org.testng.Assert;
-import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static com.testcrew.web.Browser.*;

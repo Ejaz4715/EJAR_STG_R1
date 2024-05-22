@@ -22,7 +22,6 @@ public class LoginPage extends WebBasePage {
     }
 
     public void enterBORegistrationPassword(Map<String, String> data) throws Exception {
-//        logger.info("Enter Password  As : " + data.get("Password"));
         Browser.setText(LoginPageObjects.setTextPassword(), data.get("Password"));
         logger.addScreenshot("Enter User Name & Password");
     }
@@ -30,7 +29,6 @@ public class LoginPage extends WebBasePage {
     public void enterPassword(String password) throws Exception {
         logger.info("Enter Password As : " + password);
         Browser.setText(LoginPageObjects.setTextPassword(), password);
-//        Browser.waitForSeconds(1);
         logger.addScreenshot("After Enter User credential");
     }
 
