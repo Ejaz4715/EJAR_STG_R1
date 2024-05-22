@@ -30,7 +30,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_02_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -53,7 +54,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_03_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -78,7 +80,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_04_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -105,7 +108,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_05_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -134,7 +138,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_06_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -167,7 +172,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_07_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -199,7 +205,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_08_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -233,7 +240,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_09_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -266,7 +274,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_10_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -297,7 +306,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_11_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -330,7 +340,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_12_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -364,7 +375,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_13_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -401,7 +413,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_14_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -437,7 +450,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_15_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -471,7 +485,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_16_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -505,7 +520,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_17_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -540,7 +556,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_18_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -578,7 +595,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_19_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -616,7 +634,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_20_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -652,7 +671,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_21_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -686,7 +706,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_22_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -721,7 +742,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_23_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -758,7 +780,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_24_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -795,7 +818,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_25_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -829,7 +853,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_26_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -864,7 +889,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_27_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -902,7 +928,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_28_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -939,7 +966,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_29_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -979,7 +1007,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_30_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1017,7 +1046,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_31_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1052,7 +1082,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_32_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1089,7 +1120,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_33_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1130,7 +1162,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_34_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1163,7 +1196,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_35_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1198,7 +1232,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_36_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1233,7 +1268,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_37_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1270,7 +1306,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_38_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1307,7 +1344,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_39_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1340,7 +1378,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_40_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1375,7 +1414,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_41_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1416,6 +1456,7 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_42_SendContractForApproval(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -1458,7 +1499,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_44_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1481,7 +1523,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_45_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1506,7 +1549,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_46_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1533,7 +1577,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_47_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1562,7 +1607,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_48_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1592,7 +1638,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_49_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1623,7 +1670,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_50_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1654,7 +1702,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_51_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1689,7 +1738,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_52_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1722,7 +1772,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_53_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1755,7 +1806,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_54_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1787,7 +1839,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_55_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1820,7 +1873,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_56_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1855,7 +1909,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_57_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1890,7 +1945,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_58_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1927,7 +1983,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_59_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1964,7 +2021,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_60_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2004,7 +2062,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_61_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2041,7 +2100,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_62_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2082,7 +2142,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_63_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2123,7 +2184,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_64_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2155,7 +2217,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_65_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2189,7 +2252,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_66_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2223,7 +2287,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_67_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2261,7 +2326,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_68_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2297,7 +2363,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_69_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2333,7 +2400,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_70_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2368,7 +2436,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_71_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2404,7 +2473,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_72_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2442,7 +2512,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_73_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2480,7 +2551,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_74_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2514,7 +2586,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_75_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2548,7 +2621,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_76_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2584,7 +2658,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_77_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2620,7 +2695,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_78_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2658,7 +2734,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_79_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2700,7 +2777,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_80_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2746,6 +2824,7 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_81_SendContractForApproval(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -2788,7 +2867,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_83_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2811,7 +2891,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_84_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2836,7 +2917,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_85_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2863,7 +2945,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_86_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2892,7 +2975,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_87_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2922,7 +3006,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_88_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2953,7 +3038,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_89_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2984,7 +3070,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_90_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3019,7 +3106,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_91_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3052,7 +3140,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_92_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3085,7 +3174,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_93_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3117,7 +3207,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_94_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3150,7 +3241,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_95_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3185,7 +3277,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_96_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3220,7 +3313,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_97_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3257,7 +3351,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_98_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3294,7 +3389,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_99_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3334,7 +3430,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_100_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3371,7 +3468,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_101_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3412,7 +3510,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_102_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3453,7 +3552,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_103_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3485,7 +3585,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_104_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3517,7 +3618,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_105_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3551,7 +3653,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_106_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3585,7 +3688,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_107_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3621,7 +3725,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_108_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3660,7 +3765,8 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_109_SendContractForApproval(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3705,6 +3811,7 @@ public class SendContractForApproval extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_110_SendContractForApproval(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");

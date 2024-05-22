@@ -30,7 +30,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_02_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -54,7 +55,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_03_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -80,7 +82,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_04_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -108,7 +111,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_05_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -136,7 +140,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_06_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -165,7 +170,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_07_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -193,7 +199,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_08_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -222,7 +229,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_09_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -250,7 +258,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_10_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -278,7 +287,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_11_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -308,7 +318,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_12_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -339,7 +350,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_13_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -372,7 +384,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_14_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -405,7 +418,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_15_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -440,7 +454,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_16_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -477,7 +492,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_17_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -514,7 +530,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_18_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -551,7 +568,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_19_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -588,7 +606,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_20_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -627,7 +646,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_21_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -667,7 +687,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_22_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -707,7 +728,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_23_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -749,7 +771,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_24_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -790,7 +813,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_25_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -830,7 +854,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_26_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -871,7 +896,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_27_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -911,7 +937,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_28_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -953,7 +980,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_29_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -992,7 +1020,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_30_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1036,7 +1065,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_31_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1081,7 +1111,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_32_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1118,7 +1149,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_33_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1158,7 +1190,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_34_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1197,7 +1230,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_35_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1238,7 +1272,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_36_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1279,7 +1314,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_37_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1320,7 +1356,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_38_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1363,7 +1400,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_39_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1406,7 +1444,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_40_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1450,7 +1489,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_41_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1494,7 +1534,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_42_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1536,7 +1577,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_43_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1581,7 +1623,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_44_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1676,7 +1719,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_47_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1700,7 +1744,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_48_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1726,7 +1771,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_49_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1754,7 +1800,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_50_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1782,7 +1829,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_51_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1811,7 +1859,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_52_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1839,7 +1888,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_53_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1868,7 +1918,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_54_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1896,7 +1947,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_55_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1924,7 +1976,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_56_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1954,7 +2007,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_57_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1985,7 +2039,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_58_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2018,7 +2073,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_59_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2051,7 +2107,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_60_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2084,7 +2141,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_61_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2120,7 +2178,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_62_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2156,7 +2215,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_63_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2191,7 +2251,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_64_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2226,7 +2287,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_65_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2263,7 +2325,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_66_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2301,7 +2364,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_67_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2339,7 +2403,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_68_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2378,7 +2443,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_69_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2417,7 +2483,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_70_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2455,7 +2522,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_71_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2501,7 +2569,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_72_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2539,7 +2608,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_73_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2579,7 +2649,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_74_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2616,7 +2687,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_75_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2657,7 +2729,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_76_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2700,7 +2773,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_77_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2735,7 +2809,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_78_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2773,7 +2848,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_79_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2810,7 +2886,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_80_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2849,7 +2926,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_81_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2888,7 +2966,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_82_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2927,7 +3006,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_83_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2968,7 +3048,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_84_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3009,7 +3090,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_85_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3053,7 +3135,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_86_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3095,7 +3178,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_87_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3135,7 +3219,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_88_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3178,7 +3263,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_89_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3200,28 +3286,33 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Select  (سبب الإنهاء) Dropdown List");
+        logger.info("Step 08: Select  (الطرف الطالب للإنهاء) Dropdown List");
+        app.terminateContractPage.selectOneRequestingParty(data.get("Requesting_Party"));
+        logger.info("Step 09: Select  (سبب الإنهاء) Dropdown List");
         app.terminateContractPage.selectOneTerminationReason(data.get("Termination_Reason"));
-        logger.info("Step 09: Enter  (ملاحظات) textarea");
+        logger.info("Step 10: Enter  (ملاحظات) textarea");
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
+        logger.info("Step 11: Click on  (تأكيد) button");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 12: Select The (الدفعة النهائية للمستأجر) radio button");
+        app.terminateContractPage.selectTenantFinalPaymentRadioButton();
+        app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
+        String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
+        app.terminateContractPage.enterPaymentDueDate(date);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
+        logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
-        logger.info("Step 13: Click on (تأكيد) button");
+        logger.info("Step 14: Click on (تأكيد) button");
         app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
         CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
+        logger.info("Step 15:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
-        logger.info("Step 15: Click on (إغلاق) button");
-        CommonMethodsPage.getReqNumLessor();
+        logger.info("Step 16: Click on (إغلاق) button");
+        CommonMethodsPage.getReqNumBo();
         CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 16:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
+        logger.info("Step 17:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
 
@@ -3244,7 +3335,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter the request number in request search field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
@@ -3268,7 +3359,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_92_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3292,7 +3384,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_93_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3318,7 +3411,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_94_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3346,7 +3440,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_95_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3374,7 +3469,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_96_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3403,7 +3499,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_97_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3431,7 +3528,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_98_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3460,7 +3558,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_99_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3488,7 +3587,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_100_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3516,7 +3616,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_101_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3547,7 +3648,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_102_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3578,7 +3680,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_103_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3611,7 +3714,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_104_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3644,7 +3748,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_105_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3677,7 +3782,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_106_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3712,7 +3818,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_107_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3747,7 +3854,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_108_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3782,7 +3890,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_109_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3817,7 +3926,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_110_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3854,7 +3964,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_111_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3892,7 +4003,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_112_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3930,7 +4042,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_113_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3969,7 +4082,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_114_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4008,7 +4122,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_115_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4046,7 +4161,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_116_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4092,7 +4208,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_117_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4130,7 +4247,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_118_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4170,7 +4288,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_119_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4207,7 +4326,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_120_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4248,7 +4368,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_121_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4291,7 +4412,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_122_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4326,7 +4448,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_123_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4364,7 +4487,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_124_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4401,7 +4525,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_125_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4440,7 +4565,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_126_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4479,7 +4605,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_127_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4518,7 +4645,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_128_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4559,7 +4687,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_129_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4600,7 +4729,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_130_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4644,7 +4774,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_131_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4686,7 +4817,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_132_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4726,7 +4858,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_133_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4769,7 +4902,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_134_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4791,28 +4925,33 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 07: Click on  (إنهاء العقد)  option");
         CommonMethodsPage.ClickOnTerminateOption("إنهاء العقد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Select  (سبب الإنهاء) Dropdown List");
+        logger.info("Step 08: Select  (الطرف الطالب للإنهاء) Dropdown List");
+        app.terminateContractPage.selectOneRequestingParty(data.get("Requesting_Party"));
+        logger.info("Step 09: Select  (سبب الإنهاء) Dropdown List");
         app.terminateContractPage.selectOneTerminationReason(data.get("Termination_Reason"));
-        logger.info("Step 09: Enter  (ملاحظات) textarea");
+        logger.info("Step 10: Enter  (ملاحظات) textarea");
         app.terminateContractPage.enterTerminationReason(data.get("Note"));
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on  (تأكيد) button");
-        CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 11: Select The (تسوية جميع المدفوعات) radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
+        logger.info("Step 11: Click on  (تأكيد) button");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 12: Select The (الدفعة النهائية للمستأجر) radio button");
+        app.terminateContractPage.selectTenantFinalPaymentRadioButton();
+        app.terminateContractPage.enterPaymentAmount(data.get("Valid_Payment_Amount"));
+        String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
+        app.terminateContractPage.enterPaymentDueDate(date);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Click on (تأكيد طلب الإنهاء) button");
+        logger.info("Step 13: Click on (تأكيد طلب الإنهاء) button");
         app.terminateContractPage.clickOnConfirmRequestTheTerminationButton();
-        logger.info("Step 13: Click on (تأكيد) button");
+        logger.info("Step 14: Click on (تأكيد) button");
         app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
         CommonMethodsPage.clickOnConfirmPopUpButton();
-        logger.info("Step 14:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
+        logger.info("Step 15:Verify the pop up window is displayed with title (تم تقديم طلب الإنهاء)");
         app.terminateContractPage.verifyTheTerminationRequestSuccessfullySend();
         app.terminateContractPage.verifyTheRequestWaitingForApproval("سننتظر موافقة أطراف الإيجار المستأجر والمؤجر لإعلامك بحالة الموافقة.");
-        logger.info("Step 15: Click on (إغلاق) button");
-        CommonMethodsPage.getReqNumTenant();
+        logger.info("Step 16: Click on (إغلاق) button");
+        CommonMethodsPage.getReqNumBo();
         CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 16:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
+        logger.info("Step 17:User should be able to see (الطلبات) page after (إغلاق) button is clicked");
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
 
@@ -4835,7 +4974,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter the request number in request search field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
 
     }
@@ -5088,7 +5227,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5120,7 +5259,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5152,7 +5291,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5184,7 +5323,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5217,7 +5356,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5250,7 +5389,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5285,7 +5424,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5320,7 +5459,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenant"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5585,7 +5724,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5617,7 +5756,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5649,7 +5788,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5681,7 +5820,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5714,7 +5853,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5747,7 +5886,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5782,7 +5921,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5817,7 +5956,7 @@ public class TerminateContract extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in the request number search");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessor"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumBo"));
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Click on  ( الموافقة على الإنهاء )  option");
         CommonMethodsPage.ClickOnAcceptTerminateOption("الموافقة على الإنهاء");
@@ -5857,7 +5996,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_169_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -5881,7 +6021,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_170_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -5906,7 +6047,8 @@ public class TerminateContract extends NHCWebTest {
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_171_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -5931,7 +6073,8 @@ public class TerminateContract extends NHCWebTest {
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_172_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -5954,7 +6097,8 @@ public class TerminateContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_173_Terminate(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
