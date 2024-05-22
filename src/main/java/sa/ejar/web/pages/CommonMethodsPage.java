@@ -14,8 +14,8 @@ import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-import sa.ejar.web.pages.precondition.LoginPage;
+import sa.ejar.web.pages.pre_condition.LoginPage;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

@@ -1,24 +1,14 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.base.WebBaseTest;
-import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
-import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.util.List;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.getWebElement;
 import static org.apache.commons.io.file.PathUtils.deleteFile;
-import static sa.ejar.web.pages.CommonMethodsPage.setDownloadPath;
 
 public class SendContractForApprovalPage {
 

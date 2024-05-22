@@ -15,7 +15,6 @@ import sa.ejar.web.objects.RevokeContractPageObjects;
 
 import java.time.Duration;
 import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
 import static com.testcrew.web.Browser.getText;

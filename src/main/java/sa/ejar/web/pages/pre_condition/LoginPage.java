@@ -1,12 +1,12 @@
-package sa.ejar.web.pages.precondition;
+package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.base.WebBasePage;
 import com.testcrew.manager.ReportManager;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import java.util.List;
 import java.util.Map;
 
