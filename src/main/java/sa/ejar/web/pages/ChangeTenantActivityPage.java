@@ -3,19 +3,18 @@ package sa.ejar.web.pages;
 import com.testcrew.web.Browser;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import org.testng.Assert;
-import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static com.testcrew.web.Browser.*;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 public class ChangeTenantActivityPage {
 
-    public static void verifySubmitRequestPopupForNewTenantActivity() {
+    public void verifySubmitRequestPopupForNewTenantActivity() {
         Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.submitRequestPopupMsgInChangeTenantCommercialActivity()),
                 "Submit request popup is Incorrect!");
     }
 
-    public static void checkRequestWaitingForSevenDaysMessage() {
+    public void checkRequestWaitingForSevenDaysMessage() {
         Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.requestWaitingForSevenDaysMessage()));
     }
 
@@ -153,21 +152,21 @@ public class ChangeTenantActivityPage {
         Assert.assertEquals(Browser.isElementDisabled(ChangeTenantActivityPageObjects.submitApprovalButton()), idDisabled);
     }
 
-    public static void newTenantActivityDescription(String newTenantActivityDescription)
+    public void newTenantActivityDescription(String newTenantActivityDescription)
     {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityDescription(), 10);
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.newTenantActivityDescription());
         setText(ChangeTenantActivityPageObjects.newTenantActivityDescription(), newTenantActivityDescription);
     }
 
-    public static void clickOnSubmitRequest()
+    public void clickOnSubmitRequest()
     {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity(), 10);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
         click(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
     }
 
-    public static void checkRequestNumberHasAlphaNumeric() {
+    public void checkRequestNumberHasAlphaNumeric() {
         String requestPopupTitle = Browser.getText(ChangeTenantActivityPageObjects.requestTitle());
         Pattern pattern = Pattern.compile("#([A-Za-z0-9]+)");
         Matcher matcher = pattern.matcher(requestPopupTitle);

@@ -1,11 +1,11 @@
-package sa.ejar.web.pages.precondition;
+package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
 import java.util.List;
 

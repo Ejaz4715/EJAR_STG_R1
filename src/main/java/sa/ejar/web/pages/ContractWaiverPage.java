@@ -2,12 +2,11 @@ package sa.ejar.web.pages;
 
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
-import org.jfree.util.Log;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ContractWaiverPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 
 import java.util.List;
 
