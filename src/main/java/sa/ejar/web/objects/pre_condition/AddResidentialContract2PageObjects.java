@@ -1,11 +1,12 @@
-package sa.ejar.web.objects.precondition;
+package sa.ejar.web.objects.pre_condition;
 
+import com.testcrew.manager.TestConfigManager;
 import org.openqa.selenium.By;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.testcrew.manager.TestConfigManager;
 
-public class AddResidentialContractPageObjects {
+public class AddResidentialContract2PageObjects {
 
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
 
@@ -134,8 +135,8 @@ public class AddResidentialContractPageObjects {
             put ("ar", "//a[@data-test-id=\"contracts.contract-parties.add-individual-tenant\"]");
         }});
         put("tenant-type-radio-btn", new HashMap<>(){{
-            put ("en", "//label[text()=' Tenant ']");
-            put ("ar", "//label[text()=' المستأجر ']");
+            put ("en", "");
+            put ("ar", "(//label[@class='form-check-label'])[1]");
         }});
         put("tenant-national-id-input-field", new HashMap<>(){{
             put ("en", "//input[@data-name=\"id_number\"]");
@@ -290,8 +291,8 @@ public class AddResidentialContractPageObjects {
             put ("ar", "//button[text()=' تأكيد وإرسال ']");
         }});
         put("contract-status-text", new HashMap<>(){{
-            put ("en", "(//span[@class=\"pin mt-1 max-width-110 success\"])");
-            put ("ar", "(//span[@class=\"pin mt-1 max-width-110 success\"])");
+            put ("en", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
+            put ("ar", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
         }});
         put("close-survey-pop-up-btn", new HashMap<>(){{
             put ("en", "//button[@class=\"close-button\"]");
@@ -337,15 +338,29 @@ public class AddResidentialContractPageObjects {
             put ("en", "//label[text()=' National ID ']");
             put ("ar", "//label[text()=' هوية وطنية ']");
         }});
-
-        put("Loading-Icon", new HashMap<>(){{
-            put ("en", "//div[contains (@class,\"sk-circle\")]");
-            put ("ar", "//div[contains (@class,\"sk-circle\")]");
+        put("Check-Address-On-MapBTN", new HashMap<>() {{
+            put("en", "");
+            put("ar", "//div//h2[text()='عنوان العقار المسجل']");
         }});
 
+        put("Click-identify-address-on-map-btn", new HashMap<>(){{
+            put ("en", "//button[text()=' Identify address on map ']");
+            put ("ar", "(//button[contains(text(),'تحديد العنوان على الخريطة')])[2]");
+        }});
 
+        put("District-DropDown", new HashMap<>() {{
+            put("en", "");
+            put("ar", "(//div[@class='input form-group has-feedback']//div[@class='text-truncate placeholder'][contains(text(),'يرجى اختيار')])[2]");
+        }});
+        put("National-ID-Registration-Label", new HashMap<>() {{
+            put("en", "");
+            put("ar", "(//label[@class='form-check-label'])[1]");
+        }});
     }};
 
+    public static By DistrictDropDown()throws Exception{
+        return By.xpath(get("District-DropDown"));
+    }
 
     public static String get(String locator) throws Exception {
         return objects.get(locator).get(TestConfigManager.getSettingsApplicationLanguage());
@@ -357,6 +372,14 @@ public class AddResidentialContractPageObjects {
 
     public static By clickDateInputField() throws Exception{
         return By.xpath(get("date-input-field"));
+    }
+
+    public static By checkAddressOnMapBTN() throws Exception{
+        return By.xpath(get("Check-Address-On-MapBTN"));
+    }
+
+    public static By clickidentifyAddressOnMapBTN() throws Exception{
+        return By.xpath(get("Click-identify-address-on-map-btn"));
     }
 
     public static By clickContractStartYear() throws Exception{
@@ -652,25 +675,7 @@ public class AddResidentialContractPageObjects {
     public static By NationalIDRadioBTN() throws Exception {
         return By.xpath(get("national-id-radio-btn"));
     }
-
-    public static By LoadingIcon() throws Exception {
-        return By.xpath(get("Loading-Icon"));
+    public static By nationalIDRegistrationLabel()throws Exception{
+        return By.xpath(get("National-ID-Registration-Label"));
     }
-
-    public static By tenantRepresentativeRadioBTN() {
-        return  By.xpath("//input[@data-value=\"tenant_representative\"]/following-sibling::label");
-    }
-
-    public static By tenantName() {
-        return By.xpath("//span[text()='اسم المستأجر']/parent::div/descendant::h5/child::span");
-    }
-    public static By newAddress() {
-        return By.xpath("//div//h2[text()='عنوان العقار المسجل']");
-    }
-    public static By addNewIbanInContract() {
-        return By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]");
-    }
-//    public static By () {
-//        return By.xpath("//label//input[@data-name='required']");
-//    }
 }

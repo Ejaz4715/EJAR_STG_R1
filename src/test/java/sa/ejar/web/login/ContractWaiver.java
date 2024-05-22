@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ContractWaiverPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;
