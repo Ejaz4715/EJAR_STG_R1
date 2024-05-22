@@ -92,7 +92,7 @@ public class ResidentialContract extends NHCWebTest{
 //        app.addResidentialContractPage.clickCloseSurveyPopUpBTN();
         logger.info("Step 11:  Get contract number > Search for the contract and verify the status has been changed");
         String contractNum =  app.addResidentialContractPage.getContractNumber();
-        TestDataManager.addDependantGlobalTestData("Contracts", "Residential(>3 Months)", contractNum);
+        TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
         TestDataManager.writeDependantGlobalTestData("Contracts");
     }
 
@@ -114,8 +114,8 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickDateInputField();
         String currentDate = java.time.LocalDate.now().toString();
         String [] arrDate = currentDate.split("-");
-        app.addResidentialContractPage.selectStartDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
-        app.addResidentialContractPage.selectEndDateOfResidualContract(arrDate[2].substring(1),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.parseInt(arrDate[0])+1));
+        app.addResidentialContractPage.selectStartDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(String.valueOf(Integer.parseInt(arrDate[1])+02)), arrDate[0]);
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
         app.addResidentialContractPage.clickAddPropertyBTN();
@@ -230,7 +230,7 @@ public class ResidentialContract extends NHCWebTest{
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Residential(<3 Months)"));
         logger.info("Step 03: Navigate to approve contract > Agree to all the terms");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
@@ -297,7 +297,7 @@ public class ResidentialContract extends NHCWebTest{
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get(""));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Residential(<3 Months)"));
         logger.info("Step 03: Navigate to approve contract > Agree to all the terms");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
