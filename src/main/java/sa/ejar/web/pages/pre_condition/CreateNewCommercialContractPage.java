@@ -1,6 +1,7 @@
 package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
+import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,7 +16,6 @@ import static com.testcrew.web.Browser.logger;
 public class CreateNewCommercialContractPage {
 
     public void closeConfirmTaxPopUp() {
-        logger.addScreenshot("");
         if (Browser.isElementPresent(By.xpath("//button[text()=' تأكيد ']"))) {
             Browser.waitUntilVisibilityOfElement(By.xpath("//button[text()=' تأكيد ']"), 20);
             Browser.click(By.xpath("//button[text()=' تأكيد ']"));
@@ -28,22 +28,18 @@ public class CreateNewCommercialContractPage {
     }
 
     public void clickOnContractsBtn() throws Exception {
-        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractButtonArrow(), 20);
         Browser.click(AddCommercialContractObjects.contractButtonArrow());
-        logger.addScreenshot("Click on Contracts DropDown");
     }
 
     public void selectNewCommercialContract() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.optionCreateNewContract(), 15);
         Browser.click(AddCommercialContractObjects.optionCreateNewContract());
-        logger.addScreenshot("Create new Commercial contract");
     }
 
     public void verifyAddCommercialContractPageIsVisible() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addCommercialContractDashboard(), 15);
         Assert.assertTrue(Browser.isElementPresent(AddCommercialContractObjects.addCommercialContractDashboard()), "Add Residential Contract dashboard is not visible");
-        Browser.waitForSeconds(1);
     }
 
 
@@ -61,7 +57,6 @@ public class CreateNewCommercialContractPage {
             String getYear = y.getText();
             if (getYear.equalsIgnoreCase(year)) {
                 y.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
@@ -73,7 +68,6 @@ public class CreateNewCommercialContractPage {
             String getMonth = m.getText();
             if (getMonth.equalsIgnoreCase(month)) {
                 m.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
@@ -84,11 +78,9 @@ public class CreateNewCommercialContractPage {
             String getMonth = d.getText();
             if (getMonth.equalsIgnoreCase(day)) {
                 d.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
-        logger.addScreenshot("Commercial Contract Start Date");
     }
 
     public void selectEndDateOfResidualContract(String day, String month, String year) throws Exception {
@@ -99,7 +91,6 @@ public class CreateNewCommercialContractPage {
             String getYear = y.getText();
             if (getYear.equalsIgnoreCase(year)) {
                 y.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
@@ -111,7 +102,6 @@ public class CreateNewCommercialContractPage {
             String getMonth = m.getText();
             if (getMonth.equalsIgnoreCase(month)) {
                 m.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
@@ -121,42 +111,31 @@ public class CreateNewCommercialContractPage {
             String getDay = d.getText();
             if (getDay.equalsIgnoreCase(day)) {
                 d.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
-        logger.addScreenshot("Commercial Contract End Date");
-
     }
 
     public void clickConfirmPeriodBTN() throws Exception {
-        Browser.executeJSScroll(400);
-        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmPeriodBTN(), 35);
         Browser.click(AddCommercialContractObjects.confirmPeriodBTN());
-        Browser.waitForSeconds(10);
-        logger.addScreenshot("Confirm Period");
     }
 
     public void clickAddPropertyBTN() throws Exception {
-        Browser.waitForSeconds(5);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.coveredPropertyUnitsBTN(), 20);
         Browser.click(AddCommercialContractObjects.coveredPropertyUnitsBTN());
         Browser.executeJSScrollIntoView(AddCommercialContractObjects.addPropertyBTN());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addPropertyBTN(), 40);
         Browser.click(AddCommercialContractObjects.addPropertyBTN());
-        logger.addScreenshot("click Add Property");
     }
 
     public void selectProperty(String propertyName) throws Exception {
-        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.propertyName(), 40);
         List<WebElement> listPropertyNames = driver.findElements(AddCommercialContractObjects.propertyName());
         for (WebElement property : listPropertyNames) {
             String getPropertyName = property.getText();
             if (getPropertyName.contains(propertyName)) {
                 property.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
@@ -169,7 +148,6 @@ public class CreateNewCommercialContractPage {
     }
 
     public void clickContinueToSelectUnitsBTN() throws Exception {
-        Browser.waitForSeconds(5);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continueToSelectUnitsBTN(), 50);
         Browser.click(AddCommercialContractObjects.continueToSelectUnitsBTN());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.filterBtnOnSelectUnitsPage(), 30);
@@ -178,7 +156,6 @@ public class CreateNewCommercialContractPage {
     public void clickFilterBtnOnSelectUnitPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.filterBtnOnSelectUnitsPage(), 10);
         Browser.click(AddCommercialContractObjects.filterBtnOnSelectUnitsPage());
-        logger.addScreenshot("Filter & Select Unit");
     }
 
     public void selectUnitsAvailability() throws Exception {
@@ -197,73 +174,58 @@ public class CreateNewCommercialContractPage {
     public void selectFirstAvailableUnit() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.selectFirstAvailableUnit(), 10);
         Browser.click(AddCommercialContractObjects.selectFirstAvailableUnit());
-        logger.addScreenshot("");
     }
 
     public void selectUnit(String inputUnit) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.selectUnit(), 10);
-        Browser.waitForSeconds(1);
         List<WebElement> listUnits = driver.findElements(AddCommercialContractObjects.selectUnit());
         for (WebElement unit : listUnits){
             String getUnitNum= unit.getText();
             System.out.println("unit number is " + getUnitNum);
             if (getUnitNum.contains(inputUnit)){
                 unit.click();
-                Browser.waitForSeconds(1);
                 break;
             }
         }
-        logger.addScreenshot("");
     }
     public void clickConfirmPropertyDetailsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmPropertyDetailsBTN(), 5);
         Browser.click(AddCommercialContractObjects.confirmPropertyDetailsBTN());
-        logger.addScreenshot("");
     }
     public void confirmAdditionalDetailsBTN() throws Exception {
         if (Browser.isElementPresent(AddCommercialContractObjects.confirmAdditionalDetailsBTN())) {
-            Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAdditionalDetailsBTN(), 5);
+            Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAdditionalDetailsBTN(), 50);
             Browser.click(AddCommercialContractObjects.confirmAdditionalDetailsBTN());
-            Browser.setText(AddCommercialContractObjects.signLocation(), "Olaya Street");
-            Browser.setText(AddCommercialContractObjects.signSpecialSpecification(), "Test");
-            Browser.setText(AddCommercialContractObjects.signWidth(), "400");
-            Browser.setText(AddCommercialContractObjects.signHeight(), "200");
         }
     }
     public void clickIdentifyAddressOnMapBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.identifyAddressOnMapBTN(), 15);
         Browser.click(AddCommercialContractObjects.identifyAddressOnMapBTN());
-        logger.addScreenshot("");
     }
 
     public void clickConfirmBtnOnMap() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmBtnOnMap(), 25);
         Browser.click(AddCommercialContractObjects.confirmBtnOnMap());
-        logger.addScreenshot("");
     }
 
     public void clickSaveBtnOnPropertyAddress() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.saveBtnOnPropertyAddress(), 5);
-        logger.addScreenshot("");
         Browser.click(AddCommercialContractObjects.saveBtnOnPropertyAddress());
 
     }
     public void clickContractPartiesBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractPartiesStepBTN(), 30);
         Browser.click(AddCommercialContractObjects.contractPartiesStepBTN());
-        logger.addScreenshot("");
     }
 
     public void clickAddIndividualTenantBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addIndividualTenantBTN(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddCommercialContractObjects.addIndividualTenantBTN());
     }
 
     public void clickTenantRadioBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.tenantRadioBTN(), 5);
         Browser.click(AddCommercialContractObjects.tenantRadioBTN());
-        logger.addScreenshot("click on Tenant Radio button");
     }
 
     public void inputTenantNationalId(String nationalId) throws Exception {
@@ -274,13 +236,12 @@ public class CreateNewCommercialContractPage {
     public void inputTenantDOB(String DOB) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.tenantDateOfBirthInput(), 5);
         Browser.setText(AddCommercialContractObjects.tenantDateOfBirthInput(), DOB);
-        logger.addScreenshot("Enter Tenant ID & DOB");
+        logger.addScreenshot("Enter Tenant ID");
 
     }
     public void clickContinueButtonOnTenantContractPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continueBtnOnIndividualContractPage(), 5);
         Browser.click(AddCommercialContractObjects.continueBtnOnIndividualContractPage());
-        logger.addScreenshot("");
     }
 
     public void inputTenantPhoneNumber(String phoneNumber) throws Exception {
@@ -296,30 +257,25 @@ public class CreateNewCommercialContractPage {
     }
     public void clickTenantCityDropdown() throws Exception {
         Browser.executeJSScroll(300);
-        Browser.waitForSeconds(1);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.tenantCityDropdown(), 5);
         Browser.click(AddCommercialContractObjects.tenantCityDropdown());
     }
     public void selectTenantCity(String city) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.selectTenantCity(), 5);
-        Browser.waitForSeconds(1);
         List<WebElement> listCity = driver.findElements(AddCommercialContractObjects.selectTenantCity());
         for (WebElement cityName : listCity){
             String getCityName = cityName.getText();
             if (getCityName.contains(city)){
                 cityName.click();
-                Browser.waitForSeconds(2);
                 break;
             }
         }
-        logger.addScreenshot("");
     }
     public void clickConfirmBtnOnTenantAddressPage() throws Exception {
         Browser.setText(AddCommercialContractObjects.streetName(),"Olaya");
         Browser.setText(AddCommercialContractObjects.buildingNumber(),"12332");
         Browser.setText(AddCommercialContractObjects.additionalNumber(),"44432");
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmBtnOnTenantAddressPage(), 15);
-        logger.addScreenshot("Confirm Tenant Address");
         Browser.click(AddCommercialContractObjects.confirmBtnOnTenantAddressPage());
     }
 
@@ -331,65 +287,54 @@ public class CreateNewCommercialContractPage {
     public void clickAddRentalContractTermsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addRentalContractTermsBTN(), 50);
         Browser.click(AddCommercialContractObjects.addRentalContractTermsBTN());
-        logger.addScreenshot("");
     }
 
     public void enterAnnulRent(String rent) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.annualRentInputField(), 15);
         Browser.setText(AddCommercialContractObjects.annualRentInputField(), rent);
-        logger.addScreenshot("");
     }
     public void clickSinglePaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.singlePaymentRadioBTN(), 15);
         Browser.click(AddCommercialContractObjects.singlePaymentRadioBTN());
-        logger.addScreenshot("");
     }
 
     public void clickMonthlyPaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.paymentFrequency(), 15);
         Browser.click(AddCommercialContractObjects.paymentFrequency());
-        logger.addScreenshot("");
     }
 
     public void clickQuarterlyPaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.paymentFrequency(), 15);
         Browser.click(AddCommercialContractObjects.paymentFrequency());
         Browser.click(By.xpath("//label[@class='form-check-label']//div[text()=' ربعي ']"));
-        logger.addScreenshot("");
     }
 
     public void clickSixMonthPaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.paymentFrequency(), 15);
         Browser.click(AddCommercialContractObjects.paymentFrequency());
         Browser.click(By.xpath("//label[@class='form-check-label']//div[text()=' نصف سنوى ']"));
-        logger.addScreenshot("");
     }
     public void clickYearlyPaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.paymentFrequency(), 15);
         Browser.click(AddCommercialContractObjects.paymentFrequency());
         Browser.click(By.xpath("//label[@class='form-check-label']//div[text()=' سنوي ']"));
-        logger.addScreenshot("");
     }
 
     public void clickFlexiblePaymentFrequency() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.flexiblePaymentFrequency(), 15);
         Browser.click(AddCommercialContractObjects.flexiblePaymentFrequency());
-        logger.addScreenshot("");
     }
 
     public void verifyContractStatusIsRegistered() throws Exception {
         Browser.executeJSScroll(450);
-        Browser.waitForSeconds(1);
         String [] expectedStatus = {"Registered", "مُسجل"};
         boolean status = false;
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
         String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
-        System.out.println("Contract status : " + actualStatus);
         if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
             status = true;
         }
         Assert.assertTrue(status);
-        Browser.waitForSeconds(1);
         logger.addScreenshot("Contract Status :" + actualStatus);
     }
 
@@ -401,19 +346,16 @@ public class CreateNewCommercialContractPage {
     public void clickPayOnlineBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.payOnlineBTN(), 25);
         Browser.click(AddCommercialContractObjects.payOnlineBTN());
-        logger.addScreenshot("");
     }
 
     public void clickPayOnlineAndThroughBOOrLessorBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(By.xpath("//label[contains(text(),'الدفع الالكتروني او اصدار سند القبض')]"), 25);
         Browser.click(By.xpath("//label[contains(text(),'الدفع الالكتروني او اصدار سند القبض')]"));
-        logger.addScreenshot("");
     }
 
     public void addNewIbanBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addNewIbanBTN(), 15);
         Browser.click(AddCommercialContractObjects.addNewIbanBTN());
-        logger.addScreenshot("");
     }
 
     public void enterIbanNumber(String ibanNumber) throws Exception {
@@ -429,34 +371,32 @@ public class CreateNewCommercialContractPage {
     public void clickSaveBTNOnAddIban() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.saveBTNonAddNewIban(), 15);
         Browser.click(AddCommercialContractObjects.saveBTNonAddNewIban());
-        logger.addScreenshot("");
     }
 
     public void selectIbanFromDropdown() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.selectIbanDropdown(), 15);
         Browser.click(AddCommercialContractObjects.selectIbanDropdown());
         Browser.selectDropdownByIndex(AddCommercialContractObjects.selectIbanDropdown(), 1);
-        logger.addScreenshot("");
     }
 
     public void selectLessorRadioBtnForAccountOwner() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.ibanAccountOwnerRadioBTN(), 15);
         Browser.click(AddCommercialContractObjects.ibanAccountOwnerRadioBTN());
-        logger.addScreenshot("");
         Browser.click(AddCommercialContractObjects.continueToOwnerInfo());
-
     }
 
-    public void clickContinueFinancialTermsBTN() throws Exception {
+    public void clickContinueFinancialTermsBTN(String status, String amount) throws Exception {
+        if (status.equalsIgnoreCase("yes")){
+            new AddResidentialContractPage().enableSecurityDeposit(amount);
+
+        }
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continueFinancialTermsBTN(), 15);
         Browser.click(AddCommercialContractObjects.continueFinancialTermsBTN());
     }
 
     public void clickAddTermsAndConditionsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addTermsAndConditionsBTN(), 35);
-        Browser.executeJSScrollIntoView(AddCommercialContractObjects.addTermsAndConditionsBTN());
         Browser.click(AddCommercialContractObjects.addTermsAndConditionsBTN());
-        logger.addScreenshot("");
     }
 
     public void selectGoverningLaw() throws Exception {
@@ -467,7 +407,6 @@ public class CreateNewCommercialContractPage {
     public void clickConfirmTermsAndConditionsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmTermsAndConditionsBTN(), 15);
         Browser.click(AddCommercialContractObjects.confirmTermsAndConditionsBTN());
-        logger.addScreenshot("");
     }
 
     public void clickSubmitForApprovalBTN() throws Exception {
@@ -482,27 +421,19 @@ public class CreateNewCommercialContractPage {
         String number = Browser.getWebElement(AddCommercialContractObjects.contractNumberTXT()).getText();
         String contractNumber = number.split("#")[1];
         Browser.click(AddCommercialContractObjects.saveContractAsDraft());
-        logger.addScreenshot("Click on save & continue later button");
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.filterBtnOnViewAllContractsPage(), 20);
         Browser.click(AddCommercialContractObjects.filterBtnOnViewAllContractsPage());
         Browser.setText(AddCommercialContractObjects.searchContractNumberInputField(), contractNumber);
-        logger.addScreenshot("");
         Browser.executeJSScroll(400);
-        Browser.waitForSeconds(1);
-        logger.addScreenshot("");
         String Status = Browser.getWebElement(AddCommercialContractObjects.getDraftContractStatus()).getText();
         Assert.assertTrue(Status.contains("مسودة"));
-        Browser.waitForSeconds(1);
-
     }
     public void deleteSubmitContract() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractDeleteButton(),40);
         Browser.executeJSScrollIntoView(AddCommercialContractObjects.contractDeleteButton());
-        Browser.waitForSeconds(1);
         String number = Browser.getWebElement(AddCommercialContractObjects.contractNumberTXT()).getText();
         String contractNumber = number.split("#")[1];
         Browser.click(AddCommercialContractObjects.contractDeleteButton());
-        logger.addScreenshot("");
         Browser.click(AddCommercialContractObjects.confirmDeleteButton());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractButton(), 10);
         Browser.click(AddCommercialContractObjects.contractButton());
@@ -510,17 +441,12 @@ public class CreateNewCommercialContractPage {
         Browser.click(AddCommercialContractObjects.viewAllContractsButton());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.filterBtnOnViewAllContractsPage(), 20);
         Browser.click(AddCommercialContractObjects.filterBtnOnViewAllContractsPage());
-        logger.addScreenshot("");
         Browser.setText(AddCommercialContractObjects.searchContractNumberInputField(), contractNumber);
-        logger.addScreenshot("");
         Browser.executeJSScroll(400);
-        Browser.waitForSeconds(1);
         String Status = Browser.getWebElement(AddCommercialContractObjects.contractNotFound()).getText();
         Assert.assertTrue(Status.contains("لم يتم العثور على عقود!"));
-        logger.addScreenshot("Verify Contract is deleted");
-        Browser.waitForSeconds(1);
-
     }
+
     public void clickContinueBtnOnPreviewContractPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continueBtnOnPreviewContractPage(), 40);
         Browser.click(AddCommercialContractObjects.continueBtnOnPreviewContractPage());
@@ -531,18 +457,15 @@ public class CreateNewCommercialContractPage {
         if (Browser.isElementPresent(AddCommercialContractObjects.continuePayBtnOnPreviewBrokerageAgreementPage())) {
             Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continuePayBtnOnPreviewBrokerageAgreementPage(), 35);
             Browser.click(AddCommercialContractObjects.continuePayBtnOnPreviewBrokerageAgreementPage());
-            logger.addScreenshot("");
         }
     }
 
     public void clickDisclaimerCheckboxOnPayingEjarFeesPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.disclaimerCheckboxOnPayingEjarFeesPage(), 35);
         Browser.click(AddCommercialContractObjects.disclaimerCheckboxOnPayingEjarFeesPage());
-        logger.addScreenshot("");
     }
 
     public void clickConfirmAndSubmitBtnOnPayingEjarFeesPage() throws Exception {
-        Browser.waitForSeconds(6);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAndSubmitBtnOnPayingEjarFeesPage(), 50);
         Browser.click(AddCommercialContractObjects.confirmAndSubmitBtnOnPayingEjarFeesPage());
         logger.addScreenshot("");
@@ -550,7 +473,6 @@ public class CreateNewCommercialContractPage {
 
     public void verifyContractStatus() throws Exception {
         Browser.executeJSScroll(400);
-        Browser.waitForSeconds(1);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractStatus(), 35);
         String status = Browser.getWebElement(AddCommercialContractObjects.contractStatus()).getText();
         if (status.contains("Waiting Parties Approval")){
@@ -560,13 +482,11 @@ public class CreateNewCommercialContractPage {
             Assert.assertFalse(false);
         }
         logger.addScreenshot("");
-        Browser.waitForSeconds(1);
     }
 
     public void clickCloseSurveyPopUpBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.closeSurveyPopUpBTN(), 35);
         Browser.click(AddCommercialContractObjects.closeSurveyPopUpBTN());
-        logger.addScreenshot("");
     }
 
     public void AssessmentSubmitContractSurveyPopUp() throws Exception {
@@ -575,11 +495,9 @@ public class CreateNewCommercialContractPage {
         Browser.click(AddCommercialContractObjects.assessment2());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.assessmentSendButton(), 10);
         Browser.click(AddCommercialContractObjects.assessmentSendButton());
-        logger.addScreenshot("");
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAssessmentSendMessage(),20);
         if (Browser.isElementPresent(AddCommercialContractObjects.confirmAssessmentSendMessage())) {
             Browser.click(AddCommercialContractObjects.closeSurvey());
-            logger.addScreenshot("");
         }
     }
     public void AssessmentSurveyPopUp() throws Exception {
@@ -588,9 +506,7 @@ public class CreateNewCommercialContractPage {
         Browser.click(AddCommercialContractObjects.assessment2());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.assessmentSendButton(), 60);
         Browser.click(AddCommercialContractObjects.assessmentSendButton());
-        logger.addScreenshot("");
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAssessmentSendMessage(),60);
-        Browser.waitForSeconds(1);
         if (Browser.isElementPresent(AddCommercialContractObjects.confirmAssessmentSendMessage())) {
             Browser.click(AddCommercialContractObjects.closeSurvey());
         }
@@ -599,7 +515,6 @@ public class CreateNewCommercialContractPage {
             Browser.click(By.xpath("//button[text()=' إرسال ']"));
         }
         Assert.assertTrue(Browser.isElementPresent(By.xpath("//h2[text()='تمت الموافقة']")));
-        logger.addScreenshot("");
     }
 
 
@@ -611,12 +526,10 @@ public class CreateNewCommercialContractPage {
         Browser.click(By.xpath("(//label[@class='form-check-label'])[3]"));
         Browser.click(By.xpath("(//div[@class='rating'])[9]"));
         Browser.click(By.xpath("(//div[@class='rating'])[13]"));
-        logger.addScreenshot("");
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.assessmentSendButton(), 60);
         Browser.click(AddCommercialContractObjects.assessmentSendButton());
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmAssessmentSendMessage(),60);
         if (Browser.isElementPresent(AddCommercialContractObjects.confirmAssessmentSendMessage())) {
-            Browser.waitForSeconds(1);
             Browser.click(AddCommercialContractObjects.closeSurvey());
         }
         if(Browser.isElementPresent(By.xpath("//p[text()='نموذج استلام/تسليم الوحدة']"))){
@@ -624,37 +537,29 @@ public class CreateNewCommercialContractPage {
             Browser.click(By.xpath("//button[text()=' إرسال ']"));
         }
         Assert.assertTrue(Browser.isElementPresent(By.xpath("//h2[text()='تمت الموافقة']")));
-        logger.addScreenshot("");
     }
 
     public void clickConfirmBtnOnCloseSurveyPopUp() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmBtnOnCloseSurveyPopUp(), 35);
         Browser.click(AddCommercialContractObjects.confirmBtnOnCloseSurveyPopUp());
-        logger.addScreenshot("");
     }
 
     public String getContractNumber() throws Exception {
         String number = Browser.getWebElement(AddCommercialContractObjects.contractNumber()).getText();
-        String contractNumber = number.split("#")[1];
-        return contractNumber;
+        return number.split("#")[1];
     }
     public void clickFilterBtnOnViewAllContractsPage() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.filterBtnOnViewAllContractsPage(), 20);
-        Browser.waitForSeconds(1);
         Browser.click(AddCommercialContractObjects.filterBtnOnViewAllContractsPage());
     }
 
     public void enterContractNumberInContractSearchInputField(String contractNumber) throws Exception {
         Browser.setText(AddCommercialContractObjects.searchContractNumberInputField(), contractNumber);
-        logger.addScreenshot("");
-        Browser.waitForSeconds(3);
     }
 
     public void verifyContractStatusIsActivated() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 60);
         Browser.executeJSScroll(450);
-        Browser.waitForSeconds(2);
-        logger.addScreenshot("");
         boolean status = false;
         String [] expectedStatus = {"Active", "نشط"};
         String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
@@ -663,7 +568,6 @@ public class CreateNewCommercialContractPage {
         if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
             status = true;
         }
-        Browser.waitForSeconds(1);
         Assert.assertTrue(status);
         logger.addScreenshot("Contract Status :" + actualStatus);
     }
@@ -680,7 +584,6 @@ public class CreateNewCommercialContractPage {
         Browser.click(AddResidentialContract2PageObjects.nationalIDRegistrationLabel());
         Browser.setText(AddResidentialContractPageObjects.tenantNationalIdInput(),"1079565430");
         Browser.setText(AddResidentialContractPageObjects.tenantDateOfBirthInput(),"14130323");
-        logger.addScreenshot("");
         Browser.click(AddPropertyPageObjects.getButtonContinue());
     }
 
@@ -692,7 +595,6 @@ public class CreateNewCommercialContractPage {
 
     public void verifyContractStatusIsWaitingForApproval() throws Exception {
         Browser.executeJSScroll(450);
-        Browser.waitForSeconds(3);
         String [] expectedStatus = {"بانتظار موافقة الأطراف", "Waiting Parties Approval"};
         boolean status = false;
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
@@ -701,35 +603,29 @@ public class CreateNewCommercialContractPage {
         if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
             status = true;
         }
-        Browser.waitForSeconds(2);
         Assert.assertTrue(status);
         logger.addScreenshot("Contract Status :" + actualStatus);
     }
 
     public void clickThreeDotsOnContractBesideStatus() throws Exception {
-        Browser.waitForSeconds(2);
         Browser.executeJSScroll(200);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.threeDotsBesideContractStatus(), 45);
         Browser.click(AddCommercialContractObjects.threeDotsBesideContractStatus());
-        logger.addScreenshot("");
     }
 
     public void selectApproveContract() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.approvedContract(),45);
         Browser.click(AddCommercialContractObjects.approvedContract());
-        logger.addScreenshot("");
     }
 
     public void ClickLetsStartBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.letsStartBTN(), 45);
         Browser.click(AddCommercialContractObjects.letsStartBTN());
-        logger.addScreenshot("");
     }
 
     public void clickConfirmBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.confirmBTN(),45);
         Browser.executeJSScrollIntoView(AddCommercialContractObjects.confirmBTN());
-        Browser.waitForSeconds(1);
         Browser.click(AddCommercialContractObjects.confirmBTN());
         if(Browser.isElementPresent(AddCommercialContractObjects.confirmBTN())) {
             Browser.executeJSScrollIntoView(AddCommercialContractObjects.confirmBTN());
@@ -740,7 +636,6 @@ public class CreateNewCommercialContractPage {
     public void clickOnAgreementCheckbox() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.agreementCheckbox(), 45);
         Browser.click(AddCommercialContractObjects.agreementCheckbox());
-        logger.addScreenshot("");
     }
     public void clickSubmitContractApprovalBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.submitContractApprovalBTN(), 45);
@@ -755,22 +650,29 @@ public class CreateNewCommercialContractPage {
     public void clickVerifyIdentityBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.verifyIdentityBTN(), 45);
         Browser.click(AddCommercialContractObjects.verifyIdentityBTN());
-        logger.addScreenshot("");
     }
 
     public void verifyApprovalIsSubmitted() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.approvalSubmittedText(), 45);
         Assert.assertTrue(Browser.isElementPresent(AddCommercialContractObjects.approvalSubmittedText()));
-        logger.addScreenshot("");
     }
     public void clickContractsBtn() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.contractButton(), 35);
         Browser.click(AddCommercialContractObjects.contractButton());
-        logger.addScreenshot("");
     }
     public void selectViewAllContractsButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.viewAllContractsButton(), 20);
         Browser.click(AddCommercialContractObjects.viewAllContractsButton());
-        logger.addScreenshot("");
+    }
+
+    public void clickOnSameTermRadioButton() throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 20);
+        Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.SameTermRadioButton(), 20);
+        Browser.click(AddCommercialContractObjects.SameTermRadioButton());
+    }
+
+    public void enterNoticePeriod(String period) {
+        Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
+        Browser.setText(AddCommercialContractObjects.NoticePeriodInput(), period);
     }
 }

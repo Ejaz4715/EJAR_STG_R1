@@ -1,12 +1,10 @@
 package sa.ejar.web;
 
 import com.testcrew.utility.TCRobot;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import sa.ejar.web.pages.*;
-import sa.ejar.web.pages.pre_condition.AddResidentialContractPage;
-import sa.ejar.web.pages.pre_condition.AddSubleaseContractPage;
-import sa.ejar.web.pages.pre_condition.CreateNewCommercialContractPage;
-import sa.ejar.web.pages.pre_condition.LoginPage;
+import sa.ejar.web.pages.pre_condition.*;
 import com.testcrew.manager.TestConfigManager;
 import com.testcrew.web.Browser;
 
@@ -24,6 +22,7 @@ public class NHCWebApplication {
     public final AddResidentialContractPage addResidentialContractPage;
     public final CreateNewCommercialContractPage createNewCommercialContractPage;
     public final AddSubleaseContractPage addSubleaseContractPage;
+    public final AwqafContractPage awqafContractPage;
 
     /**
      * Regression pack
@@ -34,9 +33,10 @@ public class NHCWebApplication {
     public final SendContractForApprovalPage sendContractForApprovalPage;
     public final MoveInMoveOutUnitsPage moveInMoveOutUnitsPage;
     public final RentalIncidentsPage rentalIncidentsPage;
-    public ChangeTenantActivityPage changeTenantActivityPage;
-    public ManualRenewalPage manualRenewalPage;
+    public final ChangeTenantActivityPage changeTenantActivityPage;
+    public final ManualRenewalPage manualRenewalPage;
     public final ChangeLessor_LessorRepPage changeLessor_lessorRepPage;
+    public final AutomaticRenewalPage automaticRenewalPage;
 
 
 
@@ -54,6 +54,8 @@ public class NHCWebApplication {
         changeLessor_lessorRepPage = new ChangeLessor_LessorRepPage();
         createNewCommercialContractPage = new CreateNewCommercialContractPage();
         addSubleaseContractPage = new AddSubleaseContractPage();
+        automaticRenewalPage = new AutomaticRenewalPage();
+        awqafContractPage = new AwqafContractPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {

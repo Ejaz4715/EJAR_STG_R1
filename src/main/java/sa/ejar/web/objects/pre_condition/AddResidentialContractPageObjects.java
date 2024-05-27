@@ -686,4 +686,20 @@ public class AddResidentialContractPageObjects {
     public static By SaveAndContinueLaterButton() {
         return By.xpath("(//button[contains (text(), ' الحفظ والمتابعة لاحقًا ')])[1]");
     }
+
+    public static By StartDay() {
+        return By.xpath("//app-date-picker[@rangecalendartype=\"start\"]/descendant::td[contains (@class , \"today\")]/descendant::span");
+    }
+
+    public static By inputYear() {
+        return By.xpath("//input[@data-name=\"years\"]");
+    }
+
+    public static By inputMonth() {
+        return By.xpath("//input[@data-name=\"months\"]");
+    }
+
+    public static By inputDay() {
+        return By.xpath("//input[@data-name=\"days\"]");
+    }
 }

@@ -27,9 +27,8 @@ import sa.ejar.web.pages.pre_condition.LoginPage;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
@@ -397,23 +396,24 @@ public class CommonMethodsPage {
 
     /**
      * Method to get current date and to change the date to future or past
-     *
      * @param reqYear  - required year (Negative value to get to any previous years and positive for future)
      * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
      * @param reqDay   - required day (Negative value to get to any previous days and positive for future)
      */
     public static String getCurrentDate(int reqYear, int reqMonth, int reqDay) {
-        String currentDate = LocalDate.now().toString();
-        String[] arrDate = currentDate.split("-");
-        String year = String.valueOf(Integer.parseInt(arrDate[0]) + reqYear);
-        String month = String.valueOf(Integer.parseInt(arrDate[1]) + reqMonth);
-        String day = String.valueOf(Integer.parseInt(arrDate[2]) + reqDay);
-        if (!(month.length() == 2)) {
-            month = 0 + month;
+        LocalDate currentDate = LocalDate.now();
+        if (reqYear > 0){
+            currentDate =  currentDate.plusYears(reqYear);
         }
-        if (!(day.length() == 2)) {
-            day = 0 + day;
+        if (reqMonth > 0){
+            currentDate =  currentDate.plusMonths(reqMonth);
         }
+        if (reqDay > 0){
+            currentDate =  currentDate.plusDays(reqYear);
+        }
+        String year = String.valueOf(currentDate.getYear());
+        String month = String.format("%02d", currentDate.getMonthValue());
+        String day = String.format("%02d", currentDate.getDayOfMonth());
         return year + month + day;
     }
 
@@ -1092,7 +1092,7 @@ public class CommonMethodsPage {
     }
 
     public static void checkSendForApprovalButtonIsNotVisible() throws Exception {
-        Browser.waitForSeconds(4);
+        waitForSeconds(4);
         Assert.assertTrue(!(isElementPresent(SendContractForApprovalPageObjects.sendForApprovalBTN())), "Button is not enabled");
         logger.addScreenshot("");
     }
@@ -1120,16 +1120,16 @@ public class CommonMethodsPage {
         if (isElementPresent(element)) {
             executeJSScrollIntoView(element);
         }
-        Browser.waitForSeconds(2);
+        waitForSeconds(2);
     }
 
     public static void verifyContractStatus(String Status1, String Status2) throws Exception {
-        Browser.executeJSScroll(450);
-        Browser.waitForSeconds(1);
+        executeJSScroll(450);
+        waitForSeconds(1);
         String[] expectedStatus = {Status1, Status2};
-        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
-        Browser.waitForSeconds(2);
-        String actualStatus = Browser.getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
+        waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
+        waitForSeconds(2);
+        String actualStatus = getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
         if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])) {
             Assert.assertTrue(true);
         } else {
@@ -1334,8 +1334,8 @@ public class CommonMethodsPage {
     }
 
     public static void verifySearchedContractIsNotDisplayed() {
-        Browser.executeJSScroll(300);
-        Browser.waitForSeconds(1);
+        executeJSScroll(300);
+        waitForSeconds(1);
         String actualResult = getText(CommonMethodsPageObjects.ContractResultOfSearchedContract());
         Assert.assertTrue(actualResult.contains("لم يتم العثور على عقود! يرجى إضافة عقود جديدة."));
         logger.addScreenshot("No Result Found");
@@ -1343,9 +1343,9 @@ public class CommonMethodsPage {
     }
 
     public static void verifyTotalNoOfContractsCardIsVisible() {
-        Assert.assertTrue(Browser.isElementPresent(By.xpath("//app-card-value//p[text()='إجمالي عدد العقود']")));
+        Assert.assertTrue(isElementPresent(By.xpath("//app-card-value//p[text()='إجمالي عدد العقود']")));
         WebBaseTest.logger.addScreenshot("Total Number of Contracts Card Is Visible");
-        Browser.waitForSeconds(1);
+        waitForSeconds(1);
     }
 
     public static void verifyTheRejectButtonIsDisabled() throws Exception {
@@ -1361,121 +1361,121 @@ public class CommonMethodsPage {
     }
 
     public static void contractInformationCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' معلومات العقد. ']"), 20);
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' معلومات العقد. ']"), 20);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']"));
         logger.addScreenshot("Contract Information Checkbox is clickable");
     }
 
     public static void lessorCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المؤجرون ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' المؤجرون ']"));
-        Browser.waitForSeconds(1);
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المؤجرون ']"), 20);
+        click(By.xpath("//div//a[text()=' المؤجرون ']"));
+        waitForSeconds(1);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك ']"));
-        Browser.click(By.xpath("//label//div[text()=' أقر بانه تم التحقق من الايبان ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك ']"));
+        click(By.xpath("//label//div[text()=' أقر بانه تم التحقق من الايبان ']"));
         logger.addScreenshot("Lessor Checkboxes are clickable");
     }
 
     public static void tenantsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المستأجرون ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' المستأجرون ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على بيانات المستأجرين ']"));
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' المستأجرون ']"), 20);
+        click(By.xpath("//div//a[text()=' المستأجرون ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تأكيد الموافقة على بيانات المستأجرين ']"));
         logger.addScreenshot("Tenant Checkbox is clickable");
     }
 
     public static void propertyDetailsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' العقار ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' العقار ']"));
-        Browser.waitForSeconds(1);
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' العقار ']"), 20);
+        click(By.xpath("//div//a[text()=' العقار ']"));
+        waitForSeconds(1);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي ']"));
         logger.addScreenshot("Property Details Checkbox is clickable");
     }
 
     public static void unitDetailsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوحدات ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' الوحدات ']"));
-        Browser.waitForSeconds(1);
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوحدات ']"), 20);
+        click(By.xpath("//div//a[text()=' الوحدات ']"));
+        waitForSeconds(1);
         CommonMethodsPage.scrollToElement(By.xpath("//label//div[text()=' تأكيد الموافقة على تفاصيل الوحدة ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على تفاصيل الوحدة ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تأكيد الموافقة على تفاصيل الوحدة ']"));
         logger.addScreenshot("Unit Details Checkbox is clickable");
     }
 
     public static void financialTermsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' البيانات المالية ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' البيانات المالية ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على الشروط المالية ']"));
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' البيانات المالية ']"), 20);
+        click(By.xpath("//div//a[text()=' البيانات المالية ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تأكيد الموافقة على الشروط المالية ']"));
         logger.addScreenshot("Financial Terms Checkbox is clickable");
 
     }
 
     public static void termsConditionsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الشروط والأحكام ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' الشروط والأحكام ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تاكيد الموافقة على الشروط والأحكام ']"));
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الشروط والأحكام ']"), 20);
+        click(By.xpath("//div//a[text()=' الشروط والأحكام ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تاكيد الموافقة على الشروط والأحكام ']"));
         logger.addScreenshot("Terms & Conditions Checkbox is clickable");
     }
 
     public static void capturedDocumentsCheckbox() throws Exception {
-        Browser.waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوثائق ']"), 20);
-        Browser.click(By.xpath("//div//a[text()=' الوثائق ']"));
-        Browser.waitForSeconds(1);
-        Browser.click(By.xpath("//label//div[text()=' تأكيد الموافقة على الوثائق المرتبطة بالعقد ']"));
+        waitUntilPresenceOfElement(By.xpath("//div//a[text()=' الوثائق ']"), 20);
+        click(By.xpath("//div//a[text()=' الوثائق ']"));
+        waitForSeconds(1);
+        click(By.xpath("//label//div[text()=' تأكيد الموافقة على الوثائق المرتبطة بالعقد ']"));
         logger.addScreenshot("captured Documents Checkbox is clickable");
     }
 
     public static void assertEditButtonNotVisible() throws Exception {
-        Assert.assertTrue(!(Browser.isElementPresent(CommonMethodsPageObjects.editBTN())));
+        Assert.assertTrue(!(isElementPresent(CommonMethodsPageObjects.editBTN())));
     }
 
     public static void neviagteToManageOffice() throws Exception {
-        Browser.click(CommonMethodsPageObjects.RoleName());
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(), 20);
-        Browser.click(LoginPageObjects.manageAccountButton());
+        click(CommonMethodsPageObjects.RoleName());
+        waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(), 20);
+        click(LoginPageObjects.manageAccountButton());
     }
 
     public static void verifyAccountSettingsPageIsDisplayed() {
-        Assert.assertTrue(Browser.isElementPresent(CommonMethodsPageObjects.AccountSettingsHeading()));
+        Assert.assertTrue(isElementPresent(CommonMethodsPageObjects.AccountSettingsHeading()));
         logger.addScreenshot("'Account Settings' page is displayed");
     }
 
     public static void selectWalletFromAccountSettings() throws Exception {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.wallet(), 20);
-        Browser.click(LoginPageObjects.wallet());
+        waitUntilVisibilityOfElement(LoginPageObjects.wallet(), 20);
+        click(LoginPageObjects.wallet());
         logger.addScreenshot("Wallet details is displayed");
     }
 
     public static void inputContractNumberInContractSearchField(String Contract) {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(), 20);
-        Browser.setText(LoginPageObjects.ContractNumberInput(), Contract);
+        waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(), 20);
+        setText(LoginPageObjects.ContractNumberInput(), Contract);
         logger.addScreenshot("Input Contract Number");
     }
 
     public static void selectDescription() {
-        Browser.waitForSeconds(1);
-        Browser.selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(), "مبلغ الضمان المحجوز");
+        waitForSeconds(1);
+        selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(), "مبلغ الضمان المحجوز");
     }
 
     public static void verifySecurityAmountReservedIsDisplayed() throws Exception {
-        Browser.waitForSeconds(1);
+        waitForSeconds(1);
         CommonMethodsPage.scrollToElement(LoginPageObjects.SecurityAmountReserved());
-        Browser.waitForSeconds(1);
+        waitForSeconds(1);
         Assert.assertTrue(isElementPresent(LoginPageObjects.SecurityAmountReserved()));
         logger.addScreenshot("The 'مبلغ الضمان المحجوز' is displayed");
     }
 
     public static void navigateToViewUnitForms() throws Exception {
-        Browser.click(CommonMethodsPageObjects.UnitForms());
+        click(CommonMethodsPageObjects.UnitForms());
         logger.addScreenshot("");
-        Browser.click(CommonMethodsPageObjects.ViewUnitForms());
+        click(CommonMethodsPageObjects.ViewUnitForms());
         logger.addScreenshot("Neviagte to 'نماذج الوحدة' page");
     }
 }

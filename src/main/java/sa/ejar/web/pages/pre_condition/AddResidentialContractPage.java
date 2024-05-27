@@ -2,6 +2,7 @@ package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
@@ -91,6 +92,7 @@ public class AddResidentialContractPage {
 
     public String getCurrentMonth(String monthNum) {
         String month = "";
+        //replace 0 with null starting from the beginning(^) of the string
         monthNum = monthNum.replaceFirst("^0*", "");
         month = switch (monthNum) {
             case "1" -> "January يناير ";
@@ -226,6 +228,8 @@ public class AddResidentialContractPage {
     }
 
     public void clickContractPartiesBTN() throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 30);
+        Browser.waitForSeconds(1);
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractPartiesStepBTN(), 30);
         Browser.click(AddResidentialContractPageObjects.contractPartiesStepBTN());
     }
@@ -292,8 +296,9 @@ public class AddResidentialContractPage {
 
 
     public void clickConfirmPaymentScheduleBTN() throws Exception {
-        if (Browser.isElementPresent(By.xpath("//button[text()=' إلمتابعة إلى رصيد بدء العقد ']"))) {
-            Browser.click(By.xpath("//button[text()=' إلمتابعة إلى رصيد بدء العقد ']"));
+        if (Browser.isElementPresent(By.xpath("//button[contains (text(),'المتابعة إلى رصيد بدء العقد')]"))) {
+            Browser.waitUntilVisibilityOfElement(By.xpath("//button[contains (text(),'المتابعة إلى رصيد بدء العقد')]"), 40);
+            Browser.click(By.xpath("//button[contains (text(),'المتابعة إلى رصيد بدء العقد')]"));
         }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueToBillingScheduleBTN(), 30);
         Browser.click(AddResidentialContractPageObjects.continueToBillingScheduleBTN());
@@ -448,5 +453,19 @@ public class AddResidentialContractPage {
     public void clickOnSaveAndContinueLaterButton() {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SaveAndContinueLaterButton(), 40 );
         Browser.click(AddResidentialContractPageObjects.SaveAndContinueLaterButton());
+    }
+
+    public void clickOnStartDay() {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.StartDay(), 40 );
+        Browser.click(AddResidentialContractPageObjects.StartDay());
+    }
+
+    public void addEndDatePeriod(String year, String month, String day) {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.inputYear(), 40);
+        Browser.setText(AddResidentialContractPageObjects.inputYear(), year);
+        Browser.setText(AddResidentialContractPageObjects.inputMonth(), Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
+        Browser.setText(AddResidentialContractPageObjects.inputMonth(), month);
+        Browser.setText(AddResidentialContractPageObjects.inputDay(), Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
+        Browser.setText(AddResidentialContractPageObjects.inputDay(), day);
     }
 }

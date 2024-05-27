@@ -112,6 +112,7 @@ public class ChangeLessor_LessorRepPage {
         int chr = stripper.getText(document).indexOf("Contract No.");
         String contactVersion = stripper.getText(document).substring(chr, chr + 31);
         Assert.assertFalse(contactVersion.equalsIgnoreCase(oldVersion), "The old version is (" +oldVersion+ ") and new version is ("+contactVersion+")");
+        logger.addScreenshot("The old version is (" +oldVersion+ ") and new version is ("+contactVersion+")");
     }
 
     public void clickOnPropertiesTab() {

@@ -14,6 +14,11 @@ import java.util.Map;
 
 public class RentalIncident extends NHCWebTest {
 
+    /**
+     * Abstainer information section
+     * From TC_01 to TC_42
+     */
+
     @Test(dataProvider = "testDataProvider")
     public void TC_01_RentalIncident(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());

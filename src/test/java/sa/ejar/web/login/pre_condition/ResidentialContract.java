@@ -24,10 +24,9 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectNewResidualContract();
         app.addResidentialContractPage.clickDateInputField();
-        String currentDate = java.time.LocalDate.now().toString();
-        String [] arrDate = currentDate.split("-");
-        app.addResidentialContractPage.selectStartDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
-        app.addResidentialContractPage.selectEndDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), String.valueOf(Integer.parseInt(arrDate[0])+1));
+        app.addResidentialContractPage.clickOnStartDay();
+        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         app.addResidentialContractPage.clickAddPropertyBTN();
         app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
@@ -104,10 +103,9 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.clickContractsBtn();
         app.addResidentialContractPage.selectNewResidualContract();
         app.addResidentialContractPage.clickDateInputField();
-        String currentDate = java.time.LocalDate.now().toString();
-        String [] arrDate = currentDate.split("-");
-        app.addResidentialContractPage.selectStartDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(arrDate[1]), arrDate[0]);
-        app.addResidentialContractPage.selectEndDateOfResidualContract(String.valueOf(Integer.parseInt(arrDate[2])),app.addResidentialContractPage.getCurrentMonth(String.valueOf(Integer.parseInt(arrDate[1])+02)), arrDate[0]);
+        app.addResidentialContractPage.clickOnStartDay();
+        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         app.addResidentialContractPage.clickAddPropertyBTN();
         app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
@@ -181,11 +179,13 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
@@ -196,6 +196,7 @@ public class ResidentialContract extends NHCWebTest{
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
+        logger.info("Step 04: Give rating > Confirm approve contract");
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
@@ -211,11 +212,13 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
@@ -226,6 +229,7 @@ public class ResidentialContract extends NHCWebTest{
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
+        logger.info("Step 04: Give rating > Confirm approve contract");
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
@@ -241,11 +245,13 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
@@ -256,6 +262,7 @@ public class ResidentialContract extends NHCWebTest{
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.clickOnYesRadioButtons();
+        logger.info("Step 04: Give rating > Confirm approve contract");
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
@@ -271,11 +278,13 @@ public class ResidentialContract extends NHCWebTest{
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
+        logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
         CommonMethodsPage.clickContractsBtn();
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
@@ -286,6 +295,7 @@ public class ResidentialContract extends NHCWebTest{
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.clickOnYesRadioButtons();
+        logger.info("Step 04: Give rating > Confirm approve contract");
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
