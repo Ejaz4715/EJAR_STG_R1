@@ -9,13 +9,6 @@ import java.util.Map;
 public class ChangeTenantActivity extends NHCWebTest {
 
     /**
-     * Pre Conditions
-     * -Create Contracts
-     * -Approve from parties
-     */
-
-
-    /**
      * Submit Change Commercial Activity request
      * TC_01 to TC_
      */
@@ -1312,8 +1305,6 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: From requests dropdown list Click on view requests");
         CommonMethodsPage.clickOnViewAllRequestsButton();
-
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1355,8 +1346,6 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField("6HTM38FF");
         app.changeTenantActivityPage.assertRequestDetails("6HTM38FF", "تغيير النشاط التجاري", "20254965397");
-
     }
-
 
 }

@@ -12,8 +12,6 @@ import static sa.ejar.web.objects.ManualRenewalPageObjects.*;
 
 public class ManualRenewal extends NHCWebTest {
 
-    //---------------------Manual_Renewal_BoOfficer---------------------------
-    //------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_01_ManualRenewal(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());

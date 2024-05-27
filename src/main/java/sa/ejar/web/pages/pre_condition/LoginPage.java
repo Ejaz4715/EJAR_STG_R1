@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
+
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +34,7 @@ public class LoginPage extends WebBasePage {
     }
 
     public void clickLogin() throws Exception {
-            Browser.click(LoginPageObjects.getButtonLogin());
+        Browser.click(LoginPageObjects.getButtonLogin());
     }
 
     public void closePopUp() throws Exception {
@@ -59,17 +60,16 @@ public class LoginPage extends WebBasePage {
         String dropDownLanguage;
         String expectedHeading = "الخدمات الإلكترونية";
         Browser.getWebElement(LoginPageObjects.getButtonLanguage()).click();
-        List<WebElement> list =  driver.findElements(LoginPageObjects.getLanguage());
+        List<WebElement> list = driver.findElements(LoginPageObjects.getLanguage());
         for (WebElement w : list) {
             if (language.equalsIgnoreCase("en") && expectedHeading.equalsIgnoreCase(actualHeading)) {
                 dropDownLanguage = w.getText();
-                if(dropDownLanguage.equalsIgnoreCase("EN")){
+                if (dropDownLanguage.equalsIgnoreCase("EN")) {
                     w.click();
                     break;
                 }
 
-            }
-            else if(language.equalsIgnoreCase("ar")&& expectedHeading.equalsIgnoreCase(actualHeading)){
+            } else if (language.equalsIgnoreCase("ar") && expectedHeading.equalsIgnoreCase(actualHeading)) {
                 break;
             }
         }
@@ -116,37 +116,48 @@ public class LoginPage extends WebBasePage {
 
     public void closeExploreEjarPopUp() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
-        if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),40);
-            Browser.click(LoginPageObjects.closeButton1());
+        while (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp()) || Browser.isElementPresent(LoginPageObjects.closeButton2())
+                || Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+            Browser.waitForSeconds(1);
+            if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
+                Browser.click(LoginPageObjects.closeButton2());
+            } else if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
+                Browser.click(LoginPageObjects.closeButton1());
+            } else if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+                Browser.click(LoginPageObjects.closeButton1());
+            }
+            Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         }
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
-        if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),40);
-            Browser.click(LoginPageObjects.closeButton2());
-        }
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
-        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
-            Browser.click(LoginPageObjects.closeButton1());
-
-        }
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
-        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
-            Browser.click(LoginPageObjects.closeButton1());
-
-        }
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
-        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
-            Browser.click(LoginPageObjects.closeButton1());
-
-        }
+//        if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
+//            Browser.waitUntilVisibilityOfElement(LoginPageObjects.exploreEjarPopUp(),40);
+//            Browser.click(LoginPageObjects.closeButton1());
+//        }
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+//        if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
+//            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton2(),40);
+//            Browser.click(LoginPageObjects.closeButton2());
+//        }
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+//        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+//            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
+//            Browser.click(LoginPageObjects.closeButton1());
+//        }
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+//        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+//            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
+//            Browser.click(LoginPageObjects.closeButton1());
+//
+//        }
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+//        if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+//            Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(),40);
+//            Browser.click(LoginPageObjects.closeButton1());
+//
+//        }
     }
 
     public void acceptTerms() throws Exception {
-        if(Browser.isElementPresent(LoginPageObjects.firstTerm())) {
+        if (Browser.isElementPresent(LoginPageObjects.firstTerm())) {
             Browser.click(LoginPageObjects.firstTerm());
             Browser.waitForSeconds(2);
             Browser.click(LoginPageObjects.secondTerm());
@@ -156,7 +167,7 @@ public class LoginPage extends WebBasePage {
             Browser.click(LoginPageObjects.confirmTermsButton());
             Browser.waitForSeconds(5);
         }
-        if(Browser.isElementPresent(LoginPageObjects.closeButton2())){
+        if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
             Browser.click(LoginPageObjects.closeButton2());
             Browser.waitForSeconds(5);
         }

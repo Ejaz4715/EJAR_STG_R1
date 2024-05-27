@@ -2,9 +2,7 @@ package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import sa.ejar.web.objects.pre_condition.*;
@@ -32,14 +30,13 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.filterBtnOnViewAllContractsPage());
     }
 
-    public void enterContractNumber(Map<String, String> data) throws Exception {
+    public void enterContractNumber(String contractNum) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.TXTContractNumber(), 20);
-        Browser.setText(AddSubleaseContractPageObjects.TXTContractNumber(), data.get("Contract_Number"));
+        Browser.setText(AddSubleaseContractPageObjects.TXTContractNumber(), contractNum);
         logger.addScreenshot("");
     }
 
     public void clickOnDotsButton() throws Exception {
-        Browser.waitForSeconds(3);
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.BTNDots(), 30);
         Browser.executeJSScrollIntoView(AddSubleaseContractPageObjects.BTNDots());
         Browser.click(AddSubleaseContractPageObjects.BTNDots());
@@ -59,7 +56,6 @@ public class AddSubleaseContractPage {
 
     public void clickNationalIDRadioBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.NationalIDRadioBTN(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.NationalIDRadioBTN());
     }
 
@@ -114,7 +110,6 @@ public class AddSubleaseContractPage {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.BTNConfirm(), 20);
         Browser.executeJSScrollIntoView(AddSubleaseContractPageObjects.BTNConfirm());
         Browser.click(AddSubleaseContractPageObjects.BTNConfirm());
-        Browser.waitForSeconds(2);
     }
 
 
@@ -148,7 +143,6 @@ public class AddSubleaseContractPage {
 
     public void clickAddCCompanions() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.BTNAddCompanions(), 15);
-        Browser.waitForSeconds(3);
         Browser.click(AddSubleaseContractPageObjects.BTNAddCompanions());
     }
 
@@ -394,9 +388,6 @@ public class AddSubleaseContractPage {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.openingPeriodForIntendedActivity(), 12);
         Browser.setText(AddSubleaseContractPageObjects.openingPeriodForIntendedActivity(), "100");
         Browser.setText(AddSubleaseContractPageObjects.periodForTerminatingIfUnitNotOpened(), "100");
-        Browser.waitForSeconds(1);
-        logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void AdhereToTenantGuide() throws Exception {
@@ -440,9 +431,6 @@ public class AddSubleaseContractPage {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.SwitchBTNChangeInRentalValue(), 12);
         Browser.click(AddSubleaseContractPageObjects.SwitchBTNChangeInRentalValue());
         Browser.setText(AddSubleaseContractPageObjects.numberReportingDays(), "100");
-        Browser.waitForSeconds(1);
-        logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
 
@@ -491,22 +479,17 @@ public class AddSubleaseContractPage {
 
     public void clickSelectUnit() throws Exception {
         Browser.executeJSScroll(900);
-        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.BTNSelectUnit(),5);
         Browser.click(AddSubleaseContractPageObjects.BTNSelectUnit());
     }
 
     public void clickOnCloseWindow() throws Exception {
         if (Browser.isElementPresent(AddSubleaseContractPageObjects.BTNCloseWindow())) {
-            Browser.waitForSeconds(5);
             Browser.click(AddSubleaseContractPageObjects.BTNCloseWindow());
-        } else {
-            Browser.waitForSeconds(2);
         }
     }
 
     public void clickOnCloseButton() throws Exception {
-        Browser.waitForSeconds(7);
         if (Browser.isElementPresent(AddSubleaseContractPageObjects.BTNClose())) {
             Browser.click(AddSubleaseContractPageObjects.BTNClose());
         }
@@ -519,7 +502,6 @@ public class AddSubleaseContractPage {
     }
 
     public void clickContractsBtn() throws Exception {
-        Browser.waitForSeconds(1);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.contractButton(), 20);
         Browser.click(LoginPageObjects.contractButton());
     }
@@ -611,7 +593,6 @@ public class AddSubleaseContractPage {
         for (WebElement d : listDay) {
             String getMonth = d.getText();
             if (getMonth.equalsIgnoreCase(day)) {
-                Browser.waitForSeconds(2);
                 d.click();
                 break;
             }
@@ -621,30 +602,24 @@ public class AddSubleaseContractPage {
     public void clickConfirmPeriodBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.confirmPeriodBTN(), 20);
         Browser.executeJSScroll(200);
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.confirmPeriodBTN());
         logger.addScreenshot("");
-        Browser.waitForSeconds(1);
     }
 
     public void clickAddPropertyBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.coveredPropertyUnitsBTN(), 20);
-        Browser.waitForSeconds(5);
         Browser.click(AddSubleaseContractPageObjects.coveredPropertyUnitsBTN());
-        Browser.waitForSeconds(2);
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.addPropertyBTN(), 10);
         Browser.click(AddSubleaseContractPageObjects.addPropertyBTN());
     }
 
     public void selectProperty(String propertyName) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.propertyName(), 5);
-        Browser.waitForSeconds(2);
         List<WebElement> listPropertyNames = driver.findElements(AddSubleaseContractPageObjects.propertyName());
         for (WebElement property : listPropertyNames) {
             String getPropertyName = property.getText();
             if (getPropertyName.equalsIgnoreCase(propertyName)) {
                 property.click();
-                Browser.waitForSeconds(2);
                 break;
             }
         }
@@ -658,7 +633,6 @@ public class AddSubleaseContractPage {
 
     public void clickContinueToSelectUnitsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.continueToSelectUnitsBTN(), 10);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.continueToSelectUnitsBTN());
     }
 
@@ -674,14 +648,12 @@ public class AddSubleaseContractPage {
 
     public void selectUnit(String inputUnit) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.selectUnit(), 10);
-        Browser.waitForSeconds(2);
         List<WebElement> listUnits = driver.findElements(AddSubleaseContractPageObjects.selectUnit());
         for (WebElement unit : listUnits) {
             String getUnitNum = unit.getText();
             System.out.println("unit number is " + getUnitNum);
             if (getUnitNum.contains(inputUnit)) {
                 unit.click();
-                Browser.waitForSeconds(2);
                 break;
             }
         }
@@ -696,34 +668,29 @@ public class AddSubleaseContractPage {
 
     public void clickConfirmPropertyDetailsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.confirmPropertyDetailsBTN(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.confirmPropertyDetailsBTN());
         Browser.takeScreenshot();
     }
 
     public void clickIdentifyAddressOnMapBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.identifyAddressOnMapBTN(), 15);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.identifyAddressOnMapBTN());
     }
 
     public void clickConfirmBtnOnMap() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.confirmBtnOnMap(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.confirmBtnOnMap());
         Browser.takeScreenshot();
     }
 
     public void clickSaveBtnOnPropertyAddress() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.saveBtnOnPropertyAddress(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.saveBtnOnPropertyAddress());
     }
 
     public void clickContractPartiesBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.contractPartiesStepBTN(), 20);
         Browser.executeJSScrollIntoView(AddSubleaseContractPageObjects.contractPartiesStepBTN());
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.contractPartiesStepBTN());
     }
 
@@ -762,26 +729,22 @@ public class AddSubleaseContractPage {
 
     public void selectTenantRegion() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.tenantRegionDropdown(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.tenantRegionDropdown());
         Browser.selectDropdownByIndex(AddSubleaseContractPageObjects.tenantRegionDropdown(), 1);
     }
 
     public void clickTenantCityDropdown() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.tenantCityDropdown(), 5);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.tenantCityDropdown());
     }
 
     public void selectTenantCity(String city) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.selectTenantCity(), 5);
-        Browser.waitForSeconds(2);
         List<WebElement> listCity = driver.findElements(AddSubleaseContractPageObjects.selectTenantCity());
         for (WebElement cityName : listCity) {
             String getCityName = cityName.getText();
             if (getCityName.contains(city)) {
                 cityName.click();
-                Browser.waitForSeconds(2);
                 break;
             }
         }
@@ -821,17 +784,14 @@ public class AddSubleaseContractPage {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.getSeparatedMeter_Option1(),50);
         Browser.click(AddSubleaseContractPageObjects.getSeparatedMeter_Option1());
         Browser.click(AddSubleaseContractPageObjects.getLessorOwnerInvoice_Option1());
-        Browser.waitForSeconds(3);
         Browser.setText(AddSubleaseContractPageObjects.electricityMeterSite(), "1098789009");
         Browser.click(AddSubleaseContractPageObjects.validateButton());
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.closeAlertMessage(),20);
         Browser.click(AddSubleaseContractPageObjects.closeAlertMessage());
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.electricityCurrentReadingInput(),40);
-        Browser.waitForSeconds(3);
         Browser.setText(AddSubleaseContractPageObjects.electricityCurrentReadingInput(), "109878900989009");
         Browser.click(AddSubleaseContractPageObjects.getFixed_Option1());
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.setFixedFee_Input1(),20);
-        Browser.waitForSeconds(3);
         Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input1(), "200");
         logger.addScreenshot("");
     }
@@ -841,47 +801,37 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.getLessorOwnerInvoice_Option1());
         Browser.setText(AddSubleaseContractPageObjects.electricityMeterSite(), "1098789009");
         Browser.click(AddSubleaseContractPageObjects.validateButton());
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.closeAlertMessage());
-        Browser.waitForSeconds(1);
         Browser.setText(AddSubleaseContractPageObjects.electricityCurrentReadingInput(), "109878900989009");
         Browser.click(AddSubleaseContractPageObjects.getInvoice_Option1());
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void electricitySharedMeterWithInvoicePayment() throws Exception {
         Browser.click(AddSubleaseContractPageObjects.getSharedMeter_Option1());
         Browser.setText(AddSubleaseContractPageObjects.electricityMeterSite(), "1098789009");
         Browser.click(AddSubleaseContractPageObjects.validateButton());
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.closeAlertMessage());
-        Browser.waitForSeconds(1);
         Browser.setText(AddSubleaseContractPageObjects.electricityCurrentReadingInput(), "109878900989009");
         Browser.click(AddSubleaseContractPageObjects.getInvoice_Option1());
         logger.addScreenshot("");
-        Browser.waitForSeconds(6);
     }
 
     public void electricitySharedMeterWithFixedAmount() throws Exception {
         Browser.click(AddSubleaseContractPageObjects.getSharedMeter_Option1());
         Browser.setText(AddSubleaseContractPageObjects.electricityMeterSite(), "1098789009");
         Browser.click(AddSubleaseContractPageObjects.validateButton());
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.closeAlertMessage());
-        Browser.waitForSeconds(1);
         Browser.setText(AddSubleaseContractPageObjects.electricityCurrentReadingInput(), "109878900989009");
         Browser.click(AddSubleaseContractPageObjects.getFixed_Option1());
         Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input1(), "200");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void electricityOtherMeter() throws Exception {
         Browser.click(AddSubleaseContractPageObjects.electricityOtherOption());
         Browser.click(AddSubleaseContractPageObjects.getElectricityOther_Option("Commercial site"));
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void waterSeparatedMeterWithFixedAmount() throws Exception {
@@ -893,7 +843,6 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.getFixed_Option2());
         Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input3(), "200");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
 
@@ -905,8 +854,6 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.getInvoice_Option2());
         Browser.setText(AddSubleaseContractPageObjects.meterCurrentReading(), "200");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
-
     }
 
     public void waterMeterSharedMeterWithFixedAmount() throws Exception {
@@ -916,7 +863,6 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.getFixed_Option2());
         Browser.setText(AddSubleaseContractPageObjects.waterFixedFee(), "200");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void waterMeterSharedMeterWithInvoicePayment() throws Exception {
@@ -926,29 +872,24 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.getInvoice_Option2());
         Browser.setText(AddSubleaseContractPageObjects.meterCurrentReading(), "200");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void waterOtherMeter() throws Exception {
         Browser.click(AddSubleaseContractPageObjects.waterOtherOption());
         Browser.setText(AddSubleaseContractPageObjects.meterReason(), "TestByAutomation");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void gasWithFixedAmount() throws Exception {
         if(Browser.isElementPresent(AddSubleaseContractPageObjects.gasFeeOption())) {
             Browser.click(AddSubleaseContractPageObjects.gasFeeOption());
-            Browser.waitForSeconds(3);
             Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input2(), "200");
             logger.addScreenshot("");
         }
         else if (Browser.isElementPresent(By.xpath("//label[text()=' المجموع الكلي ']"))){
             Browser.click(By.xpath("//label[text()=' المجموع الكلي ']"));
-            Browser.waitForSeconds(2);
             Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input2(), "200");
             logger.addScreenshot("");
-            Browser.waitForSeconds(2);
         }
     }
 
@@ -956,57 +897,41 @@ public class AddSubleaseContractPage {
         Browser.click(AddSubleaseContractPageObjects.gasFeeReadingMeter());
         Browser.setText(AddSubleaseContractPageObjects.gasMeterCurrentReading(), "100");
         logger.addScreenshot("");
-        Browser.waitForSeconds(2);
     }
 
     public void parkingInput() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.numberOfParking(), 20);
-        Browser.waitForSeconds(1);
         Browser.setText(AddSubleaseContractPageObjects.numberOfParking(), "1");
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.setFixedFee_Input4());
-        Browser.waitForSeconds(1);
         Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input4(), "200");
         logger.addScreenshot("");
     }
 
 
     public void AddAwqafContractTerms(){
-      Browser.waitForSeconds(2);
       Browser.executeJSScroll(400);
-      Browser.waitForSeconds(2);
       Browser.click(By.xpath("//app-switch-input[@formcontrolname='utilities_and_services_required']//span[@class='slider enable-transitions']"));
-      Browser.waitForSeconds(2);
       Browser.setText(By.xpath("//input[@data-name='sewage_fees']"),"100");
       Browser.setText(By.xpath("//input[@data-name='maintenance']"),"100");
       Browser.setText(By.xpath("//input[@data-name='cleaning_services']"),"100");
       Browser.setText(By.xpath("//input[@data-name='security']"),"100");
-      Browser.waitForSeconds(1);
       Browser.clearText(By.xpath("//input[@data-name='tin_number']"));
       Browser.setText(By.xpath("//input[@data-name='tin_number']"),"1234567890");
-      Browser.waitForSeconds(1);
     }
 
     public void SwitchBTNUtilitiesAndServices() throws Exception {
-        if(Browser.isElementPresent(AddSubleaseContractPageObjects.numberOfParking())){
-            Browser.setText(AddSubleaseContractPageObjects.numberOfParking(), "1");
-            Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input1(), "200");
-            logger.addScreenshot("");
+        if (!Browser.isElementPresent(AddSubleaseContractPageObjects.numberOfParking())) {
+            clickOnUtilitiesAndServices();
+            Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.numberOfParking(), 60);
         }
-        else {
-        clickOnUtilitiesAndServices();
-        Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.numberOfParking(), 60);
         Browser.setText(AddSubleaseContractPageObjects.numberOfParking(), "1");
         Browser.setText(AddSubleaseContractPageObjects.setFixedFee_Input1(), "200");
-        logger.addScreenshot("");
-          }
-        }
+    }
 
-    public void clickMonthlyPaymentFrequency() throws Exception {
+    public void clickMonthlyPaymentFrequency() {
         Browser.waitUntilVisibilityOfElement(By.xpath("//label[contains(text(),'دفعات متكررة')]"), 15);
         Browser.click(By.xpath("//label[contains(text(),'دفعات متكررة')]"));
         Browser.click(By.xpath("//label[@class='form-check-label']//div[text()=' شهري ']"));
-        logger.addScreenshot("");
     }
 
     public void UtilitiesAndServices() throws Exception {
@@ -1032,10 +957,8 @@ public class AddSubleaseContractPage {
     }
 
     public void addTaxNumber() {
-        Browser.waitForSeconds(1);
         Browser.clearText(By.xpath("//input[@data-name='tin_number']"));
         Browser.setText(By.xpath("//input[@data-name='tin_number']"), "1234567890");
-        Browser.waitForSeconds(1);
     }
 
     public void clickSinglePaymentFrequency() throws Exception {
@@ -1061,19 +984,16 @@ public class AddSubleaseContractPage {
 
     public void enterIbanNumber(String ibanNumber) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.ibanNumberInputField(), 15);
-        Browser.waitForSeconds(2);
         Browser.setText(AddSubleaseContractPageObjects.ibanNumberInputField(), ibanNumber);
     }
 
     public void enterAccountOwnerName(String ownerName) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.accountOwnerNameInputField(), 15);
-        Browser.waitForSeconds(2);
         Browser.setText(AddSubleaseContractPageObjects.accountOwnerNameInputField(), ownerName);
     }
 
     public void clickSaveBTNOnAddIban() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.saveBTNonAddNewIban(), 15);
-        Browser.waitForSeconds(2);
         Browser.click(AddSubleaseContractPageObjects.saveBTNonAddNewIban());
         logger.addScreenshot("");
     }
@@ -1103,7 +1023,6 @@ public class AddSubleaseContractPage {
         clickOnRetainerFees();
         clickOnBrokerageFees2();
         Browser.executeJSScroll(300);
-        Browser.waitForSeconds(1);
     }
 
     public void addAdditionalFee2() throws Exception {
@@ -1112,7 +1031,6 @@ public class AddSubleaseContractPage {
         clickOnRetainerFees();
         clickOnBrokerageFees();
         Browser.executeJSScroll(300);
-        Browser.waitForSeconds(2);
     }
 
     public void addAdditionalFeeLessThan3Month() throws Exception {
@@ -1123,7 +1041,6 @@ public class AddSubleaseContractPage {
         clickOnRetainerFees();
         clickOnBrokerageFees();
         Browser.executeJSScroll(300);
-        Browser.waitForSeconds(2);
     }
     public void clickAddAdditionalTermsAndConditions1() throws Exception {
         clickOnArbitration();
@@ -1242,9 +1159,7 @@ public class AddSubleaseContractPage {
             CancellationTransferOfPhoneLines();
             ReplacingRentalUnit();
             ChangeInRentalValue();
-            Browser.waitForSeconds(1);
             Browser.click(AddSubleaseContractPageObjects.termConditionBTN_Next());
-            Browser.waitForSeconds(1);
         }
 
 
@@ -1271,9 +1186,7 @@ public class AddSubleaseContractPage {
         LoadingAndUnloadingOperations();
         CancellationTransferOfPhoneLines();
         ReplacingRentalUnit();
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.termConditionBTN_Next());
-        Browser.waitForSeconds(1);
     }
 
     public void clickAddAdditionalTermsAndConditionsForSubleaseContract3month() throws Exception {
@@ -1299,9 +1212,7 @@ public class AddSubleaseContractPage {
         LoadingAndUnloadingOperations();
         CancellationTransferOfPhoneLines();
         ReplacingRentalUnit();
-        Browser.waitForSeconds(1);
         Browser.click(AddSubleaseContractPageObjects.termConditionBTN_Next());
-        Browser.waitForSeconds(1);
     }
 
 
@@ -1400,9 +1311,7 @@ public class AddSubleaseContractPage {
         public void clickSubmitForApprovalBTN() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.submitForApprovalBTN(), 35);
             Browser.click(AddSubleaseContractPageObjects.submitForApprovalBTN());
-            Browser.waitForSeconds(1);
             logger.addScreenshot("");
-            Browser.waitForSeconds(1);
         }
 
         public void clickContinueBtnOnPreviewContractPage() throws Exception {
@@ -1418,68 +1327,48 @@ public class AddSubleaseContractPage {
         public void clickDisclaimerCheckboxOnPayingEjarFeesPage() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.disclaimerCheckboxOnPayingEjarFeesPage(), 35);
             Browser.click(AddSubleaseContractPageObjects.disclaimerCheckboxOnPayingEjarFeesPage());
-            Browser.waitForSeconds(1);
-            logger.addScreenshot("");
-            Browser.waitForSeconds(1);
         }
 
         public void clickConfirmAndSubmitBtnOnPayingEjarFeesPage() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.confirmAndSubmitBtnOnPayingEjarFeesPage(), 35);
             Browser.click(AddSubleaseContractPageObjects.confirmAndSubmitBtnOnPayingEjarFeesPage());
-            Browser.waitForSeconds(1);
-            logger.addScreenshot("");
-            Browser.waitForSeconds(1);
         }
 
         public void verifyContractStatusIsWaitingForApproval() throws Exception {
-            Browser.waitForSeconds(1);
-            Browser.executeJSScroll(450);
-            Browser.waitForSeconds(2);
             String [] expectedStatus = {"بانتظار موافقة الأطراف", "Waiting Parties Approval"};
             boolean status = false;
             Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
-            Browser.waitForSeconds(2);
             String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
             System.out.println("Contract status : " + actualStatus);
             if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
                 status = true;
             }
             Assert.assertTrue(status);
-            Browser.waitForSeconds(2);
             logger.addScreenshot("Contract Status :" + actualStatus);
         }
 
         public void clickCloseSurveyPopUpBTN() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.closeSurveyPopUpBTN(), 35);
-            Browser.waitForSeconds(2);
             Browser.click(AddSubleaseContractPageObjects.closeSurveyPopUpBTN());
-            Browser.waitForSeconds(1);
-            logger.addScreenshot("");
-            Browser.waitForSeconds(1);
         }
 
         public void clickConfirmBtnOnCloseSurveyPopUp() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.confirmBtnOnCloseSurveyPopUp(), 35);
-            Browser.waitForSeconds(2);
             Browser.click(AddSubleaseContractPageObjects.confirmBtnOnCloseSurveyPopUp());
         }
 
         public String getContractNumber() throws Exception {
-            Browser.waitForSeconds(2);
             String number = Browser.getWebElement(AddSubleaseContractPageObjects.contractNumber()).getText();
-            String contractNumber = number.split("#")[1];
-            return contractNumber;
+            return number.split("#")[1];
         }
 
         public void clickFilterBtnOnViewAllContractsPage() throws Exception {
-            Browser.waitForSeconds(3);
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.filterBtnOnViewAllContractsPage(), 20);
             Browser.click(AddSubleaseContractPageObjects.filterBtnOnViewAllContractsPage());
             logger.addScreenshot("");
         }
 
         public void enterContractNumberInContractSearchInputField(String contractNumber) throws Exception {
-            Browser.waitForSeconds(1);
             Browser.setText(AddSubleaseContractPageObjects.searchContractNumberInputField(), contractNumber);
             logger.addScreenshot("");
         }
@@ -1492,14 +1381,12 @@ public class AddSubleaseContractPage {
         public void clickContractNumberOnContractViewPage() throws Exception {
             Browser.executeJSScrollIntoView(AddSubleaseContractPageObjects.contractNumberTextOnViewContractsPage());
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.contractNumberTextOnViewContractsPage(), 20);
-            Browser.waitForSeconds(2);
             Browser.click(AddSubleaseContractPageObjects.contractNumberTextOnViewContractsPage());
             logger.addScreenshot("");
         }
 
         public void clickApproveContractBTN() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.approveContractBTN(), 20);
-            Browser.waitForSeconds(2);
             Browser.click(AddSubleaseContractPageObjects.approveContractBTN());
             Browser.takeScreenshot();
         }
@@ -1507,149 +1394,4 @@ public class AddSubleaseContractPage {
             Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.BTNCharge(), 8);
             Browser.click(AddSubleaseContractPageObjects.BTNCharge());
         }
-/*
-        *//*
-         * Contract Approval
-         * *//*
-        public void clickLetsStartBTN() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.letsStartBTN(), 20);
-            Browser.click(ContractsApprovalPageObjects.letsStartBTN());
-            logger.addScreenshot("");
-        }
-
-
-
-        public void rechargeWallet() throws Exception{
-            Browser.waitForSeconds(3);
-            Browser.click(RechargeWalletPageObjects.enterAmount());
-            Browser.setText(RechargeWalletPageObjects.enterAmount(),"1000");
-            Browser.click(RechargeWalletPageObjects.clickNexxtButton());
-            Browser.waitForSeconds(20);
-            Browser.waitUntilVisibilityOfElement(RechargeWalletPageObjects.madaPayButton(),10);
-            Browser.click(RechargeWalletPageObjects.madaPayButton());
-            if(Browser.isElementPresent(RechargeWalletPageObjects.cardNumberButton())){
-                Browser.waitForSeconds(14);
-                driver.switchTo().frame("card.number");
-                Browser.waitForSeconds(3);
-                Browser.click(RechargeWalletPageObjects.cardNumberButton());
-                Browser.setText(RechargeWalletPageObjects.cardNumberButton(),"4464040000000007");
-                driver.switchTo().defaultContent();
-                Browser.click(RechargeWalletPageObjects.expiryDateButton());
-                Browser.setText(RechargeWalletPageObjects.expiryDateButton(),"07/29");
-                Browser.waitForSeconds(2);
-                Browser.click(RechargeWalletPageObjects.cardNameButton());
-                Browser.setText(RechargeWalletPageObjects.cardNameButton(),"test");
-                Browser.waitForSeconds(2);
-                driver.switchTo().frame("card.cvv");
-                Browser.click(RechargeWalletPageObjects.enterCardCVV());
-                Browser.waitForSeconds(2);
-                Browser.setText(RechargeWalletPageObjects.enterCardCVV(),"100");
-                driver.switchTo().defaultContent();
-                Browser.click(RechargeWalletPageObjects.clickPayButton());
-                Browser.waitForSeconds(2);
-                Actions actions = new Actions(driver);
-                actions.sendKeys(Keys.TAB).perform();
-                Browser.waitForSeconds(2);
-                actions.sendKeys(Keys.TAB).perform();
-                Browser.waitForSeconds(2);
-                actions.sendKeys(Keys.ENTER).perform();
-                Browser.waitForSeconds(2);
-                Browser.isElementPresent(RechargeWalletPageObjects.rechargeWalletMessage());
-                Browser.waitForSeconds(3);
-                Browser.click(RechargeWalletPageObjects.closePopUpButton());
-                Browser.takeScreenshot();
-            }
-        }
-
-        public void clickConfirmBTN() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.confirmBTN(), 20);
-            Browser.executeJSScrollIntoView(ContractsApprovalPageObjects.confirmBTN());
-            Browser.waitForSeconds(2);
-            Browser.click(ContractsApprovalPageObjects.confirmBTN());
-            //Handle the dynamic requirement of double-click on Confirm BTN
-            if (!Browser.isElementPresent(ContractsApprovalPageObjects.agreementCheckbox())) {
-                Browser.waitForSeconds(2);
-                Browser.click(ContractsApprovalPageObjects.confirmBTN());
-            }
-            logger.addScreenshot("");
-        }
-
-        public void clickOnAgreementCheckbox() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.agreementCheckbox(), 20);
-            Browser.click(ContractsApprovalPageObjects.agreementCheckbox());
-            logger.addScreenshot("");
-        }
-
-        public void clickSubmitContractApprovalBTN() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.submitContractApprovalBTN(), 20);
-            Browser.click(ContractsApprovalPageObjects.submitContractApprovalBTN());
-            logger.addScreenshot("");
-        }
-
-        public void enterOTPForApproval(String otp) throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.OTPButton(), 20);
-            Browser.setText(ContractsApprovalPageObjects.OTPButton(), otp);
-            logger.addScreenshot("");
-        }
-
-        public void clickVerifyIdentityBTN() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.verifyIdentityBTN(), 20);
-            Browser.click(ContractsApprovalPageObjects.verifyIdentityBTN());
-            logger.addScreenshot("");
-            Browser.waitForSeconds(13);
-        }
-
-        public void verifyApprovalIsSubmitted() throws Exception {
-            Browser.waitUntilVisibilityOfElement(ContractsApprovalPageObjects.approvalSubmittedText(), 45);
-            Browser.waitForSeconds(1);
-            logger.addScreenshot("");
-            Browser.waitForSeconds(1);
-            Assert.assertTrue(Browser.isElementPresent(ContractsApprovalPageObjects.approvalSubmittedText()));
-        }
-
-    public void verifyContractStatusIsActivated() throws Exception {
-        Browser.waitForSeconds(3);
-        Browser.executeJSScroll(450);
-        Browser.waitForSeconds(2);
-        logger.addScreenshot("");
-        Browser.waitForSeconds(3);
-        boolean status = false;
-        String [] expectedStatus = {"Active", "نشط"};
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
-        Browser.waitForSeconds(2);
-        String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
-        Browser.executeJSScroll(1000);
-        System.out.println("Contract status : " + actualStatus);
-        if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])){
-            status = true;
-        }
-        Assert.assertTrue(status);
-        Browser.waitForSeconds(2);
-        logger.addScreenshot("Contract Status :" + actualStatus);
-    }
-
-        public void verifyContractStatusIsRegistered() throws Exception {
-            Browser.waitForSeconds(1);
-            Browser.executeJSScroll(450);
-            Browser.waitForSeconds(2);
-            String[] expectedStatus = {"Registered", "مُسجل"};
-            boolean status = false;
-            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractStatus(), 35);
-            Browser.waitForSeconds(2);
-            String actualStatus = Browser.getWebElement(AddResidentialContractPageObjects.contractStatus()).getText();
-            System.out.println("Contract status : " + actualStatus);
-            if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])) {
-                status = true;
-            }
-            Assert.assertTrue(status);
-            Browser.waitForSeconds(2);
-            logger.addScreenshot("Contract Status :" + actualStatus);
-        }
-
-        public void clickCloseBtnOnPopUp() throws Exception {
-            Browser.waitForSeconds(3);
-            if (Browser.isElementPresent(ContractsApprovalPageObjects.closeBtnOnPopUp())) {
-                Browser.click(ContractsApprovalPageObjects.closeBtnOnPopUp());
-            }
-        }*/
     }

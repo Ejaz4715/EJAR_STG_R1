@@ -10,14 +10,6 @@ import java.util.Map;
 public class RevokeContract extends NHCWebTest {
 
     /**
-     * Pre Conditions
-     * -Create Contracts
-     * -Approve from parties
-     */
-
-
-
-    /**
      * Submit Revoke Contract request (All Payment Settled by Tenant)
      * TC_01 to TC_38
      * */
@@ -62,6 +54,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Verify searched contract is appearing");
         CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
     }
+
 
     @Test(dataProvider = "testDataProvider")
     public void TC_03_Revoke(Map<String, String> data) throws Exception {

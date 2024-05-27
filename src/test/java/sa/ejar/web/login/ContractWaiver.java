@@ -14,13 +14,6 @@ import java.util.Map;
 
 public class ContractWaiver extends NHCWebTest {
 
-/**
- * Pre Conditions
- * -Create Contracts
- * -Approve from parties
- */
-
-
     /**
      * Submit Contract Waiver request
      * TC_01 to TC_55

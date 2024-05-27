@@ -13,13 +13,6 @@ import java.util.Map;
 public class ChangeLessor_LessorRep extends NHCWebTest {
 
     /**
-     * Pre Conditions
-     * -Create Contracts
-     * -Approve from parties
-     */
-
-
-    /**
      * Add lessor representative
      * TC_01 to TC_83
      */
