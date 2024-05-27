@@ -218,11 +218,13 @@ public class AddResidentialContractPage {
     }
 
     public void clickConfirmBtnOnMap() throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),40);
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.confirmBtnOnMap(), 5);
         Browser.click(AddResidentialContractPageObjects.confirmBtnOnMap());
     }
 
     public void clickSaveBtnOnPropertyAddress() throws Exception {
+
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.saveBtnOnPropertyAddress(), 5);
         Browser.click(AddResidentialContractPageObjects.saveBtnOnPropertyAddress());
     }

@@ -315,7 +315,10 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//a[contains (text(), 'إضافة مالك فرد')]");
     }
     public static By addOrganizationOwnerPage() {
-        return By.xpath("//h1[text()='إضافة مالك فرد']");
+        return By.xpath("//h1[contains(text(),'إضافة مالك منشأة')]");
+    }
+    public static By addIndividualOwnerPage() {
+        return By.xpath("//h1[contains(text(),'إضافة مالك فرد')]");
     }
 
     public static By PopUpAlertAfterCancel() {
