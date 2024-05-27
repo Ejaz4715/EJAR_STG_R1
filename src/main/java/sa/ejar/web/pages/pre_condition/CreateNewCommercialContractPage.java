@@ -1,7 +1,6 @@
 package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
-import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -348,7 +347,7 @@ public class CreateNewCommercialContractPage {
         Browser.click(AddCommercialContractObjects.payOnlineBTN());
     }
 
-    public void clickPayOnlineAndThroughBOOrLessorBTN() throws Exception {
+    public void clickPayOnlineAndThroughBOOrLessorBTN()  {
         Browser.waitUntilVisibilityOfElement(By.xpath("//label[contains(text(),'الدفع الالكتروني او اصدار سند القبض')]"), 25);
         Browser.click(By.xpath("//label[contains(text(),'الدفع الالكتروني او اصدار سند القبض')]"));
     }

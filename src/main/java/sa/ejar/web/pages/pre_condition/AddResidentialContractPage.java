@@ -460,12 +460,4 @@ public class AddResidentialContractPage {
         Browser.click(AddResidentialContractPageObjects.StartDay());
     }
 
-    public void addEndDatePeriod(String year, String month, String day) {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.inputYear(), 40);
-        Browser.setText(AddResidentialContractPageObjects.inputYear(), year);
-        Browser.setText(AddResidentialContractPageObjects.inputMonth(), Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
-        Browser.setText(AddResidentialContractPageObjects.inputMonth(), month);
-        Browser.setText(AddResidentialContractPageObjects.inputDay(), Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
-        Browser.setText(AddResidentialContractPageObjects.inputDay(), day);
-    }
 }

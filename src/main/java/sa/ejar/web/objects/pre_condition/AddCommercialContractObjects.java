@@ -872,7 +872,7 @@ public class AddCommercialContractObjects {
         return By.xpath(get("Flexible-Payment-Frequency"));
     }
 
-    public static final By getPaymentFrequencyOption(String PaymentOption) {
+    public static  By getPaymentFrequencyOption(String PaymentOption) {
         String xpath = "//label[@class='form-check-label']//div[text()='" + PaymentOption + "']";
         return By.xpath(xpath);
     }

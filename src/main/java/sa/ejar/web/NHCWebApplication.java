@@ -1,7 +1,6 @@
 package sa.ejar.web;
 
 import com.testcrew.utility.TCRobot;
-import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import sa.ejar.web.pages.*;
 import sa.ejar.web.pages.pre_condition.*;
