@@ -1575,6 +1575,7 @@ public class TerminateContract extends NHCWebTest {
         app.terminateContractPage.verifyTheConfirmationMessageIsDisplayed();
     }
 
+
     @Test(dataProvider = "testDataProvider")
     public void TC_43_Terminate(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));

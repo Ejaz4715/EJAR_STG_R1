@@ -587,8 +587,8 @@ public class ChangeLessor_LessorRepPage {
     }
 
     public void checkAddIndividualOwnerIsDisplayed() {
-        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage()));
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addIndividualOwnerPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addIndividualOwnerPage()));
         logger.addScreenshot("");
     }
 

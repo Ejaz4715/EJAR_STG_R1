@@ -1476,7 +1476,49 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         CommonMethodsPage.checkRequestStatus("بانتظار موافقة الأطراف");
 
+    }   @Test(dataProvider = "testDataProvider")
+    public void SubmitForApprovalLessorRejection(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter contract number in the contract search");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Click on (عرض العقد)  option");
+        CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
+        logger.info("Step 08: Click on (الإرسال للتوثيق)  button");
+        CommonMethodsPage.clickOnSubmitForApprovalBTN();
+        logger.info("Step 09: Click on (التالي)  button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 10: Click on (الاستمرار في دفع الرسوم) button");
+        app.sendContractForApprovalPage.clickOnContinueToPayingFeesButton();
+        logger.info("Step 11: Click on (إخلاء مسؤولية) checkbox");
+        CommonMethodsPage.clickOnDisclaimerCheckbox();
+        logger.info("Step 12: Click on (تأكيد وإرسال) button");
+        CommonMethodsPage.clickOnConfirmAndSubmitButton();
+        logger.info("Step 13: Click on rating buttons");
+        CommonMethodsPage.clickRatingButtons();
+        logger.info("Step 14: Click on (إرسال) button");
+        CommonMethodsPage.clickOnSubmitButton();
+        logger.info("Step 15:Verify popup message (تم تقديم الرد) is displayed");
+        CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
     }
+
+
 
     @Test(dataProvider = "testDataProvider")
     public void TC_43_SendContractForApproval(Map<String, String> data) throws Exception {
@@ -2845,6 +2887,48 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.checkRequestStatus("بانتظار موافقة المستأجر");
 
     }
+
+    @Test(dataProvider = "testDataProvider")
+public void SubmitForApprovalTenantRejection(Map<String, String> data) throws Exception {
+    data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+    logger.info("Step 00: Test Data : " + data);
+    app.openApplication(data);
+    logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+    app.loginPage.enterUsername(data.get("Username"));
+    app.loginPage.enterPassword(data.get("Password"));
+    app.loginPage.clickLogin();
+    app.loginPage.enterVerificationCode(data.get("OTP"));
+    app.loginPage.closeExploreEjarPopUp();
+    CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+    logger.info("Step 02: Click on العقود tab");
+    CommonMethodsPage.clickContractsBtn();
+    logger.info("Step 03: Click on \"عرض جميع العقود\"");
+    CommonMethodsPage.selectViewAllContractsButton();
+    logger.info("Step 04: Click on filter icon");
+    CommonMethodsPage.clickFilterBtn();
+    logger.info("Step 05: Enter contract number in the contract search");
+    CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+    logger.info("Step 06: Click on three dots");
+    CommonMethodsPage.clickOnKebabMenuButton();
+    logger.info("Step 07: Click on (عرض العقد)  option");
+    CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
+    logger.info("Step 08: Click on (الإرسال للتوثيق)  button");
+    CommonMethodsPage.clickOnSubmitForApprovalBTN();
+    logger.info("Step 09: Click on (التالي)  button");
+    CommonMethodsPage.clickOnNextButton();
+    logger.info("Step 10: Click on (الاستمرار في دفع الرسوم) button");
+    app.sendContractForApprovalPage.clickOnContinueToPayingFeesButton();
+    logger.info("Step 11: Click on (إخلاء مسؤولية) checkbox");
+    CommonMethodsPage.clickOnDisclaimerCheckbox();
+    logger.info("Step 12: Click on (تأكيد وإرسال) button");
+    CommonMethodsPage.clickOnConfirmAndSubmitButton();
+    logger.info("Step 13: Click on rating buttons");
+    CommonMethodsPage.clickRatingButtons();
+    logger.info("Step 14: Click on (إرسال) button");
+    CommonMethodsPage.clickOnSubmitButton();
+    logger.info("Step 15:Verify popup message (تم تقديم الرد) is displayed");
+    CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
+}
 
     @Test(dataProvider = "testDataProvider")
     public void TC_82_SendContractForApproval(Map<String, String> data) throws Exception {
