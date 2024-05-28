@@ -21,7 +21,6 @@ public class NHCWebApplication {
     public final AddResidentialContractPage addResidentialContractPage;
     public final CreateNewCommercialContractPage createNewCommercialContractPage;
     public final AddSubleaseContractPage addSubleaseContractPage;
-    public final AwqafContractPage awqafContractPage;
 
     /**
      * Regression pack
@@ -54,7 +53,6 @@ public class NHCWebApplication {
         createNewCommercialContractPage = new CreateNewCommercialContractPage();
         addSubleaseContractPage = new AddSubleaseContractPage();
         automaticRenewalPage = new AutomaticRenewalPage();
-        awqafContractPage = new AwqafContractPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {
