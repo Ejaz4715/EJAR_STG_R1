@@ -658,6 +658,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 12: Click on (الاستمرار في معلومات المفوض) button");
         app.rentalIncidentsPage.clickOnContinueToRepresentativeInfoButton();
         logger.info("Step 13: Click on (إلغاء) button");
+        Browser.waitForSeconds(2);
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Verify the user navigate back to (تسجيل واقعة ايجارية جديدة) page");
         app.rentalIncidentsPage.verifyNewRentalIncidentPageIsDisplayed();
@@ -697,7 +698,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 12: Click on (الاستمرار في معلومات المفوض) button");
         app.rentalIncidentsPage.clickOnContinueToRepresentativeInfoButton();
         logger.info("Step 13: Click on (تأكيد) button");
-        Browser.waitForSeconds(2);
+        Browser.waitUntilElementToBeClickable(CommonMethodsPageObjects.confirmBTN(),40);
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 14: Verify the user navigate back to (تسجيل واقعة ايجارية جديدة) page");
         app.rentalIncidentsPage.verifyNewRentalIncidentPageIsDisplayed();
@@ -2367,7 +2368,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 11: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Select Property");
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         logger.info("Step 13: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Verify the user is moved to next step");
@@ -2410,7 +2411,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 11: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Select Property");
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         logger.info("Step 13: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Verify the (التالي) button is not enabled");
@@ -2455,7 +2456,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 11: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Select Property");
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         logger.info("Step 13: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Select unit");
@@ -2763,8 +2764,8 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
         logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
-        app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Phone_number"), RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput());
+        app.rentalIncidentsPage.enterPhoneNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Phone_number"), RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3030,7 +3031,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
         CommonMethodsPage.selectExistingOwnershipDocument();
         CommonMethodsPage.clickOnNextButton();
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         CommonMethodsPage.clickOnNextButton();
         app.rentalIncidentsPage.selectAvailableUnit();
         CommonMethodsPage.clickOnNextButton();
@@ -3100,7 +3101,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
         CommonMethodsPage.selectExistingOwnershipDocument();
         CommonMethodsPage.clickOnNextButton();
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         CommonMethodsPage.clickOnNextButton();
         app.rentalIncidentsPage.selectAvailableUnit();
         CommonMethodsPage.clickOnNextButton();
@@ -3173,7 +3174,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
         CommonMethodsPage.selectExistingOwnershipDocument();
         CommonMethodsPage.clickOnNextButton();
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         CommonMethodsPage.clickOnNextButton();
         app.rentalIncidentsPage.selectAvailableUnit();
         CommonMethodsPage.clickOnNextButton();

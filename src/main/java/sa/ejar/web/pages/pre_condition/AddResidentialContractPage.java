@@ -13,7 +13,7 @@ import java.util.List;
 
 public class AddResidentialContractPage {
 
-    /*
+    /**
      * Click date input field
      * */
     public void clickDateInputField() throws Exception {
