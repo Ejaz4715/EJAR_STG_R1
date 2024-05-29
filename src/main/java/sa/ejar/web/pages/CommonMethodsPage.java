@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
-import sa.ejar.web.pages.precondition.LoginPage;
 import sa.ejar.web.pages.pre_condition.LoginPage;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -1370,7 +1369,7 @@ public class CommonMethodsPage {
  
     public static void verifyTotalNoOfContractsCardIsVisible() {
         Assert.assertTrue(isElementPresent(By.xpath("//app-card-value//p[text()='إجمالي عدد العقود']")));
-        WebBaseTest.logger.addScreenshot("Total Number of Contracts Card Is Visible");
+        logger.addScreenshot("Total Number of Contracts Card Is Visible");
         waitForSeconds(1);
     }
 
@@ -1493,7 +1492,7 @@ public class CommonMethodsPage {
            logger.addScreenshot("The 'مبلغ الضمان المحجوز' is displayed");
     }
 
-    public static void neviagteToViewUnitForms(){
+    public static void navigateToViewUnitForms(){
         Browser.click(CommonMethodsPageObjects.UnitForms());
         logger.addScreenshot("");
         click(CommonMethodsPageObjects.ViewUnitForms());

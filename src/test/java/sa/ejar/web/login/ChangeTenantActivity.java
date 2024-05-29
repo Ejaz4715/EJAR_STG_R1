@@ -158,7 +158,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
         logger.info("Step 07: Verify Contract parties are displayed in ' تغيير نشاط المستأجر التجاري 'page");
-        ChangeTenantActivityPage.assertContractParties(data);
+        app.changeTenantActivityPage.assertContractParties(data);
     }
 
     /** BUG------------------------
@@ -215,7 +215,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -241,7 +241,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
     }
 
     /** BUG------------------------
@@ -296,9 +296,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Verify 'OTP طلب' popup displayed");
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -326,9 +326,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Click on Cancel (إلغاء ) button from OTP Request popup");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: User neviagte back to ' تغيير نشاط المستأجر التجاري' page");
@@ -358,9 +358,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Check Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.checkVerifyIdentityButtonIsPresent();
         CommonMethodsPage.checkVerifyIdentityButtonIsDisabled();
@@ -389,9 +389,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter wrong OTP number");
         app.loginPage.enterVerificationCodeForOTP("1239");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
@@ -423,9 +423,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter OTP number");
         app.loginPage.enterVerificationCodeForOTP("123");
         CommonMethodsPage.checkVerifyIdentityButtonIsDisabled();
@@ -454,16 +454,16 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -492,19 +492,19 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
         logger.info("Step 12: Check request number contain 8 alphanumeric");
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
-        ChangeTenantActivityPage.checkRequestNumberHasAlphaNumeric();
-        ChangeTenantActivityPage.verifyRequestContainEightAlphaNumeric();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.checkRequestNumberHasAlphaNumeric();
+        app.changeTenantActivityPage.verifyRequestContainEightAlphaNumeric();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -533,18 +533,18 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
         logger.info("Step 12: Check message 'الطلب بانتظار موافقة الطرف الآخر لمدة 7 ، وسيتم إشعاركم في حالة قبول أو رفض الطلب'. is visible");
-        ChangeTenantActivityPage.checkRequestWaitingForSevenDaysMessage();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.checkRequestWaitingForSevenDaysMessage();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -573,16 +573,16 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -721,7 +721,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.selectStatus("قيد الانتظار");
         logger.info("Step 07: From Request Type dropdown list,Select Commercial Activity Change");
         app.changeTenantActivityPage.selectRequestType("تغيير النشاط التجاري");
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
@@ -839,7 +839,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
@@ -888,7 +888,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         logger.info("Step 06: Check request status");
@@ -1488,12 +1488,12 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 05: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
-        ChangeTenantActivityPage.getLessorName();
-        ChangeTenantActivityPage.getTenantName();
-        ChangeTenantActivityPage.getTenantRepresentativeName();
-        ChangeTenantActivityPage.getLessorID();
-        ChangeTenantActivityPage.getTenantID();
-        ChangeTenantActivityPage.getTenantRepresentativeID();
+        app.changeTenantActivityPage.getLessorName();
+        app.changeTenantActivityPage.getTenantName();
+        app.changeTenantActivityPage.getTenantRepresentativeName();
+        app.changeTenantActivityPage.getLessorID();
+        app.changeTenantActivityPage.getTenantID();
+        app.changeTenantActivityPage.getTenantRepresentativeID();
         Browser.getDriver().navigate().back();
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 06: Check Change Tenant Activity ( تغيير نشاط المستأجر ) option is displayed");
@@ -1608,7 +1608,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
         logger.info("Step 07: Verify Contract parties are displayed in ' تغيير نشاط المستأجر التجاري 'page");
-        ChangeTenantActivityPage.assertContractParties(data);
+        app.changeTenantActivityPage.assertContractParties(data);
     }
 
     /** BUG------------------------
@@ -1665,7 +1665,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1691,7 +1691,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
     }
 
     /** BUG------------------------
@@ -1746,9 +1746,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Verify 'OTP طلب' popup displayed");
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -1776,9 +1776,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Click on Cancel (إلغاء ) button from OTP Request popup");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 10: User neviagte back to ' تغيير نشاط المستأجر التجاري' page");
@@ -1808,9 +1808,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Check Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.checkVerifyIdentityButtonIsPresent();
         CommonMethodsPage.checkVerifyIdentityButtonIsDisabled();
@@ -1839,9 +1839,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter wrong OTP number");
         app.loginPage.enterVerificationCodeForOTP("1239");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
@@ -1873,9 +1873,9 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter OTP number");
         app.loginPage.enterVerificationCodeForOTP("123");
         CommonMethodsPage.checkVerifyIdentityButtonIsDisabled();
@@ -1904,16 +1904,16 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -1942,19 +1942,19 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
         logger.info("Step 12: Check request number contain 8 alphanumeric");
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
-        ChangeTenantActivityPage.checkRequestNumberHasAlphaNumeric();
-        ChangeTenantActivityPage.verifyRequestContainEightAlphaNumeric();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.checkRequestNumberHasAlphaNumeric();
+        app.changeTenantActivityPage.verifyRequestContainEightAlphaNumeric();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -1983,18 +1983,18 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
         logger.info("Step 12: Check message 'الطلب بانتظار موافقة الطرف الآخر لمدة 7 ، وسيتم إشعاركم في حالة قبول أو رفض الطلب'. is visible");
-        ChangeTenantActivityPage.checkRequestWaitingForSevenDaysMessage();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.checkRequestWaitingForSevenDaysMessage();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -2023,16 +2023,16 @@ public class ChangeTenantActivity extends NHCWebTest {
         logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
         logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
-        String NewTenantActivityDescription = ChangeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
         logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
-        ChangeTenantActivityPage.clickOnSubmitRequest();
+        app.changeTenantActivityPage.clickOnSubmitRequest();
         logger.info("Step 09: Enter Valid OTP number");
         app.loginPage.enterVerificationCodeForOTP("1234");
         logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
         CommonMethodsPage.clickOnVerifyIdentityButton();
         logger.info("Step 11: Verify submitted request popup will be displayed");
-        ChangeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
-        String RequestNum = ChangeTenantActivityPage.getRequestNumber();
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
@@ -2171,7 +2171,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.selectStatus("قيد الانتظار");
         logger.info("Step 07: From Request Type dropdown list,Select Commercial Activity Change");
         app.changeTenantActivityPage.selectRequestType("تغيير النشاط التجاري");
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
@@ -2290,7 +2290,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
@@ -2339,7 +2339,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in request code input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
-        String Date = ChangeTenantActivityPage.verifyIssueDate();
+        String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
                 "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
         logger.info("Step 06: Check request status");
