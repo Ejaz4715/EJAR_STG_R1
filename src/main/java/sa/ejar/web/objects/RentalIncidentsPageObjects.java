@@ -292,7 +292,10 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By registerUnilateralContract() {
-        return By.xpath("//a/span[text()='طلب تسجيل واقعة ايجارية']");
+        return By.xpath("//span[text()='الاستعلام عن واقعة ايجارية']");
+    }
+    public static By E_ServicesMenu() {
+        return By.xpath("//a[text()=' الخدمات الإلكترونية ']");
     }
 
     public static By rentalIncidentInquiryBTN() {

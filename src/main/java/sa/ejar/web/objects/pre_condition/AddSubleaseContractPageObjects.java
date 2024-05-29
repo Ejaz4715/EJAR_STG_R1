@@ -994,18 +994,6 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("btn-add-property"));
     }
 
-    public static By propertyUseMenu() throws Exception {
-        return By.xpath(get("property-use-dropdown"));
-    }
-
-    public static By propertyTypeMenu() throws Exception {
-        return By.xpath(get("property-type-dropdown"));
-    }
-
-    public static By OwnershipDocumentTypeMenu() throws Exception {
-        return By.xpath(get("ownership-document-type-dropdown"));
-    }
-
     public static By propertyName() throws Exception {
         return By.xpath(get("property-name"));
     }
@@ -1124,10 +1112,6 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("continue-to-billing-schedule-btn"));
     }
 
-    public static By NotHaveIbanAccount() throws Exception {
-        return By.xpath(get("Not-Have-Iban-Account"));
-    }
-
     public static By payOnlineBTN() throws Exception {
         return By.xpath(get("pay-online-btn"));
     }
@@ -1202,10 +1186,6 @@ public class AddSubleaseContractPageObjects {
 
     public static By confirmAndSubmitBtnOnPayingEjarFeesPage() throws Exception {
         return By.xpath(get("confirm-and-submit-btn-on-paying-ejar-fees-page"));
-    }
-
-    public static By contractStatus() throws Exception {
-        return By.xpath(get("contract-status-text"));
     }
 
     public static By closeSurveyPopUpBTN() throws Exception {
@@ -1410,11 +1390,6 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("Confirm-Add-Additional-Term-Input-But"));
     }
 
-    public static final By getOwnerOption1() {
-        String xpath = "(//label[@class='form-check-label']//div[text()='المؤجر'])[1]";
-        return By.xpath(xpath);
-    }
-
     public static final By getOwnerOption2() {
         String xpath = "(//label[@class='form-check-label']//div[text()='المستأجر'])[1]";
         return By.xpath(xpath);
@@ -1423,12 +1398,6 @@ public class AddSubleaseContractPageObjects {
         String xpath = "(//label[@class='form-check-label']//div[text()='المؤجر'])[2]";
         return By.xpath(xpath);
     }
-
-    public static final By getOwnerOption4(String TermsOption) {
-        String xpath = "(//label[@class='form-check-label']//div[text()='المستأجر'])[2]";
-        return By.xpath(xpath);
-    }
-
 
     public static By disputeResolutionPeriod() throws Exception {
         return By.xpath(get("Dispute-Resolution-Period"));
