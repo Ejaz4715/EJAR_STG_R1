@@ -458,4 +458,71 @@ public class CommonMethodsPageObjects {
     public static By DownloadContractCopyButton() {
         return By.xpath("(//button[contains (text(), ' تحميل نسخة العقد ')])[1]");
     }
+
+    public static By contractInfoLabel() {
+        return By.xpath("//div//a[text()=' معلومات العقد. ']");
+    }
+
+    public static By contractInformationCheckbox() {
+        return By.xpath("//label//div[text()=' تأكيد الموافقة على معلومات العقد ']");
+    }
+    public static By lessorLabel() {
+        return By.xpath("//div//a[text()=' المؤجرون ']");
+    }
+
+    public static By lessorCheckboxes1() {
+        return By.xpath("//label//div[text()=' أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك ']");
+    }
+
+    public static By lessorCheckboxes2() {
+        return By.xpath("//label//div[text()=' أقر بانه تم التحقق من الايبان ']");
+    }
+
+    public static By tenantCheckbox() {
+        return By.xpath("//label//div[text()=' تأكيد الموافقة على بيانات المستأجرين ']");
+    }
+
+    public static By tenantLabel () {
+        return By.xpath("//div//a[text()=' المستأجرون ']");
+    }
+
+    public static By propertyDetailsCheckbox() {
+        return By.xpath("//label//div[text()=' اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي ']");
+    }
+
+    public static By propertyLabel() {
+        return By.xpath("//div//a[text()=' العقار ']");
+    }
+
+    public static By unitDetailsCheckbox() {
+        return By.xpath("//label//div[text()=' تأكيد الموافقة على تفاصيل الوحدة ']");
+    }
+
+    public static By unitLabel() {
+        return By.xpath("//div//a[text()=' الوحدات ']");
+    }
+
+    public static By financialTermsCheckbox() {
+        return By.xpath("//label//div[text()=' تأكيد الموافقة على الشروط المالية ']");
+    }
+
+    public static By financialLabel() {
+        return By.xpath("//div//a[text()=' البيانات المالية ']");
+    }
+
+    public static By termsConditionsLabel() {
+        return By.xpath("//div//a[text()=' الشروط والأحكام ']");
+    }
+
+    public static By termsConditionsCheckbox() {
+        return By.xpath("//label//div[text()=' تاكيد الموافقة على الشروط والأحكام ']");
+    }
+
+    public static By capturedDocumentsCheckbox() {
+        return By.xpath("//label//div[text()=' تأكيد الموافقة على الوثائق المرتبطة بالعقد ']");
+    }
+
+    public static By documentsLabel() {
+        return By.xpath("//div//a[text()=' الوثائق ']");
+    }
 }

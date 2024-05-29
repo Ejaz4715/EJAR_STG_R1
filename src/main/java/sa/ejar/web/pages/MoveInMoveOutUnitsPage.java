@@ -2,7 +2,6 @@ package sa.ejar.web.pages;
 
 import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.MoveInMoveOutUnitsPageObjects;
@@ -15,7 +14,7 @@ import static com.testcrew.base.WebBaseTest.logger;
 
 public class MoveInMoveOutUnitsPage {
     public void closeMoveInOutPopup() {
-        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),5);
+        Browser.waitUntilPresenceOfElement(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp(),20);
         if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp())) {
             Browser.click(MoveInMoveOutUnitsPageObjects.closeMoveInOutPopUp());
         }
@@ -165,7 +164,7 @@ public class MoveInMoveOutUnitsPage {
         }
     }
 
-    public void clickOnDownloadBTN() throws AWTException {
+    public void clickOnDownloadBTN(){
         Browser.waitForSeconds(2);
         Browser.executeJSScroll(300);
         if (Browser.isElementPresent(MoveInMoveOutUnitsPageObjects.DownloadPDFBTN())) {
