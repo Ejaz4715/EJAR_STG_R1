@@ -1,10 +1,8 @@
 package sa.ejar.web.login.pre_condition;
 
 import com.testcrew.manager.TestDataManager;
-import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
-import sa.ejar.web.objects.pre_condition.AddResidentialContract2PageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
 
 import java.util.Map;

@@ -843,7 +843,7 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("Switch_BTN_Utilities_And_Services"));
     }
 
-    public static By SwitchBTNEngineeringSupervision () throws Exception {
+    public static By SwitchBTNEngineeringSupervision() throws Exception {
         return By.xpath(get("Switch-BTN-Engineering-Supervision"));
     }
 
@@ -870,6 +870,7 @@ public class AddSubleaseContractPageObjects {
     public static By TXTWasteRemoval() throws Exception {
         return By.xpath(get("TXT-Waste-Removal"));
     }
+
     public static By TXTSecurityDeposit() throws Exception {
         return By.xpath(get("TXT_Security_Deposit"));
     }
@@ -1215,7 +1216,8 @@ public class AddSubleaseContractPageObjects {
     public static By approveContractBTN() throws Exception {
         return By.xpath(get("approve-contract-btn"));
     }
-    public static By meterCurrentReading () throws Exception {
+
+    public static By meterCurrentReading() throws Exception {
         return By.xpath(get("Meter-Current-Reading"));
     }
 
@@ -1282,6 +1284,7 @@ public class AddSubleaseContractPageObjects {
         String xpath = "(//label[@class='form-check-label'][text()=' دفع الفواتير '])[2]";
         return By.xpath(xpath);
     }
+
     public static final By setFixedFee_Input1() {
         String xpath = "(//div[@class='form-input']//input[@data-name='to_be_paid_at'])[1]";
         return By.xpath(xpath);
@@ -1306,6 +1309,7 @@ public class AddSubleaseContractPageObjects {
         String xpath = "(//label[text()=' عداد منفصل '])[1]";
         return By.xpath(xpath);
     }
+
     public static final By getSeparatedMeter_Option2() {
         String xpath = "(//label[text()=' عداد منفصل '])[2]";
         return By.xpath(xpath);
@@ -1315,6 +1319,7 @@ public class AddSubleaseContractPageObjects {
         String xpath = " (//label[text()=' عداد مشترك '])[1]";
         return By.xpath(xpath);
     }
+
     public static final By getSharedMeter_Option2() {
         String xpath = " (//label[text()=' عداد مشترك '])[2]";
         return By.xpath(xpath);
@@ -1331,12 +1336,12 @@ public class AddSubleaseContractPageObjects {
     }
 
     public static final By getElectricityOther_Option(String OtherOptionName) {
-        String xpath = "//label[text()=' "+ OtherOptionName +" ']";
+        String xpath = "//label[text()=' " + OtherOptionName + " ']";
         return By.xpath(xpath);
     }
 
     public static final By getContractOption(String ContractOption) {
-        String xpath = "//div[text()='"+ ContractOption +"']";
+        String xpath = "//div[text()='" + ContractOption + "']";
         return By.xpath(xpath);
     }
 
@@ -1351,6 +1356,7 @@ public class AddSubleaseContractPageObjects {
     public static By closeAlertMessage() throws Exception {
         return By.xpath(get("Close-Alert-Message"));
     }
+
     public static By SwitchBTNArbitration() throws Exception {
         return By.xpath(get("Switch-BTN-Arbitration"));
     }
@@ -1370,6 +1376,7 @@ public class AddSubleaseContractPageObjects {
     public static By SwitchBTNSublease() throws Exception {
         return By.xpath(get("Switch-BTN-Sublease"));
     }
+
     public static By SwitchBTNReviewGovernmentAndOfficialAgencies() throws Exception {
         return By.xpath(get("Switch-BTN-Review-Government-And-Official-Agencies"));
     }
@@ -1388,15 +1395,6 @@ public class AddSubleaseContractPageObjects {
 
     public static By confirmAddAdditionalTermInputBut() throws Exception {
         return By.xpath(get("Confirm-Add-Additional-Term-Input-But"));
-    }
-
-    public static final By getOwnerOption2() {
-        String xpath = "(//label[@class='form-check-label']//div[text()='المستأجر'])[1]";
-        return By.xpath(xpath);
-    }
-    public static final By getOwnerOption3() {
-        String xpath = "(//label[@class='form-check-label']//div[text()='المؤجر'])[2]";
-        return By.xpath(xpath);
     }
 
     public static By disputeResolutionPeriod() throws Exception {
@@ -1423,42 +1421,43 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("Switch-BTN-Interior-Design-Works"));
     }
 
-    public static By SwitchBTNunitOpeningDelayed () throws Exception {
+    public static By SwitchBTNunitOpeningDelayed() throws Exception {
         return By.xpath(get("Switch-BTN-Unit-Opening-Delayed"));
     }
 
-    public static By dailyValueDelayInput () throws Exception {
+    public static By dailyValueDelayInput() throws Exception {
         return By.xpath(get("Daily-Value-Delay"));
     }
 
-    public static By SwitchBTNTrademarkRegistrationProof () throws Exception {
+    public static By SwitchBTNTrademarkRegistrationProof() throws Exception {
         return By.xpath(get("Switch-BTN-Trademark-Registration-Proof"));
     }
+
     public static By SwitchBTNInsurancePolicy() throws Exception {
         return By.xpath(get("Switch-BTN-Insurance-Policy"));
     }
 
-    public static By SwitchBTNMaintainingElectricalMechanicalInfrastructures () throws Exception {
+    public static By SwitchBTNMaintainingElectricalMechanicalInfrastructures() throws Exception {
         return By.xpath(get("Switch-BTN-Maintaining-Electrical-Mechanical-Infrastructures"));
     }
 
-    public static By SwitchBTNNonSmokingZones () throws Exception {
+    public static By SwitchBTNNonSmokingZones() throws Exception {
         return By.xpath(get("Switch-BTN-Non-Smoking-Zones"));
     }
 
-    public static By SwitchBTNWasteDisposal () throws Exception {
+    public static By SwitchBTNWasteDisposal() throws Exception {
         return By.xpath(get("Switch-BTN-Waste-Disposal"));
     }
 
-    public static By SwitchBTNUnitClosingPeriod () throws Exception {
+    public static By SwitchBTNUnitClosingPeriod() throws Exception {
         return By.xpath(get("Switch-BTN-Unit-Closing-Period"));
     }
 
-    public static By continuousClosingDays () throws Exception {
+    public static By continuousClosingDays() throws Exception {
         return By.xpath(get("Continuous-Closing-Days"));
     }
 
-    public static By discontinuousClosingDays () throws Exception {
+    public static By discontinuousClosingDays() throws Exception {
         return By.xpath(get("Discontinuous-Closing-Days"));
     }
 
@@ -1526,15 +1525,15 @@ public class AddSubleaseContractPageObjects {
         return By.xpath(get("Switch-BTN-Change-In-Rental-Value"));
     }
 
-    public static By numberReportingDays () throws Exception {
+    public static By numberReportingDays() throws Exception {
         return By.xpath(get("Number-Reporting-Days"));
     }
 
-    public static By validityRentalContractOnOwnerChange () throws Exception {
+    public static By validityRentalContractOnOwnerChange() throws Exception {
         return By.xpath(get("Validity-Rental-Contract-On-Owner-Change"));
     }
 
-    public static By obligationToPayRemainingRentalValue () throws Exception {
+    public static By obligationToPayRemainingRentalValue() throws Exception {
         return By.xpath(get("Obligation-To-Pay-Remaining-Rental-Value"));
     }
 }

@@ -402,11 +402,20 @@ public class CommonMethodsPage {
         if (reqYear > 0){
             currentDate =  currentDate.plusYears(reqYear);
         }
+        else if (reqYear < 0){
+            currentDate =  currentDate.minusDays(reqYear);
+        }
         if (reqMonth > 0){
             currentDate =  currentDate.plusMonths(reqMonth);
         }
+        else if (reqMonth < 0){
+            currentDate =  currentDate.minusDays(reqMonth);
+        }
         if (reqDay > 0){
             currentDate =  currentDate.plusDays(reqYear);
+        }
+        else if (reqDay < 0){
+            currentDate =  currentDate.minusDays(reqYear);
         }
         String year = String.valueOf(currentDate.getYear());
         String month = String.format("%02d", currentDate.getMonthValue());

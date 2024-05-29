@@ -41,7 +41,7 @@ public class AwqafResidentialContract extends NHCWebTest {
         app.createNewCommercialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
-        if (Browser.isElementPresent(AddResidentialContract2PageObjects.checkAddressOnMapBTN())) {
+        if (Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
@@ -185,7 +185,7 @@ public class AwqafResidentialContract extends NHCWebTest {
         app.createNewCommercialContractPage.selectUnitsAvailability();
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
-        if (Browser.isElementPresent(AddResidentialContract2PageObjects.checkAddressOnMapBTN())) {
+        if (Browser.isElementPresent(AddResidentialContractPageObjects.newAddress())) {
             app.addResidentialContractPage.clickIdentifyAddressOnMapBTN();
             app.addResidentialContractPage.clickConfirmBtnOnMap();
             app.addResidentialContractPage.clickSaveBtnOnPropertyAddress();
