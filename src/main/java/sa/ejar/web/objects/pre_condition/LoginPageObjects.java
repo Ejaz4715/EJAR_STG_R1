@@ -55,7 +55,7 @@ public class LoginPageObjects {
         }});
         put("Close-Button1", new HashMap<>() {{
             put("en", "");
-            put("ar", "//button[@class = 'close-button']");
+            put("ar", "//button[contains(@class,'close-button')]");
         }});
 
         put("Close-Button2", new HashMap<>() {{
