@@ -392,29 +392,27 @@ public class CommonMethodsPage {
 
     /**
      * Method to get current date and to change the date to future or past
+     *
      * @param reqYear  - required year (Negative value to get to any previous years and positive for future)
      * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
      * @param reqDay   - required day (Negative value to get to any previous days and positive for future)
      */
     public static String getCurrentDate(int reqYear, int reqMonth, int reqDay) {
         LocalDate currentDate = LocalDate.now();
-        if (reqYear > 0){
-            currentDate =  currentDate.plusYears(reqYear);
+        if (reqYear > 0) {
+            currentDate = currentDate.plusYears(reqYear);
+        } else if (reqYear < 0) {
+            currentDate = currentDate.minusDays(reqYear);
         }
-        else if (reqYear < 0){
-            currentDate =  currentDate.minusDays(reqYear);
+        if (reqMonth > 0) {
+            currentDate = currentDate.plusMonths(reqMonth);
+        } else if (reqMonth < 0) {
+            currentDate = currentDate.minusDays(reqMonth);
         }
-        if (reqMonth > 0){
-            currentDate =  currentDate.plusMonths(reqMonth);
-        }
-        else if (reqMonth < 0){
-            currentDate =  currentDate.minusDays(reqMonth);
-        }
-        if (reqDay > 0){
-            currentDate =  currentDate.plusDays(reqYear);
-        }
-        else if (reqDay < 0){
-            currentDate =  currentDate.minusDays(reqYear);
+        if (reqDay > 0) {
+            currentDate = currentDate.plusDays(reqYear);
+        } else if (reqDay < 0) {
+            currentDate = currentDate.minusDays(reqYear);
         }
         String year = String.valueOf(currentDate.getYear());
         String month = String.format("%02d", currentDate.getMonthValue());
@@ -675,18 +673,6 @@ public class CommonMethodsPage {
     public static void getReqNumBo() {
         String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
         TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumBo", request);
-        TestDataManager.writeDependantGlobalTestData("Terminate");
-    }
-
-    public static void getReqNumLessor() {
-        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
-        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumLessor", request);
-        TestDataManager.writeDependantGlobalTestData("Terminate");
-    }
-
-    public static void getReqNumTenant() {
-        String request = CommonMethodsPage.getRequestNumber(CommonMethodsPageObjects.requestNumber());
-        TestDataManager.addDependantGlobalTestData("Terminate", "ReqNumTenant", request);
         TestDataManager.writeDependantGlobalTestData("Terminate");
     }
 
