@@ -6,8 +6,13 @@ import com.testcrew.web.Browser;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
+import java.util.List;
+import java.util.Map;
+
+import static com.testcrew.web.Browser.driver;
+import static com.testcrew.web.Browser.logger;
+
 public class LoginPage extends WebBasePage {
-    public static final ReportManager logger = new ReportManager(LoginPage.class);
 
     public void enterUsername(String UserName) throws Exception {
         logger.info("Enter UserName As : " + UserName);
@@ -15,9 +20,8 @@ public class LoginPage extends WebBasePage {
     }
 
     public void enterPassword(String password) throws Exception {
-        logger.info("Enter Password As : " + password);
         Browser.setText(LoginPageObjects.setTextPassword(), password);
-        logger.addScreenshot("After Enter User credential");
+        logger.addScreenshot("Username & password is entered");
     }
 
     public void clickLogin() throws Exception {

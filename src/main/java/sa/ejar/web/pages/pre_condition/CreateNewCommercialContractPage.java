@@ -102,10 +102,10 @@ public class CreateNewCommercialContractPage {
     }
 
     public void clickAddPropertyBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.coveredPropertyUnitsBTN(), 20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 20);
+        Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.coveredPropertyUnitsBTN(),40);
         Browser.click(AddCommercialContractObjects.coveredPropertyUnitsBTN());
-        Browser.executeJSScrollIntoView(AddCommercialContractObjects.addPropertyBTN());
-        Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addPropertyBTN(), 40);
+        Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.addPropertyBTN(), 40);
         Browser.click(AddCommercialContractObjects.addPropertyBTN());
     }
 
@@ -203,6 +203,7 @@ public class CreateNewCommercialContractPage {
 
     public void clickAddTermsAndConditionsBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addTermsAndConditionsBTN(), 35);
+        Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.addTermsAndConditionsBTN(), 35);
         Browser.click(AddCommercialContractObjects.addTermsAndConditionsBTN());
     }
 
@@ -233,6 +234,7 @@ public class CreateNewCommercialContractPage {
 
     public void enterNoticePeriod(String period) {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
+        Browser.executeJSScrollIntoView(AddCommercialContractObjects.NoticePeriodInput());
         Browser.setText(AddCommercialContractObjects.NoticePeriodInput(), period);
     }
 }

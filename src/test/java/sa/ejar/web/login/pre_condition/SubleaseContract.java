@@ -105,7 +105,7 @@ public class SubleaseContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -242,7 +242,7 @@ public class SubleaseContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -380,7 +380,7 @@ public class SubleaseContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -519,7 +519,7 @@ public class SubleaseContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -561,4 +561,5 @@ public class SubleaseContract extends NHCWebTest {
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
+
 }
