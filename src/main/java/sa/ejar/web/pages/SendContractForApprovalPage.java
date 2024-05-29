@@ -1,24 +1,14 @@
 package sa.ejar.web.pages;
 
-import com.testcrew.base.WebBaseTest;
-import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
-import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.util.List;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.getWebElement;
 import static org.apache.commons.io.file.PathUtils.deleteFile;
-import static sa.ejar.web.pages.CommonMethodsPage.setDownloadPath;
 
 public class SendContractForApprovalPage {
 
@@ -35,7 +25,7 @@ public class SendContractForApprovalPage {
     }
 
 
-    public void clickOnDownloadDraftCopyButton() throws Exception {
+    public void clickOnDownloadDraftCopyButton() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.downloadDraftCopyBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.downloadDraftCopyBTN());
     }
@@ -86,19 +76,19 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN(), 40 );
         Browser.click(SendContractForApprovalPageObjects.addAnotherAdditionalTermsBTN());
     }
-    public void enterAdditionalTerms(String additionalTerms) throws Exception {
+    public void enterAdditionalTerms(String additionalTerms) {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.additionalTermsTextarea(), 20);
         Browser.setText(SendContractForApprovalPageObjects.additionalTermsTextarea(), additionalTerms);
 
     }
-    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms) throws Exception {
+    public void verifyAdditionalTermsHasBeenEntered(String enteredAdditionalTerms) {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.additionalTermsTextarea());
         String text = additionalTerms.getAttribute("value");
         Assert.assertEquals(text, enteredAdditionalTerms);
         Browser.logger.addScreenshot("The additional terms has been entered");
 
     }
-    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) throws Exception {
+    public void verifyEnteredAdditionalTerms(String enteredAdditionalTerms) {
         WebElement additionalTerms = getWebElement(SendContractForApprovalPageObjects.theEnteredAdditionalTerms());
         String text = additionalTerms.getText();
         Assert.assertEquals(text, enteredAdditionalTerms);
@@ -244,14 +234,14 @@ public class SendContractForApprovalPage {
     }
 
 
-    public void verifyApprovedSubmittedMessageIsDisplayed() throws Exception {
+    public void verifyApprovedSubmittedMessageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.ApprovedSubmittedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.ApprovedSubmittedMsg()));
         logger.addScreenshot("The (تمت الموافقة بنجاح) message is displayed");
     }
 
 
-    public void verifyReviewAgreementPageIsDisplayed() throws Exception {
+    public void verifyReviewAgreementPageIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewAgreementPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.reviewAgreementPage()));
         logger.addScreenshot("User Navigate To ' مراجعة اتفاقية الوساطة ' page");

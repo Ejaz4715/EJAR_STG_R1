@@ -1,4 +1,4 @@
-package sa.ejar.web.objects.precondition;
+package sa.ejar.web.objects.pre_condition;
 
 import org.openqa.selenium.By;
 import java.util.HashMap;
@@ -670,7 +670,36 @@ public class AddResidentialContractPageObjects {
     public static By addNewIbanInContract() {
         return By.xpath("//div//span[contains(text(),'لم يتم إنشاء أي حساب')]");
     }
-//    public static By () {
-//        return By.xpath("//label//input[@data-name='required']");
-//    }
+
+    public static By SecurityDepositSwitch() {
+        return By.xpath("//h2[text()='مبلغ الضمان']/ancestor::app-card/descendant::label");
+    }
+
+    public static By SubleaseSwitch() {
+        return By.xpath("//h2[text()='التأجير من الباطن']/ancestor::app-card/descendant::label");
+    }
+
+    public static By SecurityDepositAmountInput() {
+        return By.xpath("//input[@data-name=\"security_deposit\"]");
+    }
+
+    public static By SaveAndContinueLaterButton() {
+        return By.xpath("(//button[contains (text(), ' الحفظ والمتابعة لاحقًا ')])[1]");
+    }
+
+    public static By StartDay() {
+        return By.xpath("//app-date-picker[@rangecalendartype=\"start\"]/descendant::td[contains (@class , \"today\")]/descendant::span");
+    }
+
+    public static By inputYear() {
+        return By.xpath("//input[@data-name=\"years\"]");
+    }
+
+    public static By inputMonth() {
+        return By.xpath("//input[@data-name=\"months\"]");
+    }
+
+    public static By inputDay() {
+        return By.xpath("//input[@data-name=\"days\"]");
+    }
 }

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -112,6 +112,7 @@ public class ChangeLessor_LessorRepPage {
         int chr = stripper.getText(document).indexOf("Contract No.");
         String contactVersion = stripper.getText(document).substring(chr, chr + 31);
         Assert.assertFalse(contactVersion.equalsIgnoreCase(oldVersion), "The old version is (" +oldVersion+ ") and new version is ("+contactVersion+")");
+        logger.addScreenshot("The old version is (" +oldVersion+ ") and new version is ("+contactVersion+")");
     }
 
     public void clickOnPropertiesTab() {
@@ -375,7 +376,7 @@ public class ChangeLessor_LessorRepPage {
             case "other" -> "أخرى";
             default -> actualType;
         };
-        Assert.assertTrue(actualType.contains(expectedType), "Actual selected button is (" +actualType+ ") an expected is (" +expectedType+ ")");
+        Assert.assertTrue(actualType.contains(expectedType), "Actual selected button is (" +actualType+ ") and expected is (" +expectedType+ ")");
         logger.addScreenshot("");
     }
 
@@ -587,8 +588,8 @@ public class ChangeLessor_LessorRepPage {
     }
 
     public void checkAddIndividualOwnerIsDisplayed() {
-        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage(), 40);
-        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addOrganizationOwnerPage()));
+        Browser.waitUntilVisibilityOfElement(ChangeLessor_LessorRepPageObjects.addIndividualOwnerPage(), 40);
+        Assert.assertTrue(Browser.isElementDisplayed(ChangeLessor_LessorRepPageObjects.addIndividualOwnerPage()));
         logger.addScreenshot("");
     }
 

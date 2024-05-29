@@ -6,19 +6,16 @@ import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import sa.ejar.web.objects.CommonMethodsPageObjects;
-import sa.ejar.web.objects.RentalIncidentsPageObjects;
-import sa.ejar.web.objects.RevokeContractPageObjects;
+import sa.ejar.web.objects.*;
 
 import java.time.Duration;
 import java.util.List;
-
 import static com.testcrew.manager.PDFReportManager.logger;
-import static com.testcrew.web.Browser.*;
-import static com.testcrew.web.Browser.getText;
+import static com.testcrew.web.Browser.driver;
 import static sa.ejar.web.pages.CommonMethodsPage.selectFromList;
 
 public class RentalIncidentsPage {
@@ -29,7 +26,7 @@ public class RentalIncidentsPage {
     }
 
     public void clickOnNewRentalIncidentButton() {
-        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.newRentalIncidentBTN(), 40);
+        Browser.waitUntilElementToBeClickable(RentalIncidentsPageObjects.newRentalIncidentBTN(), 40);
         Browser.click(RentalIncidentsPageObjects.newRentalIncidentBTN());
     }
 
@@ -40,7 +37,7 @@ public class RentalIncidentsPage {
     }
 
     public void verifyRequesterTypeIsSelected(String selectedRequesterType) {
-        WebElement requesterType = getWebElement(RentalIncidentsPageObjects.requesterTypeDDL());
+        WebElement requesterType = Browser.getWebElement(RentalIncidentsPageObjects.requesterTypeDDL());
         String t = requesterType.getAttribute("value");
         String text = t.toLowerCase();
         if (text.contains("lessor")) {
@@ -60,7 +57,7 @@ public class RentalIncidentsPage {
     }
 
     public void verifyRequesterCategoryIsSelected(String selectedRequesterCategory) {
-        WebElement requesterCategory = getWebElement(RentalIncidentsPageObjects.requesterCategoryDDL());
+        WebElement requesterCategory = Browser.getWebElement(RentalIncidentsPageObjects.requesterCategoryDDL());
         String t = requesterCategory.getAttribute("value");
         String text = t.toLowerCase();
         if (text.contains("individual")) {
@@ -224,8 +221,8 @@ public class RentalIncidentsPage {
     }
 
     public void verifyAbstainingPartyInformationIsDeleted() {
-        Assert.assertFalse(Browser.isElementPresent(RentalIncidentsPageObjects.AbstainingPartyInformation()),
-                "Abstaining party information has been deleted");
+        Assert.assertTrue((!Browser.isElementPresent(RentalIncidentsPageObjects.AbstainingPartyInformation())),
+                "Abstaining party information is not deleted");
         logger.addScreenshot("");
     }
 
@@ -283,8 +280,8 @@ public class RentalIncidentsPage {
     }
 
     public void verifyCalenderIsNotDisplayed() {
-        Assert.assertFalse(Browser.isElementPresent(RevokeContractPageObjects.CalenderIcon()), "Calender icon displayed");
-        WebBaseTest.logger.addScreenshot("");
+        Assert.assertTrue((!Browser.isElementPresent(RevokeContractPageObjects.CalenderPopUp())), "Calender icon displayed");
+        logger.addScreenshot("");
     }
 
     public void enterAnnualRent(String rent) {
@@ -366,7 +363,7 @@ public class RentalIncidentsPage {
 
     public void getRequestNumberRentalIncidentForApproval() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
-        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        String request = Browser.getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
         TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Approve", request);
         TestDataManager.writeDependantGlobalTestData("RentalIncident");
         logger.addScreenshot("");
@@ -374,7 +371,7 @@ public class RentalIncidentsPage {
 
     public void getRequestNumberRentalIncidentForReject() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
-        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        String request = Browser.getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
         TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Reject", request);
         TestDataManager.writeDependantGlobalTestData("RentalIncident");
         logger.addScreenshot("");
@@ -382,7 +379,7 @@ public class RentalIncidentsPage {
 
     public void getRequestNumberRentalIncidentForUpdate() {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.rentalIncidentRequestNumber(), 40);
-        String request = getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
+        String request = Browser.getText(RentalIncidentsPageObjects.rentalIncidentRequestNumber());
         TestDataManager.addDependantGlobalTestData("RentalIncident", "ReqNum_Update", request);
         TestDataManager.writeDependantGlobalTestData("RentalIncident");
         logger.addScreenshot("");
@@ -392,7 +389,7 @@ public class RentalIncidentsPage {
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.availableUnit(), 40);
         WebElement btn = Browser.getWebElement(CommonMethodsPageObjects.nextBTN());
         while (!(btn.isEnabled())) {
-            List<WebElement> ListOfUnitStatus = Browser.driver.findElements(RentalIncidentsPageObjects.availableUnit());
+            List<WebElement> ListOfUnitStatus = driver.findElements(RentalIncidentsPageObjects.availableUnit());
             for (WebElement y : ListOfUnitStatus) {
                 String getUnitStatus = y.getText();
                 if (getUnitStatus.contains("متاحة")) {
@@ -460,9 +457,9 @@ public class RentalIncidentsPage {
     }
 
     public void enterRequestNumber(String requestNumber) {
-        waitUntilPresenceOfElement(CommonMethodsPageObjects.RequestNumberInputField(), 20);
-        setText(CommonMethodsPageObjects.RequestNumberInputField(), requestNumber);
-        waitForSeconds(1);
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.RequestNumberInputField(), 20);
+        Browser.setText(CommonMethodsPageObjects.RequestNumberInputField(), requestNumber);
+        Browser.waitForSeconds(1);
         logger.addScreenshot("Entered Request Number in search input field");
     }
 
@@ -532,8 +529,14 @@ public class RentalIncidentsPage {
     }
 
     public void clickOnRegisterUnilateralContract() {
+        Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.E_ServicesMenu(), 40);
+        WebElement ele = Browser.getWebElement(RentalIncidentsPageObjects.E_ServicesMenu());
+        Actions actions = new Actions(driver);
+        actions.moveToElement(ele).perform();
         Browser.waitUntilVisibilityOfElement(RentalIncidentsPageObjects.registerUnilateralContract(), 40);
         Browser.click(RentalIncidentsPageObjects.registerUnilateralContract());
+        Browser.waitForSeconds(1);
+        logger.addScreenshot("");
     }
 
     public void clickOnRentalIncidentInquiryButton() {
@@ -609,4 +612,5 @@ public class RentalIncidentsPage {
                 "Actual comment (" + actualComment + ") does not match with expected comment (" + expectedComment + ")");
         logger.addScreenshot("");
     }
+
 }

@@ -23,11 +23,13 @@ public class ManualRenewalPageObjects {
 
     public static By contractStatus() {return By.xpath("//span[contains(@class,'pin mt-1')]");}
 
+
     public static By getTotalNoOfContractInReadyForRenewalCard() {return By.xpath("(//app-card-value[@data-name='جاهز للتجديد']//span)[2]");}
 
     public static By getCurrentTotalOfContracts() {return By.xpath("//h5[@class='item-value']");}
 
     public static By clickOnReadyForRenewalCard() {return By.xpath("//app-card//p[text()='جاهز للتجديد']");}
+   
     public static By getNewContractNumber() {return By.xpath("//h4[@class='ms-4']");}
 
     public static By getCurrentContractNumber() {return By.xpath("//input[@data-name='contract_number']");}
@@ -35,6 +37,7 @@ public class ManualRenewalPageObjects {
     public static By issueDate() {return By.xpath("//div//p[@class='timestamp']");}
 
     public static By getListOfContractTimeLineStatus() {return By.xpath("//div[contains(@class,'timeline-body')]");}
+    
     public static By sendContractForRenewal() {return By.xpath("//div//h1[text()=' إرسال العقد للتجديد ']");}
 
     public static By renewalStepsPage() {return By.xpath("//div//h2[@class='card-title']");}

@@ -10,7 +10,6 @@ import java.util.Map;
 
 public class APICollection extends UnirestAPI {
 
-      //--------------------------------------------------------------------------------
     public HttpResponse<JsonNode> makeContractReadyForRenewal(Map<String, String> data) throws Exception {
             String json = null;
             json = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir"), "src", "main", "resources","ApiDetails","TestRenewalContractAPI.json")));
@@ -21,8 +20,8 @@ public class APICollection extends UnirestAPI {
             data.put("RequestPayload", json);
             // API Call
             HttpResponse<JsonNode> response = getPostResponse(data);
-            JSONObject responsejson = response.getBody().getObject();
-            System.out.println("Request Body :"+ responsejson);
+            JSONObject responseJson = response.getBody().getObject();
+            System.out.println("Request Body :"+ responseJson);
             UnirestAPI.assertResponseCode(response, "200");
             //Request Body :{"message":"Done"}
             return response;
@@ -51,4 +50,18 @@ public class APICollection extends UnirestAPI {
         return headers;
     }
 
+    public HttpResponse<JsonNode> automaticRenewal(Map<String, String> data) throws Exception {
+        String json = null;
+        json = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir"), "src", "main", "resources","ApiDetails","TestRenewalContractAPI.json")));
+        String url = data.get("API_URL");
+        data.put("RequestURL", url);
+        System.out.println("Request URL :"+ url);
+        json = json.replace("Contract",data.get("ContractNumber"));
+        data.put("RequestPayload", json);
+        // API Call
+        HttpResponse<JsonNode> response = getPostResponse(data);
+        JSONObject responseJson = response.getBody().getObject();
+        System.out.println("Request Body :"+ responseJson);
+        return response;
+    }
 }

@@ -11,15 +11,6 @@ import static sa.ejar.web.objects.ChangeTenantActivityPageObjects.*;
 
 public class ChangeTenantActivity extends NHCWebTest {
 
-    /**
-     * Pre Conditions
-     * -Create Contracts
-     * -Approve from parties
-     */
-    /**
-     * Submit Change Commercial Activity request
-     * TC_001 to TC_100
-     * */
     //----------------------------------------------------------------
     //------Tenant Representative Scenario : Change Tenant Activity---
     //----------------------------------------------------------------

@@ -206,7 +206,7 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By IdTypeRadioInput() {
-        return By.xpath("//app-form-radio/descendant::input");
+        return By.xpath("//app-form-radio/descendant::input[@data-name=\"id_type\"]");
     }
 
     public static By lessorRepIcon() {
@@ -263,6 +263,9 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By LessorUpdatePopupTitle() {
         return By.xpath("//h2[contains (text(), 'تعديل ممثل المؤجر الحالي')]");
     }
+    public static By LessorChangedPopupTitle() {
+        return By.xpath("//h2[contains (text(), 'تغيير المؤجر')]");
+    }
 
     public static By RequestNumber() {
         return By.xpath("//h2[contains (text(),'المؤجر')]/ancestor::app-card/descendant::img/following-sibling::p");
@@ -312,7 +315,10 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//a[contains (text(), 'إضافة مالك فرد')]");
     }
     public static By addOrganizationOwnerPage() {
-        return By.xpath("//h1[text()='إضافة مالك فرد']");
+        return By.xpath("//h1[contains(text(),'إضافة مالك منشأة')]");
+    }
+    public static By addIndividualOwnerPage() {
+        return By.xpath("//h1[contains(text(),'إضافة مالك فرد')]");
     }
 
     public static By PopUpAlertAfterCancel() {

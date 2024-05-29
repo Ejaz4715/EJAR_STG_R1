@@ -154,11 +154,10 @@ public class ManualRenewalPage {
                     }
                 }
                 if (Browser.isElementPresent(ManualRenewalPageObjects.ClickContractNextArrow())) {
-                    if(Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())){
+                    if (Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())) {
                         Browser.click(ManualRenewalPageObjects.ClickContractNextArrow());
                     }
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -170,36 +169,35 @@ public class ManualRenewalPage {
 
 
     public void verifyNewRenewalContractIsVisibleInTotalNoOfContracts(String NewContract) {
-            boolean status = false;
-            if (!(Browser.isElementPresent(ManualRenewalPageObjects.NoContractFoundMsg()))) {
-                if (Browser.isElementPresent(ManualRenewalPageObjects.selectPageSizeFifty())) {
-                    Browser.selectDropdownByVisibleText(ManualRenewalPageObjects.selectPageSizeFifty(), "50");
-                    Browser.waitForSeconds(5);
-                }
-                while (!status) {
-                    Browser.waitForSeconds(2);
-                    List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getAllContractNumberTxt());
-                    for (WebElement ContractNum : ContractNumber) {
-                        if (ContractNum.getText().contains(NewContract)) {
-                            logger.addScreenshot("Contract is found");
-                            status = true;
-                            break;
-                        }
-                    }
-                    if (Browser.isElementPresent(ManualRenewalPageObjects.ClickContractNextArrow())) {
-                        if(Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())){
-                            Browser.click(ManualRenewalPageObjects.ClickContractNextArrow());
-                        }
-                    }
-                    else {
+        boolean status = false;
+        if (!(Browser.isElementPresent(ManualRenewalPageObjects.NoContractFoundMsg()))) {
+            if (Browser.isElementPresent(ManualRenewalPageObjects.selectPageSizeFifty())) {
+                Browser.selectDropdownByVisibleText(ManualRenewalPageObjects.selectPageSizeFifty(), "50");
+                Browser.waitForSeconds(5);
+            }
+            while (!status) {
+                Browser.waitForSeconds(2);
+                List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getAllContractNumberTxt());
+                for (WebElement ContractNum : ContractNumber) {
+                    if (ContractNum.getText().contains(NewContract)) {
+                        logger.addScreenshot("Contract is found");
+                        status = true;
                         break;
                     }
                 }
-            } else {
-                logger.addScreenshot("Selected Contract Is Not Visible in ready for renewal contracts");
+                if (Browser.isElementPresent(ManualRenewalPageObjects.ClickContractNextArrow())) {
+                    if (Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())) {
+                        Browser.click(ManualRenewalPageObjects.ClickContractNextArrow());
+                    }
+                } else {
+                    break;
+                }
             }
-            Assert.assertTrue(status, "Contract is not found");
+        } else {
+            logger.addScreenshot("Selected Contract Is Not Visible in ready for renewal contracts");
         }
+        Assert.assertTrue(status, "Contract is not found");
+    }
 
     public void verifySelectedContractIsVisibleInReadyForRenewalContracts(String SelectedContract) {
         boolean status = false;
@@ -218,12 +216,11 @@ public class ManualRenewalPage {
                     }
                 }
                 if (Browser.isElementPresent(ManualRenewalPageObjects.ClickContractNextArrow())) {
-                    if(Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())){
+                    if (Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())) {
                         Browser.click(ManualRenewalPageObjects.ClickContractNextArrow());
                         Browser.waitForSeconds(5);
                     }
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -247,27 +244,25 @@ public class ManualRenewalPage {
                 Count += ContractNumber.size();
                 System.out.println(Count);
                 if (Browser.isElementPresent(ManualRenewalPageObjects.ClickContractNextArrow())) {
-                    if(Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())){
+                    if (Browser.isElementEnabled(ManualRenewalPageObjects.ClickContractNextArrow())) {
                         Browser.click(ManualRenewalPageObjects.ClickContractNextArrow());
                         Browser.waitForSeconds(5);
-                    }
-                    else {
+                    } else {
                         status = true;
                         break;
                     }
+                } else {
+                    status = true;
+                    break;
                 }
-                    else {
-                            status = true;
-                            break;
-                        }
-                    }
+            }
         }
         Assert.assertTrue(status);
-        Assert.assertEquals(ManualRenewalCardNumber,Count, "Total contracts number is not matching");
-        logger.addScreenshot("Total contracts number is : " +ManualRenewalCardNumber);
+        Assert.assertEquals(ManualRenewalCardNumber, Count, "Total contracts number is not matching");
+        logger.addScreenshot("Total contracts number is : " + ManualRenewalCardNumber);
     }
 
-    public void AssessmentOfManualRenewalAsLessor(String Selection){
+    public void AssessmentOfManualRenewalAsLessor(String Selection) {
         Browser.waitForSeconds(3);
         //if Good
         if (Selection.equals("Good")) {
@@ -278,21 +273,21 @@ public class ManualRenewalPage {
             Browser.waitForSeconds(3);
             Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
         }
-            //if Bad
-            if (Selection.equals("Bad")) {
-                Browser.click(ManualRenewalPageObjects.NotGoodOption());
-                Browser.click(ManualRenewalPageObjects.BadOption1());
-                Browser.setText(ManualRenewalPageObjects.reasonInput1(), "Test");
-                Browser.click(ManualRenewalPageObjects.BadOption2());
-                Browser.setText(ManualRenewalPageObjects.reasonInput2(), "Test");
-                Browser.click(ManualRenewalPageObjects.sendAssessmentBTN());
-                Browser.waitForSeconds(3);
-                Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
-            }
+        //if Bad
+        if (Selection.equals("Bad")) {
+            Browser.click(ManualRenewalPageObjects.NotGoodOption());
+            Browser.click(ManualRenewalPageObjects.BadOption1());
+            Browser.setText(ManualRenewalPageObjects.reasonInput1(), "Test");
+            Browser.click(ManualRenewalPageObjects.BadOption2());
+            Browser.setText(ManualRenewalPageObjects.reasonInput2(), "Test");
+            Browser.click(ManualRenewalPageObjects.sendAssessmentBTN());
+            Browser.waitForSeconds(3);
+            Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
         }
+    }
 
 
-    public void AssessmentOfManualRenewalAsTenant(String Selection){
+    public void AssessmentOfManualRenewalAsTenant(String Selection) {
         Browser.waitForSeconds(3);
         //if Good
         if (Selection.equals("Good")) {
@@ -307,20 +302,20 @@ public class ManualRenewalPage {
             Browser.waitForSeconds(3);
             Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
         }
-            //if Bad
-            if (Selection.equals("Bad")) {
-                Browser.click(ManualRenewalPageObjects.NoOption1());
-                Browser.click(ManualRenewalPageObjects.NoOption2());
-                Browser.click(ManualRenewalPageObjects.NotGoodOption());
-                Browser.click(ManualRenewalPageObjects.BadOption1());
-                Browser.setText(ManualRenewalPageObjects.reasonInput1(), "Test");
-                Browser.click(ManualRenewalPageObjects.BadOption2());
-                Browser.setText(ManualRenewalPageObjects.reasonInput2(), "Test");
-                Browser.click(ManualRenewalPageObjects.sendAssessmentBTN());
-                Browser.waitForSeconds(3);
-                Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
-            }
+        //if Bad
+        if (Selection.equals("Bad")) {
+            Browser.click(ManualRenewalPageObjects.NoOption1());
+            Browser.click(ManualRenewalPageObjects.NoOption2());
+            Browser.click(ManualRenewalPageObjects.NotGoodOption());
+            Browser.click(ManualRenewalPageObjects.BadOption1());
+            Browser.setText(ManualRenewalPageObjects.reasonInput1(), "Test");
+            Browser.click(ManualRenewalPageObjects.BadOption2());
+            Browser.setText(ManualRenewalPageObjects.reasonInput2(), "Test");
+            Browser.click(ManualRenewalPageObjects.sendAssessmentBTN());
+            Browser.waitForSeconds(3);
+            Browser.click(ManualRenewalPageObjects.closeSubmitPopUp());
         }
+    }
 
     public void updateFinancialInRenewalContract() {
         Browser.waitForSeconds(1);

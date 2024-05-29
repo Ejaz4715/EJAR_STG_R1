@@ -13,8 +13,8 @@ import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
-import sa.ejar.web.objects.precondition.AddResidentialContractPageObjects;
-import sa.ejar.web.objects.precondition.LoginPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -22,9 +22,10 @@ import java.io.InputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import sa.ejar.web.pages.precondition.LoginPage;
+import sa.ejar.web.pages.pre_condition.LoginPage;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 import java.util.Set;
 import static com.testcrew.manager.PDFReportManager.logger;
@@ -167,6 +168,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from the list
+     *
      * @param option  - option to be selected
      * @param element - list object
      */
@@ -279,6 +281,7 @@ public class CommonMethodsPage {
 
     /**
      * Select an option from Kebab menu
+     *
      * @param option - Option to be selected
      */
     public static void ClickOnKebabMenuOption(String option) {
@@ -377,11 +380,11 @@ public class CommonMethodsPage {
 
     /**
      * Method to validate the displayed value
+     *
      * @param value   - Value to be validated
      * @param element - Locator of Input Field
      */
     public static void verifyValueIsDisplayed(String value, By element) {
-        waitUntilVisibilityOfElement(element, 40);
         String val = getWebElement(element).getText();
         Assert.assertTrue(val.contains(value), "Actual value (" + val + ") does not match with expected value (" + value + ")");
         logger.addScreenshot("");
@@ -390,23 +393,24 @@ public class CommonMethodsPage {
 
     /**
      * Method to get current date and to change the date to future or past
-     *
      * @param reqYear  - required year (Negative value to get to any previous years and positive for future)
      * @param reqMonth - required month (Negative value to get to any previous months and positive for future)
      * @param reqDay   - required day (Negative value to get to any previous days and positive for future)
      */
     public static String getCurrentDate(int reqYear, int reqMonth, int reqDay) {
-        String currentDate = LocalDate.now().toString();
-        String[] arrDate = currentDate.split("-");
-        String year = String.valueOf(Integer.parseInt(arrDate[0]) + reqYear);
-        String month = String.valueOf(Integer.parseInt(arrDate[1]) + reqMonth);
-        String day = String.valueOf(Integer.parseInt(arrDate[2]) + reqDay);
-        if (!(month.length() == 2)) {
-            month = 0 + month;
+        LocalDate currentDate = LocalDate.now();
+        if (reqYear > 0){
+            currentDate =  currentDate.plusYears(reqYear);
         }
-        if (!(day.length() == 2)) {
-            day = 0 + day;
+        if (reqMonth > 0){
+            currentDate =  currentDate.plusMonths(reqMonth);
         }
+        if (reqDay > 0){
+            currentDate =  currentDate.plusDays(reqYear);
+        }
+        String year = String.valueOf(currentDate.getYear());
+        String month = String.format("%02d", currentDate.getMonthValue());
+        String day = String.format("%02d", currentDate.getDayOfMonth());
         return year + month + day;
     }
 
@@ -433,6 +437,7 @@ public class CommonMethodsPage {
 
     /**
      * validate any error message for invalid attachment
+     *
      * @param errorMsg - Message to be validated
      * @param element  - Message Locator
      */
@@ -655,8 +660,7 @@ public class CommonMethodsPage {
         String text = getText(element);
         int index = text.indexOf("#");
         String newText = text.substring(index);
-        String reqNum = newText.split(" ")[1];
-        return reqNum;
+        return newText.split(" ")[1];
     }
 
     public static void getReqNumBo() {
@@ -836,12 +840,13 @@ public class CommonMethodsPage {
         if (newAmount.contains(amount)) {
             status = true;
         }
-        Assert.assertTrue(status, amount + "the amount is not the same");
+        Assert.assertTrue(status, amount + " the amount is not the same");
         logger.addScreenshot("");
     }
 
     /**
      * Check the user role and change if it is not same as required
+     *
      * @param User - required user role ('مؤجر', 'مستأجر', 'مدير مكتب الوساطة')
      */
     public static void changeUserRole(String User) throws Exception {
@@ -860,7 +865,7 @@ public class CommonMethodsPage {
                     break;
                 }
             }
-            Assert.assertTrue(status, UserRoleList + "User Role is not available");
+            Assert.assertTrue(status, UserRoleList + " User Role is not available");
             new LoginPage().closeExploreEjarPopUp();
         }
     }
@@ -998,9 +1003,9 @@ public class CommonMethodsPage {
 
     public static void verifyCloseButtonIsNotDisplayed() {
         boolean status = false;
-        if(isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN()) ||
+        if (isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN()) ||
                 isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN2()) ||
-                isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN3())){
+                isElementDisplayed(ChangeLessor_LessorRepPageObjects.closeBTN3())) {
             status = true;
         }
         Assert.assertFalse(status, "Buttons is displayed");
@@ -1015,6 +1020,7 @@ public class CommonMethodsPage {
 
     /**
      * Validate error message
+     *
      * @param errorMsg - message needs to be validated
      */
     public static void errorCRMessage(String errorMsg) {
@@ -1056,6 +1062,7 @@ public class CommonMethodsPage {
 
     /**
      * Verify the contract status of different versions
+     *
      * @param contractStatus - Expected status
      */
     public static void verifyStatusOfContract(String contractStatus) throws Exception {
@@ -1076,7 +1083,6 @@ public class CommonMethodsPage {
         waitForSeconds(1);
         logger.addScreenshot("Contract Status : " + actualStatus);
     }
-
 
     public static void clickOnSendBTN() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.SendBTN(), 20);
@@ -1101,6 +1107,7 @@ public class CommonMethodsPage {
         Assert.assertFalse(isElementPresent(SendContractForApprovalPageObjects.sendForApprovalBTN()), "Button is not enabled");
         logger.addScreenshot("");
     }
+
     public static void SendForApprovalBTN() throws Exception {
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalBTN(), 40);
         click(SendContractForApprovalPageObjects.sendForApprovalBTN());
@@ -1124,16 +1131,16 @@ public class CommonMethodsPage {
         if (isElementPresent(element)) {
             executeJSScrollIntoView(element);
         }
-        Browser.waitForSeconds(2);
+        waitForSeconds(2);
     }
 
-    public static void verifyContractStatus(String Status1 ,String Status2) throws Exception {
-        Browser.executeJSScroll(450);
-        Browser.waitForSeconds(1);
-        String[] expectedStatus = {Status1,Status2};
-        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
-        Browser.waitForSeconds(2);
-        String actualStatus = Browser.getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
+    public static void verifyContractStatus(String Status1, String Status2) throws Exception {
+        executeJSScroll(450);
+        waitForSeconds(1);
+        String[] expectedStatus = {Status1, Status2};
+        waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
+        waitForSeconds(2);
+        String actualStatus = getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
         if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])) {
             Assert.assertTrue(true);
         } else {
@@ -1169,6 +1176,7 @@ public class CommonMethodsPage {
 
     /**
      * Method to get request number from requests page
+     *
      * @param element - Object of request number text
      */
     public static String getRequestNumberFromRequestPage(By element) {
@@ -1178,13 +1186,13 @@ public class CommonMethodsPage {
 
     public static String setDownloadPath() {
         String fileName = "test_attachment";
-        String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources\\downloads\\" + fileName;
-        return downloadPath;
+        return System.getProperty("user.dir") + "\\src\\main\\resources\\downloads\\" + fileName;
     }
 
 
     /**
      * Select an option from Kebab menu
+     *
      * @param option - Option to be selected
      */
     public static void KebabMenuOptionNotDisplayed(String option) {
@@ -1205,6 +1213,7 @@ public class CommonMethodsPage {
 
     /**
      * Give true if expect the invalid otp error message to be present
+     *
      * @param isPresent - give true if you expect the invalid OTP message to be present
      */
     public static void verifyInvalidOTPErrorMessagePresentStatus(boolean isPresent) {
@@ -1325,7 +1334,7 @@ public class CommonMethodsPage {
 
 
     public static void enterOwnershipReferenceInSearchField(String ownershipNumber) {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40 );
+        waitUntilVisibilityOfElement(CommonMethodsPageObjects.ownershipReferenceSearchField(), 40);
         setText(CommonMethodsPageObjects.ownershipReferenceSearchField(), ownershipNumber);
     }
 
@@ -1334,26 +1343,35 @@ public class CommonMethodsPage {
         click(CommonMethodsPageObjects.DownloadContractCopyButton());
         Browser.waitForSeconds(5);
     }
-  
-    public static void verifySearchedContractIsNotDisplayed () {
-        Browser.executeJSScroll(300);
-        Browser.waitForSeconds(1);
+
+    public static void verifySearchedContractIsNotDisplayed() {
+        executeJSScroll(300);
+        waitForSeconds(1);
         String actualResult = getText(CommonMethodsPageObjects.ContractResultOfSearchedContract());
         Assert.assertTrue(actualResult.contains("لم يتم العثور على عقود! يرجى إضافة عقود جديدة."));
         logger.addScreenshot("No Result Found");
 
     }
 
+
     public static void verifyTheRejectButtonIsDisabled(){
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectTheContractBTN(), 20);
         Assert.assertTrue(isElementDisabled(SendContractForApprovalPageObjects.rejectTheContractBTN()));
         logger.addScreenshot("The (رفض العقد) button is not enabled/clickable");
       }
-    public static void verifyTheVerifyIdentityButtonIsDisabled(){
+ 
+    public static void verifyTotalNoOfContractsCardIsVisible() {
+        Assert.assertTrue(isElementPresent(By.xpath("//app-card-value//p[text()='إجمالي عدد العقود']")));
+        WebBaseTest.logger.addScreenshot("Total Number of Contracts Card Is Visible");
+        waitForSeconds(1);
+    }
+
+
+    public static void verifyTheVerifyIdentityButtonIsDisabled() {
         waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 20);
         Assert.assertTrue(isElementDisabled(SendContractForApprovalPageObjects.identityVerificationBTN()));
         logger.addScreenshot("The ( رفض العقد ) button is not enabled/clickable");
-      }
+    }
 
       public static void contractInformationCheckbox() throws  Exception {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.contractInfoLabel(),20);
@@ -1361,7 +1379,7 @@ public class CommonMethodsPage {
         Browser.waitForSeconds(1);
         Browser.click(CommonMethodsPageObjects.contractInformationCheckbox());
         logger.addScreenshot("Contract Information Checkbox is clickable");
-      }
+    }
 
     public static void lessorCheckbox() {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.lessorLabel(),20);
@@ -1432,31 +1450,31 @@ public class CommonMethodsPage {
     }
 
     public static void neviagteToManageOffice() throws Exception {
-            Browser.click(CommonMethodsPageObjects.RoleName());
-            Browser.waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(),20);
-            Browser.click(LoginPageObjects.manageAccountButton());
+        click(CommonMethodsPageObjects.RoleName());
+        waitUntilVisibilityOfElement(LoginPageObjects.manageAccountButton(), 20);
+        click(LoginPageObjects.manageAccountButton());
     }
 
-    public static void verifyAccountSettingsPageIsDisplayed(){
-        Assert.assertTrue(Browser.isElementPresent(CommonMethodsPageObjects.AccountSettingsHeading()));
+    public static void verifyAccountSettingsPageIsDisplayed() {
+        Assert.assertTrue(isElementPresent(CommonMethodsPageObjects.AccountSettingsHeading()));
         logger.addScreenshot("'Account Settings' page is displayed");
     }
 
     public static void selectWalletFromAccountSettings() throws Exception {
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.wallet(),20);
-        Browser.click(LoginPageObjects.wallet());
+        waitUntilVisibilityOfElement(LoginPageObjects.wallet(), 20);
+        click(LoginPageObjects.wallet());
         logger.addScreenshot("Wallet details is displayed");
     }
 
-    public static void inputContractNumberInContractSearchField(String Contract){
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(),20);
-        Browser.setText(LoginPageObjects.ContractNumberInput(),Contract);
+    public static void inputContractNumberInContractSearchField(String Contract) {
+        waitUntilVisibilityOfElement(LoginPageObjects.ContractNumberInput(), 20);
+        setText(LoginPageObjects.ContractNumberInput(), Contract);
         logger.addScreenshot("Input Contract Number");
     }
 
-    public static void selectDescription(){
-          Browser.waitForSeconds(1);
-          Browser.selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(),"مبلغ الضمان المحجوز");
+    public static void selectDescription() {
+        waitForSeconds(1);
+        selectDropdownByVisibleText(LoginPageObjects.descriptionDropDownList(), "مبلغ الضمان المحجوز");
     }
 
     public static void verifySecurityAmountReservedIsDisplayed() {
@@ -1470,7 +1488,7 @@ public class CommonMethodsPage {
     public static void neviagteToViewUnitForms(){
         Browser.click(CommonMethodsPageObjects.UnitForms());
         logger.addScreenshot("");
-        Browser.click(CommonMethodsPageObjects.ViewUnitForms());
+        click(CommonMethodsPageObjects.ViewUnitForms());
         logger.addScreenshot("Neviagte to 'نماذج الوحدة' page");
       }
 

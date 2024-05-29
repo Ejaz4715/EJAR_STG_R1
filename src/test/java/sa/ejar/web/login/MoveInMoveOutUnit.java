@@ -2616,7 +2616,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
-        CommonMethodsPage.neviagteToViewUnitForms();
+        CommonMethodsPage.navigateToViewUnitForms();
         logger.info("Step 03: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 04: Enter Contract number in contract search field");
@@ -2637,7 +2637,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
-        CommonMethodsPage.neviagteToViewUnitForms();
+        CommonMethodsPage.navigateToViewUnitForms();
         logger.info("Step 03: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 04: Enter Contract number in contract search field");
@@ -2658,7 +2658,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
-        CommonMethodsPage.neviagteToViewUnitForms();
+        CommonMethodsPage.navigateToViewUnitForms();
         logger.info("Step 03: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 04: Enter Contract number in contract search field");
@@ -2679,7 +2679,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
-        CommonMethodsPage.neviagteToViewUnitForms();
+        CommonMethodsPage.navigateToViewUnitForms();
         logger.info("Step 03: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 04: Enter Contract number in contract search field");

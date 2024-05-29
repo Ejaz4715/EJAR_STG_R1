@@ -39,7 +39,7 @@ public class ChangeTenantActivityPage {
         logger.addScreenshot("Submit Request Popup is displayed");
     }
 
-    public static void checkRequestWaitingForSevenDaysMessage() {
+    public void checkRequestWaitingForSevenDaysMessage() {
         Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.requestWaitingForSevenDaysMessage()));
         logger.addScreenshot("");
     }
@@ -225,7 +225,9 @@ public class ChangeTenantActivityPage {
         logger.addScreenshot("Delete new tenant activity description input");
     }
 
-    public static void clickOnSubmitRequest() {
+
+    public void clickOnSubmitRequest()
+    {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity(), 10);
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
         click(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity());
@@ -233,7 +235,7 @@ public class ChangeTenantActivityPage {
         logger.addScreenshot("The ' إرسال الموافقة ' button is clickable");
     }
 
-    public static void checkRequestNumberHasAlphaNumeric() {
+    public void checkRequestNumberHasAlphaNumeric() {
         String requestPopupTitle = Browser.getText(ChangeTenantActivityPageObjects.requestTitle());
         Pattern pattern = Pattern.compile("#([A-Za-z0-9]+)");
         Matcher matcher = pattern.matcher(requestPopupTitle);
