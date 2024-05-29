@@ -113,7 +113,7 @@ public class AddCommercialContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -253,7 +253,7 @@ public class AddCommercialContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
