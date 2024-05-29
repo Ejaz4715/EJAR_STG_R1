@@ -534,6 +534,7 @@ public class CommonMethodsPage {
 
     public static void ClickOnAttachment(String action) throws AWTException {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons(), 40);
+        Browser.executeJSScrollIntoView(RevokeContractPageObjects.AttachmentIcon());
         List<WebElement> buttons = getWebElements(CommonMethodsPageObjects.ViewOrDownloadAttachmentButtons());
         if (buttons.size() > 1) {
             if (action.equalsIgnoreCase("view")) {
@@ -1198,10 +1199,8 @@ public class CommonMethodsPage {
         return System.getProperty("user.dir") + "\\src\\main\\resources\\downloads\\" + fileName;
     }
 
-
     /**
      * Select an option from Kebab menu
-     *
      * @param option - Option to be selected
      */
     public static void KebabMenuOptionNotDisplayed(String option) {
