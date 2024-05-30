@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ContractWaiverPageObjects;
+import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
@@ -39,7 +40,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_02_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -62,7 +64,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_03_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -87,7 +90,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_04_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -114,7 +118,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_05_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -142,7 +147,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_06_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -170,7 +176,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_07_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -203,7 +210,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_08_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -235,7 +243,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_09_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -267,7 +276,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_10_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -302,7 +312,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_11_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -339,7 +350,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_12_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -377,7 +389,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_13_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -415,7 +428,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_14_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -454,7 +468,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_15_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -493,7 +508,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_16_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -533,7 +549,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_17_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -571,7 +588,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_18_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -609,7 +627,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_19_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -649,7 +668,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_20_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -682,7 +702,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_21_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -723,7 +744,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_22_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -766,7 +788,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_23_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -809,7 +832,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_24_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -852,7 +876,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_25_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -895,7 +920,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_26_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -938,7 +964,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_27_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -982,7 +1009,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_28_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1026,7 +1054,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_29_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1069,7 +1098,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_30_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1113,7 +1143,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_31_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1156,7 +1187,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_32_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1199,7 +1231,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_33_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1242,7 +1275,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_34_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1285,7 +1319,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_35_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1328,7 +1363,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_36_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1372,7 +1408,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_37_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1416,7 +1453,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_38_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1459,7 +1497,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_39_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1509,7 +1548,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_40_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1533,6 +1573,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
 //        CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1550,7 +1591,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_41_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1574,6 +1616,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
 //        CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1590,7 +1633,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_42_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1614,6 +1658,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //        CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1632,7 +1677,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_43_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1656,6 +1702,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //        CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1668,13 +1715,15 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyNewTenantPartySectionIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_44_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1698,6 +1747,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //        CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1710,6 +1760,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on السابق Button");
         CommonMethodsPage.clickOnBackButton();
@@ -1718,7 +1769,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_45_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1742,6 +1794,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1754,6 +1807,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on 'أنا أوافق على ما سبق'  checkbox");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1762,7 +1816,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_46_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1786,6 +1841,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1798,6 +1854,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify  تأكيد Button is not clickable");
         app.contractWaiverPage.verifyConfirmButtonIsDisabled();
@@ -1805,7 +1862,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_47_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1829,6 +1887,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1841,6 +1900,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 19: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 20:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 21: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1851,7 +1911,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_48_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1875,6 +1936,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1887,6 +1949,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1899,7 +1962,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_49_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1923,6 +1987,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1935,6 +2000,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1947,7 +2013,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_50_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1971,6 +2038,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -1983,6 +2051,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1993,12 +2062,13 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 14: Enter OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         String fistCharOfOTP = String.valueOf(data.get("OTP").charAt(0));
-        CommonMethodsPage.verifyValueIsEntered(fistCharOfOTP,LoginPageObjects.getVerificationCode());
+        CommonMethodsPage.verifyValueIsEntered(fistCharOfOTP, LoginPageObjects.getVerificationCode());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_51_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2022,6 +2092,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -2034,6 +2105,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2047,7 +2119,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_52_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2071,6 +2144,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -2083,6 +2157,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2099,7 +2174,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_53_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2123,6 +2199,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -2149,7 +2226,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_54_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2173,6 +2251,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         //CommonMethodsPage.clickOnNextButton();
+        Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
             app.addResidentialContractPage.clickTenantRadioBTN();
@@ -2220,7 +2299,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
-        CommonMethodsPage.checkRequestStatus("قيد الانتظار");
+        CommonMethodsPage.checkRequestStatus("في انتظار موافقة المؤجر");
     }
 
 
@@ -2546,6 +2625,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.AttachmentIcon(), 40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyDeclareAndConfirmSectionIsDisplayed();
     }
@@ -2579,6 +2659,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.AttachmentIcon(), 40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on إلغاء button ");
         CommonMethodsPage.clickOnCancelButton();
@@ -2856,49 +2937,26 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_75_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
-        logger.info("Step 00: Test Data : " + data);
-        app.openApplication(data);
-        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin();
-        app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
-        CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
-        CommonMethodsPage.clickOnViewAllRequestsButton();
-        logger.info("Step 04: Click on filter button");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
-        logger.info("Step 06: Click on Kebab menu button");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
-        logger.info("Step 08: Click on \"  التالي \" button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
-        app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
-        app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 13: Click on \"تأكيد\" button");
-        app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
-        logger.info("Step 14: Enter valid OTP");
-        app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 15: Click on \" التحقق من الهوية \" button");
-        app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        logger.info("Step 16: Click on \"إلغاء\" button");
-        CommonMethodsPage.clickOnCloseButton();
-        CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
-    }
+            data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+            logger.info("Step 00: Test Data : " + data);
+            app.openApplication(data);
+            logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+            app.loginPage.enterUsername(data.get("Username"));
+            app.loginPage.enterPassword(data.get("Password"));
+            app.loginPage.clickLogin();
+            app.loginPage.enterVerificationCode(data.get("OTP"));
+            app.loginPage.closeExploreEjarPopUp();
+            CommonMethodsPage.changeUserRole("مؤجر");
+            logger.info("Step 02: Click on \" الطلبات \" tab");
+            CommonMethodsPage.clickOnTheRequestsTabButton();
+            logger.info("Step 03: Click on \"عرض الطلبات\"");
+            CommonMethodsPage.clickOnViewAllRequestsButton();
+            logger.info("Step 04: Click on filter button");
+            CommonMethodsPage.clickFilterBtn();
+            logger.info("Step 05: Enter request number in رقم الطلب input field");
+            CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+            CommonMethodsPage.checkRequestStatus("في انتظار موافقة المستأجر الجديد");
+        }
 
     /**
      * New Tenant Approval For Contract Waiver Request
@@ -4287,7 +4345,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 11: Input OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         String fistCharOfOTP = String.valueOf(data.get("OTP").charAt(0));
-        CommonMethodsPage.verifyValueIsEntered(fistCharOfOTP,LoginPageObjects.getVerificationCode());
+        CommonMethodsPage.verifyValueIsEntered(fistCharOfOTP, LoginPageObjects.getVerificationCode());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4358,7 +4416,7 @@ public class ContractWaiver extends NHCWebTest {
     /**
      * Tenant Rejection For Contract Waiver Request
      * TC_120 to TC_124
-     * */
+     */
     @Test(dataProvider = "testDataProvider")
     public void TC_120_ContractWaiver(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
