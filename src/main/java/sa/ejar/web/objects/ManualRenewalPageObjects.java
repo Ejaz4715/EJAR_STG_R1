@@ -113,4 +113,6 @@ public class ManualRenewalPageObjects {
     public static By fillNewTermsTextArea() { return By.xpath("//textarea[@formcontrolname='content']");}
 
     public static By clickConfirmButton() { return By.xpath("//button[@type='button'][contains(text(),'تأكيد')]");}
+    public static By clickOnLatestKebabMenuButton() { return By.xpath("(//span[@class=\"round-icon large menu\"])[last()]");}
+
 }

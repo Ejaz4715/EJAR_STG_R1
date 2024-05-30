@@ -1,6 +1,7 @@
 package sa.ejar.api.repo;
 
 import com.testcrew.api.UnirestAPI;
+import com.testcrew.manager.TestDataManager;
 import kong.unirest.*;
 import kong.unirest.json.JSONObject;
 import java.nio.file.Files;
@@ -11,12 +12,13 @@ import java.util.Map;
 public class APICollection extends UnirestAPI {
 
     public HttpResponse<JsonNode> makeContractReadyForRenewal(Map<String, String> data) throws Exception {
-            String json = null;
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        String json = null;
             json = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir"), "src", "main", "resources","ApiDetails","TestRenewalContractAPI.json")));
             String url = data.get("API_URL");
             data.put("RequestURL", url);
             System.out.println("Request URL :"+ url);
-            json=json.replace("Contract",data.get("ContractNumber")); //10198484923
+            json=json.replace("Contract",data.get("ContractNumber"));
             data.put("RequestPayload", json);
             // API Call
             HttpResponse<JsonNode> response = getPostResponse(data);
