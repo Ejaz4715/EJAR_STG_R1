@@ -165,10 +165,6 @@ public class CreateNewCommercialContractPage {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.annualRentInputField(), 15);
         Browser.setText(AddCommercialContractObjects.annualRentInputField(), rent);
     }
-    public void clickSinglePaymentFrequency() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.singlePaymentRadioBTN(), 15);
-        Browser.click(AddCommercialContractObjects.singlePaymentRadioBTN());
-    }
 
     public void clickConfirmPaymentScheduleBTN() throws Exception {
             Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.continueToBillingScheduleBTN(),20);
@@ -233,8 +229,8 @@ public class CreateNewCommercialContractPage {
     }
 
     public void enterNoticePeriod(String period) {
+        Browser.waitUntilPresenceOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
-        Browser.executeJSScrollIntoView(AddCommercialContractObjects.NoticePeriodInput());
         Browser.setText(AddCommercialContractObjects.NoticePeriodInput(), period);
     }
 }

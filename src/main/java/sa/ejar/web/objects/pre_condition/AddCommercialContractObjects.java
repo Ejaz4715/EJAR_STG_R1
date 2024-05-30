@@ -398,10 +398,6 @@ public class AddCommercialContractObjects {
         return By.xpath(get("annual-rent-fee-input-field"));
     }
 
-    public static By singlePaymentRadioBTN() throws Exception {
-        return By.xpath(get("single-payment-frequency-radio-btn"));
-    }
-
     public static By continueToBillingScheduleBTN() throws Exception {
         return By.xpath(get("continue-to-billing-schedule-btn"));
     }
