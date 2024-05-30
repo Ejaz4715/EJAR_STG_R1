@@ -295,7 +295,7 @@ public class AddResidentialContractPageObjects {
         }});
         put("close-survey-pop-up-btn", new HashMap<>(){{
             put ("en", "//button[@class=\"close-button\"]");
-            put ("ar", "//button[@class=\"close-button\"]");
+            put ("ar", "//button[contains(@class,'close-button')]");
         }});
         put("confirm-btn-on-close-survey-pop-up", new HashMap<>(){{
             put ("en", "//button[text()=' Confirm ']");

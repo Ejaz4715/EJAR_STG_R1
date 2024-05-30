@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
+import static sa.ejar.web.pages.CommonMethodsPage.clickOnKebabMenuButton;
 
 public class ManualRenewalPage {
 
@@ -56,6 +57,16 @@ public class ManualRenewalPage {
         String NewContract = Browser.getText(ManualRenewalPageObjects.getNewContractNumber());
         Assert.assertFalse(CurrentContract.contains(NewContract));
         logger.addScreenshot("");
+    }
+
+    public void getLatestRenewalContract() {
+        Browser.waitForSeconds(1);
+        if (Browser.isElementPresent(ManualRenewalPageObjects.clickOnLatestKebabMenuButton())) {
+            Browser.click(ManualRenewalPageObjects.clickOnLatestKebabMenuButton());
+
+        } else {
+            clickOnKebabMenuButton();
+        }
     }
 
     public void verifyIssueDateIsVisible() {

@@ -146,8 +146,10 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnConfirmButton() throws Exception {
-        waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
-        click(CommonMethodsPageObjects.confirmBTN());
+        while (Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())) {
+            waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
+            click(CommonMethodsPageObjects.confirmBTN());
+        }
     }
 
     public static void clickOnCloseButton() throws Exception {
@@ -186,12 +188,14 @@ public class CommonMethodsPage {
      * Check mark every checkbox in approval
      */
     public static void selectCheckboxesOfSendApproveContract() throws Exception {
-        waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalCheckboxes(), 30);
-        List<WebElement> checkBoxes = driver.findElements(SendContractForApprovalPageObjects.sendForApprovalCheckboxes());
-        for (WebElement checkbox : checkBoxes) {
-            Thread.sleep(500);
-            checkbox.click();
-            Thread.sleep(1000);
+        if (Browser.isElementPresent(SendContractForApprovalPageObjects.sendForApprovalCheckboxes())) {
+            waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalCheckboxes(), 30);
+            List<WebElement> checkBoxes = driver.findElements(SendContractForApprovalPageObjects.sendForApprovalCheckboxes());
+            for (WebElement checkbox : checkBoxes) {
+                Thread.sleep(500);
+                checkbox.click();
+                Thread.sleep(1000);
+            }
         }
     }
 
@@ -264,6 +268,7 @@ public class CommonMethodsPage {
      */
     public static void KebabMenuOptions(String option) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.KebabMenuOptions());
         waitForSeconds(3);
         List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
