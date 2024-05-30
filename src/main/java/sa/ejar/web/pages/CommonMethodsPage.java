@@ -108,6 +108,7 @@ public class CommonMethodsPage {
 
     public static void clickOnNextButton() throws Exception {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.nextBTN(), 20);
+        Browser.waitUntilElementToBeClickable(CommonMethodsPageObjects.nextBTN(),20);
         click(CommonMethodsPageObjects.nextBTN());
     }
 
