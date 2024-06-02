@@ -711,6 +711,15 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnSubmitForApprovalBTN() {
+        Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.StepsList(), 50);
+        List<WebElement> list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
+        while(list.size() < 5) {
+            list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
+            Browser.waitForSeconds(1);
+        }
+        while(Browser.isElementPresent(ManualRenewalPageObjects.WarningClass())) {
+            Browser.waitForSeconds(1);
+        }
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitForApprovalBTN(), 40);
         click(CommonMethodsPageObjects.submitForApprovalBTN());
     }
