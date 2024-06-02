@@ -6,7 +6,10 @@ import com.testcrew.web.Browser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import sa.ejar.web.objects.*;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
@@ -21,6 +24,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Duration;
 import java.time.LocalDate;
 
 import sa.ejar.web.pages.pre_condition.LoginPage;
@@ -195,9 +199,10 @@ public class CommonMethodsPage {
             waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalCheckboxes(), 30);
             List<WebElement> checkBoxes = driver.findElements(SendContractForApprovalPageObjects.sendForApprovalCheckboxes());
             for (WebElement checkbox : checkBoxes) {
-                Thread.sleep(500);
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+                wait.until(ExpectedConditions.visibilityOf(checkbox));
+                wait.until(ExpectedConditions.elementToBeClickable(checkbox));
                 checkbox.click();
-                Thread.sleep(1000);
             }
         }
     }

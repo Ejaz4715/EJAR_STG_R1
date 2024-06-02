@@ -103,26 +103,25 @@ public class ContractWaiverPage {
         String text = Browser.getText(ContractWaiverPageObjects.RequestNumber());
         int index = text.indexOf("#");
         String newText = text.substring(++index);
-        String reqNum = newText.split(" ")[0];
-        return reqNum;
+        return newText.split(" ")[0];
     }
 
-    public void reqNumApproval(){
+    public void requestNumber(){
         String request = getRequestNumber();
         TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumApproval", request);
         TestDataManager.writeDependantGlobalTestData("ContractWaiver");
     }
-    public void reqNumLessorRejection(){
-        String request = getRequestNumber();
-        TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumLessorRejection", request);
-        TestDataManager.writeDependantGlobalTestData("ContractWaiver");
-    }
-
-    public void reqNumTenantRejection(){
-        String request = getRequestNumber();
-        TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumTenantRejection", request);
-        TestDataManager.writeDependantGlobalTestData("ContractWaiver");
-    }
+//    public void reqNumLessorRejection(){
+//        String request = getRequestNumber();
+//        TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumLessorRejection", request);
+//        TestDataManager.writeDependantGlobalTestData("ContractWaiver");
+//    }
+//
+//    public void reqNumTenantRejection(){
+//        String request = getRequestNumber();
+//        TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumTenantRejection", request);
+//        TestDataManager.writeDependantGlobalTestData("ContractWaiver");
+//    }
 
 
     public void verifyRentalDetailsSectionIsDisplayed() {

@@ -111,12 +111,7 @@ public class AddCommercialContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
-        CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
-        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
+
         CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -258,12 +253,7 @@ public class AddCommercialContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
-        CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
-        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
+
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
