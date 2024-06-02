@@ -706,4 +706,8 @@ public class AddResidentialContractPageObjects {
     public static By StepsList() {
         return By.xpath("//app-card[@class=\"jounery-step card\"]/descendant::ul/child::li[contains (@class, 'success')]");
     }
+
+    public static By WarningClass() {
+        return By.xpath("//li[@class= 'warning']");
+    }
 }

@@ -411,6 +411,9 @@ public class AddResidentialContractPage {
             list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
             Browser.waitForSeconds(1);
         }
+        while (Browser.isElementPresent(AddResidentialContractPageObjects.WarningClass())){
+            Browser.waitForSeconds(1);
+        }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.submitForApprovalBTN(), 35);
         Browser.waitUntilElementToBeClickable(AddResidentialContractPageObjects.submitForApprovalBTN(), 35);
         Browser.click(AddResidentialContractPageObjects.submitForApprovalBTN());
@@ -422,8 +425,10 @@ public class AddResidentialContractPage {
     }
 
     public void clickContinuePayBtnOnPreviewBrokerageAgreementPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage(), 35);
-        Browser.click(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage());
+        if (Browser.isElementPresent(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage())){
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage(), 35);
+            Browser.click(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage());
+        }
     }
 
     public void clickDisclaimerCheckboxOnPayingEjarFeesPage() throws Exception {

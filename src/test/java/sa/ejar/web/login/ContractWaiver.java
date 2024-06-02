@@ -2276,7 +2276,7 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
-        app.contractWaiverPage.reqNumApproval();
+        app.contractWaiverPage.requestNumber();
     }
 
 
@@ -2299,7 +2299,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         CommonMethodsPage.checkRequestStatus("في انتظار موافقة المؤجر");
     }
 
@@ -2346,8 +2346,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2369,7 +2369,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2396,7 +2396,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2425,7 +2425,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2454,7 +2454,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2485,7 +2485,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2516,7 +2516,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2550,7 +2550,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2583,7 +2583,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2616,7 +2616,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2650,7 +2650,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2686,7 +2686,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2722,7 +2722,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2758,7 +2758,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2793,7 +2793,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2831,7 +2831,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2871,7 +2871,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2911,7 +2911,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -2955,7 +2955,7 @@ public class ContractWaiver extends NHCWebTest {
             logger.info("Step 04: Click on filter button");
             CommonMethodsPage.clickFilterBtn();
             logger.info("Step 05: Enter request number in رقم الطلب input field");
-            CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+            CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
             CommonMethodsPage.checkRequestStatus("في انتظار موافقة المستأجر الجديد");
         }
 
@@ -3001,8 +3001,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3024,7 +3024,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3051,7 +3051,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3080,7 +3080,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3109,7 +3109,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3141,7 +3141,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3173,7 +3173,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3207,7 +3207,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3241,7 +3241,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3275,7 +3275,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3310,7 +3310,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3347,7 +3347,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3384,7 +3384,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3421,7 +3421,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3457,7 +3457,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3496,7 +3496,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -3539,7 +3539,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         CommonMethodsPage.checkRequestStatus("موافقة");
     }
 
@@ -3720,7 +3720,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 13: Input OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        app.contractWaiverPage.reqNumLessorRejection();
+        app.contractWaiverPage.requestNumber();
         logger.info("Step 14: Click on إغلاق button");
         CommonMethodsPage.clickOnCloseButton();
     }
@@ -3744,7 +3744,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3766,7 +3766,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.KebabMenuOptions("الموافقة / رفض تقبيل العقد");
@@ -3791,7 +3791,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3821,7 +3821,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3853,7 +3853,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3884,7 +3884,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3918,7 +3918,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3955,7 +3955,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button > Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
@@ -3996,7 +3996,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumLessorRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Verify the status of requests is \"مرفوض من قبل المؤجر\"");
         CommonMethodsPage.checkRequestStatus("مرفوض من قبل المؤجر");
     }
@@ -4056,7 +4056,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 13: Input OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        app.contractWaiverPage.reqNumTenantRejection();
+        app.contractWaiverPage.requestNumber();
         logger.info("Step 14: Click on إغلاق button");
         CommonMethodsPage.clickOnCloseButton();
     }
@@ -4080,7 +4080,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4124,8 +4124,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4147,8 +4147,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4175,7 +4175,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4206,8 +4206,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4240,8 +4240,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4273,8 +4273,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4309,8 +4309,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4348,8 +4348,8 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
-        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.checkRequestsPageIsDisplayed(data.get("RequestNumber"));
         logger.info("Step 06: Click on Kebab menu button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
@@ -4391,7 +4391,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumTenantRejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         CommonMethodsPage.checkRequestStatus("مرفوض من قبل المستأجر الجديد");
     }
 
