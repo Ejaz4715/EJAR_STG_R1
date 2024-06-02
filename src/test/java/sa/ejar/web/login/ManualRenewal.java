@@ -129,7 +129,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 07: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("1028940383");
         Browser.executeJSScroll(400);
         logger.info("Step 08: Verify searched contract is not appearing");
         CommonMethodsPage.verifySearchedContractIsNotDisplayed();
@@ -346,11 +346,9 @@ public class ManualRenewal extends NHCWebTest {
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
 
-    //------------------------------------------------------------------------------
-    // -----------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_013_ManualRenewal(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -386,6 +384,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_014_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -424,6 +423,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_015_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -467,6 +467,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_016_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -509,6 +510,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_017_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -548,6 +550,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_018_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -591,6 +594,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_019_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -633,6 +637,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_020_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -679,6 +684,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_021_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -725,6 +731,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_022_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -764,6 +771,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_023_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -806,6 +814,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_024_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -848,6 +857,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_025_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -895,6 +905,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_026_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -923,7 +934,9 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_027_ManualRenewal(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -946,7 +959,8 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_028_ManualRenewal(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -966,6 +980,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_029_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1024,6 +1039,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_030_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1054,6 +1070,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_031_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1100,6 +1117,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_032_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1131,6 +1149,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_033_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1160,6 +1179,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_034_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1184,6 +1204,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_035_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1207,6 +1228,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_036_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1229,6 +1251,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_037_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1253,6 +1276,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_038_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
