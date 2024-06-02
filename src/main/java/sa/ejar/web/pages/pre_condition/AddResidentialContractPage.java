@@ -1,21 +1,28 @@
 package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
+import org.apache.commons.math3.analysis.function.Add;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
+import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
+import java.time.Duration;
 import java.util.List;
+
+import static com.testcrew.web.Browser.driver;
 
 
 public class AddResidentialContractPage {
 
     /**
      * Click date input field
-     * */
+     */
     public void clickDateInputField() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.clickDateInputField(), 5);
         Browser.click(AddResidentialContractPageObjects.clickDateInputField());
@@ -23,7 +30,7 @@ public class AddResidentialContractPage {
 
     /**
      * Click on Contracts Button
-     * */
+     */
     public void clickContractsBtn() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 60);
         if (Browser.isElementPresent(LoginPageObjects.assessementUnitpopup())) {
@@ -41,7 +48,7 @@ public class AddResidentialContractPage {
 
     /**
      * Select New Residential Contract
-     * */
+     */
     public void selectNewResidualContract() throws Exception {
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.optionCreateNewContract(), 45);
         Browser.click(LoginPageObjects.optionCreateNewContract());
@@ -49,7 +56,7 @@ public class AddResidentialContractPage {
 
     /**
      * Select Start date of contract
-     * */
+     */
     public void selectEndDateOfResidualContract(String day, String month, String year) throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.clickContractEndYear(), 20);
         Browser.click(AddResidentialContractPageObjects.clickContractEndYear());
@@ -95,7 +102,7 @@ public class AddResidentialContractPage {
         //replace 0 with null starting from the beginning(^) of the string
         monthNum = monthNum.replaceFirst("^0*", "");
         month = switch (monthNum) {
-            case "1" -> "January يناير ";
+            case "1" -> "January يناير";
             case "2" -> "February فبراير";
             case "3" -> "March مارس";
             case "4" -> "April أبريل";
@@ -106,7 +113,7 @@ public class AddResidentialContractPage {
             case "9" -> "September سبتمبر";
             case "10" -> "October أكتوبر";
             case "11" -> "November نوفمبر";
-            case "12" -> "December  يناير ";
+            case "12" -> "December ديسمبر";
             default -> month;
         };
         return month;
@@ -114,7 +121,7 @@ public class AddResidentialContractPage {
 
     /**
      * Select End date of contract
-     * */
+     */
     public void selectStartDateOfResidualContract(String day, String month, String year) throws Exception {
 
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.clickContractStartYear(), 20);
@@ -218,7 +225,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickConfirmBtnOnMap() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),40);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.confirmBtnOnMap(), 5);
         Browser.click(AddResidentialContractPageObjects.confirmBtnOnMap());
     }
@@ -230,49 +237,52 @@ public class AddResidentialContractPage {
     }
 
     public void clickContractPartiesBTN() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 30);
-        Browser.waitForSeconds(1);
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractPartiesStepBTN(), 30);
-        Browser.click(AddResidentialContractPageObjects.contractPartiesStepBTN());
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 60);
+        if (Browser.isElementNotPresent(AddResidentialContractPageObjects.LoadingIcon())) {
+            Browser.waitForSeconds(1);
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractPartiesStepBTN(), 60);
+            Browser.click(AddResidentialContractPageObjects.contractPartiesStepBTN());
+        }
     }
 
     public void clickAddIndividualTenantBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addIndividualTenantBTN(), 5);
+        Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.addIndividualTenantBTN(), 50);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addIndividualTenantBTN(), 50);
         Browser.click(AddResidentialContractPageObjects.addIndividualTenantBTN());
     }
 
     public void clickTenantRadioBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 5);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 50);
         Browser.click(AddResidentialContractPageObjects.tenantRadioBTN());
     }
 
     public void verifyTenantRadioBTNIsClickable() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 5);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 50);
         Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantRadioBTN()), "Button is not clickable");
     }
 
     public void verifyTenantRepresentativeRadioBTNIsClickable() {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN(), 5);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN(), 50);
         Assert.assertTrue(Browser.isElementEnabled(AddResidentialContractPageObjects.tenantRepresentativeRadioBTN()), "Button is not clickable");
     }
 
     public void inputTenantNationalId(String nationalId) throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantNationalIdInput(), 5);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantNationalIdInput(), 50);
         Browser.setText(AddResidentialContractPageObjects.tenantNationalIdInput(), nationalId);
     }
 
     public void inputTenantDOB(String DOB) throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantDateOfBirthInput(), 10);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantDateOfBirthInput(), 60);
         Browser.setText(AddResidentialContractPageObjects.tenantDateOfBirthInput(), DOB);
     }
 
     public void clickContinueButtonOnTenantContractPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueBtnOnIndividualContractPage(), 5);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueBtnOnIndividualContractPage(), 50);
         Browser.click(AddResidentialContractPageObjects.continueBtnOnIndividualContractPage());
     }
 
     public void clickConfirmBtnOnTenantAddressPage() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.confirmBtnOnTenantAddressPage(), 15);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.confirmBtnOnTenantAddressPage(), 50);
         Browser.click(AddResidentialContractPageObjects.confirmBtnOnTenantAddressPage());
     }
 
@@ -292,7 +302,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickSinglePaymentFrequency() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.singlePaymentRadioBTN(), 15);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.singlePaymentRadioBTN(), 50);
         Browser.click(AddResidentialContractPageObjects.singlePaymentRadioBTN());
     }
 
@@ -355,15 +365,15 @@ public class AddResidentialContractPage {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 15);
         Browser.click(AddResidentialContractPageObjects.continueFinancialTermsBTN());
     }
+
     public void clickConfirmFinancialTermsBTN(String status, String amount) throws Exception {
-        if (status.equalsIgnoreCase("yes")){
+        if (status.equalsIgnoreCase("yes")) {
             enableSecurityDeposit(amount);
 
         }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 15);
         Browser.click(AddResidentialContractPageObjects.continueFinancialTermsBTN());
     }
-
 
     public void clickTermsAndConditionsStepBTN() throws Exception {
         Browser.waitUntilElementToBeClickable(AddResidentialContractPageObjects.termsAndConditionsStepBTN(), 35);
@@ -382,7 +392,7 @@ public class AddResidentialContractPage {
     }
 
     public void selectGoverningLaw(String status) throws Exception {
-        if (status.equalsIgnoreCase("yes")){
+        if (status.equalsIgnoreCase("yes")) {
             enableSublease();
         }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.governingLawRadioBTN(), 15);
@@ -395,6 +405,12 @@ public class AddResidentialContractPage {
     }
 
     public void clickSubmitForApprovalBTN() throws Exception {
+        Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.StepsList(), 50);
+        List<WebElement> list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
+        while(list.size() < 5) {
+            list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
+            Browser.waitForSeconds(1);
+        }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.submitForApprovalBTN(), 35);
         Browser.waitUntilElementToBeClickable(AddResidentialContractPageObjects.submitForApprovalBTN(), 35);
         Browser.click(AddResidentialContractPageObjects.submitForApprovalBTN());
@@ -440,25 +456,25 @@ public class AddResidentialContractPage {
         Browser.waitForSeconds(1);
     }
 
-    public void enableSecurityDeposit(String amount){
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SecurityDepositSwitch(), 40 );
+    public void enableSecurityDeposit(String amount) {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SecurityDepositSwitch(), 40);
         Browser.click(AddResidentialContractPageObjects.SecurityDepositSwitch());
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SecurityDepositAmountInput(), 40);
         Browser.setText(AddResidentialContractPageObjects.SecurityDepositAmountInput(), amount);
     }
 
     public void enableSublease() {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SubleaseSwitch(), 40 );
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SubleaseSwitch(), 40);
         Browser.click(AddResidentialContractPageObjects.SubleaseSwitch());
     }
 
     public void clickOnSaveAndContinueLaterButton() {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SaveAndContinueLaterButton(), 40 );
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SaveAndContinueLaterButton(), 40);
         Browser.click(AddResidentialContractPageObjects.SaveAndContinueLaterButton());
     }
 
     public void clickOnStartDay() {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.StartDay(), 40 );
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.StartDay(), 40);
         Browser.click(AddResidentialContractPageObjects.StartDay());
     }
 

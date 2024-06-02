@@ -185,7 +185,7 @@ public class CreateNewCommercialContractPage {
     public void selectLessorRadioBtnForAccountOwner() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.ibanAccountOwnerRadioBTN(), 15);
         Browser.click(AddCommercialContractObjects.ibanAccountOwnerRadioBTN());
-        Browser.click(AddCommercialContractObjects.continueToOwnerInfo());
+//        Browser.click(AddCommercialContractObjects.continueToOwnerInfo());
     }
 
     public void clickContinueFinancialTermsBTN(String status, String amount) throws Exception {
