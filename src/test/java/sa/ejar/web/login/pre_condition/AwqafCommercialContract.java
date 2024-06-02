@@ -21,18 +21,16 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
-        logger.info("Step 04: Navigate to Contracts > Add New Residential Contract");
+        logger.info("Step 02: Navigate to Contracts > Add New Residential Contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.createNewCommercialContractPage.selectNewCommercialContract();
-        logger.info("Step 05: Input date > Select contract's duration from calender (More than 3 months) and confirm");
+        logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
         String endDate = CommonMethodsPage.getCurrentDate(1, 0, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
-        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
-        app.createNewCommercialContractPage.enterNoticePeriod("60");
-        logger.info("Step 06: Navigate to Add Property > Select property > Select unit and confirm");
+        logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
         app.createNewCommercialContractPage.clickAddPropertyBTN();
         app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         app.createNewCommercialContractPage.clickContinueWithThisPropertyBTN();
@@ -42,7 +40,9 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.createNewCommercialContractPage.confirmAdditionalDetailsBTN();
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
-        logger.info("Step 07: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
+        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
+        app.createNewCommercialContractPage.enterNoticePeriod("60");
+        logger.info("Step 05: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
         app.addResidentialContractPage.clickContractPartiesBTN();
         app.addResidentialContractPage.clickAddIndividualTenantBTN();
         app.addResidentialContractPage.clickTenantRadioBTN();
@@ -50,7 +50,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
-        logger.info("Step 09: Navigate to Financial > Input annual rent > Select Single Payment > select IBAN > Select account owner > Continue");
+        logger.info("Step 06: Navigate to Financial > Input annual rent > Select Single Payment > select IBAN > Select account owner > Continue");
         app.addResidentialContractPage.clickFinancialTermsStepBTN();
         app.addResidentialContractPage.clickAddRentalContractTermsBTN();
         app.addResidentialContractPage.enterAnnulRent("12000");
@@ -61,7 +61,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.selectLessorRadioBtnForAccountOwner();
         app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.addResidentialContractPage.clickConfirmFinancialTermsBTN(data.get("EnableSecurityDeposit"), data.get("SecurityAmount"));
-        logger.info("Step 11:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
+        logger.info("Step 07:Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
         app.createNewCommercialContractPage.clickAddTermsAndConditionsBTN();
         app.addSubleaseContractPage.getContractOption2();
@@ -71,7 +71,7 @@ public class AwqafCommercialContract extends NHCWebTest {
             app.addSubleaseContractPage.RentSubleasesForOther();
         }
         app.addSubleaseContractPage.clickConfirmTermsAndConditions();
-        logger.info("Step 12:  Submit the contract > Review all details > Submit");
+        logger.info("Step 08: Submit the contract > Review all details > Submit");
         if (data.get("SubmitOrDraft").equalsIgnoreCase("submit")) {
             app.addResidentialContractPage.clickSubmitForApprovalBTN();
             app.addResidentialContractPage.clickContinueBtnOnPreviewContractPage();
@@ -115,7 +115,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-//        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
@@ -168,16 +168,16 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
-        logger.info("Step 04: Navigate to Contracts > Add New Residential Contract");
+        logger.info("Step 02: Navigate to Contracts > Add New Residential Contract");
         app.addResidentialContractPage.clickContractsBtn();
         app.createNewCommercialContractPage.selectNewCommercialContract();
-        logger.info("Step 05: Input date > Select contract's duration from calender (More than 3 months) and confirm");
+        logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
         String endDate = CommonMethodsPage.getCurrentDate(0, 2, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
-        logger.info("Step 06: Navigate to Add Property > Select property > Select unit and confirm");
+        logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
         app.createNewCommercialContractPage.clickAddPropertyBTN();
         app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         app.createNewCommercialContractPage.clickContinueWithThisPropertyBTN();
@@ -187,7 +187,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.selectFirstAvailableUnit();
         app.createNewCommercialContractPage.confirmAdditionalDetailsBTN();
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
-        logger.info("Step 07: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
+        logger.info("Step 05: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
         app.addResidentialContractPage.clickContractPartiesBTN();
         app.addResidentialContractPage.clickAddIndividualTenantBTN();
         app.addResidentialContractPage.clickTenantRadioBTN();
@@ -195,7 +195,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
-        logger.info("Step 09: Navigate to Financial > Input annual rent > Select Single Payment > select IBAN > Select account owner > Continue");
+        logger.info("Step 06: Navigate to Financial > Input annual rent > Select Single Payment > select IBAN > Select account owner > Continue");
         app.addResidentialContractPage.clickFinancialTermsStepBTN();
         app.addResidentialContractPage.clickAddRentalContractTermsBTN();
         app.addResidentialContractPage.enterAnnulRent("12000");
@@ -205,9 +205,8 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.selectIbanFromDropdown();
         app.addResidentialContractPage.selectLessorRadioBtnForAccountOwner();
         app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
-//        app.addResidentialContractPage.clickConfirmFinancialTermsBTN(data.get("EnableSecurityDeposit"), data.get("SecurityAmount"));
         app.addResidentialContractPage.clickContinueFinancialTermsBTN();
-        logger.info("Step 11:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
+        logger.info("Step 07:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
         app.createNewCommercialContractPage.clickAddTermsAndConditionsBTN();
         app.addSubleaseContractPage.getContractOption2();
@@ -217,7 +216,7 @@ public class AwqafCommercialContract extends NHCWebTest {
             app.addSubleaseContractPage.RentSubleasesForOther();
         }
         app.addSubleaseContractPage.clickConfirmTermsAndConditions();
-        logger.info("Step 12:  Submit the contract > Review all details > Submit");
+        logger.info("Step 08:  Submit the contract > Review all details > Submit");
         if (data.get("SubmitOrDraft").equalsIgnoreCase("submit")) {
             app.addResidentialContractPage.clickSubmitForApprovalBTN();
             app.addResidentialContractPage.clickContinueBtnOnPreviewContractPage();
@@ -261,7 +260,7 @@ public class AwqafCommercialContract extends NHCWebTest {
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-//        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();

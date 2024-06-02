@@ -702,4 +702,8 @@ public class AddResidentialContractPageObjects {
     public static By inputDay() {
         return By.xpath("//input[@data-name=\"days\"]");
     }
+
+    public static By StepsList() {
+        return By.xpath("//app-card[@class=\"jounery-step card\"]/descendant::ul/child::li[contains (@class, 'success')]");
+    }
 }
