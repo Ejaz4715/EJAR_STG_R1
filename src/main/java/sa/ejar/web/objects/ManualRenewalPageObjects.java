@@ -115,4 +115,7 @@ public class ManualRenewalPageObjects {
     public static By clickConfirmButton() { return By.xpath("//button[@type='button'][contains(text(),'تأكيد')]");}
     public static By clickOnLatestKebabMenuButton() { return By.xpath("(//span[@class=\"round-icon large menu\"])[last()]");}
 
+    public static By WarningClass() {
+        return By.xpath("//li[@class=\"warning\"]");
+    }
 }

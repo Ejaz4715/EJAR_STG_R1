@@ -1675,7 +1675,8 @@ public class SendContractForApproval extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09:  Click on  (تحميل)  button");
         app.sendContractForApprovalPage.clickOnDownloadButton();
-        CommonMethodsPage.verifyNewTabIsOpened();
+        CommonMethodsPage.verifyAttachmentHasBeenDownloaded();
+//        CommonMethodsPage.verifyNewTabIsOpened();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3085,7 +3086,8 @@ public void SubmitForApprovalTenantRejection(Map<String, String> data) throws Ex
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09:  Click on  (تحميل)  button");
         app.sendContractForApprovalPage.clickOnDownloadButton();
-        CommonMethodsPage.verifyNewTabIsOpened();
+        CommonMethodsPage.verifyAttachmentHasBeenDownloaded();
+//        CommonMethodsPage.verifyNewTabIsOpened();
     }
 
     @Test(dataProvider = "testDataProvider")
