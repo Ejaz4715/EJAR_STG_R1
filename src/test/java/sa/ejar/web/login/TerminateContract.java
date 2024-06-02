@@ -5986,7 +5986,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -6006,7 +6006,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -6031,7 +6031,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -6057,7 +6057,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -6083,7 +6083,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");
@@ -6107,7 +6107,7 @@ public class TerminateContract extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مستأجر");
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on (المالية) tab");
         CommonMethodsPage.clickOnTheFinancialTabButton();
         logger.info("Step 03: Click on (عرض الفواتير) button");

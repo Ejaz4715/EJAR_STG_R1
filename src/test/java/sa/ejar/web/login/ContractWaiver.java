@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ContractWaiverPageObjects;
+import sa.ejar.web.objects.RentalIncidentsPageObjects;
 import sa.ejar.web.objects.RevokeContractPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
@@ -3116,6 +3117,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \" إلغاء\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
     }
@@ -3147,6 +3149,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
     }
@@ -3178,6 +3181,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \" عرض \"  button");
         CommonMethodsPage.ClickOnAttachment("view");
@@ -3211,6 +3215,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \" إلغاء \"  button");
         CommonMethodsPage.clickOnCancelButton();
@@ -3244,6 +3249,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \" السابق \"  button ");
         CommonMethodsPage.clickOnBackButton();
@@ -3277,8 +3283,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyDeclareAndConfirmSectionIsDisplayed();
     }
@@ -3310,8 +3318,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on إلغاء button ");
         CommonMethodsPage.clickOnCancelButton();
@@ -3345,8 +3355,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on السابق  button ");
         CommonMethodsPage.clickOnBackButton();
@@ -3380,8 +3392,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -3415,8 +3429,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify \"تأكيد الموافقة\" button is not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
@@ -3449,8 +3465,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -3486,8 +3504,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on \"  التالي \" button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 09: Click on \"  التالي \" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10: Click on \"التالي\" button ");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -3520,27 +3540,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNumApproval"));
-        logger.info("Step 06: Click on Kebab menu button");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
-        logger.info("Step 08: Click on \"  التالي \" button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
-        app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 13: Enter valid OTP");
-        app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 14: Click on \" التحقق من الهوية \" button");
-        app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        logger.info("Step 15: Click on \"إلغاء\" button");
-        CommonMethodsPage.clickOnCloseButton();
-        CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
+        CommonMethodsPage.checkRequestStatus("موافقة");
     }
 
 
@@ -3551,7 +3551,7 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_94_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3571,7 +3571,7 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_95_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3595,7 +3595,7 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_96_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3619,7 +3619,7 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_97_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3643,7 +3643,7 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_98_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -3673,7 +3673,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_99_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -3697,43 +3698,30 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on Add an individual as a tenant( إضافة فرد كمستأجر)");
-        app.contractWaiverPage.clickOnAddIndividualTenant();
-        logger.info("Step 10: Click on  المستأجر radio button");
-        app.addResidentialContractPage.clickTenantRadioBTN();
-        logger.info("Step 11: Click on هوية وطنية radio button");
-        app.contractWaiverPage.clickOnNationalIdRadioButton();
-        logger.info("Step 12: Input valid National id for ner Tenant");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID"));
-        logger.info("Step 13: Input a valid date of birth for new Tenant");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("TenantValidDOB"));
-        logger.info("Step 14: Click next button");
+        if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
+            app.contractWaiverPage.clickOnAddIndividualTenant();
+            app.addResidentialContractPage.clickTenantRadioBTN();
+            app.contractWaiverPage.clickOnNationalIdRadioButton();
+            app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID"));
+            app.contractWaiverPage.enterValidTenantDOB(data.get("TenantValidDOB"));
+            CommonMethodsPage.clickOnNextButton();
+            CommonMethodsPage.clickOnConfirmButton();
+        }
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 15: Enter phone number");
-        CommonMethodsPage.enterPhoneNumber(data.get("TenantPhoneNumber_Valid"));
-        logger.info("Step 16: Select province");
-        CommonMethodsPage.clickOnRegionDropdownMenu();
-        CommonMethodsPage.selectRegion(data.get("TenantRegion"));
-        logger.info("Step 17: Select city");
-        CommonMethodsPage.clickOnCityDropdown();
-        CommonMethodsPage.SelectCity(data.get("TenantCity"));
-        logger.info("Step 18: Click on   تأكيد   Button ");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 19: Click on التالي Button");
+        logger.info("Step 09: Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 20:  Click on التالي Button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 21: Click on acknowledgement checkbox ");
+        logger.info("Step 10: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 22: Click on تأكيد Button ");
+        logger.info("Step 11: Click on تأكيد Button ");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 23: Click on تأكيد Button on the pop up");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 24: Input OTP code");
-        app.loginPage.enterVerificationCode(data.get("OTP"));
+        logger.info("Step 12: Click on تأكيد Button on the pop up");
+        app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
+        logger.info("Step 13: Input OTP code");
+        app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         app.contractWaiverPage.reqNumLessorRejection();
-        logger.info("Step 25: Click on إغلاق button");
+        logger.info("Step 14: Click on إغلاق button");
         CommonMethodsPage.clickOnCloseButton();
     }
 
@@ -3944,8 +3932,8 @@ public class ContractWaiver extends NHCWebTest {
         app.contractWaiverPage.clickOnYesAgreeButton();
         logger.info("Step 09: Input OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        String fistCharOfOTP = String.valueOf(data.get("OTP").charAt(0));
+        CommonMethodsPage.verifyValueIsEntered(fistCharOfOTP, LoginPageObjects.getVerificationCode());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4021,7 +4009,8 @@ public class ContractWaiver extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_109_ContractWaiver(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -4045,43 +4034,30 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on Add an individual as a tenant( إضافة فرد كمستأجر)");
-        app.contractWaiverPage.clickOnAddIndividualTenant();
-        logger.info("Step 10: Click on  المستأجر radio button");
-        app.addResidentialContractPage.clickTenantRadioBTN();
-        logger.info("Step 11: Click on هوية وطنية radio button");
-        app.contractWaiverPage.clickOnNationalIdRadioButton();
-        logger.info("Step 12: Input valid National id for ner Tenant");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID"));
-        logger.info("Step 13: Input a valid date of birth for new Tenant");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("TenantValidDOB"));
-        logger.info("Step 14: Click next button");
+        if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
+            app.contractWaiverPage.clickOnAddIndividualTenant();
+            app.addResidentialContractPage.clickTenantRadioBTN();
+            app.contractWaiverPage.clickOnNationalIdRadioButton();
+            app.addResidentialContractPage.inputTenantNationalId(data.get("TenantNationalID"));
+            app.contractWaiverPage.enterValidTenantDOB(data.get("TenantValidDOB"));
+            CommonMethodsPage.clickOnNextButton();
+            CommonMethodsPage.clickOnConfirmButton();
+        }
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 15: Enter phone number");
-        CommonMethodsPage.enterPhoneNumber(data.get("TenantPhoneNumber_Valid"));
-        logger.info("Step 16: Select province");
-        CommonMethodsPage.clickOnRegionDropdownMenu();
-        CommonMethodsPage.selectRegion(data.get("TenantRegion"));
-        logger.info("Step 17: Select city");
-        CommonMethodsPage.clickOnCityDropdown();
-        CommonMethodsPage.SelectCity(data.get("TenantCity"));
-        logger.info("Step 18: Click on   تأكيد   Button ");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 19: Click on التالي Button");
+        logger.info("Step 09: Click on التالي Button");
+        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(),40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 20:  Click on التالي Button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 21: Click on acknowledgement checkbox ");
+        logger.info("Step 10: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 22: Click on تأكيد Button ");
+        logger.info("Step 11: Click on تأكيد Button ");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 23: Click on تأكيد Button on the pop up");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 24: Input OTP code");
-        app.loginPage.enterVerificationCode(data.get("OTP"));
+        logger.info("Step 12: Click on تأكيد Button on the pop up");
+        app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
+        logger.info("Step 13: Input OTP code");
+        app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         app.contractWaiverPage.reqNumTenantRejection();
-        logger.info("Step 25: Click on إغلاق button");
+        logger.info("Step 14: Click on إغلاق button");
         CommonMethodsPage.clickOnCloseButton();
     }
 
@@ -4206,6 +4182,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         CommonMethodsPage.verifyConfirmPopUpIsDisplayedAfterRejectRequest();
     }
@@ -4237,6 +4214,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
@@ -4270,6 +4248,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         logger.info("Step 09: Verify \"نعم, أنا متأكد\" is not clickable");
         app.contractWaiverPage.verifyYesAgreeButtonIsDisabled();
@@ -4302,6 +4281,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
@@ -4337,6 +4317,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
@@ -4375,6 +4356,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة / رفض تقبيل العقد");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Click on \"الرفض\" button");
+        Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(),40);
         CommonMethodsPage.clickOnRejectBTN();
         logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
@@ -4419,7 +4401,6 @@ public class ContractWaiver extends NHCWebTest {
      */
     @Test(dataProvider = "testDataProvider")
     public void TC_120_ContractWaiver(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ContractWaiver"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -4436,7 +4417,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Existing_ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (  تقبيل العقد  ) option");
@@ -4465,7 +4446,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Existing_ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (  تقبيل العقد  ) option");
@@ -4494,7 +4475,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Existing_ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (  تقبيل العقد  ) option");
@@ -4523,7 +4504,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Existing_ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (  تقبيل العقد  ) option");
@@ -4552,7 +4533,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Existing_ContractNumber"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (  تقبيل العقد  ) option");

@@ -29,8 +29,8 @@ public class AddCommercialContract extends NHCWebTest {
         String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.createNewCommercialContractPage.clickConfirmPeriodBTN();
-        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
-        app.createNewCommercialContractPage.enterNoticePeriod("60");
+//        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
+//        app.createNewCommercialContractPage.enterNoticePeriod("60");
         logger.info("Step 06: Navigate to Add Property > Select property > Select unit and confirm");
         app.createNewCommercialContractPage.clickAddPropertyBTN();
         app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
@@ -50,6 +50,8 @@ public class AddCommercialContract extends NHCWebTest {
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 08: Navigate to Financial > Input annual rent > Select Single Payment >select IBAN > Select account owner > Continue");
+        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
+        app.createNewCommercialContractPage.enterNoticePeriod("60");
         app.createNewCommercialContractPage.clickFinancialTermsStepBTN();
         app.createNewCommercialContractPage.clickAddRentalContractTermsBTN();
         app.createNewCommercialContractPage.enterAnnulRent("12000");
@@ -111,7 +113,7 @@ public class AddCommercialContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-//        CommonMethodsPage.clickOnConfirmButton();
+        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));

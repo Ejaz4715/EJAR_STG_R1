@@ -107,7 +107,7 @@ public class ResidentialContract extends NHCWebTest{
         app.addResidentialContractPage.selectNewResidualContract();
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        String endDate = CommonMethodsPage.getCurrentDate(0,2,0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         app.addResidentialContractPage.clickAddPropertyBTN();
