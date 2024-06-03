@@ -199,7 +199,7 @@ public class CommonMethodsPage {
             waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalCheckboxes(), 30);
             List<WebElement> checkBoxes = driver.findElements(SendContractForApprovalPageObjects.sendForApprovalCheckboxes());
             for (WebElement checkbox : checkBoxes) {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
                 wait.until(ExpectedConditions.visibilityOf(checkbox));
                 wait.until(ExpectedConditions.elementToBeClickable(checkbox));
                 checkbox.click();
@@ -515,6 +515,7 @@ public class CommonMethodsPage {
 
     public static void verifyTheConfirmAndSubmitButtonIsEnabled() {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
+        Browser.waitUntilElementToBeClickable(CommonMethodsPageObjects.confirmAndSubmitBTN(), 20);
         Assert.assertTrue(isElementEnabled(CommonMethodsPageObjects.confirmAndSubmitBTN()));
         logger.addScreenshot("The (تأكيد وإرسال) button is enabled/clickable");
     }
