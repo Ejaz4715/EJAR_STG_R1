@@ -1804,7 +1804,8 @@ public class RevokeContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_57_Revoke(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1843,11 +1844,12 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 15: Click on  تأكيد طلب الفسخ   button");
         app.revokeContractPage.clickOnConfirmRevokeContractButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        CommonMethodsPage.clickOnCloseButton();
         logger.info("Step 16: Click on الطلبات tab > Select عرض الطلبات option");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         CommonMethodsPage.clickOnViewAllRequestsButton();
         CommonMethodsPage.clickFilterBtn();
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 17: Get the request number");
         app.revokeContractPage.getRequestNumber();
 
