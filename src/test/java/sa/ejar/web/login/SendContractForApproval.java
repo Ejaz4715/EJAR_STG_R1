@@ -1446,12 +1446,8 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnDisclaimerCheckbox();
         logger.info("Step 12: Click on (تأكيد وإرسال) button");
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
-        logger.info("Step 13: Click on rating buttons");
-        CommonMethodsPage.clickRatingButtons();
-        logger.info("Step 14: Click on (إرسال) button");
-        CommonMethodsPage.clickOnSubmitButton();
-        logger.info("Step 15:Verify popup message (تم تقديم الرد) is displayed");
-        CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
+        logger.info("Step 13: Fill the survey and submit");
+        app.sendContractForApprovalPage.submitContract();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1510,12 +1506,8 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.clickOnDisclaimerCheckbox();
         logger.info("Step 12: Click on (تأكيد وإرسال) button");
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
-        logger.info("Step 13: Click on rating buttons");
-        CommonMethodsPage.clickRatingButtons();
-        logger.info("Step 14: Click on (إرسال) button");
-        CommonMethodsPage.clickOnSubmitButton();
-        logger.info("Step 15:Verify popup message (تم تقديم الرد) is displayed");
-        CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
+        logger.info("Step 13: Fill the survey and submit");
+        app.sendContractForApprovalPage.submitContract();
     }
 
 
@@ -2923,12 +2915,8 @@ public void SubmitForApprovalTenantRejection(Map<String, String> data) throws Ex
     CommonMethodsPage.clickOnDisclaimerCheckbox();
     logger.info("Step 12: Click on (تأكيد وإرسال) button");
     CommonMethodsPage.clickOnConfirmAndSubmitButton();
-    logger.info("Step 13: Click on rating buttons");
-    CommonMethodsPage.clickRatingButtons();
-    logger.info("Step 14: Click on (إرسال) button");
-    CommonMethodsPage.clickOnSubmitButton();
-    logger.info("Step 15:Verify popup message (تم تقديم الرد) is displayed");
-    CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
+    logger.info("Step 13: Fill the survey and submit");
+    app.sendContractForApprovalPage.submitContract();
 }
 
     @Test(dataProvider = "testDataProvider")
