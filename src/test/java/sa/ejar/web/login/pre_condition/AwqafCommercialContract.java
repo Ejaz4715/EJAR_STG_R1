@@ -114,8 +114,8 @@ public class AwqafCommercialContract extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
+//        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        CommonMethodsPage.clickOnConfirmButton();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();

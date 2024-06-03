@@ -60,6 +60,7 @@ public class AddCommercialContract extends NHCWebTest {
         app.createNewCommercialContractPage.clickPayOnlineBTN();
         app.createNewCommercialContractPage.selectIbanFromDropdown();
         app.createNewCommercialContractPage.selectLessorRadioBtnForAccountOwner();
+        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.addResidentialContractPage.clickConfirmFinancialTermsBTN(data.get("EnableSecurityDeposit"), data.get("SecurityAmount"));
         logger.info("Step 07:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
@@ -202,6 +203,7 @@ public class AddCommercialContract extends NHCWebTest {
         app.createNewCommercialContractPage.clickPayOnlineBTN();
         app.createNewCommercialContractPage.selectIbanFromDropdown();
         app.createNewCommercialContractPage.selectLessorRadioBtnForAccountOwner();
+        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.addResidentialContractPage.clickConfirmFinancialTermsBTN(data.get("EnableSecurityDeposit"), data.get("SecurityAmount"));
         logger.info("Step 07:  Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
