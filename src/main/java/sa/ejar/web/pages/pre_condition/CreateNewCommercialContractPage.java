@@ -200,9 +200,6 @@ public class CreateNewCommercialContractPage {
     }
 
     public void clickAddTermsAndConditionsBTN() throws Exception {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.addTermsAndConditionsBTN(), 35);
         Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.addTermsAndConditionsBTN(), 35);
         Browser.click(AddCommercialContractObjects.addTermsAndConditionsBTN());

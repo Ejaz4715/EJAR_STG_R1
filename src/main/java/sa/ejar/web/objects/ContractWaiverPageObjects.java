@@ -33,7 +33,7 @@ public class ContractWaiverPageObjects {
 
     public static By ContractDetailsSectionTitle() {
 //        return By.xpath("//h2[contains (text() , 'تفاصيل العقد')]");
-        return By.xpath("//a[contains (@class,'active') and contains (text() , 'تفاصيل العقد')]");
+        return By.xpath("//a[contains (@class,'active') and contains (text() , 'تفاصيل')]");
     }
 
     public static By NewTenantPartySectionTitle() {

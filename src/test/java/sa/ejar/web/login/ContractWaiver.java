@@ -1716,7 +1716,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyNewTenantPartySectionIsDisplayed();
     }
@@ -1747,7 +1747,6 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تقبيل العقد");
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
-        //        CommonMethodsPage.clickOnNextButton();
         Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
@@ -1761,7 +1760,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on السابق Button");
         CommonMethodsPage.clickOnBackButton();
@@ -1794,7 +1793,6 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تقبيل العقد");
         logger.info("Step 08: Click on Next button twice");
         CommonMethodsPage.clickOnNextButton();
-        //CommonMethodsPage.clickOnNextButton();
         Browser.waitForSeconds(2);
         if (!(Browser.isElementPresent(ContractWaiverPageObjects.TenantIdNumberSection()))) {
             app.contractWaiverPage.clickOnAddIndividualTenant();
@@ -1808,7 +1806,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on 'أنا أوافق على ما سبق'  checkbox");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1855,7 +1853,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify  تأكيد Button is not clickable");
         app.contractWaiverPage.verifyConfirmButtonIsDisabled();
@@ -1901,7 +1899,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 19: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 20:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 21: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -1950,7 +1948,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2001,7 +1999,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2052,7 +2050,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+//        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2106,7 +2104,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
@@ -2158,7 +2156,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 09: Click on التالي Button");
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 10:  Click on التالي Button");
-        Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.ContractDetailsSectionTitle(),20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),20);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on acknowledgement checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
