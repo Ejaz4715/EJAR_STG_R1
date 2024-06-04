@@ -237,7 +237,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickContractPartiesBTN() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 60);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 100);
         if (Browser.isElementNotPresent(AddResidentialContractPageObjects.LoadingIcon())) {
             Browser.waitForSeconds(1);
             Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.contractPartiesStepBTN(), 60);
@@ -362,7 +362,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickContinueFinancialTermsBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 15);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 30);
         Browser.click(AddResidentialContractPageObjects.continueFinancialTermsBTN());
     }
 
@@ -371,7 +371,7 @@ public class AddResidentialContractPage {
             enableSecurityDeposit(amount);
 
         }
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 15);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continueFinancialTermsBTN(), 30);
         Browser.click(AddResidentialContractPageObjects.continueFinancialTermsBTN());
     }
 
@@ -381,7 +381,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickAddTermsAndConditionsBTN() throws Exception {
-        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addTermsAndConditionsBTN(), 15);
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addTermsAndConditionsBTN(), 30);
         Browser.click(AddResidentialContractPageObjects.addTermsAndConditionsBTN());
         Browser.waitForSeconds(1);
     }
