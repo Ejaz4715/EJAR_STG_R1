@@ -270,7 +270,7 @@ public class CommonMethodsPage {
     public static void KebabMenuOptions(String option) {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
         CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.KebabMenuOptions());
-        waitForSeconds(3);
+        waitForSeconds(1);
         List<WebElement> kebabOptions = getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
         for (WebElement opt : kebabOptions) {
@@ -1138,18 +1138,17 @@ public class CommonMethodsPage {
         waitForSeconds(2);
     }
 
-    public static void verifyContractStatus(String Status1, String Status2) throws Exception {
+    public static void verifyContractStatus(String expectedStatus) throws Exception {
         executeJSScroll(450);
         waitForSeconds(1);
-        String[] expectedStatus = {Status1, Status2};
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
         waitForSeconds(2);
+        boolean status = false;
         String actualStatus = getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
-        if (actualStatus.equalsIgnoreCase(expectedStatus[0]) || actualStatus.equalsIgnoreCase(expectedStatus[1])) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.assertFalse(false);
+        if (actualStatus.contains(expectedStatus)) {
+            status = true;
         }
+        Assert.assertTrue(status, "The actual status of contract is (" +actualStatus+") and expected ("+expectedStatus);
         Browser.logger.addScreenshot("");
     }
 
@@ -1377,8 +1376,7 @@ public class CommonMethodsPage {
 
       public static void contractInformationCheckbox() throws  Exception {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.contractInfoLabel(),20);
-        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.contractInformationCheckbox());
-        Browser.waitForSeconds(1);
+        Browser.click(CommonMethodsPageObjects.contractInfoLabel());
         Browser.click(CommonMethodsPageObjects.contractInformationCheckbox());
         logger.addScreenshot("Contract Information Checkbox is clickable");
     }
@@ -1386,9 +1384,7 @@ public class CommonMethodsPage {
     public static void lessorCheckbox() {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.lessorLabel(),20);
         Browser.click(CommonMethodsPageObjects.lessorLabel());
-        Browser.waitForSeconds(1);
-        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.lessorCheckboxes1());
-        Browser.waitForSeconds(1);
+        Browser.executeJSScroll(600);
         Browser.click(CommonMethodsPageObjects.lessorCheckboxes1());
         Browser.click(CommonMethodsPageObjects.lessorCheckboxes2());
         logger.addScreenshot("Lessor Checkboxes are clickable");
@@ -1397,7 +1393,6 @@ public class CommonMethodsPage {
     public static void tenantsCheckbox() {
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.tenantLabel(),20);
         Browser.click(CommonMethodsPageObjects.tenantLabel());
-        Browser.waitForSeconds(1);
         Browser.click(CommonMethodsPageObjects.tenantCheckbox());
         logger.addScreenshot("Tenant Checkbox is clickable");
     }
@@ -1405,9 +1400,7 @@ public class CommonMethodsPage {
     public static void propertyDetailsCheckbox(){
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.propertyLabel(),20);
         Browser.click(CommonMethodsPageObjects.propertyLabel());
-        Browser.waitForSeconds(1);
-        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.propertyDetailsCheckbox());
-        Browser.waitForSeconds(1);
+        Browser.executeJSScroll(800);
         Browser.click(CommonMethodsPageObjects.propertyDetailsCheckbox());
         logger.addScreenshot("Property Details Checkbox is clickable");
     }
@@ -1415,9 +1408,7 @@ public class CommonMethodsPage {
     public static void unitDetailsCheckbox(){
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.unitLabel(), 20);
         Browser.click(CommonMethodsPageObjects.unitLabel());
-        Browser.waitForSeconds(1);
-        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.unitDetailsCheckbox());
-        Browser.waitForSeconds(1);
+        Browser.executeJSScroll(600);
         Browser.click(CommonMethodsPageObjects.unitDetailsCheckbox());
         logger.addScreenshot("Unit Details Checkbox is clickable");
     }
@@ -1425,16 +1416,13 @@ public class CommonMethodsPage {
     public static void financialTermsCheckbox(){
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.financialLabel(),20);
         Browser.click(CommonMethodsPageObjects.financialLabel());
-        Browser.waitForSeconds(1);
         Browser.click(CommonMethodsPageObjects.financialTermsCheckbox());
         logger.addScreenshot("Financial Terms Checkbox is clickable");
-
     }
 
     public static void termsConditionsCheckbox(){
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.termsConditionsLabel(),20);
         Browser.click(CommonMethodsPageObjects.termsConditionsLabel());
-        Browser.waitForSeconds(1);
         Browser.click(CommonMethodsPageObjects.termsConditionsCheckbox());
         logger.addScreenshot("Terms & Conditions Checkbox is clickable");
     }
@@ -1442,7 +1430,7 @@ public class CommonMethodsPage {
     public static void capturedDocumentsCheckbox(){
         Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.documentsLabel(),20);
         Browser.click(CommonMethodsPageObjects.documentsLabel());
-        Browser.waitForSeconds(1);
+        Browser.executeJSScroll(300);
         Browser.click(CommonMethodsPageObjects.capturedDocumentsCheckbox());
         logger.addScreenshot("Captured Documents Checkbox is clickable");
       }
@@ -1498,5 +1486,6 @@ public class CommonMethodsPage {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity(), 20);
         Assert.assertTrue(isElementDisabled(ChangeTenantActivityPageObjects.submitRequestInChangeTenantCommercialActivity()));
         logger.addScreenshot("The (تقديم الطلب) button is disabled");
+        Browser.waitForSeconds(1);
     }
 }

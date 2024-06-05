@@ -46,7 +46,7 @@ public class ManualRenewalPageObjects {
 
     public static By confirmBTNPopUp() {return By.xpath("//footer//button[text()=' تأكيد ']");}
 
-    public static By payFeeThroughLessor() {return By.xpath("/div[@class='d-inline-block ps-2 py-3 py-md-0']");}
+    public static By payFeeThroughLessor() {return By.xpath("//div[contains(@class,'d-inline-block')]");}
 
     public static By EjarRegistrationFees() {return By.xpath("(//div[@class='card-info-title'])[2]");}
 
@@ -101,6 +101,7 @@ public class ManualRenewalPageObjects {
     public static By selectPageSizeFifty() { return By.xpath("//select[@data-name='page_size']");}
 
     public static By lateFeesLabel() { return By.xpath("//form[@id='late_fees_charged_form']//span[@class='slider enable-transitions']");}
+    public static By retainerLabel() { return By.xpath("//form[@id='retainer_fee_form']//span[@class='slider enable-transitions']");}
 
     public static By fillLateFeesInput() { return By.xpath("(//div//input[@mask='separator'])[1]");}
 

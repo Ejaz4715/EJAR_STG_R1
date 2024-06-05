@@ -136,6 +136,7 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.contractApprovalStepsPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.contractApprovalStepsPage()));
         logger.addScreenshot("User Navigate To 'خطوات الموافقة على العقد' page");
+        Browser.waitForSeconds(1);
     }
 
     public void clickOnLetUsStartButton() {
@@ -151,12 +152,14 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.reviewTheContractPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.reviewTheContractPage()));
         logger.addScreenshot("User Navigate To ' مراجعة معلومات العقد ' page");
+        Browser.waitForSeconds(1);
     }
 
     public void verifyRejectTheContractPageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectTheContractPage(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.rejectTheContractPage()));
         logger.addScreenshot("User Navigate To ' لماذا ترغب بالرفض' page");
+        Browser.waitForSeconds(1);
     }
 
     public void enterRejectionReason(String rejectReason) throws Exception {
@@ -193,6 +196,7 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerification(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.identityVerification()));
         logger.addScreenshot("The user navigate to (التحقق من الهوية) page");
+        Browser.waitForSeconds(1);
     }
     public void enterVerificationCode(String OTP) throws Exception {
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
@@ -208,6 +212,7 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.wrongOTPMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.wrongOTPMsg()));
         logger.addScreenshot("The OTP code has been entered with wrong number");
+        Browser.waitForSeconds(1);
     }
 
     public void clickOnIdentityVerificationButton() {
@@ -231,6 +236,7 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.rejectionSubmittedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.rejectionSubmittedMsg()));
         logger.addScreenshot("The (تم إرسال الرفض) message is displayed");
+        Browser.waitForSeconds(1);
     }
 
 

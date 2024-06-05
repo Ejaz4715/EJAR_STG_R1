@@ -7,6 +7,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import sa.ejar.web.objects.ChangeTenantActivityPageObjects;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
+import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -89,29 +90,6 @@ public class ChangeTenantActivityPage {
         logger.addScreenshot("Change tenant activity issued by : " + issued);
     }
 
-    public void enterTextInNewTenantActivityTextBox(String text) {
-        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), 40);
-        Browser.setText(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), text);
-        logger.addScreenshot(" ");
-    }
-
-    public void removeTextInNewTenantActivityTextBox() {
-        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityTextBox(), 40);
-        Browser.clearText(ChangeTenantActivityPageObjects.newTenantActivityTextBox());
-        logger.addScreenshot(" ");
-    }
-
-    public void assertSubmitButtonIsEnabled() {
-        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
-        Browser.isElementEnabled(ChangeTenantActivityPageObjects.submitButton());
-        logger.addScreenshot(" ");
-    }
-
-    public void assertSubmitButtonIsDisabled() {
-        waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
-        Browser.isElementDisabled(ChangeTenantActivityPageObjects.submitButton());
-        logger.addScreenshot(" ");
-    }
 
     public void clickOnSubmitButton() {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.submitButton(), 40);
@@ -204,7 +182,6 @@ public class ChangeTenantActivityPage {
     public String addNewTenantActivityDescription(String newTenantActivityDescription) {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityDescription(), 10);
         CommonMethodsPage.scrollToElement(ChangeTenantActivityPageObjects.newTenantActivityDescription());
-        Browser.waitForSeconds(2);
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.newTenantActivityDescription());
         setText(ChangeTenantActivityPageObjects.newTenantActivityDescription(), newTenantActivityDescription);
         String NewDes = Browser.getAttributeValue(ChangeTenantActivityPageObjects.newTenantActivityDescription(), "value");
@@ -216,7 +193,6 @@ public class ChangeTenantActivityPage {
     public void deleteNewTenantActivityDescription(String newTenantActivityDescription) {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.newTenantActivityDescription(), 10);
         CommonMethodsPage.scrollToElement(ChangeTenantActivityPageObjects.newTenantActivityDescription());
-        Browser.waitForSeconds(2);
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.newTenantActivityDescription());
         setText(ChangeTenantActivityPageObjects.newTenantActivityDescription(), newTenantActivityDescription);
         Browser.waitForSeconds(1);
@@ -263,25 +239,25 @@ public class ChangeTenantActivityPage {
     public void verifyChangeTenantActivityPageHeaderIsDisplayed() {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader(), 40);
         Assert.assertTrue(Browser.isElementDisplayed(ChangeTenantActivityPageObjects.changeTenantActivityPageHeader()), "Change Tenant Activity page header is not displayed");
-        logger.addScreenshot(" ");
+        logger.addScreenshot("");
     }
 
     public void assertContractNumberInPageHeader(String contractNumber) {
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.contractNumberHeader(), 20);
         String contractNumberNew = Browser.getText(ChangeTenantActivityPageObjects.contractNumberHeader()).replace("#", "");
         Assert.assertEquals(contractNumberNew, contractNumber, "contract number is not matching");
-        logger.addScreenshot(" ");
+        logger.addScreenshot("");
     }
 
     public void assertContractParties(Map<String, String> data) {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivityParties"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.contractParties(), 40);
         String CurrentLessorName = Browser.getText(ChangeTenantActivityPageObjects.getLessorName());
         String CurrentTenantName = Browser.getText(ChangeTenantActivityPageObjects.getTenantName());
         String CurrentTenantRepresentativeName = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeName());
-        String CurrentLessorID = Browser.getText(ChangeTenantActivityPageObjects.getLessorID());
-        String CurrentTenantID = Browser.getText(ChangeTenantActivityPageObjects.getTenantID());
-        String CurrentTenantRepresentativeID = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeID());
+        String CurrentLessorID = Browser.getText(ChangeTenantActivityPageObjects.getLessorID()).replace("#","");
+        String CurrentTenantID = Browser.getText(ChangeTenantActivityPageObjects.getTenantID()).replace("#","");
+        String CurrentTenantRepresentativeID = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeID()).replace("#","");
         Assert.assertTrue(data.get("LessorName").contains(CurrentLessorName));
         Assert.assertTrue(data.get("TenantName").contains(CurrentTenantName));
         Assert.assertTrue(data.get("TenantRepresentativeName").contains(CurrentTenantRepresentativeName));
@@ -292,14 +268,9 @@ public class ChangeTenantActivityPage {
     }
 
     public void assertOldTenantActivityHeadingOnChangeTenantActivityPage() {
+        Browser.executeJSScroll(500);
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.oldTenantActivityHeadingOnChangeTenantActivityPage(), 40);
         Browser.isElementDisplayed(ChangeTenantActivityPageObjects.oldTenantActivityHeadingOnChangeTenantActivityPage());
-        logger.addScreenshot(" ");
-    }
-
-    public void assertOldTenantActivityDescriptionOnChangeTenantActivityPage() {
-        Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.oldTenantActivityDescriptionOnChangeTenantActivityPage(), 40);
-        Browser.isElementDisplayed(ChangeTenantActivityPageObjects.oldTenantActivityDescriptionOnChangeTenantActivityPage());
         logger.addScreenshot("");
     }
 
@@ -308,10 +279,11 @@ public class ChangeTenantActivityPage {
         String OldDescription = driver.findElement(ChangeTenantActivityPageObjects.oldTenantDescription()).getAttribute("value");
         logger.addScreenshot("");
         Assert.assertEquals("Test", OldDescription);
+        Browser.waitForSeconds(1);
     }
 
     public String getRequestNumber() {
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(1);
         String number = Browser.getWebElement(ChangeTenantActivityPageObjects.requestTitle()).getText();
         return number.substring(16, 24);
     }
@@ -328,39 +300,39 @@ public class ChangeTenantActivityPage {
         CommonMethodsPage.scrollToElement(ChangeTenantActivityPageObjects.getLessorName());
         Browser.waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.getLessorName(), 20);
         String LessorName = Browser.getText(ChangeTenantActivityPageObjects.getLessorName());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "LessorName",LessorName);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "LessorName",LessorName);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
     }
 
     public void getTenantName() {
         String TenantName = Browser.getText(ChangeTenantActivityPageObjects.getTenantName());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "TenantName",TenantName);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "TenantName",TenantName);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
     }
 
     public void getTenantRepresentativeName() {
         String TenantRepresentativeName = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeName());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "TenantRepresentativeName",TenantRepresentativeName);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "TenantRepresentativeName",TenantRepresentativeName);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
 
     }
 
     public void getLessorID() {
-        String LessorId = Browser.getText(ChangeTenantActivityPageObjects.getLessorID());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "LessorID",LessorId);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        String LessorId = Browser.getText(ChangeTenantActivityPageObjects.getLessorID()).replace("#","");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "LessorID",LessorId);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
     }
 
     public void getTenantID() {
-        String TenantId = Browser.getText(ChangeTenantActivityPageObjects.getTenantID());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "TenantID",TenantId);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        String TenantId = Browser.getText(ChangeTenantActivityPageObjects.getTenantID()).replace("#","");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "TenantID",TenantId);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
     }
 
     public void getTenantRepresentativeID() {
-        String TenantRepresentativeId = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeID());
-        TestDataManager.addDependantGlobalTestData("ChangeTenantActivityParties", "TenantRepresentativeID",TenantRepresentativeId);
-        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivityParties");
+        String TenantRepresentativeId = Browser.getText(ChangeTenantActivityPageObjects.getTenantRepresentativeID()).replace("#","");
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "TenantRepresentativeID",TenantRepresentativeId);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
     }
 
     public void checkRequestsPageIsDisplayed() {
@@ -425,7 +397,6 @@ public class ChangeTenantActivityPage {
 
     public void clickOnCancelButton() throws Exception {
         waitUntilVisibilityOfElement(CommonMethodsPageObjects.cancelBTN(), 40);
-        waitForSeconds(2);
         click(CommonMethodsPageObjects.cancelBTN());
         logger.addScreenshot("The 'إلغاء' Button is clickable");
     }
@@ -440,7 +411,7 @@ public class ChangeTenantActivityPage {
         PDDocument document = PDDocument.load(bfStream);
         PDFTextStripper stripper = new PDFTextStripper();
         int chr = stripper.getText(document).indexOf("Contract No.");
-        String contactVersion = stripper.getText(document).substring(chr, chr + 34);
+        String contactVersion = stripper.getText(document).substring(chr, chr + 32);
         String CurrentVersion = contactVersion.replace("Contract No. " + ContractNumber + " / ", "").replaceAll("[\n\r]", "").replaceAll(" ", "");
         logger.addScreenshot("The contract version is : "+ CurrentVersion);
         System.out.println(CurrentVersion);
@@ -462,7 +433,7 @@ public class ChangeTenantActivityPage {
         String NewTenantActivityCommercial = TenantActivityCommercial.substring(317,319);
         logger.addScreenshot("New Tenant Activity Commercial is : "+ NewTenantActivityCommercial);
         System.out.println(NewTenantActivityCommercial);
-        Browser.waitForSeconds(2);
+        Browser.waitForSeconds(1);
         return NewTenantActivityCommercial;
     }
 
@@ -470,7 +441,7 @@ public class ChangeTenantActivityPage {
         String home = System.getProperty("user.home");
         File file = new File( home + "\\Downloads\\" + ContractNumber + ".pdf");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
             Path filePath = Paths.get(file.toURI());
             Files.delete(filePath);
             System.out.println("File deleted");
@@ -480,10 +451,19 @@ public class ChangeTenantActivityPage {
     }
 
     public void assertContractVersionIsIncreased(Map<String,String>data,String ActualContractVersion){
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         Browser.waitForSeconds(1);
         Assert.assertNotEquals(ActualContractVersion,
                 data.get("Contract_Version_Change_Tenant_Activity"),
                 "Contract version is matching.");
+    }
+
+    public void assertContractVersionIsNotIncreased(Map<String,String>data,String ActualContractVersion){
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
+        Browser.waitForSeconds(1);
+        Assert.assertEquals(ActualContractVersion,
+                data.get("Contract_Version_Change_Tenant_Activity"),
+                "Contract version is not matching.");
     }
 
     public void assertNewTenantDescriptionIsVisible(Map<String,String>data,String ActualContractVersion){
@@ -492,4 +472,10 @@ public class ChangeTenantActivityPage {
                 data.get("NewTenantActivityDescription"),
                 "New tenant activity commercial is not updated/not matching.");
     }
-}
+
+    public void closeSubmitRequestPopUp() throws Exception {
+        Browser.click(LoginPageObjects.closeButton1());
+        logger.addScreenshot("");
+        Browser.waitForSeconds(1);
+        }
+    }
