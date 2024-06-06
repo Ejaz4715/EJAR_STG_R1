@@ -5,6 +5,7 @@ import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ManualRenewalPageObjects;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class ManualRenewalPage {
 
     public void getNewContractNumber() {
         Browser.waitForSeconds(1);
-        String val = Browser.getWebElement(ManualRenewalPageObjects.getNewContractNumber()).getText();
+        String val = Browser.getWebElement(ManualRenewalPageObjects.getNewContractNumber()).getText().replace("#","");
         TestDataManager.addDependantGlobalTestData("ManualRenewalContract", "New_Contract", val);
         TestDataManager.writeDependantGlobalTestData("ManualRenewalContract");
         System.out.println("New Contract Number : " + val);
@@ -144,7 +145,7 @@ public class ManualRenewalPage {
         String PopUpMessage1 = Browser.getText(ManualRenewalPageObjects.sendContractForRenewalMsg());
         Assert.assertTrue(PopUpMessage1.contains("تم إرسال طلب تجديد العقد"));
         String PopUpMessage2 = Browser.getText(ManualRenewalPageObjects.getContractFromPopUpUMsg());
-        Assert.assertTrue(PopUpMessage2.contains(data.get("New_Contract")));
+        Assert.assertTrue(PopUpMessage2.substring(19,31).contains(data.get("New_Contract")));
         Assert.assertTrue(PopUpMessage2.contains("للتجديد بنجاح"));
         logger.addScreenshot("");
     }
@@ -334,7 +335,7 @@ public class ManualRenewalPage {
         click(ManualRenewalPageObjects.lateFeesLabel());
         Browser.setText(ManualRenewalPageObjects.fillLateFeesInput(), "20");
         Browser.waitForSeconds(1);
-        click(ManualRenewalPageObjects.fillRetainerFeeInput());
+        click(ManualRenewalPageObjects.retainerLabel());
         Browser.setText(ManualRenewalPageObjects.fillRetainerFeeInput(), "20");
         Browser.waitForSeconds(1);
         logger.addScreenshot("Added Financial");
@@ -360,5 +361,11 @@ public class ManualRenewalPage {
     public void clickOnEditButton2() {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN2(), 20);
         click(ManualRenewalPageObjects.editBTN2());
+    }
+
+    public void navigateToContractInfoLabel(){
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.contractInfoLabel(),20);
+        Browser.click(CommonMethodsPageObjects.contractInfoLabel());
+        Browser.waitForSeconds(1);
     }
 }

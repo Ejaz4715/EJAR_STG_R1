@@ -310,7 +310,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -341,7 +341,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is Displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
@@ -375,7 +375,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on  (تحميل مسودة العقد) button");
@@ -412,7 +412,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on \"إلغاء\" button");
@@ -451,7 +451,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on \"إلغاء\" button");
@@ -495,7 +495,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on \"إلغاء\" button");
@@ -538,7 +538,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -578,7 +578,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -622,7 +622,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -665,7 +665,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -712,7 +712,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -759,7 +759,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -799,7 +799,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -842,7 +842,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -886,7 +886,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 10: Click on ( التالي ) button");
@@ -923,7 +923,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (عرض العقد)  option");
@@ -952,9 +952,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is change to  (انتظار رسوم منصة إيجار)");
-        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار", "Waiting Ejar Fee");
+        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -995,45 +995,11 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Click on Manual Renewal Card");
-        app.manualRenewalPage.ClickManualRenewalCard();
-        logger.info("Step 05: Click on filter icon");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 06: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-        app.manualRenewalPage.getCurrentContractNumber();
-        logger.info("Step 07: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 08: Click on ( تجديد العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
-        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
-        logger.info("Step 09: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
-        app.manualRenewalPage.getNewContractNumber();
-        CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
-        logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
-        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on ( التالي ) button");
-        CommonMethodsPage.scrollToElement(nextBTN());
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
-        app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on (إخلاء مسؤولية) checkbox");
-        CommonMethodsPage.clickOnDisclaimerCheckbox();
-        logger.info("Step 14: Click on (تأكيد وإرسال) button");
-        CommonMethodsPage.clickOnConfirmAndSubmitButton();
-        logger.info("Step 15:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
-        app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
-        logger.info("Step 16: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 17: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 18: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
+        logger.info("Step 04: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
-        logger.info("Step 19: Click on ( جاهز للتجديد ) card");
+        logger.info("Step 05: Click on ( جاهز للتجديد ) card");
         app.manualRenewalPage.navigateToReadyForRenewalPage();
-        logger.info("Step 20: Verify selected contract for renewal is not visible in Ready For Renewal ( جاهز للتجديد ) Contracts");
+        logger.info("Step 06: Verify selected contract for renewal is not visible in Ready For Renewal ( جاهز للتجديد ) Contracts");
         app.manualRenewalPage.verifySelectedContractIsNotVisibleInReadyForRenewalContracts(data.get("Old_Contract"));
     }
 
@@ -1057,7 +1023,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (عرض العقد)  option");
@@ -1065,7 +1031,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Click on  (تحميل مسودة العقد) button");
         CommonMethodsPage.clickOnDownloadDraftCopy();
         logger.info("Step 09: Verify contract version will be '1-0'");
-        CommonMethodsPage.PDFValidation(data.get("ContractNumber"), "Contract No. " + data.get("ContractNumber") + " / 1-0");
+        CommonMethodsPage.PDFValidation(data.get("New_Contract"), "Contract No. " + data.get("New_Contract") + " / 1-0");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1110,7 +1076,7 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickConfirmTermsAndConditionsBTN();
         logger.info("Step 12: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 13: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
@@ -1136,7 +1102,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("Old_Contract"));
         app.manualRenewalPage.getCurrentContractNumber();
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
@@ -1158,7 +1124,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
@@ -1168,13 +1133,13 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (عرض العقد)  option");
         CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
-        logger.info("Step 08: Verify 'انتظار رسوم منصة إيجار' Is Visible In Contract Time Line if Bo Manager resubmitted rejected contract to parties");
-        app.manualRenewalPage.contractTimeLineStatus("انتظار رسوم منصة إيجار");
+        logger.info("Step 08: Verify 'تم التقديم' status Is Visible In Contract Time Line after Bo Manager resubmitted rejected contract to parties");
+        app.manualRenewalPage.contractTimeLineStatus("تم التقديم");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1197,9 +1162,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-        logger.info("Step 06: Verify the status of contract is change to  (انتظار رسوم منصة إيجار) if Bo Manager resubmitted rejected contract to parties");
-        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار", "Waiting Ejar Fee");
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
+        logger.info("Step 06: Verify the status of contract is change to  (بانتظار موافقة الأطراف) after Bo Manager resubmitted rejected contract to parties");
+        CommonMethodsPage.verifyContractStatus("بانتظار موافقة الأطراف");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1269,9 +1234,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of new renewal contract is change to  ( مسودة )");
-        CommonMethodsPage.verifyContractStatus("مسودة", "draft");
+        CommonMethodsPage.verifyContractStatus("مسودة");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1295,23 +1260,25 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is ( مسودة )");
-        CommonMethodsPage.verifyContractStatus("مسودة", "draft");
+        CommonMethodsPage.verifyContractStatus("مسودة");
         logger.info("Step 07: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 08: Click on ( تجديد العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
-        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
+        logger.info("Step 08: Click on ( عرض العقد ) option");
+        CommonMethodsPage.KebabMenuOptions("عرض العقد");
+        CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
         logger.info("Step 09: Click on (تعديل) button");
         CommonMethodsPage.scrollToElement(editBTN1());
         app.manualRenewalPage.clickOnEditButton1();
         logger.info("Step 10: Update Financial terms");
+        app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
+        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.manualRenewalPage.updateFinancialInRenewalContract();
         app.addResidentialContractPage.clickContinueFinancialTermsBTN();
         logger.info("Step 11: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 12: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 13: Click on ( التالي ) button");
@@ -1325,7 +1292,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 17:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         logger.info("Step 18: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 19: Click on \"عرض جميع العقود\"");
@@ -1333,7 +1300,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 20: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 21: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 22: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 23: Click on ( عرض العقد ) option");
@@ -1652,7 +1619,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Click on ' الإرسال للتوثيق ' button > Verify Submit Contract for Renewal is visible");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
 
@@ -1686,7 +1653,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Contract Renewal Steps Page is Displayed");
         app.manualRenewalPage.verifyContractRenewalStepsPageIsDisplayed();
     }
@@ -1721,7 +1688,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is Displayed");
@@ -1758,7 +1725,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -1797,7 +1764,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -1838,7 +1805,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -1884,7 +1851,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -1929,7 +1896,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -1971,7 +1938,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2017,7 +1984,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2062,7 +2029,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2111,7 +2078,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2160,7 +2127,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2202,7 +2169,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2247,7 +2214,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2293,7 +2260,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -2397,7 +2364,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 06: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
-        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر", "Waiting Tenant Approval");
+        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2431,7 +2398,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 10: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 11: Verify Submit Contract For Renewal Page is displayed");
@@ -2551,7 +2518,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 12: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 13: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
@@ -2795,7 +2762,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
         logger.info("Step 11: Click on ( التالي ) button");
@@ -2969,7 +2936,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Click on ' الإرسال للتوثيق ' button > Verify Submit Contract for Renewal is visible ");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
 
@@ -3005,7 +2972,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.assertEditButtonNotVisible();
         logger.info("Step 10: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 11: Verify Contract Renewal Steps Page is Displayed");
         app.manualRenewalPage.verifyContractRenewalStepsPageIsDisplayed();
     }
@@ -3040,7 +3007,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is Displayed");
@@ -3077,7 +3044,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3116,7 +3083,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3157,7 +3124,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3203,7 +3170,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3248,7 +3215,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3290,7 +3257,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3336,7 +3303,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3381,7 +3348,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3430,7 +3397,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3479,7 +3446,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3521,7 +3488,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3566,7 +3533,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3611,7 +3578,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        CommonMethodsPage.SendForApprovalBTN();
+        app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Click on ( لنبدأ ) button");
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
@@ -3680,7 +3647,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is change to  (انتظار رسوم منصة إيجار)");
-        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار", "Waiting Ejar Fee");
+        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3717,6 +3684,7 @@ public class ManualRenewal extends NHCWebTest {
     //-------------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_104_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -3756,7 +3724,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("New_Contract"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4140,7 +4108,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 11: Click on  (تأكيد)  of pup up alert window");
-        CommonMethodsPage.clickOnConfirmButton();
+        app.manualRenewalPage.clickOnConfirmPopUpButton();
+        app.manualRenewalPage.navigateToContractInfoLabel();
+        Browser.executeJSScroll(-500);
         logger.info("Step 12: Verify the user navigate back to (مراجعة معلومات العقد) page");
         app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
@@ -4335,7 +4305,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 12: Click on  (رفض العقد) button");
         app.sendContractForApprovalPage.clickOnRejectTheContractButton();
         logger.info("Step 13: Enter wrong OTP number");
-        app.sendContractForApprovalPage.enterVerificationCode(data.get("Wrong_OTP"));
+        app.sendContractForApprovalPage.enterVerificationCode("34567");
         logger.info("Step 14: Click on  (التحقق من الهوية) button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         logger.info("Step 15: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
@@ -5025,6 +4995,7 @@ public class ManualRenewal extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         logger.info("Step 12: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsEnabled();
+        app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_146_ManualRenewal(Map<String, String> data) throws Exception {
@@ -5359,7 +5330,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 19: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 20: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
-        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر", "Waiting Tenant Approval");
+        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر");
     }
 
     //---------------------Manual_Renewal_Tenant_Reject------------------------------
@@ -6075,7 +6046,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify searched contract is appearing");
-        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("ContractNumber_Approved"));
+        CommonMethodsPage.verifySearchedContractIsDisplayed(data.get("New_Contract"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6479,7 +6450,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
-        CommonMethodsPage.changeUserRole("مؤجر");
+        CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
@@ -6569,6 +6540,7 @@ public class ManualRenewal extends NHCWebTest {
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         logger.info("Step 12: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsEnabled();
+        app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6804,7 +6776,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         logger.info("Step 13: Enter wrong OTP number");
-        app.sendContractForApprovalPage.enterVerificationCode(data.get("Wrong_OTP"));
+        app.sendContractForApprovalPage.enterVerificationCode("2428");
         logger.info("Step 14: Click on  (التحقق من الهوية) button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         logger.info("Step 15: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
@@ -6876,8 +6848,8 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
-        logger.info("Step 06: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
-        CommonMethodsPage.verifyContractStatus("نشط", "Active");
+        logger.info("Step 06: Verify the status of contract change to ( نشط)");
+        CommonMethodsPage.verifyContractStatus("نشط");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6951,8 +6923,8 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
-        logger.info("Step 06: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
-        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر", "Waiting Tenant Approval");
+        logger.info("Step 06: Verify the status of contract change to (بانتظار موافقة المؤجر)");
+        CommonMethodsPage.verifyContractStatus("بانتظار موافقة المؤجر");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6976,7 +6948,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is change to  (انتظار رسوم منصة إيجار)");
-        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار", "Waiting Ejar Fee");
+        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")

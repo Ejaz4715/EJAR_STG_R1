@@ -1,5 +1,6 @@
 package sa.ejar.web.login;
 
+import com.testcrew.manager.TestDataManager;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.pages.CommonMethodsPage;
@@ -12,7 +13,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_001_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -41,7 +43,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_002_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -70,7 +73,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_003_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -101,7 +105,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_004_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -134,7 +139,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_005_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -167,7 +173,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_006_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -202,7 +209,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_007_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -238,7 +246,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_008_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -269,7 +278,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_009_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -303,7 +313,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_010_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -337,7 +348,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_011_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -367,7 +379,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_012_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -399,7 +412,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_013_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -430,7 +444,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_014_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -476,7 +491,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_015_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -529,7 +545,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_016_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -558,7 +575,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_017_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -587,7 +605,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_018_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -619,7 +638,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_019_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -648,7 +668,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_020_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -677,7 +698,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_021_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -710,7 +732,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_022_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -743,7 +766,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_023_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -778,7 +802,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_024_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -814,7 +839,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_025_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -851,7 +877,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_026_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -884,7 +911,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_027_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -915,7 +943,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_028_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -949,7 +978,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_029_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -983,7 +1013,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_030_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1013,7 +1044,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_031_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1045,7 +1077,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_032_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1076,7 +1109,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_033_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1122,7 +1156,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_034_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1175,7 +1210,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_035_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1204,7 +1240,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_036_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1233,7 +1270,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_037_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1264,7 +1302,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
     //---------------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_038_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1293,7 +1332,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_039_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1322,7 +1362,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_040_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1352,13 +1393,14 @@ public class MoveInMoveOutUnit extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_041_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
+    public void TC_041_MoveInMoveOutUnit(){
                  //There is Bug in this TC
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_042_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1390,23 +1432,24 @@ public class MoveInMoveOutUnit extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_043_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
+    public void TC_043_MoveInMoveOutUnit(){
         //There is Bug in this TC
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_044_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
+    public void TC_044_MoveInMoveOutUnit() {
         //There is Bug in this TC
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_045_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
+    public void TC_045_MoveInMoveOutUnit(){
         //There is Bug in this TC
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_046_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1439,7 +1482,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_047_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1474,7 +1518,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_048_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1510,7 +1555,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_049_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1550,7 +1596,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         //----------------
         //There is Bug in this TC
         //---------------
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1584,7 +1631,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_051_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1615,7 +1663,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_052_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1649,7 +1698,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_053_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1683,7 +1733,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_054_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1713,7 +1764,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_055_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1745,7 +1797,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_056_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1776,7 +1829,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_057_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1822,7 +1876,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_058_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1875,7 +1930,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_059_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1904,7 +1960,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_060_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1933,7 +1990,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_061_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1965,7 +2023,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_062_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1994,7 +2053,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_063_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2023,7 +2083,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_064_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2055,7 +2116,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_065_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2088,7 +2150,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_066_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2123,7 +2186,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_067_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2159,7 +2223,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_068_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2196,7 +2261,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_069_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2227,7 +2293,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_070_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2261,7 +2328,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_071_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2295,7 +2363,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_072_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2325,7 +2394,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_073_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2357,7 +2427,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_074_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2388,7 +2459,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_075_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2434,7 +2506,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_076_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2487,7 +2560,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_077_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2516,7 +2590,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_078_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2545,7 +2620,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_079_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2577,7 +2653,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         //----------
         //There is Bug in TC
         //----------
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2606,7 +2683,8 @@ public class MoveInMoveOutUnit extends NHCWebTest {
     //--------------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_081_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2622,12 +2700,13 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 04: Enter Contract number in contract search field");
         CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 05: Verify move In/Out form status is 'مكتمل'");
-        CommonMethodsPage.verifyContractStatus("مكتمل", "Done");
+        CommonMethodsPage.verifyContractStatus("مكتمل");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_082_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2643,12 +2722,13 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 04: Enter Contract number in contract search field");
         CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 05: Verify move In/Out form status is 'بانتظار المؤجر'");
-        CommonMethodsPage.verifyContractStatus("بانتظار المؤجر", "Waiting Lessor");
+        CommonMethodsPage.verifyContractStatus("بانتظار المؤجر");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_083_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2664,12 +2744,13 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 04: Enter Contract number in contract search field");
         CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 05: Verify move In/Out form status is 'بانتظار المستأجر'");
-        CommonMethodsPage.verifyContractStatus("بانتظار المستأجر", "Waiting Tenant");
+        CommonMethodsPage.verifyContractStatus("بانتظار المستأجر");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_084_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -2685,6 +2766,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 04: Enter Contract number in contract search field");
         CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 05: Verify move In/Out form status is 'بانتظار الأطراف'");
-        CommonMethodsPage.verifyContractStatus("بانتظار الأطراف", "Waiting Ejar parties");
+        CommonMethodsPage.verifyContractStatus("بانتظار الأطراف");
     }
 }
