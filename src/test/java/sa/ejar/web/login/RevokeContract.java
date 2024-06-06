@@ -1049,9 +1049,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on تحميل button");
         CommonMethodsPage.ClickOnAttachment("download");
-//        CommonMethodsPage.verifyAttachmentHasBeenDownloaded();
         CommonMethodsPage.verifyNewTabIsOpened();
-        //Incomplete
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1290,38 +1288,12 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on العقود tab");
-        CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Click on filter icon");
+        logger.info("Step 02: Click on الطلبات tab > Select عرض الطلبات option");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        CommonMethodsPage.clickOnViewAllRequestsButton();
         CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 05: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-        logger.info("Step 06: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
-        CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in رقم إقرار التنفيذ input field");
-        app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in تاريخ إقرار input field");
-        app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in  ملاحظات  input field");
-        app.revokeContractPage.enterNotesText(data.get("Note"));
-        logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
-        app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on  التالي  button ");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on  تسوية جميع المدفوعات   radio button");
-        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
-        logger.info("Step 14: Click on التالي button");
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 15: Click on  تأكيد طلب الفسخ   button");
-        app.revokeContractPage.clickOnConfirmRevokeContractButton();
-        logger.info("Step 15: Click on إغلاق button");
-        CommonMethodsPage.clickOnCloseButton();
-        CommonMethodsPage.checkTheContractsPage();
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.checkRequestStatus("تم الإرسال");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1341,7 +1313,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickOnViewAllRequestsButton();
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
-        app.revokeContractPage.getReqNumApprove();
+        app.revokeContractPage.getRequestNumber();
     }
 
     /**
@@ -1385,8 +1357,8 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1408,7 +1380,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Check request status ");
         CommonMethodsPage.checkRequestStatus("تم الإرسال");
     }
@@ -1432,7 +1404,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed
@@ -1458,12 +1430,12 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07:  Click on \" إلغاء \" button on pop up");
         CommonMethodsPage.clickOnCancelButton();
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNum_Approval"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1485,7 +1457,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07:  Click on \"  تأكيد  \" button");
@@ -1512,7 +1484,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07:  Click on   إلغاء  button");
@@ -1539,7 +1511,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 10:  Verify the request status is قيد الانتظار ");
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
@@ -1563,7 +1535,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم إلغاء تعيينك لهذا الطلب. يرجى التأكيد لتنفيذ هذا الإجراء");
@@ -1588,12 +1560,12 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
         logger.info("Step 07:  Click on  \" إلغاء \" button ");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
-        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("ReqNum_Approval"));
+        CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1615,7 +1587,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04:  Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
         logger.info("Step 07:  Click on \"  تأكيد  \" button ");
@@ -1644,7 +1616,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");
@@ -1655,7 +1627,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 08: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 09: Enter request number in رقم الطلب input field");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         CommonMethodsPage.checkRequestStatus("تم الإرسال");
     }
 
@@ -1678,7 +1650,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");
@@ -1707,7 +1679,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on تحميل button beside attachment");
@@ -1734,7 +1706,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" قبول \" button ");
@@ -1761,7 +1733,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" قبول \" button ");
@@ -1790,7 +1762,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 08: Click on \" قبول \" button ");
@@ -1819,7 +1791,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Verify the request status is  موافق عليه ");
         CommonMethodsPage.checkRequestStatus("موافق عليه");
     }
@@ -1832,7 +1804,8 @@ public class RevokeContract extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_57_Revoke(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -1871,13 +1844,14 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 15: Click on  تأكيد طلب الفسخ   button");
         app.revokeContractPage.clickOnConfirmRevokeContractButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        CommonMethodsPage.clickOnCloseButton();
         logger.info("Step 16: Click on الطلبات tab > Select عرض الطلبات option");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         CommonMethodsPage.clickOnViewAllRequestsButton();
         CommonMethodsPage.clickFilterBtn();
-        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        CommonMethodsPage.inputContractNumberInContractSearchField(data.get("ContractNumber"));
         logger.info("Step 17: Get the request number");
-        app.revokeContractPage.getReqNumReject();
+        app.revokeContractPage.getRequestNumber();
 
     }
 
@@ -1900,7 +1874,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");
@@ -1927,7 +1901,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" رفض \" button ");
@@ -1954,7 +1928,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" رفض \" button ");
@@ -1982,7 +1956,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" رفض \" button ");
@@ -2009,7 +1983,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \" رفض \" button ");
@@ -2038,7 +2012,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on  رفض button ");
@@ -2069,7 +2043,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on  رفض button ");
@@ -2101,7 +2075,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on  رفض button ");
@@ -2133,7 +2107,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Rejection"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Verify the request status is \"مرفوض  \"");
         CommonMethodsPage.checkRequestStatus("مرفوض");
     }
@@ -2746,8 +2720,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
         logger.info("Step 17: Get the request number");
-        app.revokeContractPage.getReqNumApproveWithPayment();
-
+        app.revokeContractPage.getRequestNumber();
     }
 
     /**
@@ -2774,7 +2747,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 04: Click on filter button ");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
-        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ReqNum_Approval_With_Payment"));
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         logger.info("Step 07: Click on \"  تأكيد  \" button");

@@ -132,23 +132,23 @@ public class RevokeContractPage {
 
     }
 
-    public void getReqNumApprove() {
+    public void getRequestNumber() {
         String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
-        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval", request);
+        TestDataManager.addDependantGlobalTestData("Revoke", "RequestNumber", request);
         TestDataManager.writeDependantGlobalTestData("Revoke");
     }
 
-    public void getReqNumReject() {
-        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
-        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Rejection", request);
-        TestDataManager.writeDependantGlobalTestData("Revoke");
-    }
-
-    public void getReqNumApproveWithPayment() {
-        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
-        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval_With_Payment", request);
-        TestDataManager.writeDependantGlobalTestData("Revoke");
-    }
+//    public void getReqNumReject() {
+//        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
+//        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Rejection", request);
+//        TestDataManager.writeDependantGlobalTestData("Revoke");
+//    }
+//
+//    public void getReqNumApproveWithPayment() {
+//        String request = CommonMethodsPage.getRequestNumberFromRequestPage(RevokeContractPageObjects.RequestNumberText());
+//        TestDataManager.addDependantGlobalTestData("Revoke", "ReqNum_Approval_With_Payment", request);
+//        TestDataManager.writeDependantGlobalTestData("Revoke");
+//    }
 
 
     public void clickOnViewButtonOnRequest() {

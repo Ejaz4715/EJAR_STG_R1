@@ -2,11 +2,14 @@ package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import sa.ejar.web.objects.pre_condition.*;
 
+import java.time.Duration;
 import java.util.List;
 
 import static com.testcrew.web.Browser.driver;
@@ -185,7 +188,6 @@ public class CreateNewCommercialContractPage {
     public void selectLessorRadioBtnForAccountOwner() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.ibanAccountOwnerRadioBTN(), 15);
         Browser.click(AddCommercialContractObjects.ibanAccountOwnerRadioBTN());
-//        Browser.click(AddCommercialContractObjects.continueToOwnerInfo());
     }
 
     public void clickContinueFinancialTermsBTN(String status, String amount) throws Exception {
@@ -224,13 +226,16 @@ public class CreateNewCommercialContractPage {
 
     public void clickOnSameTermRadioButton() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 20);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.SameTermRadioButton(), 20);
         Browser.click(AddCommercialContractObjects.SameTermRadioButton());
     }
 
     public void enterNoticePeriod(String period) {
+        Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.SameTermRadioButton(), 20);
         Browser.waitUntilPresenceOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
-        Browser.setText(AddCommercialContractObjects.NoticePeriodInput(), period);
+        WebElement ele = Browser.getWebElement(AddCommercialContractObjects.NoticePeriodInput());
+        ele.sendKeys(period);
     }
 }
