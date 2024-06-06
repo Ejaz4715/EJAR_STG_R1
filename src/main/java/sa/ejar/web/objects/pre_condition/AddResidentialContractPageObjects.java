@@ -7,6 +7,7 @@ import com.testcrew.manager.TestConfigManager;
 
 public class AddResidentialContractPageObjects {
 
+
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
 
         put("option-new-residential-contract", new HashMap<>(){{
@@ -709,5 +710,25 @@ public class AddResidentialContractPageObjects {
 
     public static By WarningClass() {
         return By.xpath("//li[@class= 'warning']");
+    }
+
+    public static By CommercialRadioBTN() {
+        return By.xpath("//label[text()=' التجارية ']/ancestor::app-form-radio[@formcontrolname=\"organization_type\"]");
+    }
+
+    public static By addOrganizationTenantBTN() {
+        return By.xpath("//a[@data-test-id=\"contracts.contract-parties.add-organization-tenant\"]");
+    }
+
+    public static By SearchOrganizationBTN(){
+        return By.xpath("//button[@data-test-id=\"organization.step1.continue\"]");
+    }
+
+    public static By ContinueOrganizationBTN() {
+        return By.xpath("//button[@data-test-id=\"organization.step2.continue\"]");
+    }
+
+    public static By tenantRepRadioBTN() {
+        return By.xpath("//label[text() = ' ممثل المستأجر ']");
     }
 }

@@ -53,7 +53,6 @@ public class MoveInMoveOutUnitsPage {
         String filepath = Paths.get(CURRENT_DIR, "src", "main", "resources") + "\\" + File;
         WebElement UploadFile = Browser.getWebElement(RevokeContractPageObjects.UploadDocumentsInput());
         UploadFile.sendKeys(filepath);
-        Browser.waitForSeconds(2);
     }
 
 

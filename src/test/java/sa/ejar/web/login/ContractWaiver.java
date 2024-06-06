@@ -4452,7 +4452,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Verify error message (pending request to Change Lessor/Lessor Representative)");
         app.contractWaiverPage.verifyErrorMessagePopUpIsDisplayed();
-        app.contractWaiverPage.validateTheErrorMessageOnPopUp("");
+        app.contractWaiverPage.validateTheErrorMessageOnPopUp("عذرا، لا يمكن تقديم طلب التنازل عن العقد بسبب وجود طلب تغيير المؤجر/ممثل المؤجر على نفس وثيقة الملكية التابع لهذا العقد بانتظار الموافقة");
     }
 
     @Test(dataProvider = "testDataProvider")

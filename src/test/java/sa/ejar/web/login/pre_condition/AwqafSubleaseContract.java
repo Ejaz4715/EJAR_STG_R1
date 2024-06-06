@@ -35,13 +35,17 @@ public class AwqafSubleaseContract extends NHCWebTest {
         String endDate = CommonMethodsPage.getCurrentDate(0, 4, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.createNewCommercialContractPage.clickConfirmPeriodBTN();
+        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
+        app.createNewCommercialContractPage.enterNoticePeriod("60");
         logger.info("Step 04: Navigate Add Individual Tenant >Input Individual/Tenant Information details > Confirm");
         app.addResidentialContractPage.clickContractPartiesBTN();
-        app.addResidentialContractPage.clickAddIndividualTenantBTN();
-        app.addResidentialContractPage.clickTenantRadioBTN();
+        app.addResidentialContractPage.clickAddTenantBTN(data.get("TenantType"), data.get("CrNumber"));
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
+        if (data.get("TenantType").equalsIgnoreCase("organization")){
+            app.addResidentialContractPage.addNewOwnerShipDocument();
+        }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 05: Navigate to Financial > Input annual rent > Select Payment >select IBAN > Select account owner > Continue");
         app.createNewCommercialContractPage.clickFinancialTermsStepBTN();
@@ -56,8 +60,6 @@ public class AwqafSubleaseContract extends NHCWebTest {
         app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.addResidentialContractPage.clickConfirmFinancialTermsBTN(data.get("EnableSecurityDeposit"), data.get("SecurityAmount"));
         logger.info("Step 07: Navigate to Terms And Conditions > Select Brokerage Office as Ejar fees payer > Select Governing Law");
-        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
-        app.createNewCommercialContractPage.enterNoticePeriod("60");
         app.addResidentialContractPage.clickTermsAndConditionsStepBTN();
         Browser.waitForSeconds(3);
         app.createNewCommercialContractPage.clickAddTermsAndConditionsBTN();
@@ -179,11 +181,13 @@ public class AwqafSubleaseContract extends NHCWebTest {
         app.createNewCommercialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 04: Navigate Add Individual Tenant >Input Individual/Tenant Information details > Confirm");
         app.addResidentialContractPage.clickContractPartiesBTN();
-        app.addResidentialContractPage.clickAddIndividualTenantBTN();
-        app.addResidentialContractPage.clickTenantRadioBTN();
+        app.addResidentialContractPage.clickAddTenantBTN(data.get("TenantType"), data.get("CrNumber"));
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
+        if (data.get("TenantType").equalsIgnoreCase("organization")){
+            app.addResidentialContractPage.addNewOwnerShipDocument();
+        }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 05: Navigate to Financial > Input annual rent > Select Payment >select IBAN > Select account owner > Continue");
         app.createNewCommercialContractPage.clickFinancialTermsStepBTN();
