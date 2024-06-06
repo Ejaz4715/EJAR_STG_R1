@@ -9,7 +9,6 @@ import static com.testcrew.web.Browser.logger;
 public class LoginPage {
 
     public void enterUsername(String UserName) throws Exception {
-        logger.info("Enter UserName As : " + UserName);
         Browser.setText(LoginPageObjects.setTextEmail(), UserName);
     }
 
@@ -28,7 +27,7 @@ public class LoginPage {
         Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
         Browser.waitForSeconds(1);
         Browser.click(LoginPageObjects.confirmButton());
-        logger.addScreenshot("OTP entered");
+        logger.addScreenshot("OTP is entered");
     }
 
     public void enterVerificationCodeForOTP(String OTP) throws Exception {
