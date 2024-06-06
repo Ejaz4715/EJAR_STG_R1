@@ -454,7 +454,7 @@ public class ChangeTenantActivityPage {
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         Browser.waitForSeconds(1);
         Assert.assertNotEquals(ActualContractVersion,
-                data.get("Contract_Version_Change_Tenant_Activity"),
+                data.get("Current_Contract_Version"),
                 "Contract version is matching.");
     }
 
@@ -462,7 +462,7 @@ public class ChangeTenantActivityPage {
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         Browser.waitForSeconds(1);
         Assert.assertEquals(ActualContractVersion,
-                data.get("Contract_Version_Change_Tenant_Activity"),
+                data.get("Current_Contract_Version"),
                 "Contract version is not matching.");
     }
 

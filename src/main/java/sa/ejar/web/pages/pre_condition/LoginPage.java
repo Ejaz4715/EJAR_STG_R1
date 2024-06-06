@@ -1,15 +1,9 @@
 package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.base.WebBasePage;
-import com.testcrew.manager.ReportManager;
 import com.testcrew.web.Browser;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
-
-import java.util.List;
-import java.util.Map;
-
-import static com.testcrew.web.Browser.driver;
 import static com.testcrew.web.Browser.logger;
 
 public class LoginPage extends WebBasePage {
@@ -45,17 +39,14 @@ public class LoginPage extends WebBasePage {
     }
 
     public void closeExploreEjarPopUp() throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 20);
         while (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp()) || Browser.isElementPresent(LoginPageObjects.closeButton2()) || Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-            Browser.waitForSeconds(1);
-            if (Browser.isElementPresent(LoginPageObjects.closeButton2())) {
+            if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
+                Browser.click(LoginPageObjects.closeButton1());
+            } else{
                 Browser.click(LoginPageObjects.closeButton2());
-            } else if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
-                Browser.click(LoginPageObjects.closeButton1());
-            } else if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
-                Browser.click(LoginPageObjects.closeButton1());
             }
-            Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 40);
+            Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 20);
         }
     }
 }
