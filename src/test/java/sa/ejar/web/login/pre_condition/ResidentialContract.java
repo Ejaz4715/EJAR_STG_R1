@@ -4,6 +4,7 @@ import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
 import java.util.Map;
@@ -113,7 +114,7 @@ public class ResidentialContract extends NHCWebTest{
         logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        String endDate = CommonMethodsPage.getCurrentDate(0,2,0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 04: Navigate to Add Property > Select property > Select unit and confirm");
@@ -205,7 +206,9 @@ public class ResidentialContract extends NHCWebTest{
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
+        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())){
+            CommonMethodsPage.clickOnConfirmButton();
+        }
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
@@ -234,12 +237,7 @@ public class ResidentialContract extends NHCWebTest{
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
-        CommonMethodsPage.clickOnConfirmButton();
-        CommonMethodsPage.clickOnConfirmButton();
-        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
+
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();

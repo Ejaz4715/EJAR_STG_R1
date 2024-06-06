@@ -202,7 +202,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By allInvoicesBTN() {
-        return By.xpath("//span[text()='عرض الفواتير']");
+        return By.xpath("//span[contains(text(),'عرض الفواتير')]");
     }
 
     public static By contractsInvoices() {

@@ -3,6 +3,7 @@ package sa.ejar.web.pages;
 import com.testcrew.web.Browser;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
 
@@ -284,5 +285,13 @@ public class SendContractForApprovalPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.approvalConfirmedMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.approvalConfirmedMsg()));
         logger.addScreenshot("The (تمت الموافقة) message is Displayed");
+    }
+
+    public void submitContract() {
+        if(Browser.isElementPresent(CommonMethodsPageObjects.ratingBTN())){
+            CommonMethodsPage.clickRatingButtons();
+            CommonMethodsPage.clickOnSubmitButton();
+            CommonMethodsPage.verifyTheSurveyIsSuccessfullySubmittedDisplayed();
+        }
     }
 }
