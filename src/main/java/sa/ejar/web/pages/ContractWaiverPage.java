@@ -108,7 +108,7 @@ public class ContractWaiverPage {
 
     public void requestNumber(){
         String request = getRequestNumber();
-        TestDataManager.addDependantGlobalTestData("ContractWaiver", "ReqNumApproval", request);
+        TestDataManager.addDependantGlobalTestData("ContractWaiver", "RequestNumber", request);
         TestDataManager.writeDependantGlobalTestData("ContractWaiver");
     }
 //    public void reqNumLessorRejection(){

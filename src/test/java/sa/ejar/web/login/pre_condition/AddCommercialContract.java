@@ -43,15 +43,15 @@ public class AddCommercialContract extends NHCWebTest {
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
         logger.info("Step 05: Navigate Add Individual Tenant >Input Individual/Tenant Information details > Confirm");
         app.addResidentialContractPage.clickContractPartiesBTN();
-        app.addResidentialContractPage.clickAddIndividualTenantBTN();
-        app.addResidentialContractPage.clickTenantRadioBTN();
+        app.addResidentialContractPage.clickAddTenantBTN(data.get("TenantType"), data.get("CrNumber"));
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
+        if (data.get("TenantType").equalsIgnoreCase("organization")){
+            app.addResidentialContractPage.addNewOwnerShipDocument();
+        }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 06: Navigate to Financial > Input annual rent > Select Single Payment >select IBAN > Select account owner > Continue");
-        app.createNewCommercialContractPage.clickOnSameTermRadioButton();
-        app.createNewCommercialContractPage.enterNoticePeriod("60");
         app.createNewCommercialContractPage.clickFinancialTermsStepBTN();
         app.createNewCommercialContractPage.clickAddRentalContractTermsBTN();
         app.createNewCommercialContractPage.enterAnnulRent("12000");
@@ -188,11 +188,13 @@ public class AddCommercialContract extends NHCWebTest {
         app.createNewCommercialContractPage.clickConfirmPropertyDetailsBTN();
         logger.info("Step 05: Navigate Add Individual Tenant >Input Individual/Tenant Information details > Confirm");
         app.addResidentialContractPage.clickContractPartiesBTN();
-        app.addResidentialContractPage.clickAddIndividualTenantBTN();
-        app.addResidentialContractPage.clickTenantRadioBTN();
+        app.addResidentialContractPage.clickAddTenantBTN(data.get("TenantType"), data.get("CrNumber"));
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
+        if (data.get("TenantType").equalsIgnoreCase("organization")){
+            app.addResidentialContractPage.addNewOwnerShipDocument();
+        }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
         logger.info("Step 06: Navigate to Financial > Input annual rent > Select Single Payment >select IBAN > Select account owner > Continue");
         app.createNewCommercialContractPage.clickFinancialTermsStepBTN();

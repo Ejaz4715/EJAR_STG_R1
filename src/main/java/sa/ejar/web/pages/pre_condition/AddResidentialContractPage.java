@@ -1,21 +1,18 @@
 package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.web.Browser;
-import org.apache.commons.math3.analysis.function.Add;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
+import sa.ejar.web.pages.ChangeLessor_LessorRepPage;
+import sa.ejar.web.pages.CommonMethodsPage;
+import sa.ejar.web.pages.MoveInMoveOutUnitsPage;
 
-import java.time.Duration;
 import java.util.List;
-
-import static com.testcrew.web.Browser.driver;
 
 
 public class AddResidentialContractPage {
@@ -251,10 +248,60 @@ public class AddResidentialContractPage {
         Browser.click(AddResidentialContractPageObjects.addIndividualTenantBTN());
     }
 
+    /**
+     * Method to select the tenant type - Organization tenant is in if part
+     *
+     * @param tenantType - Tenant type to be selected
+     * @param CrNumber   - CR number of organization if tenant type is ORGANIZATION
+     */
+    public void clickAddTenantBTN(String tenantType, String CrNumber) throws Exception {
+        if (tenantType.equalsIgnoreCase("organization")) {
+            //Select tenant organization
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addOrganizationTenantBTN(), 40);
+            Browser.click(AddResidentialContractPageObjects.addOrganizationTenantBTN());
+            // Select the license type > input CR number and continue
+            clickTenantRadioBTN();
+            clickCommercialRadioBTN();
+            CommonMethodsPage.enterCRNumberInputField(CrNumber);
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.SearchOrganizationBTN(), 40);
+            Browser.click(AddResidentialContractPageObjects.SearchOrganizationBTN());
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.ContinueOrganizationBTN(), 40);
+            Browser.click(AddResidentialContractPageObjects.ContinueOrganizationBTN());
+            //Click tenant representative radio button
+            clickTenantRepresentativeRadioBTN();
+        } else {
+            Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.addIndividualTenantBTN(), 50);
+            Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.addIndividualTenantBTN(), 50);
+            Browser.click(AddResidentialContractPageObjects.addIndividualTenantBTN());
+            clickTenantRadioBTN();
+        }
+    }
+
+    public void addNewOwnerShipDocument() throws Exception {
+        new ChangeLessor_LessorRepPage().clickOnAddNewRepresentationDocumentLink();
+        new ChangeLessor_LessorRepPage().clickOnDocumentTypeDropdown();
+        CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(RandomStringUtils.randomAlphanumeric(6));
+        new ChangeLessor_LessorRepPage().enterDocumentName(RandomStringUtils.randomAlphanumeric(10));
+        new MoveInMoveOutUnitsPage().uploadFile("ejartest.pdf");
+        new ChangeLessor_LessorRepPage().clickOnAddButton();
+    }
     public void clickTenantRadioBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 50);
         Browser.click(AddResidentialContractPageObjects.tenantRadioBTN());
     }
+
+    public void clickTenantRepresentativeRadioBTN() {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRepRadioBTN(), 40);
+        Browser.click(AddResidentialContractPageObjects.tenantRepRadioBTN());
+    }
+
+    public void clickCommercialRadioBTN() {
+        Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.CommercialRadioBTN(), 50);
+        Browser.waitUntilElementToBeClickable(AddResidentialContractPageObjects.CommercialRadioBTN(), 50);
+        Browser.click(AddResidentialContractPageObjects.CommercialRadioBTN());
+    }
+
 
     public void verifyTenantRadioBTNIsClickable() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 50);
@@ -407,11 +454,11 @@ public class AddResidentialContractPage {
     public void clickSubmitForApprovalBTN() throws Exception {
         Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.StepsList(), 50);
         List<WebElement> list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
-        while(list.size() < 5) {
+        while (list.size() < 5) {
             list = Browser.getWebElements(AddResidentialContractPageObjects.StepsList());
             Browser.waitForSeconds(1);
         }
-        while (Browser.isElementPresent(AddResidentialContractPageObjects.WarningClass())){
+        while (Browser.isElementPresent(AddResidentialContractPageObjects.WarningClass())) {
             Browser.waitForSeconds(1);
         }
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.submitForApprovalBTN(), 35);
@@ -425,7 +472,7 @@ public class AddResidentialContractPage {
     }
 
     public void clickContinuePayBtnOnPreviewBrokerageAgreementPage() throws Exception {
-        if (Browser.isElementPresent(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage())){
+        if (Browser.isElementPresent(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage())) {
             Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage(), 35);
             Browser.click(AddResidentialContractPageObjects.continuePayBtnOnPreviewBrokerageAgreementPage());
         }

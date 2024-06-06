@@ -226,13 +226,16 @@ public class CreateNewCommercialContractPage {
 
     public void clickOnSameTermRadioButton() throws Exception {
         Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.confirmPeriodBTN(), 20);
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 20);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.SameTermRadioButton(), 20);
         Browser.click(AddCommercialContractObjects.SameTermRadioButton());
     }
 
     public void enterNoticePeriod(String period) {
+        Browser.waitUntilElementToBeClickable(AddCommercialContractObjects.SameTermRadioButton(), 20);
         Browser.waitUntilPresenceOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
         Browser.waitUntilVisibilityOfElement(AddCommercialContractObjects.NoticePeriodInput(), 20);
-        Browser.setText(AddCommercialContractObjects.NoticePeriodInput(), period);
+        WebElement ele = Browser.getWebElement(AddCommercialContractObjects.NoticePeriodInput());
+        ele.sendKeys(period);
     }
 }
