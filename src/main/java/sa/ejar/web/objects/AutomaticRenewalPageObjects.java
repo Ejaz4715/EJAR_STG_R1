@@ -7,6 +7,9 @@ public class AutomaticRenewalPageObjects {
     public static By ContractEndDate() {
         return By.xpath("//span[text()='تاريخ الانتهاء']/parent::div/descendant::span[@class=\"item-value\"]");
     }
+    public static By ContractStartDate() {
+        return By.xpath("//span[text()='تاريخ البدء']/parent::div/descendant::span[@class=\"item-value\"]");
+    }
 
     public static By ContractTimeLine() {
         return By.xpath("//ul[@class=\"timeline\"]/child::li");
