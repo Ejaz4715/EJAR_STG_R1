@@ -15,7 +15,7 @@ public class ChangeTenantActivity extends NHCWebTest {
     //----------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_001_ChangeTenantActivity(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -37,7 +37,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
         app.changeTenantActivityPage.getPartiesDetails();
         CommonMethodsPage.clickOnDownloadContractCopy();
-        String CurrentContractVersion =app.changeTenantActivityPage.getContractVersionFromPDF(data.get("ContractNumber"));
+        String CurrentContractVersion = app.changeTenantActivityPage.getContractVersionFromPDF(data.get("ContractNumber"));
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "Current_Contract_Version", CurrentContractVersion);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
         CommonMethodsPage.closeNewTab();
@@ -50,7 +50,8 @@ public class ChangeTenantActivity extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_002_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -307,7 +308,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_011_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -339,7 +341,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_012_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -370,7 +373,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_013_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -404,7 +408,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_014_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -435,7 +440,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_015_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -473,7 +479,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_016_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -514,7 +521,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_017_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -554,7 +562,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_018_ChangeTenantActivity(Map<String, String> data) throws Exception {
-logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step 00: Test Data : " + data);
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
         app.loginPage.enterUsername(data.get("Username"));
@@ -724,8 +733,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         app.changeTenantActivityPage.selectRequestType("تغيير النشاط التجاري");
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
-        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
+        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"), data.get("TenantRepresentativeName"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
@@ -755,7 +764,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_026_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -783,7 +792,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
     //-----------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_027_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -803,7 +812,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_028_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -844,14 +853,14 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
-        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
+        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"), data.get("TenantRepresentativeName"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_030_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -894,7 +903,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
         logger.info("Step 06: Check request status");
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
@@ -1444,7 +1453,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_048_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -1472,7 +1481,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
     //----------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
     public void TC_049_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -1494,7 +1503,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
         app.changeTenantActivityPage.getPartiesDetails();
         CommonMethodsPage.clickOnDownloadContractCopy();
-        String CurrentContractVersion =app.changeTenantActivityPage.getContractVersionFromPDF(data.get("ContractNumber"));
+        String CurrentContractVersion = app.changeTenantActivityPage.getContractVersionFromPDF(data.get("ContractNumber"));
         TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "Current_Contract_Version", CurrentContractVersion);
         TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
         CommonMethodsPage.closeNewTab();
@@ -1508,7 +1517,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_050_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -1533,7 +1542,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_051_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -1560,7 +1569,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_052_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -1617,39 +1626,39 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
     }
 
     // BUG------------------------
-     @Test(dataProvider = "testDataProvider")
-     public void TC_054_ChangeTenantActivity(Map<String, String> data) throws Exception {
-      data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+    @Test(dataProvider = "testDataProvider")
+    public void TC_054_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
-     app.openApplication(data);
-     logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-     app.loginPage.enterUsername(data.get("Username"));
-     app.loginPage.enterPassword(data.get("Password"));
-     app.loginPage.clickLogin();
-     app.loginPage.enterVerificationCode(data.get("OTP"));
-     app.loginPage.closeExploreEjarPopUp();
-     CommonMethodsPage.changeUserRole("مؤجر");
-     logger.info("Step 02: Click on العقود tab");
-     app.addResidentialContractPage.clickContractsBtn();
-     CommonMethodsPage.selectViewAllContractsButton();
-     logger.info("Step 03: Click on filter icon");
-     CommonMethodsPage.clickFilterBtn();
-     logger.info("Step 04: From contract search field enter contract number");
-     CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-     logger.info("Step 05: Click on three dots");
-     CommonMethodsPage.clickOnKebabMenuButton();
-     logger.info("Step 06: Click Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
-     CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
-     CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
-     app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
-     logger.info("Step 07: Check old tenant Activity description ( نشاط المستأجر القديم ) is displayed");
-     app.changeTenantActivityPage.assertOldTenantActivityHeadingOnChangeTenantActivityPage();
-     app.changeTenantActivityPage.getOldTenantActivityDescriptionOnChangeTenantActivityPage();
-     }
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        app.addResidentialContractPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.KebabMenuOptions("تغيير نشاط المستأجر");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        app.changeTenantActivityPage.verifyChangeTenantActivityPageHeaderIsDisplayed();
+        logger.info("Step 07: Check old tenant Activity description ( نشاط المستأجر القديم ) is displayed");
+        app.changeTenantActivityPage.assertOldTenantActivityHeadingOnChangeTenantActivityPage();
+        app.changeTenantActivityPage.getOldTenantActivityDescriptionOnChangeTenantActivityPage();
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_055_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1676,7 +1685,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_056_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1702,38 +1711,38 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
     }
 
     //BUG------------------------
-     @Test(dataProvider = "testDataProvider")
-     public void TC_057_ChangeTenantActivity(Map<String, String> data) throws Exception {
-      data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+    @Test(dataProvider = "testDataProvider")
+    public void TC_057_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
-     app.openApplication(data);
-     logger.info("Step 01: Login to ejar system with credentials");
-     app.loginPage.enterUsername(data.get("Username"));
-     app.loginPage.enterPassword(data.get("Password"));
-     app.loginPage.clickLogin();
-     app.loginPage.enterVerificationCode(data.get("OTP"));
-     app.loginPage.closeExploreEjarPopUp();
-     CommonMethodsPage.changeUserRole("مؤجر");
-     logger.info("Step 02: Click on contract ( العقود ) tab");
-     CommonMethodsPage.clickContractsBtn();
-     CommonMethodsPage.selectViewAllContractsButton();
-     logger.info("Step 03: Click on filter button");
-     CommonMethodsPage.clickFilterBtn();
-     logger.info("Step 04: From contract search field enter contract number");
-     CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-     logger.info("Step 05: Click on three dots (contract list action)");
-     CommonMethodsPage.clickOnKebabMenuButton();
-     logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
-     CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
-     logger.info("Step 07: Enter/Delete text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
-     app.changeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
-     logger.info("Step 08: Verify Submit Request (تقديم الطلب ) button is disabled");
-     CommonMethodsPage.verifySubmitRequestIsDisabled();
-     }
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click on Change Tenant Activity ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        logger.info("Step 07: Enter/Delete text in New Tenant Activity ( نشاط المستأجر الجديد ) input field");
+        app.changeTenantActivityPage.deleteNewTenantActivityDescription("نشاط المستأجر الجديد");
+        logger.info("Step 08: Verify Submit Request (تقديم الطلب ) button is disabled");
+        CommonMethodsPage.verifySubmitRequestIsDisabled();
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_058_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1764,7 +1773,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_059_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1797,7 +1806,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_060_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1829,7 +1838,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_061_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1864,7 +1873,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_062_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1896,7 +1905,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_063_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1935,7 +1944,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_064_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -1977,7 +1986,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_065_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2018,7 +2027,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_066_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2059,7 +2068,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_067_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2077,7 +2086,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_068_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2097,7 +2106,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_069_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -2120,7 +2129,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_070_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -2145,7 +2154,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_071_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -2194,8 +2203,8 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         app.changeTenantActivityPage.selectRequestType("تغيير النشاط التجاري");
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
-        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
+        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"), data.get("TenantRepresentativeName"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
@@ -2225,7 +2234,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_074_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -2254,7 +2263,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_075_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2274,7 +2283,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_076_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2315,14 +2324,14 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
-        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"),data.get("TenantRepresentativeName"));
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
+        app.changeTenantActivityPage.assertCreatedDateAndIssuedByOnRequestDetails(data.get("LessorName"), data.get("TenantRepresentativeName"));
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_078_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -2365,7 +2374,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
         String Date = app.changeTenantActivityPage.verifyIssueDate();
         app.changeTenantActivityPage.assertRequestDetails(data.get("ChangeTenantActivityRequestNumber"),
-                "تغيير النشاط التجاري", data.get("ContractNumber"),Date);
+                "تغيير النشاط التجاري", data.get("ContractNumber"), Date);
         logger.info("Step 06: Check request status");
         CommonMethodsPage.checkRequestStatus("قيد الانتظار");
     }
@@ -2429,36 +2438,36 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
     }
 
     //BUG------------------------
-     @Test(dataProvider = "testDataProvider")
-     public void TC_082_ChangeTenantActivity(Map<String, String> data) throws Exception {
-     data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
-     logger.info("Step 00: Test Data : " + data);
-     app.openApplication(data);
-     logger.info("Step 01: Login to ejar system with credentials");
-     app.loginPage.enterUsername(data.get("Username"));
-     app.loginPage.enterPassword(data.get("Password"));
-     app.loginPage.clickLogin();
-     app.loginPage.enterVerificationCode(data.get("OTP"));
-     app.loginPage.closeExploreEjarPopUp();
-     CommonMethodsPage.changeUserRole("مستأجر");
-     logger.info("Step 02: Click on requests tab");
-     CommonMethodsPage.clickOnTheRequestsTabButton();
-     logger.info("Step 03: From requests dropdown list Click on view requests");
-     CommonMethodsPage.clickOnViewAllRequestsButton();
-     logger.info("Step 04: Click on filter button");
-     CommonMethodsPage.clickFilterBtn();
-     logger.info("Step 05: Enter request number in request code input field");
-     CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
-     logger.info("Step 06: Click on three dots");
-     CommonMethodsPage.clickOnKebabMenuButton();
-     logger.info("step 07: Click on view request (عرض الطلب ) option");
-     app.changeTenantActivityPage.clickOnViewRequestButton();
-     logger.info("Step 08: Click on Start (لنبدأ) button");
-     app.changeTenantActivityPage.clickOnLetsStartButton();
-     logger.info("Step 09: Check Old Tenant Activity ( وصف نشاط المستأجر القديم ) details");
-     app.changeTenantActivityPage.clickOnOldTenantActivity();
-     app.changeTenantActivityPage.assertOldTenantDescriptionDetails("");
-     }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_082_ChangeTenantActivity(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
+        logger.info("Step 02: Click on requests tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: From requests dropdown list Click on view requests");
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in request code input field");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("ChangeTenantActivityRequestNumber"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("step 07: Click on view request (عرض الطلب ) option");
+        app.changeTenantActivityPage.clickOnViewRequestButton();
+        logger.info("Step 08: Click on Start (لنبدأ) button");
+        app.changeTenantActivityPage.clickOnLetsStartButton();
+        logger.info("Step 09: Check Old Tenant Activity ( وصف نشاط المستأجر القديم ) details");
+        app.changeTenantActivityPage.clickOnOldTenantActivity();
+        app.changeTenantActivityPage.assertOldTenantDescriptionDetails("");
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_083_ChangeTenantActivity(Map<String, String> data) throws Exception {
@@ -3078,7 +3087,7 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
 
     @Test(dataProvider = "testDataProvider")
     public void TC_101_ChangeTenantActivity(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
         app.openApplication(data);
@@ -3103,5 +3112,87 @@ logger.info("Step 00: Test Data : " + data.toString());        logger.info("Step
         CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
         logger.info("Step 08: Verify 'تم إنشاء العقد' Is Visible In Contract Time Line  after approved change tenant activity request from tenant");
         app.manualRenewalPage.contractTimeLineStatus("تم إنشاء العقد");
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_CreateChangeTenantActivityRequestByTenantRepresentative(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مستأجر");
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
+        app.changeTenantActivityPage.clickOnSubmitRequest();
+        logger.info("Step 09: Enter Valid OTP number");
+        app.loginPage.enterVerificationCodeForOTP("1234");
+        logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
+        CommonMethodsPage.clickOnVerifyIdentityButton();
+        logger.info("Step 11: Verify submitted request popup will be displayed");
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
+        logger.info("Step 12: Click on close button");
+        app.changeTenantActivityPage.closeSubmitRequestPopUp();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_CreateChangeTenantActivityRequestByLessor(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to ejar system with credentials");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on contract ( العقود ) tab");
+        CommonMethodsPage.clickContractsBtn();
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 03: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 04: From contract search field enter contract number");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 05: Click on three dots (contract list action)");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 06: Click on Change Tenant Activity  ( تغيير نشاط المستأجر ) option ");
+        CommonMethodsPage.ClickOnKebabMenuOption("تغيير نشاط المستأجر");
+        logger.info("Step 07: Enter text in New Tenant Activity  ( نشاط المستأجر الجديد ) input field");
+        String NewTenantActivityDescription = app.changeTenantActivityPage.addNewTenantActivityDescription("نشاط المستأجر الجديد");
+        logger.info("Step 08: Click on Submit Request (تقديم الطلب ) button");
+        app.changeTenantActivityPage.clickOnSubmitRequest();
+        logger.info("Step 09: Enter Valid OTP number");
+        app.loginPage.enterVerificationCodeForOTP("1234");
+        logger.info("Step 10: Click on Verify identity (التحقق من الهوية ) button from OTP Request popup");
+        CommonMethodsPage.clickOnVerifyIdentityButton();
+        logger.info("Step 11: Verify submitted request popup will be displayed");
+        app.changeTenantActivityPage.verifySubmitRequestPopupForNewTenantActivity();
+        String RequestNum = app.changeTenantActivityPage.getRequestNumber();
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "ChangeTenantActivityRequestNumber", RequestNum);
+        TestDataManager.addDependantGlobalTestData("ChangeTenantActivity", "NewTenantActivityDescription", NewTenantActivityDescription);
+        TestDataManager.writeDependantGlobalTestData("ChangeTenantActivity");
+        logger.info("Step 12: Click on close button");
+        app.changeTenantActivityPage.closeSubmitRequestPopUp();
     }
 }

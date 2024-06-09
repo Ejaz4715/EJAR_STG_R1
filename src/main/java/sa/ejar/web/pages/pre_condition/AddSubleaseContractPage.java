@@ -133,6 +133,8 @@ public class AddSubleaseContractPage {
 
     public void getContractOption2() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.getContractOption("عقد غير موحد"), 20);
+        Browser.driver.navigate().refresh();
+        Browser.waitUntilVisibilityOfElement(AddSubleaseContractPageObjects.getContractOption("عقد غير موحد"), 20);
         Browser.click(AddSubleaseContractPageObjects.getContractOption("عقد غير موحد"));
         logger.addScreenshot("");
         Browser.click(AddSubleaseContractPageObjects.termConditionBTN_Next());
