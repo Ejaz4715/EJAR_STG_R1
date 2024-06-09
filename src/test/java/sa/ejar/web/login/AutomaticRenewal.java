@@ -120,38 +120,35 @@ public class AutomaticRenewal extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_05_AutomaticRenewal(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
-//        logger.info("Step 00: Test Data : " + data);
-//        app.openApplication(data);
-//        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
-//        app.loginPage.enterUsername(data.get("Username"));
-//        app.loginPage.enterPassword(data.get("Password"));
-//        app.loginPage.clickLogin();
-//        app.loginPage.enterVerificationCode(data.get("OTP"));
-//        app.loginPage.closeExploreEjarPopUp();
-//        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
-//        logger.info("Step 02: Click on العقود tab");
-//        CommonMethodsPage.clickContractsBtn();
-//        logger.info("Step 03: Click on \"عرض جميع العقود\"");
-//        CommonMethodsPage.selectViewAllContractsButton();
-//        logger.info("Step 04: Click on filter button");
-//        CommonMethodsPage.clickFilterBtn();
-//        logger.info("Step 05: Enter Contract number in the ownership document reference");
-//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-//        logger.info("Step 06: Trigger the API");
-        int code = 200;
-        while (code == 200){
-            HttpResponse<JsonNode> response = new APICollection().automaticRenewal(data);
-            code = response.getStatus();
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
+//        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter button");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter Contract number in the ownership document reference");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 06: Trigger the API");
+        int days = -10000;
+        while (days != 0){
+            new APICollection().automaticRenewal(data);
+            Browser.waitForSeconds(10);
+            Browser.driver.navigate().refresh();
+            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuButton(), 50);
+            Browser.waitForSeconds(3);
+            days = Integer.parseInt(String.valueOf(app.automaticRenewalPage.getDifferenceBetweenStartAndCurrentDate()));
         }
-        Assert.assertNotEquals(code, 200, "Status code is 200");
-//        int days = Integer.parseInt(String.valueOf(app.automaticRenewalPage.getRemainingPeriod()));
-//        while (days >= 40){
-//            new APICollection().automaticRenewal(data);
-//            Browser.waitForSeconds(3);
-//            Browser.driver.navigate().refresh();
-//            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuButton(), 50);
-//            days = Integer.parseInt(String.valueOf(app.automaticRenewalPage.getRemainingPeriod()));
-//        }
+        Assert.assertEquals(days, 0, "Status code is 200");
     }
 
     @Test(dataProvider = "testDataProvider")

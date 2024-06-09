@@ -23,7 +23,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.time.Duration;
 import java.time.LocalDate;
 
@@ -277,7 +276,7 @@ public class CommonMethodsPage {
     public static void KebabMenuOptions(String option) {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
         CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.KebabMenuOptions());
-        waitForSeconds(1);
+        Browser.waitForSeconds(1);
         List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
         boolean status = false;
         for (WebElement opt : kebabOptions) {
@@ -862,7 +861,7 @@ public class CommonMethodsPage {
         if (newAmount.contains(amount)) {
             status = true;
         }
-        Assert.assertTrue(status, amount + " the amount is not the same");
+        Assert.assertTrue(status, "The actual amount is" + newAmount + " and expected amount is " + amount);
         logger.addScreenshot("");
     }
 
@@ -1158,12 +1157,12 @@ public class CommonMethodsPage {
 
 
     public static void verifyContractStatus(String expectedStatus) throws Exception {
-        executeJSScroll(450);
-        waitForSeconds(1);
-        waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
-        waitForSeconds(2);
+        Browser.executeJSScroll(450);
+        Browser.waitForSeconds(1);
+        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.contractStatus(), 35);
+        Browser.waitForSeconds(2);
         boolean status = false;
-        String actualStatus = getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
+        String actualStatus = Browser.getWebElement(ManualRenewalPageObjects.contractStatus()).getText();
         if (actualStatus.contains(expectedStatus)) {
             status = true;
         }
