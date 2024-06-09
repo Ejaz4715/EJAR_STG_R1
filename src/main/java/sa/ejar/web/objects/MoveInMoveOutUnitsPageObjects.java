@@ -72,4 +72,10 @@ public class MoveInMoveOutUnitsPageObjects {
 
     public static By clickOnUploadBTN() {return By.xpath("//p[contains(text(),'صور حالة')]");}
 
+    public static By decreaseDamageAmount() {return By.xpath("//button//img[@alt='step down']");}
+    public static By increaseDamageAmount() {return By.xpath("//button//img[@alt='step up']");}
+
+    public static By InvalidValueErrorMsg() {return By.xpath("//app-form-errors//ul//li[contains(text(),'أقصى قيمة')]");}
+    public static By SecurityDamageAmount() {return By.xpath("(//app-card-value//span[@class='dash-if-empty'])[6]");}
+
 }
