@@ -60,4 +60,10 @@ public class SaveSecurityDepositPage {
         Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.damageAmountInput(), 40 );
         Browser.setText(SaveSecurityDepositPageObjects.damageAmountInput(), damageAmount);
     }
+
+    public void verifyDamageAmountInputIsVisible() {
+        Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.damageAmountInput(), 40 );
+        Assert.assertTrue(Browser.isElementPresent(SaveSecurityDepositPageObjects.damageAmountInput()));
+        logger.addScreenshot("");
+    }
 }

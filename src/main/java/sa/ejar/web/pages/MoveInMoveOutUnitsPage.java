@@ -10,6 +10,8 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.nio.file.Paths;
+import java.util.Map;
+
 import static com.testcrew.base.WebBaseTest.logger;
 
 public class MoveInMoveOutUnitsPage {
@@ -192,5 +194,37 @@ public class MoveInMoveOutUnitsPage {
         robot.keyPress(KeyEvent.VK_V);
         //robot.delay(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
+    }
+
+    public void increaseDamageAmountFromMoveOutForm(){
+        Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.increaseDamageAmount(), 40);
+        for(int i = 0 ; i<4 ;i++)
+        {
+            Browser.click(MoveInMoveOutUnitsPageObjects.increaseDamageAmount());
+        }
+        logger.addScreenshot("Amount after increasing");
+    }
+
+    public void decreaseDamageAmountFromMoveOutForm(){
+        Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.increaseDamageAmount(), 40);
+        for(int i = 0 ; i<4 ;i++)
+        {
+            Browser.click(MoveInMoveOutUnitsPageObjects.decreaseDamageAmount());
+        }
+        logger.addScreenshot("Amount after decreasing");
+    }
+
+    public void assertInvalidValueErrorMsgIsDisplayed(Map<String ,String > data) {
+        Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.InvalidValueErrorMsg(), 40);
+        String Msg = Browser.getText(MoveInMoveOutUnitsPageObjects.InvalidValueErrorMsg());
+        Assert.assertTrue(Msg.contains(data.get("DamageAmount")));
+        logger.addScreenshot("Error Message : " + Msg);
+    }
+
+    public void verifySecurityAmountIsVisibleInViewUnitMoveInOutFormPage(Map<String ,String > data) {
+        Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.SecurityDamageAmount(), 40);
+        String Msg = Browser.getText(MoveInMoveOutUnitsPageObjects.SecurityDamageAmount());
+        Assert.assertTrue(Msg.contains(data.get("DamageAmount")));
+        logger.addScreenshot("Security Amount : " + Msg);
     }
 }
