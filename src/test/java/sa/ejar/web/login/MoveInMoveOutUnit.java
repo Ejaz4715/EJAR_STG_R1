@@ -4,6 +4,7 @@ import com.testcrew.manager.TestDataManager;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.pages.CommonMethodsPage;
+
 import java.util.Map;
 
 public class MoveInMoveOutUnit extends NHCWebTest {
@@ -13,7 +14,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_001_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -2114,6 +2115,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 10: Input Bad Condition Reason in Reason text area");
         app.moveInMoveOutUnitsPage.fillBadConditionReason();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_065_MoveInMoveOutUnit(Map<String, String> data) throws Exception {
          data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));

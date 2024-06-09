@@ -3808,7 +3808,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Ownership_Document_Number_Existing_Data"));
         CommonMethodsPage.selectExistingOwnershipDocument();
         CommonMethodsPage.clickOnNextButton();
-        app.addResidentialContractPage.selectProperty("Automation Test");
+        app.addResidentialContractPage.selectProperty(data.get("Property_Name"));
         CommonMethodsPage.clickOnNextButton();
         app.rentalIncidentsPage.selectAvailableUnit();
         CommonMethodsPage.clickOnNextButton();
