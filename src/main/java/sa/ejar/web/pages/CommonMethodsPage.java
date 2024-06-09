@@ -17,25 +17,20 @@ import sa.ejar.web.objects.SendContractForApprovalPageObjects;
 import sa.ejar.web.objects.TerminateContractPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.time.Duration;
 import java.time.LocalDate;
-
 import sa.ejar.web.pages.pre_condition.LoginPage;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.*;
 import java.util.List;
 import java.util.Set;
-
-import static com.testcrew.web.Browser.logger;
+import static com.testcrew.web.Browser.*;
 
 public class CommonMethodsPage {
 

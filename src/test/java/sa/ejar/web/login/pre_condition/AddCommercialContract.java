@@ -1,8 +1,10 @@
 package sa.ejar.web.login.pre_condition;
 
 import com.testcrew.manager.TestDataManager;
+import com.testcrew.web.Browser;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
 import java.util.Map;
 
@@ -112,8 +114,14 @@ public class AddCommercialContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-
+        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+        app.sendContractForApprovalPage.clickOnLetUsStartButton();
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
+        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())){
+            CommonMethodsPage.clickOnConfirmButton();
+        }
+        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
@@ -257,7 +265,14 @@ public class AddCommercialContract extends NHCWebTest {
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-
+        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+        app.sendContractForApprovalPage.clickOnLetUsStartButton();
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
+        CommonMethodsPage.clickOnConfirmButton();
+        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())){
+            CommonMethodsPage.clickOnConfirmButton();
+        }
+        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
