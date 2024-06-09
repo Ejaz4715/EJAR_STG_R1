@@ -35,6 +35,7 @@ public class NHCWebApplication {
     public final ManualRenewalPage manualRenewalPage;
     public final ChangeLessor_LessorRepPage changeLessor_lessorRepPage;
     public final AutomaticRenewalPage automaticRenewalPage;
+    public final SaveSecurityDepositPage saveSecurityDepositPage;
 
 
 
@@ -53,6 +54,7 @@ public class NHCWebApplication {
         createNewCommercialContractPage = new CreateNewCommercialContractPage();
         addSubleaseContractPage = new AddSubleaseContractPage();
         automaticRenewalPage = new AutomaticRenewalPage();
+        saveSecurityDepositPage = new SaveSecurityDepositPage();
     }
 
     public void openApplication(Map<String, String> data) throws Exception {

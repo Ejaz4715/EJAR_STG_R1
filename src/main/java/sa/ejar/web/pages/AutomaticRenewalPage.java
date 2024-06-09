@@ -20,6 +20,12 @@ public class AutomaticRenewalPage {
         return LocalDate.parse(date, formatter);
     }
 
+    public LocalDate getContractStartDate() {
+        Browser.waitUntilVisibilityOfElement(AutomaticRenewalPageObjects.ContractStartDate(), 40);
+        String date = Browser.getText(AutomaticRenewalPageObjects.ContractStartDate());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return LocalDate.parse(date, formatter);
+    }
     public void verifyRemainingContractPeriod() {
         LocalDate endDate = getContractEndDate();
         LocalDate currentDate = LocalDate.now();
@@ -32,6 +38,13 @@ public class AutomaticRenewalPage {
         LocalDate currentDate = LocalDate.now();
         return ChronoUnit.DAYS.between(currentDate, endDate);
     }
+
+    public long getDifferenceBetweenStartAndCurrentDate() {
+        LocalDate endDate = getContractStartDate();
+        LocalDate currentDate = LocalDate.now();
+        return ChronoUnit.DAYS.between(currentDate, endDate);
+    }
+
     public void getContractVersion() throws IOException {
         String contactVersion = new ChangeLessor_LessorRepPage().getContractVersionFromPDF();
         TestDataManager.addDependantGlobalTestData("AutomaticRenewal", "Contract_Version", contactVersion.strip());

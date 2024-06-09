@@ -245,7 +245,6 @@ public class ResidentialContract extends NHCWebTest{
         CommonMethodsPage.clickRatingButtons();
         CommonMethodsPage.clickOnSubmitButton();
     }
-
     @Test(dataProvider = "testDataProvider")
     public void ApproveResidentialContractByTenantMoreThan3Months(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
