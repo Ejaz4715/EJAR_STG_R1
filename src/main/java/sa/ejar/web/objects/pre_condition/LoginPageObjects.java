@@ -41,7 +41,7 @@ public class LoginPageObjects {
 
         put("option-new-residential-contract", new HashMap<>() {{
             put("en", "//span[text()='Create new residential']");
-            put("ar", "//span[text()='تسجيل عقد سكني']");
+            put("ar", "//span[contains(text(),'تسجيل عقد سكني')]");
         }});
 
         put("btn-contracts", new HashMap<>() {{
@@ -51,7 +51,7 @@ public class LoginPageObjects {
 
         put("btn-view-all-contracts", new HashMap<>() {{
             put("en", "//span[text()='View all contracts']");
-            put("ar", "//span[text()='عرض جميع العقود']");
+            put("ar", "//span[contains(text(),'عرض جميع العقود')]");
         }});
         put("Close-Button1", new HashMap<>() {{
             put("en", "");

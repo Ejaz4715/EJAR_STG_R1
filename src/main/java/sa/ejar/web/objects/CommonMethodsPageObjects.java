@@ -114,7 +114,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By viewAllTheRequests() {
-        return By.xpath("//span[text()='عرض الطلبات']");
+        return By.xpath("//span[contains(text(),'عرض الطلبات')]");
     }
 
     public static By requestNumberOfSearchedRequest() {
