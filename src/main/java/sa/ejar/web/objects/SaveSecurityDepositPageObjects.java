@@ -9,11 +9,11 @@ public class SaveSecurityDepositPageObjects {
     }
 
     public static By WalletOption() {
-        return By.xpath("//span[text()='المحفظة']");
+        return By.xpath("//span[contains (text(),'المحفظة')]");
     }
 
     public static By manageOffice(){
-        return By.xpath("//span[text()='إدارة الحساب']");
+        return By.xpath("//span[contains (text(), 'إدارة الحساب')]");
     }
 
     public static By ListOfDesc() {

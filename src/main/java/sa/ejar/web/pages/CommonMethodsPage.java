@@ -980,7 +980,7 @@ public class CommonMethodsPage {
     }
 
     public static void clickRatingButtons() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 100);
         if (Browser.isElementPresent(CommonMethodsPageObjects.newRadioBTN())) {
             Browser.click(CommonMethodsPageObjects.newRadioBTN());
         }
@@ -988,7 +988,6 @@ public class CommonMethodsPage {
         List<WebElement> rateList = Browser.driver.findElements(CommonMethodsPageObjects.ratingBTN());
         for (WebElement rate : rateList) {
             rate.click();
-
         }
     }
 

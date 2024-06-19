@@ -287,7 +287,7 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//h2[contains (text() , 'إزالة ممثل المؤجر الحالي')]");
     }
     public static By ownershipChangeRequestOfTitleDeedPage() {
-        return By.xpath("//span[contains(text(),' طلب تغيير ملكية وثيقة الملكية ')]");
+        return By.xpath("//span[contains(text(),'طلب تغيير ملكية وثيقة الملكية')]");
     }
     public static By changeLessorRequestPage() {
         return By.xpath("//h1[contains (text(), 'طلب تغيير المالك')]");
@@ -302,7 +302,7 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//button[contains(text(),' أنشئ جديد ')]");
     }
     public static By confirmOwnershipDocumentBTN() {
-        return By.xpath("//button[text()=' تأكيد وثيقة الملكية ']");
+        return By.xpath("//button[contains (text(), 'تأكيد وثيقة الملكية')]");
     }
 
     public static By changeBTN() {

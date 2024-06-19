@@ -16,7 +16,7 @@ public class AddCommercialContractObjects {
             }});
             put("option-new-Commercial-contract", new HashMap<>() {{
                 put("en", "");
-                put("ar", "//span[text()='تسجيل عقد تجاري']");
+                put("ar", "//span[contains (text(),'تسجيل عقد تجاري')]");
             }});
             put("add-Commercial-contract-heading", new HashMap<>() {{
                 put("en", "");
