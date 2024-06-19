@@ -22,7 +22,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -36,7 +35,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Verify lessor able to select (نعم، بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectYesRadioBTN();
@@ -52,7 +50,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -66,7 +63,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Verify lessor able to select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -82,7 +78,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -96,7 +91,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -114,7 +108,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -128,7 +121,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -148,7 +140,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -162,7 +153,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -182,7 +172,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -196,7 +185,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -218,7 +206,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -232,7 +219,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -255,7 +241,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -269,7 +254,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Click on 'حفظ كمسودة' button");
         app.moveInMoveOutUnitsPage.clickOnDoItLaterBTN();
@@ -287,7 +271,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -301,7 +284,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option ");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Click on 'حفظ كمسودة' button");
         app.moveInMoveOutUnitsPage.clickOnDoItLaterBTN();
@@ -322,7 +304,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -336,7 +317,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Click on 'حفظ كمسودة' button");
         app.moveInMoveOutUnitsPage.clickOnDoItLaterBTN();
@@ -357,7 +337,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -371,7 +350,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Click on  عرض التفاصيل button");
         app.moveInMoveOutUnitsPage.ViewMoveInDetails();
@@ -388,7 +366,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -402,7 +379,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Click on  عرض التفاصيل button");
         app.moveInMoveOutUnitsPage.ViewMoveInDetails();
@@ -421,7 +397,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -435,7 +410,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (نعم، بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectYesRadioBTN();
@@ -453,7 +427,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -467,7 +440,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (نعم، بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectYesRadioBTN();
@@ -500,7 +472,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -514,7 +485,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تأكيد استلام/تسليم الوحدة ) option");
-        CommonMethodsPage.KebabMenuOptions("تأكيد استلام/تسليم الوحدة");
         CommonMethodsPage.ClickOnKebabMenuOption("تأكيد استلام/تسليم الوحدة");
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
@@ -554,7 +524,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -568,7 +537,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( عرض نموذج استلام/تسليم ) option");
-        CommonMethodsPage.KebabMenuOptions("عرض نموذج استلام/تسليم");
         CommonMethodsPage.ClickOnKebabMenuOption("عرض نموذج استلام/تسليم");
         logger.info("Step 08: Check the Tenant status is 'في إنتظار رد المستأجر'");
         app.moveInMoveOutUnitsPage.VerifyTenantResponse("في إنتظار رد المستأجر");
@@ -584,7 +552,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -614,7 +581,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -647,7 +613,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -677,7 +642,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -707,7 +671,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -741,7 +704,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -775,7 +737,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -811,7 +772,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -848,7 +808,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -886,7 +845,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -920,7 +878,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -952,7 +909,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -987,7 +943,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1022,7 +977,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1053,7 +1007,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1086,7 +1039,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1118,7 +1070,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1165,7 +1116,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1219,7 +1169,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1249,7 +1198,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1279,7 +1227,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1299,6 +1246,87 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.moveInMoveOutUnitsPage.clickOnDownloadBTN();
     }
 
+    @Test(dataProvider = "testDataProvider")
+    public void SubmitRevoke(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مؤجر");
+        logger.info("Step 02: Click on العقود tab");
+        CommonMethodsPage.clickContractsBtn();
+        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        CommonMethodsPage.selectViewAllContractsButton();
+        logger.info("Step 04: Click on filter icon");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter contract number in the contract search");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        logger.info("Step 06: Click on three dots");
+        CommonMethodsPage.clickOnKebabMenuButton();
+        logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
+        CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 08: Enter text in رقم إقرار التنفيذ input field");
+        app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
+        logger.info("Step 09: Enter valid gregorian date in تاريخ إقرار input field");
+        app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
+        logger.info("Step 10: Enter text in  ملاحظات  input field");
+        app.revokeContractPage.enterNotesText(data.get("Note"));
+        logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
+        app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+        logger.info("Step 12: Click on  التالي  button ");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 13: Click on  تسوية جميع المدفوعات   radio button");
+        app.terminateContractPage.selectAllPaymentsSettledRadioButton();
+        logger.info("Step 14: Click on التالي button");
+        CommonMethodsPage.clickOnNextButton();
+        logger.info("Step 15: Click on  تأكيد طلب الفسخ   button");
+        app.revokeContractPage.clickOnConfirmRevokeContractButton();
+        CommonMethodsPage.verifySuccessPopUpIsDisplayed();
+        CommonMethodsPage.clickOnCloseButton();
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        CommonMethodsPage.clickOnViewAllRequestsButton();
+        CommonMethodsPage.clickFilterBtn();
+        CommonMethodsPage.enterContractNumber(data.get("ContractNumber"));
+        app.revokeContractPage.getRequestNumber();
+    }
+
+    @Test(dataProvider = "testDataProvider")
+    public void AdminApproveRevoke(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
+        logger.info("Step 00: Test Data : " + data);
+        app.openApplication(data);
+        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+        app.loginPage.enterUsername(data.get("Username"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
+        CommonMethodsPage.changeUserRole("مشرف إيجار");
+        logger.info("Step 02: Click on \" الطلبات \" tab");
+        CommonMethodsPage.clickOnTheRequestsTabButton();
+        logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
+        CommonMethodsPage.clickOnRevokeContractRequestButton();
+        logger.info("Step 04: Click on filter button ");
+        CommonMethodsPage.clickFilterBtn();
+        logger.info("Step 05: Enter request number in رقم الطلب input field ");
+        CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
+        logger.info("Step 06: Click on  عرض  button");
+        app.revokeContractPage.clickOnViewButtonOnRequest();
+        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        CommonMethodsPage.clickOnConfirmButton();
+        logger.info("Step 08: Click on \" قبول \" button ");
+        CommonMethodsPage.clickOnApproveBTN();
+        logger.info("Step 09: Click on \" تأكيد الموافقة \" button ");
+        CommonMethodsPage.clickOnConfirmButton();
+    }
+
+
     //-------------------------- Move Out , As-Lessor ---------------------------------
     //---------------------------------------------------------------------------------
     @Test(dataProvider = "testDataProvider")
@@ -1311,7 +1339,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1341,7 +1369,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1371,7 +1398,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1404,7 +1430,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1436,7 +1461,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1471,7 +1495,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1504,7 +1527,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1541,7 +1563,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1575,7 +1596,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1609,7 +1629,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1645,7 +1664,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1682,7 +1700,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1723,7 +1740,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1758,7 +1774,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1790,7 +1805,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1825,7 +1839,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1860,7 +1873,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1891,7 +1903,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1924,7 +1935,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1956,7 +1966,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2003,7 +2012,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2057,7 +2065,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2087,7 +2094,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2117,7 +2123,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2150,7 +2155,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2180,7 +2184,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2210,7 +2213,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2244,7 +2246,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2278,7 +2279,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2314,7 +2314,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2351,7 +2350,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2389,7 +2387,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2421,7 +2418,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2456,7 +2452,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2491,7 +2486,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2522,7 +2516,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2555,7 +2548,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2587,7 +2579,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2634,7 +2625,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2688,7 +2678,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2718,7 +2707,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2748,7 +2736,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2781,7 +2768,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on user identity dropdown list > Select 'إدارة الحساب'");
@@ -2810,7 +2796,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2843,7 +2828,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2876,7 +2860,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2914,7 +2897,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
         CommonMethodsPage.navigateToViewUnitForms();
@@ -2936,7 +2918,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
         CommonMethodsPage.navigateToViewUnitForms();
@@ -2958,7 +2939,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
         CommonMethodsPage.navigateToViewUnitForms();
@@ -2980,7 +2960,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Click on ' نماذج الوحدة ' > Select 'عرض نماذج الوحدة' option");
         CommonMethodsPage.navigateToViewUnitForms();
@@ -3002,7 +2981,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3049,7 +3027,6 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");

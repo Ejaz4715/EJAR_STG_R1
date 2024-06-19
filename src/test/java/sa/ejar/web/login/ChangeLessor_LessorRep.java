@@ -2,6 +2,7 @@ package sa.ejar.web.login;
 
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 import sa.ejar.web.base.NHCWebTest;
 import sa.ejar.web.objects.*;
@@ -14382,7 +14383,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14395,6 +14396,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
         logger.info("Step 16: Upload attachment of valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+        app.revokeContractPage.verifyAttachmentIsUploaded();
         logger.info("Step 17: Click on \"تأكيد وثيقة الملكية\"");
         app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         logger.info("Step 18: Verify the user is navigate to\"طلب تغيير ملكية وثيقة الملكية\" page");
@@ -14642,7 +14644,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
-        Browser.waitForSeconds(5);
+        Browser.waitForSeconds(10);
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");

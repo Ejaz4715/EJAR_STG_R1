@@ -25,6 +25,8 @@ public class SaveSecurityDepositPage {
 
     public void verifySecurityAmountReservedDescriptionIsDisplayed(String expectedDesc) {
         Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.ListOfDesc(), 40);
+        Browser.executeJSScrollIntoView(SaveSecurityDepositPageObjects.ListOfDesc());
+        Browser.waitForSeconds(1);
         List<WebElement> list = Browser.getWebElements(SaveSecurityDepositPageObjects.ListOfDesc());
         boolean b = false;
         for(WebElement w : list){
@@ -32,12 +34,15 @@ public class SaveSecurityDepositPage {
                 b = true;
                 break;
             }
+            logger.addScreenshot("");
         }
         Assert.assertTrue(b, "Expected description is not displayed for the selected contract");
     }
 
     public void verifySecurityAmountReservedIsSameAsContract(String expectedDepositAmount) {
         Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.DepositAmount(), 40);
+        Browser.executeJSScrollIntoView(SaveSecurityDepositPageObjects.DepositAmount());
+        Browser.waitForSeconds(1);
         WebElement ele = Browser.getWebElement(SaveSecurityDepositPageObjects.DepositAmount());
         String actualAmount = ele.getText();
         Assert.assertTrue(actualAmount.contains(expectedDepositAmount), "Expected amount is ( " + expectedDepositAmount + " ) and actual amount is ( " + actualAmount);
@@ -51,13 +56,15 @@ public class SaveSecurityDepositPage {
 
     public void verifySecurityAmountInMoveInForm(String amount) {
         Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.SecurityAmountInMoveInForm(), 40 );
+        Browser.executeJSScroll(1000);
+        Browser.waitForSeconds(1);
         String actualAmount = Browser.getText(SaveSecurityDepositPageObjects.SecurityAmountInMoveInForm());
         Assert.assertTrue(actualAmount.contains(amount), "Actual amount in the form is ( " +actualAmount + " ) and expected amount is (" +amount );
         logger.addScreenshot("The amount in form is "+actualAmount);
     }
 
     public void enterDamageAmount(String damageAmount) {
-        Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.damageAmountInput(), 40 );
+        Browser.waitUntilVisibilityOfElement(SaveSecurityDepositPageObjects.damageAmountInput(), 15 );
         Browser.setText(SaveSecurityDepositPageObjects.damageAmountInput(), damageAmount);
     }
 

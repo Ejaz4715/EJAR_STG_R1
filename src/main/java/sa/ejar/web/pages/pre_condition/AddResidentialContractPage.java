@@ -281,11 +281,13 @@ public class AddResidentialContractPage {
         new ChangeLessor_LessorRepPage().clickOnAddNewRepresentationDocumentLink();
         new ChangeLessor_LessorRepPage().clickOnDocumentTypeDropdown();
         CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(RandomStringUtils.randomAlphanumeric(6));
-        new ChangeLessor_LessorRepPage().enterDocumentName(RandomStringUtils.randomAlphanumeric(10));
+        String docNum = "Testing" + RandomStringUtils.randomNumeric(5);
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(docNum);
+        new ChangeLessor_LessorRepPage().enterDocumentName(docNum);
         new MoveInMoveOutUnitsPage().uploadFile("ejartest.pdf");
         new ChangeLessor_LessorRepPage().clickOnAddButton();
     }
+
     public void clickTenantRadioBTN() throws Exception {
         Browser.waitUntilVisibilityOfElement(AddResidentialContractPageObjects.tenantRadioBTN(), 50);
         Browser.click(AddResidentialContractPageObjects.tenantRadioBTN());
