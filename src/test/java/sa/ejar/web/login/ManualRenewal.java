@@ -900,7 +900,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 14:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+//        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1164,7 +1164,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is change to  (بانتظار موافقة الأطراف) after Bo Manager resubmitted rejected contract to parties");
-        CommonMethodsPage.verifyContractStatus("بانتظار موافقة الأطراف");
+        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1188,7 +1188,6 @@ public class ManualRenewal extends NHCWebTest {
         app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 05: Verify selected contract for renewal is visible in Ready For Renewal ( جاهز للتجديد ) Contracts,if the new contract is rejected from lessor.");
         app.manualRenewalPage.verifySelectedContractIsVisibleInReadyForRenewalContracts(data.get("Old_Contract"));
-
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6952,7 +6951,19 @@ public class ManualRenewal extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_RenewalContractAPI(Map<String, String> data) throws Exception {
+    public void TC_RenewalContractAPI_1(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        new APICollection().makeContractReadyForRenewal(data);
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_RenewalContractAPI_2(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        new APICollection().makeContractReadyForRenewal(data);
+    }
+    @Test(dataProvider = "testDataProvider")
+    public void TC_RenewalContractAPI_3(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         new APICollection().makeContractReadyForRenewal(data);

@@ -157,7 +157,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
     }
@@ -189,9 +189,9 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachments with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample2.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify multi attachments are uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentsAreUploaded();
     }
@@ -223,7 +223,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 11: Verify uploaded attachment is deleted");
@@ -493,7 +493,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 10: Fill Bad Condition Reason in Reason text area");
         app.moveInMoveOutUnitsPage.fillBadConditionReason();
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 12: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 13: Click on إرسال button");
@@ -722,7 +722,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
     }
@@ -755,9 +755,9 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachments with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample2.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify multi attachments are uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentsAreUploaded();
     }
@@ -790,7 +790,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 11: Verify uploaded attachment is deleted");
@@ -1138,7 +1138,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 10: Fill Bad Condition Reason in Reason text area");
         app.moveInMoveOutUnitsPage.fillBadConditionReason();
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 12: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 13: Click on إرسال button");
@@ -1614,7 +1614,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
     }
@@ -1647,9 +1647,9 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachments with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample2.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify multi attachments are uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentsAreUploaded();
     }
@@ -1682,7 +1682,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 11: Verify uploaded attachment is deleted");
@@ -2034,7 +2034,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 10: Fill Bad Condition Reason in Reason text area");
         app.moveInMoveOutUnitsPage.fillBadConditionReason();
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 12: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 13: Click on إرسال button");
@@ -2264,7 +2264,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
     }
@@ -2297,9 +2297,9 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachments with valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpg");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample2.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify multi attachments are uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentsAreUploaded();
     }
@@ -2332,7 +2332,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 08: Select (لا، لم تكن بحالة جيدة) Radio Button");
         app.moveInMoveOutUnitsPage.selectNoRadioBTN();
         logger.info("Step 09: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 10: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 11: Verify uploaded attachment is deleted");
@@ -2647,7 +2647,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         logger.info("Step 10: Fill Bad Condition Reason in Reason text area");
         app.moveInMoveOutUnitsPage.fillBadConditionReason();
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG)");
-        app.moveInMoveOutUnitsPage.uploadAttachment("Sample.jpeg");
+        app.moveInMoveOutUnitsPage.uploadAttachment("Sample image.png");
         logger.info("Step 12: Verify attachment is uploaded");
         app.moveInMoveOutUnitsPage.verifyAttachmentIsUploaded();
         logger.info("Step 13: Click on إرسال button");

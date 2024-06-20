@@ -8,9 +8,7 @@ import org.openqa.selenium.WebElement;
 import sa.ejar.web.objects.ChangeLessor_LessorRepPageObjects;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.objects.pre_condition.LoginPageObjects;
-import sa.ejar.web.pages.ChangeLessor_LessorRepPage;
-import sa.ejar.web.pages.CommonMethodsPage;
-import sa.ejar.web.pages.MoveInMoveOutUnitsPage;
+import sa.ejar.web.pages.*;
 
 import java.util.List;
 

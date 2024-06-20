@@ -39,7 +39,7 @@ public class ChangeTenantActivityPageObjects {
         return By.xpath("//select[@data-name='status']/option");
     }
     public static By requestTypeDropdown() {
-        return By.xpath("//select[@data-name='request_type']");
+        return By.xpath("//app-custom-select[@data-name='request_type']");
     }
     public static By requestTypeOptions() {
         return By.xpath("//select[@data-name='request_type']/option");

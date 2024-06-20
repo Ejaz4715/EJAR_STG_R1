@@ -830,6 +830,7 @@ public class ChangeTenantActivity extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_029_ChangeTenantActivity(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
@@ -880,6 +881,7 @@ public class ChangeTenantActivity extends NHCWebTest {
     @Test(dataProvider = "testDataProvider")
     public void TC_031_ChangeTenantActivity(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ChangeTenantActivity"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to ejar system with credentials");
