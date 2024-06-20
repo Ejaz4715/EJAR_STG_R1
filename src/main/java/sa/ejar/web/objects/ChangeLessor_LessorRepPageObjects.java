@@ -356,4 +356,8 @@ public class ChangeLessor_LessorRepPageObjects {
     public static By PartyIdSection() {
         return By.xpath("//h2[text()='هوية الطرف']");
     }
+
+    public static By PropertyOwnerText() {
+        return By.xpath("//app-owners-quick-info[@id=\"new-owners\"]/descendant::span[@class=\"round-icon large menu\"]");
+    }
 }

@@ -969,7 +969,7 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnSubmitButton() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 20);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 40);
         Browser.click(CommonMethodsPageObjects.submitBTN());
     }
 
