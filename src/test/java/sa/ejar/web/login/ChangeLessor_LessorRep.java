@@ -6405,6 +6405,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB_WrongFormat"));
         CommonMethodsPage.verifyValueIsNotEntered(data.get("Lessor_DOB_WrongFormat"), AddResidentialContractPageObjects.tenantDateOfBirthInput());
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_174_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -7453,6 +7454,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 15: Verify \" تأكيد التغيير \" button is not enabled or not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_198_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
@@ -14428,6 +14430,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Click on \"تغيير\"");
         app.changeLessor_lessorRepPage.clickOnChangeButton();
         logger.info("Step 09: Verify the user navigate to (معلومات وثيقة الملكية) section");
@@ -14458,6 +14473,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Click on \"إضافة مالك منشأة\"");
         app.changeLessor_lessorRepPage.clickOnAddOrganizationLinkButton();
         logger.info("Step 09: Verify the user is navigate to\"إضافة مالك منشأة\" page");
@@ -14488,6 +14516,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         app.changeLessor_lessorRepPage.checkAddIndividualOwnerIsDisplayed();
@@ -14517,6 +14558,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14548,6 +14602,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button");
@@ -14579,6 +14646,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14612,6 +14692,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14645,6 +14738,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(10);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14678,6 +14784,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14711,6 +14830,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14744,6 +14876,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14777,6 +14922,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14809,6 +14967,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14842,6 +15013,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14875,6 +15059,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14908,6 +15105,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14941,6 +15151,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -14974,6 +15197,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15007,6 +15243,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15041,6 +15290,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15075,6 +15337,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (إلغاء) button  ");
@@ -15106,6 +15381,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (إلغاء) button  ");
@@ -15139,6 +15427,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (إلغاء) button  ");
@@ -15172,6 +15473,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15204,6 +15518,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15214,7 +15541,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
         logger.info("Step 12: Click on (التالي) button ");
         CommonMethodsPage.clickOnNextButton();
-        CommonMethodsPage.verifyValueIsDisplayed("معلومات طرف العقد", ChangeLessor_LessorRepPageObjects.ContractPartyInfoPage() );
+        CommonMethodsPage.verifyValueIsDisplayed("معلومات طرف العقد", ChangeLessor_LessorRepPageObjects.ContractPartyInfoPage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -15241,6 +15568,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15280,6 +15620,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15294,7 +15647,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         CommonMethodsPage.clickOnCancelButton();
         logger.info("Step 14: Click on  (إلغاء) button on pop up");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
-        CommonMethodsPage.verifyValueIsDisplayed("معلومات طرف العقد", ChangeLessor_LessorRepPageObjects.ContractPartyInfoPage() );
+        CommonMethodsPage.verifyValueIsDisplayed("معلومات طرف العقد", ChangeLessor_LessorRepPageObjects.ContractPartyInfoPage());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -15321,6 +15674,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15362,6 +15728,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15401,6 +15780,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15440,6 +15832,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15479,6 +15884,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15518,6 +15936,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15557,6 +15988,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15596,6 +16040,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15636,6 +16093,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15676,6 +16146,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15715,6 +16198,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15755,6 +16251,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15795,6 +16304,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15835,6 +16357,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15874,6 +16409,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15914,6 +16462,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15953,6 +16514,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -15993,6 +16567,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
         app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
@@ -16033,8 +16620,28 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(10));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+            app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+            app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+            app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+            app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+            CommonMethodsPage.clickOnNextButton();
+            CommonMethodsPage.clickOnConfirmButton();
+        }
         logger.info("Step 08: Click on (إرسال) button ");
         CommonMethodsPage.clickOnSubmitButton();
+        Browser.waitForSeconds(10);
         logger.info("Step 09: Verify a pop up \"تغيير المؤجر\" with message \"الطلب بانتظار موافقة المؤجر/المالك الجديد وسيتم إشعاركم عند الموافقة\"");
         CommonMethodsPage.verifyValueIsDisplayed("تغيير المؤجر", ChangeLessor_LessorRepPageObjects.LessorChangedPopupTitle());
         app.changeLessor_lessorRepPage.getRequestNumberFromPopup(ChangeLessor_LessorRepPageObjects.RequestNumber());
@@ -16807,24 +17414,29 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 07: Select \"تغييرالمؤجر\" option from the menu");
         CommonMethodsPage.ClickOnKebabMenuOption("تغيير المؤجر");
         Browser.waitForSeconds(5);
-        logger.info("Step 08: Click on (إضافة وثيقة ملكية) button");
-        app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
-        logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
-        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        logger.info("Step 11: Enter \"تاريخ الاصدار\"");
-        app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
-        logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
-        app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-        logger.info("Step 13: Select existing ownership document");
-        CommonMethodsPage.selectExistingOwnershipDocument();
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 14: Click on \"تأكيد وثيقة الملكية\"");
-        app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
-        logger.info("Step 15: Click on (إرسال) button ");
+        if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
+            app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
+            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+            app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+            app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+            app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+            app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+            CommonMethodsPage.clickOnNextButton();
+            CommonMethodsPage.clickOnConfirmButton();
+        }
+        logger.info("Step 08: Click on (إرسال) button ");
         CommonMethodsPage.clickOnSubmitButton();
-        logger.info("Step 16: Verify a pop up \"تغيير المؤجر\" with message \"الطلب بانتظار موافقة المؤجر/المالك الجديد وسيتم إشعاركم عند الموافقة\"");
+        Browser.waitForSeconds(7);
+        logger.info("Step 09: Verify a pop up \"تغيير المؤجر\" with message \"الطلب بانتظار موافقة المؤجر/المالك الجديد وسيتم إشعاركم عند الموافقة\"");
         CommonMethodsPage.verifyValueIsDisplayed("تغيير المؤجر", ChangeLessor_LessorRepPageObjects.LessorChangedPopupTitle());
         app.changeLessor_lessorRepPage.getRequestNumberFromPopup(ChangeLessor_LessorRepPageObjects.RequestNumber());
     }
