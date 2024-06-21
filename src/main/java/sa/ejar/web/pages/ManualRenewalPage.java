@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ManualRenewalPageObjects;
+
 import java.util.List;
 import java.util.Map;
 import static com.testcrew.manager.PDFReportManager.logger;
@@ -330,7 +331,8 @@ public class ManualRenewalPage {
     }
 
     public void updateFinancialInRenewalContract() {
-        Browser.waitForSeconds(1);
+        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.AdditionalFeeLabel(), 40);
+        Browser.click(ManualRenewalPageObjects.AdditionalFeeLabel());
         click(ManualRenewalPageObjects.lateFeesLabel());
         Browser.setText(ManualRenewalPageObjects.fillLateFeesInput(), "20");
         Browser.waitForSeconds(1);
