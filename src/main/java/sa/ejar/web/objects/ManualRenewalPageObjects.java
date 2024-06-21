@@ -119,4 +119,8 @@ public class ManualRenewalPageObjects {
     public static By WarningClass() {
         return By.xpath("//li[@class=\"warning\"]");
     }
+
+    public static By AdditionalFeeLabel() {
+        return By.xpath("//a[@routerlink=\"additional-fees\"]");
+    }
 }

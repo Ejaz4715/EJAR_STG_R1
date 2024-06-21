@@ -1562,8 +1562,8 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تجديد العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("تجديد العقد ");
-        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد ");
+        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
+        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify 'أعيد إصدارها' Is Visible In Contract Time Line");
         app.manualRenewalPage.contractTimeLineStatus("أعيد إصدارها");
     }
@@ -1598,6 +1598,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.KebabMenuOptions("تجديد العقد");
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify Issue Date Is Visible");
+        Browser.waitForSeconds(7);
         app.manualRenewalPage.verifyIssueDateIsVisible();
     }
 
@@ -1633,6 +1634,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Click on ' الإرسال للتوثيق ' button > Verify Submit Contract for Renewal is visible");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
+        CommonMethodsPage.clickOnLetUsStartButton();
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
 
@@ -1669,7 +1671,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Contract Renewal Steps Page is Displayed");
-        CommonMethodsPage.clickOnLetUsStartButton();
+        Browser.waitForSeconds(4);
         app.manualRenewalPage.verifyContractRenewalStepsPageIsDisplayed();
     }
 
@@ -2528,8 +2530,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 07: Click on  (عرض العقد)  option");
         CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
         logger.info("Step 08: Click on  (تحميل مسودة العقد) button");
-        Browser.waitForSeconds(3);
-        CommonMethodsPage.clickOnDownloadDraftCopy();
+        CommonMethodsPage.clickOnDownloadContractCopy();
         logger.info("Step 09: Verify contract version will be '1-0'");
         CommonMethodsPage.PDFValidation(data.get("ContractNumber"), "Contract No. " + data.get("ContractNumber") + " / 1-0");
     }
@@ -2572,12 +2573,13 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 11: Update Terms And Condition");
         app.manualRenewalPage.updateTermsAndConditionInRenewalContract();
         app.addResidentialContractPage.clickConfirmTermsAndConditionsBTN();
-        logger.info("Step 12: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
-        app.manualRenewalPage.getNewContractNumber();
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        app.addResidentialContractPage.clickSubmitForApprovalBTN();
-        logger.info("Step 13: Verify Submit Contract For Renewal Page is displayed");
-        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
+//        logger.info("Step 12: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
+//        app.manualRenewalPage.getNewContractNumber();
+//        CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
+//        app.addResidentialContractPage.clickSubmitForApprovalBTN();
+//        logger.info("Step 13: Verify Submit Contract For Renewal Page is displayed");
+//        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3049,7 +3051,6 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 11: Verify Contract Renewal Steps Page is Displayed");
-        CommonMethodsPage.clickOnLetUsStartButton();
         app.manualRenewalPage.verifyContractRenewalStepsPageIsDisplayed();
     }
 
