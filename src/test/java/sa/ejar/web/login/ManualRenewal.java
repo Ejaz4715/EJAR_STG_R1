@@ -130,7 +130,8 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 07: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField("1028940383");
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField("1028940383");
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("test");
         Browser.executeJSScroll(400);
         logger.info("Step 08: Verify searched contract is not appearing");
         CommonMethodsPage.verifySearchedContractIsNotDisplayed();
@@ -901,7 +902,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 14:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-//        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+//        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1292,7 +1293,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 17:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        ////app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         logger.info("Step 18: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 19: Click on \"عرض جميع العقود\"");
@@ -1435,7 +1436,8 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 07: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("test");
         Browser.executeJSScroll(400);
         logger.info("Step 08: Verify searched contract is not appearing");
         CommonMethodsPage.verifySearchedContractIsNotDisplayed();
@@ -1452,7 +1454,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1481,7 +1483,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1511,7 +1513,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1544,7 +1546,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1577,7 +1579,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1610,7 +1612,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1645,7 +1647,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1681,7 +1683,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1719,7 +1721,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1759,7 +1761,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1801,7 +1803,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1848,7 +1850,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1894,7 +1896,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1937,7 +1939,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1984,7 +1986,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2030,7 +2032,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2080,7 +2082,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2130,7 +2132,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2173,7 +2175,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2219,7 +2221,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2265,7 +2267,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2302,7 +2304,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 15: Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2316,7 +2318,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2349,7 +2351,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2444,7 +2446,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 16: Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         logger.info("Step 17: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 18: Click on \"عرض جميع العقود\"");
@@ -2734,7 +2736,8 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 07: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("test");
         Browser.executeJSScroll(400);
         logger.info("Step 08: Verify searched contract is not appearing");
         CommonMethodsPage.verifySearchedContractIsNotDisplayed();
@@ -2751,7 +2754,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2816,7 +2819,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 15:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         logger.info("Step 16: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 17: Click on \"عرض جميع العقود\"");
@@ -2860,7 +2863,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2894,7 +2897,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2928,7 +2931,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2961,7 +2964,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2996,7 +2999,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3034,7 +3037,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3072,7 +3075,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3112,7 +3115,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3154,7 +3157,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3201,7 +3204,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3247,7 +3250,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3290,7 +3293,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3337,7 +3340,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3383,7 +3386,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3433,7 +3436,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3483,7 +3486,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3526,7 +3529,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3572,7 +3575,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3617,7 +3620,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3654,7 +3657,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 15:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -3668,7 +3671,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
