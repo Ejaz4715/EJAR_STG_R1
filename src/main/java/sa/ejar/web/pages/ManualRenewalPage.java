@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
+import static sa.ejar.web.objects.ManualRenewalPageObjects.editBTN1;
 import static sa.ejar.web.pages.CommonMethodsPage.clickOnKebabMenuButton;
 
 public class ManualRenewalPage {
@@ -353,11 +354,15 @@ public class ManualRenewalPage {
 
     public void clickOnEditButton1() {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN1(), 20);
+        CommonMethodsPage.scrollToElement(editBTN1());
+        Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.editBTN1());
     }
 
     public void clickOnEditButton2() {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN2(), 20);
+        CommonMethodsPage.scrollToElement(editBTN1());
+        Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.editBTN2());
     }
 
