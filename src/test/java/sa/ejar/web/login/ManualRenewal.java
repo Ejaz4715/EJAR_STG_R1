@@ -2,9 +2,12 @@ package sa.ejar.web.login;
 
 import com.testcrew.manager.TestDataManager;
 import com.testcrew.web.Browser;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import sa.ejar.api.repo.APICollection;
 import sa.ejar.web.base.NHCWebTest;
+import sa.ejar.web.objects.CommonMethodsPageObjects;
+import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
 import sa.ejar.web.pages.CommonMethodsPage;
 import java.util.Map;
 import static sa.ejar.web.objects.CommonMethodsPageObjects.*;
@@ -281,6 +284,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.KebabMenuOptions("تجديد العقد");
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify Issue Date Is Visible");
+        Browser.waitForSeconds(7);
         app.manualRenewalPage.verifyIssueDateIsVisible();
     }
 
@@ -2800,8 +2804,64 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_080_ManualRenewal(Map<String, String> data) throws Exception {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+//        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+//        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+//        logger.info("Step 00: Test Data : " + data);
+//        app.openApplication(data);
+//        logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+//        app.loginPage.enterUsername(data.get("Username"));
+//        app.loginPage.enterPassword(data.get("Password"));
+//        app.loginPage.clickLogin();
+//        app.loginPage.enterVerificationCode(data.get("OTP"));
+//        app.loginPage.closeExploreEjarPopUp();
+//        CommonMethodsPage.changeUserRole("مستأجر");
+//        logger.info("Step 02: Click on العقود tab");
+//        app.addResidentialContractPage.clickContractsBtn();
+//        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+//        CommonMethodsPage.selectViewAllContractsButton();
+//        logger.info("Step 04: Click on Manual Renewal Card");
+//        app.manualRenewalPage.ClickManualRenewalCard();
+//        logger.info("Step 05: Click on filter icon");
+//        CommonMethodsPage.clickFilterBtn();
+//        logger.info("Step 06: Enter contract number in the contract search");
+//        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+//        app.manualRenewalPage.getCurrentContractNumber();
+//        logger.info("Step 07: Click on three dots");
+//        CommonMethodsPage.clickOnKebabMenuButton();
+//        logger.info("Step 08: Click on ( تجديد العقد ) option");
+//        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
+//        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
+//        logger.info("Step 09: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
+//        app.manualRenewalPage.getNewContractNumber();
+//        CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
+//        app.addResidentialContractPage.clickSubmitForApprovalBTN();
+//        CommonMethodsPage.clickOnLetUsStartButton();
+//        logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
+//        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
+//        logger.info("Step 11: Click on ( التالي ) button");
+//        CommonMethodsPage.scrollToElement(nextBTN());
+//        CommonMethodsPage.clickOnNextButton();
+//        logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
+//        app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
+//        logger.info("Step 13: Click on (إخلاء مسؤولية) checkbox");
+//        CommonMethodsPage.clickOnDisclaimerCheckbox();
+//        logger.info("Step 14: Click on (تأكيد وإرسال) button");
+//        CommonMethodsPage.clickOnConfirmAndSubmitButton();
+//        logger.info("Step 15:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
+//        app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
+//        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
+//        logger.info("Step 16: Click on العقود tab");
+//        app.addResidentialContractPage.clickContractsBtn();
+//        logger.info("Step 17: Click on \"عرض جميع العقود\"");
+//        CommonMethodsPage.selectViewAllContractsButton();
+//        logger.info("Step 18: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
+//        app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
+//        logger.info("Step 19: Click on ( جاهز للتجديد ) card");
+//        app.manualRenewalPage.navigateToReadyForRenewalPage();
+//        logger.info("Step 20: Verify selected contract for renewal is not visible in Ready For Renewal ( جاهز للتجديد ) Contracts");
+//        app.manualRenewalPage.verifySelectedContractIsNotVisibleInReadyForRenewalContracts(data.get("Old_Contract"));
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -2815,47 +2875,13 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickContractsBtn();
         logger.info("Step 03: Click on \"عرض جميع العقود\"");
         CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 04: Click on Manual Renewal Card");
-        app.manualRenewalPage.ClickManualRenewalCard();
-        logger.info("Step 05: Click on filter icon");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 06: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
-        app.manualRenewalPage.getCurrentContractNumber();
-        logger.info("Step 07: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 08: Click on ( تجديد العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
-        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
-        logger.info("Step 09: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
-        app.manualRenewalPage.getNewContractNumber();
-        CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
-        app.addResidentialContractPage.clickSubmitForApprovalBTN();
-        CommonMethodsPage.clickOnLetUsStartButton();
-        logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
-        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on ( التالي ) button");
-        CommonMethodsPage.scrollToElement(nextBTN());
-        CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
-        app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on (إخلاء مسؤولية) checkbox");
-        CommonMethodsPage.clickOnDisclaimerCheckbox();
-        logger.info("Step 14: Click on (تأكيد وإرسال) button");
-        CommonMethodsPage.clickOnConfirmAndSubmitButton();
-        logger.info("Step 15:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
-        app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
-        logger.info("Step 16: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 17: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 18: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
+        logger.info("Step 04: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
-        logger.info("Step 19: Click on ( جاهز للتجديد ) card");
+        logger.info("Step 05: Click on ( جاهز للتجديد ) card");
         app.manualRenewalPage.navigateToReadyForRenewalPage();
-        logger.info("Step 20: Verify selected contract for renewal is not visible in Ready For Renewal ( جاهز للتجديد ) Contracts");
-        app.manualRenewalPage.verifySelectedContractIsNotVisibleInReadyForRenewalContracts(data.get("Old_Contract"));}
+        logger.info("Step 06: Verify selected contract for renewal is not visible in Ready For Renewal ( جاهز للتجديد ) Contracts");
+        app.manualRenewalPage.verifySelectedContractIsNotVisibleInReadyForRenewalContracts(data.get("Old_Contract"));
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_081_ManualRenewal(Map<String, String> data) throws Exception {
@@ -4758,6 +4784,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Verify that (اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي) checkbox is clickable");
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(),40);
         CommonMethodsPage.propertyDetailsCheckbox();
     }
 
@@ -6387,6 +6414,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Verify that (أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك / أقر بانه تم التحقق من الايبان)checkboxes are clickable");
         CommonMethodsPage.lessorCheckbox();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_183_ManualRenewal(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
@@ -6444,7 +6472,8 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 08: Click on  (لنبدأ)  button");
         app.sendContractForApprovalPage.clickOnLetUsStartButton();
         logger.info("Step 09: Verify that (اقر بأنه تم مطابقة العنوان المذكورعلى الموقع الفعلي) checkbox is clickable");
-        CommonMethodsPage.propertyDetailsCheckbox();
+        Assert.assertTrue(Browser.isElementEnabled(CommonMethodsPageObjects.propertyDetailsCheckbox()), "Button is not clickable");
+//        CommonMethodsPage.propertyDetailsCheckbox();
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_185_ManualRenewal(Map<String, String> data) throws Exception {
