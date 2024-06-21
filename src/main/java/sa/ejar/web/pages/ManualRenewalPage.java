@@ -262,11 +262,9 @@ public class ManualRenewalPage {
                         Browser.waitForSeconds(5);
                     } else {
                         status = true;
-                        break;
                     }
                 } else {
                     status = true;
-                    break;
                 }
             }
         }
