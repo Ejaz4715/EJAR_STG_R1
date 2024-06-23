@@ -72,13 +72,14 @@ public class ManualRenewalPage {
     }
 
     public void verifyIssueDateIsVisible() {
+        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.issueDate(),20);
         String Date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         String IssueDate = Browser.getText(ManualRenewalPageObjects.issueDate());
         String s = IssueDate.split(" ")[0];
         String T = s.replace("-", "");
         System.out.println(T);
         Assert.assertEquals(Date, T);
-        logger.addScreenshot("");
+        logger.addScreenshot("Issue Date : " +IssueDate);
     }
 
     public void contractTimeLineStatus(String Status) {
@@ -108,7 +109,8 @@ public class ManualRenewalPage {
     }
 
     public void verifyContractRenewalStepsPageIsDisplayed() {
-        Browser.waitUntilPresenceOfElement(ManualRenewalPageObjects.renewalStepsPage(), 20);
+        Browser.waitUntilPresenceOfElement(ManualRenewalPageObjects.renewalStepsPage(), 30);
+        Browser.waitForSeconds(2);
         String SendContractForRenewalTitle = Browser.getText(ManualRenewalPageObjects.renewalStepsPage());
         Assert.assertTrue(SendContractForRenewalTitle.contains("خطوات تجديد العقد"));
         logger.addScreenshot("Contract Renewal Steps Page Is Displayed");
@@ -301,7 +303,7 @@ public class ManualRenewalPage {
 
 
     public void AssessmentOfManualRenewalAsTenant(String Selection) {
-        Browser.waitForSeconds(3);
+        Browser.waitForSeconds(10);
         //if Good
         if (Selection.equals("Good")) {
             Browser.click(ManualRenewalPageObjects.YesOption1());
@@ -331,11 +333,13 @@ public class ManualRenewalPage {
     }
 
     public void updateFinancialInRenewalContract() {
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(3);
         click(ManualRenewalPageObjects.lateFeesLabel());
+        Browser.waitForSeconds(1);
         Browser.setText(ManualRenewalPageObjects.fillLateFeesInput(), "20");
         Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.retainerLabel());
+        Browser.waitForSeconds(1);
         Browser.setText(ManualRenewalPageObjects.fillRetainerFeeInput(), "20");
         Browser.waitForSeconds(1);
         logger.addScreenshot("Added Financial");

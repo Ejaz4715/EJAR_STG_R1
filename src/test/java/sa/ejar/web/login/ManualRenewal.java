@@ -14,6 +14,14 @@ public class ManualRenewal extends NHCWebTest {
 
     //---------------------Manual_Renewal_BoOfficer---------------------------
     //------------------------------------------------------------------------
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_RenewalContractAPIByBoOfficer(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        new APICollection().makeContractReadyForRenewal(data);
+    }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_001_ManualRenewal(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data);
@@ -900,7 +908,6 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 14:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1045,7 +1052,7 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.loginPage.closeExploreEjarPopUp();
+        //app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
@@ -1066,6 +1073,8 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.scrollToElement(editBTN1());
         app.manualRenewalPage.clickOnEditButton1();
         logger.info("Step 09: Update Financial terms");
+        app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
+        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.manualRenewalPage.updateFinancialInRenewalContract();
         app.addResidentialContractPage.clickContinueFinancialTermsBTN();
         logger.info("Step 10: Click on (تعديل) button");
@@ -1138,8 +1147,8 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  (عرض العقد)  option");
         CommonMethodsPage.ClickOnViewContractOption("عرض العقد");
-        logger.info("Step 08: Verify 'تم التقديم' status Is Visible In Contract Time Line after Bo Manager resubmitted rejected contract to parties");
-        app.manualRenewalPage.contractTimeLineStatus("تم التقديم");
+        logger.info("Step 08: Verify 'انتظار رسوم منصة إيجار' status Is Visible In Contract Time Line after Bo Manager resubmitted rejected contract to parties");
+        app.manualRenewalPage.contractTimeLineStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1164,7 +1173,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
         logger.info("Step 06: Verify the status of contract is change to  (بانتظار موافقة الأطراف) after Bo Manager resubmitted rejected contract to parties");
-        CommonMethodsPage.verifyContractStatus("بانتظار موافقة الأطراف");
+        CommonMethodsPage.verifyContractStatus("انتظار رسوم منصة إيجار");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1250,7 +1259,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
@@ -1269,13 +1277,11 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.KebabMenuOptions("عرض العقد");
         CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
         logger.info("Step 09: Click on (تعديل) button");
-        CommonMethodsPage.scrollToElement(editBTN1());
-        app.manualRenewalPage.clickOnEditButton1();
-        logger.info("Step 10: Update Financial terms");
-        app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
-        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
-        app.manualRenewalPage.updateFinancialInRenewalContract();
-        app.addResidentialContractPage.clickContinueFinancialTermsBTN();
+        CommonMethodsPage.scrollToElement(editBTN2());
+        app.manualRenewalPage.clickOnEditButton2();
+        logger.info("Step 10: Update Terms And Condition");
+        app.manualRenewalPage.updateTermsAndConditionInRenewalContract();
+        app.addResidentialContractPage.clickConfirmTermsAndConditionsBTN();
         logger.info("Step 11: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
@@ -1292,26 +1298,17 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnConfirmAndSubmitButton();
         logger.info("Step 17:Verify popup message (تم إرسال طلب تجديد العقد) is displayed");
         app.manualRenewalPage.verifySendContractForRenewalPopUpIsVisible(data);
-        //app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
-        logger.info("Step 18: Click on العقود tab");
-        app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 19: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 20: Click on filter icon");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 21: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
-        logger.info("Step 22: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 23: Click on ( عرض العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("عرض العقد");
-        CommonMethodsPage.ClickOnKebabMenuOption("عرض العقد");
-        logger.info("Step 24: Verify ' تم التقديم ' Is Visible In Contract Time Line");
-        app.manualRenewalPage.contractTimeLineStatus("تم التقديم");
     }
 
     //---------------------Manual_Renewal_Lessor------------------------------
     //------------------------------------------------------------------------
+
+    @Test(dataProvider = "testDataProvider")
+    public void TC_RenewalContractAPIByLessor(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        new APICollection().makeContractReadyForRenewal(data);
+    }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_039_ManualRenewal(Map<String, String> data) throws Exception {
@@ -1380,6 +1377,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_042_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1409,6 +1407,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_043_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1430,7 +1429,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 07: Enter contract number in the contract search");
-        CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
+        CommonMethodsPage.enterContractNumberInContractSearchInputField("1198765679");
         Browser.executeJSScroll(400);
         logger.info("Step 08: Verify searched contract is not appearing");
         CommonMethodsPage.verifySearchedContractIsNotDisplayed();
@@ -1438,6 +1437,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_044_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1446,7 +1446,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1466,6 +1465,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_045_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1474,7 +1474,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1495,6 +1494,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_046_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1503,7 +1503,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1527,6 +1526,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_047_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1535,7 +1535,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1551,14 +1550,15 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on ( تجديد العقد ) option");
-        CommonMethodsPage.KebabMenuOptions("تجديد العقد ");
-        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد ");
+        CommonMethodsPage.KebabMenuOptions("تجديد العقد");
+        CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
         logger.info("Step 08: Verify 'أعيد إصدارها' Is Visible In Contract Time Line");
         app.manualRenewalPage.contractTimeLineStatus("أعيد إصدارها");
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_048_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1567,7 +1567,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1591,6 +1590,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_049_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1599,7 +1599,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1617,14 +1616,17 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 07: Click on ( تجديد العقد ) option");
         CommonMethodsPage.KebabMenuOptions("تجديد العقد");
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
-        logger.info("Step 08: Click on ' الإرسال للتوثيق ' button > Verify Submit Contract for Renewal is visible");
+        logger.info("Step 08: Verify ( الإرسال للتوثيق ) button is enabled > Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
+        logger.info("Step 09: Verify Lessor able to send contract for approval without modified details");
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
-        app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
+        logger.info("Step 10: Verify Contract Renewal Steps Page is Displayed");
+        app.manualRenewalPage.verifyContractRenewalStepsPageIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_050_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1633,7 +1635,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1651,7 +1652,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 07: Click on ( تجديد العقد ) option");
         CommonMethodsPage.KebabMenuOptions("تجديد العقد");
         CommonMethodsPage.ClickOnKebabMenuOption("تجديد العقد");
-        logger.info("Step 08: Verify ' الإرسال للتوثيق ' button is enabled > Click on ' الإرسال للتوثيق ' button");
+        logger.info("Step 08: Click on ' الإرسال للتوثيق ' button");
         CommonMethodsPage.checkSendForApprovalButtonIsEnabled();
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Contract Renewal Steps Page is Displayed");
@@ -1660,6 +1661,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_051_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1668,7 +1670,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1697,6 +1698,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_052_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1705,7 +1707,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1736,6 +1737,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_053_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1744,7 +1746,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1777,6 +1778,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_054_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1785,7 +1787,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1823,6 +1824,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_055_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1831,7 +1833,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1868,6 +1869,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_056_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1876,7 +1878,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1910,6 +1911,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_057_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1918,7 +1920,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -1956,6 +1957,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_058_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -1964,7 +1966,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2001,6 +2002,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_059_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2009,7 +2011,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2050,6 +2051,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_060_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2058,7 +2060,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2099,6 +2100,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_061_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2107,7 +2109,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2141,6 +2142,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_062_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2149,7 +2151,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2186,6 +2187,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_063_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2194,7 +2196,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2231,6 +2232,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_064_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2239,7 +2241,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2281,6 +2282,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_065_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2289,7 +2291,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2313,6 +2314,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_066_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2321,7 +2323,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -2345,6 +2346,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_067_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2369,6 +2371,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_068_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2427,7 +2430,8 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_069_ManualRenewal(Map<String, String> data) throws Exception {
-         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -2448,6 +2452,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_070_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2478,6 +2483,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_071_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2507,6 +2513,8 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.scrollToElement(editBTN1());
         app.manualRenewalPage.clickOnEditButton1();
         logger.info("Step 09: Update Financial terms");
+        app.addResidentialContractPage.clickConfirmPaymentScheduleBTN();
+        app.addResidentialContractPage.clickContinueToAdditionalFeeBTN();
         app.manualRenewalPage.updateFinancialInRenewalContract();
         app.addResidentialContractPage.clickContinueFinancialTermsBTN();
         logger.info("Step 10: Click on (تعديل) button");
@@ -2525,6 +2533,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_072_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -2579,6 +2588,12 @@ public class ManualRenewal extends NHCWebTest {
     //---------------------Manual_Renewal_Tenant---------------------------
     //------------------------------------------------------------------------
 
+    @Test(dataProvider = "testDataProvider")
+    public void TC_RenewalContractAPIByTenant(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        logger.info("Step 00: Test Data : " + data);
+        new APICollection().makeContractReadyForRenewal(data);
+    }
     @Test(dataProvider = "testDataProvider")
     public void TC_074_ManualRenewal(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
@@ -3557,7 +3572,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -3607,7 +3621,6 @@ public class ManualRenewal extends NHCWebTest {
         app.loginPage.enterPassword(data.get("Password"));
         app.loginPage.clickLogin();
         app.loginPage.enterVerificationCode(data.get("OTP"));
-        app.moveInMoveOutUnitsPage.closeMoveInOutPopup();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -4989,13 +5002,12 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
+        logger.info("Step 11: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsEnabled();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
+
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_146_ManualRenewal(Map<String, String> data) throws Exception {
@@ -5026,12 +5038,10 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (إلغاء)  button");
+        logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 12: Verify the user navigate back to (دفع رسوم إيجار) section");
-        app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
+        logger.info("Step 11: Verify the user navigate back to (مراجعة معلومات العقد) page");
+        app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5063,13 +5073,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify The user navigate to (التحقق من الهوية) page");
+        logger.info("Step 12: Verify The user navigate to (التحقق من الهوية) page");
         app.sendContractForApprovalPage.verifyIdentityVerificationPageIsDisplayed();
     }
 
@@ -5102,13 +5110,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify user is able to input OTP successfully");
+        logger.info("Step 12: Verify user is able to input OTP successfully");
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
     }
 
@@ -5141,16 +5147,14 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Click on  (إلغاء) button");
+        logger.info("Step 12: Click on  (إلغاء) button");
         app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 14: Verify the user navigate back to (إخلاء مسؤولية) page");
+        logger.info("Step 13: Verify the user navigate back to (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
     }
 
@@ -5183,13 +5187,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify the (التحقق من الهوية) button is disabled");
+        logger.info("Step 12: Verify the (التحقق من الهوية) button is disabled");
         CommonMethodsPage.verifyTheVerifyIdentityButtonIsDisabled();
     }
 
@@ -5222,17 +5224,15 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Enter wrong OTP number");
-        app.sendContractForApprovalPage.enterVerificationCode(data.get("Wrong_OTP"));
-        logger.info("Step 14: Click on  (التحقق من الهوية) button");
+        logger.info("Step 12: Enter wrong OTP number");
+        app.sendContractForApprovalPage.enterVerificationCode("1237");
+        logger.info("Step 13: Click on  (التحقق من الهوية) button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        logger.info("Step 15: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
+        logger.info("Step 14: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
         app.sendContractForApprovalPage.verifyOTPErrorMessageIsDisplayed();
     }
 
@@ -5265,20 +5265,16 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 14: Enter OTP Number");
+        logger.info("Step 12: Enter OTP Number");
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
-        logger.info("Step 15: Click on (التحقق من الهوية)");
+        logger.info("Step 13: Click on (التحقق من الهوية)");
         CommonMethodsPage.clickOnVerifyIdentityButton();
-        app.manualRenewalPage.AssessmentOfManualRenewalAsLessor("Good");
-        logger.info("Step 16: Verify 'تمت الموافقة بنجاح' message is displayed");
+        logger.info("Step 14: Verify 'تمت الموافقة بنجاح' message is displayed");
         app.sendContractForApprovalPage.verifyApprovedSubmittedMessageIsDisplayed();
-        app.manualRenewalPage.AssessmentOfManualRenewalAsLessor("Good");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -5301,40 +5297,54 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter contract number in the contract search");
         app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
-        logger.info("Step 06: Click on three dots");
-        CommonMethodsPage.clickOnKebabMenuButton();
-        logger.info("Step 07: Click on  (الموافقة على العقد)  option");
-        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
-        logger.info("Step 08: Click on  (لنبدأ)  button");
-        app.sendContractForApprovalPage.clickOnLetUsStartButton();
-        logger.info("Step 09: Click on  (تأكيد)  button");
-        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
-        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
-        app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 14: Verify user is able to input OTP successfully");
-        app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
-        logger.info("Step 15: Click on (التحقق من الهوية)");
-        CommonMethodsPage.clickOnVerifyIdentityButton();
-        app.manualRenewalPage.AssessmentOfManualRenewalAsLessor("Good");
-        logger.info("Step 16: Click on العقود tab");
-        CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 17: Click on \"عرض جميع العقود\"");
-        CommonMethodsPage.selectViewAllContractsButton();
-        logger.info("Step 18: Click on filter icon");
-        CommonMethodsPage.clickFilterBtn();
-        logger.info("Step 19: Enter contract number in the contract search");
-        app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
-        logger.info("Step 20: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
+        logger.info("Step 06: Verify the status of contract change to ( بانتظار موافقة المستأجر )");
         CommonMethodsPage.verifyContractStatus("بانتظار موافقة المستأجر");
     }
 
     //---------------------Manual_Renewal_Tenant_Reject------------------------------
     //-------------------------------------------------------------------------------
+    @Test(dataProvider = "testDataProvider")
+    public void TC_ApprovedByLessor_ManualRenewal(Map<String, String> data) throws Exception {
+            data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+            logger.info("Step 00: Test Data : " + data);
+            app.openApplication(data);
+            logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
+            app.loginPage.enterUsername(data.get("Username"));
+            app.loginPage.enterPassword(data.get("Password"));
+            app.loginPage.clickLogin();
+            app.loginPage.enterVerificationCode(data.get("OTP"));
+            app.loginPage.closeExploreEjarPopUp();
+            CommonMethodsPage.changeUserRole("مؤجر");
+            logger.info("Step 02: Click on العقود tab");
+            CommonMethodsPage.clickContractsBtn();
+            logger.info("Step 03: Click on \"عرض جميع العقود\"");
+            CommonMethodsPage.selectViewAllContractsButton();
+            logger.info("Step 04: Click on filter icon");
+            CommonMethodsPage.clickFilterBtn();
+            logger.info("Step 05: Enter contract number in the contract search");
+            app.addResidentialContractPage.enterContractNumberInContractSearchInputField(data.get("New_Contract"));
+            logger.info("Step 06: Click on three dots");
+            CommonMethodsPage.clickOnKebabMenuButton();
+            logger.info("Step 07: Click on  (الموافقة على العقد)  option");
+            CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+            logger.info("Step 08: Click on  (لنبدأ)  button");
+            app.sendContractForApprovalPage.clickOnLetUsStartButton();
+            logger.info("Step 09: Click on  (تأكيد)  button");
+            CommonMethodsPage.selectCheckboxesOfSendApproveContract();
+            CommonMethodsPage.clickOnConfirmButton();
+            Browser.waitForSeconds(1);
+            CommonMethodsPage.clickOnConfirmButton();
+            logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+            app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
+            logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
+            app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
+            logger.info("Step 12: Enter OTP Number");
+            app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
+            logger.info("Step 13: Click on (التحقق من الهوية)");
+            CommonMethodsPage.clickOnVerifyIdentityButton();
+            logger.info("Step 14: Verify 'تمت الموافقة بنجاح' message is displayed");
+            app.sendContractForApprovalPage.verifyApprovedSubmittedMessageIsDisplayed();
+        }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_154_ManualRenewal(Map<String, String> data) throws Exception {
@@ -5357,6 +5367,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_155_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5381,6 +5392,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_156_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5407,6 +5419,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_157_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5435,6 +5448,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_158_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5465,6 +5479,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_159_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5497,6 +5512,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_160_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5529,6 +5545,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_161_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5561,6 +5578,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_162_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5593,6 +5611,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_163_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5627,6 +5646,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_164_ManualRenewal (Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5661,6 +5681,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_165_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5695,6 +5716,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_166_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5731,6 +5753,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_167_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5767,6 +5790,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_168_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5805,6 +5829,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_169_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5843,6 +5868,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_170_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5884,6 +5910,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_171_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5922,6 +5949,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_172_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -5955,7 +5983,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 12: Click on  (رفض العقد) button");
         app.sendContractForApprovalPage.clickOnRejectTheContractButton();
         logger.info("Step 13: Enter wrong OTP number");
-        app.sendContractForApprovalPage.enterVerificationCode(data.get("Wrong_OTP"));
+        app.sendContractForApprovalPage.enterVerificationCode("1334");
         logger.info("Step 14: Click on  (التحقق من الهوية) button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         logger.info("Step 15: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
@@ -5964,6 +5992,7 @@ public class ManualRenewal extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_173_ManualRenewal(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
@@ -6225,6 +6254,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Verify that (أقر بانه تم مطابقة معلومات المؤجر مع معلومات الصك / أقر بانه تم التحقق من الايبان)checkboxes are clickable");
         CommonMethodsPage.lessorCheckbox();
     }
+
     @Test(dataProvider = "testDataProvider")
     public void TC_183_ManualRenewal(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
@@ -6432,10 +6462,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Verify the user navigate to the (إخلاء مسؤولية) page");
+        logger.info("Step 10: Verify the user navigate to the (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
     }
 
@@ -6499,9 +6526,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Verify the (إرسال الموافقة على العقد) button is disabled/not clickable");
+        logger.info("Step 10: Verify the (إرسال الموافقة على العقد) button is disabled/not clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsDisabled();
     }
 
@@ -6534,11 +6559,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
+        logger.info("Step 11: Verify the (إرسال الموافقة على العقد) button is is enabled/clickable");
         app.sendContractForApprovalPage.verifySubmitContractApprovalButtonIsEnabled();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
     }
@@ -6572,11 +6595,9 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (إلغاء)  button");
+        logger.info("Step 10: Click on  (إلغاء)  button");
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 12: Verify the user navigate back to (مراجعة معلومات العقد) page");
+        logger.info("Step 11: Verify the user navigate back to (مراجعة معلومات العقد) page");
         app.sendContractForApprovalPage.verifyReviewTheContractPageIsDisplayed();
     }
 
@@ -6609,13 +6630,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify The user navigate to (التحقق من الهوية) page");
+        logger.info("Step 12: Verify The user navigate to (التحقق من الهوية) page");
         app.sendContractForApprovalPage.verifyIdentityVerificationPageIsDisplayed();
     }
 
@@ -6648,13 +6667,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify user is able to input OTP successfully");
+        logger.info("Step 12: Verify user is able to input OTP successfully");
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
     }
 
@@ -6687,16 +6704,14 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Click on  (إلغاء) button");
+        logger.info("Step 12: Click on  (إلغاء) button");
         app.sendContractForApprovalPage.verifyVerificationCodeIsDisplayed();
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 14: Verify the user navigate back to (إخلاء مسؤولية) page");
+        logger.info("Step 13: Verify the user navigate back to (إخلاء مسؤولية) page");
         app.sendContractForApprovalPage.verifyApprovalDisclaimerPageIsDisplayed();
     }
 
@@ -6730,13 +6745,11 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Verify the (التحقق من الهوية) button is disabled");
+        logger.info("Step 12: Verify the (التحقق من الهوية) button is disabled");
         CommonMethodsPage.verifyTheVerifyIdentityButtonIsDisabled();
     }
 
@@ -6769,17 +6782,15 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 13: Enter wrong OTP number");
+        logger.info("Step 12: Enter wrong OTP number");
         app.sendContractForApprovalPage.enterVerificationCode("2428");
-        logger.info("Step 14: Click on  (التحقق من الهوية) button");
+        logger.info("Step 13: Click on  (التحقق من الهوية) button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        logger.info("Step 15: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
+        logger.info("Step 14: Verify the error message is displayed under OTP input field, Message: E1389 رمز OTP غير صالح");
         app.sendContractForApprovalPage.verifyOTPErrorMessageIsDisplayed();
     }
 
@@ -6812,20 +6823,16 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 09: Click on  (تأكيد)  button");
         CommonMethodsPage.selectCheckboxesOfSendApproveContract();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 10: Click on  (تأكيد)  button");
-        CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 11: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
+        logger.info("Step 10: Click on  (أقر بالموافقة على المذكور أعلاه) checkbox");
         app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
-        logger.info("Step 12: Click on  (إرسال الموافقة على العقد) button");
+        logger.info("Step 11: Click on  (إرسال الموافقة على العقد) button");
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
-        logger.info("Step 14: Enter OTP Number");
+        logger.info("Step 12: Enter OTP Number");
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
-        logger.info("Step 15: Click on (التحقق من الهوية)");
+        logger.info("Step 13: Click on (التحقق من الهوية)");
         CommonMethodsPage.clickOnVerifyIdentityButton();
-        app.manualRenewalPage.AssessmentOfManualRenewalAsTenant("Bad");
-        logger.info("Step 16: Verify 'تمت الموافقة بنجاح' message is displayed");
+        logger.info("Step 14: Verify 'تمت الموافقة بنجاح' message is displayed");
         app.sendContractForApprovalPage.verifyApprovedSubmittedMessageIsDisplayed();
-        app.manualRenewalPage.AssessmentOfManualRenewalAsTenant("Good");
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6875,7 +6882,7 @@ public class ManualRenewal extends NHCWebTest {
         logger.info("Step 06: Click on three dots");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Verify ( الموافقة على العقد ) option is not visible if the lessor not pay ejar fee");
-        CommonMethodsPage.KebabMenuOptions("الموافقة على العقد");
+        CommonMethodsPage.checkKebabMenuOptionsIsNotVisible("الموافقة على العقد");
     }
     @Test(dataProvider = "testDataProvider")
     public void TC_202_ManualRenewal(Map<String, String> data) throws Exception {

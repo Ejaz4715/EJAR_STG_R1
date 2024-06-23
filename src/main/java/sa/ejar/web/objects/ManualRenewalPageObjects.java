@@ -88,9 +88,9 @@ public class ManualRenewalPageObjects {
 
     public static By textarea() {return By.xpath("//div//textarea[@data-name='4']");}
 
-    public static By editBTN1() {return By.xpath("//button[contains(text(),'تعديل')]");}
+    public static By editBTN1() {return By.xpath("(//button[contains(text(),'تعديل')])[1]");}
 
-    public static By editBTN2() {return By.xpath("//button[contains(text(),'تعديل')]");}
+    public static By editBTN2() {return By.xpath("(//button[contains(text(),'تعديل')])[2]");}
 
     public static By NoContractFoundMsg() { return By.xpath("//div[text()=' لم يتم العثور على عقود! يرجى إضافة عقود جديدة. ']");}
 
