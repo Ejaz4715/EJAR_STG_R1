@@ -19,13 +19,13 @@ public class ManualRenewalPage {
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.readyForRenewalCard(), 20);
         Assert.assertTrue(Browser.isElementPresent(ManualRenewalPageObjects.readyForRenewalCard()));
         WebBaseTest.logger.addScreenshot("Ready For Renewal Card Is Visible");
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(2);
     }
 
     public void navigateToReadyForRenewalPage() {
         Browser.click(ManualRenewalPageObjects.readyForRenewalCard());
         WebBaseTest.logger.addScreenshot("Display Contract that Ready for Renewal");
-        Browser.waitForSeconds(3);
+        Browser.waitForSeconds(2);
     }
 
 
@@ -162,6 +162,7 @@ public class ManualRenewalPage {
             while (status) {
                 List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getAllContractNumberTxt());
                 for (WebElement ContractNum : ContractNumber) {
+                    Browser.waitForSeconds(1);
                     if (ContractNum.getText().contains(SelectedContract)) {
                         logger.addScreenshot("Contract is found");
                         status = false;
@@ -252,7 +253,7 @@ public class ManualRenewalPage {
         if (!(Browser.isElementPresent(ManualRenewalPageObjects.NoContractFoundMsg()))) {
             if (Browser.isElementPresent(ManualRenewalPageObjects.selectPageSizeFifty())) {
                 Browser.selectDropdownByVisibleText(ManualRenewalPageObjects.selectPageSizeFifty(), "50");
-                Browser.waitForSeconds(5);
+                Browser.waitForSeconds(10);
             }
             while (!status) {
                 List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getCurrentTotalOfContracts());
