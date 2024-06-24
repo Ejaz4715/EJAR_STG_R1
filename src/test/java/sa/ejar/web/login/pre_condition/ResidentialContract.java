@@ -238,7 +238,14 @@ public class ResidentialContract extends NHCWebTest{
         CommonMethodsPage.enterContractNumberInContractSearchInputField(data.get("ContractNumber"));
         logger.info("Step 03: Navigate to approve contract");
         CommonMethodsPage.clickOnKebabMenuButton();
-
+        CommonMethodsPage.ClickOnKebabMenuOption("الموافقة على العقد");
+        app.sendContractForApprovalPage.clickOnLetUsStartButton();
+        CommonMethodsPage.selectCheckboxesOfSendApproveContract();
+        CommonMethodsPage.clickOnConfirmButton();
+        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())){
+            CommonMethodsPage.clickOnConfirmButton();
+        }
+        app.sendContractForApprovalPage.clickOnAgreeToTheAboveCheckbox();
         app.sendContractForApprovalPage.clickOnSubmitContractApprovalButton();
         app.sendContractForApprovalPage.enterVerificationCode(data.get("OTP"));
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();

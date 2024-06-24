@@ -75,7 +75,7 @@ public class ChangeLessor_LessorRepPage {
         PDDocument document = PDDocument.load(bfStream);
         PDFTextStripper stripper = new PDFTextStripper();
         int chr = stripper.getText(document).indexOf("Contract No.");
-        String contactVersion = stripper.getText(document).substring(chr, chr + 35);
+        String contactVersion = stripper.getText(document).substring(chr, chr + 31);
         return contactVersion;
     }
 

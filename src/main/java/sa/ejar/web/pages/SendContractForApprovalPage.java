@@ -211,6 +211,7 @@ public class SendContractForApprovalPage {
 
     public void verifyOTPErrorMessageIsDisplayed() throws Exception {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.wrongOTPMsg(), 20);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.invalidOTPErrorMsg(), 20);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.wrongOTPMsg()));
         logger.addScreenshot("The OTP code has been entered with wrong number");
         Browser.waitForSeconds(1);

@@ -310,6 +310,28 @@ public class CommonMethodsPage {
     }
 
     /**
+     * Validate an option is NOT displayed in Kebab menu
+     *
+     * @param option - Option to be validated
+     */
+    public static void VerifyKebabMenuOptionIsNotPresent(String option) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.KebabMenuOptions());
+        Browser.waitForSeconds(1);
+        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        boolean status = false;
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                status = true;
+                break;
+            }
+        }
+        Assert.assertFalse(status, option + "option is available");
+        logger.addScreenshot("");
+    }
+
+    /**
      * Select an option from Kebab menu
      *
      * @param option - Option to be selected
@@ -415,6 +437,7 @@ public class CommonMethodsPage {
      * @param element - Locator of Input Field
      */
     public static void verifyValueIsDisplayed(String value, By element) {
+        Browser.waitUntilVisibilityOfElement(element,40);
         String val = Browser.getWebElement(element).getText();
         Assert.assertTrue(val.contains(value), "Actual value (" + val + ") does not match with expected value (" + value + ")");
         logger.addScreenshot("");
@@ -992,7 +1015,7 @@ public class CommonMethodsPage {
     }
 
     public static void clickOnSubmitButton() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 20);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.submitBTN(), 40);
         Browser.click(CommonMethodsPageObjects.submitBTN());
     }
 
@@ -1003,7 +1026,7 @@ public class CommonMethodsPage {
     }
 
     public static void clickRatingButtons() {
-        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 30);
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.ratingBTN(), 100);
         if (Browser.isElementPresent(CommonMethodsPageObjects.newRadioBTN())) {
             Browser.click(CommonMethodsPageObjects.newRadioBTN());
         }
@@ -1011,7 +1034,6 @@ public class CommonMethodsPage {
         List<WebElement> rateList = Browser.driver.findElements(CommonMethodsPageObjects.ratingBTN());
         for (WebElement rate : rateList) {
             rate.click();
-
         }
     }
 
@@ -1097,7 +1119,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 10);
         Assert.assertTrue(Browser.isElementDisplayed(SendContractForApprovalPageObjects.identityVerificationBTN()), "Button is not present");
         Browser.click(SendContractForApprovalPageObjects.identityVerificationBTN());
-        logger.addScreenshot("VerifyIdentityButtonFromOTPPopupIsNotPresent");
+        logger.addScreenshot("");
     }
 
     /**
@@ -1447,7 +1469,7 @@ public class CommonMethodsPage {
     }
 
     public static void unitDetailsCheckbox() {
-        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.unitLabel(), 20);
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.unitLabel(), 40);
         Browser.click(CommonMethodsPageObjects.unitLabel());
         Browser.executeJSScroll(600);
         Browser.click(CommonMethodsPageObjects.unitDetailsCheckbox());

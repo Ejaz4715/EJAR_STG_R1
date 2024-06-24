@@ -175,11 +175,15 @@ public class MoveInMoveOutUnitsPage {
         }
     }
 
+//    public void uploadAttachment(String File) throws Exception {
+//        Browser.waitForSeconds(3);
+//        Browser.click(MoveInMoveOutUnitsPageObjects.clickOnUploadBTN());
+//        Browser.waitForSeconds(2);
+//        robotFiles(File);
+//    }
+
     public void uploadAttachment(String File) throws Exception {
-        Browser.waitForSeconds(3);
-        Browser.click(MoveInMoveOutUnitsPageObjects.clickOnUploadBTN());
-        Browser.waitForSeconds(2);
-        robotFiles(File);
+        new MoveInMoveOutUnitsPage().uploadFile(File);
     }
 
     public void robotFiles(String File) throws Exception {
