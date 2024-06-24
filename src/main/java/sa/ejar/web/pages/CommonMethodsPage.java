@@ -151,6 +151,11 @@ public class CommonMethodsPage {
     public static void clickOnConfirmButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
         Browser.click(CommonMethodsPageObjects.confirmBTN());
+        Browser.waitForSeconds(2);
+        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())) {
+            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
+            Browser.click(CommonMethodsPageObjects.confirmBTN());
+        }
     }
 
     public static void clickOnCloseButton() throws Exception {
@@ -189,6 +194,7 @@ public class CommonMethodsPage {
      * Check mark every checkbox in approval
      */
     public static void selectCheckboxesOfSendApproveContract() throws Exception {
+        Browser.waitForSeconds(3);
         if (Browser.isElementPresent(SendContractForApprovalPageObjects.sendForApprovalCheckboxes())) {
             Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.sendForApprovalCheckboxes(), 30);
             List<WebElement> checkBoxes = Browser.getWebElements(SendContractForApprovalPageObjects.sendForApprovalCheckboxes());
@@ -283,6 +289,23 @@ public class CommonMethodsPage {
             }
         }
         Assert.assertTrue(status, option + "option is not available");
+        logger.addScreenshot("");
+    }
+
+    public static void checkKebabMenuOptionsIsNotVisible(String option) {
+        Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.KebabMenuOptions(), 40);
+        CommonMethodsPage.scrollToElement(CommonMethodsPageObjects.KebabMenuOptions());
+        Browser.waitForSeconds(1);
+        List<WebElement> kebabOptions = Browser.getWebElements(CommonMethodsPageObjects.KebabMenuOptions());
+        boolean status = false;
+        for (WebElement opt : kebabOptions) {
+            String optText = opt.getText();
+            if (optText.contains(option)) {
+                status = true;
+                break;
+            }
+        }
+        Assert.assertFalse(status, option + "option is available");
         logger.addScreenshot("");
     }
 
@@ -1409,6 +1432,7 @@ public class CommonMethodsPage {
         Browser.waitUntilVisibilityOfElement(SendContractForApprovalPageObjects.identityVerificationBTN(), 20);
         Assert.assertTrue(Browser.isElementDisabled(SendContractForApprovalPageObjects.identityVerificationBTN()));
         logger.addScreenshot("The ( رفض العقد ) button is not enabled/clickable");
+        Browser.waitForSeconds(1);
     }
 
 
@@ -1436,9 +1460,10 @@ public class CommonMethodsPage {
     }
 
     public static void propertyDetailsCheckbox() {
-        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.propertyLabel(), 40);
+        Browser.waitUntilPresenceOfElement(CommonMethodsPageObjects.propertyLabel(), 50);
         Browser.click(CommonMethodsPageObjects.propertyLabel());
         Browser.executeJSScroll(800);
+        Browser.waitForSeconds(10);
         Browser.click(CommonMethodsPageObjects.propertyDetailsCheckbox());
         logger.addScreenshot("Property Details Checkbox is clickable");
     }

@@ -503,7 +503,7 @@ public class AddResidentialContractPage {
     }
 
     public void enterContractNumberInContractSearchInputField(String contractNumber) throws Exception {
-        Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.searchContractNumberInputField(), 20);
+        Browser.waitUntilPresenceOfElement(AddResidentialContractPageObjects.searchContractNumberInputField(), 40);
         Browser.setText(AddResidentialContractPageObjects.searchContractNumberInputField(), contractNumber);
         Browser.waitForSeconds(1);
     }

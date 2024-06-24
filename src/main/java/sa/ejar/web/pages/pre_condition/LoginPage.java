@@ -38,6 +38,7 @@ public class LoginPage {
     }
 
     public void closeExploreEjarPopUp() throws Exception {
+        Browser.waitForSeconds(1);
         for (int i = 0; i <= 2; i++) {
             if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
                 Browser.click(LoginPageObjects.closeButton1());

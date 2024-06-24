@@ -73,7 +73,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By PopUpAlertAfterCancel() {
-        return By.xpath("//app-card-body/p");
+        return By.xpath("//p[@class='m-0']");
     }
 
     public static By maxValueError() {

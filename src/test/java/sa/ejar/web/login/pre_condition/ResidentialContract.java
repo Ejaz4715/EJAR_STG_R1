@@ -83,6 +83,7 @@ public class ResidentialContract extends NHCWebTest{
             app.addResidentialContractPage.clickContinuePayBtnOnPreviewBrokerageAgreementPage();
             app.addResidentialContractPage.clickDisclaimerCheckboxOnPayingEjarFeesPage();
             app.addResidentialContractPage.clickConfirmAndSubmitBtnOnPayingEjarFeesPage();
+            Browser.waitForSeconds(5);
             CommonMethodsPage.clickRatingButtons();
             CommonMethodsPage.clickOnSubmitButton();
             app.addResidentialContractPage.clickCloseSurveyPopUpBTN();

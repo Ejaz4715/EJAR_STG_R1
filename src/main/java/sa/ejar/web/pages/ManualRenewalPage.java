@@ -7,12 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import sa.ejar.web.objects.CommonMethodsPageObjects;
 import sa.ejar.web.objects.ManualRenewalPageObjects;
-
 import java.util.List;
 import java.util.Map;
 import static com.testcrew.manager.PDFReportManager.logger;
 import static com.testcrew.web.Browser.*;
-import static sa.ejar.web.objects.ManualRenewalPageObjects.editBTN1;
 import static sa.ejar.web.pages.CommonMethodsPage.clickOnKebabMenuButton;
 
 public class ManualRenewalPage {
@@ -21,13 +19,13 @@ public class ManualRenewalPage {
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.readyForRenewalCard(), 20);
         Assert.assertTrue(Browser.isElementPresent(ManualRenewalPageObjects.readyForRenewalCard()));
         WebBaseTest.logger.addScreenshot("Ready For Renewal Card Is Visible");
-        Browser.waitForSeconds(1);
+        Browser.waitForSeconds(2);
     }
 
     public void navigateToReadyForRenewalPage() {
         Browser.click(ManualRenewalPageObjects.readyForRenewalCard());
         WebBaseTest.logger.addScreenshot("Display Contract that Ready for Renewal");
-        Browser.waitForSeconds(3);
+        Browser.waitForSeconds(2);
     }
 
 
@@ -74,13 +72,14 @@ public class ManualRenewalPage {
     }
 
     public void verifyIssueDateIsVisible() {
+        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.issueDate(),20);
         String Date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         String IssueDate = Browser.getText(ManualRenewalPageObjects.issueDate());
         String s = IssueDate.split(" ")[0];
         String T = s.replace("-", "");
         System.out.println(T);
         Assert.assertEquals(Date, T);
-        logger.addScreenshot("");
+        logger.addScreenshot("Issue Date : " +IssueDate);
     }
 
     public void contractTimeLineStatus(String Status) {
@@ -110,7 +109,8 @@ public class ManualRenewalPage {
     }
 
     public void verifyContractRenewalStepsPageIsDisplayed() {
-        Browser.waitUntilPresenceOfElement(ManualRenewalPageObjects.renewalStepsPage(), 20);
+        Browser.waitUntilPresenceOfElement(ManualRenewalPageObjects.renewalStepsPage(), 30);
+        Browser.waitForSeconds(2);
         String SendContractForRenewalTitle = Browser.getText(ManualRenewalPageObjects.renewalStepsPage());
         Assert.assertTrue(SendContractForRenewalTitle.contains("خطوات تجديد العقد"));
         logger.addScreenshot("Contract Renewal Steps Page Is Displayed");
@@ -162,6 +162,7 @@ public class ManualRenewalPage {
             while (status) {
                 List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getAllContractNumberTxt());
                 for (WebElement ContractNum : ContractNumber) {
+                    Browser.waitForSeconds(1);
                     if (ContractNum.getText().contains(SelectedContract)) {
                         logger.addScreenshot("Contract is found");
                         status = false;
@@ -252,7 +253,7 @@ public class ManualRenewalPage {
         if (!(Browser.isElementPresent(ManualRenewalPageObjects.NoContractFoundMsg()))) {
             if (Browser.isElementPresent(ManualRenewalPageObjects.selectPageSizeFifty())) {
                 Browser.selectDropdownByVisibleText(ManualRenewalPageObjects.selectPageSizeFifty(), "50");
-                Browser.waitForSeconds(5);
+                Browser.waitForSeconds(10);
             }
             while (!status) {
                 List<WebElement> ContractNumber = driver.findElements(ManualRenewalPageObjects.getCurrentTotalOfContracts());
@@ -264,9 +265,11 @@ public class ManualRenewalPage {
                         Browser.waitForSeconds(5);
                     } else {
                         status = true;
+                        break;
                     }
                 } else {
                     status = true;
+                    break;
                 }
             }
         }
@@ -301,7 +304,7 @@ public class ManualRenewalPage {
 
 
     public void AssessmentOfManualRenewalAsTenant(String Selection) {
-        Browser.waitForSeconds(3);
+        Browser.waitForSeconds(10);
         //if Good
         if (Selection.equals("Good")) {
             Browser.click(ManualRenewalPageObjects.YesOption1());
@@ -331,12 +334,13 @@ public class ManualRenewalPage {
     }
 
     public void updateFinancialInRenewalContract() {
-        Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.AdditionalFeeLabel(), 40);
-        Browser.click(ManualRenewalPageObjects.AdditionalFeeLabel());
+        Browser.waitForSeconds(3);
         click(ManualRenewalPageObjects.lateFeesLabel());
+        Browser.waitForSeconds(1);
         Browser.setText(ManualRenewalPageObjects.fillLateFeesInput(), "20");
         Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.retainerLabel());
+        Browser.waitForSeconds(1);
         Browser.setText(ManualRenewalPageObjects.fillRetainerFeeInput(), "20");
         Browser.waitForSeconds(1);
         logger.addScreenshot("Added Financial");
@@ -356,15 +360,11 @@ public class ManualRenewalPage {
 
     public void clickOnEditButton1() {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN1(), 20);
-        CommonMethodsPage.scrollToElement(editBTN1());
-        Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.editBTN1());
     }
 
     public void clickOnEditButton2() {
         waitUntilVisibilityOfElement(ManualRenewalPageObjects.editBTN2(), 20);
-        CommonMethodsPage.scrollToElement(editBTN1());
-        Browser.waitForSeconds(1);
         click(ManualRenewalPageObjects.editBTN2());
     }
 
