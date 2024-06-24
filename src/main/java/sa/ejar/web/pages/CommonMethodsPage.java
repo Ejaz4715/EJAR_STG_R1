@@ -392,6 +392,7 @@ public class CommonMethodsPage {
      * @param element - Locator of Input Field
      */
     public static void verifyValueIsDisplayed(String value, By element) {
+        Browser.waitUntilVisibilityOfElement(element,40);
         String val = Browser.getWebElement(element).getText();
         Assert.assertTrue(val.contains(value), "Actual value (" + val + ") does not match with expected value (" + value + ")");
         logger.addScreenshot("");
