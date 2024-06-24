@@ -4888,9 +4888,9 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Verify the searched ownership document is displayed");
-        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Ownership_Number"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -4911,7 +4911,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -4938,7 +4938,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -4970,7 +4970,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -10307,9 +10307,9 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Verify the searched ownership document is displayed");
-        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Ownership_Number"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -10330,7 +10330,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -10357,7 +10357,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -10389,7 +10389,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -12964,9 +12964,9 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Verify the searched ownership document is displayed");
-        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("Ownership_Number"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -12987,7 +12987,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -13014,7 +13014,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("Ownership_Number"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
