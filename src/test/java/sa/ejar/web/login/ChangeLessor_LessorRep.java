@@ -914,7 +914,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 11: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 12: Enter a national id having less than 10 digits");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_LessThanTenDigits"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_LessThanTenDigits"));
         CommonMethodsPage.errorMessage("الحد", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
@@ -952,7 +952,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 11: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 12: Input national id including a letter");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_WithLetters"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_WithLetters"));
         CommonMethodsPage.errorMessage("يرجى", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
@@ -990,8 +990,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 11: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 12: Verify user is able to Input valid DOB in Hijri format");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Lessor_DOB"), AddResidentialContractPageObjects.tenantDateOfBirthInput());
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorRep_DOB"), AddResidentialContractPageObjects.tenantDateOfBirthInput());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -1143,7 +1143,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 11: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 12: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         logger.info("Step 13: Verify equivalent Gregorian date is displayed under تاريخ الميلاد input field");
         CommonMethodsPage.verifyEquivalentDateIsDisplayed("gregorian");
     }
@@ -1220,7 +1220,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 11: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 12: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.verifyNextButtonIsDisabled();
     }
 
@@ -1260,7 +1260,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         CommonMethodsPage.verifyValueIsDisplayed("ممثل المؤجر الجديد", ChangeLessor_LessorRepPageObjects.NewLessorRepInfoPageTitle());
     }
@@ -1337,7 +1337,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a phone number which does not begin with digit 5");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum_NotBeginWith5"));
@@ -1380,7 +1380,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a phone number which having length < 9");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum_LessThan9"));
@@ -1423,7 +1423,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a phone number which having length < 9");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum"));
@@ -1466,7 +1466,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a valid email address");
         CommonMethodsPage.enterEmail(data.get("Lessor_Email"));
@@ -1509,7 +1509,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input an invalid email address");
         CommonMethodsPage.enterEmail(data.get("Lessor_Email_Invalid"));
@@ -1552,7 +1552,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on المنطقة dropdown");
         CommonMethodsPage.clickOnRegionDropdownMenu();
@@ -1596,7 +1596,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on المدينة  dropdown");
         CommonMethodsPage.clickOnCityDropdown();
@@ -1640,7 +1640,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a numerical value with with letters in Postal code input");
         CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Invalid"));
@@ -1683,7 +1683,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Enter a valid postal code including on numerical values");
         CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Valid"));
@@ -1726,7 +1726,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a value including any special character in اسم الشارع input field");
         CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Invalid"));
@@ -1769,7 +1769,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a valid value in (اسم الشارع ) input field");
         CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Valid"));
@@ -1812,7 +1812,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a numerical value with (length < 5) in  رقم المبنى field");
         CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Invalid"));
@@ -1855,7 +1855,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input numerical value رقم المبنى field of length = 4");
         CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Valid"));
@@ -1898,7 +1898,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input a numerical value with (length < 4) in  الرقم الإضافي  field");
         CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Invalid"));
@@ -1941,7 +1941,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Input numerical value الرقم الإضافي  field of length = 4");
         CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Valid"));
@@ -1984,7 +1984,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on  السابق  Button");
         CommonMethodsPage.clickOnBackButton();
@@ -2027,7 +2027,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Verify \" تأكيد التغيير \" button is not enabled or not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
@@ -2069,7 +2069,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2112,15 +2112,15 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15: Click on يرجى اختيار button under نوع الوثيقة label ");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
         logger.info("Step 16: Select document type from dropdown  ");
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        app.changeLessor_lessorRepPage.verifyDocumentTypeIsSelected(data.get("Document_Type"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        app.changeLessor_lessorRepPage.verifyDocumentTypeIsSelected(data.get("Ownership_Document_Type"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2159,13 +2159,13 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15: Enter a value in رقم الوثيقة  input field");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("New_Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -2204,7 +2204,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2249,7 +2249,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2294,7 +2294,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2339,7 +2339,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2384,7 +2384,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2429,7 +2429,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2474,7 +2474,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2524,7 +2524,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2569,7 +2569,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2614,7 +2614,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2659,7 +2659,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2704,7 +2704,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2749,7 +2749,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2796,7 +2796,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -2842,14 +2842,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -2898,14 +2898,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -2955,14 +2955,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3012,14 +3012,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3071,14 +3071,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3130,14 +3130,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3190,14 +3190,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3247,14 +3247,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -3306,14 +3306,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -4109,14 +4109,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 14: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 15:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterIssueDate(data.get("Document_Issue_Date"));
         app.changeLessor_lessorRepPage.enterExpiryDate(data.get("Document_Expiry_Date"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
@@ -6282,7 +6282,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 13: Enter a national id having less than 10 digits");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_LessThanTenDigits"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_LessThanTenDigits"));
         CommonMethodsPage.errorMessage("الحد", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
@@ -6322,7 +6322,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 13: Input national id including a letter");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_WithLetters"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_WithLetters"));
         CommonMethodsPage.errorMessage("يرجى", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
@@ -6362,8 +6362,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 13: Verify user is able to Input valid DOB in Hijri format");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Lessor_DOB"), AddResidentialContractPageObjects.tenantDateOfBirthInput());
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("LessorRep_DOB"), AddResidentialContractPageObjects.tenantDateOfBirthInput());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -6523,7 +6523,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 13: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         logger.info("Step 14: Verify equivalent Gregorian date is displayed under تاريخ الميلاد input field");
         CommonMethodsPage.verifyEquivalentDateIsDisplayed("gregorian");
     }
@@ -6604,7 +6604,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 12: Click on ' هوية وطنية ' radio button");
         app.changeLessor_lessorRepPage.clickOnIdTypeRadioButton("هوية وطنية");
         logger.info("Step 13: Input a date greater than current date");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.verifyNextButtonIsDisabled();
     }
 
@@ -6646,7 +6646,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         CommonMethodsPage.verifyValueIsDisplayed("ممثل المؤجر الجديد", ChangeLessor_LessorRepPageObjects.NewLessorRepInfoPageTitle());
     }
@@ -6727,7 +6727,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a phone number which does not begin with digit 5");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum_NotBeginWith5"));
@@ -6772,7 +6772,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a phone number which having length < 9");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum_LessThan9"));
@@ -6817,7 +6817,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a phone number which having length < 9");
         CommonMethodsPage.enterPhoneNumber(data.get("LessorPhoneNum"));
@@ -6862,7 +6862,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a valid email address");
         CommonMethodsPage.enterEmail(data.get("Lessor_Email"));
@@ -6907,7 +6907,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input an invalid email address");
         CommonMethodsPage.enterEmail(data.get("Lessor_Email_Invalid"));
@@ -6952,7 +6952,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on المنطقة dropdown");
         CommonMethodsPage.clickOnRegionDropdownMenu();
@@ -6998,7 +6998,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on المدينة  dropdown");
         CommonMethodsPage.clickOnCityDropdown();
@@ -7044,7 +7044,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a numerical value with with letters in Postal code input");
         CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Invalid"));
@@ -7089,7 +7089,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Enter a valid postal code including on numerical values");
         CommonMethodsPage.enterPostalCode(data.get("LessorPostalCode_Valid"));
@@ -7134,7 +7134,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a value including any special character in اسم الشارع input field");
         CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Invalid"));
@@ -7179,7 +7179,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a valid value in (اسم الشارع ) input field");
         CommonMethodsPage.enterStreetName(data.get("LessorStreetName_Valid"));
@@ -7224,7 +7224,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a numerical value with (length < 5) in  رقم المبنى field");
         CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Invalid"));
@@ -7269,7 +7269,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input numerical value رقم المبنى field of length = 4");
         CommonMethodsPage.enterBuildingNumber(data.get("LessorBuildingNum_Valid"));
@@ -7314,7 +7314,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input a numerical value with (length < 4) in  الرقم الإضافي  field");
         CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Invalid"));
@@ -7359,7 +7359,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Input numerical value الرقم الإضافي  field of length = 4");
         CommonMethodsPage.enterAdditionalNumber(data.get("LessorBuildingNum_Valid"));
@@ -7404,7 +7404,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on  السابق  Button");
         CommonMethodsPage.clickOnBackButton();
@@ -7449,7 +7449,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Verify \" تأكيد التغيير \" button is not enabled or not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
@@ -7493,7 +7493,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7538,15 +7538,15 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16: Click on يرجى اختيار button under نوع الوثيقة label ");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
         logger.info("Step 17: Select document type from dropdown  ");
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        app.changeLessor_lessorRepPage.verifyDocumentTypeIsSelected(data.get("Document_Type"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        app.changeLessor_lessorRepPage.verifyDocumentTypeIsSelected(data.get("Ownership_Document_Type"));
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -7587,13 +7587,13 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16: Enter a value in رقم الوثيقة  input field");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("New_Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -7634,7 +7634,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7681,7 +7681,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7728,7 +7728,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7775,7 +7775,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7822,7 +7822,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7869,7 +7869,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7916,7 +7916,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -7968,7 +7968,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8015,7 +8015,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8062,7 +8062,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8109,7 +8109,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8156,7 +8156,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8203,7 +8203,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8252,7 +8252,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
@@ -8300,14 +8300,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8358,14 +8358,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8418,14 +8418,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8478,14 +8478,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8540,14 +8540,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8602,14 +8602,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8662,14 +8662,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -8724,14 +8724,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -9530,14 +9530,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 13: Enter valid national id ");
         app.addResidentialContractPage.inputTenantNationalId(data.get("Lessor_Rep_Id"));
         logger.info("Step 14: Input valid DOB");
-        app.contractWaiverPage.enterValidTenantDOB(data.get("Lessor_DOB"));
+        app.contractWaiverPage.enterValidTenantDOB(data.get("LessorRep_DOB"));
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 15: Click on ' إضافة وثيقة قانونية جديدة '  link ");
         app.changeLessor_lessorRepPage.clickOnAddNewRepresentationDocumentLink();
         logger.info("Step 16:  Fill ownership document details");
         app.changeLessor_lessorRepPage.clickOnDocumentTypeDropdown();
-        CommonMethodsPage.selectFromList(data.get("Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
         app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
         app.changeLessor_lessorRepPage.enterDocumentName(data.get("Document_Name"));
         app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
@@ -13606,8 +13606,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Verify the user is able to enter text of \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
-        CommonMethodsPage.verifyValueIsEntered(data.get("Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Document_Number"));
+        CommonMethodsPage.verifyValueIsEntered(data.get("New_Document_Number"), CommonMethodsPageObjects.ownershipDocumentNumberTXT());
     }
 
     @Test(dataProvider = "testDataProvider")
@@ -13639,7 +13639,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter text less than 2 characters");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("LessThan_One_Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("LessThan_Two_Document_Number"));
         logger.info("Step 11: Verify User is not able to enter text less than 2 characters of \"رقم وثيقة الملكية\" Validation message:  الحد الأدنى لعدد الأحرف هو 2");
         CommonMethodsPage.errorMessage("الحد", RentalIncidentsPageObjects.InputFieldErrorMessage());
     }
@@ -13840,7 +13840,10 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        String newOwnerShipDocumentNumber = data.get("New_Document_Number") + RandomStringUtils.randomNumeric(6);
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(newOwnerShipDocumentNumber);
+        TestDataManager.addDependantGlobalTestData("ChangeLessor", "New_Ownership_Document_Num", newOwnerShipDocumentNumber);
+        TestDataManager.writeDependantGlobalTestData("ChangeLessor");
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -13853,7 +13856,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_376_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -13880,7 +13884,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -13895,7 +13899,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_377_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -13922,7 +13927,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -13939,7 +13944,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_378_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -13966,7 +13972,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -13983,7 +13989,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_379_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14010,7 +14017,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14025,7 +14032,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_380_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14052,7 +14060,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14067,7 +14075,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_381_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14094,7 +14103,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14109,7 +14118,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_382_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14136,7 +14146,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14150,7 +14160,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_383_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14177,7 +14188,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14191,7 +14202,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_384_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14218,7 +14230,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Existing_Ownership_Number"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Select existing ownership document");
@@ -14231,7 +14243,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_385_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14258,7 +14271,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14271,7 +14284,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_386_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14298,7 +14312,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14315,7 +14329,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_387_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14342,7 +14357,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number"));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14358,7 +14373,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_388_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14385,7 +14401,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Select (نوع وثيقة الملكية) dropdown list");
         CommonMethodsPage.selectFromList(data.get("Ownership_Document_Type"), ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
         logger.info("Step 10: Enter \"رقم وثيقة الملكية\"");
-        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+        CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 11: Enter \"تاريخ الاصدار\"");
         app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
         logger.info("Step 12: Enter \"اسم نوع الوثيقة القانونية\"");
@@ -14408,7 +14424,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_389_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14433,14 +14450,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Click on \"تغيير\"");
@@ -14451,7 +14470,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_390_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14476,14 +14496,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Click on \"إضافة مالك منشأة\"");
@@ -14494,7 +14516,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_391_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14519,14 +14542,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14536,7 +14561,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_392_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14561,14 +14587,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14580,7 +14608,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_393_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14605,14 +14634,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14624,7 +14655,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_394_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14649,14 +14681,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14670,7 +14704,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_395_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14695,14 +14730,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14716,7 +14753,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_396_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14741,14 +14779,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14762,7 +14802,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_397_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14787,14 +14828,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14808,7 +14851,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_398_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14833,14 +14877,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14854,7 +14900,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_399_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14879,14 +14926,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14900,7 +14949,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_400_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14925,14 +14975,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14945,7 +14997,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_401_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -14970,14 +15023,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -14991,7 +15046,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_402_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15016,14 +15072,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15031,13 +15089,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
         app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
         logger.info("Step 10: Enter a national id having less than 10 digits");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_LessThanTenDigits"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_LessThanTenDigits"));
         CommonMethodsPage.errorMessage("الحد", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_403_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15062,14 +15121,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15077,13 +15138,14 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 09: Click on (ممثل المالك) radio button ");
         app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
         logger.info("Step 10: Input national id including a letter");
-        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorId_WithLetters"));
+        app.addResidentialContractPage.inputTenantNationalId(data.get("LessorRepId_WithLetters"));
         CommonMethodsPage.errorMessage("يرجى", ContractWaiverPageObjects.ErrorMessageUnderNatinalId());
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_404_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15108,14 +15170,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15129,7 +15193,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_405_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15154,14 +15219,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15175,7 +15242,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_406_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15200,14 +15268,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15221,7 +15291,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_407_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15246,14 +15317,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15268,7 +15341,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_408_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15293,14 +15367,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15315,7 +15391,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_409_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15340,14 +15417,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15359,7 +15438,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_410_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15384,14 +15464,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15405,7 +15487,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_411_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15430,14 +15513,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15451,7 +15536,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_412_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15476,14 +15562,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15496,7 +15584,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_413_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15520,15 +15609,18 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         Browser.waitForSeconds(5);
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
+            app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15546,7 +15638,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_414_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15571,14 +15664,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15598,7 +15693,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_415_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15623,14 +15719,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15652,7 +15750,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_416_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15677,14 +15776,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15706,7 +15807,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_417_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15731,14 +15833,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15758,7 +15862,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_418_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15783,14 +15888,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15810,7 +15917,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_419_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15835,14 +15943,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15862,7 +15972,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_420_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15887,14 +15998,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15914,7 +16027,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_421_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15939,14 +16053,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -15966,7 +16082,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_422_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -15991,14 +16108,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16018,7 +16137,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_423_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16043,14 +16163,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16071,7 +16193,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_424_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16096,14 +16219,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16124,7 +16249,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_425_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16149,14 +16275,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16176,7 +16304,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_426_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16201,14 +16330,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16229,7 +16360,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_427_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16254,14 +16386,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16282,7 +16416,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_428_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16307,14 +16442,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16335,7 +16472,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_429_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16360,14 +16498,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16387,7 +16527,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_430_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16412,14 +16553,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16440,7 +16583,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_431_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16465,14 +16609,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16492,7 +16638,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_432_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16517,14 +16664,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16545,7 +16694,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_433_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16570,14 +16720,16 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
         }
         logger.info("Step 08: Verify (إضافة مالك فرد) button is clickable");
@@ -16598,7 +16750,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_434_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -16623,14 +16776,19 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(10));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
+            CommonMethodsPage.selectExistingOwnershipDocument();
+            CommonMethodsPage.clickOnNextButton();
+//            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+        }
+        if (!Browser.isElementPresent(ChangeLessor_LessorRepPageObjects.PropertyOwnerText())) {
             app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
             app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
             app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
@@ -17392,6 +17550,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void ChangeLessorForApproval(Map<String, String> data) throws Exception {
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
         logger.info("Step 00: Test Data : " + data.toString());
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
@@ -17417,21 +17576,24 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         if (Browser.isElementPresent(RentalIncidentsPageObjects.addOwnershipDocumentLinkBTN())) {
             app.rentalIncidentsPage.clickOnAddOwnershipDocumentLinkButton();
             CommonMethodsPage.selectFromList("أخرى", ChangeLessor_LessorRepPageObjects.DocumentTypeDropdownList());
-            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("Document_Number") + RandomStringUtils.randomNumeric(4));
+//            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num") + RandomStringUtils.randomNumeric(4));
+            CommonMethodsPage.enterOwnershipDocumentNumberInputField(data.get("New_Ownership_Document_Num"));
             app.changeLessor_lessorRepPage.enterIssueDateInputField(data.get("Document_Issue_Date"));
             app.changeLessor_lessorRepPage.enterLegalDocumentTypeNameInputField(data.get("Legal_Document_Type_Name"));
-            app.changeLessor_lessorRepPage.clickOnCreateNewButton();
-            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
-            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
-            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-            app.revokeContractPage.verifyAttachmentIsUploaded();
-            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
-            app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
-            app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
-            app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
-            app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+            CommonMethodsPage.selectExistingOwnershipDocument();
             CommonMethodsPage.clickOnNextButton();
-            CommonMethodsPage.clickOnConfirmButton();
+            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+//            app.changeLessor_lessorRepPage.enterNameInIssueByField(data.get("Issue_By_Name"));
+//            app.changeLessor_lessorRepPage.enterDocumentIssuePlace(data.get("Document_IssuePlace"));
+//            app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
+//            app.revokeContractPage.verifyAttachmentIsUploaded();
+//            app.changeLessor_lessorRepPage.clickOnConfirmOwnershipDocumentButton();
+//            app.changeLessor_lessorRepPage.clickOnAddIndividualOwnerLinkButton();
+//            app.changeLessor_lessorRepPage.clickOnPropertyOwnerRadioButton();
+//            app.addResidentialContractPage.inputTenantNationalId(data.get("New_Lessor_Id"));
+//            app.contractWaiverPage.enterValidTenantDOB(data.get("New_Lessor_DOB"));
+//            CommonMethodsPage.clickOnNextButton();
+//            CommonMethodsPage.clickOnConfirmButton();
         }
         logger.info("Step 08: Click on (إرسال) button ");
         CommonMethodsPage.clickOnSubmitButton();
@@ -18180,7 +18342,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_477_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -18196,14 +18359,15 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 06: Verify the searched ownership document is displayed");
-        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("New_Deed_Number"));
+        app.changeLessor_lessorRepPage.verifySearchedOwnershipDocumentIsDisplayed(data.get("New_Ownership_Document_Num"));
     }
 
     @Test(dataProvider = "testDataProvider")
     public void TC_478_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -18219,7 +18383,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -18230,7 +18394,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_479_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -18246,7 +18411,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
@@ -18262,7 +18427,8 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
 
     @Test(dataProvider = "testDataProvider")
     public void TC_480_ChangeLessor_LessorRep(Map<String, String> data) throws Exception {
-        logger.info("Step 00: Test Data : " + data.toString());
+        data.putAll(TestDataManager.readDependantGlobalTestData("ChangeLessor"));
+        logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
@@ -18278,7 +18444,7 @@ public class ChangeLessor_LessorRep extends NHCWebTest {
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter owner ship document number in \"رقم وثيقة الملكية\" ");
-        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Deed_Number"));
+        app.changeLessor_lessorRepPage.enterOwnerShipDocumentNumberInSearchField(data.get("New_Ownership_Document_Num"));
         logger.info("Step 06: Click on kebab button");
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Select \" عرض وثيقة الملكية\" option from the menu");
