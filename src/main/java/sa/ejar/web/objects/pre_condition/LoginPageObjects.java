@@ -14,8 +14,8 @@ public class LoginPageObjects {
             put("ar", "//button[contains(@class,'btn btn-primary')]");
         }});
         put("text-password", new HashMap<>() {{
-            put("en", "//input[@data-name=\"password\"]");
-            put("ar", "//input[@data-name=\"password\"]");
+            put("en", "//input[@data-name='password']");
+            put("ar", "//input[@data-name='password']");
         }});
 
         put("text-verificationCode", new HashMap<>() {{
@@ -23,8 +23,8 @@ public class LoginPageObjects {
             put("ar", "//input[@id = 'index_1']");
         }});
         put("text-email", new HashMap<>() {{
-            put("en", "//input[@data-name=\"username\"]");
-            put("ar", "//input[@data-name=\"username\"]");
+            put("en", "//input[@data-name='idNumber']");
+            put("ar", "//input[@data-name='idNumber']");
         }});
         put("explore-ejar-pop-up", new HashMap<>() {{
             put("en", "//button[text()=' Start your free trial now! ']");
@@ -55,7 +55,7 @@ public class LoginPageObjects {
         }});
         put("Close-Button1", new HashMap<>() {{
             put("en", "");
-            put("ar", "//button[contains(@class,'close-button')]");
+            put("ar", "(//button[contains(@class,'close-button')])[2]");
         }});
 
         put("Close-Button2", new HashMap<>() {{
@@ -67,8 +67,8 @@ public class LoginPageObjects {
             put("ar", "(//button[contains(text(),'تأكيد')])[1]");
         }});
         put("assessment-unit-pop-up", new HashMap<>() {{
-            put("en", "//button[@class=\"close-button\"]");
-            put("ar", "//button[@class=\"close-button\"]");
+            put("en", "//button[@class='close-button']");
+            put("ar", "//button[@class='close-button']");
         }});
     }};
 
@@ -147,5 +147,13 @@ public class LoginPageObjects {
 
     public static By SecurityAmountReserved() {
         return By.xpath("//tbody//td[@class='dash-if-empty px-3'][contains(text(),'ر.س')]");
+    }
+
+    public static By NafathApprove(String id) {
+        return By.xpath("(//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::div/child::button[contains (text(), 'Approve')])[1]");
+    }
+
+    public static By NafathCode() {
+        return By.xpath("//app-card-body/child::div/child::div[1]");
     }
 }

@@ -17,8 +17,8 @@
 
         <crew-centric-framework>2024.1.0</crew-centric-framework>
         <maven-jar-plugin>3.2.0</maven-jar-plugin>
-        <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
-        <maven-surefire-plugin>3.1.2</maven-surefire-plugin>
+        <maven-compiler-plugin>3.8.1</maven-compiler-plugin>
+        <maven-surefire-plugin>3.0.0-M5</maven-surefire-plugin>
 
         <skip-tests>false</skip-tests>
         <suite-file>testng.xml</suite-file>
@@ -36,10 +36,26 @@
             <artifactId>pdfbox</artifactId>
             <version>2.0.24</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+        </dependency>
     </dependencies>
+
 
     <!-- Build Maven -->
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,6 +76,24 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite-file}</suiteXmlFile>
                     </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin}</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <Built-By>TestCrew_Automation_Team</Built-By>
+                            <Parent-Framework-Version>${project.version}</Parent-Framework-Version>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
