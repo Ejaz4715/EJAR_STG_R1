@@ -15,7 +15,8 @@ Project description
 
 ## Release update (v1.0 -> v2.0)
 
-- Nafath login is implemented in the lastest release
+- Below tools are the new changes in the scripts
+    - Nafath login is implemented in the lastest release
 
 ## Project Overview
 
