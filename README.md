@@ -13,9 +13,9 @@ Project description
 - [Running Tests](#running-tests)
 - [Reporting](#reporting)
 
-## Updates (v1.0 -> v2.0)
+## Update (v1.0 -> v2.0)
 
-- Login through Nafath is implemented
+- Nafath login is implemented in the lastest release
 
 ## Project Overview
 
