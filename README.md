@@ -15,11 +15,7 @@ Project description
 
 ## Updates (v1.0 -> v2.0)
 
-- Java based project for test automation
-- Addresses functional, end to end - UI, API & Mobile testing.
-- The framework uses **Selenium** with **TestNG** adheres to **Page object model** design pattern.
-- **Extent reporter**,**PDF reporter**,**CSV reporter** as a reporting tool
-- Video Recording of UI Test execution is supported.
+- Login through Nafath is implemented
 
 ## Project Overview
 
