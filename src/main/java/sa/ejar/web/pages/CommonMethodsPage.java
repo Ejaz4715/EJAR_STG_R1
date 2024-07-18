@@ -151,11 +151,11 @@ public class CommonMethodsPage {
     public static void clickOnConfirmButton() throws Exception {
         Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
         Browser.click(CommonMethodsPageObjects.confirmBTN());
-        Browser.waitForSeconds(2);
-        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())) {
-            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
-            Browser.click(CommonMethodsPageObjects.confirmBTN());
-        }
+//        Browser.waitForSeconds(2);
+//        if(Browser.isElementPresent(CommonMethodsPageObjects.confirmBTN())) {
+//            Browser.waitUntilVisibilityOfElement(CommonMethodsPageObjects.confirmBTN(), 20);
+//            Browser.click(CommonMethodsPageObjects.confirmBTN());
+//        }
     }
 
     public static void clickOnCloseButton() throws Exception {

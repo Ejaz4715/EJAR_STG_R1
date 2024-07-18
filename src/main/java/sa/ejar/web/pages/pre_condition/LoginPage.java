@@ -2,6 +2,7 @@ package sa.ejar.web.pages.pre_condition;
 
 import com.testcrew.utility.TCRobot;
 import com.testcrew.web.Browser;
+import org.jfree.util.Log;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import sa.ejar.web.objects.pre_condition.AddResidentialContractPageObjects;
@@ -24,8 +25,37 @@ public class LoginPage {
         logger.addScreenshot("Username & password is entered");
     }
 
+    public void enterVerificationCode(String OTP) throws Exception {
+        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
+        Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
+        Browser.waitForSeconds(1);
+        Browser.click(LoginPageObjects.confirmButton());
+        logger.addScreenshot("OTP is entered");
+    }
+
+    public void loginToEjar(String username, String password, String OTP) throws Exception {
+        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getButtonLogin(), 40);
+        Browser.waitUntilElementToBeClickable(LoginPageObjects.getButtonLogin(), 40);
+        if (Browser.isElementPresent(LoginPageObjects.setTextPassword())){
+            enterUsername(username);
+            enterPassword(password);
+            clickLogin();
+            enterVerificationCode(OTP);
+        }
+        else{
+            enterUsername(username);
+            clickLogin(username);
+        }
+    }
+
+    public void clickLogin() throws Exception {
+        Browser.click(LoginPageObjects.getButtonLogin());
+    }
+
     public void clickLogin(String id) throws Exception {
         Browser.click(LoginPageObjects.getButtonLogin());
+        Browser.waitForSeconds(2);
         String code = Browser.getText(LoginPageObjects.NafathCode()).toLowerCase();
         logger.addScreenshot("");
         Assert.assertNotEquals(code, "null");
@@ -49,19 +79,14 @@ public class LoginPage {
         Browser.driver.navigate().refresh();
         Browser.waitUntilPresenceOfElement(LoginPageObjects.NafathApprove(idNumber), 40);
         Browser.waitUntilVisibilityOfElement(LoginPageObjects.NafathApprove(idNumber), 40);
-        Browser.click(LoginPageObjects.NafathApprove(idNumber));
+        Browser.waitUntilElementToBeClickable(LoginPageObjects.NafathApprove(idNumber), 40);
+        while (!Browser.getText(LoginPageObjects.NafathStatus(idNumber)).toLowerCase().contains("completed")) {
+            Browser.click(LoginPageObjects.NafathApprove(idNumber));
+            Browser.waitForSeconds(2);
+        }
         Browser.driver.switchTo().window(arrayTabs[1]);
         Browser.driver.close();
         Browser.driver.switchTo().window(arrayTabs[0]);
-    }
-
-    public void enterVerificationCode(String OTP) throws Exception {
-        Browser.waitUntilInvisibilityOfElement(AddResidentialContractPageObjects.LoadingIcon(), 100);
-        Browser.waitUntilVisibilityOfElement(LoginPageObjects.getVerificationCode(), 20);
-        Browser.setText(LoginPageObjects.getVerificationCode(), OTP);
-        Browser.waitForSeconds(1);
-        Browser.click(LoginPageObjects.confirmButton());
-        logger.addScreenshot("OTP is entered");
     }
 
     public void enterVerificationCodeForOTP(String OTP) throws Exception {
@@ -73,7 +98,7 @@ public class LoginPage {
 
     public void closeExploreEjarPopUp() throws Exception {
         Browser.waitForSeconds(4);
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= 3; i++) {
             if (Browser.isElementPresent(LoginPageObjects.exploreEjarPopUp())) {
                 Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(), 40);
                 Browser.click(LoginPageObjects.closeButton1());
@@ -83,6 +108,9 @@ public class LoginPage {
             } else if (Browser.isElementPresent(LoginPageObjects.closeButton1())) {
                 Browser.waitUntilVisibilityOfElement(LoginPageObjects.closeButton1(), 40);
                 Browser.click(LoginPageObjects.closeButton1());
+            } else if (Browser.isElementPresent(LoginPageObjects.CloseButton3())) {
+                Browser.waitUntilVisibilityOfElement(LoginPageObjects.CloseButton3(), 40);
+                Browser.click(LoginPageObjects.CloseButton3());
             }
         }
     }

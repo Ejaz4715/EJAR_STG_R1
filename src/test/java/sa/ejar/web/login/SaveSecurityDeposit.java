@@ -18,9 +18,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -48,9 +48,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -80,15 +80,15 @@ public class SaveSecurityDeposit extends NHCWebTest {
 //    }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_03_SecurityDeposit (Map<String, String> data) throws Exception {
+    public void TC_03_SecurityDeposit(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -130,15 +130,15 @@ public class SaveSecurityDeposit extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_04_SecurityDeposit (Map<String, String> data) throws Exception {
+    public void TC_04_SecurityDeposit(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
         logger.info("Step 02: Click on \" الطلبات \" tab");
@@ -166,9 +166,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -190,9 +190,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -220,9 +220,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -250,9 +250,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on user profile");
@@ -276,9 +276,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on user profile");
@@ -302,9 +302,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -330,9 +330,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -362,9 +362,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -396,15 +396,15 @@ public class SaveSecurityDeposit extends NHCWebTest {
 //    }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_13_SecurityDeposit (Map<String, String> data) throws Exception {
+    public void TC_13_SecurityDeposit(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -446,15 +446,15 @@ public class SaveSecurityDeposit extends NHCWebTest {
     }
 
     @Test(dataProvider = "testDataProvider")
-    public void TC_14_SecurityDeposit (Map<String, String> data) throws Exception {
+    public void TC_14_SecurityDeposit(Map<String, String> data) throws Exception {
         data.putAll(TestDataManager.readDependantGlobalTestData("Revoke"));
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
         logger.info("Step 02: Click on \" الطلبات \" tab");
@@ -482,9 +482,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -506,9 +506,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
@@ -537,9 +537,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
@@ -568,9 +568,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on user profile");
@@ -594,9 +594,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on user profile");
@@ -621,9 +621,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on user profile");
@@ -647,9 +647,9 @@ public class SaveSecurityDeposit extends NHCWebTest {
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Username, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
-        //app.loginPage.enterPassword(data.get("Password"));
-        app.loginPage.clickLogin(data.get("Username"));
-        //app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterPassword(data.get("Password"));
+        app.loginPage.clickLogin();
+        app.loginPage.enterVerificationCode(data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on user profile");

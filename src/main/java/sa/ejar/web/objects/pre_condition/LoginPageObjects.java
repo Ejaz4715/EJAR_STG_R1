@@ -23,8 +23,11 @@ public class LoginPageObjects {
             put("ar", "//input[@id = 'index_1']");
         }});
         put("text-email", new HashMap<>() {{
-            put("en", "//input[@data-name='idNumber']");
-            put("ar", "//input[@data-name='idNumber']");
+//            put("en", "//input[@data-name='idNumber']");
+//            put("ar", "//input[@data-name='idNumber']");
+            put("en", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
+            put("ar", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
+
         }});
         put("explore-ejar-pop-up", new HashMap<>() {{
             put("en", "//button[text()=' Start your free trial now! ']");
@@ -62,6 +65,11 @@ public class LoginPageObjects {
             put("en", "");
             put("ar", "(//button[contains(text(),'إغلاق')])[1]");
         }});
+        put("Close-Button3", new HashMap<>() {{
+            put("en", "");
+            put("ar", "(//button[contains(@class,'close-button')])[1]");
+        }});
+
         put("Confirm-Terms-Button", new HashMap<>() {{
             put("en", "");
             put("ar", "(//button[contains(text(),'تأكيد')])[1]");
@@ -152,8 +160,15 @@ public class LoginPageObjects {
     public static By NafathApprove(String id) {
         return By.xpath("(//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::div/child::button[contains (text(), 'Approve')])[1]");
     }
+    public static By NafathStatus(String id) {
+        return By.xpath("//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::p[2]/child::span");
+    }
 
     public static By NafathCode() {
         return By.xpath("//app-card-body/child::div/child::div[1]");
     }
+    public static By CloseButton3() {
+        return By.xpath("(//button[contains(@class,'close-button')])[1]");
+    }
+
 }

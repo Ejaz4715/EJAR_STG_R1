@@ -81,7 +81,7 @@ public class TerminateContractPageObjects {
         return By.xpath("//p[contains(text(),'سننتظر موافقة أطراف الإيجار')]");
     }
     public static By theRequestsPage() throws Exception{
-        return By.xpath("//h1[text()='الطلبات']");
+        return By.xpath("//h2[text()='الطلبات']");
     }
     public static By theRequestsList() throws Exception{
         return By.xpath("//app-single-contract-termination-request");
