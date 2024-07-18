@@ -25,8 +25,8 @@ public class LoginPageObjects {
         put("text-email", new HashMap<>() {{
 //            put("en", "//input[@data-name='idNumber']");
 //            put("ar", "//input[@data-name='idNumber']");
-            put("en", "//input[@data-name=\"username\"]");
-            put("ar", "//input[@data-name=\"username\"]");
+            put("en", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
+            put("ar", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
 
         }});
         put("explore-ejar-pop-up", new HashMap<>() {{
