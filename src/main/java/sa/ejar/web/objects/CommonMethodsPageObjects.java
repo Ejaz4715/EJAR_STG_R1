@@ -65,7 +65,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By KebabMenuOptions() {
-        return By.xpath("//a[contains (@class, \"nav-item p-3\")]");
+        return By.xpath("//a[contains (@class, \"nav-item\")]");
     }
 
     public static By TerminateOptions() {
@@ -436,7 +436,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RentalIncidentRequestOption() {
-        return By.xpath("//span[text()='عرض طلبات الوقائع الإيجارية']");
+        return By.xpath("//span[contains(text(),'الوقائع الإيجارية')]");
     }
 
     public static By RequestNumberInputField() {

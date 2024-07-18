@@ -53,8 +53,10 @@ public class ManualRenewalPage {
     }
 
     public void verifyNewContractAreGenerate(Map<String, String> data) {
-        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
-        String CurrentContract = data.get("Old_Contract");
+//        data.putAll(TestDataManager.readDependantGlobalTestData("ManualRenewalContract"));
+//        String CurrentContract = data.get("Old_Contract");
+        data.putAll(TestDataManager.readDependantGlobalTestData("Contracts"));
+        String CurrentContract = data.get("ContractNumber");
         Browser.waitUntilVisibilityOfElement(ManualRenewalPageObjects.getNewContractNumber(),30);
         String NewContract = Browser.getText(ManualRenewalPageObjects.getNewContractNumber());
         Assert.assertFalse(CurrentContract.contains(NewContract));
