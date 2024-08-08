@@ -16,9 +16,7 @@ public class AwqafSubleaseContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Filter Contracts , Enter Contract ,Click on create Sublease Contract");
@@ -42,7 +40,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
-        if (data.get("TenantType").equalsIgnoreCase("organization")){
+        if (data.get("TenantType").equalsIgnoreCase("organization")) {
             app.addResidentialContractPage.addNewOwnerShipDocument();
         }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
@@ -93,9 +91,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -125,9 +121,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -157,9 +151,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Filter Contracts , Enter Contract ,Click on create Sublease Contract");
@@ -181,7 +173,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         app.addResidentialContractPage.inputTenantNationalId(data.get("TenantID"));
         app.addResidentialContractPage.inputTenantDOB(data.get("TenantDOB"));
         app.addResidentialContractPage.clickContinueButtonOnTenantContractPage();
-        if (data.get("TenantType").equalsIgnoreCase("organization")){
+        if (data.get("TenantType").equalsIgnoreCase("organization")) {
             app.addResidentialContractPage.addNewOwnerShipDocument();
         }
         app.addResidentialContractPage.clickConfirmBtnOnTenantAddressPage();
@@ -231,9 +223,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -263,9 +253,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -295,9 +283,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter ID/Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Sublease Contract");
@@ -366,9 +352,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -398,9 +382,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -431,9 +413,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter ID/Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Sublease Contract");
@@ -503,9 +483,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -535,9 +513,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");

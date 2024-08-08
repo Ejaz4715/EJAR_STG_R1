@@ -17,7 +17,8 @@ public class AwqafCommercialContract extends NHCWebTest {
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Residential Contract");
@@ -100,7 +101,8 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -132,7 +134,8 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -163,7 +166,8 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Residential Contract");
@@ -244,7 +248,8 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -276,7 +281,8 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
         app.loginPage.enterUsername(data.get("Username"));
         app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.closeExploreEjarPopUp();
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");

@@ -15,9 +15,7 @@ public class SubleaseContract extends NHCWebTest {
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Filter Contracts , Enter Contract ,Click on create Sublease Contract");
@@ -30,7 +28,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 03: Input date > Select contract's duration from calender and confirm");
         app.createNewCommercialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(0,4,0);
+        String endDate = CommonMethodsPage.getCurrentDate(0, 4, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.createNewCommercialContractPage.clickConfirmPeriodBTN();
         app.createNewCommercialContractPage.clickOnSameTermRadioButton();
@@ -61,7 +59,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         app.addSubleaseContractPage.ChangeCommercialActivity();
         app.addSubleaseContractPage.clickConfirmTermsAndConditions();
         logger.info("Step 08: Submit the contract > Review all details > Submit");
-        if(data.get("SubmitOrDraft").equalsIgnoreCase("submit")){
+        if (data.get("SubmitOrDraft").equalsIgnoreCase("submit")) {
             app.addResidentialContractPage.clickSubmitForApprovalBTN();
             app.addResidentialContractPage.clickContinueBtnOnPreviewContractPage();
             app.addResidentialContractPage.clickContinuePayBtnOnPreviewBrokerageAgreementPage();
@@ -70,11 +68,11 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
             CommonMethodsPage.clickRatingButtons();
             CommonMethodsPage.clickOnSubmitButton();
             app.addResidentialContractPage.clickCloseSurveyPopUpBTN();
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
         } else if (data.get("SubmitOrDraft").equalsIgnoreCase("draft")) {
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
             app.addResidentialContractPage.clickOnSaveAndContinueLaterButton();
@@ -87,9 +85,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -119,9 +115,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -151,9 +145,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter Email, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Filter Contracts , Enter Contract ,Click on create Sublease Contract");
@@ -166,7 +158,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 03: Input date > Select contract's duration from calender and confirm");
         app.createNewCommercialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(0,2,0);
+        String endDate = CommonMethodsPage.getCurrentDate(0, 2, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.createNewCommercialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 05: Navigate Add Individual Tenant >Input Individual/Tenant Information details > Confirm");
@@ -195,7 +187,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         app.addSubleaseContractPage.ChangeCommercialActivity();
         app.addSubleaseContractPage.clickConfirmTermsAndConditions();
         logger.info("Step 08: Submit the contract > Review all details > Submit");
-        if(data.get("SubmitOrDraft").equalsIgnoreCase("submit")){
+        if (data.get("SubmitOrDraft").equalsIgnoreCase("submit")) {
             app.addResidentialContractPage.clickSubmitForApprovalBTN();
             app.addResidentialContractPage.clickContinueBtnOnPreviewContractPage();
             app.addResidentialContractPage.clickContinuePayBtnOnPreviewBrokerageAgreementPage();
@@ -204,11 +196,11 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
             CommonMethodsPage.clickRatingButtons();
             CommonMethodsPage.clickOnSubmitButton();
             app.addResidentialContractPage.clickCloseSurveyPopUpBTN();
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
         } else if (data.get("SubmitOrDraft").equalsIgnoreCase("draft")) {
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
             app.addResidentialContractPage.clickOnSaveAndContinueLaterButton();
@@ -221,9 +213,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -253,9 +243,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -285,9 +273,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter ID/Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Sublease Contract");
@@ -300,7 +286,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        String endDate = CommonMethodsPage.getCurrentDate(1, 0, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 05: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
@@ -330,7 +316,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         app.addSubleaseContractPage.selectGoverningLaw();
         app.addSubleaseContractPage.clickConfirmTermsAndConditionsBTN();
         logger.info("Step 10:  Submit the contract > Review all details > Submit");
-        if(data.get("SubmitOrDraft").equalsIgnoreCase("submit")){
+        if (data.get("SubmitOrDraft").equalsIgnoreCase("submit")) {
             app.addResidentialContractPage.clickSubmitForApprovalBTN();
             app.addResidentialContractPage.clickContinueBtnOnPreviewContractPage();
             app.addResidentialContractPage.clickContinuePayBtnOnPreviewBrokerageAgreementPage();
@@ -339,11 +325,11 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
             CommonMethodsPage.clickRatingButtons();
             CommonMethodsPage.clickOnSubmitButton();
             app.addResidentialContractPage.clickCloseSurveyPopUpBTN();
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
         } else if (data.get("SubmitOrDraft").equalsIgnoreCase("draft")) {
-            String contractNum =  app.addResidentialContractPage.getContractNumber();
+            String contractNum = app.addResidentialContractPage.getContractNumber();
             TestDataManager.addDependantGlobalTestData("Contracts", "ContractNumber", contractNum);
             TestDataManager.writeDependantGlobalTestData("Contracts");
             app.addResidentialContractPage.clickOnSaveAndContinueLaterButton();
@@ -356,9 +342,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -388,9 +372,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");
@@ -421,9 +403,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: Login to Application Enter ID/Username, Enter Password, click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Navigate to Contracts > Add New Sublease Contract");
@@ -436,7 +416,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 03: Input date > Select contract's duration from calender (More than 3 months) and confirm");
         app.addResidentialContractPage.clickDateInputField();
         app.addResidentialContractPage.clickOnStartDay();
-        String endDate = CommonMethodsPage.getCurrentDate(1,0,0);
+        String endDate = CommonMethodsPage.getCurrentDate(1, 0, 0);
         app.addResidentialContractPage.selectEndDateOfResidualContract(endDate.substring(6, 8).replaceFirst("^0*", ""), app.addResidentialContractPage.getCurrentMonth(endDate.substring(4, 6)), endDate.substring(0, 4));
         app.addResidentialContractPage.clickConfirmPeriodBTN();
         logger.info("Step 05: Navigate to Add Individual Tenant > Input Individual's identification details > Continue");
@@ -492,9 +472,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Lessor Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مؤجر");
@@ -524,9 +502,7 @@ app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get(
         logger.info("Step 00: Test Data : " + data);
         app.openApplication(data);
         logger.info("Step 01: As Tenant Enter Email, Password > click Login");
-        app.loginPage.enterUsername(data.get("Username"));
-        app.loginPage.enterPassword(data.get("Password"));
-app.loginPage.clickLogin();        app.loginPage.enterVerificationCode(data.get("OTP"));
+        app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         logger.info("Step 02: Navigate to all contracts > Search for the contract");
         CommonMethodsPage.changeUserRole("مستأجر");

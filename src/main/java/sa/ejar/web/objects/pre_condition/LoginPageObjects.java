@@ -163,7 +163,6 @@ public class LoginPageObjects {
     public static By NafathStatus(String id) {
         return By.xpath("//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::p[2]/child::span");
     }
-
     public static By NafathCode() {
         return By.xpath("//app-card-body/child::div/child::div[1]");
     }
