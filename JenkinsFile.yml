@@ -5,10 +5,11 @@ pipeline {
         jdk 'JavaLocal' 
         maven 'LocalMaven'
     }
+    stages {
         stage('Build') {
             steps {
                 bat 'mvn clean install'
             }
         }
-
     }
+}
