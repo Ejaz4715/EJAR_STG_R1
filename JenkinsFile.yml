@@ -23,7 +23,7 @@ pipeline {
                 <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
                 """,
                 recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                to: 'edin@testcrew.com,
+                to: 'edin@testcrew.com'
                 mimeType: 'text/html'
             )
         }
