@@ -12,4 +12,20 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            emailext(
+                subject: "${currentBuild.fullDisplayName} - Build #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                body: """
+                <p>Build Name: ${currentBuild.fullDisplayName}</p>
+                <p>Build Number: ${env.BUILD_NUMBER}</p>
+                <p>Build Status: ${currentBuild.currentResult}</p>
+                <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                """,
+                recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+                to: 'edin@testcrew.com,
+                mimeType: 'text/html'
+            )
+        }
+    }
 }
