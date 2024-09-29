@@ -30,7 +30,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -47,7 +47,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -68,7 +68,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -91,7 +91,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -116,7 +116,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -142,7 +142,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -168,7 +168,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -199,7 +199,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -229,7 +229,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -259,7 +259,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -292,7 +292,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -327,7 +327,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -363,7 +363,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -399,7 +399,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -436,7 +436,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -473,7 +473,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -511,7 +511,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -547,7 +547,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -583,7 +583,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -621,7 +621,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -652,7 +652,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -691,7 +691,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -732,7 +732,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -773,7 +773,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -814,7 +814,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -855,7 +855,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -896,7 +896,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -938,7 +938,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -980,7 +980,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1021,7 +1021,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1063,7 +1063,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1104,7 +1104,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1145,7 +1145,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1186,7 +1186,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1227,7 +1227,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1268,7 +1268,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1310,7 +1310,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1352,7 +1352,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1393,7 +1393,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1441,7 +1441,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1481,7 +1481,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1520,7 +1520,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1561,7 +1561,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1603,7 +1603,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1646,7 +1646,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1689,7 +1689,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1732,7 +1732,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1778,7 +1778,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1826,7 +1826,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1874,7 +1874,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1925,7 +1925,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1974,7 +1974,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2026,7 +2026,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2075,7 +2075,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2125,9 +2125,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2150,9 +2150,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
@@ -2166,9 +2166,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2186,9 +2186,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2210,9 +2210,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2236,9 +2236,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2248,7 +2248,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyContractDetailsSectionIsDisplayed();
     }
@@ -2262,9 +2262,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2274,9 +2274,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \" إلغاء\" button");
+        logger.info("Step 09: Click on ' إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
     }
@@ -2290,9 +2290,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2302,9 +2302,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
     }
@@ -2318,9 +2318,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2330,11 +2330,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" عرض \"  button");
+        logger.info("Step 10: Click on ' عرض '  button");
         CommonMethodsPage.ClickOnAttachment("view");
         Browser.waitForSeconds(5);
         CommonMethodsPage.verifyNewTabIsOpened();
@@ -2349,9 +2349,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2361,11 +2361,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" إلغاء \"  button");
+        logger.info("Step 10: Click on ' إلغاء '  button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
     }
@@ -2379,9 +2379,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2391,11 +2391,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" السابق \"  button ");
+        logger.info("Step 10: Click on ' السابق '  button ");
         CommonMethodsPage.clickOnBackButton();
         app.contractWaiverPage.verifyContractDetailsSectionIsDisplayed();
     }
@@ -2409,9 +2409,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2421,11 +2421,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.AttachmentIcon(), 40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyDeclareAndConfirmSectionIsDisplayed();
@@ -2440,9 +2440,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2452,11 +2452,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(RevokeContractPageObjects.AttachmentIcon(), 40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on إلغاء button ");
@@ -2473,9 +2473,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2485,11 +2485,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on السابق  button ");
@@ -2506,9 +2506,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2518,14 +2518,14 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
         app.contractWaiverPage.verifyAcknowledgementCheckboxIsChecked();
     }
@@ -2539,9 +2539,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2551,14 +2551,14 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Verify \"تأكيد الموافقة\" button is not clickable");
+        logger.info("Step 11: Verify 'تأكيد الموافقة' button is not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
     }
 
@@ -2571,9 +2571,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2583,16 +2583,16 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
         app.contractWaiverPage.verifyConfirmationPopUpAppears();
     }
@@ -2606,9 +2606,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2618,16 +2618,16 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 13: Click on إلغاء button");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
@@ -2643,9 +2643,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2655,18 +2655,18 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 13: Click on \"تأكيد\" button");
+        logger.info("Step 13: Click on 'تأكيد' button");
         app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -2680,9 +2680,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2692,22 +2692,22 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 13: Click on \"تأكيد\" button");
+        logger.info("Step 13: Click on 'تأكيد' button");
         app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
         logger.info("Step 14: Enter valid OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 15: Click on \" التحقق من الهوية \" button");
+        logger.info("Step 15: Click on ' التحقق من الهوية ' button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
     }
@@ -2721,9 +2721,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2745,9 +2745,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         app.terminateContractPage.verifyTheRequestsIsDisplayed();
     }
@@ -2761,9 +2761,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2781,9 +2781,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2805,9 +2805,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2831,9 +2831,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2843,7 +2843,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyContractDetailsSectionIsDisplayed();
     }
@@ -2857,9 +2857,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2869,9 +2869,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \" إلغاء\" button");
+        logger.info("Step 09: Click on ' إلغاء' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
@@ -2886,9 +2886,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2898,9 +2898,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyRentalDetailsSectionIsDisplayed();
@@ -2915,9 +2915,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2927,12 +2927,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" عرض \"  button");
+        logger.info("Step 10: Click on ' عرض '  button");
         CommonMethodsPage.ClickOnAttachment("view");
         CommonMethodsPage.verifyNewTabIsOpened();
     }
@@ -2946,9 +2946,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2958,12 +2958,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" إلغاء \"  button");
+        logger.info("Step 10: Click on ' إلغاء '  button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
     }
@@ -2977,9 +2977,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -2989,12 +2989,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \" السابق \"  button ");
+        logger.info("Step 10: Click on ' السابق '  button ");
         CommonMethodsPage.clickOnBackButton();
         app.contractWaiverPage.verifyContractDetailsSectionIsDisplayed();
     }
@@ -3008,9 +3008,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3020,12 +3020,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
         app.contractWaiverPage.verifyDeclareAndConfirmSectionIsDisplayed();
@@ -3040,9 +3040,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3052,12 +3052,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on إلغاء button ");
@@ -3074,9 +3074,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3086,12 +3086,12 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Click on السابق  button ");
@@ -3108,9 +3108,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3120,15 +3120,15 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
         app.contractWaiverPage.verifyAcknowledgementCheckboxIsChecked();
     }
@@ -3142,9 +3142,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3154,15 +3154,15 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Verify \"تأكيد الموافقة\" button is not clickable");
+        logger.info("Step 11: Verify 'تأكيد الموافقة' button is not clickable");
         CommonMethodsPage.verifyConfirmButtonIsDisabled();
     }
 
@@ -3175,9 +3175,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3187,17 +3187,17 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -3211,9 +3211,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3223,21 +3223,21 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         Browser.waitUntilVisibilityOfElement(ContractWaiverPageObjects.RentalDetailsSectionTitle(), 40);
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 13: Enter valid OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 14: Click on \" التحقق من الهوية \" button");
+        logger.info("Step 14: Click on ' التحقق من الهوية ' button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
     }
@@ -3251,9 +3251,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3277,9 +3277,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on  \"العقود\" tab ");
+        logger.info("Step 02: Click on  'العقود' tab ");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\" ");
+        logger.info("Step 03: Click on 'عرض جميع العقود' ");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.checkTheContractsPage();
@@ -3294,9 +3294,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on  \"العقود\" tab ");
+        logger.info("Step 02: Click on  'العقود' tab ");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\" ");
+        logger.info("Step 03: Click on 'عرض جميع العقود' ");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3315,9 +3315,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on  \"العقود\" tab ");
+        logger.info("Step 02: Click on  'العقود' tab ");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\" ");
+        logger.info("Step 03: Click on 'عرض جميع العقود' ");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3336,9 +3336,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on  \"العقود\" tab ");
+        logger.info("Step 02: Click on  'العقود' tab ");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\" ");
+        logger.info("Step 03: Click on 'عرض جميع العقود' ");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3357,9 +3357,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on  \"العقود\" tab ");
+        logger.info("Step 02: Click on  'العقود' tab ");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\" ");
+        logger.info("Step 03: Click on 'عرض جميع العقود' ");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3386,7 +3386,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3435,9 +3435,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3454,9 +3454,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3476,9 +3476,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3489,7 +3489,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
         CommonMethodsPage.verifyConfirmPopUpIsDisplayedAfterRejectRequest();
     }
@@ -3503,9 +3503,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3516,9 +3516,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 08: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
         CommonMethodsPage.verifyValueIsEntered(data.get("RejectReason"), CommonMethodsPageObjects.rejectionReasonNote());
     }
@@ -3532,9 +3532,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3545,9 +3545,9 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Verify \"نعم, أنا متأكد\" is not clickable");
+        logger.info("Step 08: Verify 'نعم, أنا متأكد' is not clickable");
         app.contractWaiverPage.verifyYesAgreeButtonIsDisabled();
     }
 
@@ -3560,9 +3560,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3573,11 +3573,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 08: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 08: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 08: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -3591,9 +3591,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3604,11 +3604,11 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 08: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 08: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 08: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         logger.info("Step 09: Input OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
@@ -3625,9 +3625,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3638,15 +3638,15 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         logger.info("Step 06: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 07: Click on \"الرفض\" button");
+        logger.info("Step 07: Click on 'الرفض' button");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 08: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 08: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 08: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         logger.info("Step 09: Input OTP code");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 10: Click on \" التحقق من الهوية \" button");
+        logger.info("Step 10: Click on ' التحقق من الهوية ' button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         logger.info("Step 11: Click on CLOSE button");
         CommonMethodsPage.clickOnCloseButton();
@@ -3663,15 +3663,15 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
-        logger.info("Step 06: Verify the status of requests is \"مرفوض من قبل المؤجر\"");
+        logger.info("Step 06: Verify the status of requests is 'مرفوض من قبل المؤجر'");
         CommonMethodsPage.checkRequestStatus("مرفوض من قبل المؤجر");
     }
 
@@ -3692,7 +3692,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3741,9 +3741,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مؤجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3753,23 +3753,23 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
-        logger.info("Step 08: Click on \"  التالي \" button");
+        logger.info("Step 08: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 09: Click on \"  التالي \" button");
+        logger.info("Step 09: Click on '  التالي ' button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 10: Click on \"التالي\" button ");
+        logger.info("Step 10: Click on 'التالي' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 11: Click on \" أنا أوافق على ما سبق  \"  checkbox ");
+        logger.info("Step 11: Click on ' أنا أوافق على ما سبق  '  checkbox ");
         app.contractWaiverPage.clickOnAcknowledgementCheckbox();
-        logger.info("Step 12: Click \"تأكيد الموافقة\" button");
+        logger.info("Step 12: Click 'تأكيد الموافقة' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 13: Click on \"تأكيد\" button on pop up ");
+        logger.info("Step 13: Click on 'تأكيد' button on pop up ");
         app.contractWaiverPage.clickOnConfirmButtonOnPopUp();
         logger.info("Step 14: Enter valid OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 15: Click on \" التحقق من الهوية \" button");
+        logger.info("Step 15: Click on ' التحقق من الهوية ' button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
-        logger.info("Step 16: Click on \"إلغاء\" button");
+        logger.info("Step 16: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCloseButton();
     }
 
@@ -3782,9 +3782,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3802,9 +3802,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3827,9 +3827,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3840,7 +3840,7 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
         CommonMethodsPage.verifyConfirmPopUpIsDisplayedAfterRejectRequest();
@@ -3855,9 +3855,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3869,10 +3869,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 09: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
         CommonMethodsPage.verifyValueIsEntered(data.get("RejectReason"), CommonMethodsPageObjects.rejectionReasonNote());
     }
@@ -3886,9 +3886,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3900,10 +3900,10 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 09: Verify \"نعم, أنا متأكد\" is not clickable");
+        logger.info("Step 09: Verify 'نعم, أنا متأكد' is not clickable");
         app.contractWaiverPage.verifyYesAgreeButtonIsDisabled();
     }
 
@@ -3916,9 +3916,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3930,12 +3930,12 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 09: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 09: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 09: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         CommonMethodsPage.verifyOTPPopIsDisplayed();
     }
@@ -3949,9 +3949,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3963,12 +3963,12 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 09: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 10: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 10: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         logger.info("Step 11: Input OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
@@ -3985,9 +3985,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -3999,19 +3999,19 @@ public class ContractWaiver extends NHCWebTest {
         logger.info("Step 07: Click on  الموافقة / رفض تقبيل العقد  option");
         CommonMethodsPage.ClickOnKebabMenuOption("الموافقة");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"الرفض\" button");
+        logger.info("Step 08: Click on 'الرفض' button");
         Browser.waitUntilInvisibilityOfElement(RentalIncidentsPageObjects.PopUpErrorMessage(), 40);
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 09: Enter reason for rejection in \"سبب الرفض\" text field");
+        logger.info("Step 09: Enter reason for rejection in 'سبب الرفض' text field");
         CommonMethodsPage.enterRejectionReasonNote(data.get("RejectReason"));
-        logger.info("Step 10: Verify \"نعم, أنا متأكد\" is clickable");
+        logger.info("Step 10: Verify 'نعم, أنا متأكد' is clickable");
         app.contractWaiverPage.clickOnYesAgreeButton();
         logger.info("Step 11: Input OTP");
         app.loginPage.enterVerificationCodeForOTP(data.get("OTP"));
-        logger.info("Step 12: Click on \" التحقق من الهوية \" button");
+        logger.info("Step 12: Click on ' التحقق من الهوية ' button");
         app.sendContractForApprovalPage.clickOnIdentityVerificationButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
-        logger.info("Step 13: Click on \" إغلاق \" button");
+        logger.info("Step 13: Click on ' إغلاق ' button");
         CommonMethodsPage.clickOnCloseButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Contract Waiver");
     }
@@ -4025,9 +4025,9 @@ public class ContractWaiver extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مستأجر");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
-        logger.info("Step 03: Click on \"عرض الطلبات\"");
+        logger.info("Step 03: Click on 'عرض الطلبات'");
         CommonMethodsPage.clickOnViewAllRequestsButton();
         logger.info("Step 04: Click on filter button");
         CommonMethodsPage.clickFilterBtn();
@@ -4050,7 +4050,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4076,7 +4076,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4102,7 +4102,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4128,7 +4128,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4154,7 +4154,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4167,7 +4167,7 @@ public class ContractWaiver extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 08: Verify the error message pop up is displayed");
         app.contractWaiverPage.verifyErrorMessagePopUpIsDisplayed();
-        logger.info("Step 08: Click on \"إلغاء\" button");
+        logger.info("Step 08: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCloseButton();
         app.contractWaiverPage.verifyContractWaiverServicePageIsDisplayed();
     }

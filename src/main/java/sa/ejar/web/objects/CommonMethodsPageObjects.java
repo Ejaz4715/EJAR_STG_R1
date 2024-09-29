@@ -57,19 +57,19 @@ public class CommonMethodsPageObjects {
     }
 
     public static By ContractNumberOfSearchedContract() {
-        return By.xpath("//h5/child::a[@class=\"btn btn-link text-primary p-0\"]");
+        return By.xpath("//h5/child::a[@class='btn btn-link text-primary p-0']");
     }
 
     public static By KebabMenuButton() {
-        return By.xpath("//span[@class=\"round-icon large menu\"]");
+        return By.xpath("//span[@class='round-icon large menu']");
     }
 
     public static By KebabMenuOptions() {
-        return By.xpath("//a[contains (@class, \"nav-item\")]");
+        return By.xpath("//a[contains (@class, 'nav-item')]");
     }
 
     public static By TerminateOptions() {
-        return By.xpath("//a[contains (@class,\"nav-item p-3 text-center text-danger\")]");
+        return By.xpath("//a[contains (@class,'nav-item p-3 text-center text-danger')]");
     }
 
     public static By PopUpAlertAfterCancel() {
@@ -77,7 +77,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By maxValueError() {
-        return By.xpath("//li[@data-error=\"errors.max_value\"]");
+        return By.xpath("//li[@data-error='errors.max_value']");
     }
 
     public static By ViewOrDownloadAttachmentButtons() {
@@ -89,7 +89,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By minValueError() {
-        return By.xpath("//li[@data-error=\"errors.min_value\"]");
+        return By.xpath("//li[@data-error='errors.min_value']");
     }
 
     public static By totalAmount() {
@@ -97,7 +97,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By equivalentDateHint() {
-        return By.xpath("//span[@class=\"input-hints\"]");
+        return By.xpath("//span[@class='input-hints']");
     }
 
     public static By closeBTN() {
@@ -105,7 +105,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By requestNumber() {
-        return By.xpath("//h5[@class=\"message mb-2\"]");
+        return By.xpath("//h5[@class='message mb-2']");
     }
 
 
@@ -126,7 +126,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By requestNumberTXT() {
-        return By.xpath("//input[@data-name=\"reference\"]");
+        return By.xpath("//input[@data-name='reference']");
     }
 
     public static By acceptTerminationOptionBTN() {
@@ -186,11 +186,11 @@ public class CommonMethodsPageObjects {
     }
 
     public static By rejectReasonRadioBTNs() {
-        return By.xpath("//app-form-radio[@formcontrolname=\"rejection_reason\"]");
+        return By.xpath("//app-form-radio[@formcontrolname='rejection_reason']");
     }
 
     public static By rejectionReasonNote() {
-        return By.xpath("//textarea[@formcontrolname=\"rejection_reason_note\" or  @data-name=\"rejection_reason\"]");
+        return By.xpath("//textarea[@formcontrolname='rejection_reason_note' or  @data-name='rejection_reason']");
     }
 
     public static By rejectionSubmittedMessage() {
@@ -210,7 +210,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By contractsNumber() {
-        return By.xpath("//input[@data-name=\"contract_number\"]");
+        return By.xpath("//input[@data-name='contract_number']");
     }
 
     public static By allContractInvoices() {
@@ -242,12 +242,12 @@ public class CommonMethodsPageObjects {
     }
 
     public static By disclaimerCheckbox() {
-        return By.xpath("//app-form-checkbox[@formcontrolname=\"approve_unified_disclaimer\"]/label");
+        return By.xpath("//app-form-checkbox[@formcontrolname='approve_unified_disclaimer']/label");
     }
 
     public static By UserIdentityList() {
 //        return By.xpath("//app-nav-item[@icon='single-man-cicle']//span");
-        return By.xpath("//div[@data-dropdown-role=\"options\"]/descendant::span");
+        return By.xpath("//div[@data-dropdown-role='options']/descendant::span");
     }
 
     public static By RoleName() {
@@ -255,7 +255,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By ratingBTN() {
-        return By.xpath("//app-rating-input/child::div/div[@class=\"rating\"][1]");
+        return By.xpath("//app-rating-input/child::div/div[@class='rating'][1]");
     }
 
     public static By submitBTN() {
@@ -275,19 +275,19 @@ public class CommonMethodsPageObjects {
     }
 
     public static By deleteIconBTN() {
-        return By.xpath("//i[@class=\"delete-icon\"]/parent::button");
+        return By.xpath("//i[@class='delete-icon']/parent::button");
     }
 
     public static By CRNumberInput() {
-        return By.xpath("//input[@formcontrolname=\"registration_number\"]");
+        return By.xpath("//input[@formcontrolname='registration_number']");
     }
 
     public static By errorCRNumberMsg() {
-        return By.xpath("//ul[@class=\"errors\"]/li");
+        return By.xpath("//ul[@class='errors']/li");
     }
 
     public static By PhoneNumberInputField() {
-        return By.xpath("//input[@data-name=\"nationalNumber\"]");
+        return By.xpath("//input[@data-name='nationalNumber']");
     }
 
     public static By PhoneNumberInputFieldErrorMessage() {
@@ -295,7 +295,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By EmailInputField() {
-        return By.xpath("//input[@data-name=\"email\"]");
+        return By.xpath("//input[@data-name='email']");
     }
 
     public static By EmailErrorMessage() {
@@ -303,27 +303,27 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RegionDropdown() {
-        return By.xpath("//select[@data-name=\"region\"]");
+        return By.xpath("//select[@data-name='region']");
     }
 
     public static By RegionDropdownOptions() {
-        return By.xpath("//select[@data-name=\"region\"]/child::option");
+        return By.xpath("//select[@data-name='region']/child::option");
     }
 
     public static By CityDropdown() {
-        return By.xpath("//input[@data-name=\"city\"]/parent::div/child::div/child::div");
+        return By.xpath("//input[@data-name='city']/parent::div/child::div/child::div");
     }
 
     public static By CitySearchBar() {
-        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::input[@placeholder=\"البحث\"]");
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::input[@placeholder='البحث']");
     }
 
     public static By CityName() {
-        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::div[@class=\"option-text\"]");
+        return By.xpath("//label[text()='المدينة']/parent::app-form-field/descendant::div[@class='option-text']");
     }
 
     public static By PostalCodeInput() {
-        return By.xpath("//input[@data-name=\"postal_code\"]");
+        return By.xpath("//input[@data-name='postal_code']");
     }
 
     public static By PostalCodeError() {
@@ -331,7 +331,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By StreetNameInput() {
-        return By.xpath("//input[@data-name=\"street_name\"]");
+        return By.xpath("//input[@data-name='street_name']");
 
     }
 
@@ -345,12 +345,12 @@ public class CommonMethodsPageObjects {
     }
 
     public static By BuildingNumberInput() {
-        return By.xpath("//input[@data-name=\"building_number\"]");
+        return By.xpath("//input[@data-name='building_number']");
 
     }
 
     public static By AdditionalNumberInput() {
-        return By.xpath("//input[@data-name=\"additional_number\"]");
+        return By.xpath("//input[@data-name='additional_number']");
     }
 
     public static By AdditionalNumberError() {
@@ -369,7 +369,7 @@ public class CommonMethodsPageObjects {
         return By.xpath("//li[contains(text(),'رمز OTP غير صالح')]");
     }
 
-    public static By ContractResultOfSearchedContract(){ return By.xpath("//div[@class=\"col-12 py-4\"]");}
+    public static By ContractResultOfSearchedContract(){ return By.xpath("//div[@class='col-12 py-4']");}
     public static By AccountSettingsHeading(){ return By.xpath("//header[@class='main-header d-lg-block d-none']//h1");}
     public static By UnitForms(){ return By.xpath("//div//a[text()=' نماذج الوحدة ']");}
     public static By ViewUnitForms(){ return By.xpath("//div//span[text()='عرض نماذج الوحدة']");}
@@ -380,35 +380,35 @@ public class CommonMethodsPageObjects {
     }
 
     public static By ownershipDocumentDDL() {
-        return By.xpath("//select[@data-name=\"ownership_document_type\"]");
+        return By.xpath("//select[@data-name='ownership_document_type']");
     }
 
     public static By ownershipDocumentDDLOption() {
-        return By.xpath("//select[@data-name=\"ownership_document_type\"]/option");
+        return By.xpath("//select[@data-name='ownership_document_type']/option");
     }
 
     public static By ownershipDocumentNumberTXT() {
-        return By.xpath("//input[@formcontrolname=\"document_number\"]");
+        return By.xpath("//input[@formcontrolname='document_number']");
     }
 
     public static By releaseDateTXT() {
-        return By.xpath("//input[@data-name=\"issued_date\"]");
+        return By.xpath("//input[@data-name='issued_date']");
     }
 
     public static By ownerIdTXT() {
-        return By.xpath("//input[@formcontrolname=\"owner_id\"]");
+        return By.xpath("//input[@formcontrolname='owner_id']");
     }
 
     public static By legalDocumentTypeNameTXT() {
-        return By.xpath("//input[@formcontrolname=\"legal_document_type_name\"]");
+        return By.xpath("//input[@formcontrolname='legal_document_type_name']");
     }
 
     public static By selectedOwnershipDocumentInfo() {
-        return By.xpath("//app-form-radio[@formcontrolname=\"selectedOwnershipDoc\"]");
+        return By.xpath("//app-form-radio[@formcontrolname='selectedOwnershipDoc']");
     }
 
     public static By selectedOwnershipDocumentInfoRadioBTN() {
-        return By.xpath("//input[@data-name=\"selectedOwnershipDoc\"]");
+        return By.xpath("//input[@data-name='selectedOwnershipDoc']");
     }
 
     public static By addNewOwnershipDocumentAlertMsg() {
@@ -440,7 +440,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By RequestNumberInputField() {
-        return By.xpath("//input[@data-name=\"rental_incident_number\"]");
+        return By.xpath("//input[@data-name='rental_incident_number']");
     }
 
     public static By verifyBTN() {
@@ -448,7 +448,7 @@ public class CommonMethodsPageObjects {
     }
 
     public static By ownershipReferenceSearchField() {
-        return By.xpath("//input[@data-name=\"ownership_reference_no\"]");
+        return By.xpath("//input[@data-name='ownership_reference_no']");
     }
 
     public static By SearchedDeedNumber() {

@@ -31,19 +31,19 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By requesterTypeDDL() {
-        return By.xpath("//select[@data-name=\"requester_type\"]");
+        return By.xpath("//select[@data-name='requester_type']");
     }
 
     public static By requesterTypeDDLOption() {
-        return By.xpath("//select[@data-name=\"requester_type\"]/option");
+        return By.xpath("//select[@data-name='requester_type']/option");
     }
 
     public static By requesterCategoryDDL() {
-        return By.xpath("//select[@data-name=\"requester_category\"]");
+        return By.xpath("//select[@data-name='requester_category']");
     }
 
     public static By requesterCategoryDDLOption() {
-        return By.xpath("//select[@data-name=\"requester_category\"]/option");
+        return By.xpath("//select[@data-name='requester_category']/option");
     }
 
     public static By requesterRoleRadioBTNs() {
@@ -63,7 +63,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By phoneNumberInput() {
-        return By.xpath("//input[@formcontrolname=\"nationalNumber\"]");
+        return By.xpath("//input[@formcontrolname='nationalNumber']");
     }
 
     public static By requesterInfo() {
@@ -76,7 +76,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By AbstainerRole() {
-        return By.xpath("//app-form-radio[@formcontrolname=\"role\"]/child::label");
+        return By.xpath("//app-form-radio[@formcontrolname='role']/child::label");
     }
 
     public static By NationalIdInputError() {
@@ -104,7 +104,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By DeleteButtonOnAbstainingPartyInfoSection() {
-        return By.xpath("//h2[text() = 'بيانات الطرف الممتنع']/ancestor::app-card/descendant::button[@data-test-id=\"requester.delete_requester\"]");
+        return By.xpath("//h2[text() = 'بيانات الطرف الممتنع']/ancestor::app-card/descendant::button[@data-test-id='requester.delete_requester']");
     }
 
     public static By ContractPeriodSectionTitle() {
@@ -112,19 +112,19 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By ContractPeriodDateInputField() {
-        return By.xpath("//input[@data-name=\"contract_start_date\"]");
+        return By.xpath("//input[@data-name='contract_start_date']");
     }
 
     public static By ContractTypeDropDown() {
-        return By.xpath("//select[@data-name=\"contract_type\"]");
+        return By.xpath("//select[@data-name='contract_type']");
     }
 
     public static By ContractTypeDropDownOptionsList() {
-        return By.xpath("//select[@data-name=\"contract_type\"]/child::option");
+        return By.xpath("//select[@data-name='contract_type']/child::option");
     }
 
     public static By DurationYearInputFieldOnCalenderPopUp() {
-        return By.xpath("//input[@data-name=\"years\"]");
+        return By.xpath("//input[@data-name='years']");
     }
 
     public static By TotalRequestAmount() {
@@ -136,15 +136,15 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By AnnualRentInputField() {
-        return By.xpath("//input[@data-name=\"contract_annual_rent_value\"]");
+        return By.xpath("//input[@data-name='contract_annual_rent_value']");
     }
 
     public static By DaysInputField() {
-        return By.xpath("//input[@data-name=\"days\"]");
+        return By.xpath("//input[@data-name='days']");
     }
 
     public static By BORegistrationInputField() {
-        return By.xpath("//input[@data-name=\"bo_register_number\"]");
+        return By.xpath("//input[@data-name='bo_register_number']");
     }
 
     public static By PopUpErrorMessage() {
@@ -152,7 +152,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By organizationRadioBTN() {
-        return By.xpath("//app-form-radio[@formcontrolname=\"selectedOrganizationId\"]");
+        return By.xpath("//app-form-radio[@formcontrolname='selectedOrganizationId']");
     }
 
     public static By organizationInfoSection() {
@@ -180,23 +180,23 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By overSizeErrorMsg() {
-        return By.xpath("//p[@class=\"error\"]");
+        return By.xpath("//p[@class='error']");
     }
 
     public static By differentFormatAttachment() {
-        return By.xpath("//p[@class=\"browse-file-text\"]");
+        return By.xpath("//p[@class='browse-file-text']");
     }
 
     public static By approveOfDeclarationCheckbox() {
-        return By.xpath("//app-form-checkbox[@formcontrolname=\"approval_declaration\"]");
+        return By.xpath("//app-form-checkbox[@formcontrolname='approval_declaration']");
     }
 
     public static By approveOfDeclarationCheckboxSelected() {
-        return By.xpath("//input[@data-name=\"approval_declaration\"]");
+        return By.xpath("//input[@data-name='approval_declaration']");
     }
 
     public static By reasonRefusalRadioBTN() {
-        return By.xpath("//app-form-radio[@formcontrolname=\"refusalReason\"][1]");
+        return By.xpath("//app-form-radio[@formcontrolname='refusalReason'][1]");
     }
 
     public static By rentalIncidentRequestNumber() {
@@ -216,15 +216,15 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By IDNumberOfPersonWriteTheContractInput() {
-        return By.xpath("//input[@data-name=\"person_id_number\"]");
+        return By.xpath("//input[@data-name='person_id_number']");
     }
 
     public static By PhoneNumberOfPersonWriteTheContractInput() {
-        return By.xpath("//input[@data-name=\"nationalNumber\"]");
+        return By.xpath("//input[@data-name='nationalNumber']");
     }
 
     public static By InputFieldErrorMessage() {
-        return By.xpath("//ul/child::li[contains (@data-error, \"error\")]");
+        return By.xpath("//ul/child::li[contains (@data-error, 'error')]");
     }
 
     public static By rejectTheRequestPopUp() {
@@ -232,7 +232,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By rejectReasonTextarea() {
-        return By.xpath("//textarea[@formcontrolname=\"rejectReason\"]");
+        return By.xpath("//textarea[@formcontrolname='rejectReason']");
     }
 
     public static By rejectConfirmationMsg() {
@@ -284,7 +284,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By CheckBoxesForUpdateAndResubmitPopup() {
-        return By.xpath("//label[@class=\"form-check-label\"]");
+        return By.xpath("//label[@class='form-check-label']");
     }
 
     public static By confirmTheRejectionBTN() {
@@ -315,7 +315,7 @@ public class RentalIncidentsPageObjects {
     }
 
     public static By kebabBTN() {
-        return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
+        return By.xpath("(//span[@class='round-icon large menu'])[1]");
     }
 
     public static By RequestUpdateCount() {

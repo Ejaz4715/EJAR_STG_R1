@@ -28,8 +28,8 @@ public class LoginAPI extends UnirestAPI {
     // Verify functions
 
     // Assert functions
-    public void assertLoginResponse(HttpResponse<JsonNode> response) {
-        UnirestAPI.assertResponseCode(response, "200");
+    public void assertResponse(HttpResponse<JsonNode> response, String resCode) {
+        UnirestAPI.assertResponseCode(response, resCode);
         UnirestAPI.assertResponseMessage(response, "");
     }
 }

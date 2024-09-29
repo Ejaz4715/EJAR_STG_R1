@@ -65,7 +65,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By additionalTermsSwitchBTN() {
-        return By.xpath("//app-switch-input[@formcontrolname=\"custom_terms_accepted\"]/label/span");
+        return By.xpath("//app-switch-input[@formcontrolname='custom_terms_accepted']/label/span");
     }
 
     public static By addAnotherAdditionalTermsBTN() {
@@ -77,15 +77,15 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By additionalTermsTextarea() {
-        return By.xpath("//textarea[@data-name=\"content\"]");
+        return By.xpath("//textarea[@data-name='content']");
     }
 
     public static By theEnteredAdditionalTerms() {
-        return By.xpath("//app-card-body[@data-test=\"persisted-custom-terms\"]/p");
+        return By.xpath("//app-card-body[@data-test='persisted-custom-terms']/p");
     }
 
     public static By theEnteredAdditionalTermsRemoved() {
-        return By.xpath("//app-card-body[@data-test=\"persisted-custom-terms\"]");
+        return By.xpath("//app-card-body[@data-test='persisted-custom-terms']");
     }
 
     public static By addAnotherAdditionalTermsErrorMsg() {
@@ -93,7 +93,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By addAnotherAdditionalTermsErrorMsgContent() {
-        return By.xpath("//div[@class=\"message\"]");
+        return By.xpath("//div[@class='message']");
     }
 
     public static By confirmTermsAndConditionsBTN() {
@@ -129,7 +129,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By rejectionReasonTextarea() {
-        return By.xpath("//textarea[@formcontrolname=\"custom_reason\"]");
+        return By.xpath("//textarea[@formcontrolname='custom_reason']");
     }
 
     public static By rejectTheContractBTN() {
@@ -177,7 +177,7 @@ public class SendContractForApprovalPageObjects {
     }
 
     public static By sendForApprovalCheckboxes() {
-        return By.xpath("//input[@type=\"checkbox\"]/following-sibling::label");
+        return By.xpath("//input[@type='checkbox']/following-sibling::label");
     }
 
     public static By downloadBTN() {

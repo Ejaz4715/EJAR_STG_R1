@@ -12,7 +12,7 @@ public class APICollection extends UnirestAPI {
 
     public HttpResponse<JsonNode> makeContractReadyForRenewal(Map<String, String> data) throws Exception {
         logger.info("Step 00: Test Data : " + data.toString());
-        String json = null;
+        String json;
             json = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir"), "src", "main", "resources","ApiDetails","TestRenewalContractAPI.json")));
             String url = data.get("API_URL");
             data.put("RequestURL", url);
@@ -24,7 +24,6 @@ public class APICollection extends UnirestAPI {
             JSONObject responseJson = response.getBody().getObject();
             System.out.println("Request Body :"+ responseJson);
             UnirestAPI.assertResponseCode(response, "200");
-            //Request Body :{"message":"Done"}
             return response;
         }
 
@@ -32,12 +31,12 @@ public class APICollection extends UnirestAPI {
     public static HttpResponse<JsonNode> getPostResponse(Map<String, String> data) {
         HttpResponse<JsonNode> response = null;
         Unirest.config().verifySsl(true);
-        String url = (String)data.get("RequestURL");
+        String url = data.get("RequestURL");
         Map<String, String> headers = getHeaderMap(data);
-        String reqPayload = (String)data.get("RequestPayload");
+        String reqPayload = data.get("RequestPayload");
         processRequest(data);
-        if (((String)data.get("HTTPMethod")).equalsIgnoreCase("post")) {
-            response = ((RequestBodyEntity)Unirest.post(url).body(reqPayload).headers(headers)).asJson();
+        if (data.get("HTTPMethod").equalsIgnoreCase("post")) {
+            response = Unirest.post(url).body(reqPayload).headers(headers).asJson();
         }
         assert response != null;
         processResponse(response);

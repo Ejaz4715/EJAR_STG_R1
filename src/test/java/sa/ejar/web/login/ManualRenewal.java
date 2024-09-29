@@ -34,7 +34,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -50,7 +50,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -68,7 +68,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -89,7 +89,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -115,7 +115,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -141,7 +141,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -165,7 +165,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -190,7 +190,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -218,7 +218,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -246,7 +246,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -273,7 +273,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -301,7 +301,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -331,7 +331,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -365,7 +365,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -383,7 +383,7 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 10: Click on \"إلغاء\" button");
+        logger.info("Step 10: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
@@ -401,7 +401,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -419,11 +419,11 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 10: Click on \"إلغاء\" button");
+        logger.info("Step 10: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 11: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 11: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         CommonMethodsPage.scrollToElement(sendContractForRenewal());
         logger.info("Step 12: User remains in the same section (معاينة العقد) in (إرسال العقد للتجديد) page");
@@ -442,7 +442,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -460,11 +460,11 @@ public class ManualRenewal extends NHCWebTest {
         app.addResidentialContractPage.clickSubmitForApprovalBTN();
         logger.info("Step 09: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 10: Click on \"إلغاء\" button");
+        logger.info("Step 10: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 11: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 11: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 12: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -482,7 +482,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -519,7 +519,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -560,7 +560,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -583,7 +583,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 12: Click on \"إلغاء\" button");
+        logger.info("Step 12: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
@@ -600,7 +600,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -623,10 +623,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 12: Click on \"إلغاء\" button");
+        logger.info("Step 12: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 13: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 13: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         logger.info("Step 14: User remains in the same section (دفع رسوم إيجار) in (إرسال العقد للتجديد) page");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
@@ -644,7 +644,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -667,10 +667,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 11: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 12: Click on \"إلغاء\" button");
+        logger.info("Step 12: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 13: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 13: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 14: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -688,7 +688,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -725,7 +725,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -765,7 +765,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -805,7 +805,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -849,7 +849,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -875,7 +875,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -897,7 +897,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify new renewal contract is visible in Total Number Of Contracts");
         app.manualRenewalPage.verifyNewRenewalContractIsVisibleInTotalNoOfContracts(data.get("New_Contract"));
@@ -915,7 +915,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -937,7 +937,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -965,7 +965,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1011,7 +1011,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1040,7 +1040,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1066,7 +1066,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1088,7 +1088,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on Manual Renewal Card");
         //app.manualRenewalPage.ClickManualRenewalCard();
@@ -1109,7 +1109,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on Manual Renewal Card");
         //app.manualRenewalPage.ClickManualRenewalCard();
@@ -1129,7 +1129,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1150,7 +1150,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1209,7 +1209,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -1226,7 +1226,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -1244,7 +1244,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -1266,7 +1266,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -1293,7 +1293,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -1320,7 +1320,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1345,7 +1345,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1371,7 +1371,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1400,7 +1400,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1429,7 +1429,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1458,7 +1458,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1491,7 +1491,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1523,7 +1523,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1557,7 +1557,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1593,7 +1593,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1613,7 +1613,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
@@ -1631,7 +1631,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1651,11 +1651,11 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 12: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         CommonMethodsPage.scrollToElement(sendContractForRenewal());
         logger.info("Step 13: User remains in the same section (معاينة العقد) in (إرسال العقد للتجديد) page");
@@ -1674,7 +1674,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1694,11 +1694,11 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 12: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 13: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -1716,7 +1716,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1755,7 +1755,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1798,7 +1798,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1823,7 +1823,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
@@ -1840,7 +1840,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1865,10 +1865,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 14: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 14: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         logger.info("Step 15: User remains in the same section (دفع رسوم إيجار) in (إرسال العقد للتجديد) page");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
@@ -1886,7 +1886,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1911,10 +1911,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 14: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 14: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 15: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -1932,7 +1932,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -1971,7 +1971,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2013,7 +2013,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2055,7 +2055,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2101,7 +2101,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2130,7 +2130,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2159,7 +2159,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2181,7 +2181,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on Manual Renewal Card");
         //app.manualRenewalPage.ClickManualRenewalCard();
@@ -2201,7 +2201,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify new renewal contract is visible in Total Number Of Contracts");
         app.manualRenewalPage.verifyNewRenewalContractIsVisibleInTotalNoOfContracts(data.get("New_Contract"));
@@ -2220,7 +2220,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2248,7 +2248,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2295,7 +2295,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2323,7 +2323,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on Manual Renewal Card");
         //app.manualRenewalPage.ClickManualRenewalCard();
@@ -2352,7 +2352,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2369,7 +2369,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2387,7 +2387,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2409,7 +2409,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2436,7 +2436,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal ( جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2463,7 +2463,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2489,7 +2489,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify Ready For Renewal (جاهز للتجديد ) card is visible");
         app.manualRenewalPage.verifyReadyForRenewalCardIsVisible();
@@ -2511,7 +2511,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify new renewal contract is visible in Total Number Of Contracts");
         app.manualRenewalPage.verifyNewRenewalContractIsVisibleInTotalNoOfContracts(data.get("New_Contract"));
@@ -2529,7 +2529,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2559,7 +2559,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2589,7 +2589,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2618,7 +2618,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2651,7 +2651,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2683,7 +2683,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2717,7 +2717,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2753,7 +2753,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2773,7 +2773,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
@@ -2791,7 +2791,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2811,11 +2811,11 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 12: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         CommonMethodsPage.scrollToElement(sendContractForRenewal());
         logger.info("Step 13: User remains in the same section (معاينة العقد) in (إرسال العقد للتجديد) page");
@@ -2834,7 +2834,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2854,11 +2854,11 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnLetUsStartButton();
         logger.info("Step 10: Verify Submit Contract For Renewal Page is displayed");
         app.manualRenewalPage.verifySubmitContractForRenewalPageIsDisplayed();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.scrollToElement(cancelBTN());
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 12: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 13: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -2876,7 +2876,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2915,7 +2915,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2958,7 +2958,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -2983,7 +2983,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
@@ -3000,7 +3000,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3025,10 +3025,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 14: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 14: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         logger.info("Step 15: User remains in the same section (دفع رسوم إيجار) in (إرسال العقد للتجديد) page");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
@@ -3046,7 +3046,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3071,10 +3071,10 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.clickOnNextButton();
         logger.info("Step 12: Verify the user navigate to (دفع رسوم إيجار) section");
         app.sendContractForApprovalPage.verifyPayingEjarFeesSectionIsDisplayed();
-        logger.info("Step 13: Click on \"إلغاء\" button");
+        logger.info("Step 13: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 14: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 14: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("Step 15: User navigate back to contract steps (خطوات العقد ) page");
         app.sendContractForApprovalPage.verifyContractStepsPageIsDisplayed();
@@ -3092,7 +3092,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3131,7 +3131,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3173,7 +3173,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3214,7 +3214,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         //app.manualRenewalPage.ClickManualRenewalCard();
         logger.info("Step 04: Click on filter icon");
@@ -3260,7 +3260,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3286,7 +3286,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3308,7 +3308,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3338,7 +3338,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -3355,7 +3355,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3376,7 +3376,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3399,7 +3399,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3424,7 +3424,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3451,7 +3451,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3480,7 +3480,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3509,7 +3509,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3538,7 +3538,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3567,7 +3567,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3598,7 +3598,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3629,7 +3629,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3660,7 +3660,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3693,7 +3693,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3728,7 +3728,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3763,7 +3763,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3798,7 +3798,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3836,7 +3836,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3871,7 +3871,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3910,7 +3910,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3951,7 +3951,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -3968,7 +3968,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3989,7 +3989,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4012,7 +4012,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4037,7 +4037,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4064,7 +4064,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4093,7 +4093,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4120,7 +4120,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4148,7 +4148,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4175,7 +4175,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4202,7 +4202,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4229,7 +4229,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4256,7 +4256,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4283,7 +4283,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4310,7 +4310,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4340,7 +4340,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4368,7 +4368,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4400,7 +4400,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4432,7 +4432,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4465,7 +4465,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4497,7 +4497,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4531,7 +4531,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4563,7 +4563,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4597,7 +4597,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4631,7 +4631,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4668,7 +4668,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4702,7 +4702,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4740,7 +4740,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4778,7 +4778,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4801,7 +4801,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4840,7 +4840,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -4858,7 +4858,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4880,7 +4880,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4904,7 +4904,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4930,7 +4930,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4958,7 +4958,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -4988,7 +4988,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5018,7 +5018,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5048,7 +5048,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5078,7 +5078,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5110,7 +5110,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5142,7 +5142,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5174,7 +5174,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5208,7 +5208,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5242,7 +5242,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5278,7 +5278,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5314,7 +5314,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5353,7 +5353,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5389,7 +5389,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5429,7 +5429,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5469,7 +5469,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -5486,7 +5486,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5507,7 +5507,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5530,7 +5530,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5555,7 +5555,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5582,7 +5582,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5611,7 +5611,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5638,7 +5638,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5666,7 +5666,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5693,7 +5693,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5720,7 +5720,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5747,7 +5747,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5774,7 +5774,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5801,7 +5801,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5828,7 +5828,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5858,7 +5858,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5886,7 +5886,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5916,7 +5916,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5949,7 +5949,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -5981,7 +5981,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6015,7 +6015,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6049,7 +6049,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6087,7 +6087,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6121,7 +6121,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6159,7 +6159,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6197,7 +6197,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6218,7 +6218,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6241,7 +6241,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6264,7 +6264,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -6285,7 +6285,7 @@ public class ManualRenewal extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();

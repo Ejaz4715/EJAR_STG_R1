@@ -8,25 +8,21 @@ import java.util.Map;
 
 public class LoginPageObjects {
     static Map<String, Map<String, String>> objects = new HashMap<>() {{
-
         put("button-login", new HashMap<>() {{
             put("en", "//button[text()=' Login ']");
-            put("ar", "//button[contains(@class,'btn btn-primary')]");
+            put("ar", "//form/descendant::button[contains (text(), 'تسجيل الدخول')]");
         }});
         put("text-password", new HashMap<>() {{
             put("en", "//input[@data-name='password']");
             put("ar", "//input[@data-name='password']");
         }});
-
         put("text-verificationCode", new HashMap<>() {{
             put("en", "//input[@id = 'index_1']");
             put("ar", "//input[@id = 'index_1']");
         }});
         put("text-email", new HashMap<>() {{
-//            put("en", "//input[@data-name='idNumber']");
-//            put("ar", "//input[@data-name='idNumber']");
-            put("en", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
-            put("ar", "//input[@data-name=\"username\"] | //input[@data-name='idNumber']");
+            put("en", "//input[@data-name='username'] | //input[@data-name='idNumber']");
+            put("ar", "//input[@data-name='username'] | //input[@data-name='idNumber']");
 
         }});
         put("explore-ejar-pop-up", new HashMap<>() {{
@@ -41,17 +37,14 @@ public class LoginPageObjects {
             put("en", "//button[text() = 'Confirm']");
             put("ar", "//button[text() = 'تأكيد']");
         }});
-
         put("option-new-residential-contract", new HashMap<>() {{
             put("en", "//span[text()='Create new residential']");
             put("ar", "//span[contains(text(),'تسجيل عقد سكني')]");
         }});
-
         put("btn-contracts", new HashMap<>() {{
             put("en", "//a[text()=' Contracts ']");
             put("ar", "//a[text()=' العقود ']");
         }});
-
         put("btn-view-all-contracts", new HashMap<>() {{
             put("en", "//span[text()='View all contracts']");
             put("ar", "//span[contains(text(),'عرض جميع العقود')]");
@@ -60,7 +53,6 @@ public class LoginPageObjects {
             put("en", "");
             put("ar", "(//button[contains(@class,'close-button')])[2]");
         }});
-
         put("Close-Button2", new HashMap<>() {{
             put("en", "");
             put("ar", "(//button[contains(text(),'إغلاق')])[1]");
@@ -69,7 +61,6 @@ public class LoginPageObjects {
             put("en", "");
             put("ar", "(//button[contains(@class,'close-button')])[1]");
         }});
-
         put("Confirm-Terms-Button", new HashMap<>() {{
             put("en", "");
             put("ar", "(//button[contains(text(),'تأكيد')])[1]");
@@ -158,14 +149,17 @@ public class LoginPageObjects {
     }
 
     public static By NafathApprove(String id) {
-        return By.xpath("(//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::div/child::button[contains (text(), 'Approve')])[1]");
+        return By.xpath("(//p[contains (text(), " + "'" + id + "'" + ")]/following-sibling::div/child::button[contains (text(), 'Approve')])[1]");
     }
+
     public static By NafathStatus(String id) {
-        return By.xpath("//p[contains (text(), "+"'"+id+"'"+")]/following-sibling::p[2]/child::span");
+        return By.xpath("//p[contains (text(), " + "'" + id + "'" + ")]/following-sibling::p[2]/child::span");
     }
+
     public static By NafathCode() {
         return By.xpath("//app-card-body/child::div/child::div[1]");
     }
+
     public static By CloseButton3() {
         return By.xpath("(//button[contains(@class,'close-button')])[1]");
     }

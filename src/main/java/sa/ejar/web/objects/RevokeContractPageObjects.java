@@ -23,19 +23,19 @@ public class RevokeContractPageObjects {
     }
 
     public static By ExecutionOrderNumberInput() {
-        return By.xpath("//input[@data-name=\"execution_order_number\"]");
+        return By.xpath("//input[@data-name='execution_order_number']");
     }
 
     public static By ExecutionOrderDateInput() {
-        return By.xpath("//input[@data-name=\"execution_order_date\"]");
+        return By.xpath("//input[@data-name='execution_order_date']");
     }
 
     public static By ExecutionOrderDateErrorMessage() {
-        return By.xpath("//li[@data-error=\"errors.max_value\"]");
+        return By.xpath("//li[@data-error='errors.max_value']");
     }
 
     public static By CalenderIcon() {
-        return By.xpath("//div[contains(@class,\"date-picker\")]");
+        return By.xpath("//div[contains(@class,'date-picker')]");
     }
 
     public static By CalenderPopUp() {
@@ -43,7 +43,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By NoteInputField() {
-        return By.xpath("//textarea[@data-name=\"note\"]");
+        return By.xpath("//textarea[@data-name='note']");
     }
 
     public static By HijriDateUnderExecutionOrderDate() {
@@ -55,7 +55,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By AttachmentIcon() {
-        return By.xpath("//div[@class=\"attachment-icon\"]");
+        return By.xpath("//div[@class='attachment-icon']");
     }
 
     public static By ErrorMessageForLargeFile() {
@@ -63,7 +63,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By NextButton() {
-        return By.xpath("//button[contains (text(), \" التالي \")]");
+        return By.xpath("//button[contains (text(), ' التالي ')]");
     }
 
     public static By RequestDetailsSection() {
@@ -87,7 +87,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By RejectReasonTextarea() {
-        return By.xpath("//textarea[@data-name=\"reject_reason\"]");
+        return By.xpath("//textarea[@data-name='reject_reason']");
     }
 
     public static By RejectBTNOnPopUp() {
@@ -98,7 +98,7 @@ public class RevokeContractPageObjects {
     }
 
     public static By cancelBTNOnRequestTPage() {
-        return By.xpath("//button[@routerlink=\"..\"]");
+        return By.xpath("//button[@routerlink='..']");
     }
 
     public static By RentalIncidentRequestPageHeading() {

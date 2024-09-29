@@ -1269,7 +1269,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
         logger.info("Step 04: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 05: Verify \"Contract Period\" section is not appearing");
+        logger.info("Step 05: Verify 'Contract Period' section is not appearing");
         app.rentalIncidentsPage.verifyContractPeriodSectionIsNotDisplayed();
     }
 
@@ -1293,7 +1293,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Verify \"Start Date / End Date\" input field is disabled");
+        logger.info("Step 06: Verify 'Start Date / End Date' input field is disabled");
         app.rentalIncidentsPage.verifyContractPeriodDateInputFieldIsNotClickable();
     }
 
@@ -1317,7 +1317,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
@@ -1344,11 +1344,11 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
         app.revokeContractPage.verifyCalenderIsDisplayed();
     }
@@ -1374,11 +1374,11 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
         logger.info("Step 09: Select Start Date and End Date from calender");
         String currentDate = java.time.LocalDate.now().toString();
@@ -1414,11 +1414,11 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
         logger.info("Step 09: Select Start Date and End Date from calender");
         String currentDate = java.time.LocalDate.now().toString();
@@ -1455,11 +1455,11 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
         logger.info("Step 09: Select Start Date and End Date from calender");
         String currentDate = java.time.LocalDate.now().toString();
@@ -1499,13 +1499,13 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
-        logger.info("Step 09: Click on \"Cancel\" button ");
+        logger.info("Step 09: Click on 'Cancel' button ");
         CommonMethodsPage.clickOnCancelButton();
         app.rentalIncidentsPage.verifyCalenderIsNotDisplayed();
     }
@@ -1530,11 +1530,11 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnRequesterRoleRadioButtons(data.get("Requester_Role"));
         app.rentalIncidentsPage.clickOnAddRequesterInfoButton();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 06: Click on \"Contract Type\" dropdown");
+        logger.info("Step 06: Click on 'Contract Type' dropdown");
         app.rentalIncidentsPage.clickOnContractTypeDropDown();
         logger.info("Step 07: Select Contract type Residential/Commercial");
         CommonMethodsPage.selectFromList(data.get("Contract_Type"), RentalIncidentsPageObjects.ContractTypeDropDownOptionsList());
-        logger.info("Step 08: Click on \"Start Date / End Date\" input field");
+        logger.info("Step 08: Click on 'Start Date / End Date' input field");
         app.rentalIncidentsPage.clickOnContractPeriodDateInput();
         logger.info("Step 09: Select Start Date and End Date from calender");
         String currentDate = java.time.LocalDate.now().toString();
@@ -2378,7 +2378,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
         logger.info("Step 04: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 04: Verify  \"ID Num. of the person who wrote the paper contract\" field is not displayed");
+        logger.info("Step 04: Verify  'ID Num. of the person who wrote the paper contract' field is not displayed");
         app.rentalIncidentsPage.verifyIDNumberOfPersonWriteTheContractInputIsNotDisplayed();
     }
 
@@ -2396,7 +2396,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.clickOnNewRentalIncidentButton();
         logger.info("Step 04: Click on (التالي) button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 04: Verify  \"Phone number\" field is not displayed");
+        logger.info("Step 04: Verify  'Phone number' field is not displayed");
         app.rentalIncidentsPage.verifyPhoneNumberOfPersonWriteTheContractInputIsNotDisplayed();
     }
 
@@ -2424,7 +2424,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
-        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        logger.info("Step 08: Enter valid id in 'ID Num. of the person who wrote the paper contract' field");
         app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id"));
         CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Id"), RentalIncidentsPageObjects.IDNumberOfPersonWriteTheContractInput());
     }
@@ -2453,7 +2453,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
-        logger.info("Step 08: Enter an id having less than 10 digits in \"ID Num. of the person who wrote the paper contract\" field");
+        logger.info("Step 08: Enter an id having less than 10 digits in 'ID Num. of the person who wrote the paper contract' field");
         app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id_Not_10_Digits"));
         CommonMethodsPage.errorMessage("الحد", RentalIncidentsPageObjects.InputFieldErrorMessage());
     }
@@ -2482,7 +2482,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
-        logger.info("Step 08: Enter an id having less than 10 digits in \"ID Num. of the person who wrote the paper contract\" field");
+        logger.info("Step 08: Enter an id having less than 10 digits in 'ID Num. of the person who wrote the paper contract' field");
         app.rentalIncidentsPage.enterIdNumberOfPersonWriteTheContract(data.get("Contract_Writer_Id_With_Letters"));
         CommonMethodsPage.errorMessage("يرجى", RentalIncidentsPageObjects.InputFieldErrorMessage());
     }
@@ -2511,7 +2511,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
-        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        logger.info("Step 08: Enter valid id in 'ID Num. of the person who wrote the paper contract' field");
         app.rentalIncidentsPage.enterPhoneNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number"));
         CommonMethodsPage.verifyValueIsEntered(data.get("Contract_Writer_Phone_number"), RentalIncidentsPageObjects.PhoneNumberOfPersonWriteTheContractInput());
     }
@@ -2540,7 +2540,7 @@ public class RentalIncident extends NHCWebTest {
         app.rentalIncidentsPage.enterBORegistrationNumber(data.get("Valid_CR_Number"));
         logger.info("Step 07: Click on Search button");
         CommonMethodsPage.clickOnSearchButton();
-        logger.info("Step 08: Enter valid id in \"ID Num. of the person who wrote the paper contract\" field");
+        logger.info("Step 08: Enter valid id in 'ID Num. of the person who wrote the paper contract' field");
         app.rentalIncidentsPage.enterPhoneNumberOfPersonWriteTheContract(data.get("Contract_Writer_Phone_number_Invalid"));
         CommonMethodsPage.errorMessage("يرجى", RentalIncidentsPageObjects.InputFieldErrorMessage());
     }
@@ -3003,7 +3003,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 07: Click on filter button and search for the request with the request number");
         CommonMethodsPage.clickFilterBtn();
         app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
-        logger.info("Step 08: Verify the status of request is changed to \"Received new request\"");
+        logger.info("Step 08: Verify the status of request is changed to 'Received new request'");
         app.rentalIncidentsPage.checkRentalIncidentRequestStatus("استلام طلب جديد");
     }
 
@@ -3051,7 +3051,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        logger.info("Step 06: Click on ' Send to the legal authorities '  Button");
         app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
         app.rentalIncidentsPage.verifySendToLegalAuthoritiesPopUpIsDisplayed();
     }
@@ -3075,9 +3075,9 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        logger.info("Step 06: Click on ' Send to the legal authorities '  Button");
         app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
-        logger.info("Step 07: Enter text in \"Your comment \"");
+        logger.info("Step 07: Enter text in 'Your comment '");
         app.rentalIncidentsPage.enterCommentInPopup(data.get("Comment_For_Legal_Authorities"));
         CommonMethodsPage.verifyValueIsEntered(data.get("Comment_For_Legal_Authorities"), RentalIncidentsPageObjects.CommentTextareaOnPopup());
     }
@@ -3101,9 +3101,9 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        logger.info("Step 06: Click on ' Send to the legal authorities '  Button");
         app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
-        logger.info("Step 07: Verify the \"Send Request\" button is disabled");
+        logger.info("Step 07: Verify the 'Send Request' button is disabled");
         app.rentalIncidentsPage.verifySendRequestButtonIsDisabled();
     }
 
@@ -3126,11 +3126,11 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \" Send to the legal authorities \"  Button");
+        logger.info("Step 06: Click on ' Send to the legal authorities '  Button");
         app.rentalIncidentsPage.clickOnSendToLegalAuthoritiesButton();
-        logger.info("Step 07: Enter text in \"Your comment \"");
+        logger.info("Step 07: Enter text in 'Your comment '");
         app.rentalIncidentsPage.enterCommentInPopup(data.get("Comment_For_Legal_Authorities"));
-        logger.info("Step 08: Click on \"Send Request\" button");
+        logger.info("Step 08: Click on 'Send Request' button");
         app.rentalIncidentsPage.clickOnSendRequestButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
 //        CommonMethodsPage.verifyValueIsDisplayed("تم ارسال الطلب للجهات القانونية بنجاح", CommonMethodsPageObjects.PopUpAlertAfterCancel());
@@ -3155,11 +3155,11 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \" Reviewed by legal authorities \"  Button");
+        logger.info("Step 06: Click on ' Reviewed by legal authorities '  Button");
         app.rentalIncidentsPage.clickOnReviewedByLegalAuthorityButton();
-        logger.info("Step 07: Enter text in \"Your comment \"");
+        logger.info("Step 07: Enter text in 'Your comment '");
         app.rentalIncidentsPage.enterCommentInPopup(data.get("Comment_For_Legal_Authorities"));
-        logger.info("Step 08: Click on \"Send Request\"");
+        logger.info("Step 08: Click on 'Send Request'");
         app.rentalIncidentsPage.clickOnSendRequestButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
 //        CommonMethodsPage.verifyValueIsDisplayed("تم ارسال الطلب للجهات القانونية بنجاح", CommonMethodsPageObjects.PopUpAlertAfterCancel());
@@ -3184,7 +3184,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Approve The Request\"  Button");
+        logger.info("Step 06: Click on 'Approve The Request'  Button");
         app.rentalIncidentsPage.clickOnApproveRequestButton();
         CommonMethodsPage.verifyValueIsDisplayed("رسالة تنبيه", RentalIncidentsPageObjects.WarningPopUpTitle());
     }
@@ -3208,9 +3208,9 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Approve The Request\"  Button");
+        logger.info("Step 06: Click on 'Approve The Request'  Button");
         app.rentalIncidentsPage.clickOnApproveRequestButton();
-        logger.info("Step 07: Click on \"Approve\" button on the pop up");
+        logger.info("Step 07: Click on 'Approve' button on the pop up");
         app.rentalIncidentsPage.clickOnApproveButtonOnPopUp();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
     }
@@ -3231,7 +3231,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 04:  Click on Filter button and search for the request");
         CommonMethodsPage.clickFilterBtn();
         app.rentalIncidentsPage.enterRequestNumber(data.get("ReqNum_Approve"));
-        logger.info("Step 05: Verify the request status is \"Waiting second party response\"");
+        logger.info("Step 05: Verify the request status is 'Waiting second party response'");
         app.rentalIncidentsPage.checkRentalIncidentRequestStatus("بإنتظار تأكيد الطرف الآخر");
     }
 
@@ -3498,7 +3498,7 @@ public class RentalIncident extends NHCWebTest {
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
         CommonMethodsPage.clickOnCloseButton();
-        logger.info("Step 06: Verify the \"Update and resubmit\" button is clickable");
+        logger.info("Step 06: Verify the 'Update and resubmit' button is clickable");
         app.rentalIncidentsPage.verifyUpdateAndResubmitButtonIsEnabled();
     }
 
@@ -3521,7 +3521,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        logger.info("Step 06: Click on 'Update and resubmit' button");
         app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
         logger.info("Step 07: Verify the ( Ownership Document , Contract Duration , Required Document , Beneficiary Info ) checkboxes is clickable");
         app.rentalIncidentsPage.verifyCheckBoxesAreClickAble();
@@ -3546,7 +3546,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        logger.info("Step 06: Click on 'Update and resubmit' button");
         app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
         logger.info("Step 07: Check all the checkboxes on th pop up");
         app.rentalIncidentsPage.clickOnCheckboxes();
@@ -3573,7 +3573,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        logger.info("Step 06: Click on 'Update and resubmit' button");
         app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
         logger.info("Step 07: Input comment in Your comment ( تعليقك ) textarea");
         app.rentalIncidentsPage.enterCommentInPopup(data.get("Comment_For_Update_Resubmit"));
@@ -3600,7 +3600,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        logger.info("Step 06: Click on 'Update and resubmit' button");
         app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
         logger.info("Step 07: Click on Close button on pop up");
         CommonMethodsPage.clickOnCloseButton();
@@ -3626,7 +3626,7 @@ public class RentalIncident extends NHCWebTest {
         logger.info("Step 05: click View Details option");
         CommonMethodsPage.clickOnKebabMenuButton();
         CommonMethodsPage.ClickOnKebabMenuOption("عرض التفاصيل");
-        logger.info("Step 06: Click on \"Update and resubmit\" button");
+        logger.info("Step 06: Click on 'Update and resubmit' button");
         app.rentalIncidentsPage.clickOnUpdateAndResubmitButton();
         logger.info("Step 07: Check all the checkboxes on th pop up");
         app.rentalIncidentsPage.clickOnCheckboxes();

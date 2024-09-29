@@ -22,7 +22,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -39,7 +39,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -60,7 +60,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -83,7 +83,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -108,7 +108,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -135,7 +135,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -166,7 +166,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -196,7 +196,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -228,7 +228,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -259,7 +259,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -288,7 +288,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -319,7 +319,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -351,7 +351,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -386,7 +386,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -420,7 +420,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -452,7 +452,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -484,7 +484,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -517,7 +517,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -553,7 +553,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -589,7 +589,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -623,7 +623,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -655,7 +655,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -688,7 +688,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -723,7 +723,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -758,7 +758,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -790,7 +790,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -823,7 +823,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -859,7 +859,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -894,7 +894,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -932,7 +932,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -968,7 +968,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1001,7 +1001,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1036,7 +1036,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1075,7 +1075,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1106,7 +1106,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1139,7 +1139,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1172,7 +1172,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1207,7 +1207,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1242,7 +1242,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1273,7 +1273,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1306,7 +1306,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1343,7 +1343,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1364,7 +1364,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1399,7 +1399,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -1416,7 +1416,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1437,7 +1437,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1460,7 +1460,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1485,7 +1485,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1512,7 +1512,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1541,7 +1541,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1570,7 +1570,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1599,7 +1599,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1632,7 +1632,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1663,7 +1663,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1694,7 +1694,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1724,7 +1724,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1755,7 +1755,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1788,7 +1788,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1821,7 +1821,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1856,7 +1856,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1891,7 +1891,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1929,7 +1929,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1964,7 +1964,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2003,7 +2003,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2042,7 +2042,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2072,7 +2072,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2104,7 +2104,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2136,7 +2136,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2172,7 +2172,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2206,7 +2206,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2240,7 +2240,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2273,7 +2273,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2307,7 +2307,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2343,7 +2343,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2379,7 +2379,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2411,7 +2411,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2443,7 +2443,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2477,7 +2477,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2511,7 +2511,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2547,7 +2547,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2587,7 +2587,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2633,7 +2633,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2657,7 +2657,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مدير مكتب الوساطة");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2691,7 +2691,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -2708,7 +2708,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2729,7 +2729,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2752,7 +2752,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2777,7 +2777,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2804,7 +2804,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2833,7 +2833,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2862,7 +2862,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2891,7 +2891,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2924,7 +2924,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2955,7 +2955,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2986,7 +2986,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3016,7 +3016,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3047,7 +3047,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3080,7 +3080,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3113,7 +3113,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3148,7 +3148,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3183,7 +3183,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3221,7 +3221,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3256,7 +3256,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3295,7 +3295,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3334,7 +3334,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3364,7 +3364,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3394,7 +3394,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3426,7 +3426,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3458,7 +3458,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3492,7 +3492,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3529,7 +3529,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -3572,7 +3572,7 @@ public class SendContractForApproval extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();

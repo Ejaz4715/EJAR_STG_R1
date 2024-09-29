@@ -25,7 +25,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Verify all the available contracts are displayed");
         CommonMethodsPage.assertContractsAreAppearing();
@@ -42,7 +42,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -64,7 +64,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -87,7 +87,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -111,7 +111,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -137,7 +137,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -163,7 +163,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -190,7 +190,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -201,7 +201,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
         app.revokeContractPage.checkExecutionOrderNumberIsEntered(data.get("ExecutionOrderNumber"));
     }
@@ -217,7 +217,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -228,7 +228,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter date greater than current date in \" تاريخ إقرار\" input field");
+        logger.info("Step 08: Enter date greater than current date in ' تاريخ إقرار' input field");
         String futureDate = CommonMethodsPage.getCurrentDate(1, 0, 0);
         app.revokeContractPage.enterExecutionOrderDate(futureDate);
         app.revokeContractPage.verifyGreaterExecutionDateErrorMessage();
@@ -245,7 +245,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -256,7 +256,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 08: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
         app.revokeContractPage.checkExecutionOrderDateIsEntered(data.get("ExecutionOrderDate"));
     }
@@ -272,7 +272,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -300,7 +300,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -311,7 +311,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 08: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 09: Verify Calendar pop up is displayed");
         app.revokeContractPage.verifyNoteIsTextEntered(data.get("Note"));
@@ -328,7 +328,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -339,9 +339,9 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter date greater than current date in \" تاريخ إقرار\" input field");
+        logger.info("Step 08: Enter date greater than current date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 09: Verify equivalent Hijri date is displayed under \"تاريخ إقرار\"  input field");
+        logger.info("Step 09: Verify equivalent Hijri date is displayed under 'تاريخ إقرار'  input field");
         app.revokeContractPage.verifyHijriDateIsDisplayedUnderExecutionOrderDate();
     }
 
@@ -357,7 +357,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -384,7 +384,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -413,7 +413,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -441,7 +441,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -452,11 +452,11 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment of any type except (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("Invalid_PDF_Attachment"));
@@ -475,7 +475,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -486,7 +486,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (Next) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"إلغاء\" button");
+        logger.info("Step 08: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
     }
@@ -502,7 +502,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -513,10 +513,10 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"إلغاء\" button");
+        logger.info("Step 08: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
-        logger.info("Step 08: Click on \"إلغاء\" button on pop up");
+        logger.info("Step 08: Click on 'إلغاء' button on pop up");
         CommonMethodsPage.clickOnCancelButton();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
     }
@@ -532,7 +532,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -543,10 +543,10 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (Next) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"إلغاء\" button");
+        logger.info("Step 08: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
-        logger.info("Step 08: Click on \"إلغاء\" button on pop up");
+        logger.info("Step 08: Click on 'إلغاء' button on pop up");
         CommonMethodsPage.clickOnConfirmButton();
         CommonMethodsPage.assertContractsAreAppearing();
     }
@@ -562,7 +562,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -573,7 +573,7 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Click on \"السابق\" button");
+        logger.info("Step 08: Click on 'السابق' button");
         CommonMethodsPage.clickOnBackButton();
         CommonMethodsPage.checkTheContractsPage();
     }
@@ -589,7 +589,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -600,15 +600,15 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment of valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
         app.terminateContractPage.verifyTheFinancialSettlementSectionIsDisplayed();
     }
@@ -624,7 +624,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -635,17 +635,17 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" تسوية جميع المدفوعات  \" radio button");
+        logger.info("Step 13: Click on ' تسوية جميع المدفوعات  ' radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
         app.revokeContractPage.checkAllPaymentSettledRadioButtonIsSelected();
     }
@@ -661,7 +661,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -672,17 +672,17 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Verify \" التالي \" button is not enabled and user can not continue without selecting any option");
+        logger.info("Step 13: Verify ' التالي ' button is not enabled and user can not continue without selecting any option");
         app.revokeContractPage.verifyNextButtonIsDisabled();
     }
 
@@ -697,7 +697,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -708,17 +708,17 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on\"إلغاء\" button");
+        logger.info("Step 13: Click on'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
@@ -734,7 +734,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -745,19 +745,19 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on\"إلغاء\" button");
+        logger.info("Step 13: Click on'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 13: Click on\"إلغاء\" button on pop up");
+        logger.info("Step 13: Click on'إلغاء' button on pop up");
         CommonMethodsPage.clickOnCancelButton();
         app.terminateContractPage.verifyTheFinancialSettlementSectionIsDisplayed();
     }
@@ -773,7 +773,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -784,19 +784,19 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on\"إلغاء\" button");
+        logger.info("Step 13: Click on'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
-        logger.info("Step 13: Click on\" تأكيد \" button");
+        logger.info("Step 13: Click on' تأكيد ' button");
         CommonMethodsPage.clickOnConfirmButton();
         CommonMethodsPage.checkTheContractsPage();
     }
@@ -812,7 +812,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -823,17 +823,17 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on\"السابق\" button");
+        logger.info("Step 13: Click on'السابق' button");
         CommonMethodsPage.clickOnBackButton();
         app.revokeContractPage.checkRequestDetailsPageIsDisplayed();
     }
@@ -849,7 +849,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -860,19 +860,19 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 07: Click on  ( فسخ العقد من طرف واحد ) option > Click on Cancel (إلغاء) button");
         CommonMethodsPage.ClickOnKebabMenuOption("فسخ العقد من طرف واحد");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 08: Enter text in \"رقم إقرار التنفيذ\" input field");
+        logger.info("Step 08: Enter text in 'رقم إقرار التنفيذ' input field");
         app.revokeContractPage.enterExecutionOrderNumber(data.get("ExecutionOrderNumber"));
-        logger.info("Step 09: Enter valid gregorian date in \" تاريخ إقرار\" input field");
+        logger.info("Step 09: Enter valid gregorian date in ' تاريخ إقرار' input field");
         app.revokeContractPage.enterExecutionOrderDate(data.get("ExecutionOrderDate"));
-        logger.info("Step 10: Enter text in \" ملاحظات \" input field");
+        logger.info("Step 10: Enter text in ' ملاحظات ' input field");
         app.revokeContractPage.enterNotesText(data.get("Note"));
         logger.info("Step 11: Upload an attachment valid type (PNG, JPEG, GIF, PDF)");
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
-        logger.info("Step 12: Click on \" التالي \" button ");
+        logger.info("Step 12: Click on ' التالي ' button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" تسوية جميع المدفوعات  \" radio button");
+        logger.info("Step 13: Click on ' تسوية جميع المدفوعات  ' radio button");
         app.terminateContractPage.selectAllPaymentsSettledRadioButton();
-        logger.info("Step 14: Click on \" التالي \" button");
+        logger.info("Step 14: Click on ' التالي ' button");
         CommonMethodsPage.clickOnNextButton();
         app.terminateContractPage.verifyTheTerminationSummarySectionIsDisplayed();
     }
@@ -888,7 +888,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -929,7 +929,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -970,7 +970,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1011,7 +1011,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1054,7 +1054,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1097,7 +1097,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1138,7 +1138,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1214,7 +1214,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1230,7 +1230,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1250,7 +1250,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1271,7 +1271,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1294,7 +1294,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1304,7 +1304,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07:  Click on \" إلغاء \" button on pop up");
+        logger.info("Step 07:  Click on ' إلغاء ' button on pop up");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
@@ -1318,7 +1318,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1328,7 +1328,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06:  Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07:  Click on \"  تأكيد  \" button");
+        logger.info("Step 07:  Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
     }
@@ -1342,7 +1342,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1366,7 +1366,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1387,7 +1387,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1395,7 +1395,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
-        logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
+        logger.info("Step 06:  Click on ' إلغاء التعيين ' button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم إلغاء تعيينك لهذا الطلب. يرجى التأكيد لتنفيذ هذا الإجراء");
     }
@@ -1409,7 +1409,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1417,9 +1417,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
-        logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
+        logger.info("Step 06:  Click on ' إلغاء التعيين ' button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
-        logger.info("Step 07:  Click on  \" إلغاء \" button ");
+        logger.info("Step 07:  Click on  ' إلغاء ' button ");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
         CommonMethodsPage.verifySearchedRequestIsDisplayed(data.get("RequestNumber"));
     }
@@ -1433,7 +1433,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03:  Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1441,9 +1441,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05:  Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
-        logger.info("Step 06:  Click on \" إلغاء التعيين \" button next to the request status ");
+        logger.info("Step 06:  Click on ' إلغاء التعيين ' button next to the request status ");
         app.revokeContractPage.clickOnUnAssignButton();
-        logger.info("Step 07:  Click on \"  تأكيد  \" button ");
+        logger.info("Step 07:  Click on '  تأكيد  ' button ");
         CommonMethodsPage.clickOnConfirmButton();
         Browser.waitForSeconds(2);
         CommonMethodsPage.checkRequestStatus("تم الإرسال");
@@ -1459,7 +1459,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1469,9 +1469,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        logger.info("Step 07: Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 07: Click on \" إلغاء التعيين \" button");
+        logger.info("Step 07: Click on ' إلغاء التعيين ' button");
         app.revokeContractPage.clickOnUnAssignButton();
         CommonMethodsPage.clickOnConfirmButton();
         logger.info("Step 08: Click on filter button");
@@ -1490,7 +1490,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1500,9 +1500,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        logger.info("Step 07: Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 08: Click on \" عرض \" button beside attachment");
+        logger.info("Step 08: Click on ' عرض ' button beside attachment");
         CommonMethodsPage.ClickOnAttachment("view");
         CommonMethodsPage.verifyNewTabIsOpened();
     }
@@ -1516,7 +1516,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1540,7 +1540,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1550,7 +1550,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" قبول \" button ");
+        logger.info("Step 07: Click on ' قبول ' button ");
         CommonMethodsPage.clickOnApproveBTN();
         CommonMethodsPage.verifyConfirmPopUpIsDisplayedAfterApproveRequest();
     }
@@ -1564,7 +1564,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1574,9 +1574,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" قبول \" button ");
+        logger.info("Step 07: Click on ' قبول ' button ");
         CommonMethodsPage.clickOnApproveBTN();
-        logger.info("Step 08: Click on \"إلغاء\" button on pop up ");
+        logger.info("Step 08: Click on 'إلغاء' button on pop up ");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
     }
@@ -1590,7 +1590,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1601,9 +1601,9 @@ public class RevokeContract extends NHCWebTest {
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 08: Click on \" قبول \" button ");
+        logger.info("Step 08: Click on ' قبول ' button ");
         CommonMethodsPage.clickOnApproveBTN();
-        logger.info("Step 09: Click on \" تأكيد الموافقة \" button ");
+        logger.info("Step 09: Click on ' تأكيد الموافقة ' button ");
         CommonMethodsPage.clickOnConfirmButton();
         CommonMethodsPage.checkRequestsPageIsDisplayed("Revoke");
     }
@@ -1617,7 +1617,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1646,7 +1646,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1694,7 +1694,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1704,7 +1704,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        logger.info("Step 07: Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
     }
@@ -1718,7 +1718,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1728,7 +1728,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" رفض \" button ");
+        logger.info("Step 07: Click on ' رفض ' button ");
         CommonMethodsPage.clickOnRejectBTN();
         CommonMethodsPage.verifyConfirmPopUpIsDisplayedAfterRejectRequest();
     }
@@ -1742,7 +1742,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1752,7 +1752,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" رفض \" button ");
+        logger.info("Step 07: Click on ' رفض ' button ");
         CommonMethodsPage.clickOnRejectBTN();
         app.revokeContractPage.enterRejectionReason(data.get("RejectReason"));
         app.revokeContractPage.verifyRejectionReasonHasBeenEntered(data.get("RejectReason"));
@@ -1767,7 +1767,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1777,7 +1777,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" رفض \" button ");
+        logger.info("Step 07: Click on ' رفض ' button ");
         CommonMethodsPage.clickOnRejectBTN();
         app.revokeContractPage.verifyRejectButtonIsDisabledOnPopUp();
     }
@@ -1791,7 +1791,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1801,9 +1801,9 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \" رفض \" button ");
+        logger.info("Step 07: Click on ' رفض ' button ");
         CommonMethodsPage.clickOnRejectBTN();
-        logger.info("Step 08: Click on \"إلغاء\" button on pop up ");
+        logger.info("Step 08: Click on 'إلغاء' button on pop up ");
         app.contractWaiverPage.clickOnCancelButtonOnPopUp();
         app.revokeContractPage.checkRevokeContractRequestPageIsDisplayed();
     }
@@ -1817,7 +1817,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1845,7 +1845,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1874,7 +1874,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1903,7 +1903,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1911,7 +1911,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 05: Enter request number in رقم الطلب input field ");
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
-        logger.info("Step 06: Verify the request status is \"مرفوض  \"");
+        logger.info("Step 06: Verify the request status is 'مرفوض  '");
         CommonMethodsPage.checkRequestStatus("مرفوض");
     }
 
@@ -1932,7 +1932,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1966,7 +1966,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1987,7 +1987,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         app.revokeContractPage.checkTenantFinalPaymentRadioButtonIsSelected();
     }
@@ -2003,7 +2003,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2024,7 +2024,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter a valid amount equals to remaining amount or less than remaining amount");
         app.terminateContractPage.enterPaymentAmount(data.get("TenantFinalPaymentAmount"));
@@ -2041,7 +2041,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2062,7 +2062,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter a valid amount equals to remaining amount or less than remaining amount");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_TenantFinalPaymentAmount"));
@@ -2080,7 +2080,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2101,7 +2101,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter a valid amount equals to remaining amount or less than remaining amount");
         app.terminateContractPage.enterPaymentAmount(data.get("TenantFinalPaymentAmount"));
@@ -2119,7 +2119,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2140,7 +2140,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter a Gregorian date in تاريخ الاستحقاق input field less than current date");
         String date = CommonMethodsPage.getCurrentDate(-2, 0, 0);
@@ -2159,7 +2159,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2180,7 +2180,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter a greater Gregorian date in تاريخ الاستحقاق input field  ");
         String date = CommonMethodsPage.getCurrentDate(5, 1, 1);
@@ -2199,7 +2199,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2220,7 +2220,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: User able to enter valid date same as current date");
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
@@ -2238,7 +2238,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2259,7 +2259,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Click on calender icon");
         app.revokeContractPage.clickOnCalenderIcon();
@@ -2278,7 +2278,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2299,12 +2299,12 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: User able to enter valid date same as current date");
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        logger.info("Step 15: Verify equivalent Hijri date is displayed under \"تاريخ الاستحقاق\"  input field");
+        logger.info("Step 15: Verify equivalent Hijri date is displayed under 'تاريخ الاستحقاق'  input field");
         app.revokeContractPage.verifyHijriDateIsDisplayedUnderExecutionOrderDate();
     }
 
@@ -2319,7 +2319,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2340,7 +2340,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Verify \" التالي \" button is not enabled");
+        logger.info("Step 13: Verify ' التالي ' button is not enabled");
         app.revokeContractPage.verifyNextButtonIsDisabled();
     }
 
@@ -2355,7 +2355,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2376,14 +2376,14 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter invalid payment amount");
         app.terminateContractPage.enterPaymentAmount(data.get("Invalid_TenantFinalPaymentAmount"));
         logger.info("Step 15: User able to enter valid date same as current date");
         String date = CommonMethodsPage.getCurrentDate(5, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        logger.info("Step 16: Verify \" التالي \" button is not enabled");
+        logger.info("Step 16: Verify ' التالي ' button is not enabled");
         app.revokeContractPage.verifyNextButtonIsDisabled();
     }
 
@@ -2398,7 +2398,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2419,14 +2419,14 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter invalid payment amount");
         app.terminateContractPage.enterPaymentAmount(data.get("TenantFinalPaymentAmount"));
         logger.info("Step 15: User able to enter valid date same as current date");
         String date = CommonMethodsPage.getCurrentDate(0, 0, 0);
         app.terminateContractPage.enterPaymentDueDate(date);
-        logger.info("Step 16: Verify \" التالي \" button is not enabled");
+        logger.info("Step 16: Verify ' التالي ' button is not enabled");
         CommonMethodsPage.clickOnNextButton();
     }
 
@@ -2441,7 +2441,7 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2462,7 +2462,7 @@ public class RevokeContract extends NHCWebTest {
         app.revokeContractPage.uploadRequiredDocuments(data.get("PDF_Attachment"));
         logger.info("Step 12: Click on  التالي  button ");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 13: Click on \" الدفعة النهائية للمستأجر   \" radio button");
+        logger.info("Step 13: Click on ' الدفعة النهائية للمستأجر   ' radio button");
         app.terminateContractPage.selectTenantFinalPaymentRadioButton();
         logger.info("Step 14: Enter invalid payment amount");
         app.terminateContractPage.enterPaymentAmount(data.get("TenantFinalPaymentAmount"));
@@ -2471,7 +2471,7 @@ public class RevokeContract extends NHCWebTest {
         app.terminateContractPage.enterPaymentDueDate(date);
         logger.info("Step 16: Click on NEXT button");
         CommonMethodsPage.clickOnNextButton();
-        logger.info("Step 16: Click on \" تأكيد طلب الفسخ  \" button");
+        logger.info("Step 16: Click on ' تأكيد طلب الفسخ  ' button");
         app.revokeContractPage.clickOnConfirmRevokeContractButton();
         CommonMethodsPage.verifySuccessPopUpIsDisplayed();
         CommonMethodsPage.clickOnCloseButton();
@@ -2498,7 +2498,7 @@ public class RevokeContract extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -2508,11 +2508,11 @@ public class RevokeContract extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        logger.info("Step 07: Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 08: Click on \" قبول \" button ");
+        logger.info("Step 08: Click on ' قبول ' button ");
         CommonMethodsPage.clickOnApproveBTN();
-        logger.info("Step 09: Click on \" تأكيد الموافقة \" button ");
+        logger.info("Step 09: Click on ' تأكيد الموافقة ' button ");
         CommonMethodsPage.clickOnConfirmButton();
     }
 

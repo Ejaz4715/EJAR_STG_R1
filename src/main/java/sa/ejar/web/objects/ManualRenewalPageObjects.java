@@ -114,13 +114,13 @@ public class ManualRenewalPageObjects {
     public static By fillNewTermsTextArea() { return By.xpath("//textarea[@formcontrolname='content']");}
 
     public static By clickConfirmButton() { return By.xpath("//button[@type='button'][contains(text(),'تأكيد')]");}
-    public static By clickOnLatestKebabMenuButton() { return By.xpath("(//span[@class=\"round-icon large menu\"])[last()]");}
+    public static By clickOnLatestKebabMenuButton() { return By.xpath("(//span[@class='round-icon large menu'])[last()]");}
 
     public static By WarningClass() {
-        return By.xpath("//li[@class=\"warning\"]");
+        return By.xpath("//li[@class='warning']");
     }
 
     public static By AdditionalFeeLabel() {
-        return By.xpath("//a[@routerlink=\"additional-fees\"]");
+        return By.xpath("//a[@routerlink='additional-fees']");
     }
 }

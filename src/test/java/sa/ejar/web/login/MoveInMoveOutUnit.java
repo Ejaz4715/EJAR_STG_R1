@@ -23,7 +23,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -48,7 +48,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -73,7 +73,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -100,7 +100,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -129,7 +129,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -158,7 +158,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -189,7 +189,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -221,7 +221,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -248,7 +248,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -278,7 +278,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -308,7 +308,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -334,7 +334,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -362,7 +362,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -389,7 +389,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -405,7 +405,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -431,7 +431,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -455,7 +455,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 14: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 15: Click on \"عرض جميع العقود\"");
+        logger.info("Step 15: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 16: Search by same contract number");
@@ -480,7 +480,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -505,7 +505,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -531,7 +531,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -560,7 +560,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -586,7 +586,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -612,7 +612,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -642,7 +642,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -672,7 +672,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -704,7 +704,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -737,7 +737,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -771,7 +771,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -801,7 +801,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -829,7 +829,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -860,7 +860,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -891,7 +891,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -918,7 +918,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -947,7 +947,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -975,7 +975,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -992,7 +992,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1018,7 +1018,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1043,7 +1043,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 14: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 15: Click on \"عرض جميع العقود\"");
+        logger.info("Step 15: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 16: Search by same contract number");
@@ -1068,7 +1068,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1094,7 +1094,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1120,7 +1120,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1146,7 +1146,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         CommonMethodsPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1191,7 +1191,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         app.loginPage.loginToEjar(data.get("Username"), data.get("Password"), data.get("OTP"));
         app.loginPage.closeExploreEjarPopUp();
         CommonMethodsPage.changeUserRole("مشرف إيجار");
-        logger.info("Step 02: Click on \" الطلبات \" tab");
+        logger.info("Step 02: Click on ' الطلبات ' tab");
         CommonMethodsPage.clickOnTheRequestsTabButton();
         logger.info("Step 03: Click on عرض طلبات فسخ العقد ");
         CommonMethodsPage.clickOnRevokeContractRequestButton();
@@ -1201,11 +1201,11 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.enterRequestNumberInRequestSearchInputField(data.get("RequestNumber"));
         logger.info("Step 06: Click on  عرض  button");
         app.revokeContractPage.clickOnViewButtonOnRequest();
-        logger.info("Step 07: Click on \"  تأكيد  \" button");
+        logger.info("Step 07: Click on '  تأكيد  ' button");
         CommonMethodsPage.clickOnConfirmButton();
-        logger.info("Step 08: Click on \" قبول \" button ");
+        logger.info("Step 08: Click on ' قبول ' button ");
         CommonMethodsPage.clickOnApproveBTN();
-        logger.info("Step 09: Click on \" تأكيد الموافقة \" button ");
+        logger.info("Step 09: Click on ' تأكيد الموافقة ' button ");
         CommonMethodsPage.clickOnConfirmButton();
     }
 
@@ -1224,7 +1224,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1250,7 +1250,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1276,7 +1276,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1305,7 +1305,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1333,7 +1333,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1364,7 +1364,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1393,7 +1393,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1426,7 +1426,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1456,7 +1456,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1486,7 +1486,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1518,7 +1518,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1551,7 +1551,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1588,7 +1588,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1619,7 +1619,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1647,7 +1647,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1678,7 +1678,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1709,7 +1709,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1736,7 +1736,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1765,7 +1765,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1793,7 +1793,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1810,7 +1810,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1836,7 +1836,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1861,7 +1861,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 14: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 15: Click on \"عرض جميع العقود\"");
+        logger.info("Step 15: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 16: Search by same contract number");
@@ -1886,7 +1886,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1912,7 +1912,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1938,7 +1938,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1967,7 +1967,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -1993,7 +1993,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2019,7 +2019,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2049,7 +2049,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2079,7 +2079,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2111,7 +2111,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2144,7 +2144,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2178,7 +2178,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2206,7 +2206,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2237,7 +2237,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2268,7 +2268,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2295,7 +2295,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2324,7 +2324,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2352,7 +2352,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2369,7 +2369,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2395,7 +2395,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2420,7 +2420,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 14: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 15: Click on \"عرض جميع العقود\"");
+        logger.info("Step 15: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         CommonMethodsPage.clickFilterBtn();
         logger.info("Step 16: Search by same contract number");
@@ -2445,7 +2445,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2471,7 +2471,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2497,7 +2497,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2551,7 +2551,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2580,7 +2580,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2609,7 +2609,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2715,7 +2715,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2732,7 +2732,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2758,7 +2758,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2775,7 +2775,7 @@ public class MoveInMoveOutUnit extends NHCWebTest {
         CommonMethodsPage.clickOnSendBTN();
         logger.info("Step 10: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 11: Click on \"عرض جميع العقود\"");
+        logger.info("Step 11: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 12: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();

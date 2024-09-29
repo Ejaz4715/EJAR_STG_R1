@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class SaveSecurityDepositPageObjects {
 
     public static By UserProfile() {
-        return By.xpath("//span[@class=\"avatar\"]");
+        return By.xpath("//span[@class='avatar']");
     }
 
     public static By WalletOption() {
@@ -21,7 +21,7 @@ public class SaveSecurityDepositPageObjects {
     }
 
     public static By SecurityAmountReservedOption() {
-        return By.xpath("//select[@data-name=\"transaction_purpose_code\"]");
+        return By.xpath("//select[@data-name='transaction_purpose_code']");
     }
 
     public static By DepositAmount() {
@@ -29,10 +29,10 @@ public class SaveSecurityDepositPageObjects {
     }
 
     public static By SecurityAmountInMoveInForm() {
-        return By.xpath("//app-card-value[@data-name=\"مبلغ الضمان\"]/descendant::span[contains (text(), 'ر.س')]");
+        return By.xpath("//app-card-value[@data-name='مبلغ الضمان']/descendant::span[contains (text(), 'ر.س')]");
     }
 
     public static By damageAmountInput() {
-        return By.xpath("//input[@data-name=\"damage_amount\"]");
+        return By.xpath("//input[@data-name='damage_amount']");
     }
 }

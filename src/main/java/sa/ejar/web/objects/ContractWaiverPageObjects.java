@@ -12,7 +12,7 @@ public class ContractWaiverPageObjects {
     }
 
     public static By AddIndividualTenant() {
-        return By.xpath("//a[@data-test-id=\"contracts.contract-parties.add-individual-tenant\"]");
+        return By.xpath("//a[@data-test-id='contracts.contract-parties.add-individual-tenant']");
     }
 
     public static By IndividualContractTenantPageTitle() {
@@ -20,7 +20,7 @@ public class ContractWaiverPageObjects {
     }
 
     public static By NationalIdRadioButton() {
-        return By.xpath("//input[@data-value=\"national_id\"]/following-sibling::label");
+        return By.xpath("//input[@data-value='national_id']/following-sibling::label");
     }
 
     public static By ErrorMessageUnderNatinalId() {
@@ -41,18 +41,18 @@ public class ContractWaiverPageObjects {
     }
 
     public static By AcknowledgementCheckbox() {
-        return By.xpath("//input[@data-name=\"acknowledgement\"]/following-sibling::label");
+        return By.xpath("//input[@data-name='acknowledgement']/following-sibling::label");
     }
 
     public static By RequestNumber() {
-        return By.xpath("(//h2[@class=\"card-title\"])[1]");
+        return By.xpath("(//h2[@class='card-title'])[1]");
     }
 
     public static By RentalDetailsSectionTitle() {
-        return By.xpath("//a[@class=\"step active\" and text() = ' تفاصيل الإيجار ']");
+        return By.xpath("//a[@class='step active' and text() = ' تفاصيل الإيجار ']");
     }
     public static By DeclareAndConfirmSectionTitle() {
-        return By.xpath("//a[@class=\"step active\" and text() = ' إقرار وتأكيد ']");
+        return By.xpath("//a[@class='step active' and text() = ' إقرار وتأكيد ']");
     }
 
     public static By ConfirmationPopUpMessage() {
@@ -80,6 +80,6 @@ public class ContractWaiverPageObjects {
     }
 
     public static By TenantIdNumberSection() {
-        return By.xpath("//app-card-header/following-sibling::app-card-body/descendant::span[@class=\"round-icon large menu\"]");
+        return By.xpath("//app-card-header/following-sibling::app-card-body/descendant::span[@class='round-icon large menu']");
     }
 }

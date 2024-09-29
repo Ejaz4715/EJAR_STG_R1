@@ -15,33 +15,33 @@ public class ContractsApprovalPageObjects {
         }});
 
         put("Lets-start-btn", new HashMap<>(){{
-            put ("en", "//button[@class=\"btn btn-primary w-100-m float-right\"]");
-            put ("ar", "//button[@class=\"btn btn-primary w-100-m float-right\"]");
+            put ("en", "//button[@class='btn btn-primary w-100-m float-right']");
+            put ("ar", "//button[@class='btn btn-primary w-100-m float-right']");
         }});
 
         put("confirm-btn", new HashMap<>(){{
-            put ("en", "//button[@class=\"btn btn-primary flex-fill\"]");
-            put ("ar", "//button[@class=\"btn btn-primary flex-fill\"]");
+            put ("en", "//button[@class='btn btn-primary flex-fill']");
+            put ("ar", "//button[@class='btn btn-primary flex-fill']");
         }});
 
         put("agreement-checkbox", new HashMap<>(){{
-            put ("en", "//label[@class=\"form-check-label\"]");
-            put ("ar", "//label[@class=\"form-check-label\"]");
+            put ("en", "//label[@class='form-check-label']");
+            put ("ar", "//label[@class='form-check-label']");
         }});
 
         put("submit-contract-approval-btn", new HashMap<>(){{
-            put ("en", "//button[@class=\"btn btn-primary order-0 order-md-1\"]");
-            put ("ar", "//button[@class=\"btn btn-primary order-0 order-md-1\"]");
+            put ("en", "//button[@class='btn btn-primary order-0 order-md-1']");
+            put ("ar", "//button[@class='btn btn-primary order-0 order-md-1']");
         }});
 
         put("OTP-input", new HashMap<>(){{
-            put ("en", "//input[@data-name=\"index_1\"]");
-            put ("ar", "//input[@data-name=\"index_1\"]");
+            put ("en", "//input[@data-name='index_1']");
+            put ("ar", "//input[@data-name='index_1']");
         }});
 
         put("verify-identity-btn", new HashMap<>(){{
-            put ("en", "//button[@class=\"btn btn-primary\"]");
-            put ("ar", "//button[@class=\"btn btn-primary\"]");
+            put ("en", "//button[@class='btn btn-primary']");
+            put ("ar", "//button[@class='btn btn-primary']");
         }});
 
         put("approval-submitted-text", new HashMap<>(){{
@@ -50,8 +50,8 @@ public class ContractsApprovalPageObjects {
         }});
 
         put("close-button-on-pop-up", new HashMap<>(){{
-            put ("en", "//button[@data-test-id=\"confirm\"]");
-            put ("ar", "//button[@data-test-id=\"confirm\"]");
+            put ("en", "//button[@data-test-id='confirm']");
+            put ("ar", "//button[@data-test-id='confirm']");
         }});
     }};
 

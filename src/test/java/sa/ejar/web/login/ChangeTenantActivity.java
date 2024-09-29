@@ -1197,7 +1197,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         app.changeTenantActivityPage.clickOnCancelButton();
         logger.info("Step 12: Verify PopUp Alert is displayed");
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
@@ -1230,10 +1230,10 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 12: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         logger.info("Step 13: Verify user remaining on ' رفض نشاط المستأجر ' page");
         app.changeTenantActivityPage.assertRejectTenantActivityPageIsDisplayed();
@@ -1266,10 +1266,10 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 12: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("step 13: Verify user neviagte back to 'مراجعة تغيير نشاط المستأجر 'page");
         Browser.executeJSScroll(-1500);
@@ -2521,7 +2521,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         app.changeTenantActivityPage.clickOnCancelButton();
         logger.info("Step 12: Verify PopUp Alert is displayed");
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
@@ -2554,10 +2554,10 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"إلغاء\" button from popup window");
+        logger.info("Step 12: Click on 'إلغاء' button from popup window");
         app.manualRenewalPage.clickOnCancelPopUpButton();
         logger.info("Step 13: Verify user remaining on ' رفض نشاط المستأجر ' page");
         app.changeTenantActivityPage.assertRejectTenantActivityPageIsDisplayed();
@@ -2590,10 +2590,10 @@ public class ChangeTenantActivity extends NHCWebTest {
         app.changeTenantActivityPage.scrollToNewTenantActivity();
         logger.info("Step 10: Click on ( رفض ) button");
         app.changeTenantActivityPage.clickOnRejectBTN();
-        logger.info("Step 11: Click on \"إلغاء\" button");
+        logger.info("Step 11: Click on 'إلغاء' button");
         CommonMethodsPage.clickOnCancelButton();
         CommonMethodsPage.verifyPopUpAlertAfterCancelIsDisplayed("سيتم فقدان كافة البيانات غير المحفوظة. يرجى التأكيد لتنفيذ هذا الإجراء.");
-        logger.info("Step 12: Click on \"تأكيد\" button from popup window");
+        logger.info("Step 12: Click on 'تأكيد' button from popup window");
         app.manualRenewalPage.clickOnConfirmPopUpButton();
         logger.info("step 13: Verify user neviagte back to 'مراجعة تغيير نشاط المستأجر 'page");
         CommonMethodsPage.scrollToElement(reviewChangeTenantActivity());
@@ -2672,7 +2672,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2704,7 +2704,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2736,7 +2736,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2767,7 +2767,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مستأجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();
@@ -2793,7 +2793,7 @@ public class ChangeTenantActivity extends NHCWebTest {
         CommonMethodsPage.changeUserRole("مؤجر");
         logger.info("Step 02: Click on العقود tab");
         app.addResidentialContractPage.clickContractsBtn();
-        logger.info("Step 03: Click on \"عرض جميع العقود\"");
+        logger.info("Step 03: Click on 'عرض جميع العقود'");
         CommonMethodsPage.selectViewAllContractsButton();
         logger.info("Step 04: Click on filter icon");
         CommonMethodsPage.clickFilterBtn();

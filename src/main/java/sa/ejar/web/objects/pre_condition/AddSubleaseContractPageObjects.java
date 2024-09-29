@@ -14,7 +14,7 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//span[text()='عرض جميع العقود']");
         }});
         put("TXT_Contract_Number", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"contract_number\"]");
+            put("ar", "//input[@formcontrolname='contract_number']");
         }});
 
         put("BTN_Dots", new HashMap<>() {{
@@ -42,22 +42,22 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//button[text()=' التالي ']");
         }});
         put("TXT_Username", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"username\"]");
+            put("ar", "//input[@formcontrolname='username']");
         }});
         put("TXT_Password", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"password\"]");
+            put("ar", "//input[@formcontrolname='password']");
         }});
         put("TXT_Confirm_Password", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"password_confirmation\"]");
+            put("ar", "//input[@formcontrolname='password_confirmation']");
         }});
         put("BTN_Create_Account", new HashMap<>() {{
             put("ar", "//button[text()=' إنشاء حساب ']");
         }});
         put("Checkbox_Terms", new HashMap<>() {{
-            put("ar", "//app-form-checkbox[@formcontrolname=\"terms_confirmed\"]");
+            put("ar", "//app-form-checkbox[@formcontrolname='terms_confirmed']");
         }});
         put("Checkbox_Info", new HashMap<>() {{
-            put("ar", "//app-form-checkbox[@formcontrolname=\"info_confirmed\"]");
+            put("ar", "//app-form-checkbox[@formcontrolname='info_confirmed']");
         }});
         put("BTN_Confirm", new HashMap<>() {{
             put("ar", "//button[text()=' تأكيد ']");
@@ -68,25 +68,25 @@ public class AddSubleaseContractPageObjects {
         }});
 
         put("TXT_Email", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"email\"]");
+            put("ar", "//input[@formcontrolname='email']");
         }});
         put("TXT_Postal_Code", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"postal_code\"]");
+            put("ar", "//input[@formcontrolname='postal_code']");
         }});
         put("TXT_Street_Name", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"street_name\"]");
+            put("ar", "//input[@formcontrolname='street_name']");
         }});
         put("TXT_Building_Number", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"building_number\"]");
+            put("ar", "//input[@formcontrolname='building_number']");
         }});
         put("TXT_Additional_Number", new HashMap<>() {{
-            put("ar", "//input[@formcontrolname=\"additional_number\"]");
+            put("ar", "//input[@formcontrolname='additional_number']");
         }});
         put("BTN_Add_Companions", new HashMap<>() {{
-            put("ar", "//a[@data-test-id=\"contracts.companions.add\"]");
+            put("ar", "//a[@data-test-id='contracts.companions.add']");
         }});
         put("Switch_BTN_Utilities_And_Services", new HashMap<>() {{
-            put("ar", "//app-switch-input[@formcontrolname=\"utilities_and_services_required\"]");
+            put("ar", "//app-switch-input[@formcontrolname='utilities_and_services_required']");
         }});
         put("Switch-BTN-Engineering-Supervision", new HashMap<>() {{
             put("ar", "//form[@id='engineering_supervision_form']//span[@class='slider enable-transitions']");
@@ -110,28 +110,28 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//input[@data-name='waste_removal']");
         }});
         put("TXT_Security_Deposit", new HashMap<>() {{
-            put("ar", "//input[@data-name=\"security_deposit\"]");
+            put("ar", "//input[@data-name='security_deposit']");
         }});
         put("Switch_BTN_Late_Fees_Charged", new HashMap<>() {{
             put("ar", "//form[@id='late_fees_charged_form']//span[@class='slider enable-transitions']");
         }});
         put("TXT_Late_Fees_Charged", new HashMap<>() {{
-            put("ar", "//input[@data-name=\"late_fees_charged\"]");
+            put("ar", "//input[@data-name='late_fees_charged']");
         }});
         put("Switch_BTN_Retainer_Fees", new HashMap<>() {{
             put("ar", "//form[@id='retainer_fee_form']//span[@class='slider enable-transitions']");
         }});
         put("TXT_Retainer_Fees", new HashMap<>() {{
-            put("ar", "//input[@data-name=\"retainer_fee\"]");
+            put("ar", "//input[@data-name='retainer_fee']");
         }});
         put("Switch_BTN_Brokerage_Fees", new HashMap<>() {{
             put("ar", "//form[@id='brokerage_fee_form']//span[@class='slider enable-transitions']");
         }});
         put("TXT_Brokerage_Fees", new HashMap<>() {{
-            put("ar", "//input[@data-name=\"brokerage_fee\"]");
+            put("ar", "//input[@data-name='brokerage_fee']");
         }});
         put("TXT_Brokerage_Fees_Due_Date", new HashMap<>() {{
-            put("ar", "//input[@data-name=\"brokerage_fee_due_date\"]");
+            put("ar", "//input[@data-name='brokerage_fee_due_date']");
         }});
         put("Switch_BTN_Government_Review", new HashMap<>() {{
             put("ar", "//app-term-question[@data-test-id='residential_followup_with_authorities']//span[@class='slider enable-transitions']");
@@ -147,7 +147,7 @@ public class AddSubleaseContractPageObjects {
         }});
 
         put("BTN_Add_Another_Terms", new HashMap<>() {{
-            put("ar", "//a[@class=\"add-link text-primary\"]");
+            put("ar", "//a[@class='add-link text-primary']");
         }});
         put("TXT_Terms", new HashMap<>() {{
             put("ar", "//textarea");
@@ -172,48 +172,48 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//a[text()=' العقود ']");
         }});
         put("filter-btn-on-view-all-contracts-page", new HashMap<>() {{
-            put("en", "//span[@class=\"icon filter-icon\"]");
-            put("ar", "//span[@class=\"icon filter-icon\"]");
+            put("en", "//span[@class='icon filter-icon']");
+            put("ar", "//span[@class='icon filter-icon']");
         }});
         put("date-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"contract_start_date\"]");
-            put("ar", "//input[@data-name=\"contract_start_date\"]");
+            put("en", "//input[@data-name='contract_start_date']");
+            put("ar", "//input[@data-name='contract_start_date']");
         }});
         put("click-start-year", new HashMap<>() {{
-            put("en", "(//button[@data-test-id=\"year-selection\"])[1]");
-            put("ar", "(//button[@data-test-id=\"year-selection\"])[1]");
+            put("en", "(//button[@data-test-id='year-selection'])[1]");
+            put("ar", "(//button[@data-test-id='year-selection'])[1]");
         }});
         put("select-start-year", new HashMap<>() {{
-            put("en", "//div[@class=\"year-select-item\"]/child::button");
-            put("ar", "//div[@class=\"year-select-item\"]/child::button");
+            put("en", "//div[@class='year-select-item']/child::button");
+            put("ar", "//div[@class='year-select-item']/child::button");
         }});
         put("click-start-month", new HashMap<>() {{
-            put("en", "(//button[@data-test-id=\"month-selection\"])[1]");
-            put("ar", "(//button[@data-test-id=\"month-selection\"])[1]");
+            put("en", "(//button[@data-test-id='month-selection'])[1]");
+            put("ar", "(//button[@data-test-id='month-selection'])[1]");
         }});
         put("select-start-month", new HashMap<>() {{
-            put("en", "//div[@class=\"month-select-item\"]/child::button");
-            put("ar", "//div[@class=\"month-select-item\"]/child::button");
+            put("en", "//div[@class='month-select-item']/child::button");
+            put("ar", "//div[@class='month-select-item']/child::button");
         }});
         put("select-start-day", new HashMap<>() {{
             put("en", "(//table)[1]//tr//td");
             put("ar", "(//table)[1]//tr//td");
         }});
         put("click-end-year", new HashMap<>() {{
-            put("en", "(//button[@data-test-id=\"year-selection\"])[2]");
-            put("ar", "(//button[@data-test-id=\"year-selection\"])[2]");
+            put("en", "(//button[@data-test-id='year-selection'])[2]");
+            put("ar", "(//button[@data-test-id='year-selection'])[2]");
         }});
         put("select-end-year", new HashMap<>() {{
-            put("en", "//div[@class=\"year-select-item\"]/child::button");
-            put("ar", "//div[@class=\"year-select-item\"]/child::button");
+            put("en", "//div[@class='year-select-item']/child::button");
+            put("ar", "//div[@class='year-select-item']/child::button");
         }});
         put("click-end-month", new HashMap<>() {{
-            put("en", "(//button[@data-test-id=\"month-selection\"])[2]");
-            put("ar", "(//button[@data-test-id=\"month-selection\"])[2]");
+            put("en", "(//button[@data-test-id='month-selection'])[2]");
+            put("ar", "(//button[@data-test-id='month-selection'])[2]");
         }});
         put("select-end-month", new HashMap<>() {{
-            put("en", "//div[@class=\"month-select-item\"]/child::button");
-            put("ar", "//div[@class=\"month-select-item\"]/child::button");
+            put("en", "//div[@class='month-select-item']/child::button");
+            put("ar", "//div[@class='month-select-item']/child::button");
         }});
         put("select-end-day", new HashMap<>() {{
             put("en", "(//table)[2]//tr//td");
@@ -228,20 +228,20 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//a[text()=' إضافة عقار ']");
         }});
         put("property-use-dropdown", new HashMap<>() {{
-            put("en", "//select[@data-name=\"property_usage\"]");
-            put("ar", "//select[@data-name=\"property_usage\"]");
+            put("en", "//select[@data-name='property_usage']");
+            put("ar", "//select[@data-name='property_usage']");
         }});
         put("property-type-dropdown", new HashMap<>() {{
-            put("en", "//select[@data-name=\"property_type\"]");
-            put("ar", "//select[@data-name=\"property_type\"]");
+            put("en", "//select[@data-name='property_type']");
+            put("ar", "//select[@data-name='property_type']");
         }});
         put("ownership-document-type-dropdown", new HashMap<>() {{
-            put("en", "//select[@data-name=\"property_type\"]");
-            put("ar", "//select[@data-name=\"property_type\"]");
+            put("en", "//select[@data-name='property_type']");
+            put("ar", "//select[@data-name='property_type']");
         }});
         put("property-name", new HashMap<>() {{
-            put("en", "//div[@class=\"col\"]/child::h5");
-            put("ar", "//div[@class=\"col\"]/child::h5");
+            put("en", "//div[@class='col']/child::h5");
+            put("ar", "//div[@class='col']/child::h5");
         }});
         put("continue-with-this-property-btn", new HashMap<>() {{
             put("en", "//button[text()=' Continue with this property ']");
@@ -252,12 +252,12 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//button[text()=' الاستمرار لاختيار وحدات ']");
         }});
         put("select-units", new HashMap<>() {{
-            put("en", "//div[@class=\"col p-0 pe-3\"]/child::h5");
-            put("ar", "//div[@class=\"col p-0 pe-3\"]/child::h5");
+            put("en", "//div[@class='col p-0 pe-3']/child::h5");
+            put("ar", "//div[@class='col p-0 pe-3']/child::h5");
         }});
         put("select-first-available-unit", new HashMap<>() {{
-            put("en", "(//div[@class=\"col p-0 pe-3\"]/child::h5)[1]");
-            put("ar", "(//div[@class=\"col p-0 pe-3\"]/child::h5)[1]");
+            put("en", "(//div[@class='col p-0 pe-3']/child::h5)[1]");
+            put("ar", "(//div[@class='col p-0 pe-3']/child::h5)[1]");
         }});
         put("confirm-property-details", new HashMap<>() {{
             put("en", "//button[text()=' Confirm property details ']");
@@ -281,60 +281,60 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//div[text()=' أطراف العقد ']");
         }});
         put("add-individual-tenant-btn", new HashMap<>() {{
-            put("en", "//a[@data-test-id=\"contracts.contract-parties.add-individual-tenant\"]");
-            put("ar", "//a[@data-test-id=\"contracts.contract-parties.add-individual-tenant\"]");
+            put("en", "//a[@data-test-id='contracts.contract-parties.add-individual-tenant']");
+            put("ar", "//a[@data-test-id='contracts.contract-parties.add-individual-tenant']");
         }});
         put("tenant-type-radio-btn", new HashMap<>() {{
             put("en", "//label[text()=' Tenant ']");
             put("ar", "//label[text()=' المستأجر ']");
         }});
         put("tenant-national-id-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"id_number\"]");
-            put("ar", "//input[@data-name=\"id_number\"]");
+            put("en", "//input[@data-name='id_number']");
+            put("ar", "//input[@data-name='id_number']");
         }});
         put("tenant-date-of-birth-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"hijri\"]");
-            put("ar", "//input[@data-name=\"hijri\"]");
+            put("en", "//input[@data-name='hijri']");
+            put("ar", "//input[@data-name='hijri']");
         }});
         put("continue-btn", new HashMap<>() {{
             put("en", "//button[text()=' Continue ']");
             put("ar", "//button[text()=' التالي ']");
         }});
         put("tenant-phone-number-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"nationalNumber\"]");
-            put("ar", "//input[@data-name=\"nationalNumber\"]");
+            put("en", "//input[@data-name='nationalNumber']");
+            put("ar", "//input[@data-name='nationalNumber']");
         }});
         put("tenant-region-dropdown", new HashMap<>() {{
-            put("en", "//select[@data-name=\"region\"]");
-            put("ar", "//select[@data-name=\"region\"]");
+            put("en", "//select[@data-name='region']");
+            put("ar", "//select[@data-name='region']");
         }});
         put("tenant-city-dropdown", new HashMap<>() {{
-            put("en", "//label[text()=\"City\"]/parent::app-form-field/descendant::div[text()=' Please select ']");
-            put("ar", "//label[text()=\"المدينة\"]/parent::app-form-field/descendant::div[text()=' يرجى اختيار ']");
+            put("en", "//label[text()='City']/parent::app-form-field/descendant::div[text()=' Please select ']");
+            put("ar", "//label[text()='المدينة']/parent::app-form-field/descendant::div[text()=' يرجى اختيار ']");
         }});
         put("select-tenant-city", new HashMap<>() {{
-            put("en", "//div[@class=\"option-text\"]");
-            put("ar", "//div[@class=\"option-text\"]");
+            put("en", "//div[@class='option-text']");
+            put("ar", "//div[@class='option-text']");
         }});
         put("confirm-btn-on-tenant-address-page", new HashMap<>() {{
             put("en", "//button[text()=' Confirm ']");
             put("ar", "//button[text()=' تأكيد ']");
         }});
         put("filter-btn-on-select-units-page", new HashMap<>() {{
-            put("en", "//span[@class=\"icon filter-icon\"]");
-            put("ar", "//span[@class=\"icon filter-icon\"]");
+            put("en", "//span[@class='icon filter-icon']");
+            put("ar", "//span[@class='icon filter-icon']");
         }});
         put("select-units-availability", new HashMap<>() {{
-            put("en", "//select[@data-name=\"unit_availability\"]");
-            put("ar", "//select[@data-name=\"unit_availability\"]");
+            put("en", "//select[@data-name='unit_availability']");
+            put("ar", "//select[@data-name='unit_availability']");
         }});
         put("add-residential-contract-heading", new HashMap<>() {{
             put("en", "//h1[text()=' Add Residential Contract ']");
             put("ar", "//h1[text()=' تسجيل عقد سكني ']");
         }});
         put("annual-rent-fee-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"total_units_rent\"]");
-            put("ar", "//input[@data-name=\"total_units_rent\"]");
+            put("en", "//input[@data-name='total_units_rent']");
+            put("ar", "//input[@data-name='total_units_rent']");
         }});
         put("single-payment-frequency-radio-btn", new HashMap<>() {{
             put("en", "//label[text()=' Single Payment ']");
@@ -353,12 +353,12 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//button[text()=' إضافة رقم آيبان جديد ']");
         }});
         put("iban-number-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"iban_number\"]");
-            put("ar", "//input[@data-name=\"iban_number\"]");
+            put("en", "//input[@data-name='iban_number']");
+            put("ar", "//input[@data-name='iban_number']");
         }});
         put("account-owner-name-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"alias_name\"]");
-            put("ar", "//input[@data-name=\"alias_name\"]");
+            put("en", "//input[@data-name='alias_name']");
+            put("ar", "//input[@data-name='alias_name']");
         }});
         put("save-btn-on-add-new-iban", new HashMap<>() {{
             put("en", "//button[text()=' Save ']");
@@ -366,8 +366,8 @@ public class AddSubleaseContractPageObjects {
         }});
 
         put("select-iban-dropdown", new HashMap<>() {{
-            put("en", "//select[@data-name=\"iban_number\"]");
-            put("ar", "//select[@data-name=\"iban_number\"]");
+            put("en", "//select[@data-name='iban_number']");
+            put("ar", "//select[@data-name='iban_number']");
         }});
 
         put("iban-account-owner-radio-btn", new HashMap<>() {{
@@ -387,8 +387,8 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//div[text()=' الشروط والأحكام ']");
         }});
         put("add-terms-and-conditions-btn", new HashMap<>() {{
-            put("en", "//a[@routerlink=\"terms-and-conditions\"]");
-            put("ar", "//a[@routerlink=\"terms-and-conditions\"]");
+            put("en", "//a[@routerlink='terms-and-conditions']");
+            put("ar", "//a[@routerlink='terms-and-conditions']");
         }});
         put("ejar-fees-payer-radio-btn", new HashMap<>() {{
             put("en", "//label[text()=' Brokerage Office ']");
@@ -411,8 +411,8 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//div[text()=' البيانات المالية ']");
         }});
         put("add-rental-contracts-btn", new HashMap<>() {{
-            put("en", "//a[@data-test-id=\"contracts.financial-terms.add-terms\"]");
-            put("ar", "//a[@data-test-id=\"contracts.financial-terms.add-terms\"]");
+            put("en", "//a[@data-test-id='contracts.financial-terms.add-terms']");
+            put("ar", "//a[@data-test-id='contracts.financial-terms.add-terms']");
         }});
         put("continue-btn-on-preview-contract-page", new HashMap<>() {{
             put("en", "//button[text()=' Continue ']");
@@ -423,36 +423,36 @@ public class AddSubleaseContractPageObjects {
             put("ar", "//button[text()=' الاستمرار في دفع الرسوم ']");
         }});
         put("disclaimer-checkbox-on-paying-ejar-fees-page", new HashMap<>() {{
-            put("en", "(//label[@class=\"form-check-label\"])[1]");
-            put("ar", "(//label[@class=\"form-check-label\"])[1]");
+            put("en", "(//label[@class='form-check-label'])[1]");
+            put("ar", "(//label[@class='form-check-label'])[1]");
         }});
         put("confirm-and-submit-btn-on-paying-ejar-fees-page", new HashMap<>() {{
             put("en", "//button[text()=' Confirm and submit ']");
             put("ar", "//button[text()=' تأكيد وإرسال ']");
         }});
         put("contract-status-text", new HashMap<>() {{
-            put("en", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
-            put("ar", "(//span[@class=\"pin mt-1 max-width-110 success\"])[1]");
+            put("en", "(//span[@class='pin mt-1 max-width-110 success'])[1]");
+            put("ar", "(//span[@class='pin mt-1 max-width-110 success'])[1]");
         }});
         put("close-survey-pop-up-btn", new HashMap<>() {{
-            put("en", "//button[@class=\"close-button\"]");
-            put("ar", "//button[@class=\"close-button\"]");
+            put("en", "//button[@class='close-button']");
+            put("ar", "//button[@class='close-button']");
         }});
         put("confirm-btn-on-close-survey-pop-up", new HashMap<>() {{
             put("en", "//button[text()=' Confirm ']");
             put("ar", "//button[text()=' تأكيد ']");
         }});
         put("contract-number-text", new HashMap<>() {{
-            put("en", "//h4[@class=\"ms-4\"]");
-            put("ar", "//h4[@class=\"ms-4\"]");
+            put("en", "//h4[@class='ms-4']");
+            put("ar", "//h4[@class='ms-4']");
         }});
         put("search-contract-number-input-field", new HashMap<>() {{
-            put("en", "//input[@data-name=\"contract_number\"]");
-            put("ar", "//input[@data-name=\"contract_number\"]");
+            put("en", "//input[@data-name='contract_number']");
+            put("ar", "//input[@data-name='contract_number']");
         }});
         put("contract-number-text-view-all-contract-page", new HashMap<>() {{
-            put("en", "//h5[@class=\"item-value\"]/child::a");
-            put("ar", "//h5[@class=\"item-value\"]/child::a");
+            put("en", "//h5[@class='item-value']/child::a");
+            put("ar", "//h5[@class='item-value']/child::a");
         }});
         put("approve-contract-btn", new HashMap<>() {{
             put("en", "//button[text()=' Approve contract ']");

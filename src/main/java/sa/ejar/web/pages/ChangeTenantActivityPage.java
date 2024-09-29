@@ -103,7 +103,7 @@ public class ChangeTenantActivityPage {
         Browser.isElementEnabled(ChangeTenantActivityPageObjects.viewRequestButton());
         Browser.click(ChangeTenantActivityPageObjects.viewRequestButton());
         Browser.waitForSeconds(2);
-        logger.addScreenshot("neviagte to ( خطوات الموافقة على تغيير النشاط ) page");
+        logger.addScreenshot("Navigate to ( خطوات الموافقة على تغيير النشاط ) page");
     }
 
     public void clickOnLetsStartButton() {
@@ -344,7 +344,7 @@ public class ChangeTenantActivityPage {
     public void assertTenantActivityApprovalStepsPageIsDisplayed() {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.TenantActivityApprovalStepsHeading(), 20);
         Assert.assertTrue(isElementDisplayed(ChangeTenantActivityPageObjects.TenantActivityApprovalStepsHeading()));
-        logger.addScreenshot("User neviagte back to ( خطوات الموافقة على تغيير النشاط ) page");
+        logger.addScreenshot("User Navigate back to ( خطوات الموافقة على تغيير النشاط ) page");
     }
 
     public void clickOnIAgreeToTheAboveCheckBox() {
@@ -392,7 +392,7 @@ public class ChangeTenantActivityPage {
     public void assertRejectTenantActivityPageIsDisplayed() {
         waitUntilVisibilityOfElement(ChangeTenantActivityPageObjects.RejectTenantActivityHeading(), 20);
         Assert.assertTrue(isElementDisplayed(ChangeTenantActivityPageObjects.RejectTenantActivityHeading()));
-        logger.addScreenshot("User neviagte to ' رفض نشاط المستأجر' page");
+        logger.addScreenshot("User Navigate to ' رفض نشاط المستأجر' page");
     }
 
     public void clickOnCancelButton() throws Exception {

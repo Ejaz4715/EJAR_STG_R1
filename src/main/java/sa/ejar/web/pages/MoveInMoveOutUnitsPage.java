@@ -186,20 +186,6 @@ public class MoveInMoveOutUnitsPage {
         new MoveInMoveOutUnitsPage().uploadFile(File);
     }
 
-    public void robotFiles(String File) throws Exception {
-        Robot robot = new Robot();
-        robot.delay(1000);
-        String CURRENT_DIR = System.getProperty("user.dir");
-        String filepath1 = Paths.get(CURRENT_DIR, "src", "main", "resources") + "\\" + File;
-        StringSelection select1 = new StringSelection(filepath1);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(select1, null);
-        //robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-        //robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_ENTER);
-    }
-
     public void increaseDamageAmountFromMoveOutForm(){
         Browser.waitUntilVisibilityOfElement(MoveInMoveOutUnitsPageObjects.increaseDamageAmount(), 40);
         for(int i = 0 ; i<4 ;i++)

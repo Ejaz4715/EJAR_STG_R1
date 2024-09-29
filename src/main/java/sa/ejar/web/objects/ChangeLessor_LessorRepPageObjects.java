@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 
 public class ChangeLessor_LessorRepPageObjects {
     public static By FirstContractNumber() {
-        return By.xpath("(//h5/child::a[@class=\"btn btn-link text-primary p-0\"])[1]");
+        return By.xpath("(//h5/child::a[@class='btn btn-link text-primary p-0'])[1]");
     }
 
     public static By ContractStatusDropdown() {
-        return By.xpath("//select[@data-name=\"state\"]");
+        return By.xpath("//select[@data-name='state']");
     }
 
     public static By PropertyTab() {
@@ -29,7 +29,7 @@ public class ChangeLessor_LessorRepPageObjects {
 
 
     public static By OwnershipDocumentSearchField() {
-        return By.xpath("//input[@data-name=\"document_number\"]");
+        return By.xpath("//input[@data-name='document_number']");
     }
 
     public static By ChangeLessorRepPageTitle() {
@@ -118,11 +118,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By lessorRepKebabBTN() {
-        return By.xpath("(//span[@class=\"round-icon large menu\"])[2]");
+        return By.xpath("(//span[@class='round-icon large menu'])[2]");
     }
 
     public static By lessorKebabBTN() {
-        return By.xpath("(//span[@class=\"round-icon large menu\"])[1]");
+        return By.xpath("(//span[@class='round-icon large menu'])[1]");
     }
 
     public static By lessorRepEditBTN() {
@@ -134,11 +134,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By nationalIDTXT() {
-        return By.xpath("//app-card-value[@data-name=\"رقم الهوية الوطنية\"]/descendant::span/span");
+        return By.xpath("//app-card-value[@data-name='رقم الهوية الوطنية']/descendant::span/span");
     }
 
     public static By ContractStatusDropdownOptions() {
-        return By.xpath("//select[@data-name=\"state\"]/child::option");
+        return By.xpath("//select[@data-name='state']/child::option");
     }
 
     public static By selectedRadioButton() {
@@ -206,11 +206,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By IdTypeRadioInput() {
-        return By.xpath("//app-form-radio/descendant::input[@data-name=\"id_type\"]");
+        return By.xpath("//app-form-radio/descendant::input[@data-name='id_type']");
     }
 
     public static By lessorRepIcon() {
-        return By.xpath("//span[@class=\"round-icon group large\"]");
+        return By.xpath("//span[@class='round-icon group large']");
     }
 
     public static By NewLessorRepInfoPageTitle() {
@@ -226,11 +226,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By DocumentTypeDropdown() {
-        return By.xpath("//select[contains(@data-name, \"document_type\")]");
+        return By.xpath("//select[contains(@data-name, 'document_type')]");
     }
 
     public static By DocumentTypeDropdownList() {
-        return By.xpath("//select[contains(@data-name, \"document_type\")]/child::option");
+        return By.xpath("//select[contains(@data-name, 'document_type')]/child::option");
     }
 
     public static By IssueDateInputField() {
@@ -242,15 +242,15 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By IssueByInputField() {
-        return By.xpath("//input[@data-name=\"issued_by\"]");
+        return By.xpath("//input[@data-name='issued_by']");
     }
 
     public static By LegalDocumentNameInput() {
-        return By.xpath("//input[@data-name=\"legal_document_type_name\"]");
+        return By.xpath("//input[@data-name='legal_document_type_name']");
     }
 
     public static By DocumentIssuePlaceInput() {
-        return By.xpath("//input[@data-name=\"issue_place\"]");
+        return By.xpath("//input[@data-name='issue_place']");
     }
 
     public static By AddButton() {
@@ -293,10 +293,10 @@ public class ChangeLessor_LessorRepPageObjects {
         return By.xpath("//h1[contains (text(), 'طلب تغيير المالك')]");
     }
     public static By issuedDateTextFiled() {
-        return By.xpath("//input[@data-name=\"issued_date\"]");
+        return By.xpath("//input[@data-name='issued_date']");
     }
     public static By legalDocumentTypeNameInputField() {
-        return By.xpath("//input[@formcontrolname=\"legal_document_type_name\"]");
+        return By.xpath("//input[@formcontrolname='legal_document_type_name']");
     }
     public static By createNewBTN() {
         return By.xpath("//button[contains(text(),' أنشئ جديد ')]");
@@ -342,11 +342,11 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By PropertyOwnerButtonInput() {
-        return By.xpath("//input[@data-value=\"property_owner\"]");
+        return By.xpath("//input[@data-value='property_owner']");
     }
 
     public static By RepresentativeOwnerRadioButtonButtonInput() {
-        return By.xpath("//input[@data-value=\"owner_representative\"]");
+        return By.xpath("//input[@data-value='owner_representative']");
     }
 
     public static By ContractPartyInfoPage() {
@@ -358,6 +358,6 @@ public class ChangeLessor_LessorRepPageObjects {
     }
 
     public static By PropertyOwnerText() {
-        return By.xpath("//app-owners-quick-info[@id=\"new-owners\"]/descendant::span[@class=\"round-icon large menu\"]");
+        return By.xpath("//app-owners-quick-info[@id='new-owners']/descendant::span[@class='round-icon large menu']");
     }
 }
